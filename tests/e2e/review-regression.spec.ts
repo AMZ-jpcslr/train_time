@@ -27,8 +27,8 @@ test('denied location explains the cause and opens the measured fallback without
  await page.getByRole('button',{name:'現在地を更新',exact:true}).click();
  await expect(page.locator('.decision-summary')).toContainText('拒否');await expect(page.locator('.stay-countdown')).toHaveText('計算できません');
  await page.getByRole('button',{name:'実測時間を使う',exact:true}).click();
- await expect(page.getByRole('button',{name:'出発地点',exact:true})).toBeFocused();
- await page.locator('.place-form > summary').click();await page.getByLabel('地点名',{exact:true}).fill('試験地点');await page.getByLabel('到着する駅入口',{exact:true}).fill('試験入口');await page.getByLabel('入口までの実測徒歩時間（分）',{exact:true}).fill('1');
+ await expect(page.getByLabel('地点名',{exact:true})).toBeFocused();
+ await page.getByLabel('地点名',{exact:true}).fill('試験地点');await page.getByLabel('到着する駅入口',{exact:true}).fill('試験入口');await page.getByLabel('入口までの実測徒歩時間（分）',{exact:true}).fill('1');
  await page.getByRole('button',{name:'端末に保存して使う',exact:true}).click();
  await expect(page.locator('.stay-origin')).toContainText('試験地点');await expect(page.locator('.stay-countdown')).toContainText('4分');await expect(page.locator('.walk-summary')).toContainText('登録地点「試験地点」から');
  await expect(page.getByRole('heading',{name:'出発判断',exact:true})).toBeFocused();

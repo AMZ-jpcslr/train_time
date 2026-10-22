@@ -40,7 +40,7 @@ export default function ChoicePicker({label,value,options,onChange,emptyText='ÈÅ
   <button type="button" ref={trigger} className="choice-trigger" aria-label={label} aria-haspopup="dialog" aria-expanded={open} aria-controls={id} onClick={show}>
    <span>{selected?.label??emptyText}</span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
   </button>
-  <dialog ref={dialog} id={id} className="choice-dialog" aria-labelledby={`${id}-title`} style={{'--choice-left':`${anchor.left}px`,'--choice-top':`${anchor.top}px`} as CSSProperties} onClose={()=>{setOpen(false);trigger.current?.focus();}} onCancel={event=>{event.preventDefault();close();}} onKeyDown={event=>{
+  <dialog ref={dialog} id={id} className="choice-dialog" aria-labelledby={`${id}-title`} style={{'--choice-left':`${anchor.left}px`,'--choice-top':`${anchor.top}px`} as CSSProperties} onClose={()=>setOpen(false)} onCancel={event=>{event.preventDefault();close();}} onKeyDown={event=>{
    if(event.key!=='Tab')return;
    event.preventDefault();if(document.activeElement===closeButton.current)list.current?.focus();else closeButton.current?.focus();
   }} onClick={event=>{

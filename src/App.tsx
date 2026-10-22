@@ -76,17 +76,27 @@ export default function App(){
  const walkMinutes='minutes' in walk?walk.minutes:null;
  const selection=useTrainSelection(departures,`${station.id}:${direction.id}:${day}:${preview||'live'}`,time);
  const first=selection.selected;
+ const focusDecision=()=>{
+  decisionHeading.current?.focus({preventScroll:true});
+  decisionHeading.current?.closest('.decision-summary')?.scrollIntoView({block:'start'});
+ };
+ useEffect(()=>{if(place?.id)focusDecision();},[place?.id]);
  const judgmentWalk:Walking=state==='ready'?walk:{kind:'unavailable'};
  const firstJudge=first?judge(first.epoch,time,judgmentWalk,stored.settings):null;
  const selectTrain=(train:typeof first)=>{
   if(!train)return;
   selection.select(train);setChoiceNotice(`${train.time}発 ${train.destination}行きに変更しました。出発目安を確認してください。`);
-  decisionHeading.current?.focus();
+  focusDecision();
  };
  const openManual=()=>{
   if(!manualFallback.current)return;
   manualFallback.current.open=true;
-  manualFallback.current.querySelector<HTMLButtonElement>('.choice-trigger')?.focus();
+  if(stored.places.some(p=>p.stationId===station.id)){
+   manualFallback.current.querySelector<HTMLButtonElement>('.choice-trigger')?.focus();
+  }else{
+   const form=manualFallback.current.querySelector<HTMLDetailsElement>('.place-form');
+   if(form){form.open=true;form.querySelector<HTMLInputElement>('input')?.focus();}
+  }
  };
  const favoriteKey=station.id+':'+direction.id;
  const isFavorite=stored.favorites.includes(favoriteKey);
