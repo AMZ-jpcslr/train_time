@@ -15,3 +15,9 @@ test('bridge failure and no acknowledgement are not reported as saved',async({pa
  await page.addInitScript(()=>Object.assign(window,{ManiauWidget:{postMessage:()=>{}}}));await page.goto('/');await chooseStation(page,'kyoto-imadegawa');await page.getByRole('button',{name:'選んだ電車をウィジェットに保存'}).click();await page.evaluate(()=>window.dispatchEvent(new CustomEvent('maniauwidgetresult',{detail:{ok:false}})));await expect(page.locator('.widget-transfer [role=status]')).toContainText('保存できませんでした');
  await page.getByRole('button',{name:'選んだ電車をウィジェットに保存'}).click();await page.clock.fastForward(5001);await expect(page.locator('.widget-transfer [role=status]')).toContainText('保存結果を確認できません');
 });
+test('malformed route origin shows a recoverable error instead of crashing the page',async({page})=>{
+ await page.route('**/api/walking',route=>route.fulfill({json:{kind:'route',entranceId:route.request().postDataJSON().entranceId,distanceMeters:80,roadDistanceMeters:80,durationSeconds:60,fetchedAt:FIXED_TIME.getTime(),snapDistances:[0,0],geometry:[[135,35],[135,35.001]]}}));
+ await page.goto('/');await chooseStation(page,'kyoto-imadegawa');
+ const {installGps}=await import('../fixtures/runtime');await installGps(page);await page.getByRole('button',{name:'現在地を更新',exact:true}).click();
+ await expect(page.locator('.route-error')).toContainText('応答を検証できません');await expect(page.locator('.next-train')).toBeVisible();await expect(page.locator('.stay-countdown')).toContainText('計算できません');
+});

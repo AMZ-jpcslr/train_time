@@ -18,8 +18,9 @@
 | iOSの接続先変更時に旧Coordinatorが短時間残る | SwiftUIによる旧WebView破棄の前に、旧originのqueued messageで消去済みsnapshotを再保存できる | 修正済み。受信ごとに現在の設定originとCoordinatorのoriginを比較し、アプリが前面にある場合だけ受け付ける |
 | iOSの発車時刻・運行日・期限の相互検証不足 | 各フィールドの形式が正しくても、表示時刻とepochが異なる便や期限外の便を受理する。時計を戻すと未来のsnapshotが有効に見える | 修正済み。Asia/Tokyo運行日、00時台/24時台とepoch、生成時刻範囲、発車の上限期限、240分の徒歩上限を検証。30秒を超える時計巻戻しは期限外表示 |
 | iOSの保存に生JSONが残る | 重複した親キーで無視されるデータがあると、検証した値に含まれない情報も元JSONのまま永続化される | 修正済み。検証済み型の`canonicalData()`を保存し、生JSONを破棄。必須nullを明示し、decode後の便数も検証する |
+| Webの経路応答で出発座標の検証が不足 | `origin`が欠損/nullの成功応答が従来の経路validatorを通過し、新しいwidget送信データの組立時に例外になる | 修正済み。`validWalkingRoute`で座標の存在・有限性・範囲を確認。欠損/null/空object/NaN/緯度・経度範囲外の6件を含む単体テストが成功し、不正応答を経路失敗として処理する |
 
-根拠となる変更箇所は [Android MainActivity](../native/android/app/src/main/java/jp/maniau/widget/MainActivity.java)、[iOS TrainWebView](../native/ios/App/TrainWebView.swift)、[iOS WidgetSnapshot](../native/ios/Shared/WidgetSnapshot.swift)、[iOS SnapshotStore](../native/ios/Shared/SnapshotStore.swift) です。上記4件の修正を再読し、指摘に対応したコードが保存されていることを確認しました。ネイティブOS上での動作確認は下記の未検証範囲です。
+根拠となる変更箇所は [Android MainActivity](../native/android/app/src/main/java/jp/maniau/widget/MainActivity.java)、[iOS TrainWebView](../native/ios/App/TrainWebView.swift)、[iOS WidgetSnapshot](../native/ios/Shared/WidgetSnapshot.swift)、[iOS SnapshotStore](../native/ios/Shared/SnapshotStore.swift)、[Web経路validator](../src/domain/routing.ts) です。上記5件の修正を再読し、指摘に対応したコードが保存されていることを確認しました。ネイティブOS上での動作確認は下記の未検証範囲です。
 
 ## 確認できた保護
 
@@ -36,11 +37,11 @@
 ## 実行した確認
 
 ```powershell
-npm test -- --run tests/widget.test.ts tests/social-metadata.test.ts
+npm test -- --run tests/routing-ui.test.ts tests/widget.test.ts tests/social-metadata.test.ts
 & native/android/test-logic.ps1
 python native/ios/scripts/check_project.py
 ```
 
-レビュー時点でWeb単体テスト49件、Android純粋Javaチェック77件が成功しました。iOSの62件のプロジェクト参照・plist・fixture整合のチェックも成功しました。iOSのXCTestメソッドは21件存在しますが、このWindows環境では実行していません。
+修正後のレビューでWeb単体テスト58件、Android純粋Javaチェック77件が成功しました。iOSの62件のプロジェクト参照・plist・fixture整合のチェックも成功しました。iOSのXCTestメソッドは21件存在しますが、このWindows環境では実行していません。
 
 ネイティブの権限画面、WebView実ブリッジ、OSの背景実行、画面ロック・省電力時の停止、WidgetKit/Androidホーム画面への描画は実機検証の対象です。このレビューとJavaの成功を、実機動作やSwiftコンパイルの成功とは扱いません。最終の全テスト・ビルド結果はREADMEの検証記録を参照してください。

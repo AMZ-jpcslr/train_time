@@ -4,6 +4,10 @@ import {judge} from '../src/domain/journey';
 import type {WalkingRoute} from '../src/domain/types';
 
 describe('road access estimates and external walking handoff',()=>{
+ it.each([undefined,null,{}, {lat:NaN,lon:135},{lat:91,lon:135},{lat:35,lon:181}])('rejects invalid route origin %j before the widget can render it',origin=>{
+  const route={kind:'route',entranceId:'e',origin,distanceMeters:80,roadDistanceMeters:80,durationSeconds:60,fetchedAt:1,snapDistances:[0,0],geometry:[[135,35],[135,35.001]]} as WalkingRoute;
+  expect(validWalkingRoute(route,'e')).toBe(false);
+ });
  it('separates long access segments from boarding judgments',()=>{
   expect(needsAccessCheck({snapDistances:[30,0]})).toBe(false);
   expect(needsAccessCheck({snapDistances:[30.01,0]})).toBe(true);
@@ -16,7 +20,7 @@ describe('road access estimates and external walking handoff',()=>{
   expect(Object.fromEntries(url.searchParams)).toEqual({api:'1',origin:'34.81,135.56',destination:'34.815,135.565',travelmode:'walking'});
  });
  it('rejects malformed access distances before the UI can classify a route',()=>{
-  const route={kind:'route',entranceId:'e',distanceMeters:320,roadDistanceMeters:240,durationSeconds:256,fetchedAt:1,snapDistances:[70,10],geometry:[[135,35],[135,35.001]]} as WalkingRoute;
+  const route={kind:'route',entranceId:'e',origin:{lat:35,lon:135},distanceMeters:320,roadDistanceMeters:240,durationSeconds:256,fetchedAt:1,snapDistances:[70,10],geometry:[[135,35],[135,35.001]]} as WalkingRoute;
   expect(validWalkingRoute(route,'e')).toBe(true);
   expect(validWalkingRoute({...route,snapDistances:[NaN,10]},'e')).toBe(false);
   expect(validWalkingRoute({...route,snapDistances:[]},'e')).toBe(false);

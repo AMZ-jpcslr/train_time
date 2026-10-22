@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-10-22T07:24:43.587Z",
+  "page": "https://train-time-three.vercel.app/",
+  "pageStatus": 200,
+  "title": "まにあう｜次の電車と、歩く時間。",
+  "description": "次の電車までの時間、徒歩経路、今いる場所にあと何分いられるかをまとめて確認。JR・阪急・阪神・地下鉄の予定時刻に基づく交通アプリです。",
+  "ogUrl": "https://train-time-three.vercel.app/",
+  "image": "https://train-time-three.vercel.app/og-image.png",
+  "imageStatus": 200,
+  "contentType": "image/png",
+  "dimensions": [
+    1200,
+    630
+  ],
+  "sha256": "ee54a90681aff4700a06bc1943dc01da1866ccbf4fd1d1d43e8a33669fed1042",
+  "twitterCard": "summary_large_image",
+  "note": "Read-only public checks. No Vercel settings or manual deployment performed; sharing-app cache/display untested."
+}
