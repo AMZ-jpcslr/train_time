@@ -55,6 +55,9 @@ test('a later v2 release waits for the visible update action, then reloads every
   await page.goto(server.origin);await controlled(page);await releaseShown(page,'current');await updateUiReady(page);
   await page.evaluate(value=>localStorage.setItem('mania-u:v1',JSON.stringify(value)),stored);
   const other=await context.newPage();await other.goto(server.origin);await controlled(other);await updateUiReady(other);
+  const quickAccess=other.locator('.quick-access');
+  await expect(quickAccess.getByRole('region',{name:'アプリの更新',exact:true})).toBeVisible();
+  await expect(quickAccess.getByRole('region',{name:'お気に入りの駅と方面',exact:true}).getByRole('button',{name:/今出川/})).toBeVisible();
   server.release('next');
   await page.getByRole('button',{name:'アプリの更新を確認',exact:true}).click();await waiting(page);
   await expect(page.getByText('新しいバージョンが使えます',{exact:false})).toBeVisible();
@@ -67,7 +70,9 @@ test('a later v2 release waits for the visible update action, then reloads every
    await expect(page.getByRole('button',{name:'最新版に更新',exact:true})).toBeInViewport();
    expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
    expect((await page.getByRole('button',{name:'最新版に更新',exact:true}).boundingBox())?.height).toBeGreaterThanOrEqual(44);
-   await update.screenshot({path:`docs/screenshots/pwa-update-${width}.png`});
+   await other.setViewportSize({width,height:844});
+   expect(await other.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
+   await quickAccess.screenshot({path:`docs/screenshots/favorites-update-${width}.png`});
   }
   await page.getByRole('button',{name:'最新版に更新',exact:true}).click();
   await releaseShown(page,'next');await releaseShown(other,'next');

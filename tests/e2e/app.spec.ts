@@ -11,7 +11,15 @@ test('opt-in GPS and checked Imadegawa tables produce walking judgments in both 
  await page.getByRole('button',{name:'北大路・国際会館方面'}).click();await expect(page.getByRole('heading',{name:'国際会館行き'})).toBeVisible();
  await expect(page.locator('.judgment')).toContainText('徒歩で余裕あり');await expect(page.locator('.judgment')).toContainText('4分以内');await expect(page.locator('.following-right .unknown')).toHaveCount(0);
  await expect(page.getByRole('img',{name:/^取得した徒歩経路/})).toBeVisible();
- await page.getByRole('button',{name:'この駅と方面をお気に入り'}).click();await page.getByRole('button',{name:/出典・確認日/}).click();
+ await page.getByRole('button',{name:'この駅と方面をお気に入り'}).click();
+ const favorites=page.getByRole('region',{name:'お気に入りの駅と方面',exact:true});
+ const savedDirection=favorites.getByRole('button',{name:/今出川/});
+ await expect(savedDirection).toHaveAttribute('aria-pressed','true');
+ const favoriteBox=await favorites.boundingBox(),locationBox=await page.getByRole('region',{name:'現在地と徒歩検索'}).boundingBox(),boardBox=await page.getByRole('region',{name:'発車案内'}).boundingBox();
+ expect(favoriteBox!.y).toBeGreaterThanOrEqual(locationBox!.y+locationBox!.height);expect(favoriteBox!.y+favoriteBox!.height).toBeLessThanOrEqual(boardBox!.y);expect((await savedDirection.boundingBox())!.height).toBeGreaterThanOrEqual(44);
+ await chooseStation(page,'hankyu-rokko');await savedDirection.click();
+ await expect(page.getByRole('heading',{name:'国際会館行き'})).toBeVisible();await expect(savedDirection).toHaveAttribute('aria-pressed','true');
+ await page.getByRole('button',{name:/出典・確認日/}).click();
  await expect(page.locator('.source-detail')).toContainText('出典照合済');await expect(page.locator('.source-detail')).toContainText('2025-02-22');await expect(page.locator('.source-detail')).toContainText('2026-03-14');
  await page.screenshot({path:`docs/screenshots/${info.project.name}-imadegawa-walking.png`,fullPage:true});await page.reload();
  await expect(page.getByRole('button',{name:'この駅と方面をお気に入り'})).toHaveAttribute('aria-pressed','true');await expect(page.locator('.judgment')).toContainText('判定不可');await expect(page.locator('.location-status')).toContainText('まだ取得していません');expect(api.external).toEqual([]);
