@@ -82,3 +82,7 @@ SDK の場所が自動検出されない場合は Android Studio で作成され
 - [ウィジェット更新間隔](https://developer.android.com/develop/ui/views/appwidgets/advanced)
 - [Foreground Service を前面から起動する制約](https://developer.android.com/develop/background-work/services/fgs/restrictions-bg-start)
 - [location Foreground Service の権限](https://developer.android.com/about/versions/14/changes/fgs-types-required)
+
+## SDK付きCIで生成した開発版APK
+
+2026-10-22、[CI run 39740393462](https://github.com/AMZ-jpcslr/train_time/actions/runs/39740393462)でJavaチェック77件、assembleDebug、lintDebugが成功しました。[APK artifact](https://github.com/AMZ-jpcslr/train_time/actions/runs/39740393462/artifacts/12409305407)をGitHubにログインしてダウンロードし、ZIP内の`app-debug.apk`をAndroidへ転送できます。このartifactの保存期限は2026-10-29です。その後は新しいCI実行または手元のSDKで再ビルドしてください。端末へのインストール・ウィジェット実画面・背景GPSは未検証です。詳しい結果は[検証記録](../../docs/mobile-widgets-verification.md)にあります。

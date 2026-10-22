@@ -23,10 +23,13 @@
 
 残る実機確認：Androidの権限ダイアログ・WebView・AppWidget・常駐通知・画面ロック下GPS、iPhoneのビルド・署名・WidgetKit・Always許可・背景GPS、省電力/強制終了時の動作。ネイティブは保存した最大5便を表示し、自律的な毎日の時刻表取得は未実装。PWAのみでOSのネイティブウィジェットや常時GPSを提供することはできない。
 
-GitHub CIのAndroid SDK付きビルドと公開先の反映確認は、実行後の結果を以下へ追記する。
+GitHub CIのAndroid SDK付きビルドと公開先の反映結果は以下。
 
 ## GitHubと公開先の確認
 
 機能追加commit `abc5a39650307fee2285bfd3f97d377263daaba5` をmainへpush。 [GitHub CI](https://github.com/AMZ-jpcslr/train_time/actions/runs/39740104629) のAndroidジョブでJavaテスト・APK assembleDebug・lintDebug・APK artifact保存が成功した。ローカルSDK不足とは区別して、SDK付きUbuntuでコンパイル確認できた。実機のインストールやGPS確認はまだ行っていない。
 
 2026-10-22 16:24 JST、公開URLのHTML・description・OG/Twitterタグと `/og-image.png`（200/image/png/1200×630）を読み取り確認した。[取得結果](public-sharing-verification.json)。Vercel設定・手動デプロイは操作していない。LINE等のアプリ自身のプレビュー表示・キャッシュ更新は未検証。
+最終の実装commit `49d319eb5467a7ebdb2ab142f872308372726407` の[CI](https://github.com/AMZ-jpcslr/train_time/actions/runs/39740393462)は、2026-10-22 16:30 JSTに全ジョブ成功を確認。Web単体274件、PC/mobile E2E78件、PWA1件、build/package検査、Android77チェック・APKビルド・Lintが成功した。[CI結果](widget-ci-verification.json)。公開配信のJSファイル名もローカル最終buildと一致した。
+
+Androidの[開発版APK artifact](https://github.com/AMZ-jpcslr/train_time/actions/runs/39740393462/artifacts/12409305407)は2026-10-29まで保持。GitHubへのログインが必要。ZIP内の`app-debug.apk`は1,188,888 bytes、SHA256 `a689f8268c2657a3d5b8d94761e8a89df956c602ccccd7e73f1dabc772512f57`。ローカルにも`.cache/verification/maniau-debug-49d319e.apk`として保存した。開発署名による試用APKで、ストア配布版ではない。
