@@ -7,7 +7,7 @@ import type {Timetable} from '../src/domain/types';
 const tables=data as Timetable[];
 const now=Date.parse('2026-10-22T12:00:00+09:00');
 const table=tables.find(t=>t.stationId==='kobe-gakuentoshi'&&t.directionId==='east'&&t.dayType==='weekday')!;
-const settings={stationMinutes:3,bufferMinutes:2,speedKmh:4.8};
+const settings={stationMinutes:3,speedKmh:4.8};
 describe('Japan calendar and service days',()=>{
  it('keeps post-midnight trains on their preceding service date',()=>{expect(serviceDate(Date.parse('2026-10-23T00:30:00+09:00'))).toBe('2026-10-22');expect(departureEpoch('2026-10-22','24:50')).toBe(Date.parse('2026-10-23T00:50:00+09:00'));});
  it('switches service day exactly at 04:00 JST regardless of OS zone',()=>{expect(serviceDate(Date.parse('2026-10-22T18:59:59Z'))).toBe('2026-10-22');expect(serviceDate(Date.parse('2026-10-22T19:00:00Z'))).toBe('2026-10-23');});
@@ -27,11 +27,11 @@ describe('source availability and departure list',()=>{
  it('handles last train, 24h display, and end of service',()=>{expect(upcoming(table,'2026-10-22',Date.parse('2026-10-23T00:49:59+09:00'))[0]).toMatchObject({time:'24:50',destination:'名谷'});expect(upcoming(table,'2026-10-22',Date.parse('2026-10-23T01:00:00+09:00'))).toEqual([]);});
 });
 describe('walking judgment never claims unsupported routing',()=>{
- it('calculates margin using walk, station and buffer independently',()=>{expect(judge(now+20*60000,now,{kind:'measured',minutes:8},settings)).toMatchObject({slack:7,status:'comfortable'});expect(judge(now+15*60000,now,{kind:'measured',minutes:8},settings)).toMatchObject({slack:2,status:'tight'});});
- it('does not round negative seconds to catchable zero minutes',()=>{expect(judge(now+13*60000-1,now,{kind:'measured',minutes:8},settings).status).toBe('miss');expect(judge(now+13*60000,now,{kind:'measured',minutes:8},settings).status).toBe('tight');});
+ it('deducts only walking and the combined station time',()=>{expect(judge(now+20*60000,now,{kind:'measured',minutes:8},settings)).toMatchObject({slack:9,status:'comfortable'});expect(judge(now+13*60000,now,{kind:'measured',minutes:8},settings)).toMatchObject({slack:2,status:'tight'});});
+ it('does not round negative seconds to catchable zero minutes',()=>{expect(judge(now+11*60000-1,now,{kind:'measured',minutes:8},settings).status).toBe('miss');expect(judge(now+11*60000,now,{kind:'measured',minutes:8},settings).status).toBe('tight');});
  it('handles seconds before departure',()=>expect(judge(now+1000,now,{kind:'measured',minutes:8},settings).status).toBe('miss'));
  it('marks estimates, failed routes, and missing routes unavailable',()=>{for(const walk of [{kind:'estimate',minutes:1},{kind:'failed'},{kind:'unavailable'}] as const)expect(judge(now+30*60000,now,walk,settings).label).toBe('判定不可');});
- it('rejects malformed numbers and negative safety settings',()=>{expect(judge(now,now,{kind:'measured',minutes:NaN},settings).status).toBe('unknown');expect(judge(now,now,{kind:'measured',minutes:8},{...settings,bufferMinutes:-1}).status).toBe('unknown');});
+ it('rejects malformed numbers and negative station time',()=>{expect(judge(now,now,{kind:'measured',minutes:NaN},settings).status).toBe('unknown');expect(judge(now,now,{kind:'measured',minutes:8},{...settings,stationMinutes:-1}).status).toBe('unknown');});
  it('distinguishes refusal, stale and inaccurate GPS',()=>{expect(geolocationError(1)).toContain('拒否');const p={lat:34,lon:135,accuracy:10,timestamp:now};expect(positionStatus(p,now)).toBe('fresh');expect(positionStatus({...p,accuracy:500},now)).toBe('inaccurate');expect(positionStatus(p,now+301000)).toBe('stale');expect(positionStatus(null,now)).toBe('missing');});
  it('uses distance only as a straight line ranking',()=>{expect(distanceKm({lat:35,lon:135},{lat:35,lon:135})).toBe(0);expect(distanceKm({lat:35,lon:135},{lat:36,lon:135})).toBeCloseTo(111.195,2);});
 });

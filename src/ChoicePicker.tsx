@@ -1,0 +1,60 @@
+import {useEffect,useId,useRef,useState,type CSSProperties,type KeyboardEvent} from 'react';
+import './mobile-controls.css';
+
+type Choice = {id:string;label:string;description?:string};
+type Props = {label:string;value:string;options:Choice[];onChange:(id:string)=>void;emptyText?:string};
+
+/** A compact selector that shares the station board's desktop panel / mobile sheet. */
+export default function ChoicePicker({label,value,options,onChange,emptyText='選択してください'}:Props){
+ const id=useId();
+ const trigger=useRef<HTMLButtonElement>(null);
+ const dialog=useRef<HTMLDialogElement>(null);
+ const list=useRef<HTMLDivElement>(null);
+ const closeButton=useRef<HTMLButtonElement>(null);
+ const [open,setOpen]=useState(false);
+ const [active,setActive]=useState(0);
+ const [anchor,setAnchor]=useState({left:16,top:16});
+ const selected=options.find(option=>option.id===value);
+ const activeIndex=Math.min(active,Math.max(0,options.length-1));
+ const position=()=>{
+  const rect=trigger.current?.getBoundingClientRect();if(!rect)return;
+  setAnchor({left:Math.max(16,Math.min(rect.left,window.innerWidth-376)),top:Math.max(16,Math.min(rect.bottom+8,window.innerHeight-330))});
+ };
+ useEffect(()=>{if(open){list.current?.focus();window.addEventListener('resize',position);}return()=>window.removeEventListener('resize',position);},[open]);
+ useEffect(()=>{if(open)document.getElementById(`${id}-option-${activeIndex}`)?.scrollIntoView({block:'nearest'});},[open,id,activeIndex]);
+ const show=()=>{position();setActive(Math.max(0,options.findIndex(option=>option.id===value)));setOpen(true);dialog.current?.showModal();};
+ const close=()=>{dialog.current?.close();setOpen(false);trigger.current?.focus();};
+ const select=(option:Choice)=>{onChange(option.id);close();};
+ const move=(event:KeyboardEvent)=>{
+  if(!options.length)return;
+  if(event.key==='ArrowDown')setActive((activeIndex+1)%options.length);
+  else if(event.key==='ArrowUp')setActive((activeIndex-1+options.length)%options.length);
+  else if(event.key==='Home')setActive(0);
+  else if(event.key==='End')setActive(options.length-1);
+  else if(event.key==='Enter'||event.key===' ')select(options[activeIndex]);
+  else return;
+  event.preventDefault();
+ };
+ return <div className="choice-picker">
+  <span className="choice-label">{label}</span>
+  <button type="button" ref={trigger} className="choice-trigger" aria-label={label} aria-haspopup="dialog" aria-expanded={open} aria-controls={id} onClick={show}>
+   <span>{selected?.label??emptyText}</span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+  </button>
+  <dialog ref={dialog} id={id} className="choice-dialog" aria-labelledby={`${id}-title`} style={{'--choice-left':`${anchor.left}px`,'--choice-top':`${anchor.top}px`} as CSSProperties} onClose={()=>{setOpen(false);trigger.current?.focus();}} onCancel={event=>{event.preventDefault();close();}} onKeyDown={event=>{
+   if(event.key!=='Tab')return;
+   event.preventDefault();if(document.activeElement===closeButton.current)list.current?.focus();else closeButton.current?.focus();
+  }} onClick={event=>{
+   if(event.target!==event.currentTarget)return;
+   const rect=event.currentTarget.getBoundingClientRect();if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)close();
+  }}>
+   <div className="choice-dialog-header"><div><span className="eyebrow">YOUR WALK / YOUR WAY</span><h2 id={`${id}-title`}>{label}を選ぶ</h2></div><button type="button" className="choice-close" ref={closeButton} aria-label={`${label}の選択を閉じる`} onClick={close}>×</button></div>
+   <div ref={list} className="choice-options" role="listbox" aria-label={label} tabIndex={0} aria-activedescendant={options.length?`${id}-option-${activeIndex}`:undefined} onKeyDown={move}>
+    {options.map((option,index)=><button type="button" role="option" id={`${id}-option-${index}`} key={option.id} tabIndex={-1} data-value={option.id} aria-selected={option.id===value} className={`choice-option ${index===activeIndex?'is-focused':''}`} onFocus={()=>setActive(index)} onClick={()=>select(option)}>
+     <span><strong>{option.label}</strong>{option.description&&<small>{option.description}</small>}</span><span className="choice-check" aria-hidden="true">{option.id===value?'✓':'→'}</span>
+    </button>)}
+    {!options.length&&<p className="choice-empty">{emptyText}</p>}
+   </div>
+   <p className="choice-footnote">選択した項目を徒歩時間の計算に使います。</p>
+  </dialog>
+ </div>;
+}

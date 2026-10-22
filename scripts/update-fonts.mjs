@@ -2,7 +2,7 @@
 import {readFile,writeFile,readdir,mkdir} from 'node:fs/promises';
 await mkdir('public/fonts',{recursive:true});
 const files=(await readdir('src',{recursive:true})).filter(name=>/\.(tsx?|json)$/.test(name));
-const text=(await Promise.all(files.map(file=>readFile('src/'+file,'utf8')))).join('');
+const text=(await Promise.all(files.map(file=>readFile('src/'+file,'utf8')))).join('')+await readFile('scripts/social-card.html','utf8');
 const chars=[...new Set([...text].filter(c=>c.codePointAt(0)>127))].sort();
 const latin=Array.from({length:95},(_,i)=>String.fromCharCode(32+i)).join('');
 for(const [family,name,weight,characters] of [

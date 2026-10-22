@@ -8,7 +8,7 @@ describe('road access estimates and external walking handoff',()=>{
   expect(needsAccessCheck({snapDistances:[30,0]})).toBe(false);
   expect(needsAccessCheck({snapDistances:[30.01,0]})).toBe(true);
   expect(needsAccessCheck({snapDistances:[0,90]})).toBe(true);
-  expect(judge(3600000,0,{kind:'estimate',minutes:4},{speedKmh:4.8,stationMinutes:3,bufferMinutes:2})).toEqual({status:'unknown',label:'判定不可',slack:null});
+  expect(judge(3600000,0,{kind:'estimate',minutes:4},{speedKmh:4.8,stationMinutes:3})).toEqual({status:'unknown',label:'判定不可',slack:null});
  });
  it('hands the original coordinates to Google walking directions without a key',()=>{
   const url=new URL(googleWalkingUrl({lat:34.81,lon:135.56},{lat:34.815,lon:135.565}));

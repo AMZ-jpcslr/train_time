@@ -1,0 +1,13 @@
+:root{--choice-background:#14201c;--choice-selected:#213526;--choice-muted:#a3b4ad;--choice-divider:#35483d}
+.train-choice-help{font-size:11px;color:var(--choice-muted);padding:10px 22px 4px}
+.train-choice{width:100%;text-align:left;border:0;border-bottom:1px solid var(--choice-divider);border-radius:0;background:transparent;grid-template-columns:66px minmax(0,1fr) 128px;row-gap:12px;position:relative}
+.train-choice:hover{background:var(--choice-background)}.train-choice[aria-pressed=true]{background:var(--choice-selected);box-shadow:inset 3px 0 var(--accent)}
+.train-choice:focus-visible{outline-offset:-4px;outline:2px solid var(--focus)}
+.choice-time{display:flex;flex-direction:column;gap:2px}.choice-time>small{font-size:10px;color:var(--choice-muted)}
+.following-right>small{display:block;color:var(--choice-muted);font-size:9px}.following-destination{min-width:0;overflow-wrap:anywhere}
+.choice-stay{grid-column:1/3;display:flex;flex-direction:column;gap:2px;min-width:0}.choice-stay>span{color:var(--choice-muted);font-size:10px}.choice-stay strong{font-size:15px;font-weight:500;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.choice-action{align-self:end;text-align:right;color:var(--choice-muted);font-size:10px;white-space:nowrap;padding-bottom:2px}.train-choice[aria-pressed=true] .choice-action{color:var(--accent)}
+.selection-notice{font-size:12px;color:var(--choice-muted);border-left:2px solid var(--accent);padding:8px 12px;margin-bottom:12px}
+.time-breakdown>div>span{max-width:78%;line-height:1.7}.time-breakdown>div>b{flex-shrink:0}
+@media(max-width:760px){.train-choice{padding:16px;grid-template-columns:56px minmax(0,1fr) 108px;column-gap:10px}.choice-stay strong{font-size:15px}.choice-action{font-size:10px}.train-choice-help{padding:10px 16px 4px}.time-breakdown{font-size:12px}}
+@media(max-width:360px){.train-choice{padding:14px 12px;grid-template-columns:50px minmax(0,1fr) 94px;column-gap:8px}.train-choice time{font-size:18px}.train-choice .following-destination strong{font-size:14px}.choice-action{font-size:9px}.choice-stay strong{font-size:14px}}

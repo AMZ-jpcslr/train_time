@@ -1,0 +1,14 @@
+// Replace these three values in Xcode before signing for a physical device.
+// Do not commit a private signing key or provisioning profile.
+DEVELOPMENT_TEAM =
+MANIAU_APP_BUNDLE_ID = com.example.maniau
+MANIAU_APP_GROUP = group.com.example.maniau
+
+IPHONEOS_DEPLOYMENT_TARGET = 17.0
+SWIFT_VERSION = 5.0
+TARGETED_DEVICE_FAMILY = 1,2
+CODE_SIGN_STYLE = Automatic
+MARKETING_VERSION = 0.1.0
+CURRENT_PROJECT_VERSION = 1
+CLANG_ENABLE_MODULES = YES
+SWIFT_STRICT_CONCURRENCY = targeted

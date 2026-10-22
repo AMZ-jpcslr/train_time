@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ja">
+<head>
+ <meta charset="utf-8">
+ <title>まにあう — URL共有用画像の原稿</title>
+ <style>
+  @font-face{font-family:Zen;src:url('../public/fonts/zen-kaku-new.woff2') format('woff2');font-weight:400}
+  @font-face{font-family:Barlow;src:url('../public/fonts/barlow-condensed.woff2') format('woff2');font-weight:600}
+  :root{--background:#0b1013;--panel:#131e1d;--accent:#d3ec99;--ink:#e5eadf;--muted:#98ada8;--line:#344a3b;--dot:#d3ec9918;--stripe:#a5c37a}
+  *{box-sizing:border-box}html,body{width:1200px;height:630px;margin:0;overflow:hidden}body{background:var(--background);color:var(--ink);font-family:Zen,"Yu Gothic",Meiryo,sans-serif;position:relative;padding:46px 62px}
+  .top{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:26px}.brand{display:flex;align-items:center;gap:17px;font-size:37px;letter-spacing:.16em;line-height:1}.mark{width:53px;height:58px;border-radius:14px;background:var(--accent);display:grid;place-items:center}.mark svg{width:39px;height:39px;stroke:var(--background);stroke-width:1.7;fill:none}.eyebrow{font:600 18px Barlow,sans-serif;color:var(--muted);letter-spacing:.18em}.status{display:flex;align-items:center;gap:12px}.status:before{content:'';width:8px;height:8px;border-radius:50%;background:var(--accent)}
+  .content{display:grid;grid-template-columns:1fr 350px;gap:45px;padding-top:38px;align-items:start}.lead-label{font:600 17px Barlow,sans-serif;color:var(--accent);letter-spacing:.2em;margin-bottom:16px}.headline{font-size:62px;line-height:1.42;letter-spacing:.02em;margin:0;font-weight:400}.headline strong{font-weight:400;color:var(--accent)}.question{margin:24px 0 0;font-size:26px;letter-spacing:.01em;color:var(--ink)}.question:before{content:'';display:inline-block;width:23px;height:2px;vertical-align:middle;background:var(--accent);margin-right:12px}
+  .board{border:1px solid var(--line);border-top:4px solid var(--accent);background:var(--panel);border-radius:4px 4px 12px 12px;overflow:hidden;transform:translateY(3px)}.board-title{padding:16px 21px;border-bottom:1px solid var(--line);font-size:13px;letter-spacing:.12em;display:flex;justify-content:space-between;color:var(--muted)}.board-title b{font:600 16px Barlow,sans-serif;color:var(--accent);letter-spacing:.16em}.board-body{padding:22px;background-image:radial-gradient(var(--dot) .8px,transparent .8px);background-size:5px 5px}.board-label{font-size:16px;letter-spacing:.06em}.count{display:flex;align-items:baseline;gap:13px;color:var(--accent);padding:10px 0 21px}.count span{font-size:20px}.count strong{font:600 87px/1 Barlow,sans-serif;letter-spacing:.04em}.count i{font-size:25px;font-style:normal}.board-footer{display:flex;justify-content:space-between;border-top:1px dashed var(--line);padding-top:19px;font-size:14px;color:var(--muted)}.board-footer span:last-child{color:var(--accent)}
+  .bottom{position:absolute;bottom:38px;left:62px;right:62px;display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:14px;letter-spacing:.07em}.rail{display:flex;align-items:center;gap:13px}.rail:before{content:'';width:26px;height:6px;border-top:2px solid var(--stripe);border-bottom:2px solid var(--stripe)}.bottom .eyebrow{font-size:15px}
+ </style>
+</head>
+<body>
+ <header class="top"><div class="brand"><span class="mark"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="16" rx="4"/><path d="M5 11h14M12 3v8M8 19l-2 3m10-3 2 3"/><circle cx="8.5" cy="15" r="1"/><circle cx="15.5" cy="15" r="1"/></svg></span>まにあう</div><div class="eyebrow status">YOUR DEPARTURE BOARD</div></header>
+ <main class="content"><div><div class="lead-label">NEXT TRAIN, AT YOUR PACE.</div><h1 class="headline">次の電車と、<br><strong>歩く時間。</strong></h1><p class="question">あと何分、ここにいられる？</p></div><section class="board"><div class="board-title"><b>NEXT TRAIN</b><span>予定時刻から計算</span></div><div class="board-body"><div class="board-label">駅までの徒歩時間</div><div class="count"><span>あと</span><strong>??</strong><i>分</i></div><div class="board-footer"><span>今いる場所から</span><span>出発の目安まで →</span></div></div></section></main>
+ <footer class="bottom"><span class="rail">JR ・ 阪急 ・ 阪神 ・ 地下鉄</span><span class="eyebrow">TIMETABLE + WALKING TIME</span></footer>
+</body>
+</html>

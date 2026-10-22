@@ -12,4 +12,8 @@ export interface SavedPlace { id: string; name: string; stationId: string; entra
 export interface Position { lat: number; lon: number; accuracy: number; timestamp: number }
 export interface Entrance {id:string;stationId:string;name:string;lat:number;lon:number;sourceUrl:string;checkedAt:string;note?:string}
 export interface WalkingRoute {kind:'route';entranceId:string;origin:{lat:number;lon:number};destination?:{lat:number;lon:number};snapLocations?:number[][];distanceMeters:number;roadDistanceMeters:number;durationSeconds:number;snapDistances:number[];geometry:number[][];steps:{distance:number;name:string;type:string;modifier?:string}[];fetchedAt:number;provider:string;cached:boolean;dataVersion:string|null}
-export interface Settings { stationMinutes: number; bufferMinutes: number; speedKmh: number }
+export interface Settings {
+  /** Minutes from the station entrance through boarding, including the user's boarding allowance. */
+  stationMinutes: number;
+  speedKmh: number;
+}

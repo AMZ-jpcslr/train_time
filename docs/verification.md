@@ -1,5 +1,7 @@
 # 日次時刻表・GPS徒歩経路追加後の検証
 
+最新の列車選択・PWA導入UI・ネイティブウィジェット・共有プレビューの結果は[追加機能の検証](mobile-widgets-verification.md)を参照。以下の未実装・未公開の記述は当時の記録であり、現在の到達状態ではない。
+
 以下はVercel対応前のローカル検証記録。後続の167単体テスト・26画面テストとFunctionの確認は [配信構成の検証](deployment-verification.md) を参照。スクリーンショットは連絡先を含むためローカルの `docs/screenshots/` に保持し、GitHubへの保存対象から除外している。
 
 最終ランタイム確認：2026-10-22 14:09 JST。Windows / Node.js 24.21.0 / Vitest 3.2.7 / Playwright 1.64.1 / Chromium。ローカルアプリの検証であり、利用者本人のGPS・現地歩行・実際の乗車成功を検証したものではない。

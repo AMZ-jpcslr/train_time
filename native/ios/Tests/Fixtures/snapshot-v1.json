@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": 1792636200000,
+  "stationName": "JR茨木",
+  "directionName": "京都方面",
+  "serviceDate": "2026-10-22",
+  "timetableValidUntil": 1792684800000,
+  "walkingValidUntil": 1792636500000,
+  "originLabel": "テスト用の登録地点",
+  "walkMinutes": 8,
+  "stationMinutes": 3,
+  "speedKmh": 4.5,
+  "routingTarget": {"stationId": "jr-ibaraki", "entranceId": "jr-ibaraki-east"},
+  "selectedDepartureId": "train-2",
+  "departures": [
+    {"id": "train-1", "departureAt": 1792637400000, "time": "11:50", "destination": "京都", "trainType": "普通", "platform": "2"},
+    {"id": "train-2", "departureAt": 1792637880000, "time": "11:58", "destination": "高槻", "trainType": "普通", "platform": null},
+    {"id": "train-3", "departureAt": 1792638480000, "time": "12:08", "destination": "京都", "trainType": null, "platform": null}
+  ]
+}

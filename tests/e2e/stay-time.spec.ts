@@ -7,21 +7,21 @@ test('current position shows remaining stay time, departure deadline and passage
  await page.getByRole('button',{name:'北大路・国際会館方面'}).click();
  await expect(page.locator('.stay-countdown')).toContainText('計算できません');
  await locate(page);await expect(page.locator('.stay-origin')).toHaveText('今の場所にいられる目安');
- await expect(page.locator('.stay-countdown')).toHaveText('あと 2分 00秒');await expect(page.locator('.stay-deadline')).toContainText('14:02:00');
- await page.clock.fastForward(10000);await expect(page.locator('.stay-countdown')).toHaveText('あと 1分 50秒');
+ await expect(page.locator('.stay-countdown')).toHaveText('あと 4分 00秒');await expect(page.locator('.stay-deadline')).toContainText('14:04:00');
+ await page.clock.fastForward(10000);await expect(page.locator('.stay-countdown')).toHaveText('あと 3分 50秒');
  await page.screenshot({path:`docs/screenshots/${info.project.name}-stay-time-current.png`,fullPage:true});
- await page.clock.fastForward(110000);await expect(page.locator('.stay-countdown')).toHaveText('出発の目安は今です');
+ await page.clock.fastForward(230000);await expect(page.locator('.stay-countdown')).toHaveText('出発の目安は今です');
  await page.clock.fastForward(1000);await expect(page.locator('.stay-countdown')).toHaveText('出発目安を過ぎています');
- await page.clock.fastForward(180000);await expect(page.locator('.stay-countdown')).toContainText('計算できません');await expect(page.locator('.stay-deadline')).toHaveCount(0);
+ await page.clock.fastForward(60000);await expect(page.locator('.stay-countdown')).toContainText('計算できません');await expect(page.locator('.stay-deadline')).toHaveCount(0);
 });
 
-test('registered place identifies the origin and includes configurable station and safety time',async({page},info)=>{
+test('registered place identifies the origin and subtracts station time once',async({page},info)=>{
  const api=await mockRuntime(page);await page.goto('/');await chooseStation(page,'kyoto-imadegawa');
  await page.getByRole('button',{name:'北大路・国際会館方面'}).click();await saveMeasuredPlace(page,'休憩場所（テスト）');
  await expect(page.locator('.stay-origin')).toHaveText('登録地点「休憩場所（テスト）」にいられる目安');
- await expect(page.locator('.stay-countdown')).toHaveText('あと 2分 00秒');
- await page.getByRole('button',{name:/徒歩・乗車余裕の設定/}).click();await page.getByLabel('安全余裕（分）',{exact:true}).fill('3');
- await expect(page.locator('.stay-countdown')).toHaveText('あと 1分 00秒');await expect(page.locator('.stay-deadline')).toContainText('14:01:00');
+ await expect(page.locator('.stay-countdown')).toHaveText('あと 4分 00秒');
+ await page.getByRole('button',{name:/徒歩・駅構内時間の設定/}).click();await page.getByLabel('入口からホームまで（分）',{exact:true}).fill('4');
+ await expect(page.locator('.stay-countdown')).toHaveText('あと 3分 00秒');await expect(page.locator('.stay-deadline')).toContainText('14:03:00');await expect(page.locator('.time-breakdown .total')).toContainText('5分');await expect(page.getByLabel('安全余裕（分）',{exact:true})).toHaveCount(0);
  await page.screenshot({path:`docs/screenshots/${info.project.name}-stay-time-place.png`,fullPage:true});
  expect(api.walking).toHaveLength(0);
 });

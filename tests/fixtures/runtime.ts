@@ -61,7 +61,7 @@ export async function locate(page:Page,stationId='kyoto-imadegawa'){
  await expect(page.locator('.location-status')).toContainText('現在地を更新しました');await expect(page.locator('.walk-summary')).toContainText('道路経路');
 }
 export async function previewAt(page:Page,dateTime:string){
- const input=page.getByLabel('時刻指定プレビュー',{exact:true});if(!await input.isVisible())await page.getByRole('button',{name:/徒歩・乗車余裕の設定/}).click();
+ const input=page.getByLabel('時刻指定プレビュー',{exact:true});if(!await input.isVisible())await page.getByRole('button',{name:/徒歩・駅構内時間の設定/}).click();
  await input.fill(dateTime);await expect(page.locator('.clock')).toContainText('指定時刻 / JST');
 }
 export async function actualTime(page:Page,dateTime:string){await page.clock.setSystemTime(new Date(dateTime));await page.evaluate(()=>document.dispatchEvent(new Event('visibilitychange')));}
@@ -74,4 +74,11 @@ export async function chooseStation(page:Page,stationId:string){
  await page.getByRole('button',{name:'乗車駅',exact:true}).click();
  await page.getByRole('dialog',{name:'乗車駅を選ぶ'}).locator(`[data-station-id="${stationId}"]`).click();
  await expect(page.getByRole('dialog',{name:'乗車駅を選ぶ'})).not.toBeVisible();
+}
+
+export async function chooseChoice(page:Page,label:string,value:string){
+ await page.getByRole('button',{name:label,exact:true}).click();
+ const dialog=page.getByRole('dialog',{name:`${label}を選ぶ`,exact:true});
+ await dialog.locator(`[role="option"][data-value="${value}"]`).click();
+ await expect(dialog).not.toBeVisible();
 }

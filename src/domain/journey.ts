@@ -1,15 +1,15 @@
 import type { Position, Settings } from './types';
 export type Walking = { kind: 'measured'|'route'; minutes: number } | {kind:'estimate'; minutes:number} | {kind:'unavailable'|'failed'};
 export function judge(departure: number,now: number,walk: Walking,settings: Settings) {
-  const invalid= !Number.isFinite(departure)||!Number.isFinite(now)||!Number.isFinite(settings.stationMinutes)||!Number.isFinite(settings.bufferMinutes)||settings.stationMinutes<0||settings.bufferMinutes<0;
+  const invalid= !Number.isFinite(departure)||!Number.isFinite(now)||!Number.isFinite(settings.stationMinutes)||settings.stationMinutes<0;
   if (invalid || (walk.kind!=='measured'&&walk.kind!=='route') || !Number.isFinite(walk.minutes)||walk.minutes<0) return {status:'unknown' as const,label:'判定不可',slack:null};
-  const slack=(departure-now)/60000-walk.minutes-settings.stationMinutes-settings.bufferMinutes;
+  const slack=(departure-now)/60000-walk.minutes-settings.stationMinutes;
   return {status:slack>=3?'comfortable' as const:slack>=0?'tight' as const:'miss' as const,label:slack>=3?'徒歩で余裕あり':slack>=0?'余裕が少ない':'次の便がおすすめ',slack};
 }
 /** A latest-departure estimate using the same validated inputs as the boarding judgment. */
 export function leavingWindow(departure:number,now:number,walk:Walking,settings:Settings){
  if(judge(departure,now,walk,settings).slack===null||!('minutes' in walk))return null;
- const leaveAt=departure-(walk.minutes+settings.stationMinutes+settings.bufferMinutes)*60000;
+ const leaveAt=departure-(walk.minutes+settings.stationMinutes)*60000;
  const remainingMs=leaveAt-now;
  return {leaveAt,remainingMs,seconds:Math.max(0,Math.floor(remainingMs/1000))};
 }
