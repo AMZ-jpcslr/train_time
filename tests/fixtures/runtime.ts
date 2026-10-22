@@ -31,7 +31,30 @@ export async function mockRuntime(page:Page){
 }
 export async function installGps(page:Page,stationId='kyoto-imadegawa',accuracy=10,ageMs=0){
  const entrance=entrances.find(e=>e.stationId===stationId);if(!entrance)throw Error('No checked entrance fixture for '+stationId);
- await page.evaluate(({lat,lon,accuracy,ageMs})=>{navigator.geolocation.getCurrentPosition=success=>success({coords:{latitude:lat+.0003,longitude:lon,accuracy,altitude:null,altitudeAccuracy:null,heading:null,speed:null},timestamp:Date.now()-ageMs} as GeolocationPosition);},{lat:entrance.lat,lon:entrance.lon,accuracy,ageMs});
+ await page.evaluate(({lat,lon,accuracy,ageMs})=>{
+  navigator.geolocation.watchPosition=success=>{success({coords:{latitude:lat+.0003,longitude:lon,accuracy,altitude:null,altitudeAccuracy:null,heading:null,speed:null},timestamp:Date.now()-ageMs} as GeolocationPosition);return 1;};
+  navigator.geolocation.clearWatch=()=>{};
+ },{lat:entrance.lat,lon:entrance.lon,accuracy,ageMs});
+}
+type ControlledGps={watches:{success:PositionCallback;error?:PositionErrorCallback|null;options?:PositionOptions}[];cleared:number[]};
+/** Keep callbacks after clearWatch so tests can reproduce a queued, late browser callback. */
+export async function installControlledGps(page:Page){
+ await page.evaluate(()=>{
+  const state={watches:[],cleared:[]} as ControlledGps;
+  Object.assign(window,{__controlledGps:state});
+  navigator.geolocation.watchPosition=(success,error,options)=>{state.watches.push({success,error,options});return state.watches.length;};
+  navigator.geolocation.clearWatch=id=>{state.cleared.push(id);};
+ });
+}
+export async function emitGps(page:Page,accuracy:number,watchIndex=0,stationId='kyoto-imadegawa',ageMs=0){
+ const entrance=entrances.find(e=>e.stationId===stationId);if(!entrance)throw Error('No checked entrance fixture for '+stationId);
+ await page.evaluate(({lat,lon,accuracy,watchIndex,ageMs})=>{
+  const state=(window as typeof window&{__controlledGps:ControlledGps}).__controlledGps;
+  state.watches[watchIndex].success({coords:{latitude:lat+.0003,longitude:lon,accuracy,altitude:null,altitudeAccuracy:null,heading:null,speed:null},timestamp:Date.now()-ageMs} as GeolocationPosition);
+ },{lat:entrance.lat,lon:entrance.lon,accuracy,watchIndex,ageMs});
+}
+export async function gpsWatchState(page:Page){
+ return page.evaluate(()=>{const state=(window as typeof window&{__controlledGps:ControlledGps}).__controlledGps;return {count:state.watches.length,cleared:state.cleared,options:state.watches.map(watch=>watch.options)};});
 }
 export async function locate(page:Page,stationId='kyoto-imadegawa'){
  await installGps(page,stationId);await page.getByRole('button',{name:'現在地を更新',exact:true}).click();
@@ -45,4 +68,10 @@ export async function actualTime(page:Page,dateTime:string){await page.clock.set
 export async function saveMeasuredPlace(page:Page,name='試験登録地点'){
  await page.locator('.manual-fallback > summary').click();await page.locator('.place-form > summary').click();
  await page.getByLabel('地点名',{exact:true}).fill(name);await page.getByLabel('到着する駅入口',{exact:true}).fill('試験入口');await page.getByLabel('入口までの実測徒歩時間（分）',{exact:true}).fill('1');await page.getByRole('button',{name:'端末に保存して使う',exact:true}).click();
+}
+
+export async function chooseStation(page:Page,stationId:string){
+ await page.getByRole('button',{name:'乗車駅',exact:true}).click();
+ await page.getByRole('dialog',{name:'乗車駅を選ぶ'}).locator(`[data-station-id="${stationId}"]`).click();
+ await expect(page.getByRole('dialog',{name:'乗車駅を選ぶ'})).not.toBeVisible();
 }

@@ -1,6 +1,6 @@
 import { readdir, readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
-const names=(await readdir('dist',{recursive:true})).filter(name=>/\.(js|css|html|svg|png|webmanifest)$/.test(name)&&name!=='sw.js');
+const names=(await readdir('dist',{recursive:true})).filter(name=>/\.(js|css|html|svg|png|woff2|webmanifest)$/.test(name)&&name!=='sw.js');
 const hash=createHash('sha256');for(const name of names)hash.update(await readFile('dist/'+name));
 const cache='mania-u-'+hash.digest('hex').slice(0,12);
 const files=names.map(name=>'/'+name.replaceAll('\\','/'));

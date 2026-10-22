@@ -1,0 +1,346 @@
+{
+  "checkedDate": "2026-10-22",
+  "purpose": "Public official campus points to JR Ibaraki entrances; not user GPS, not a reproduction of the reported failure.",
+  "results": [
+    {
+      "testPointSource": "https://www.ritsumei.ac.jp/features/oicstreetview/",
+      "note": "Public campus Street View link coordinate; not user location; specific indoor/outdoor origin unverified.",
+      "origin": {
+        "lat": 34.8104837,
+        "lon": 135.561903
+      },
+      "entrance": "東側入口",
+      "radius": 30,
+      "checkedAt": "2026-10-22T06:05:50.486Z",
+      "provider": {
+        "status": 200,
+        "code": "Ok",
+        "waypoints": [
+          {
+            "location": [
+              135.561903,
+              34.810514
+            ],
+            "distance": 3.328121212
+          },
+          {
+            "location": [
+              135.562702,
+              34.815434
+            ],
+            "distance": 0
+          }
+        ],
+        "roadDistanceMeters": 722.4,
+        "roadDurationSeconds": 577.7
+      },
+      "route": {
+        "distanceMeters": 725.7704328776177,
+        "roadDistanceMeters": 722.4,
+        "durationSeconds": 580.3963463020942,
+        "snapDistances": [
+          3.3358477988154314,
+          0.03458507880233232
+        ]
+      }
+    },
+    {
+      "testPointSource": "https://www.ritsumei.ac.jp/features/oicstreetview/",
+      "note": "Public campus Street View link coordinate; not user location; specific indoor/outdoor origin unverified.",
+      "origin": {
+        "lat": 34.8104837,
+        "lon": 135.561903
+      },
+      "entrance": "西側入口",
+      "radius": 30,
+      "checkedAt": "2026-10-22T06:05:52.752Z",
+      "provider": {
+        "status": 200,
+        "code": "Ok",
+        "waypoints": [
+          {
+            "location": [
+              135.561903,
+              34.810514
+            ],
+            "distance": 3.328121212
+          },
+          {
+            "location": [
+              135.561966,
+              34.815536
+            ],
+            "distance": 0
+          }
+        ],
+        "roadDistanceMeters": 754.3,
+        "roadDurationSeconds": 603.2
+      },
+      "route": {
+        "distanceMeters": 757.6711270695655,
+        "roadDistanceMeters": 754.3,
+        "durationSeconds": 605.8969016556525,
+        "snapDistances": [
+          3.3358477988154314,
+          0.035279270750182654
+        ]
+      }
+    },
+    {
+      "testPointSource": "https://www.ritsumei.ac.jp/features/oicstreetview/",
+      "note": "Public campus Street View link coordinate; not user location; specific indoor/outdoor origin unverified.",
+      "origin": {
+        "lat": 34.8104837,
+        "lon": 135.561903
+      },
+      "entrance": "東側入口",
+      "radius": 200,
+      "checkedAt": "2026-10-22T06:05:55.003Z",
+      "provider": {
+        "status": 200,
+        "code": "Ok",
+        "waypoints": [
+          {
+            "location": [
+              135.561903,
+              34.810514
+            ],
+            "distance": 3.328121212
+          },
+          {
+            "location": [
+              135.562702,
+              34.815434
+            ],
+            "distance": 0
+          }
+        ],
+        "roadDistanceMeters": 722.4,
+        "roadDurationSeconds": 577.7
+      },
+      "route": {
+        "distanceMeters": 725.7704328776177,
+        "roadDistanceMeters": 722.4,
+        "durationSeconds": 580.3963463020942,
+        "snapDistances": [
+          3.3358477988154314,
+          0.03458507880233232
+        ]
+      }
+    },
+    {
+      "testPointSource": "https://www.ritsumei.ac.jp/features/oicstreetview/",
+      "note": "Public campus Street View link coordinate; not user location; specific indoor/outdoor origin unverified.",
+      "origin": {
+        "lat": 34.8104837,
+        "lon": 135.561903
+      },
+      "entrance": "西側入口",
+      "radius": 200,
+      "checkedAt": "2026-10-22T06:05:57.267Z",
+      "provider": {
+        "status": 200,
+        "code": "Ok",
+        "waypoints": [
+          {
+            "location": [
+              135.561903,
+              34.810514
+            ],
+            "distance": 3.328121212
+          },
+          {
+            "location": [
+              135.561966,
+              34.815536
+            ],
+            "distance": 0
+          }
+        ],
+        "roadDistanceMeters": 754.3,
+        "roadDurationSeconds": 603.2
+      },
+      "route": {
+        "distanceMeters": 757.6711270695655,
+        "roadDistanceMeters": 754.3,
+        "durationSeconds": 605.8969016556525,
+        "snapDistances": [
+          3.3358477988154314,
+          0.035279270750182654
+        ]
+      }
+    },
+    {
+      "testPointSource": "https://www.ritsumei.ac.jp/features/oicstreetview/",
+      "coordinateLink": "https://goo.gl/maps/bMxGuRb9cRP2",
+      "note": "Public official campus Street View concourse 1F central point; not user location.",
+      "origin": {
+        "lat": 34.8103463,
+        "lon": 135.5608476
+      },
+      "entrance": "東側入口",
+      "radius": 30,
+      "checkedAt": "2026-10-22T06:06:39.150Z",
+      "provider": {
+        "status": 200,
+        "code": "Ok",
+        "waypoints": [
+          {
+            "location": [
+              135.560701,
+              34.810358
+            ],
+            "distance": 13.51360012
+          },
+          {
+            "location": [
+              135.562702,
+              34.815434
+            ],
+            "distance": 0
+          }
+        ],
+        "roadDistanceMeters": 699.7,
+        "roadDurationSeconds": 559.7
+      },
+      "route": {
+        "distanceMeters": 713.2481851988024,
+        "roadDistanceMeters": 699.7,
+        "durationSeconds": 570.538548159042,
+        "snapDistances": [
+          13.51360012,
+          0.03458507880233232
+        ]
+      }
+    },
+    {
+      "testPointSource": "https://www.ritsumei.ac.jp/features/oicstreetview/",
+      "coordinateLink": "https://goo.gl/maps/bMxGuRb9cRP2",
+      "note": "Public official campus Street View concourse 1F central point; not user location.",
+      "origin": {
+        "lat": 34.8103463,
+        "lon": 135.5608476
+      },
+      "entrance": "西側入口",
+      "radius": 30,
+      "checkedAt": "2026-10-22T06:06:41.409Z",
+      "provider": {
+        "status": 200,
+        "code": "Ok",
+        "waypoints": [
+          {
+            "location": [
+              135.560701,
+              34.810358
+            ],
+            "distance": 13.51360012
+          },
+          {
+            "location": [
+              135.561966,
+              34.815536
+            ],
+            "distance": 0
+          }
+        ],
+        "roadDistanceMeters": 731.7,
+        "roadDurationSeconds": 585.2
+      },
+      "route": {
+        "distanceMeters": 745.2488793907502,
+        "roadDistanceMeters": 731.7,
+        "durationSeconds": 596.0391035126001,
+        "snapDistances": [
+          13.51360012,
+          0.035279270750182654
+        ]
+      }
+    },
+    {
+      "testPointSource": "https://www.ritsumei.ac.jp/features/oicstreetview/",
+      "coordinateLink": "https://goo.gl/maps/bMxGuRb9cRP2",
+      "note": "Public official campus Street View concourse 1F central point; not user location.",
+      "origin": {
+        "lat": 34.8103463,
+        "lon": 135.5608476
+      },
+      "entrance": "東側入口",
+      "radius": 200,
+      "checkedAt": "2026-10-22T06:06:43.670Z",
+      "provider": {
+        "status": 200,
+        "code": "Ok",
+        "waypoints": [
+          {
+            "location": [
+              135.560701,
+              34.810358
+            ],
+            "distance": 13.51360012
+          },
+          {
+            "location": [
+              135.562702,
+              34.815434
+            ],
+            "distance": 0
+          }
+        ],
+        "roadDistanceMeters": 699.7,
+        "roadDurationSeconds": 559.7
+      },
+      "route": {
+        "distanceMeters": 713.2481851988024,
+        "roadDistanceMeters": 699.7,
+        "durationSeconds": 570.538548159042,
+        "snapDistances": [
+          13.51360012,
+          0.03458507880233232
+        ]
+      }
+    },
+    {
+      "testPointSource": "https://www.ritsumei.ac.jp/features/oicstreetview/",
+      "coordinateLink": "https://goo.gl/maps/bMxGuRb9cRP2",
+      "note": "Public official campus Street View concourse 1F central point; not user location.",
+      "origin": {
+        "lat": 34.8103463,
+        "lon": 135.5608476
+      },
+      "entrance": "西側入口",
+      "radius": 200,
+      "checkedAt": "2026-10-22T06:06:45.927Z",
+      "provider": {
+        "status": 200,
+        "code": "Ok",
+        "waypoints": [
+          {
+            "location": [
+              135.560701,
+              34.810358
+            ],
+            "distance": 13.51360012
+          },
+          {
+            "location": [
+              135.561966,
+              34.815536
+            ],
+            "distance": 0
+          }
+        ],
+        "roadDistanceMeters": 731.7,
+        "roadDurationSeconds": 585.2
+      },
+      "route": {
+        "distanceMeters": 745.2488793907502,
+        "roadDistanceMeters": 731.7,
+        "durationSeconds": 596.0391035126001,
+        "snapDistances": [
+          13.51360012,
+          0.035279270750182654
+        ]
+      }
+    }
+  ]
+}

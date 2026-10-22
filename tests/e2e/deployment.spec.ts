@@ -1,7 +1,7 @@
 import {test,expect} from '@playwright/test';
 import {FIXED_TIME,mockRuntime} from '../fixtures/runtime';
 
-test.beforeEach(async({page})=>{await page.clock.install({time:FIXED_TIME});await page.clock.pauseAt(FIXED_TIME);});
+test.beforeEach(async({page})=>{await page.clock.install({time:new Date(FIXED_TIME.getTime()-60_000)});await page.clock.pauseAt(FIXED_TIME);});
 
 test('cloud configuration explains unavailable routing without claiming a connection',async({page})=>{
  const api=await mockRuntime(page);

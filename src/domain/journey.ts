@@ -6,11 +6,22 @@ export function judge(departure: number,now: number,walk: Walking,settings: Sett
   const slack=(departure-now)/60000-walk.minutes-settings.stationMinutes-settings.bufferMinutes;
   return {status:slack>=3?'comfortable' as const:slack>=0?'tight' as const:'miss' as const,label:slack>=3?'徒歩で余裕あり':slack>=0?'余裕が少ない':'次の便がおすすめ',slack};
 }
+/** A latest-departure estimate using the same validated inputs as the boarding judgment. */
+export function leavingWindow(departure:number,now:number,walk:Walking,settings:Settings){
+ if(judge(departure,now,walk,settings).slack===null||!('minutes' in walk))return null;
+ const leaveAt=departure-(walk.minutes+settings.stationMinutes+settings.bufferMinutes)*60000;
+ const remainingMs=leaveAt-now;
+ return {leaveAt,remainingMs,seconds:Math.max(0,Math.floor(remainingMs/1000))};
+}
+export const MAX_POSITION_ACCURACY_METERS = 100;
+export function validPosition(position: Position,now:number) {
+  return [position.lat,position.lon,position.accuracy,position.timestamp].every(Number.isFinite)&&Math.abs(position.lat)<=90&&Math.abs(position.lon)<=180&&position.accuracy>=0&&position.timestamp<=now+30000;
+}
 export function positionStatus(position: Position|null,now:number) {
   if (!position) return 'missing';
-  if (![position.lat,position.lon,position.accuracy,position.timestamp].every(Number.isFinite)||Math.abs(position.lat)>90||Math.abs(position.lon)>180||position.accuracy<0||position.timestamp>now+30000) return 'inaccurate';
+  if (!validPosition(position,now)) return 'inaccurate';
   if (now-position.timestamp>5*60000) return 'stale';
-  if (position.accuracy>100) return 'inaccurate';
+  if (position.accuracy>MAX_POSITION_ACCURACY_METERS) return 'inaccurate';
   return 'fresh';
 }
 export function distanceKm(a:{lat:number;lon:number},b:{lat:number;lon:number}) {
