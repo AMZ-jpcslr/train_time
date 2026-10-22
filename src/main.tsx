@@ -2,5 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import './style.css';
+import {startPwaUpdates} from './serviceWorkerUpdates';
 ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode><App/></React.StrictMode>);
-if ('serviceWorker' in navigator && import.meta.env.PROD) window.addEventListener('load',()=>{navigator.serviceWorker.register('/sw.js').catch(()=>{/* App remains usable online. */});});
+if(import.meta.env.PROD)startPwaUpdates();

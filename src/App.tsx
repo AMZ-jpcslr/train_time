@@ -17,6 +17,7 @@ import TrainChoices from './TrainChoices';
 import {useTrainSelection,departureRank} from './useTrainSelection';
 import ChoicePicker from './ChoicePicker';
 import InstallApp from './InstallApp';
+import PwaUpdate from './PwaUpdate';
 import WidgetTransfer from './WidgetTransfer';
 import {widgetDepartureId} from './domain/widget';
 import {googleWalkingUrl,needsAccessCheck} from './domain/routing';
@@ -93,6 +94,7 @@ export default function App(){
      {position&&<><p className="small-note location-accuracy">推定誤差 半径約{Math.round(position.accuracy)}m · {Math.max(0,Math.floor((now-position.timestamp)/60000))}分前{posState==='stale'?' · 現在地が古いため更新してください':posState==='inaccurate'?locating?' · 位置精度が低いため改善を待っています':' · 位置精度が低いため徒歩判定はできません':''}</p></>}
      {!locating&&posState==='inaccurate'&&<LocationHelp/>}
 <details className="location-privacy"><summary>位置情報の取り扱い</summary><p className="small-note">現在地の取得後、座標と選んだ駅入口を{routingConfig?.provider??'設定済みの徒歩経路サービス'}へ送信します。アプリは現在地の履歴を保存しません。経路提供先のアクセスログには記録される場合があります。</p></details></section>
+   <PwaUpdate/>
    <div className="dashboard">
     <section className="board-section" aria-label="発車案内">
      <div className="station-controls"><div className="station-badge">{station.code}</div><StationPicker stations={stations} station={station} onChange={chooseStation}/><button className={'favorite '+(isFavorite?'active':'')} onClick={toggleFavorite} aria-pressed={isFavorite} aria-label="この駅と方面をお気に入り">{isFavorite?'★':'☆'}</button></div>
