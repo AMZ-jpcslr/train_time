@@ -1,0 +1,3682 @@
+[
+  {
+    "id": "jr-nishinomiya-west-2026-10-22",
+    "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2801012001?date=20261022",
+    "indexUrl": "https://timetable.jr-odekake.net/cgi-bin/mydia_sp.cgi?MD=3&FN=0&EID=0610136&date=20261022",
+    "indexSha256": "cf03b66caebe0a440eaa360dd42bb1fb463530e799b2955acf952b138fc14f11",
+    "indexRetrievedAt": null,
+    "indexLocallyCheckedAt": "2026-10-22T04:17:13.124Z",
+    "sha256": "075fe56d56d9d963207097ab2ab48470235b7de8f02e5f7524c21686d9b75797",
+    "retrievedAt": "2026-10-22T03:16:12.547Z",
+    "count": 216,
+    "scope": {
+      "version": 2,
+      "sourceCount": 216,
+      "excluded": [],
+      "rule": "selected-station-line"
+    },
+    "displayedDateMatched": true,
+    "pcMobileCountEqual": true,
+    "pcMobileAllTimesAndPlatformsMatched": true,
+    "duplicates": 0,
+    "sorted": true,
+    "missingDestination": 0,
+    "samples": [
+      {
+        "time": "05:15",
+        "destination": "西明石",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "12:01",
+        "destination": "西明石",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "24:20",
+        "destination": "西明石",
+        "trainType": "普通",
+        "platform": null
+      }
+    ],
+    "independentlyReviewed": true,
+    "verificationMethod": "daily-page-dual-view-route-scope-and-fixed-samples"
+  },
+  {
+    "id": "jr-nishinomiya-east-2026-10-22",
+    "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2801012002?date=20261022",
+    "indexUrl": "https://timetable.jr-odekake.net/cgi-bin/mydia_sp.cgi?MD=3&FN=0&EID=0610136&date=20261022",
+    "indexSha256": "cf03b66caebe0a440eaa360dd42bb1fb463530e799b2955acf952b138fc14f11",
+    "indexRetrievedAt": null,
+    "indexLocallyCheckedAt": "2026-10-22T04:17:13.124Z",
+    "sha256": "84296ee74344793f5f6f35a1967f36b4cf2dbcac03bccf68bc195893929e89b2",
+    "retrievedAt": "2026-10-22T03:16:14.154Z",
+    "count": 217,
+    "scope": {
+      "version": 2,
+      "sourceCount": 217,
+      "excluded": [],
+      "rule": "selected-station-line"
+    },
+    "displayedDateMatched": true,
+    "pcMobileCountEqual": true,
+    "pcMobileAllTimesAndPlatformsMatched": true,
+    "duplicates": 0,
+    "sorted": true,
+    "missingDestination": 0,
+    "samples": [
+      {
+        "time": "05:22",
+        "destination": "京都",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "12:03",
+        "destination": "高槻",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "24:30",
+        "destination": "大阪",
+        "trainType": "普通",
+        "platform": null
+      }
+    ],
+    "independentlyReviewed": true,
+    "verificationMethod": "daily-page-dual-view-route-scope-and-fixed-samples"
+  },
+  {
+    "id": "jr-osaka-east-2026-10-22",
+    "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2796011001?date=20261022",
+    "indexUrl": "https://timetable.jr-odekake.net/cgi-bin/mydia_sp.cgi?MD=3&FN=0&EID=0610130&date=20261022",
+    "indexSha256": "4b853c1e4195b202bec1bd966fc43075eab22a224ddbf260825a7046dd6c02a8",
+    "indexRetrievedAt": null,
+    "indexLocallyCheckedAt": "2026-10-22T04:17:13.263Z",
+    "sha256": "600601aee514e38e63a2fc04b3f262f3e5a325229b23958da5208f880ba0a0bd",
+    "retrievedAt": "2026-10-22T03:15:38.882Z",
+    "count": 295,
+    "scope": {
+      "version": 2,
+      "sourceCount": 295,
+      "excluded": [],
+      "rule": "selected-station-line"
+    },
+    "displayedDateMatched": true,
+    "pcMobileCountEqual": true,
+    "pcMobileAllTimesAndPlatformsMatched": true,
+    "duplicates": 0,
+    "sorted": true,
+    "missingDestination": 0,
+    "samples": [
+      {
+        "time": "05:00",
+        "destination": "京都",
+        "trainType": "普通",
+        "platform": "8"
+      },
+      {
+        "time": "12:00",
+        "destination": "草津",
+        "trainType": "新快速",
+        "platform": "8"
+      },
+      {
+        "time": "24:10",
+        "destination": "高槻",
+        "trainType": "普通",
+        "platform": "7"
+      }
+    ],
+    "independentlyReviewed": true,
+    "verificationMethod": "daily-page-dual-view-route-scope-and-fixed-samples"
+  },
+  {
+    "id": "jr-osaka-west-2026-10-22",
+    "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2796012001?date=20261022",
+    "indexUrl": "https://timetable.jr-odekake.net/cgi-bin/mydia_sp.cgi?MD=3&FN=0&EID=0610130&date=20261022",
+    "indexSha256": "4b853c1e4195b202bec1bd966fc43075eab22a224ddbf260825a7046dd6c02a8",
+    "indexRetrievedAt": null,
+    "indexLocallyCheckedAt": "2026-10-22T04:17:13.263Z",
+    "sha256": "f06e1879ed0a2d47c3b1b0f7d4626c4a24dbf3df8eba2679790b96e0fa1bee9c",
+    "retrievedAt": "2026-10-22T03:16:15.834Z",
+    "count": 238,
+    "scope": {
+      "version": 2,
+      "sourceCount": 295,
+      "excluded": [
+        {
+          "time": "08:31",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172001?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "09:31",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172011?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "09:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172621?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "10:00",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/208831?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "10:15",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172041?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "10:30",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172051?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "10:45",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172061?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "11:00",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172071?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "11:15",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172081?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "11:30",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172091?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "11:45",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172101?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "12:00",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172111?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "12:15",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172121?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "12:30",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172131?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "12:45",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172141?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "13:00",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172151?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "13:15",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172161?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "13:30",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172171?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "13:45",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172181?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "14:00",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172191?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "14:15",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "14:30",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "14:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/2901?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "15:00",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/2921?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "15:15",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/2941?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "15:30",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/2961?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "15:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/2971?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "16:00",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3041?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "16:15",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3081?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "16:30",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3131?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "16:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3191?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "17:00",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3231?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "17:15",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/61561?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "17:30",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3321?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "17:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3351?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "18:00",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3371?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "18:15",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/61571?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "18:30",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3521?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "18:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3581?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "19:00",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3651?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "19:15",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/61581?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "19:30",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3761?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "19:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3951?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "20:00",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/4021?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "20:15",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/61601?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "20:30",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/4091?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "20:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/4161?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "21:00",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/4281?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "21:15",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/241481?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "21:30",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/4441?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "21:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/4531?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "22:02",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/4631?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "22:22",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/4841?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "22:42",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/63691?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "23:02",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/4951?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "23:20",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/5041?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "23:38",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/188741?date=20261022",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        }
+      ],
+      "rule": "osaka-west-kobe-only"
+    },
+    "displayedDateMatched": true,
+    "pcMobileCountEqual": true,
+    "pcMobileAllTimesAndPlatformsMatched": true,
+    "duplicates": 0,
+    "sorted": true,
+    "missingDestination": 0,
+    "samples": [
+      {
+        "time": "05:00",
+        "destination": "西明石",
+        "trainType": "普通",
+        "platform": "5"
+      },
+      {
+        "time": "12:00",
+        "destination": "姫路",
+        "trainType": "新快速",
+        "platform": "5"
+      },
+      {
+        "time": "24:04",
+        "destination": "西明石",
+        "trainType": "普通",
+        "platform": "6"
+      }
+    ],
+    "independentlyReviewed": true,
+    "verificationMethod": "daily-page-dual-view-route-scope-and-fixed-samples"
+  },
+  {
+    "id": "jr-ibaraki-east-2026-10-22",
+    "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2791011001?date=20261022",
+    "indexUrl": "https://timetable.jr-odekake.net/cgi-bin/mydia_sp.cgi?MD=3&FN=0&EID=0610124&date=20261022",
+    "indexSha256": "ecf1f92caa3d5aae8f4f0a378bf89670c96e12f0e30682759e4e0ecb238990bd",
+    "indexRetrievedAt": null,
+    "indexLocallyCheckedAt": "2026-10-22T04:17:13.417Z",
+    "sha256": "5ba997207a3714bf4a5a27cd49ac03f7802b67384042d5e4213009007e9e62bb",
+    "retrievedAt": "2026-10-22T03:16:17.383Z",
+    "count": 219,
+    "scope": {
+      "version": 2,
+      "sourceCount": 219,
+      "excluded": [],
+      "rule": "selected-station-line"
+    },
+    "displayedDateMatched": true,
+    "pcMobileCountEqual": true,
+    "pcMobileAllTimesAndPlatformsMatched": true,
+    "duplicates": 0,
+    "sorted": true,
+    "missingDestination": 0,
+    "samples": [
+      {
+        "time": "05:17",
+        "destination": "京都",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "12:04",
+        "destination": "高槻",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "24:28",
+        "destination": "高槻",
+        "trainType": "普通",
+        "platform": null
+      }
+    ],
+    "independentlyReviewed": true,
+    "verificationMethod": "daily-page-dual-view-route-scope-and-fixed-samples"
+  },
+  {
+    "id": "jr-ibaraki-west-2026-10-22",
+    "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2791011002?date=20261022",
+    "indexUrl": "https://timetable.jr-odekake.net/cgi-bin/mydia_sp.cgi?MD=3&FN=0&EID=0610124&date=20261022",
+    "indexSha256": "ecf1f92caa3d5aae8f4f0a378bf89670c96e12f0e30682759e4e0ecb238990bd",
+    "indexRetrievedAt": null,
+    "indexLocallyCheckedAt": "2026-10-22T04:17:13.417Z",
+    "sha256": "f488d9d125123471fd14a1439adca7c75c044bee0b8423c0bd1374b1e3ad89df",
+    "retrievedAt": "2026-10-22T03:16:18.904Z",
+    "count": 224,
+    "scope": {
+      "version": 2,
+      "sourceCount": 224,
+      "excluded": [],
+      "rule": "selected-station-line"
+    },
+    "displayedDateMatched": true,
+    "pcMobileCountEqual": true,
+    "pcMobileAllTimesAndPlatformsMatched": true,
+    "duplicates": 0,
+    "sorted": true,
+    "missingDestination": 0,
+    "samples": [
+      {
+        "time": "05:06",
+        "destination": "加古川",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "12:01",
+        "destination": "須磨",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "24:28",
+        "destination": "大阪",
+        "trainType": "普通",
+        "platform": null
+      }
+    ],
+    "independentlyReviewed": true,
+    "verificationMethod": "daily-page-dual-view-route-scope-and-fixed-samples"
+  },
+  {
+    "id": "jr-minamikusatsu-west-2026-10-22",
+    "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2813013001?date=20261022",
+    "indexUrl": "https://timetable.jr-odekake.net/cgi-bin/mydia_sp.cgi?MD=3&FN=0&EID=0610149&date=20261022",
+    "indexSha256": "a9c73acc7600f8b117cdff16a30c40974736a0d3c022415f533e230089b38838",
+    "indexRetrievedAt": null,
+    "indexLocallyCheckedAt": "2026-10-22T04:17:13.521Z",
+    "sha256": "7f9367c85036ec1ec8a1ea1f90f8c048e738c7ffa3fc7bad0af2272519b06c8b",
+    "retrievedAt": "2026-10-22T03:16:20.342Z",
+    "count": 144,
+    "scope": {
+      "version": 2,
+      "sourceCount": 144,
+      "excluded": [],
+      "rule": "selected-station-line"
+    },
+    "displayedDateMatched": true,
+    "pcMobileCountEqual": true,
+    "pcMobileAllTimesAndPlatformsMatched": true,
+    "duplicates": 0,
+    "sorted": true,
+    "missingDestination": 0,
+    "samples": [
+      {
+        "time": "04:59",
+        "destination": "姫路",
+        "trainType": "普通（京都から快速）",
+        "platform": null,
+        "notes": [
+          "A快速（うれしート連結）"
+        ]
+      },
+      {
+        "time": "12:02",
+        "destination": "網干",
+        "trainType": "普通（高槻から快速）",
+        "platform": null,
+        "notes": [
+          "A快速（うれしート連結）"
+        ]
+      },
+      {
+        "time": "23:52",
+        "destination": "京都",
+        "trainType": "普通",
+        "platform": null
+      }
+    ],
+    "independentlyReviewed": true,
+    "verificationMethod": "daily-page-dual-view-route-scope-and-fixed-samples"
+  },
+  {
+    "id": "jr-minamikusatsu-east-2026-10-22",
+    "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2813013002?date=20261022",
+    "indexUrl": "https://timetable.jr-odekake.net/cgi-bin/mydia_sp.cgi?MD=3&FN=0&EID=0610149&date=20261022",
+    "indexSha256": "a9c73acc7600f8b117cdff16a30c40974736a0d3c022415f533e230089b38838",
+    "indexRetrievedAt": null,
+    "indexLocallyCheckedAt": "2026-10-22T04:17:13.521Z",
+    "sha256": "57d9438510f2842ef4544ca89f00f7f2c1b38e651a927798fd221fe4e4b0cf3d",
+    "retrievedAt": "2026-10-22T03:16:21.809Z",
+    "count": 149,
+    "scope": {
+      "version": 2,
+      "sourceCount": 149,
+      "excluded": [],
+      "rule": "selected-station-line"
+    },
+    "displayedDateMatched": true,
+    "pcMobileCountEqual": true,
+    "pcMobileAllTimesAndPlatformsMatched": true,
+    "duplicates": 0,
+    "sorted": true,
+    "missingDestination": 0,
+    "samples": [
+      {
+        "time": "05:52",
+        "destination": "米原",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "12:12",
+        "destination": "野洲",
+        "trainType": "普通",
+        "platform": null,
+        "notes": [
+          "A快速（うれしート連結）"
+        ]
+      },
+      {
+        "time": "24:38",
+        "destination": "野洲",
+        "trainType": "普通",
+        "platform": null,
+        "notes": [
+          "A快速（うれしート連結）"
+        ]
+      }
+    ],
+    "independentlyReviewed": true,
+    "verificationMethod": "daily-page-dual-view-route-scope-and-fixed-samples"
+  },
+  {
+    "id": "jr-nishinomiya-west-2026-10-23",
+    "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2801012001?date=20261023",
+    "indexUrl": "https://timetable.jr-odekake.net/cgi-bin/mydia_sp.cgi?MD=3&FN=0&EID=0610136&date=20261023",
+    "indexSha256": "fb5296de709e34b1225dc301fcb5a4e3a0f9d095b8dde165578a59ad9868e246",
+    "indexRetrievedAt": "2026-10-22T04:39:52.453Z",
+    "sha256": "de4c607f2373d048c5362bc761cc7b0c02979e6d30402c8e06da1ff580840845",
+    "retrievedAt": "2026-10-22T04:39:53.895Z",
+    "count": 216,
+    "scope": {
+      "version": 2,
+      "sourceCount": 216,
+      "excluded": [],
+      "rule": "selected-station-line"
+    },
+    "displayedDateMatched": true,
+    "pcMobileCountEqual": true,
+    "pcMobileAllTimesAndPlatformsMatched": true,
+    "duplicates": 0,
+    "sorted": true,
+    "missingDestination": 0,
+    "samples": [
+      {
+        "time": "05:15",
+        "destination": "西明石",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "12:01",
+        "destination": "西明石",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "24:20",
+        "destination": "西明石",
+        "trainType": "普通",
+        "platform": null
+      }
+    ],
+    "independentlyReviewed": false,
+    "verificationMethod": "daily-page-dual-view-route-scope"
+  },
+  {
+    "id": "jr-nishinomiya-east-2026-10-23",
+    "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2801012002?date=20261023",
+    "indexUrl": "https://timetable.jr-odekake.net/cgi-bin/mydia_sp.cgi?MD=3&FN=0&EID=0610136&date=20261023",
+    "indexSha256": "fb5296de709e34b1225dc301fcb5a4e3a0f9d095b8dde165578a59ad9868e246",
+    "indexRetrievedAt": "2026-10-22T04:39:52.453Z",
+    "sha256": "18ee2935c8383a293ea64bccec93a942cf2648963eafc0d0cd30f5decab03801",
+    "retrievedAt": "2026-10-22T04:39:55.496Z",
+    "count": 217,
+    "scope": {
+      "version": 2,
+      "sourceCount": 217,
+      "excluded": [],
+      "rule": "selected-station-line"
+    },
+    "displayedDateMatched": true,
+    "pcMobileCountEqual": true,
+    "pcMobileAllTimesAndPlatformsMatched": true,
+    "duplicates": 0,
+    "sorted": true,
+    "missingDestination": 0,
+    "samples": [
+      {
+        "time": "05:22",
+        "destination": "京都",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "12:03",
+        "destination": "高槻",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "24:30",
+        "destination": "大阪",
+        "trainType": "普通",
+        "platform": null
+      }
+    ],
+    "independentlyReviewed": false,
+    "verificationMethod": "daily-page-dual-view-route-scope"
+  },
+  {
+    "id": "jr-osaka-east-2026-10-23",
+    "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2796011001?date=20261023",
+    "indexUrl": "https://timetable.jr-odekake.net/cgi-bin/mydia_sp.cgi?MD=3&FN=0&EID=0610130&date=20261023",
+    "indexSha256": "8765006f90029ed2938f9024bcf516744e20bb8bafd294adb2fea7479a5d9965",
+    "indexRetrievedAt": "2026-10-22T04:39:56.895Z",
+    "sha256": "ef75e012b8f8e72eac821668bf0b449127e0a151e8425417f04d459774791c4e",
+    "retrievedAt": "2026-10-22T04:39:58.145Z",
+    "count": 295,
+    "scope": {
+      "version": 2,
+      "sourceCount": 295,
+      "excluded": [],
+      "rule": "selected-station-line"
+    },
+    "displayedDateMatched": true,
+    "pcMobileCountEqual": true,
+    "pcMobileAllTimesAndPlatformsMatched": true,
+    "duplicates": 0,
+    "sorted": true,
+    "missingDestination": 0,
+    "samples": [
+      {
+        "time": "05:00",
+        "destination": "京都",
+        "trainType": "普通",
+        "platform": "8"
+      },
+      {
+        "time": "12:00",
+        "destination": "草津",
+        "trainType": "新快速",
+        "platform": "8"
+      },
+      {
+        "time": "24:10",
+        "destination": "高槻",
+        "trainType": "普通",
+        "platform": "7"
+      }
+    ],
+    "independentlyReviewed": false,
+    "verificationMethod": "daily-page-dual-view-route-scope"
+  },
+  {
+    "id": "jr-osaka-west-2026-10-23",
+    "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2796012001?date=20261023",
+    "indexUrl": "https://timetable.jr-odekake.net/cgi-bin/mydia_sp.cgi?MD=3&FN=0&EID=0610130&date=20261023",
+    "indexSha256": "8765006f90029ed2938f9024bcf516744e20bb8bafd294adb2fea7479a5d9965",
+    "indexRetrievedAt": "2026-10-22T04:39:56.895Z",
+    "sha256": "2b1e6b4045655e9d6a79c37c4e1828026a64bf82f58c25124246e7d922f53f87",
+    "retrievedAt": "2026-10-22T04:39:59.774Z",
+    "count": 238,
+    "scope": {
+      "version": 2,
+      "sourceCount": 295,
+      "excluded": [
+        {
+          "time": "08:31",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172001?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "09:31",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172011?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "09:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172621?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "10:00",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/208831?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "10:15",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172041?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "10:30",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172051?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "10:45",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172061?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "11:00",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172071?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "11:15",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172081?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "11:30",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172091?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "11:45",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172101?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "12:00",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172111?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "12:15",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172121?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "12:30",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172131?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "12:45",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172141?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "13:00",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172151?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "13:15",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172161?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "13:30",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172171?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "13:45",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172181?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "14:00",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172191?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "14:15",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "14:30",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "14:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/2901?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "15:00",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/2921?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "15:15",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/2941?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "15:30",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/2961?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "15:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/2971?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "16:00",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3041?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "16:15",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3081?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "16:30",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3131?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "16:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3191?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "17:00",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3231?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "17:15",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/61561?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "17:30",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3321?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "17:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3351?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "18:00",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3371?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "18:15",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/61571?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "18:30",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3521?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "18:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3581?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "19:00",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3651?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "19:15",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/61581?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "19:30",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3761?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "19:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3951?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "20:00",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/4021?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "20:15",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/61601?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "20:30",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/4091?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "20:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/4161?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "21:00",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/4281?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "21:15",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/241481?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "21:30",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/4441?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "21:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/4531?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "22:02",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/4631?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "22:22",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/4841?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "22:42",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/63691?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "23:02",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/4951?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "23:20",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/5041?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "23:38",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/188741?date=20261023",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        }
+      ],
+      "rule": "osaka-west-kobe-only"
+    },
+    "displayedDateMatched": true,
+    "pcMobileCountEqual": true,
+    "pcMobileAllTimesAndPlatformsMatched": true,
+    "duplicates": 0,
+    "sorted": true,
+    "missingDestination": 0,
+    "samples": [
+      {
+        "time": "05:00",
+        "destination": "西明石",
+        "trainType": "普通",
+        "platform": "5"
+      },
+      {
+        "time": "12:00",
+        "destination": "姫路",
+        "trainType": "新快速",
+        "platform": "5"
+      },
+      {
+        "time": "24:04",
+        "destination": "西明石",
+        "trainType": "普通",
+        "platform": "6"
+      }
+    ],
+    "independentlyReviewed": false,
+    "verificationMethod": "daily-page-dual-view-route-scope"
+  },
+  {
+    "id": "jr-ibaraki-east-2026-10-23",
+    "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2791011001?date=20261023",
+    "indexUrl": "https://timetable.jr-odekake.net/cgi-bin/mydia_sp.cgi?MD=3&FN=0&EID=0610124&date=20261023",
+    "indexSha256": "cc0f196035ce2af13d9250dc8f8ee72494c5a0036d367be4a601733e73fa33c8",
+    "indexRetrievedAt": "2026-10-22T04:40:01.198Z",
+    "sha256": "9bcde207a1521e393c29e499d59c67df6a263e1ab5219a1ce55d864d4492ad8b",
+    "retrievedAt": "2026-10-22T04:40:02.621Z",
+    "count": 219,
+    "scope": {
+      "version": 2,
+      "sourceCount": 219,
+      "excluded": [],
+      "rule": "selected-station-line"
+    },
+    "displayedDateMatched": true,
+    "pcMobileCountEqual": true,
+    "pcMobileAllTimesAndPlatformsMatched": true,
+    "duplicates": 0,
+    "sorted": true,
+    "missingDestination": 0,
+    "samples": [
+      {
+        "time": "05:17",
+        "destination": "京都",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "12:04",
+        "destination": "高槻",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "24:28",
+        "destination": "高槻",
+        "trainType": "普通",
+        "platform": null
+      }
+    ],
+    "independentlyReviewed": false,
+    "verificationMethod": "daily-page-dual-view-route-scope"
+  },
+  {
+    "id": "jr-ibaraki-west-2026-10-23",
+    "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2791011002?date=20261023",
+    "indexUrl": "https://timetable.jr-odekake.net/cgi-bin/mydia_sp.cgi?MD=3&FN=0&EID=0610124&date=20261023",
+    "indexSha256": "cc0f196035ce2af13d9250dc8f8ee72494c5a0036d367be4a601733e73fa33c8",
+    "indexRetrievedAt": "2026-10-22T04:40:01.198Z",
+    "sha256": "31672956827355163366741f2cbaed9191857b9b86de9f6ac178380e0e5102a7",
+    "retrievedAt": "2026-10-22T04:40:04.153Z",
+    "count": 224,
+    "scope": {
+      "version": 2,
+      "sourceCount": 224,
+      "excluded": [],
+      "rule": "selected-station-line"
+    },
+    "displayedDateMatched": true,
+    "pcMobileCountEqual": true,
+    "pcMobileAllTimesAndPlatformsMatched": true,
+    "duplicates": 0,
+    "sorted": true,
+    "missingDestination": 0,
+    "samples": [
+      {
+        "time": "05:06",
+        "destination": "加古川",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "12:01",
+        "destination": "須磨",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "24:28",
+        "destination": "大阪",
+        "trainType": "普通",
+        "platform": null
+      }
+    ],
+    "independentlyReviewed": false,
+    "verificationMethod": "daily-page-dual-view-route-scope"
+  },
+  {
+    "id": "jr-minamikusatsu-west-2026-10-23",
+    "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2813013001?date=20261023",
+    "indexUrl": "https://timetable.jr-odekake.net/cgi-bin/mydia_sp.cgi?MD=3&FN=0&EID=0610149&date=20261023",
+    "indexSha256": "44bba54c31a6a09293c19c1caeb87d94e549c7043742cd18d41be2ee47d23092",
+    "indexRetrievedAt": "2026-10-22T04:40:05.560Z",
+    "sha256": "9acdb3e8d0089577077a0a08410c408008bb480654828ab80a280d50006dac1d",
+    "retrievedAt": "2026-10-22T04:40:06.981Z",
+    "count": 144,
+    "scope": {
+      "version": 2,
+      "sourceCount": 144,
+      "excluded": [],
+      "rule": "selected-station-line"
+    },
+    "displayedDateMatched": true,
+    "pcMobileCountEqual": true,
+    "pcMobileAllTimesAndPlatformsMatched": true,
+    "duplicates": 0,
+    "sorted": true,
+    "missingDestination": 0,
+    "samples": [
+      {
+        "time": "04:59",
+        "destination": "姫路",
+        "trainType": "普通（京都から快速）",
+        "platform": null,
+        "notes": [
+          "A快速（うれしート連結）"
+        ]
+      },
+      {
+        "time": "12:02",
+        "destination": "網干",
+        "trainType": "普通（高槻から快速）",
+        "platform": null,
+        "notes": [
+          "A快速（うれしート連結）"
+        ]
+      },
+      {
+        "time": "23:52",
+        "destination": "京都",
+        "trainType": "普通",
+        "platform": null
+      }
+    ],
+    "independentlyReviewed": false,
+    "verificationMethod": "daily-page-dual-view-route-scope"
+  },
+  {
+    "id": "jr-minamikusatsu-east-2026-10-23",
+    "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2813013002?date=20261023",
+    "indexUrl": "https://timetable.jr-odekake.net/cgi-bin/mydia_sp.cgi?MD=3&FN=0&EID=0610149&date=20261023",
+    "indexSha256": "44bba54c31a6a09293c19c1caeb87d94e549c7043742cd18d41be2ee47d23092",
+    "indexRetrievedAt": "2026-10-22T04:40:05.560Z",
+    "sha256": "b1fd2a9fac17359b5e6b59c82e7607d8a262c3ad89dcf839315510c48cb86bb9",
+    "retrievedAt": "2026-10-22T04:40:08.421Z",
+    "count": 149,
+    "scope": {
+      "version": 2,
+      "sourceCount": 149,
+      "excluded": [],
+      "rule": "selected-station-line"
+    },
+    "displayedDateMatched": true,
+    "pcMobileCountEqual": true,
+    "pcMobileAllTimesAndPlatformsMatched": true,
+    "duplicates": 0,
+    "sorted": true,
+    "missingDestination": 0,
+    "samples": [
+      {
+        "time": "05:52",
+        "destination": "米原",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "12:12",
+        "destination": "野洲",
+        "trainType": "普通",
+        "platform": null,
+        "notes": [
+          "A快速（うれしート連結）"
+        ]
+      },
+      {
+        "time": "24:38",
+        "destination": "野洲",
+        "trainType": "普通",
+        "platform": null,
+        "notes": [
+          "A快速（うれしート連結）"
+        ]
+      }
+    ],
+    "independentlyReviewed": false,
+    "verificationMethod": "daily-page-dual-view-route-scope"
+  },
+  {
+    "id": "jr-nishinomiya-west-2026-10-24",
+    "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2801012001?date=20261024",
+    "indexUrl": "https://timetable.jr-odekake.net/cgi-bin/mydia_sp.cgi?MD=3&FN=0&EID=0610136&date=20261024",
+    "indexSha256": "eb06f3a37413685ed7e51072019746d721b09d3a82de05d0abcad41b4186ddcd",
+    "indexRetrievedAt": "2026-10-22T04:42:13.246Z",
+    "sha256": "4e1e9355ca22f81918ce29421b36003e4c8dffce416bea1786199892676c7d67",
+    "retrievedAt": "2026-10-22T04:42:14.702Z",
+    "count": 205,
+    "scope": {
+      "version": 2,
+      "sourceCount": 205,
+      "excluded": [],
+      "rule": "selected-station-line"
+    },
+    "displayedDateMatched": true,
+    "pcMobileCountEqual": true,
+    "pcMobileAllTimesAndPlatformsMatched": true,
+    "duplicates": 0,
+    "sorted": true,
+    "missingDestination": 0,
+    "samples": [
+      {
+        "time": "05:15",
+        "destination": "西明石",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "12:01",
+        "destination": "西明石",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "24:20",
+        "destination": "西明石",
+        "trainType": "普通",
+        "platform": null
+      }
+    ],
+    "independentlyReviewed": false,
+    "verificationMethod": "daily-page-dual-view-route-scope"
+  },
+  {
+    "id": "jr-nishinomiya-east-2026-10-24",
+    "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2801012002?date=20261024",
+    "indexUrl": "https://timetable.jr-odekake.net/cgi-bin/mydia_sp.cgi?MD=3&FN=0&EID=0610136&date=20261024",
+    "indexSha256": "eb06f3a37413685ed7e51072019746d721b09d3a82de05d0abcad41b4186ddcd",
+    "indexRetrievedAt": "2026-10-22T04:42:13.246Z",
+    "sha256": "21256924a2a71108157eacfb4953e537c8ecf7892c61c14c37e5388c9183cf3b",
+    "retrievedAt": "2026-10-22T04:42:16.302Z",
+    "count": 207,
+    "scope": {
+      "version": 2,
+      "sourceCount": 207,
+      "excluded": [],
+      "rule": "selected-station-line"
+    },
+    "displayedDateMatched": true,
+    "pcMobileCountEqual": true,
+    "pcMobileAllTimesAndPlatformsMatched": true,
+    "duplicates": 0,
+    "sorted": true,
+    "missingDestination": 0,
+    "samples": [
+      {
+        "time": "05:22",
+        "destination": "京都",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "12:03",
+        "destination": "高槻",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "24:30",
+        "destination": "大阪",
+        "trainType": "普通",
+        "platform": null
+      }
+    ],
+    "independentlyReviewed": false,
+    "verificationMethod": "daily-page-dual-view-route-scope"
+  },
+  {
+    "id": "jr-osaka-east-2026-10-24",
+    "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2796011001?date=20261024",
+    "indexUrl": "https://timetable.jr-odekake.net/cgi-bin/mydia_sp.cgi?MD=3&FN=0&EID=0610130&date=20261024",
+    "indexSha256": "20987c3d0f182797cc55171ce1f564d78911726f255b140fefeac9acec65229d",
+    "indexRetrievedAt": "2026-10-22T04:42:17.812Z",
+    "sha256": "19fc7db9d0865ca9c8d29f12f7122c81d8f6f2664858d1092898366a615269ed",
+    "retrievedAt": "2026-10-22T04:42:19.288Z",
+    "count": 274,
+    "scope": {
+      "version": 2,
+      "sourceCount": 274,
+      "excluded": [],
+      "rule": "selected-station-line"
+    },
+    "displayedDateMatched": true,
+    "pcMobileCountEqual": true,
+    "pcMobileAllTimesAndPlatformsMatched": true,
+    "duplicates": 0,
+    "sorted": true,
+    "missingDestination": 0,
+    "samples": [
+      {
+        "time": "05:00",
+        "destination": "京都",
+        "trainType": "普通",
+        "platform": "8"
+      },
+      {
+        "time": "12:00",
+        "destination": "草津",
+        "trainType": "新快速",
+        "platform": "8"
+      },
+      {
+        "time": "24:10",
+        "destination": "高槻",
+        "trainType": "普通",
+        "platform": "7"
+      }
+    ],
+    "independentlyReviewed": false,
+    "verificationMethod": "daily-page-dual-view-route-scope"
+  },
+  {
+    "id": "jr-osaka-west-2026-10-24",
+    "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2796012001?date=20261024",
+    "indexUrl": "https://timetable.jr-odekake.net/cgi-bin/mydia_sp.cgi?MD=3&FN=0&EID=0610130&date=20261024",
+    "indexSha256": "20987c3d0f182797cc55171ce1f564d78911726f255b140fefeac9acec65229d",
+    "indexRetrievedAt": "2026-10-22T04:42:17.812Z",
+    "sha256": "8fa4e50c2954cc0c5ce6e9fe65084e467bfccd90d70d8014cd09bc8a7e948f6a",
+    "retrievedAt": "2026-10-22T04:42:21.034Z",
+    "count": 205,
+    "scope": {
+      "version": 2,
+      "sourceCount": 271,
+      "excluded": [
+        {
+          "time": "06:33",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172511?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "06:59",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172521?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "07:14",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172531?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "07:29",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172541?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "07:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172551?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "08:00",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172561?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "08:15",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172571?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "08:30",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172581?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "08:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172591?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "09:00",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172601?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "09:15",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172611?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "09:30",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172021?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "09:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172631?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "10:00",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172031?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "10:15",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172641?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "10:30",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172651?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "10:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172661?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "11:00",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172071?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "11:15",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172081?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "11:30",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172091?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "11:45",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172101?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "12:00",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172111?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "12:15",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172121?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "12:30",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172131?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "12:45",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172141?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "13:00",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172151?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "13:15",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172161?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "13:30",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172171?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "13:45",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172181?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "14:00",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172191?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "14:15",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "14:30",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/2821?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "14:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/2911?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "15:00",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/2931?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "15:15",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/2941?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "15:30",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/2961?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "15:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/2971?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "16:00",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3041?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "16:15",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3081?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "16:30",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3141?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "16:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3201?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "17:00",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3231?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "17:15",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/61561?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "17:30",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3321?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "17:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3351?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "18:00",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3371?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "18:15",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/61571?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "18:30",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3521?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "18:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3591?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "19:00",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3661?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "19:15",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/61591?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "19:30",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3771?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "19:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3961?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "20:00",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/4021?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "20:15",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/61601?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "20:30",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/4101?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "20:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/4161?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "21:00",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/209121?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "21:22",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/4371?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "21:42",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/4541?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "22:02",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/4641?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "22:22",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/4851?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "22:42",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/63691?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "23:02",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/4951?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "23:20",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/5041?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "23:38",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/188861?date=20261024",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        }
+      ],
+      "rule": "osaka-west-kobe-only"
+    },
+    "displayedDateMatched": true,
+    "pcMobileCountEqual": true,
+    "pcMobileAllTimesAndPlatformsMatched": true,
+    "duplicates": 0,
+    "sorted": true,
+    "missingDestination": 0,
+    "samples": [
+      {
+        "time": "05:00",
+        "destination": "西明石",
+        "trainType": "普通",
+        "platform": "5"
+      },
+      {
+        "time": "12:00",
+        "destination": "姫路",
+        "trainType": "新快速",
+        "platform": "5"
+      },
+      {
+        "time": "24:04",
+        "destination": "西明石",
+        "trainType": "普通",
+        "platform": "6"
+      }
+    ],
+    "independentlyReviewed": false,
+    "verificationMethod": "daily-page-dual-view-route-scope"
+  },
+  {
+    "id": "jr-ibaraki-east-2026-10-24",
+    "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2791011001?date=20261024",
+    "indexUrl": "https://timetable.jr-odekake.net/cgi-bin/mydia_sp.cgi?MD=3&FN=0&EID=0610124&date=20261024",
+    "indexSha256": "090412b5645cd2b1aa3ed56cdf6c48cc0b505707d7991e6071b34b2bc604387f",
+    "indexRetrievedAt": "2026-10-22T04:42:22.637Z",
+    "sha256": "d1e1cda1fea853e7afe4845287e0d89ef00028cbb7925c9fdc1358c0e9eb58d6",
+    "retrievedAt": "2026-10-22T04:42:24.026Z",
+    "count": 209,
+    "scope": {
+      "version": 2,
+      "sourceCount": 209,
+      "excluded": [],
+      "rule": "selected-station-line"
+    },
+    "displayedDateMatched": true,
+    "pcMobileCountEqual": true,
+    "pcMobileAllTimesAndPlatformsMatched": true,
+    "duplicates": 0,
+    "sorted": true,
+    "missingDestination": 0,
+    "samples": [
+      {
+        "time": "05:17",
+        "destination": "京都",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "12:04",
+        "destination": "高槻",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "24:28",
+        "destination": "高槻",
+        "trainType": "普通",
+        "platform": null
+      }
+    ],
+    "independentlyReviewed": false,
+    "verificationMethod": "daily-page-dual-view-route-scope"
+  },
+  {
+    "id": "jr-ibaraki-west-2026-10-24",
+    "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2791011002?date=20261024",
+    "indexUrl": "https://timetable.jr-odekake.net/cgi-bin/mydia_sp.cgi?MD=3&FN=0&EID=0610124&date=20261024",
+    "indexSha256": "090412b5645cd2b1aa3ed56cdf6c48cc0b505707d7991e6071b34b2bc604387f",
+    "indexRetrievedAt": "2026-10-22T04:42:22.637Z",
+    "sha256": "6404270f036e1ddf7f05939c67ee0bf5aaa275f0b2c267ba4e06c86a521f4ba4",
+    "retrievedAt": "2026-10-22T04:42:25.585Z",
+    "count": 210,
+    "scope": {
+      "version": 2,
+      "sourceCount": 210,
+      "excluded": [],
+      "rule": "selected-station-line"
+    },
+    "displayedDateMatched": true,
+    "pcMobileCountEqual": true,
+    "pcMobileAllTimesAndPlatformsMatched": true,
+    "duplicates": 0,
+    "sorted": true,
+    "missingDestination": 0,
+    "samples": [
+      {
+        "time": "05:06",
+        "destination": "西明石",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "12:01",
+        "destination": "須磨",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "24:28",
+        "destination": "大阪",
+        "trainType": "普通",
+        "platform": null
+      }
+    ],
+    "independentlyReviewed": false,
+    "verificationMethod": "daily-page-dual-view-route-scope"
+  },
+  {
+    "id": "jr-minamikusatsu-west-2026-10-24",
+    "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2813013001?date=20261024",
+    "indexUrl": "https://timetable.jr-odekake.net/cgi-bin/mydia_sp.cgi?MD=3&FN=0&EID=0610149&date=20261024",
+    "indexSha256": "79832804a233286712b2704a6e3731cb2308355cbed864385dc481fd5e393dc4",
+    "indexRetrievedAt": "2026-10-22T04:42:26.978Z",
+    "sha256": "b25f42bdea406fcd475ec1f458288e1939457be9c9549af26a3245e0c58b4006",
+    "retrievedAt": "2026-10-22T04:42:28.333Z",
+    "count": 135,
+    "scope": {
+      "version": 2,
+      "sourceCount": 135,
+      "excluded": [],
+      "rule": "selected-station-line"
+    },
+    "displayedDateMatched": true,
+    "pcMobileCountEqual": true,
+    "pcMobileAllTimesAndPlatformsMatched": true,
+    "duplicates": 0,
+    "sorted": true,
+    "missingDestination": 0,
+    "samples": [
+      {
+        "time": "04:59",
+        "destination": "網干",
+        "trainType": "普通（京都から快速）",
+        "platform": null,
+        "notes": [
+          "A快速（うれしート連結）",
+          "◆ この運行日以外は運転日・行先・時刻が異なる場合があります。日付指定の掲載便として使用。"
+        ]
+      },
+      {
+        "time": "12:02",
+        "destination": "網干",
+        "trainType": "普通（高槻から快速）",
+        "platform": null,
+        "notes": [
+          "A快速（うれしート連結）",
+          "◆ この運行日以外は運転日・行先・時刻が異なる場合があります。日付指定の掲載便として使用。"
+        ]
+      },
+      {
+        "time": "23:52",
+        "destination": "京都",
+        "trainType": "普通",
+        "platform": null
+      }
+    ],
+    "independentlyReviewed": false,
+    "verificationMethod": "daily-page-dual-view-route-scope"
+  },
+  {
+    "id": "jr-minamikusatsu-east-2026-10-24",
+    "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2813013002?date=20261024",
+    "indexUrl": "https://timetable.jr-odekake.net/cgi-bin/mydia_sp.cgi?MD=3&FN=0&EID=0610149&date=20261024",
+    "indexSha256": "79832804a233286712b2704a6e3731cb2308355cbed864385dc481fd5e393dc4",
+    "indexRetrievedAt": "2026-10-22T04:42:26.978Z",
+    "sha256": "1837a368eebb1e196b69892bfcb7bf4aeb3a6a9742c461a05c4e2192d11c56c1",
+    "retrievedAt": "2026-10-22T04:42:29.806Z",
+    "count": 132,
+    "scope": {
+      "version": 2,
+      "sourceCount": 132,
+      "excluded": [],
+      "rule": "selected-station-line"
+    },
+    "displayedDateMatched": true,
+    "pcMobileCountEqual": true,
+    "pcMobileAllTimesAndPlatformsMatched": true,
+    "duplicates": 0,
+    "sorted": true,
+    "missingDestination": 0,
+    "samples": [
+      {
+        "time": "05:52",
+        "destination": "米原",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "12:12",
+        "destination": "野洲",
+        "trainType": "普通",
+        "platform": null,
+        "notes": [
+          "A快速（うれしート連結）"
+        ]
+      },
+      {
+        "time": "24:38",
+        "destination": "野洲",
+        "trainType": "普通",
+        "platform": null
+      }
+    ],
+    "independentlyReviewed": false,
+    "verificationMethod": "daily-page-dual-view-route-scope"
+  },
+  {
+    "id": "jr-nishinomiya-west-2026-10-25",
+    "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2801012001?date=20261025",
+    "indexUrl": "https://timetable.jr-odekake.net/cgi-bin/mydia_sp.cgi?MD=3&FN=0&EID=0610136&date=20261025",
+    "indexSha256": "75a5abfef02d2577d5ea98de1f3ffc7574bc26f107a3d3961fd86520d42646d3",
+    "indexRetrievedAt": "2026-10-22T04:43:13.862Z",
+    "sha256": "6ff6a84da403a55c97b2684c63fac935da44ac6fc5e576a0200218990869674b",
+    "retrievedAt": "2026-10-22T04:43:15.289Z",
+    "count": 205,
+    "scope": {
+      "version": 2,
+      "sourceCount": 205,
+      "excluded": [],
+      "rule": "selected-station-line"
+    },
+    "displayedDateMatched": true,
+    "pcMobileCountEqual": true,
+    "pcMobileAllTimesAndPlatformsMatched": true,
+    "duplicates": 0,
+    "sorted": true,
+    "missingDestination": 0,
+    "samples": [
+      {
+        "time": "05:15",
+        "destination": "西明石",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "12:01",
+        "destination": "西明石",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "24:20",
+        "destination": "西明石",
+        "trainType": "普通",
+        "platform": null
+      }
+    ],
+    "independentlyReviewed": false,
+    "verificationMethod": "daily-page-dual-view-route-scope"
+  },
+  {
+    "id": "jr-nishinomiya-east-2026-10-25",
+    "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2801012002?date=20261025",
+    "indexUrl": "https://timetable.jr-odekake.net/cgi-bin/mydia_sp.cgi?MD=3&FN=0&EID=0610136&date=20261025",
+    "indexSha256": "75a5abfef02d2577d5ea98de1f3ffc7574bc26f107a3d3961fd86520d42646d3",
+    "indexRetrievedAt": "2026-10-22T04:43:13.862Z",
+    "sha256": "332934073aadd5156205424d3aba8ee558d6a1544c53a31c59317dba4431d091",
+    "retrievedAt": "2026-10-22T04:43:16.867Z",
+    "count": 207,
+    "scope": {
+      "version": 2,
+      "sourceCount": 207,
+      "excluded": [],
+      "rule": "selected-station-line"
+    },
+    "displayedDateMatched": true,
+    "pcMobileCountEqual": true,
+    "pcMobileAllTimesAndPlatformsMatched": true,
+    "duplicates": 0,
+    "sorted": true,
+    "missingDestination": 0,
+    "samples": [
+      {
+        "time": "05:22",
+        "destination": "京都",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "12:03",
+        "destination": "高槻",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "24:30",
+        "destination": "大阪",
+        "trainType": "普通",
+        "platform": null
+      }
+    ],
+    "independentlyReviewed": false,
+    "verificationMethod": "daily-page-dual-view-route-scope"
+  },
+  {
+    "id": "jr-osaka-east-2026-10-25",
+    "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2796011001?date=20261025",
+    "indexUrl": "https://timetable.jr-odekake.net/cgi-bin/mydia_sp.cgi?MD=3&FN=0&EID=0610130&date=20261025",
+    "indexSha256": "2df2db7e2af8b135d419d8ab2d3693d86db2f1e6ef99e4c7c962e6bd98375845",
+    "indexRetrievedAt": "2026-10-22T04:43:18.326Z",
+    "sha256": "48c5afeefaa966ed855ff250029d1ba42b964838c96ad0f7cca25d248c76e10d",
+    "retrievedAt": "2026-10-22T04:43:19.765Z",
+    "count": 274,
+    "scope": {
+      "version": 2,
+      "sourceCount": 274,
+      "excluded": [],
+      "rule": "selected-station-line"
+    },
+    "displayedDateMatched": true,
+    "pcMobileCountEqual": true,
+    "pcMobileAllTimesAndPlatformsMatched": true,
+    "duplicates": 0,
+    "sorted": true,
+    "missingDestination": 0,
+    "samples": [
+      {
+        "time": "05:00",
+        "destination": "京都",
+        "trainType": "普通",
+        "platform": "8"
+      },
+      {
+        "time": "12:00",
+        "destination": "草津",
+        "trainType": "新快速",
+        "platform": "8"
+      },
+      {
+        "time": "24:10",
+        "destination": "高槻",
+        "trainType": "普通",
+        "platform": "7"
+      }
+    ],
+    "independentlyReviewed": false,
+    "verificationMethod": "daily-page-dual-view-route-scope"
+  },
+  {
+    "id": "jr-osaka-west-2026-10-25",
+    "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2796012001?date=20261025",
+    "indexUrl": "https://timetable.jr-odekake.net/cgi-bin/mydia_sp.cgi?MD=3&FN=0&EID=0610130&date=20261025",
+    "indexSha256": "2df2db7e2af8b135d419d8ab2d3693d86db2f1e6ef99e4c7c962e6bd98375845",
+    "indexRetrievedAt": "2026-10-22T04:43:18.326Z",
+    "sha256": "04fd4b2ac817edc7a0a1da6c53651dc3a8fed43b72c654d01fd8f80cb2c6c78f",
+    "retrievedAt": "2026-10-22T04:43:21.515Z",
+    "count": 205,
+    "scope": {
+      "version": 2,
+      "sourceCount": 271,
+      "excluded": [
+        {
+          "time": "06:33",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172511?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "06:59",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172521?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "07:14",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172531?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "07:29",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172541?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "07:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172551?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "08:00",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172561?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "08:15",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172571?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "08:30",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172581?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "08:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172591?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "09:00",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172601?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "09:15",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172611?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "09:30",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172021?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "09:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172631?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "10:00",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172031?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "10:15",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172641?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "10:30",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172651?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "10:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172661?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "11:00",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172071?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "11:15",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172081?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "11:30",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172091?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "11:45",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172101?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "12:00",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172111?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "12:15",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172121?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "12:30",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172131?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "12:45",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172141?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "13:00",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172151?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "13:15",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172161?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "13:30",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172171?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "13:45",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172181?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "14:00",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172191?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "14:15",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "14:30",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/2821?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "14:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/2911?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "15:00",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/2931?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "15:15",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/2941?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "15:30",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/2961?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "15:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/2971?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "16:00",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3041?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "16:15",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3081?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "16:30",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3141?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "16:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3201?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "17:00",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3231?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "17:15",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/61561?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "17:30",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3321?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "17:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3351?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "18:00",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3371?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "18:15",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/61571?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "18:30",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3521?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "18:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3591?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "19:00",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3661?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "19:15",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/61591?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "19:30",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3771?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "19:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/3961?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "20:00",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/4021?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "20:15",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/61601?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "20:30",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/4101?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "20:45",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/4161?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "21:00",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/209121?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        },
+        {
+          "time": "21:22",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/4371?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "21:42",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/4541?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "22:02",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/4641?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "22:22",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/4851?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "22:42",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/63691?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "23:02",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/4951?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "23:20",
+          "destination": "新三田",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/5041?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023"
+        },
+        {
+          "time": "23:38",
+          "destination": "宝塚",
+          "trainType": "普通",
+          "platform": "6",
+          "sourceTrainUrl": "https://timetable.jr-odekake.net/train-timetable/188861?date=20261025",
+          "reason": "大阪発・尼崎からJR宝塚線へ分岐するため対象外",
+          "routeEvidenceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023"
+        }
+      ],
+      "rule": "osaka-west-kobe-only"
+    },
+    "displayedDateMatched": true,
+    "pcMobileCountEqual": true,
+    "pcMobileAllTimesAndPlatformsMatched": true,
+    "duplicates": 0,
+    "sorted": true,
+    "missingDestination": 0,
+    "samples": [
+      {
+        "time": "05:00",
+        "destination": "西明石",
+        "trainType": "普通",
+        "platform": "5"
+      },
+      {
+        "time": "12:00",
+        "destination": "姫路",
+        "trainType": "新快速",
+        "platform": "5"
+      },
+      {
+        "time": "24:04",
+        "destination": "西明石",
+        "trainType": "普通",
+        "platform": "6"
+      }
+    ],
+    "independentlyReviewed": false,
+    "verificationMethod": "daily-page-dual-view-route-scope"
+  },
+  {
+    "id": "jr-ibaraki-east-2026-10-25",
+    "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2791011001?date=20261025",
+    "indexUrl": "https://timetable.jr-odekake.net/cgi-bin/mydia_sp.cgi?MD=3&FN=0&EID=0610124&date=20261025",
+    "indexSha256": "fb60148759bc4ada83ca527812cdb1afdf6dc98c8f1642e83d5d9cebb55eca26",
+    "indexRetrievedAt": "2026-10-22T04:43:23.051Z",
+    "sha256": "b84a922a2f39fd00cf1594404be1e375f3db858482f3183e2436c0923ef16b1c",
+    "retrievedAt": "2026-10-22T04:43:24.468Z",
+    "count": 209,
+    "scope": {
+      "version": 2,
+      "sourceCount": 209,
+      "excluded": [],
+      "rule": "selected-station-line"
+    },
+    "displayedDateMatched": true,
+    "pcMobileCountEqual": true,
+    "pcMobileAllTimesAndPlatformsMatched": true,
+    "duplicates": 0,
+    "sorted": true,
+    "missingDestination": 0,
+    "samples": [
+      {
+        "time": "05:17",
+        "destination": "京都",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "12:04",
+        "destination": "高槻",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "24:28",
+        "destination": "高槻",
+        "trainType": "普通",
+        "platform": null
+      }
+    ],
+    "independentlyReviewed": false,
+    "verificationMethod": "daily-page-dual-view-route-scope"
+  },
+  {
+    "id": "jr-ibaraki-west-2026-10-25",
+    "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2791011002?date=20261025",
+    "indexUrl": "https://timetable.jr-odekake.net/cgi-bin/mydia_sp.cgi?MD=3&FN=0&EID=0610124&date=20261025",
+    "indexSha256": "fb60148759bc4ada83ca527812cdb1afdf6dc98c8f1642e83d5d9cebb55eca26",
+    "indexRetrievedAt": "2026-10-22T04:43:23.051Z",
+    "sha256": "41bb3ada8f21bb1d6719536ef78ae9c3ba13f65cfec3e4e042fc95bce5549d16",
+    "retrievedAt": "2026-10-22T04:43:26.040Z",
+    "count": 210,
+    "scope": {
+      "version": 2,
+      "sourceCount": 210,
+      "excluded": [],
+      "rule": "selected-station-line"
+    },
+    "displayedDateMatched": true,
+    "pcMobileCountEqual": true,
+    "pcMobileAllTimesAndPlatformsMatched": true,
+    "duplicates": 0,
+    "sorted": true,
+    "missingDestination": 0,
+    "samples": [
+      {
+        "time": "05:06",
+        "destination": "西明石",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "12:01",
+        "destination": "須磨",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "24:28",
+        "destination": "大阪",
+        "trainType": "普通",
+        "platform": null
+      }
+    ],
+    "independentlyReviewed": false,
+    "verificationMethod": "daily-page-dual-view-route-scope"
+  },
+  {
+    "id": "jr-minamikusatsu-west-2026-10-25",
+    "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2813013001?date=20261025",
+    "indexUrl": "https://timetable.jr-odekake.net/cgi-bin/mydia_sp.cgi?MD=3&FN=0&EID=0610149&date=20261025",
+    "indexSha256": "7ee7e6535209e31f3994ed8524674f99282985a13bc67e644a3b4b0d05e2a7ac",
+    "indexRetrievedAt": "2026-10-22T04:43:27.479Z",
+    "sha256": "26dbea56da516c8118e6177f14b8e4dfcb2eeb5e92b7022b82ee66ec8574f9e1",
+    "retrievedAt": "2026-10-22T04:43:28.904Z",
+    "count": 135,
+    "scope": {
+      "version": 2,
+      "sourceCount": 135,
+      "excluded": [],
+      "rule": "selected-station-line"
+    },
+    "displayedDateMatched": true,
+    "pcMobileCountEqual": true,
+    "pcMobileAllTimesAndPlatformsMatched": true,
+    "duplicates": 0,
+    "sorted": true,
+    "missingDestination": 0,
+    "samples": [
+      {
+        "time": "04:59",
+        "destination": "網干",
+        "trainType": "普通（京都から快速）",
+        "platform": null,
+        "notes": [
+          "A快速（うれしート連結）",
+          "◆ この運行日以外は運転日・行先・時刻が異なる場合があります。日付指定の掲載便として使用。"
+        ]
+      },
+      {
+        "time": "12:02",
+        "destination": "網干",
+        "trainType": "普通（高槻から快速）",
+        "platform": null,
+        "notes": [
+          "A快速（うれしート連結）",
+          "◆ この運行日以外は運転日・行先・時刻が異なる場合があります。日付指定の掲載便として使用。"
+        ]
+      },
+      {
+        "time": "23:52",
+        "destination": "京都",
+        "trainType": "普通",
+        "platform": null
+      }
+    ],
+    "independentlyReviewed": false,
+    "verificationMethod": "daily-page-dual-view-route-scope"
+  },
+  {
+    "id": "jr-minamikusatsu-east-2026-10-25",
+    "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2813013002?date=20261025",
+    "indexUrl": "https://timetable.jr-odekake.net/cgi-bin/mydia_sp.cgi?MD=3&FN=0&EID=0610149&date=20261025",
+    "indexSha256": "7ee7e6535209e31f3994ed8524674f99282985a13bc67e644a3b4b0d05e2a7ac",
+    "indexRetrievedAt": "2026-10-22T04:43:27.479Z",
+    "sha256": "813de3ca07a1ac9eed3e82f1a93434fe782fe79aad5ed93ca0973e02ea46389c",
+    "retrievedAt": "2026-10-22T04:43:30.379Z",
+    "count": 132,
+    "scope": {
+      "version": 2,
+      "sourceCount": 132,
+      "excluded": [],
+      "rule": "selected-station-line"
+    },
+    "displayedDateMatched": true,
+    "pcMobileCountEqual": true,
+    "pcMobileAllTimesAndPlatformsMatched": true,
+    "duplicates": 0,
+    "sorted": true,
+    "missingDestination": 0,
+    "samples": [
+      {
+        "time": "05:52",
+        "destination": "米原",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "12:12",
+        "destination": "野洲",
+        "trainType": "普通",
+        "platform": null,
+        "notes": [
+          "A快速（うれしート連結）"
+        ]
+      },
+      {
+        "time": "24:38",
+        "destination": "野洲",
+        "trainType": "普通",
+        "platform": null
+      }
+    ],
+    "independentlyReviewed": false,
+    "verificationMethod": "daily-page-dual-view-route-scope"
+  }
+]

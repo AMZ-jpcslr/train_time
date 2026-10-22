@@ -1,0 +1,300 @@
+[
+  {
+    "id": "kyoto-imadegawa-south-weekday",
+    "sourceUrl": "https://www2.city.kyoto.lg.jp/kotsu/tikadia/hyperdia/021600.htm",
+    "sha256": "36937cc4d212c55bee0237cf69d3869ef2d153f3a66e4c87a217d37a1141552e",
+    "retrievedAt": "2026-10-22T04:43:09.704Z",
+    "pageAsOf": "2025-02-22",
+    "topValidFrom": "2026-03-14",
+    "basis": "currently-published-official-navigation",
+    "revisionDate": null,
+    "top": {
+      "sourceUrl": "https://www2.city.kyoto.lg.jp/kotsu/tikadia/tikatime.htm",
+      "sha256": "6537616ffe6971fe1de927547ffb7735c6b2e4b83c368abd7368abacb46004a9",
+      "retrievedAt": "2026-10-22T04:43:04.748Z"
+    },
+    "currentNavigation": [
+      {
+        "sourceUrl": "https://www2.city.kyoto.lg.jp/kotsu/tikadia/tikatime.htm",
+        "sha256": "6537616ffe6971fe1de927547ffb7735c6b2e4b83c368abd7368abacb46004a9",
+        "retrievedAt": "2026-10-22T04:43:04.748Z"
+      },
+      {
+        "sourceUrl": "https://www2.city.kyoto.lg.jp/kotsu/tikadia/hyperdia/line02.htm",
+        "sha256": "7450c2df3fcca40fa48ce2e5ba6972ff37ffbd7802283a413d17e7575256fe7e",
+        "retrievedAt": "2026-10-22T04:43:07.233Z"
+      },
+      {
+        "sourceUrl": "https://www2.city.kyoto.lg.jp/kotsu/tikadia/hyperdia/menu0216.htm",
+        "sha256": "e107d7b639ca363e75a1b281a8ee18a7b15106b50eb4e8a8371a36a09415cc63",
+        "retrievedAt": "2026-10-22T04:43:08.469Z"
+      },
+      {
+        "sourceUrl": "https://www2.city.kyoto.lg.jp/kotsu/tikadia/hyperdia/021600.htm",
+        "sha256": "36937cc4d212c55bee0237cf69d3869ef2d153f3a66e4c87a217d37a1141552e",
+        "retrievedAt": "2026-10-22T04:43:09.704Z"
+      }
+    ],
+    "semantics": {
+      "sourceUrl": "https://www2.city.kyoto.lg.jp/kotsu/tikadia/js/tt_utility_tika.js",
+      "sha256": "b90788496a4268d4454de37f1b24ec4434c6713046e979346df94ec4429b85f5",
+      "retrievedAt": "2026-10-22T04:43:05.996Z"
+    },
+    "count": 166,
+    "missingSequenceNumbers": 0,
+    "duplicates": 0,
+    "sorted": true,
+    "samples": [
+      {
+        "sourceSequence": 1,
+        "time": "05:28",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "sourceSequence": 66,
+        "time": "12:02",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "sourceSequence": 166,
+        "time": "23:49",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1",
+        "notes": [
+          "烏丸御池駅で東西線との接続待ち"
+        ]
+      }
+    ],
+    "sourceSampleVerification": "passed",
+    "currentApplicability": "current-official-publication",
+    "applicationVerification": "verified",
+    "checkedAt": "2026-10-22T04:43:04.748Z"
+  },
+  {
+    "id": "kyoto-imadegawa-south-weekend",
+    "sourceUrl": "https://www2.city.kyoto.lg.jp/kotsu/tikadia/hyperdia/021600.htm",
+    "sha256": "36937cc4d212c55bee0237cf69d3869ef2d153f3a66e4c87a217d37a1141552e",
+    "retrievedAt": "2026-10-22T04:43:09.704Z",
+    "pageAsOf": "2025-02-22",
+    "topValidFrom": "2026-03-14",
+    "basis": "currently-published-official-navigation",
+    "revisionDate": null,
+    "top": {
+      "sourceUrl": "https://www2.city.kyoto.lg.jp/kotsu/tikadia/tikatime.htm",
+      "sha256": "6537616ffe6971fe1de927547ffb7735c6b2e4b83c368abd7368abacb46004a9",
+      "retrievedAt": "2026-10-22T04:43:04.748Z"
+    },
+    "currentNavigation": [
+      {
+        "sourceUrl": "https://www2.city.kyoto.lg.jp/kotsu/tikadia/tikatime.htm",
+        "sha256": "6537616ffe6971fe1de927547ffb7735c6b2e4b83c368abd7368abacb46004a9",
+        "retrievedAt": "2026-10-22T04:43:04.748Z"
+      },
+      {
+        "sourceUrl": "https://www2.city.kyoto.lg.jp/kotsu/tikadia/hyperdia/line02.htm",
+        "sha256": "7450c2df3fcca40fa48ce2e5ba6972ff37ffbd7802283a413d17e7575256fe7e",
+        "retrievedAt": "2026-10-22T04:43:07.233Z"
+      },
+      {
+        "sourceUrl": "https://www2.city.kyoto.lg.jp/kotsu/tikadia/hyperdia/menu0216.htm",
+        "sha256": "e107d7b639ca363e75a1b281a8ee18a7b15106b50eb4e8a8371a36a09415cc63",
+        "retrievedAt": "2026-10-22T04:43:08.469Z"
+      },
+      {
+        "sourceUrl": "https://www2.city.kyoto.lg.jp/kotsu/tikadia/hyperdia/021600.htm",
+        "sha256": "36937cc4d212c55bee0237cf69d3869ef2d153f3a66e4c87a217d37a1141552e",
+        "retrievedAt": "2026-10-22T04:43:09.704Z"
+      }
+    ],
+    "semantics": {
+      "sourceUrl": "https://www2.city.kyoto.lg.jp/kotsu/tikadia/js/tt_utility_tika.js",
+      "sha256": "b90788496a4268d4454de37f1b24ec4434c6713046e979346df94ec4429b85f5",
+      "retrievedAt": "2026-10-22T04:43:05.996Z"
+    },
+    "count": 139,
+    "missingSequenceNumbers": 0,
+    "duplicates": 0,
+    "sorted": true,
+    "samples": [
+      {
+        "sourceSequence": 1,
+        "time": "05:28",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "sourceSequence": 50,
+        "time": "12:02",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "sourceSequence": 139,
+        "time": "23:49",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1",
+        "notes": [
+          "烏丸御池駅で東西線との接続待ち"
+        ]
+      }
+    ],
+    "sourceSampleVerification": "passed",
+    "currentApplicability": "current-official-publication",
+    "applicationVerification": "verified",
+    "checkedAt": "2026-10-22T04:43:04.748Z"
+  },
+  {
+    "id": "kyoto-imadegawa-north-weekday",
+    "sourceUrl": "https://www2.city.kyoto.lg.jp/kotsu/tikadia/hyperdia/021601.htm",
+    "sha256": "fddddbc832c52440b436fa46449a8f0c27b23365f5bd6815f216a145b27b090c",
+    "retrievedAt": "2026-10-22T04:43:11.040Z",
+    "pageAsOf": "2025-02-22",
+    "topValidFrom": "2026-03-14",
+    "basis": "currently-published-official-navigation",
+    "revisionDate": null,
+    "top": {
+      "sourceUrl": "https://www2.city.kyoto.lg.jp/kotsu/tikadia/tikatime.htm",
+      "sha256": "6537616ffe6971fe1de927547ffb7735c6b2e4b83c368abd7368abacb46004a9",
+      "retrievedAt": "2026-10-22T04:43:04.748Z"
+    },
+    "currentNavigation": [
+      {
+        "sourceUrl": "https://www2.city.kyoto.lg.jp/kotsu/tikadia/tikatime.htm",
+        "sha256": "6537616ffe6971fe1de927547ffb7735c6b2e4b83c368abd7368abacb46004a9",
+        "retrievedAt": "2026-10-22T04:43:04.748Z"
+      },
+      {
+        "sourceUrl": "https://www2.city.kyoto.lg.jp/kotsu/tikadia/hyperdia/line02.htm",
+        "sha256": "7450c2df3fcca40fa48ce2e5ba6972ff37ffbd7802283a413d17e7575256fe7e",
+        "retrievedAt": "2026-10-22T04:43:07.233Z"
+      },
+      {
+        "sourceUrl": "https://www2.city.kyoto.lg.jp/kotsu/tikadia/hyperdia/menu0216.htm",
+        "sha256": "e107d7b639ca363e75a1b281a8ee18a7b15106b50eb4e8a8371a36a09415cc63",
+        "retrievedAt": "2026-10-22T04:43:08.469Z"
+      },
+      {
+        "sourceUrl": "https://www2.city.kyoto.lg.jp/kotsu/tikadia/hyperdia/021601.htm",
+        "sha256": "fddddbc832c52440b436fa46449a8f0c27b23365f5bd6815f216a145b27b090c",
+        "retrievedAt": "2026-10-22T04:43:11.040Z"
+      }
+    ],
+    "semantics": {
+      "sourceUrl": "https://www2.city.kyoto.lg.jp/kotsu/tikadia/js/tt_utility_tika.js",
+      "sha256": "b90788496a4268d4454de37f1b24ec4434c6713046e979346df94ec4429b85f5",
+      "retrievedAt": "2026-10-22T04:43:05.996Z"
+    },
+    "count": 166,
+    "missingSequenceNumbers": 0,
+    "duplicates": 0,
+    "sorted": true,
+    "samples": [
+      {
+        "sourceSequence": 1,
+        "time": "05:36",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "sourceSequence": 67,
+        "time": "12:00",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "sourceSequence": 166,
+        "time": "23:58",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      }
+    ],
+    "sourceSampleVerification": "passed",
+    "currentApplicability": "current-official-publication",
+    "applicationVerification": "verified",
+    "checkedAt": "2026-10-22T04:43:04.748Z"
+  },
+  {
+    "id": "kyoto-imadegawa-north-weekend",
+    "sourceUrl": "https://www2.city.kyoto.lg.jp/kotsu/tikadia/hyperdia/021601.htm",
+    "sha256": "fddddbc832c52440b436fa46449a8f0c27b23365f5bd6815f216a145b27b090c",
+    "retrievedAt": "2026-10-22T04:43:11.040Z",
+    "pageAsOf": "2025-02-22",
+    "topValidFrom": "2026-03-14",
+    "basis": "currently-published-official-navigation",
+    "revisionDate": null,
+    "top": {
+      "sourceUrl": "https://www2.city.kyoto.lg.jp/kotsu/tikadia/tikatime.htm",
+      "sha256": "6537616ffe6971fe1de927547ffb7735c6b2e4b83c368abd7368abacb46004a9",
+      "retrievedAt": "2026-10-22T04:43:04.748Z"
+    },
+    "currentNavigation": [
+      {
+        "sourceUrl": "https://www2.city.kyoto.lg.jp/kotsu/tikadia/tikatime.htm",
+        "sha256": "6537616ffe6971fe1de927547ffb7735c6b2e4b83c368abd7368abacb46004a9",
+        "retrievedAt": "2026-10-22T04:43:04.748Z"
+      },
+      {
+        "sourceUrl": "https://www2.city.kyoto.lg.jp/kotsu/tikadia/hyperdia/line02.htm",
+        "sha256": "7450c2df3fcca40fa48ce2e5ba6972ff37ffbd7802283a413d17e7575256fe7e",
+        "retrievedAt": "2026-10-22T04:43:07.233Z"
+      },
+      {
+        "sourceUrl": "https://www2.city.kyoto.lg.jp/kotsu/tikadia/hyperdia/menu0216.htm",
+        "sha256": "e107d7b639ca363e75a1b281a8ee18a7b15106b50eb4e8a8371a36a09415cc63",
+        "retrievedAt": "2026-10-22T04:43:08.469Z"
+      },
+      {
+        "sourceUrl": "https://www2.city.kyoto.lg.jp/kotsu/tikadia/hyperdia/021601.htm",
+        "sha256": "fddddbc832c52440b436fa46449a8f0c27b23365f5bd6815f216a145b27b090c",
+        "retrievedAt": "2026-10-22T04:43:11.040Z"
+      }
+    ],
+    "semantics": {
+      "sourceUrl": "https://www2.city.kyoto.lg.jp/kotsu/tikadia/js/tt_utility_tika.js",
+      "sha256": "b90788496a4268d4454de37f1b24ec4434c6713046e979346df94ec4429b85f5",
+      "retrievedAt": "2026-10-22T04:43:05.996Z"
+    },
+    "count": 139,
+    "missingSequenceNumbers": 0,
+    "duplicates": 0,
+    "sorted": true,
+    "samples": [
+      {
+        "sourceSequence": 1,
+        "time": "05:36",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "sourceSequence": 51,
+        "time": "12:00",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "sourceSequence": 139,
+        "time": "23:58",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      }
+    ],
+    "sourceSampleVerification": "passed",
+    "currentApplicability": "current-official-publication",
+    "applicationVerification": "verified",
+    "checkedAt": "2026-10-22T04:43:04.748Z"
+  }
+]

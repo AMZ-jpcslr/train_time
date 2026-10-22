@@ -1,0 +1,112 @@
+[
+  {
+    "id": "hanshin-koshien-east-weekday",
+    "sourceUrl": "https://ekitan.com/timetable/railway/line-station/335-13/d1?dw=0",
+    "retrievedAt": "2026-10-22T04:42:27.264Z",
+    "checkedAt": "2026-10-22T04:42:27.264Z",
+    "sha256": "2b3c0077fe3937511d86609fde992937b671b86cec448b0b4679475cef41b741",
+    "revisionDate": "2025-02-22",
+    "count": 323,
+    "duplicates": 0,
+    "sorted": true,
+    "samples": [
+      "05:01/大阪梅田",
+      "12:02/大阪梅田",
+      "24:29/尼崎",
+      323
+    ],
+    "officialPdf": "https://www.hanshin.co.jp/search/koshien_u1.pdf",
+    "crosscheck": {
+      "sourceUrl": "https://transit.yahoo.co.jp/timetable/26350/4231",
+      "sha256": "ed3575578d471b7d6a0f830fbf6d553f4f8597114e3b4a55d979f7d457eb8dd9",
+      "retrievedAt": "2026-10-22T04:41:16.890Z",
+      "matched": 323
+    },
+    "holidaySource": null
+  },
+  {
+    "id": "hanshin-koshien-west-weekday",
+    "sourceUrl": "https://ekitan.com/timetable/railway/line-station/335-13/d1?dw=0",
+    "retrievedAt": "2026-10-22T04:42:27.264Z",
+    "checkedAt": "2026-10-22T04:42:27.264Z",
+    "sha256": "2b3c0077fe3937511d86609fde992937b671b86cec448b0b4679475cef41b741",
+    "revisionDate": "2025-02-22",
+    "count": 314,
+    "duplicates": 0,
+    "sorted": true,
+    "samples": [
+      "04:45/新開地",
+      "12:09/西宮",
+      "24:33/御影",
+      314
+    ],
+    "officialPdf": "https://www.hanshin.co.jp/search/koshien_h1.pdf",
+    "crosscheck": {
+      "sourceUrl": "https://transit.yahoo.co.jp/timetable/26350/4230?kind=1",
+      "sha256": "c75572ae9ba72aaede2d44d2fcc0cdfe58fb7a1810fafc3637445002567074fe",
+      "retrievedAt": "2026-10-22T04:42:34.034Z",
+      "matched": 314
+    },
+    "holidaySource": null
+  },
+  {
+    "id": "hanshin-koshien-east-weekend",
+    "sourceUrl": "https://ekitan.com/timetable/railway/line-station/335-13/d1?dw=1",
+    "retrievedAt": "2026-10-22T04:42:29.279Z",
+    "checkedAt": "2026-10-22T04:42:29.279Z",
+    "sha256": "7f4c96a9f9e434431ac4804d971fdc9033c7d4a144bd117eb3ce1bec39939f8d",
+    "revisionDate": "2025-02-22",
+    "count": 303,
+    "duplicates": 0,
+    "sorted": true,
+    "samples": [
+      "05:01/大阪梅田",
+      "12:02/大阪梅田",
+      "24:29/尼崎",
+      303
+    ],
+    "officialPdf": "https://www.hanshin.co.jp/search/koshien_u2.pdf",
+    "crosscheck": {
+      "sourceUrl": "https://transit.yahoo.co.jp/timetable/26350/4231?kind=2",
+      "sha256": "549f645a2a0d654ad05c4f8f774f99cdd1cc940e9d078613ba87981a0f9daf59",
+      "retrievedAt": "2026-10-22T04:42:32.616Z",
+      "matched": 303
+    },
+    "holidaySource": {
+      "sourceUrl": "https://ekitan.com/timetable/railway/line-station/335-13/d1?dw=2",
+      "sha256": "250884e1dc792a1205163c488b9998c8616ea39eaf9e1cfb73a36bb7e1b575e6",
+      "retrievedAt": "2026-10-22T04:42:31.115Z",
+      "matched": 303
+    }
+  },
+  {
+    "id": "hanshin-koshien-west-weekend",
+    "sourceUrl": "https://ekitan.com/timetable/railway/line-station/335-13/d1?dw=1",
+    "retrievedAt": "2026-10-22T04:42:29.279Z",
+    "checkedAt": "2026-10-22T04:42:29.279Z",
+    "sha256": "7f4c96a9f9e434431ac4804d971fdc9033c7d4a144bd117eb3ce1bec39939f8d",
+    "revisionDate": "2025-02-22",
+    "count": 284,
+    "duplicates": 0,
+    "sorted": true,
+    "samples": [
+      "04:45/新開地",
+      "12:09/西宮",
+      "24:33/御影",
+      284
+    ],
+    "officialPdf": "https://www.hanshin.co.jp/search/koshien_h2.pdf",
+    "crosscheck": {
+      "sourceUrl": "https://transit.yahoo.co.jp/timetable/26350/4230?kind=2",
+      "sha256": "367990dec2bb38aeded08ce8bea2ed83f1589d0ffff2b7a6a640eca723681e8e",
+      "retrievedAt": "2026-10-22T04:42:35.367Z",
+      "matched": 284
+    },
+    "holidaySource": {
+      "sourceUrl": "https://ekitan.com/timetable/railway/line-station/335-13/d1?dw=2",
+      "sha256": "250884e1dc792a1205163c488b9998c8616ea39eaf9e1cfb73a36bb7e1b575e6",
+      "retrievedAt": "2026-10-22T04:42:31.115Z",
+      "matched": 284
+    }
+  }
+]

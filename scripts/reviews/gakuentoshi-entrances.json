@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "stationId": "kobe-gakuentoshi",
+  "source": {
+    "title": "駅探 学園都市駅 出口地図",
+    "url": "https://ekitan.com/sta-info/iframe-map/station/5135/exit",
+    "parentUrl": "https://ekitan.com/sta-info/station/5135/exit",
+    "retrievedAt": "2026-10-22T04:53:20.322Z",
+    "retrievedAtBasis": "HTTP 200応答保存ファイルのmtime（取得直後に保存）。",
+    "rawCache": ".cache/osm/context/gakuentoshi-map.txt",
+    "sha256": "4c14b7502e722f48c9d1b5fc61de7ac6291e02291232e53298ff41609d617e99",
+    "coordinateSystem": "WGS84",
+    "extraction": "MaviPoint(lat, lon, WGS) と MaviFlag id と info_element.innerHTML の出口名称を同一ブロックで照合",
+    "termsUrl": "https://ekitan.com/help/rules/terms",
+    "reusePermission": "未確認。無料閲覧とデータ蓄積・再利用の許諾は別。"
+  },
+  "entrances": [
+    {
+      "id": "ekitan-gakuentoshi-534",
+      "stationId": "kobe-gakuentoshi",
+      "name": "北出口",
+      "lat": 34.681608,
+      "lon": 135.057919,
+      "sourceUrl": "https://ekitan.com/sta-info/iframe-map/station/5135/exit",
+      "checkedAt": "2026-10-22T04:53:20.322Z",
+      "note": "駅探の学園都市駅出口地図に表示されるWGS84座標。OSM入口nodeは未登録。駅建物東端・橋上歩道との配置を照合。改札・ホームまでの時間を別途加算。現地精度・公式構内図画像・利用条件は未確認。"
+    },
+    {
+      "id": "ekitan-gakuentoshi-533",
+      "stationId": "kobe-gakuentoshi",
+      "name": "南出口",
+      "lat": 34.681428,
+      "lon": 135.057931,
+      "sourceUrl": "https://ekitan.com/sta-info/iframe-map/station/5135/exit",
+      "checkedAt": "2026-10-22T04:53:20.322Z",
+      "note": "駅探の学園都市駅出口地図に表示されるWGS84座標。OSM入口nodeは未登録。駅建物東端・橋上歩道との配置を照合。改札・ホームまでの時間を別途加算。現地精度・公式構内図画像・利用条件は未確認。"
+    }
+  ],
+  "excluded": [
+    {
+      "id": "3249",
+      "name": "西出口(北側)",
+      "lat": 34.681875,
+      "lon": 135.057125,
+      "reason": "西出口は駅探出口情報に7:00〜23:00のみの注記。営業時間対応がない初期版では除外。"
+    },
+    {
+      "id": "3060",
+      "name": "西出口(南側)",
+      "lat": 34.681092,
+      "lon": 135.057083,
+      "reason": "西出口は駅探出口情報に7:00〜23:00のみの注記。営業時間対応がない初期版では除外。"
+    }
+  ],
+  "validation": {
+    "checkedAt": "2026-10-22T04:55:21.896Z",
+    "exitNamesAndWgsCoordinates": "verified-public-source",
+    "officialStationIdentity": "S14 学園都市。神戸市2026-03-05公開CSVと交通局ページで確認。",
+    "officialSourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable1/gakuentoshi/?type=free",
+    "officialTextChecked": "改札は地上1階1箇所、ホーム地下1階、1番総合運動公園方面・2番伊川谷方面、階段・エレベーター・エスカレーターで移動。",
+    "officialDiagramReviewed": false,
+    "officialDiagramLimitation": "webの公式本文は閲覧できたが構内画像のURL・画像は取得できず。通常HTTPSは202空本文、IABはBrowser unavailable。画像目視照合完了とは扱わない。",
+    "osmSourceCache": ".cache/osm/context/gakuentoshi-map.json",
+    "osmStationBuildingWay": 196468561,
+    "osmAdjacentFootway": 1299449718,
+    "osmEntranceNode": null,
+    "osmReview": "両出口は駅建物way/196468561の東端上に位置し、その東側数mの橋上歩道way/1299449718と整合。駅中心node/3903196858、商業施設入口2点は不採用。OSMに改札までの明示接続や当該入口nodeはない。",
+    "coordinateSurveyed": false,
+    "routeEndToEndVerified": false
+  }
+}

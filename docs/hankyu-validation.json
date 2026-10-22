@@ -1,0 +1,583 @@
+[
+  {
+    "id": "hankyu-umeda-west-weekend",
+    "filename": "HK-01_ko_2_h.json",
+    "sourceUrl": "https://www.hankyu.co.jp/station/html/HK-01_ko_2_h.html",
+    "retrievedAt": "2026-10-22T04:15:02.337Z",
+    "checkedAt": "2026-10-22T04:15:02.337Z",
+    "method": "web-text-snapshot",
+    "snapshotSha256": "023cb2d575bed564defe8f6ba8c944fcf31146dc19a603b251ce57eb3a0978fc",
+    "timetableBodyLines": [
+      121,
+      379
+    ],
+    "titleEvidence": {
+      "method": "source-body-heading"
+    },
+    "revisionCandidate": null,
+    "count": 203,
+    "duplicates": 0,
+    "sorted": true,
+    "samples": [
+      {
+        "time": "05:00",
+        "destination": "新開地",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "12:00",
+        "destination": "新開地",
+        "trainType": "特急",
+        "platform": null
+      },
+      {
+        "time": "24:10",
+        "destination": "西宮北口",
+        "trainType": "区間普通",
+        "platform": null
+      }
+    ],
+    "sourceSampleVerification": "passed",
+    "verification": "verified",
+    "currentApplicability": "current-official-publication",
+    "currentEditionReview": {
+      "checkedAt": "2026-10-22T04:47:50.870Z",
+      "revisionDate": "2025-02-22",
+      "factsSha256": "e0b0fa7ae671502facc94df8c9d453810a8bafd5bbd22490cb02692c847721d5",
+      "stationPage": "https://www.hankyu.co.jp/station/umeda.html/",
+      "meaning": "Current official station navigation, published revision notice/FAQ, source structure and independently reviewed first/noon/last samples. Not a guarantee of all temporary or real-time changes."
+    }
+  },
+  {
+    "id": "hankyu-umeda-west-weekday",
+    "filename": "HK-01_ko_2_w.json",
+    "sourceUrl": "https://www.hankyu.co.jp/ch/station/html/HK-01_ko_2_w.html",
+    "retrievedAt": "2026-10-22T04:22:08.720Z",
+    "checkedAt": "2026-10-22T04:22:08.720Z",
+    "method": "web-text-snapshot",
+    "snapshotSha256": "6c4c8d2ce716a46d4e9d2de2c6aaddc5a6632102f570601562844d57cd8ba9fe",
+    "timetableBodyLines": [
+      156,
+      433
+    ],
+    "titleEvidence": {
+      "method": "web-response-document-title",
+      "title": "大阪梅田（阪急Station神户线神户三宫/新开地（工作日）时刻表|路线图・车站信息|阪急电铁 (https://www.hankyu.co.jp/ch/station/html/HK-01_ko_2_w.html)",
+      "identityEvidence": {
+        "sourceUrl": "https://www.hankyu.co.jp/station/html/HK-01_ko_2_w.html",
+        "retrievedAt": "2026-10-22T04:14:17.705Z",
+        "heading": "# 大阪梅田(阪急)駅 神戸線 神戸三宮・新開地方面〈平日〉 時刻表",
+        "sourceLine": 121,
+        "snapshotSha256": "6b1cf0f2c501719b7c4b18cad2f0255374b74b159f16e5bbdba60ea4a870007b",
+        "use": "identity only; no departure times combined"
+      }
+    },
+    "revisionCandidate": null,
+    "count": 256,
+    "duplicates": 0,
+    "sorted": true,
+    "samples": [
+      {
+        "time": "05:00",
+        "destination": "新開地",
+        "trainType": "普通",
+        "platform": null,
+        "notes": [
+          "原表の種別: 普通 / 行先: 新开地"
+        ]
+      },
+      {
+        "time": "12:00",
+        "destination": "新開地",
+        "trainType": "特急",
+        "platform": null,
+        "notes": [
+          "原表の種別: 特急 / 行先: 新开地"
+        ]
+      },
+      {
+        "time": "24:10",
+        "destination": "西宮北口",
+        "trainType": "区間普通",
+        "platform": null,
+        "notes": [
+          "原表の種別: 普通区间 / 行先: 西宫北口"
+        ]
+      }
+    ],
+    "sourceSampleVerification": "passed",
+    "verification": "verified",
+    "currentApplicability": "current-official-publication",
+    "currentEditionReview": {
+      "checkedAt": "2026-10-22T04:47:50.870Z",
+      "revisionDate": "2025-02-22",
+      "factsSha256": "5f02a69700ebe3118d94765479f5c439f3f7b6eae6dcc723917ec6efcf08aa69",
+      "stationPage": "https://www.hankyu.co.jp/station/umeda.html/",
+      "meaning": "Current official station navigation, published revision notice/FAQ, source structure and independently reviewed first/noon/last samples. Not a guarantee of all temporary or real-time changes."
+    }
+  },
+  {
+    "id": "hankyu-rokko-east-weekend",
+    "filename": "HK-13_ko_1_h.json",
+    "sourceUrl": "https://www.hankyu.co.jp/en/station/html/HK-13_ko_1_h.html",
+    "retrievedAt": "2026-10-22T04:21:35.410Z",
+    "checkedAt": "2026-10-22T04:21:35.410Z",
+    "method": "web-text-snapshot",
+    "snapshotSha256": "17135824734efe0b7b042b30ac1448077ae2ecaea0809f7ec44accb672006fea",
+    "timetableBodyLines": [
+      120,
+      289
+    ],
+    "titleEvidence": {
+      "method": "source-body-heading"
+    },
+    "revisionCandidate": null,
+    "count": 114,
+    "duplicates": 0,
+    "sorted": true,
+    "samples": [
+      {
+        "time": "05:09",
+        "destination": "大阪梅田",
+        "trainType": "普通",
+        "platform": null,
+        "notes": [
+          "原表の種別: Local / 行先: Osaka-umeda"
+        ]
+      },
+      {
+        "time": "12:09",
+        "destination": "大阪梅田",
+        "trainType": "普通",
+        "platform": null,
+        "notes": [
+          "原表の種別: Local / 行先: Osaka-umeda"
+        ]
+      },
+      {
+        "time": "24:17",
+        "destination": "西宮北口",
+        "trainType": "普通",
+        "platform": null,
+        "notes": [
+          "原表の種別: Local / 行先: Nishinomiya-kitaguchi"
+        ]
+      }
+    ],
+    "sourceSampleVerification": "passed",
+    "verification": "verified",
+    "currentApplicability": "current-official-publication",
+    "currentEditionReview": {
+      "checkedAt": "2026-10-22T04:47:50.870Z",
+      "revisionDate": "2025-02-22",
+      "factsSha256": "cde8096c16af2188eea0b9ea4ad2e3706f7da71fa1d80ee65245cf2abfceaa0c",
+      "stationPage": "https://www.hankyu.co.jp/ch/station/rokko.html",
+      "meaning": "Current official station navigation, published revision notice/FAQ, source structure and independently reviewed first/noon/last samples. Not a guarantee of all temporary or real-time changes."
+    }
+  },
+  {
+    "id": "hankyu-rokko-east-weekday",
+    "filename": "HK-13_ko_1_w.json",
+    "sourceUrl": "https://www.hankyu.co.jp/en/station/html/HK-13_ko_1_w.html",
+    "retrievedAt": "2026-10-22T04:19:48.312Z",
+    "checkedAt": "2026-10-22T04:19:48.312Z",
+    "method": "web-text-snapshot",
+    "snapshotSha256": "ea2e439a07a00921bc7a6395a0e0cd409b8df6e67daf9c430035a52509576989",
+    "timetableBodyLines": [
+      120,
+      334
+    ],
+    "titleEvidence": {
+      "method": "source-body-heading"
+    },
+    "revisionCandidate": null,
+    "count": 159,
+    "duplicates": 0,
+    "sorted": true,
+    "samples": [
+      {
+        "time": "05:09",
+        "destination": "大阪梅田",
+        "trainType": "普通",
+        "platform": null,
+        "notes": [
+          "原表の種別: Local / 行先: Osaka-umeda"
+        ]
+      },
+      {
+        "time": "12:09",
+        "destination": "大阪梅田",
+        "trainType": "普通",
+        "platform": null,
+        "notes": [
+          "原表の種別: Local / 行先: Osaka-umeda"
+        ]
+      },
+      {
+        "time": "24:17",
+        "destination": "西宮北口",
+        "trainType": "普通",
+        "platform": null,
+        "notes": [
+          "原表の種別: Local / 行先: Nishinomiya-kitaguchi"
+        ]
+      }
+    ],
+    "sourceSampleVerification": "passed",
+    "verification": "verified",
+    "currentApplicability": "current-official-publication",
+    "currentEditionReview": {
+      "checkedAt": "2026-10-22T04:47:50.870Z",
+      "revisionDate": "2025-02-22",
+      "factsSha256": "c06a6ddeded76a5c3c0cf199dcb35be632ebf0d35614c0457098aaa2a1b27526",
+      "stationPage": "https://www.hankyu.co.jp/ch/station/rokko.html",
+      "meaning": "Current official station navigation, published revision notice/FAQ, source structure and independently reviewed first/noon/last samples. Not a guarantee of all temporary or real-time changes."
+    }
+  },
+  {
+    "id": "hankyu-rokko-west-weekend",
+    "filename": "HK-13_ko_2_h.json",
+    "sourceUrl": "https://www.hankyu.co.jp/station/html/HK-13_ko_2_h.html",
+    "retrievedAt": "2026-10-22T04:15:50.576Z",
+    "checkedAt": "2026-10-22T04:15:50.576Z",
+    "method": "web-text-snapshot",
+    "snapshotSha256": "81a7f80c186567c45aa197ed58ae1dcf8b7a0ba7d65870992808cf171fce0f44",
+    "timetableBodyLines": [
+      121,
+      294
+    ],
+    "titleEvidence": {
+      "method": "source-body-heading"
+    },
+    "revisionCandidate": null,
+    "count": 116,
+    "duplicates": 0,
+    "sorted": true,
+    "samples": [
+      {
+        "time": "04:50",
+        "destination": "高速神戸",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "12:09",
+        "destination": "神戸三宮",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "24:15",
+        "destination": "神戸三宮",
+        "trainType": "急行",
+        "platform": null
+      }
+    ],
+    "sourceSampleVerification": "passed",
+    "verification": "verified",
+    "currentApplicability": "current-official-publication",
+    "currentEditionReview": {
+      "checkedAt": "2026-10-22T04:47:50.870Z",
+      "revisionDate": "2025-02-22",
+      "factsSha256": "b173c1fc8ad496b16038ba8a939f3665125664616e89df0490414db8b82aa61e",
+      "stationPage": "https://www.hankyu.co.jp/ch/station/rokko.html",
+      "meaning": "Current official station navigation, published revision notice/FAQ, source structure and independently reviewed first/noon/last samples. Not a guarantee of all temporary or real-time changes."
+    }
+  },
+  {
+    "id": "hankyu-rokko-west-weekday",
+    "filename": "HK-13_ko_2_w.json",
+    "sourceUrl": "https://www.hankyu.co.jp/ch/station/html/HK-13_ko_2_w.html",
+    "retrievedAt": "2026-10-22T04:20:27.429Z",
+    "checkedAt": "2026-10-22T04:20:27.429Z",
+    "method": "web-text-snapshot",
+    "snapshotSha256": "c1171ca994287b2bc1472e54b228ad579cf9341dcbe0920fbfa43741f86bd75f",
+    "timetableBodyLines": [
+      122,
+      331
+    ],
+    "titleEvidence": {
+      "method": "source-body-heading"
+    },
+    "revisionCandidate": null,
+    "count": 152,
+    "duplicates": 0,
+    "sorted": true,
+    "samples": [
+      {
+        "time": "04:50",
+        "destination": "高速神戸",
+        "trainType": "普通",
+        "platform": null,
+        "notes": [
+          "原表の種別: 普通 / 行先: 高速神户"
+        ]
+      },
+      {
+        "time": "12:09",
+        "destination": "神戸三宮",
+        "trainType": "普通",
+        "platform": null,
+        "notes": [
+          "原表の種別: 普通 / 行先: 神户三宫"
+        ]
+      },
+      {
+        "time": "24:15",
+        "destination": "神戸三宮",
+        "trainType": "急行",
+        "platform": null,
+        "notes": [
+          "原表の種別: 急行 / 行先: 神户三宫"
+        ]
+      }
+    ],
+    "sourceSampleVerification": "passed",
+    "verification": "verified",
+    "currentApplicability": "current-official-publication",
+    "currentEditionReview": {
+      "checkedAt": "2026-10-22T04:47:50.870Z",
+      "revisionDate": "2025-02-22",
+      "factsSha256": "b6db877de2efbe55ecd83e1ab51a9517e7d9111681255c861bff5f82df5492f1",
+      "stationPage": "https://www.hankyu.co.jp/ch/station/rokko.html",
+      "meaning": "Current official station navigation, published revision notice/FAQ, source structure and independently reviewed first/noon/last samples. Not a guarantee of all temporary or real-time changes."
+    }
+  },
+  {
+    "id": "hankyu-sannomiya-east-weekend",
+    "filename": "HK-16_ko_1_h.json",
+    "sourceUrl": "https://www.hankyu.co.jp/en/station/html/HK-16_ko_1_h.html",
+    "retrievedAt": "2026-10-22T04:21:50.767Z",
+    "checkedAt": "2026-10-22T04:21:50.767Z",
+    "method": "web-text-snapshot",
+    "snapshotSha256": "8fc33383035435fc23e34267fcf52a6d3cd39751ece26dd2afe728b4752db25f",
+    "timetableBodyLines": [
+      120,
+      379
+    ],
+    "titleEvidence": {
+      "method": "source-body-heading"
+    },
+    "revisionCandidate": null,
+    "count": 204,
+    "duplicates": 0,
+    "sorted": true,
+    "samples": [
+      {
+        "time": "05:02",
+        "destination": "大阪梅田",
+        "trainType": "普通",
+        "platform": null,
+        "notes": [
+          "原表の種別: Local / 行先: Osaka-umeda"
+        ]
+      },
+      {
+        "time": "12:00",
+        "destination": "大阪梅田",
+        "trainType": "特急",
+        "platform": null,
+        "notes": [
+          "原表の種別: Ltd Exp / 行先: Osaka-umeda"
+        ]
+      },
+      {
+        "time": "24:10",
+        "destination": "西宮北口",
+        "trainType": "普通",
+        "platform": null,
+        "notes": [
+          "原表の種別: Local / 行先: Nishinomiya-kitaguchi"
+        ]
+      }
+    ],
+    "sourceSampleVerification": "passed",
+    "verification": "verified",
+    "currentApplicability": "current-official-publication",
+    "currentEditionReview": {
+      "checkedAt": "2026-10-22T04:47:50.870Z",
+      "revisionDate": "2025-02-22",
+      "factsSha256": "327aa81ec36fd25962b924c051e14e5681c85718961320d5107177bfb6d37fd3",
+      "stationPage": "https://www.hankyu.co.jp/en/station/sannomiya.html",
+      "meaning": "Current official station navigation, published revision notice/FAQ, source structure and independently reviewed first/noon/last samples. Not a guarantee of all temporary or real-time changes."
+    }
+  },
+  {
+    "id": "hankyu-sannomiya-east-weekday",
+    "filename": "HK-16_ko_1_w.json",
+    "sourceUrl": "https://www.hankyu.co.jp/en/station/html/HK-16_ko_1_w.html",
+    "retrievedAt": "2026-10-22T04:20:48.909Z",
+    "checkedAt": "2026-10-22T04:20:48.909Z",
+    "method": "web-text-snapshot",
+    "snapshotSha256": "862e67e5a5374cc2f04af13870f6c79b67428f33a0a2a1e84f9f52cacb818712",
+    "timetableBodyLines": [
+      154,
+      398
+    ],
+    "titleEvidence": {
+      "method": "web-response-document-title",
+      "title": "Kobe-sannomiya (Hankyu) Station Kobe Line Osaka-umeda timetable | Route maps and station information | Hankyu Railway (https://www.hankyu.co.jp/en/station/html/HK-16_ko_1_w.html)",
+      "identityEvidence": {
+        "sourceUrl": "https://www.hankyu.co.jp/ch/station/html/HK-16_ko_1_w.html",
+        "retrievedAt": "2026-10-22T04:18:41.349Z",
+        "heading": "# 神户三宫（阪急） 车站神户线大阪梅田方向〈平日〉时刻表",
+        "sourceLine": 122,
+        "snapshotSha256": "4e82e9c3209e6741dfd2a48f0b8d03597822aad0a4b31a0444b9a4d34d8b0e8a",
+        "use": "identity only; no departure times combined"
+      }
+    },
+    "revisionCandidate": null,
+    "count": 223,
+    "duplicates": 0,
+    "sorted": true,
+    "samples": [
+      {
+        "time": "05:02",
+        "destination": "大阪梅田",
+        "trainType": "普通",
+        "platform": null,
+        "notes": [
+          "原表の種別: Local / 行先: Osaka-umeda"
+        ]
+      },
+      {
+        "time": "12:00",
+        "destination": "大阪梅田",
+        "trainType": "特急",
+        "platform": null,
+        "notes": [
+          "原表の種別: Ltd Exp / 行先: Osaka-umeda"
+        ]
+      },
+      {
+        "time": "24:10",
+        "destination": "西宮北口",
+        "trainType": "普通",
+        "platform": null,
+        "notes": [
+          "原表の種別: Local / 行先: Nishinomiya-kitaguchi"
+        ]
+      }
+    ],
+    "sourceSampleVerification": "passed",
+    "verification": "verified",
+    "currentApplicability": "current-official-publication",
+    "currentEditionReview": {
+      "checkedAt": "2026-10-22T04:47:50.870Z",
+      "revisionDate": "2025-02-22",
+      "factsSha256": "823fa8bbc86601e52fdb47c0287e926f1d37f57006c0f113dca9f953e21b2bb6",
+      "stationPage": "https://www.hankyu.co.jp/en/station/sannomiya.html",
+      "meaning": "Current official station navigation, published revision notice/FAQ, source structure and independently reviewed first/noon/last samples. Not a guarantee of all temporary or real-time changes."
+    }
+  },
+  {
+    "id": "hankyu-sannomiya-west-weekend",
+    "filename": "HK-16_ko_2_h.json",
+    "sourceUrl": "https://www.hankyu.co.jp/station/html/HK-16_ko_2_h.html",
+    "retrievedAt": "2026-10-22T04:14:17.717Z",
+    "checkedAt": "2026-10-22T04:14:17.717Z",
+    "method": "web-text-snapshot",
+    "snapshotSha256": "5867a58631d5ebb6cff3136cb6b41b2931cd0f7de9415cb293cfbee10c4b77cf",
+    "timetableBodyLines": [
+      121,
+      310
+    ],
+    "titleEvidence": {
+      "method": "source-body-heading"
+    },
+    "revisionCandidate": null,
+    "count": 133,
+    "duplicates": 0,
+    "sorted": true,
+    "samples": [
+      {
+        "time": "04:57",
+        "destination": "高速神戸",
+        "trainType": "普通",
+        "platform": null
+      },
+      {
+        "time": "12:08",
+        "destination": "新開地",
+        "trainType": "特急",
+        "platform": null
+      },
+      {
+        "time": "23:52",
+        "destination": "新開地",
+        "trainType": "急行",
+        "platform": null
+      }
+    ],
+    "sourceSampleVerification": "passed",
+    "verification": "verified",
+    "currentApplicability": "current-official-publication",
+    "currentEditionReview": {
+      "checkedAt": "2026-10-22T04:47:50.870Z",
+      "revisionDate": "2025-02-22",
+      "factsSha256": "c94d9cd09da3030ffca37ed811e5ba98f69a0220bf4e3adb8c95c3bdc2b7d92c",
+      "stationPage": "https://www.hankyu.co.jp/en/station/sannomiya.html",
+      "meaning": "Current official station navigation, published revision notice/FAQ, source structure and independently reviewed first/noon/last samples. Not a guarantee of all temporary or real-time changes."
+    }
+  },
+  {
+    "id": "hankyu-sannomiya-west-weekday",
+    "filename": "HK-16_ko_2_w.json",
+    "sourceUrl": "https://www.hankyu.co.jp/en/station/html/HK-16_ko_2_w.html",
+    "retrievedAt": "2026-10-22T04:21:07.724Z",
+    "checkedAt": "2026-10-22T04:21:07.724Z",
+    "method": "web-text-snapshot",
+    "snapshotSha256": "d714d79d640f1008443631cdadbed94bf677ed8140658784722a7e30ce43e174",
+    "timetableBodyLines": [
+      120,
+      305
+    ],
+    "titleEvidence": {
+      "method": "source-body-heading"
+    },
+    "revisionCandidate": null,
+    "count": 130,
+    "duplicates": 0,
+    "sorted": true,
+    "samples": [
+      {
+        "time": "04:57",
+        "destination": "高速神戸",
+        "trainType": "普通",
+        "platform": null,
+        "notes": [
+          "原表の種別: Local / 行先: Kosoku-kobe"
+        ]
+      },
+      {
+        "time": "12:09",
+        "destination": "新開地",
+        "trainType": "特急",
+        "platform": null,
+        "notes": [
+          "原表の種別: Ltd Exp / 行先: Shinkaichi"
+        ]
+      },
+      {
+        "time": "23:47",
+        "destination": "新開地",
+        "trainType": "準特急",
+        "platform": null,
+        "notes": [
+          "原表の種別: Semi-Ltd Exp / 行先: Shinkaichi"
+        ]
+      }
+    ],
+    "sourceSampleVerification": "passed",
+    "verification": "verified",
+    "currentApplicability": "current-official-publication",
+    "currentEditionReview": {
+      "checkedAt": "2026-10-22T04:47:50.870Z",
+      "revisionDate": "2025-02-22",
+      "factsSha256": "82aa4182bcb6fc8e17b0534c3030d94835de13001698fdddc6f70eda0c464e63",
+      "stationPage": "https://www.hankyu.co.jp/en/station/sannomiya.html",
+      "meaning": "Current official station navigation, published revision notice/FAQ, source structure and independently reviewed first/noon/last samples. Not a guarantee of all temporary or real-time changes."
+    }
+  }
+]

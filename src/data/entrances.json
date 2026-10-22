@@ -1,0 +1,222 @@
+[
+  {
+    "id": "osm-8967449216",
+    "stationId": "kobe-myohoji",
+    "name": "駅舎入口（地図登録地点）",
+    "lat": 34.6750914,
+    "lon": 135.1099884,
+    "sourceUrl": "https://www.openstreetmap.org/node/8967449216",
+    "checkedAt": "2026-10-22T04:40:59.943Z",
+    "note": "OSM駅舎way/507542455上の入口。南側駅前広場に接続。"
+  },
+  {
+    "id": "osm-3960824202",
+    "stationId": "jr-nishinomiya",
+    "name": "南側入口",
+    "lat": 34.738723,
+    "lon": 135.3478506,
+    "sourceUrl": "https://www.openstreetmap.org/node/3960824202",
+    "checkedAt": "2026-10-22T04:40:59.943Z",
+    "note": "OSM train_station_entrance。"
+  },
+  {
+    "id": "osm-3960824206",
+    "stationId": "jr-nishinomiya",
+    "name": "北側入口",
+    "lat": 34.739314,
+    "lon": 135.3478513,
+    "sourceUrl": "https://www.openstreetmap.org/node/3960824206",
+    "checkedAt": "2026-10-22T04:40:59.943Z",
+    "note": "OSM train_station_entrance。"
+  },
+  {
+    "id": "osm-3375274239",
+    "stationId": "jr-osaka",
+    "name": "桜橋口",
+    "lat": 34.7014024,
+    "lon": 135.4948312,
+    "sourceUrl": "https://www.openstreetmap.org/node/3375274239",
+    "checkedAt": "2026-10-22T04:40:59.943Z",
+    "note": "OSMに入口名が登録されています。"
+  },
+  {
+    "id": "osm-3448863956",
+    "stationId": "jr-osaka",
+    "name": "御堂筋南口",
+    "lat": 34.7027421,
+    "lon": 135.4974449,
+    "sourceUrl": "https://www.openstreetmap.org/node/3448863956",
+    "checkedAt": "2026-10-22T04:40:59.943Z",
+    "note": "OSMに入口名が登録されています。"
+  },
+  {
+    "id": "osm-5178004149",
+    "stationId": "jr-osaka",
+    "name": "御堂筋北口",
+    "lat": 34.7034328,
+    "lon": 135.4969814,
+    "sourceUrl": "https://www.openstreetmap.org/node/5178004149",
+    "checkedAt": "2026-10-22T04:40:59.943Z",
+    "note": "OSMに入口名が登録されています。"
+  },
+  {
+    "id": "osm-5342194712",
+    "stationId": "jr-osaka",
+    "name": "中央北口",
+    "lat": 34.7027802,
+    "lon": 135.495591,
+    "sourceUrl": "https://www.openstreetmap.org/node/5342194712",
+    "checkedAt": "2026-10-22T04:40:59.943Z",
+    "note": "OSMに入口名が登録されています。"
+  },
+  {
+    "id": "osm-5358890779",
+    "stationId": "jr-osaka",
+    "name": "中央南口",
+    "lat": 34.7016378,
+    "lon": 135.4964159,
+    "sourceUrl": "https://www.openstreetmap.org/node/5358890779",
+    "checkedAt": "2026-10-22T04:40:59.943Z",
+    "note": "OSMに入口名が登録されています。"
+  },
+  {
+    "id": "osm-5308312727",
+    "stationId": "jr-ibaraki",
+    "name": "東側入口",
+    "lat": 34.8154337,
+    "lon": 135.5627021,
+    "sourceUrl": "https://www.openstreetmap.org/node/5308312727",
+    "checkedAt": "2026-10-22T04:40:59.943Z",
+    "note": "OSM train_station_entrance。"
+  },
+  {
+    "id": "osm-5983012817",
+    "stationId": "jr-ibaraki",
+    "name": "西側入口",
+    "lat": 34.8155362,
+    "lon": 135.5619663,
+    "sourceUrl": "https://www.openstreetmap.org/node/5983012817",
+    "checkedAt": "2026-10-22T04:40:59.943Z",
+    "note": "OSM train_station_entrance。"
+  },
+  {
+    "id": "osm-6897564065",
+    "stationId": "jr-minamikusatsu",
+    "name": "西側入口",
+    "lat": 35.0036927,
+    "lon": 135.946949,
+    "sourceUrl": "https://www.openstreetmap.org/node/6897564065",
+    "checkedAt": "2026-10-22T04:40:59.943Z",
+    "note": "OSM南草津駅舎way/245427493上の入口、歩道way/736717874に接続。"
+  },
+  {
+    "id": "osm-6483284116",
+    "stationId": "kyoto-imadegawa",
+    "name": "2番出入口",
+    "lat": 35.0305356,
+    "lon": 135.7592268,
+    "sourceUrl": "https://www.openstreetmap.org/node/6483284116",
+    "checkedAt": "2026-10-22T04:40:59.943Z",
+    "note": "OSM subway_entrance / ref=2。"
+  },
+  {
+    "id": "osm-11364685914",
+    "stationId": "kyoto-imadegawa",
+    "name": "1番出入口",
+    "lat": 35.0307135,
+    "lon": 135.759483,
+    "sourceUrl": "https://www.openstreetmap.org/node/11364685914",
+    "checkedAt": "2026-10-22T04:40:59.943Z",
+    "note": "OSM subway_entrance / ref=1。"
+  },
+  {
+    "id": "osm-1224217711",
+    "stationId": "kyoto-imadegawa",
+    "name": "南側エレベーター出入口",
+    "lat": 35.0292984,
+    "lon": 135.759559,
+    "sourceUrl": "https://www.openstreetmap.org/node/1224217711",
+    "checkedAt": "2026-10-22T04:40:59.943Z",
+    "note": "OSM subway_entrance / name=今出川 / wheelchair=yes。"
+  },
+  {
+    "id": "osm-1700410818",
+    "stationId": "hankyu-rokko",
+    "name": "北東側入口",
+    "lat": 34.7199128,
+    "lon": 135.234593,
+    "sourceUrl": "https://www.openstreetmap.org/node/1700410818",
+    "checkedAt": "2026-10-22T04:40:59.943Z",
+    "note": "OSM train_station_entrance。"
+  },
+  {
+    "id": "osm-13475656920",
+    "stationId": "hankyu-rokko",
+    "name": "北側入口",
+    "lat": 34.7198867,
+    "lon": 135.2343964,
+    "sourceUrl": "https://www.openstreetmap.org/node/13475656920",
+    "checkedAt": "2026-10-22T04:40:59.943Z",
+    "note": "OSM train_station_entrance。"
+  },
+  {
+    "id": "osm-2563975998",
+    "stationId": "hankyu-sannomiya",
+    "name": "西口",
+    "lat": 34.6927918,
+    "lon": 135.1922006,
+    "sourceUrl": "https://www.openstreetmap.org/node/2563975998",
+    "checkedAt": "2026-10-22T04:40:59.943Z",
+    "note": "OSM駅舎way/249846423上の入口、name=西口。"
+  },
+  {
+    "id": "osm-5261546898",
+    "stationId": "hankyu-umeda",
+    "name": "駅ビル1階西側入口",
+    "lat": 34.7057649,
+    "lon": 135.4976715,
+    "sourceUrl": "https://www.openstreetmap.org/node/5261546898",
+    "checkedAt": "2026-10-22T04:40:59.943Z",
+    "note": "OSM大阪梅田駅舎way/139168082上。地上歩道way/589357473と屋内通路way/544282679に接続。改札・神戸線ホームは上階です。"
+  },
+  {
+    "id": "osm-7627826584",
+    "stationId": "hanshin-koshien",
+    "name": "東側入口",
+    "lat": 34.7234746,
+    "lon": 135.3633398,
+    "sourceUrl": "https://www.openstreetmap.org/node/7627826584",
+    "checkedAt": "2026-10-22T04:40:59.943Z",
+    "note": "OSM train_station_entrance。臨時出口は採用していません。"
+  },
+  {
+    "id": "osm-13382690030",
+    "stationId": "hanshin-koshien",
+    "name": "西側入口",
+    "lat": 34.7237702,
+    "lon": 135.3628778,
+    "sourceUrl": "https://www.openstreetmap.org/node/13382690030",
+    "checkedAt": "2026-10-22T04:40:59.943Z",
+    "note": "OSM train_station_entrance。臨時出口は採用していません。"
+  },
+  {
+    "id": "ekitan-gakuentoshi-534",
+    "stationId": "kobe-gakuentoshi",
+    "name": "北出口",
+    "lat": 34.681608,
+    "lon": 135.057919,
+    "sourceUrl": "https://ekitan.com/sta-info/iframe-map/station/5135/exit",
+    "checkedAt": "2026-10-22T04:53:20.322Z",
+    "note": "駅探の学園都市駅出口地図に表示されるWGS84座標。OSM入口nodeは未登録。駅建物東端・橋上歩道との配置を照合。改札・ホームまでの時間を別途加算。現地精度・公式構内図画像・利用条件は未確認。"
+  },
+  {
+    "id": "ekitan-gakuentoshi-533",
+    "stationId": "kobe-gakuentoshi",
+    "name": "南出口",
+    "lat": 34.681428,
+    "lon": 135.057931,
+    "sourceUrl": "https://ekitan.com/sta-info/iframe-map/station/5135/exit",
+    "checkedAt": "2026-10-22T04:53:20.322Z",
+    "note": "駅探の学園都市駅出口地図に表示されるWGS84座標。OSM入口nodeは未登録。駅建物東端・橋上歩道との配置を照合。改札・ホームまでの時間を別途加算。現地精度・公式構内図画像・利用条件は未確認。"
+  }
+]

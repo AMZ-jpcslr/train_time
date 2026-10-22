@@ -1,0 +1,53 @@
+{
+  "scopeVersion": 2,
+  "routeMapUrl": "https://www.jr-odekake.net/station/pdf/teisya_01.pdf",
+  "method": "Official train detail station sequence: Osaka -> Amagasaki -> Tsukaguchi -> Takarazuka (-> Shin-Sanda). Exact destination classification applies only to Osaka west; unknown destinations stop import.",
+  "samples": [
+    {
+      "destination": "宝塚",
+      "trainNumber": "1167C",
+      "sourceUrl": "https://timetable.jr-odekake.net/train-timetable/172201?date=20261023",
+      "retrievedAt": "2026-10-22T04:56:47.700Z",
+      "sha256": "acdeb60f3b052c635867a3ee16a9410c800170c1665ec88eadc1f0e99b1d31a6",
+      "osakaDeparture": "14:15発",
+      "path": [
+        "大阪",
+        "塚本",
+        "尼崎",
+        "塚口",
+        "猪名寺",
+        "伊丹",
+        "北伊丹",
+        "川西池田",
+        "中山寺",
+        "宝塚"
+      ]
+    },
+    {
+      "destination": "新三田",
+      "trainNumber": "1169C",
+      "sourceUrl": "https://timetable.jr-odekake.net/train-timetable/2811?date=20261023",
+      "retrievedAt": "2026-10-22T04:56:49.013Z",
+      "sha256": "dda735df9be713d97c2fc9235bd4a0bb1526c843d3d805b75a9fb45f78ff9d9a",
+      "osakaDeparture": "14:30発",
+      "path": [
+        "大阪",
+        "塚本",
+        "尼崎",
+        "塚口",
+        "猪名寺",
+        "伊丹",
+        "北伊丹",
+        "川西池田",
+        "中山寺",
+        "宝塚",
+        "生瀬",
+        "西宮名塩",
+        "武田尾",
+        "道場",
+        "三田",
+        "新三田"
+      ]
+    }
+  ]
+}

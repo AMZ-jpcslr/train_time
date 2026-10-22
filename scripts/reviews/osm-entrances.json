@@ -1,0 +1,202 @@
+[
+  {
+    "id": "osm-8967449216",
+    "stationId": "kobe-myohoji",
+    "lat": 34.6750914,
+    "lon": 135.1099884,
+    "railway": null,
+    "entrance": "yes",
+    "name": null,
+    "ref": null
+  },
+  {
+    "id": "osm-3960824202",
+    "stationId": "jr-nishinomiya",
+    "lat": 34.738723,
+    "lon": 135.3478506,
+    "railway": "train_station_entrance",
+    "entrance": "main",
+    "name": null,
+    "ref": null
+  },
+  {
+    "id": "osm-3960824206",
+    "stationId": "jr-nishinomiya",
+    "lat": 34.739314,
+    "lon": 135.3478513,
+    "railway": "train_station_entrance",
+    "entrance": "main",
+    "name": null,
+    "ref": null
+  },
+  {
+    "id": "osm-3375274239",
+    "stationId": "jr-osaka",
+    "lat": 34.7014024,
+    "lon": 135.4948312,
+    "railway": null,
+    "entrance": "main",
+    "name": "桜橋口",
+    "ref": null
+  },
+  {
+    "id": "osm-3448863956",
+    "stationId": "jr-osaka",
+    "lat": 34.7027421,
+    "lon": 135.4974449,
+    "railway": null,
+    "entrance": "main",
+    "name": "御堂筋南口",
+    "ref": null
+  },
+  {
+    "id": "osm-5178004149",
+    "stationId": "jr-osaka",
+    "lat": 34.7034328,
+    "lon": 135.4969814,
+    "railway": null,
+    "entrance": "main",
+    "name": "御堂筋北口",
+    "ref": null
+  },
+  {
+    "id": "osm-5342194712",
+    "stationId": "jr-osaka",
+    "lat": 34.7027802,
+    "lon": 135.495591,
+    "railway": null,
+    "entrance": "yes",
+    "name": "中央北口",
+    "ref": null
+  },
+  {
+    "id": "osm-5358890779",
+    "stationId": "jr-osaka",
+    "lat": 34.7016378,
+    "lon": 135.4964159,
+    "railway": null,
+    "entrance": "main",
+    "name": "中央南口",
+    "ref": null
+  },
+  {
+    "id": "osm-5308312727",
+    "stationId": "jr-ibaraki",
+    "lat": 34.8154337,
+    "lon": 135.5627021,
+    "railway": "train_station_entrance",
+    "entrance": "yes",
+    "name": null,
+    "ref": null
+  },
+  {
+    "id": "osm-5983012817",
+    "stationId": "jr-ibaraki",
+    "lat": 34.8155362,
+    "lon": 135.5619663,
+    "railway": "train_station_entrance",
+    "entrance": "main",
+    "name": null,
+    "ref": null
+  },
+  {
+    "id": "osm-6897564065",
+    "stationId": "jr-minamikusatsu",
+    "lat": 35.0036927,
+    "lon": 135.946949,
+    "railway": null,
+    "entrance": "yes",
+    "name": null,
+    "ref": null
+  },
+  {
+    "id": "osm-6483284116",
+    "stationId": "kyoto-imadegawa",
+    "lat": 35.0305356,
+    "lon": 135.7592268,
+    "railway": "subway_entrance",
+    "entrance": null,
+    "name": null,
+    "ref": "2"
+  },
+  {
+    "id": "osm-11364685914",
+    "stationId": "kyoto-imadegawa",
+    "lat": 35.0307135,
+    "lon": 135.759483,
+    "railway": "subway_entrance",
+    "entrance": null,
+    "name": null,
+    "ref": "1"
+  },
+  {
+    "id": "osm-1224217711",
+    "stationId": "kyoto-imadegawa",
+    "lat": 35.0292984,
+    "lon": 135.759559,
+    "railway": "subway_entrance",
+    "entrance": "yes",
+    "name": "今出川",
+    "ref": null
+  },
+  {
+    "id": "osm-1700410818",
+    "stationId": "hankyu-rokko",
+    "lat": 34.7199128,
+    "lon": 135.234593,
+    "railway": "train_station_entrance",
+    "entrance": "yes",
+    "name": null,
+    "ref": null
+  },
+  {
+    "id": "osm-13475656920",
+    "stationId": "hankyu-rokko",
+    "lat": 34.7198867,
+    "lon": 135.2343964,
+    "railway": "train_station_entrance",
+    "entrance": "yes",
+    "name": null,
+    "ref": null
+  },
+  {
+    "id": "osm-2563975998",
+    "stationId": "hankyu-sannomiya",
+    "lat": 34.6927918,
+    "lon": 135.1922006,
+    "railway": null,
+    "entrance": "yes",
+    "name": "西口",
+    "ref": null
+  },
+  {
+    "id": "osm-5261546898",
+    "stationId": "hankyu-umeda",
+    "lat": 34.7057649,
+    "lon": 135.4976715,
+    "railway": null,
+    "entrance": "main",
+    "name": null,
+    "ref": null
+  },
+  {
+    "id": "osm-7627826584",
+    "stationId": "hanshin-koshien",
+    "lat": 34.7234746,
+    "lon": 135.3633398,
+    "railway": "train_station_entrance",
+    "entrance": "yes",
+    "name": null,
+    "ref": null
+  },
+  {
+    "id": "osm-13382690030",
+    "stationId": "hanshin-koshien",
+    "lat": 34.7237702,
+    "lon": 135.3628778,
+    "railway": "train_station_entrance",
+    "entrance": "yes",
+    "name": null,
+    "ref": null
+  }
+]

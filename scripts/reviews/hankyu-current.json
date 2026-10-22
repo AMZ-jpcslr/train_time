@@ -1,0 +1,207 @@
+{
+  "checkedAt": "2026-10-22T04:47:50.870Z",
+  "revisionDate": "2025-02-22",
+  "meaning": "Current official station navigation, published revision notice/FAQ, source structure and independently reviewed first/noon/last samples. Not a guarantee of all temporary or real-time changes.",
+  "sources": [
+    {
+      "sourceUrl": "https://www.hankyu.co.jp/topics/detail/013718.html",
+      "fact": "神戸線・宝塚線 2025-02-22初発から改正。2026-10-22に公式掲載を確認。"
+    },
+    {
+      "sourceUrl": "https://faq.hankyu.co.jp/category/show/13?site_domain=default&sort=sort_new&sort_order=desc",
+      "fact": "現在掲載のFAQ No.1801も2025-02-22神戸線改正を案内。"
+    }
+  ],
+  "limitations": [
+    "Direct HTTPS returns 502 for Hankyu in this environment. Web-tool official page text and PDF metadata were used; retrieval time is not origin modification time.",
+    "Station pages list both unversioned and 20250222 URLs. Neither URL pattern alone establishes currency. Published revision notice, matching PDF edition titles, source samples and current navigation were reviewed together.",
+    "PDF metadata title confirms edition only. No claim of full PDF colour/column extraction or all-train independent comparison.",
+    "Current normal timetable only; seasonal, event and New Year schedules require separate verification."
+  ],
+  "artifacts": [
+    {
+      "file": ".cache/hankyu-current/last-date.txt",
+      "sha256": "f09dcb669c5306c1340538098cc4092ac214b071e85ddffc4a0d690b9c29d11c"
+    },
+    {
+      "file": ".cache/hankyu-current/normal-linked.txt",
+      "sha256": "6adf6f14cd6332eb3c054d7199de08271c00aba7d0eeef3412818d13b92a693a"
+    },
+    {
+      "file": ".cache/hankyu-current/official-pdf-comparison.txt",
+      "sha256": "0d0b1f5a7d5d893367732dce9057cadb84ffa8d36fbba37c865cbc5b35f32389"
+    },
+    {
+      "file": ".cache/hankyu-current/originals.txt",
+      "sha256": "d797436a9b80268c23739ba1b1240d786221209b76d084e7ae264b791dd1f152"
+    },
+    {
+      "file": ".cache/hankyu-current/pdf-editions.txt",
+      "sha256": "215e7c0c577a4f09968c02160b3bea41326dc6435da422fb6e9b74f9aaac2ed5"
+    },
+    {
+      "file": ".cache/hankyu-current/pdf-metadata.txt",
+      "sha256": "266aaf6d2d86fd19ff02ae20eb27a00debcc261e35ddf8fee501e1b970aa6410"
+    },
+    {
+      "file": ".cache/hankyu-current/revised-linked8.txt",
+      "sha256": "22054fefd7d5d39f0e790ee8891a30ca86df4bfaf43209c9545108c8951c5344"
+    },
+    {
+      "file": ".cache/hankyu-current/revised-remaining.txt",
+      "sha256": "ba17d1d484936ab50a56ed5cfee490ebe62989ee7057df9c8fc09f85a2cd3b77"
+    },
+    {
+      "file": ".cache/hankyu-current/revised-rokko-partial.txt",
+      "sha256": "7f23f8011bbd5141adaa193ea7e46a16b693488ed055fd572a4daaf0325e16f3"
+    },
+    {
+      "file": ".cache/hankyu-current/revised-rokko-west-weekday.txt",
+      "sha256": "834af50acc6415cb3ab3f2b8c3938534236b47a86f8720f45654cfffac8b43f3"
+    },
+    {
+      "file": ".cache/hankyu-current/revision-search.txt",
+      "sha256": "e3e42ec79f5f7a50b7d9f1b97b6bc34e4aa39da152a1c28027a5524caf77df8b"
+    },
+    {
+      "file": ".cache/hankyu-current/station-navigation.txt",
+      "sha256": "b5b39ca739fa1b94b1562ac01c9184627c432ea32aff75b7290c8501061f0eb5"
+    },
+    {
+      "file": ".cache/hankyu-current/umeda-navigation.txt",
+      "sha256": "a3c54050d966d3e4a70cbf6d61d04cde4600b36669a49554b2742e60137f58f9"
+    }
+  ],
+  "tables": [
+    {
+      "id": "hankyu-rokko-east-weekday",
+      "sourceUrl": "https://www.hankyu.co.jp/en/station/html/HK-13_ko_1_w.html",
+      "stationPage": "https://www.hankyu.co.jp/ch/station/rokko.html",
+      "factsSha256": "c06a6ddeded76a5c3c0cf199dcb35be632ebf0d35614c0457098aaa2a1b27526",
+      "count": 159,
+      "sourceSampleVerification": "passed",
+      "evidence": [
+        "current official station timetable sections",
+        "2025-02-22 revision notice and current FAQ",
+        "source heading/complete timetable and first-noon-last sample review"
+      ]
+    },
+    {
+      "id": "hankyu-rokko-east-weekend",
+      "sourceUrl": "https://www.hankyu.co.jp/en/station/html/HK-13_ko_1_h.html",
+      "stationPage": "https://www.hankyu.co.jp/ch/station/rokko.html",
+      "factsSha256": "cde8096c16af2188eea0b9ea4ad2e3706f7da71fa1d80ee65245cf2abfceaa0c",
+      "count": 114,
+      "sourceSampleVerification": "passed",
+      "evidence": [
+        "current official station timetable sections",
+        "2025-02-22 revision notice and current FAQ",
+        "source heading/complete timetable and first-noon-last sample review"
+      ]
+    },
+    {
+      "id": "hankyu-rokko-west-weekday",
+      "sourceUrl": "https://www.hankyu.co.jp/ch/station/html/HK-13_ko_2_w.html",
+      "stationPage": "https://www.hankyu.co.jp/ch/station/rokko.html",
+      "factsSha256": "b6db877de2efbe55ecd83e1ab51a9517e7d9111681255c861bff5f82df5492f1",
+      "count": 152,
+      "sourceSampleVerification": "passed",
+      "evidence": [
+        "current official station timetable sections",
+        "2025-02-22 revision notice and current FAQ",
+        "source heading/complete timetable and first-noon-last sample review"
+      ]
+    },
+    {
+      "id": "hankyu-rokko-west-weekend",
+      "sourceUrl": "https://www.hankyu.co.jp/station/html/HK-13_ko_2_h.html",
+      "stationPage": "https://www.hankyu.co.jp/ch/station/rokko.html",
+      "factsSha256": "b173c1fc8ad496b16038ba8a939f3665125664616e89df0490414db8b82aa61e",
+      "count": 116,
+      "sourceSampleVerification": "passed",
+      "evidence": [
+        "current official station timetable sections",
+        "2025-02-22 revision notice and current FAQ",
+        "source heading/complete timetable and first-noon-last sample review"
+      ]
+    },
+    {
+      "id": "hankyu-sannomiya-east-weekday",
+      "sourceUrl": "https://www.hankyu.co.jp/en/station/html/HK-16_ko_1_w.html",
+      "stationPage": "https://www.hankyu.co.jp/en/station/sannomiya.html",
+      "factsSha256": "823fa8bbc86601e52fdb47c0287e926f1d37f57006c0f113dca9f953e21b2bb6",
+      "count": 223,
+      "sourceSampleVerification": "passed",
+      "evidence": [
+        "current official station timetable sections",
+        "2025-02-22 revision notice and current FAQ",
+        "source heading/complete timetable and first-noon-last sample review"
+      ]
+    },
+    {
+      "id": "hankyu-sannomiya-east-weekend",
+      "sourceUrl": "https://www.hankyu.co.jp/en/station/html/HK-16_ko_1_h.html",
+      "stationPage": "https://www.hankyu.co.jp/en/station/sannomiya.html",
+      "factsSha256": "327aa81ec36fd25962b924c051e14e5681c85718961320d5107177bfb6d37fd3",
+      "count": 204,
+      "sourceSampleVerification": "passed",
+      "evidence": [
+        "current official station timetable sections",
+        "2025-02-22 revision notice and current FAQ",
+        "source heading/complete timetable and first-noon-last sample review"
+      ]
+    },
+    {
+      "id": "hankyu-sannomiya-west-weekday",
+      "sourceUrl": "https://www.hankyu.co.jp/en/station/html/HK-16_ko_2_w.html",
+      "stationPage": "https://www.hankyu.co.jp/en/station/sannomiya.html",
+      "factsSha256": "82aa4182bcb6fc8e17b0534c3030d94835de13001698fdddc6f70eda0c464e63",
+      "count": 130,
+      "sourceSampleVerification": "passed",
+      "evidence": [
+        "current official station timetable sections",
+        "2025-02-22 revision notice and current FAQ",
+        "source heading/complete timetable and first-noon-last sample review"
+      ]
+    },
+    {
+      "id": "hankyu-sannomiya-west-weekend",
+      "sourceUrl": "https://www.hankyu.co.jp/station/html/HK-16_ko_2_h.html",
+      "stationPage": "https://www.hankyu.co.jp/en/station/sannomiya.html",
+      "factsSha256": "c94d9cd09da3030ffca37ed811e5ba98f69a0220bf4e3adb8c95c3bdc2b7d92c",
+      "count": 133,
+      "sourceSampleVerification": "passed",
+      "evidence": [
+        "current official station timetable sections",
+        "2025-02-22 revision notice and current FAQ",
+        "source heading/complete timetable and first-noon-last sample review"
+      ]
+    },
+    {
+      "id": "hankyu-umeda-west-weekday",
+      "sourceUrl": "https://www.hankyu.co.jp/ch/station/html/HK-01_ko_2_w.html",
+      "stationPage": "https://www.hankyu.co.jp/station/umeda.html/",
+      "factsSha256": "5f02a69700ebe3118d94765479f5c439f3f7b6eae6dcc723917ec6efcf08aa69",
+      "count": 256,
+      "sourceSampleVerification": "passed",
+      "evidence": [
+        "current official station timetable sections",
+        "2025-02-22 revision notice and current FAQ",
+        "source heading/complete timetable and first-noon-last sample review"
+      ]
+    },
+    {
+      "id": "hankyu-umeda-west-weekend",
+      "sourceUrl": "https://www.hankyu.co.jp/station/html/HK-01_ko_2_h.html",
+      "stationPage": "https://www.hankyu.co.jp/station/umeda.html/",
+      "factsSha256": "e0b0fa7ae671502facc94df8c9d453810a8bafd5bbd22490cb02692c847721d5",
+      "count": 203,
+      "sourceSampleVerification": "passed",
+      "evidence": [
+        "current official station timetable sections",
+        "2025-02-22 revision notice and current FAQ",
+        "source heading/complete timetable and first-noon-last sample review"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "checkedAt": "2026-10-22T05:09:15.861Z",
+  "application": {
+    "status": 200
+  },
+  "routing": {
+    "enabled": true,
+    "provider": "FOSSGIS / OSRM（徒歩）",
+    "contactConfigured": true
+  },
+  "jr": [
+    {
+      "date": "2026-10-22",
+      "status": "ready",
+      "schemaVersion": 2,
+      "tables": 8,
+      "departures": 1702,
+      "osakaWest": 238,
+      "expiresAt": "2026-10-22T09:15:38.882Z",
+      "source": "cache"
+    },
+    {
+      "date": "2026-10-23",
+      "status": "ready",
+      "schemaVersion": 2,
+      "tables": 8,
+      "departures": 1702,
+      "osakaWest": 238,
+      "expiresAt": "2026-10-22T10:39:53.895Z",
+      "source": "cache"
+    },
+    {
+      "date": "2026-10-24",
+      "status": "ready",
+      "schemaVersion": 2,
+      "tables": 8,
+      "departures": 1577,
+      "osakaWest": 205,
+      "expiresAt": "2026-10-22T10:42:14.702Z",
+      "source": "cache"
+    },
+    {
+      "date": "2026-10-25",
+      "status": "ready",
+      "schemaVersion": 2,
+      "tables": 8,
+      "departures": 1577,
+      "osakaWest": 205,
+      "expiresAt": "2026-10-22T10:43:15.289Z",
+      "source": "cache"
+    }
+  ],
+  "privateFiles": [
+    {
+      "path": "/.env.local",
+      "status": 403
+    },
+    {
+      "path": "/.cache/verification/watch-probe.json",
+      "status": 403
+    }
+  ],
+  "developmentServer": {
+    "status": 200,
+    "cacheWriteHealthy": true
+  }
+}

@@ -1,0 +1,118 @@
+[
+  {
+    "stationId": "kyoto-imadegawa",
+    "entrance": "2番出入口",
+    "status": 200,
+    "distanceMeters": 119.35773376794351,
+    "durationSeconds": 95.3061870143548,
+    "checkedAt": "2026-10-22T04:52:00.481Z",
+    "testOrigin": {
+      "lat": 35.0315356,
+      "lon": 135.7592268
+    }
+  },
+  {
+    "stationId": "jr-osaka",
+    "entrance": "桜橋口",
+    "status": 503,
+    "error": "徒歩経路サービスに接続できませんでした（HTTP 400）。",
+    "checkedAt": "2026-10-22T04:52:01.933Z",
+    "testOrigin": {
+      "lat": 34.7024024,
+      "lon": 135.4948312
+    }
+  },
+  {
+    "stationId": "hankyu-sannomiya",
+    "entrance": "西口",
+    "status": 503,
+    "error": "経路サービスが混雑しています。しばらく待って再度お試しください。",
+    "checkedAt": "2026-10-22T04:52:03.136Z",
+    "testOrigin": {
+      "lat": 34.6937918,
+      "lon": 135.1922006
+    }
+  },
+  {
+    "stationId": "hanshin-koshien",
+    "entrance": "東側入口",
+    "status": 503,
+    "error": "経路サービスが混雑しています。しばらく待って再度お試しください。",
+    "checkedAt": "2026-10-22T04:52:04.351Z",
+    "testOrigin": {
+      "lat": 34.7244746,
+      "lon": 135.3633398
+    }
+  },
+  {
+    "stationId": "kobe-myohoji",
+    "entrance": "駅舎入口（地図登録地点）",
+    "status": 503,
+    "error": "経路サービスが混雑しています。しばらく待って再度お試しください。",
+    "checkedAt": "2026-10-22T04:52:05.566Z",
+    "testOrigin": {
+      "lat": 34.6760914,
+      "lon": 135.1099884
+    }
+  },
+  {
+    "stationId": "jr-osaka",
+    "entrance": "中央北口",
+    "status": 200,
+    "distanceMeters": 256.82198805521017,
+    "durationSeconds": 205.47759044416813,
+    "checkedAt": "2026-10-22T04:54:11.884Z",
+    "testOrigin": {
+      "lat": 34.7028802,
+      "lon": 135.495591
+    }
+  },
+  {
+    "stationId": "hankyu-sannomiya",
+    "entrance": "西口",
+    "status": 200,
+    "distanceMeters": 15.797572141,
+    "durationSeconds": 12.5380577128,
+    "checkedAt": "2026-10-22T04:54:13.334Z",
+    "testOrigin": {
+      "lat": 34.692891800000005,
+      "lon": 135.1922006
+    }
+  },
+  {
+    "stationId": "hanshin-koshien",
+    "entrance": "東側入口",
+    "status": 200,
+    "distanceMeters": 39.37625532053795,
+    "durationSeconds": 33.34100425643035,
+    "checkedAt": "2026-10-22T04:54:14.789Z",
+    "testOrigin": {
+      "lat": 34.723574600000006,
+      "lon": 135.3633398
+    }
+  },
+  {
+    "stationId": "kobe-myohoji",
+    "entrance": "駅舎入口（地図登録地点）",
+    "status": 200,
+    "distanceMeters": 19.73640302522567,
+    "durationSeconds": 15.689122420180537,
+    "checkedAt": "2026-10-22T04:54:16.332Z",
+    "testOrigin": {
+      "lat": 34.6751914,
+      "lon": 135.1099884
+    }
+  },
+  {
+    "stationId": "kobe-gakuentoshi",
+    "entrance": "北出口",
+    "status": 200,
+    "distanceMeters": 29.633466761,
+    "durationSeconds": 23.706773408800004,
+    "checkedAt": "2026-10-22T04:58:48.443Z",
+    "testOrigin": {
+      "lat": 34.6818279,
+      "lon": 135.0579833
+    }
+  }
+]

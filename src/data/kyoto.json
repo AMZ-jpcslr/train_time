@@ -1,0 +1,3842 @@
+[
+  {
+    "id": "kyoto-imadegawa-south-weekday",
+    "stationId": "kyoto-imadegawa",
+    "operator": "京都市交通局",
+    "line": "烏丸線",
+    "directionId": "south",
+    "direction": "京都・竹田・近鉄奈良方面",
+    "dayType": "weekday",
+    "departures": [
+      {
+        "time": "05:28",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "05:50",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "06:04",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "06:20",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "06:31",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "06:43",
+        "destination": "近鉄奈良",
+        "trainType": "急行",
+        "platform": "1",
+        "notes": [
+          "竹田駅までは各駅に停車"
+        ]
+      },
+      {
+        "time": "06:53",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "07:03",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "07:11",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "07:18",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "07:26",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "07:33",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "07:40",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "07:45",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "07:50",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "07:54",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "08:00",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "08:04",
+        "destination": "近鉄奈良",
+        "trainType": "急行",
+        "platform": "1",
+        "notes": [
+          "竹田駅までは各駅に停車"
+        ]
+      },
+      {
+        "time": "08:09",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "08:14",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "08:18",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "08:22",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "08:26",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "08:31",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "08:34",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "08:38",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "08:41",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "08:45",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "08:48",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "08:52",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "08:56",
+        "destination": "近鉄奈良",
+        "trainType": "急行",
+        "platform": "1",
+        "notes": [
+          "竹田駅までは各駅に停車"
+        ]
+      },
+      {
+        "time": "09:00",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "09:04",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "09:08",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "09:12",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "09:16",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "09:20",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "09:24",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "09:28",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "09:32",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "09:37",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "09:42",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "09:47",
+        "destination": "近鉄奈良",
+        "trainType": "急行",
+        "platform": "1",
+        "notes": [
+          "竹田駅までは各駅に停車"
+        ]
+      },
+      {
+        "time": "09:52",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "09:57",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "10:02",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "10:07",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "10:12",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "10:17",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "10:22",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "10:27",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "10:33",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "10:38",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "10:43",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "10:47",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "10:51",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "10:57",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "11:03",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "11:09",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "11:17",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "11:24",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "11:32",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "11:39",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "11:47",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "11:54",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "12:02",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "12:09",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "12:17",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "12:24",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "12:32",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "12:39",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "12:47",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "12:54",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "13:02",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "13:09",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "13:17",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "13:24",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "13:32",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "13:39",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "13:47",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "13:54",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "14:02",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "14:09",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "14:17",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "14:24",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "14:32",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "14:39",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "14:47",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "14:54",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "15:02",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "15:09",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "15:17",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "15:24",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "15:32",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "15:39",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "15:47",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "15:54",
+        "destination": "近鉄奈良",
+        "trainType": "急行",
+        "platform": "1",
+        "notes": [
+          "竹田駅までは各駅に停車"
+        ]
+      },
+      {
+        "time": "16:01",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "16:06",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "16:12",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "16:18",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "16:23",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "16:29",
+        "destination": "近鉄奈良",
+        "trainType": "急行",
+        "platform": "1",
+        "notes": [
+          "竹田駅までは各駅に停車"
+        ]
+      },
+      {
+        "time": "16:34",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "16:39",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "16:44",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "16:49",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "16:54",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "16:59",
+        "destination": "近鉄奈良",
+        "trainType": "急行",
+        "platform": "1",
+        "notes": [
+          "竹田駅までは各駅に停車"
+        ]
+      },
+      {
+        "time": "17:04",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "17:09",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "17:14",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "17:19",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "17:24",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "17:29",
+        "destination": "近鉄奈良",
+        "trainType": "急行",
+        "platform": "1",
+        "notes": [
+          "竹田駅までは各駅に停車"
+        ]
+      },
+      {
+        "time": "17:34",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "17:39",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "17:44",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "17:49",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "17:54",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "17:59",
+        "destination": "近鉄奈良",
+        "trainType": "急行",
+        "platform": "1",
+        "notes": [
+          "竹田駅までは各駅に停車"
+        ]
+      },
+      {
+        "time": "18:04",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "18:09",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "18:14",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "18:19",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "18:24",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "18:29",
+        "destination": "近鉄奈良",
+        "trainType": "急行",
+        "platform": "1",
+        "notes": [
+          "竹田駅までは各駅に停車"
+        ]
+      },
+      {
+        "time": "18:34",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "18:39",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "18:44",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "18:49",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "18:54",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "18:59",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "19:04",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "19:09",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "19:14",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "19:20",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "19:25",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "19:31",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "19:39",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "19:45",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "19:52",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "19:58",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "20:05",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "20:12",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "20:19",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "20:27",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "20:34",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "20:42",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "20:49",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "20:57",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "21:05",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "21:12",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "21:21",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "21:30",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "21:40",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "21:51",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "22:03",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "22:15",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "22:27",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "22:38",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "22:52",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "23:05",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "23:18",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "23:27",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1",
+        "notes": [
+          "烏丸御池駅で東西線との接続待ち"
+        ]
+      },
+      {
+        "time": "23:49",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1",
+        "notes": [
+          "烏丸御池駅で東西線との接続待ち"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www2.city.kyoto.lg.jp/kotsu/tikadia/hyperdia/021600.htm",
+    "retrievedAt": "2026-10-22T04:43:09.704Z",
+    "checkedAt": "2026-10-22T04:43:04.748Z",
+    "validFrom": null,
+    "validTo": null,
+    "revisionDate": null,
+    "verification": "verified",
+    "notes": [
+      "京都市交通局の無料公開時刻表から発車時刻・行先・種別・ホーム・注記を抽出したローカル試作。元ページの画像、デザイン、JSコードは配信していません。",
+      "公式の2026-03-14以降時刻表トップ→烏丸線一覧→今出川駅→両方面時刻表という現行の公開導線を確認し、通常ダイヤとして採用。個別ページの2025-02-22現在は別の掲載基準日として保持します。",
+      "全2方面×平日/土曜休日の件数、欠損、重複、順序と始発・12時台・終電の原HTML照合済み。全便を別資料と突合したものではありません。",
+      "トップの掲載対象期間は個別表のダイヤ改正日や開始日と同一視せず、revisionDate / validFrom / validTo は null。2026年CSVとの全便独立突合・個別掲載日の更新理由は未確認。",
+      "https://www2.city.kyoto.lg.jp/kotsu/tikadia/guide/about.htm",
+      "https://www.city.kyoto.lg.jp/main/site_policy/0000000005.html",
+      "公式HTMLにはオープンデータとしての再配布許諾を確認できていません。一般公開・再配布・継続取得条件は別途確認が必要です。"
+    ]
+  },
+  {
+    "id": "kyoto-imadegawa-south-weekend",
+    "stationId": "kyoto-imadegawa",
+    "operator": "京都市交通局",
+    "line": "烏丸線",
+    "directionId": "south",
+    "direction": "京都・竹田・近鉄奈良方面",
+    "dayType": "weekend",
+    "departures": [
+      {
+        "time": "05:28",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "05:50",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "06:05",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "06:20",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "06:31",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "06:43",
+        "destination": "近鉄奈良",
+        "trainType": "急行",
+        "platform": "1",
+        "notes": [
+          "竹田駅までは各駅に停車"
+        ]
+      },
+      {
+        "time": "06:53",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "07:03",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "07:12",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "07:21",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "07:30",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "07:40",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "07:49",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "07:56",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "08:04",
+        "destination": "近鉄奈良",
+        "trainType": "急行",
+        "platform": "1",
+        "notes": [
+          "竹田駅までは各駅に停車"
+        ]
+      },
+      {
+        "time": "08:11",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "08:17",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "08:23",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "08:29",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "08:35",
+        "destination": "近鉄奈良",
+        "trainType": "急行",
+        "platform": "1",
+        "notes": [
+          "竹田駅までは各駅に停車"
+        ]
+      },
+      {
+        "time": "08:41",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "08:47",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "08:53",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "08:59",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "09:05",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "09:11",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "09:17",
+        "destination": "近鉄奈良",
+        "trainType": "急行",
+        "platform": "1",
+        "notes": [
+          "竹田駅までは各駅に停車"
+        ]
+      },
+      {
+        "time": "09:23",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "09:29",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "09:36",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "09:43",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "09:48",
+        "destination": "近鉄奈良",
+        "trainType": "急行",
+        "platform": "1",
+        "notes": [
+          "竹田駅までは各駅に停車"
+        ]
+      },
+      {
+        "time": "09:56",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "10:03",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "10:09",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "10:17",
+        "destination": "近鉄奈良",
+        "trainType": "急行",
+        "platform": "1",
+        "notes": [
+          "竹田駅までは各駅に停車"
+        ]
+      },
+      {
+        "time": "10:24",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "10:32",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "10:39",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "10:47",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "10:54",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "11:02",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "11:09",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "11:17",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "11:24",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "11:32",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "11:39",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "11:47",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "11:54",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "12:02",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "12:09",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "12:17",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "12:24",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "12:32",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "12:39",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "12:47",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "12:54",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "13:02",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "13:09",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "13:17",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "13:24",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "13:32",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "13:39",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "13:47",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "13:54",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "14:02",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "14:09",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "14:17",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "14:24",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "14:32",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "14:39",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "14:47",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "14:54",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "15:02",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "15:09",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "15:17",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "15:24",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "15:31",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "15:39",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "15:46",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "15:54",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "16:02",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "16:09",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "16:17",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "16:24",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "16:32",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "16:39",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "16:47",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "16:54",
+        "destination": "近鉄奈良",
+        "trainType": "急行",
+        "platform": "1",
+        "notes": [
+          "竹田駅までは各駅に停車"
+        ]
+      },
+      {
+        "time": "17:02",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "17:09",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "17:16",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "17:22",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "17:28",
+        "destination": "近鉄奈良",
+        "trainType": "急行",
+        "platform": "1",
+        "notes": [
+          "竹田駅までは各駅に停車"
+        ]
+      },
+      {
+        "time": "17:34",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "17:40",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "17:46",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "17:52",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "17:58",
+        "destination": "近鉄奈良",
+        "trainType": "急行",
+        "platform": "1",
+        "notes": [
+          "竹田駅までは各駅に停車"
+        ]
+      },
+      {
+        "time": "18:04",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "18:10",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "18:16",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "18:22",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "18:28",
+        "destination": "近鉄奈良",
+        "trainType": "急行",
+        "platform": "1",
+        "notes": [
+          "竹田駅までは各駅に停車"
+        ]
+      },
+      {
+        "time": "18:34",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "18:41",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "18:49",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "18:57",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "19:04",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "19:12",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "19:19",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "19:27",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "19:34",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "19:42",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "19:49",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "19:57",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "20:04",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "20:12",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "20:19",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "20:27",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "20:34",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "20:42",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "20:49",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "20:57",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "21:05",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "21:12",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "21:21",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "21:30",
+        "destination": "新田辺",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "21:40",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "21:51",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "22:03",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "22:15",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "22:27",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "22:38",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "22:52",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "23:05",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "23:18",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1"
+      },
+      {
+        "time": "23:27",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1",
+        "notes": [
+          "烏丸御池駅で東西線との接続待ち"
+        ]
+      },
+      {
+        "time": "23:49",
+        "destination": "竹田",
+        "trainType": "普通",
+        "platform": "1",
+        "notes": [
+          "烏丸御池駅で東西線との接続待ち"
+        ]
+      }
+    ],
+    "sourceUrl": "https://www2.city.kyoto.lg.jp/kotsu/tikadia/hyperdia/021600.htm",
+    "retrievedAt": "2026-10-22T04:43:09.704Z",
+    "checkedAt": "2026-10-22T04:43:04.748Z",
+    "validFrom": null,
+    "validTo": null,
+    "revisionDate": null,
+    "verification": "verified",
+    "notes": [
+      "京都市交通局の無料公開時刻表から発車時刻・行先・種別・ホーム・注記を抽出したローカル試作。元ページの画像、デザイン、JSコードは配信していません。",
+      "公式の2026-03-14以降時刻表トップ→烏丸線一覧→今出川駅→両方面時刻表という現行の公開導線を確認し、通常ダイヤとして採用。個別ページの2025-02-22現在は別の掲載基準日として保持します。",
+      "全2方面×平日/土曜休日の件数、欠損、重複、順序と始発・12時台・終電の原HTML照合済み。全便を別資料と突合したものではありません。",
+      "トップの掲載対象期間は個別表のダイヤ改正日や開始日と同一視せず、revisionDate / validFrom / validTo は null。2026年CSVとの全便独立突合・個別掲載日の更新理由は未確認。",
+      "https://www2.city.kyoto.lg.jp/kotsu/tikadia/guide/about.htm",
+      "https://www.city.kyoto.lg.jp/main/site_policy/0000000005.html",
+      "公式HTMLにはオープンデータとしての再配布許諾を確認できていません。一般公開・再配布・継続取得条件は別途確認が必要です。"
+    ]
+  },
+  {
+    "id": "kyoto-imadegawa-north-weekday",
+    "stationId": "kyoto-imadegawa",
+    "operator": "京都市交通局",
+    "line": "烏丸線",
+    "directionId": "north",
+    "direction": "北大路・国際会館方面",
+    "dayType": "weekday",
+    "departures": [
+      {
+        "time": "05:36",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "05:53",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "06:07",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "06:19",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "06:29",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "06:38",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "06:46",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "06:54",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "07:02",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "07:09",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "07:15",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "07:20",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "07:25",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "07:30",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "07:34",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "07:39",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "07:44",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "07:49",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "07:53",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "07:58",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "08:02",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "08:06",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "08:10",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "08:13",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "08:16",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "08:20",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "08:23",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "08:27",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "08:31",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "08:35",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "08:38",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "08:42",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "08:46",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "08:50",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "08:54",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "08:59",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "09:03",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "09:08",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "09:12",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "09:15",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "09:19",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "09:25",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "09:30",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "09:35",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "09:40",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "09:45",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "09:50",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "09:55",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "10:01",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "10:06",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "10:12",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "10:17",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "10:22",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "10:27",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "10:33",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "10:38",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "10:45",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "10:53",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "11:00",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "11:08",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "11:15",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "11:23",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "11:30",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "11:38",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "11:45",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "11:53",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "12:00",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "12:08",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "12:15",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "12:23",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "12:30",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "12:38",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "12:45",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "12:53",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "13:00",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "13:08",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "13:15",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "13:23",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "13:30",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "13:38",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "13:45",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "13:53",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "14:00",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "14:08",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "14:15",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "14:23",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "14:30",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "14:38",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "14:45",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "14:53",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "15:00",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "15:08",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "15:15",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "15:22",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "15:28",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "15:34",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "15:40",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "15:46",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "15:52",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "15:58",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "16:03",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "16:08",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "16:13",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "16:18",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "16:23",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "16:28",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "16:33",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "16:38",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "16:43",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "16:48",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "16:53",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "16:58",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "17:03",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "17:08",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "17:13",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "17:18",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "17:23",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "17:28",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "17:33",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "17:38",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "17:43",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "17:48",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "17:53",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "17:58",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "18:03",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "18:08",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "18:13",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "18:18",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "18:23",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "18:28",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "18:33",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "18:38",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "18:43",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "18:49",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "18:55",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "19:00",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "19:07",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "19:13",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "19:20",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "19:25",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "19:33",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "19:40",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "19:48",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "19:55",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "20:03",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "20:10",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "20:18",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "20:25",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "20:33",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "20:40",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "20:48",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "20:56",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "21:06",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "21:16",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "21:26",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "21:36",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "21:48",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "22:01",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "22:13",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "22:26",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "22:38",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "22:50",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "23:03",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "23:18",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "23:36",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "23:58",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      }
+    ],
+    "sourceUrl": "https://www2.city.kyoto.lg.jp/kotsu/tikadia/hyperdia/021601.htm",
+    "retrievedAt": "2026-10-22T04:43:11.040Z",
+    "checkedAt": "2026-10-22T04:43:04.748Z",
+    "validFrom": null,
+    "validTo": null,
+    "revisionDate": null,
+    "verification": "verified",
+    "notes": [
+      "京都市交通局の無料公開時刻表から発車時刻・行先・種別・ホーム・注記を抽出したローカル試作。元ページの画像、デザイン、JSコードは配信していません。",
+      "公式の2026-03-14以降時刻表トップ→烏丸線一覧→今出川駅→両方面時刻表という現行の公開導線を確認し、通常ダイヤとして採用。個別ページの2025-02-22現在は別の掲載基準日として保持します。",
+      "全2方面×平日/土曜休日の件数、欠損、重複、順序と始発・12時台・終電の原HTML照合済み。全便を別資料と突合したものではありません。",
+      "トップの掲載対象期間は個別表のダイヤ改正日や開始日と同一視せず、revisionDate / validFrom / validTo は null。2026年CSVとの全便独立突合・個別掲載日の更新理由は未確認。",
+      "https://www2.city.kyoto.lg.jp/kotsu/tikadia/guide/about.htm",
+      "https://www.city.kyoto.lg.jp/main/site_policy/0000000005.html",
+      "公式HTMLにはオープンデータとしての再配布許諾を確認できていません。一般公開・再配布・継続取得条件は別途確認が必要です。"
+    ]
+  },
+  {
+    "id": "kyoto-imadegawa-north-weekend",
+    "stationId": "kyoto-imadegawa",
+    "operator": "京都市交通局",
+    "line": "烏丸線",
+    "directionId": "north",
+    "direction": "北大路・国際会館方面",
+    "dayType": "weekend",
+    "departures": [
+      {
+        "time": "05:36",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "05:53",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "06:07",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "06:19",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "06:29",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "06:39",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "06:47",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "06:56",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "07:06",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "07:16",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "07:24",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "07:32",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "07:40",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "07:46",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "07:53",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "07:59",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "08:05",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "08:11",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "08:17",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "08:23",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "08:29",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "08:35",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "08:41",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "08:47",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "08:53",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "08:59",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "09:05",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "09:11",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "09:17",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "09:24",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "09:31",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "09:38",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "09:45",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "09:53",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "10:00",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "10:08",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "10:15",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "10:23",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "10:30",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "10:38",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "10:45",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "10:52",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "11:00",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "11:08",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "11:15",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "11:23",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "11:30",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "11:38",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "11:45",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "11:53",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "12:00",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "12:08",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "12:15",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "12:23",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "12:30",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "12:38",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "12:45",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "12:53",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "13:00",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "13:08",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "13:15",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "13:23",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "13:30",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "13:38",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "13:45",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "13:53",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "14:00",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "14:08",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "14:15",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "14:23",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "14:30",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "14:38",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "14:45",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "14:53",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "15:00",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "15:07",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "15:15",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "15:22",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "15:29",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "15:37",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "15:44",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "15:52",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "15:59",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "16:07",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "16:14",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "16:20",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "16:26",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "16:33",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "16:40",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "16:48",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "16:54",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "17:00",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "17:06",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "17:13",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "17:19",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "17:25",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "17:31",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "17:37",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "17:43",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "17:49",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "17:55",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "18:03",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "18:10",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "18:17",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "18:25",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "18:32",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "18:40",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "18:48",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "18:55",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "19:03",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "19:10",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "19:18",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "19:25",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "19:33",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "19:40",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "19:48",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "19:55",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "20:02",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "20:10",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "20:18",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "20:25",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "20:33",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "20:40",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "20:48",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "20:56",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "21:06",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "21:16",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "21:26",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "21:36",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "21:48",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "22:01",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "22:13",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "22:26",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "22:38",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "22:50",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "23:03",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "23:18",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "23:36",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      },
+      {
+        "time": "23:58",
+        "destination": "国際会館",
+        "trainType": "普通",
+        "platform": "2"
+      }
+    ],
+    "sourceUrl": "https://www2.city.kyoto.lg.jp/kotsu/tikadia/hyperdia/021601.htm",
+    "retrievedAt": "2026-10-22T04:43:11.040Z",
+    "checkedAt": "2026-10-22T04:43:04.748Z",
+    "validFrom": null,
+    "validTo": null,
+    "revisionDate": null,
+    "verification": "verified",
+    "notes": [
+      "京都市交通局の無料公開時刻表から発車時刻・行先・種別・ホーム・注記を抽出したローカル試作。元ページの画像、デザイン、JSコードは配信していません。",
+      "公式の2026-03-14以降時刻表トップ→烏丸線一覧→今出川駅→両方面時刻表という現行の公開導線を確認し、通常ダイヤとして採用。個別ページの2025-02-22現在は別の掲載基準日として保持します。",
+      "全2方面×平日/土曜休日の件数、欠損、重複、順序と始発・12時台・終電の原HTML照合済み。全便を別資料と突合したものではありません。",
+      "トップの掲載対象期間は個別表のダイヤ改正日や開始日と同一視せず、revisionDate / validFrom / validTo は null。2026年CSVとの全便独立突合・個別掲載日の更新理由は未確認。",
+      "https://www2.city.kyoto.lg.jp/kotsu/tikadia/guide/about.htm",
+      "https://www.city.kyoto.lg.jp/main/site_policy/0000000005.html",
+      "公式HTMLにはオープンデータとしての再配布許諾を確認できていません。一般公開・再配布・継続取得条件は別途確認が必要です。"
+    ]
+  }
+]

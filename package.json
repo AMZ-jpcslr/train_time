@@ -1,0 +1,42 @@
+{
+  "name": "train-time",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc -b && vite build && node scripts/build-sw.mjs",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "data:update": "node scripts/import-municipal.mjs --refresh && node scripts/import-holidays.mjs",
+    "data:audit": "node scripts/import-hankyu.mjs --audit",
+    "data:jr": "node scripts/import-jr.mjs",
+    "data:kyoto": "node scripts/import-kyoto.mjs",
+    "data:hankyu": "node scripts/import-hankyu.mjs",
+    "data:rebuild": "node scripts/import-municipal.mjs && node scripts/import-jr.mjs --date 2026-10-22 && node scripts/import-jr.mjs --date 2026-10-23 && node scripts/import-jr.mjs --date 2026-10-24 && node scripts/import-jr.mjs --date 2026-10-25 && node scripts/import-kyoto.mjs && node scripts/import-hankyu.mjs && node scripts/import-hanshin.mjs && node scripts/import-entrances.mjs",
+    "test:pwa": "npm run build && playwright test --config=playwright.pwa.config.ts",
+    "data:hanshin": "node scripts/import-hanshin.mjs",
+    "data:entrances": "node scripts/import-entrances.mjs",
+    "check:package": "node scripts/check-package.mjs"
+  },
+  "dependencies": {
+    "cheerio": "^1.2.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vercel/nft": "^1.11.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.0",
+    "vitest": "^5.0.5"
+  },
+  "engines": {
+    "node": "24.x"
+  }
+}

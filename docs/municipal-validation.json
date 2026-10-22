@@ -1,0 +1,306 @@
+[
+  {
+    "id": "kobe-gakuentoshi-east-weekday",
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/wp-content/uploads/04_/5lyb5qwt5qac6kab/44kq44o844ox44oz44oh44o844k/open_seishin_w_east_r070315.csv",
+    "sha256": "d1731678eca5d0f4eee5c790c2aa0e84217c54a00d74981077608974bf2c8e79",
+    "retrievedAt": "2026-10-22T02:45:18.310Z",
+    "checkedAt": "2026-10-22T02:45:18.310Z",
+    "sourceEncoding": "Shift_JIS",
+    "sourceRow": 6,
+    "count": 178,
+    "emptySourceCells": 3,
+    "missingDestinations": 0,
+    "duplicates": 0,
+    "sorted": true,
+    "samples": [
+      {
+        "sourceColumn": 3,
+        "time": "05:30",
+        "destination": "谷上",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "sourceColumn": 70,
+        "time": "12:06",
+        "destination": "新神戸",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "sourceColumn": 182,
+        "time": "24:50",
+        "destination": "名谷",
+        "trainType": null,
+        "platform": null
+      }
+    ],
+    "sampleReview": "Source CSV first/noon/last manually transcribed on 2026-10-22; script compares against fixed evidence."
+  },
+  {
+    "id": "kobe-myohoji-east-weekday",
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/wp-content/uploads/04_/5lyb5qwt5qac6kab/44kq44o844ox44oz44oh44o844k/open_seishin_w_east_r070315.csv",
+    "sha256": "d1731678eca5d0f4eee5c790c2aa0e84217c54a00d74981077608974bf2c8e79",
+    "retrievedAt": "2026-10-22T02:45:18.310Z",
+    "checkedAt": "2026-10-22T02:45:18.310Z",
+    "sourceEncoding": "Shift_JIS",
+    "sourceRow": 9,
+    "count": 174,
+    "emptySourceCells": 7,
+    "missingDestinations": 0,
+    "duplicates": 0,
+    "sorted": true,
+    "samples": [
+      {
+        "sourceColumn": 2,
+        "time": "05:25",
+        "destination": "谷上",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "sourceColumn": 69,
+        "time": "12:06",
+        "destination": "谷上",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "sourceColumn": 179,
+        "time": "24:17",
+        "destination": "新神戸",
+        "trainType": null,
+        "platform": null
+      }
+    ],
+    "sampleReview": "Source CSV first/noon/last manually transcribed on 2026-10-22; script compares against fixed evidence."
+  },
+  {
+    "id": "kobe-gakuentoshi-west-weekday",
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/wp-content/uploads/04_/5lyb5qwt5qac6kab/44kq44o844ox44oz44oh44o844k/open_seishin_w_west_r070315.csv",
+    "sha256": "2055295d7001fa251b4a92f4547fd6ae3e8100b43519f4896c0509f7d3293574",
+    "retrievedAt": "2026-10-22T02:46:30.377Z",
+    "checkedAt": "2026-10-22T02:46:30.377Z",
+    "sourceEncoding": "Shift_JIS",
+    "sourceRow": 16,
+    "count": 178,
+    "emptySourceCells": 9,
+    "missingDestinations": 0,
+    "duplicates": 0,
+    "sorted": true,
+    "samples": [
+      {
+        "sourceColumn": 2,
+        "time": "05:27",
+        "destination": "西神中央",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "sourceColumn": 76,
+        "time": "12:03",
+        "destination": "西神中央",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "sourceColumn": 188,
+        "time": "24:59",
+        "destination": "西神中央",
+        "trainType": null,
+        "platform": null
+      }
+    ],
+    "sampleReview": "Source CSV first/noon/last manually transcribed on 2026-10-22; script compares against fixed evidence."
+  },
+  {
+    "id": "kobe-myohoji-west-weekday",
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/wp-content/uploads/04_/5lyb5qwt5qac6kab/44kq44o844ox44oz44oh44o844k/open_seishin_w_west_r070315.csv",
+    "sha256": "2055295d7001fa251b4a92f4547fd6ae3e8100b43519f4896c0509f7d3293574",
+    "retrievedAt": "2026-10-22T02:46:30.377Z",
+    "checkedAt": "2026-10-22T02:46:30.377Z",
+    "sourceEncoding": "Shift_JIS",
+    "sourceRow": 13,
+    "count": 174,
+    "emptySourceCells": 13,
+    "missingDestinations": 0,
+    "duplicates": 0,
+    "sorted": true,
+    "samples": [
+      {
+        "sourceColumn": 4,
+        "time": "05:45",
+        "destination": "西神中央",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "sourceColumn": 77,
+        "time": "12:02",
+        "destination": "西神中央",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "sourceColumn": 188,
+        "time": "24:51",
+        "destination": "西神中央",
+        "trainType": null,
+        "platform": null
+      }
+    ],
+    "sampleReview": "Source CSV first/noon/last manually transcribed on 2026-10-22; script compares against fixed evidence."
+  },
+  {
+    "id": "kobe-gakuentoshi-east-weekend",
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/wp-content/uploads/04_/5lyb5qwt5qac6kab/44kq44o844ox44oz44oh44o844k/open_seishin_h_east_r070315.csv",
+    "sha256": "16b85e9f0075f95b6495424ddfdb86aca9a0f3605b918dffd83981bf850dbd74",
+    "retrievedAt": "2026-10-22T02:46:30.470Z",
+    "checkedAt": "2026-10-22T02:46:30.470Z",
+    "sourceEncoding": "Shift_JIS",
+    "sourceRow": 6,
+    "count": 156,
+    "emptySourceCells": 1,
+    "missingDestinations": 0,
+    "duplicates": 0,
+    "sorted": true,
+    "samples": [
+      {
+        "sourceColumn": 3,
+        "time": "05:30",
+        "destination": "新神戸",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "sourceColumn": 59,
+        "time": "12:06",
+        "destination": "新神戸",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "sourceColumn": 158,
+        "time": "24:22",
+        "destination": "名谷",
+        "trainType": null,
+        "platform": null
+      }
+    ],
+    "sampleReview": "Source CSV first/noon/last manually transcribed on 2026-10-22; script compares against fixed evidence."
+  },
+  {
+    "id": "kobe-myohoji-east-weekend",
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/wp-content/uploads/04_/5lyb5qwt5qac6kab/44kq44o844ox44oz44oh44o844k/open_seishin_h_east_r070315.csv",
+    "sha256": "16b85e9f0075f95b6495424ddfdb86aca9a0f3605b918dffd83981bf850dbd74",
+    "retrievedAt": "2026-10-22T02:46:30.470Z",
+    "checkedAt": "2026-10-22T02:46:30.470Z",
+    "sourceEncoding": "Shift_JIS",
+    "sourceRow": 9,
+    "count": 151,
+    "emptySourceCells": 6,
+    "missingDestinations": 0,
+    "duplicates": 0,
+    "sorted": true,
+    "samples": [
+      {
+        "sourceColumn": 2,
+        "time": "05:25",
+        "destination": "谷上",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "sourceColumn": 58,
+        "time": "12:06",
+        "destination": "谷上",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "sourceColumn": 154,
+        "time": "23:47",
+        "destination": "谷上",
+        "trainType": null,
+        "platform": null
+      }
+    ],
+    "sampleReview": "Source CSV first/noon/last manually transcribed on 2026-10-22; script compares against fixed evidence."
+  },
+  {
+    "id": "kobe-gakuentoshi-west-weekend",
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/wp-content/uploads/04_/5lyb5qwt5qac6kab/44kq44o844ox44oz44oh44o844k/open_seishin_h_west_r070315.csv",
+    "sha256": "1ec26e0167e7387c0152d9ca760b1563c25856959f316078799de1c8a6b948f0",
+    "retrievedAt": "2026-10-22T02:46:30.532Z",
+    "checkedAt": "2026-10-22T02:46:30.532Z",
+    "sourceEncoding": "Shift_JIS",
+    "sourceRow": 16,
+    "count": 156,
+    "emptySourceCells": 4,
+    "missingDestinations": 0,
+    "duplicates": 0,
+    "sorted": true,
+    "samples": [
+      {
+        "sourceColumn": 2,
+        "time": "05:27",
+        "destination": "西神中央",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "sourceColumn": 62,
+        "time": "12:03",
+        "destination": "西神中央",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "sourceColumn": 161,
+        "time": "24:30",
+        "destination": "西神中央",
+        "trainType": null,
+        "platform": null
+      }
+    ],
+    "sampleReview": "Source CSV first/noon/last manually transcribed on 2026-10-22; script compares against fixed evidence."
+  },
+  {
+    "id": "kobe-myohoji-west-weekend",
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/wp-content/uploads/04_/5lyb5qwt5qac6kab/44kq44o844ox44oz44oh44o844k/open_seishin_h_west_r070315.csv",
+    "sha256": "1ec26e0167e7387c0152d9ca760b1563c25856959f316078799de1c8a6b948f0",
+    "retrievedAt": "2026-10-22T02:46:30.532Z",
+    "checkedAt": "2026-10-22T02:46:30.532Z",
+    "sourceEncoding": "Shift_JIS",
+    "sourceRow": 13,
+    "count": 151,
+    "emptySourceCells": 9,
+    "missingDestinations": 0,
+    "duplicates": 0,
+    "sorted": true,
+    "samples": [
+      {
+        "sourceColumn": 4,
+        "time": "05:45",
+        "destination": "西神中央",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "sourceColumn": 63,
+        "time": "12:02",
+        "destination": "西神中央",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "sourceColumn": 161,
+        "time": "24:22",
+        "destination": "西神中央",
+        "trainType": null,
+        "platform": null
+      }
+    ],
+    "sampleReview": "Source CSV first/noon/last manually transcribed on 2026-10-22; script compares against fixed evidence."
+  }
+]

@@ -1,0 +1,48 @@
+name: Check
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: check-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+          cache: npm
+      - name: Install locked dependencies
+        run: npm ci
+      # Source parsers use authored fixtures; data checks use normalized facts.
+      # No .cache, .env, accounts, or provider calls are required by these tests.
+      - name: Unit tests
+        run: npm test
+      - name: Type check and production build
+        run: npm run build
+      - name: Check serverless package contents
+        run: npm run check:package
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Desktop and mobile browser tests
+        run: npm run test:e2e -- --workers=1
+      - name: Offline PWA test
+        run: npx playwright test --config=playwright.pwa.config.ts --workers=1
+      - name: Upload failed browser diagnostics
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-test-failures
+          path: test-results/
+          if-no-files-found: ignore
+          retention-days: 7

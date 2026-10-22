@@ -1,0 +1,7 @@
+import{mkdir,writeFile,readFile}from'node:fs/promises';
+const places=[['gakuentoshi',34.6811,135.0582],['myohoji',34.6754,135.1108],['minamikusatsu',35.0037,135.9476],['rokko',34.7195,135.2341],['sannomiya',34.6933,135.1927],['umeda',34.7055,135.4983]];
+const q='[out:json][timeout:25];('+places.map(([,a,b])=>`way(${a-.0016},${b-.002},${a+.0016},${b+.002})[highway~"^(footway|pedestrian|steps)$"];way(${a-.0016},${b-.002},${a+.0016},${b+.002})[building];node(${a-.0016},${b-.002},${a+.0016},${b+.002})[railway];`).join('')+');out geom;';
+await mkdir('.cache/osm',{recursive:true});
+if(process.argv.includes('--refresh')){const r=await fetch('https://overpass-api.de/api/interpreter',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded','User-Agent':'ManiauLocalPrototype/0.2 (station access review)'},body:new URLSearchParams({data:q}),signal:AbortSignal.timeout(40000)});if(!r.ok)throw Error('Overpass '+r.status);const raw=await r.text();if(JSON.parse(raw).remark)throw Error(JSON.parse(raw).remark);await writeFile('.cache/osm/access.json',raw);await writeFile('.cache/osm/access-meta.json',JSON.stringify({sourceUrl:'https://overpass-api.de/api/interpreter',retrievedAt:new Date().toISOString(),query:q},null,2));}
+const data=JSON.parse(await readFile('.cache/osm/access.json'));
+for(const[name,lat,lon]of places){console.log(name,JSON.stringify(data.elements.filter(n=>n.type==='node'&&Math.hypot((n.lat-lat)*111000,(n.lon-lon)*91000)<200)));}
