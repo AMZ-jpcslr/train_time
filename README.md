@@ -1,23 +1,8 @@
 # まにあう — 次の電車と、歩く時間。
 
-## Androidアプリをダウンロード
-
-**[⬇ ウィジェット対応Androidアプリ（APK）をダウンロード](https://github.com/AMZ-jpcslr/train_time/releases/download/android-v0.1.0-dev.1/maniau-android-debug.apk)**
-
-Android 8.0以降向けの開発版 `v0.1.0-dev.1`（約1.19 MB）。**GitHubへのログイン・ZIPの展開は不要です。** Actions成果物の7日間の保存期限とは別に、ReleasesへAPKを保存しています。
-
-1. Android端末で上のリンクから `maniau-android-debug.apk` をダウンロードして開きます。
-2. 端末から求められた場合は、APKを開いたブラウザ／ファイルアプリの「この提供元のアプリを許可」を設定し、インストールします。
-3. 専用アプリ「まにあう」を開き、初期URL `https://train-time-three.vercel.app/` を確認して「接続」を押します。
-4. 駅・方面・電車を選び、徒歩時間を計算して「選んだ電車をウィジェットに保存」→アプリ上部の「ウィジェット追加」を押します。
-
-[リリース詳細・チェックサム](https://github.com/AMZ-jpcslr/train_time/releases/tag/android-v0.1.0-dev.1) · [Androidの導入・背景更新の説明](native/android/README.md) · [iPhone版のXcode導入手順](native/ios/README.md)
-
-APKのビルド・lint・ロジック検証は成功していますが、実機動作は未検証です。Play Store配布版ではありません。iPhone用の署名済みアプリは未配布で、MacとXcodeでの導入が必要です。
-
 日本語の交通Webアプリです。ローカル試用とVercelへのデプロイに対応するプロトタイプです。**11駅の公開時刻表から次の5本を表示し、現在地から駅入口までの歩行経路で徒歩時間と乗車目安を計算します。** 阪急・今出川の現行掲載を確認し、阪神甲子園を追加しました。JRは曜日を推測せず、選択中の運行日の公式時刻表を取得・更新します。
 
-開発・資料確認日：2026-10-22（Asia/Tokyo）。予定時刻ベースで、遅延・運休・リアルタイム予測は含みません。[公開Webアプリ](https://train-time-three.vercel.app/)とAndroid開発版APKを利用できます。有料契約・アカウント登録・メール送信の代行は行っていません。
+開発・資料確認日：2026-10-22（Asia/Tokyo）。予定時刻ベースで、遅延・運休・リアルタイム予測は含みません。[公開Webアプリ](https://train-time-three.vercel.app/)を利用できます。有料契約・アカウント登録・メール送信の代行は行っていません。
 
 現在の収録は11駅58表・11,400発車レコード（JR4日分を含む）、駅入口22点。単体211件、PC／スマートフォン画面50件、PWA1件がすべて成功しています。最新結果は [位置・経路・画面の検証記録](docs/location-routing-validation.md) にまとめています。時刻表とGPSの確認範囲は [検証記録](docs/verification.md)、Vercel対応の結果は [配信構成の検証](docs/deployment-verification.md) にまとめています。
 
@@ -187,7 +172,7 @@ CIは合成HTML/CSVと保存済みの正規化データ・検証記録を使う�
 
 画面の「ホーム画面に追加」からインストール案内を開けます。Androidの対応ブラウザでは利用者の操作でインストール確認を呼び出し、iPhoneではSafariの共有メニューから追加する手順を表示します。PWAの追加とネイティブウィジェットは別の機能です。駅・入口・登録地点はすべて独自デザインの選択パネルで、検索・キーボード操作・フォーカス復帰・スマートフォンのタッチ操作に対応しています。
 
-AndroidのAppWidgetとiPhoneのWidgetKit、そのホストアプリの実装を`native/`に収録しました。**VercelのWeb更新だけでスマートフォンのウィジェットがインストールされることはありません。** [Androidの導入](native/android/README.md)、[iPhoneの導入](native/ios/README.md)、[機能・検証の境界](docs/mobile-widgets-and-sharing.md)を参照してください。iPhoneはMacとXcodeでのビルド・署名・実機確認が必要で、このWindows環境ではSwiftコンパイル・XCTest・実機導入を実行していません。
+ウィジェットとホストアプリの試作コードを`native/`に収録しています。Android版は不具合報告を受け、READMEでの利用案内を停止しています。**VercelのWeb更新だけでスマートフォンのウィジェットがインストールされることはありません。** [iPhoneの導入](native/ios/README.md)、[機能・検証の境界](docs/mobile-widgets-and-sharing.md)を参照してください。iPhoneはMacとXcodeでのビルド・署名・実機確認が必要で、このWindows環境ではSwiftコンパイル・XCTest・実機導入を実行していません。
 
 ネイティブアプリで「選んだ電車をウィジェットに保存」を押すと、最大5本の時刻・選択便・徒歩時間を保存します。現在地の座標はウィジェット保存データに含めません。保存便が発車済み、または時刻表確認期限が切れたらアプリで再保存してください。ウィジェット自身による日々の時刻表自動取得は未実装です。
 

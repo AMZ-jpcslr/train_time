@@ -2,17 +2,11 @@
 
 Webアプリを表示するネイティブ Android アプリと、Android の `AppWidgetProvider` を実装しています。PWA のホーム画面アイコンとは別のアプリです。Android 8.0（API 26）以降が対象です。
 
-## ビルド済みAPKからインストール
+**不具合報告を受け、APKのダウンロード・一般利用の案内を停止しています。以下は修正・検証のための開発資料です。**
 
-**[AndroidアプリのAPKを直接ダウンロード](https://github.com/AMZ-jpcslr/train_time/releases/download/android-v0.1.0-dev.1/maniau-android-debug.apk)**（開発版 `v0.1.0-dev.1`、約1.19 MB）
+## 開発時の操作確認
 
-GitHubへのログイン・ZIP展開・Android Studioは不要です。ダウンロードした `maniau-android-debug.apk` をAndroid端末で開き、必要な場合だけ、開いたブラウザ／ファイルアプリの「この提供元のアプリを許可」をオンにしてインストールします。インストール後にこの許可をオフへ戻すこともできます。画面名は端末によって異なります。
-
-[リリース詳細とSHA256](https://github.com/AMZ-jpcslr/train_time/releases/tag/android-v0.1.0-dev.1)。APKはReleasesに保存しているため、Actions成果物の7日間の保存期限の対象外です。開発用署名の試作版であり、実機動作は未検証です。
-
-## 使い方
-
-1. 上のビルド済みAPKをインストールします。自分でビルドする場合は、このディレクトリをAndroid Studioで開き、後述の手順を使います。
+1. 検証用ビルドは、後述の「ビルド」の手順を使います。
 2. 「まにあう」を開くと接続先の入力画面が表示されます。初期値は利用者指定の `https://train-time-three.vercel.app/` です。「接続」を押します。HTTPS のトップ URL のみ設定でき、後から画面上部の「接続先」で変更できます。
 3. アプリ内の Web 画面で駅・方面・乗りたい便を選び、現在地の更新、または登録地点の選択を行います。Web 画面のウィジェット保存操作で、選択した便と徒歩時間を端末内に保存します。
 4. 上部の「ウィジェット追加」を押し、Android の確認画面で追加します。対応していないホームアプリでは、ホーム画面を長押し → ウィジェット → 「まにあう」から追加します。
@@ -93,6 +87,6 @@ SDK の場所が自動検出されない場合は Android Studio で作成され
 
 ## SDK付きCIで生成した開発版APK
 
-2026-10-22、[CI run 39743572190](https://github.com/AMZ-jpcslr/train_time/actions/runs/39743572190)でJavaチェック77件、assembleDebug、lintDebugが成功しました。ソースcommitは `67e79a6d783e78238d97963315a3373c8d6343ac` です。この成果物を再ビルドせずに取り出し、`maniau-android-debug.apk` として上記Releasesに保存しています。APKのSHA256は `81db897c8bd5d9b01a9ae5b6d0ec582168fa0f0ad828222653cd1d566e7ff32d` です。元のActions成果物は7日で期限切れになりますが、ReleasesのAPKはその期限に連動しません。
+2026-10-22、[CI run 39743572190](https://github.com/AMZ-jpcslr/train_time/actions/runs/39743572190)でJavaチェック77件、assembleDebug、lintDebugが成功しました。ソースcommitは `67e79a6d783e78238d97963315a3373c8d6343ac` です。この成果物のAPKのSHA256は `81db897c8bd5d9b01a9ae5b6d0ec582168fa0f0ad828222653cd1d566e7ff32d` です。これらはビルド・静的検査の記録であり、実機での正常動作を示すものではありません。
 
-端末へのインストール・ウィジェット実画面・背景GPSは未検証です。以前のビルドを含む検証範囲は[検証記録](../../docs/mobile-widgets-verification.md)にあります。APKを更新する場合は、新しい版のリリースに検証済み成果物を添付し、ルートREADMEと本書のダウンロードリンクも更新してください。CIのdebug署名は実行環境で異なる可能性があるため、別ビルドへの上書き更新は保証しません。署名不一致時に保存データを失うアンインストールを自動で行わないでください。
+端末へのインストール・ウィジェット実画面・背景GPSは未検証です。以前のビルドを含む検証範囲は[検証記録](../../docs/mobile-widgets-verification.md)にあります。CIのdebug署名は実行環境で異なる可能性があるため、別ビルドへの上書き更新は保証しません。署名不一致時に保存データを失うアンインストールを自動で行わないでください。
