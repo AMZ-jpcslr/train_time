@@ -12,11 +12,11 @@ export default function TrainChoices({trains,selected,now,walk,settings,placeNam
     const j=judge(train.epoch,now,walk,settings),stay=leavingWindow(train.epoch,now,walk,settings);
     const active=departureKey(train)===departureKey(selected);
     const label=!stay?'計算できません':stay.remainingMs<0?'出発目安を過ぎています':stay.remainingMs===0?'出発の目安は今です':`あと${Math.floor(stay.seconds/60)}分${String(stay.seconds%60).padStart(2,'0')}秒`;
-    return <button type="button" className="following-row train-choice" key={departureKey(train)} aria-pressed={active} aria-label={`${departureRank(index)} ${train.time}発 ${train.destination}行きを選ぶ`} onClick={()=>onSelect(train)}>
+    return <button type="button" className="following-row train-choice" key={departureKey(train)} aria-pressed={active} aria-label={`${departureRank(index)} ${train.time}発 ${train.destination}行きを選ぶ`} aria-describedby={`choice-stay-${index}`} onClick={()=>onSelect(train)}>
      <span className="choice-time"><small>{departureRank(index)}</small><time>{train.time}</time></span>
      <span className="following-destination"><span>{train.trainType??'種別不明'}</span><strong>{train.destination}</strong><small>{train.platform?`${train.platform}番線`:'番線未確認'}</small></span>
      <span className="following-right"><small>発車まで</small><strong>{countdown(train.epoch)}</strong><span className={j.status}>{j.label}</span></span>
-     <span className={`choice-stay ${j.status}`}><span>{placeName?'登録地点':'今の場所'}にいられる目安</span><strong>{label}</strong></span>
+     <span id={`choice-stay-${index}`} className={`choice-stay ${j.status}`}><span>{placeName?'登録地点':'今の場所'}にいられる目安</span><strong>{label}</strong></span>
      <span className="choice-action">{active?'✓ 選択中':'この電車を選ぶ →'}</span>
     </button>;
    })}
