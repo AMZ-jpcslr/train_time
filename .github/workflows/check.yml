@@ -37,7 +37,9 @@ jobs:
           retention-days: 7
   test:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    # Browser OS packages can take ~14 minutes on a slow Ubuntu mirror.
+    # Leave time for all UI, WebKit interaction and offline PWA checks afterward.
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v6
@@ -55,6 +57,7 @@ jobs:
       - name: Check serverless package contents
         run: npm run check:package
       - name: Install Chromium and WebKit
+        timeout-minutes: 20
         run: npx playwright install --with-deps chromium webkit
       - name: Desktop and mobile browser tests
         run: npm run test:e2e -- --workers=1
