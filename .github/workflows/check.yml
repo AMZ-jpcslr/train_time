@@ -54,10 +54,12 @@ jobs:
         run: npm run build
       - name: Check serverless package contents
         run: npm run check:package
-      - name: Install Chromium
-        run: npx playwright install --with-deps chromium
+      - name: Install Chromium and WebKit
+        run: npx playwright install --with-deps chromium webkit
       - name: Desktop and mobile browser tests
         run: npm run test:e2e -- --workers=1
+      - name: Touch gestures and WebKit timeline interactions
+        run: npx playwright test --config=playwright.interactions.config.ts --workers=1
       - name: Offline PWA test
         run: npx playwright test --config=playwright.pwa.config.ts --workers=1
       - name: Upload failed browser diagnostics

@@ -13,6 +13,7 @@ import {useGeolocation} from './useGeolocation';
 import LocationHelp from './LocationHelp';
 import StationPicker from './StationPicker';
 import DepartureTimeline from './DepartureTimeline';
+import TrainTypeBadge from './TrainTypeBadge';
 import {serviceTimeline,recommendedTrain} from './domain/timeline';
 import {useTrainSelection,departureRank} from './useTrainSelection';
 import ChoicePicker from './ChoicePicker';
@@ -127,7 +128,7 @@ export default function App(){
     <p className="decision-station"><strong>{station.name}</strong> · {direction.name}</p>
     <p className="decision-constraint">定刻ベース・遅延／運休は未反映。乗車を保証しません。</p>
     {firstJudge?.status==='unknown'&&<><p className="decision-location-note">{referenceOnly?'現行ダイヤ未確認のため、公式時刻表を確認してください。':walking.loading?'徒歩経路を計算しています。':locationJudgmentMessage}</p>{locationActions}<button className="manual-shortcut" onClick={openManual}>実測時間を使う</button></>}
-    {timeline.length>0&&<DepartureTimeline trains={timeline} selected={first} now={time} walk={judgmentWalk} settings={stored.settings} station={station} directionId={direction.id} day={day} placeName={place?.name} preview={Boolean(preview)} onSelect={selectTrain}/>}
+    {timeline.length>0&&<DepartureTimeline key={`${station.id}/${direction.id}/${day}`} trains={timeline} selected={first} now={time} walk={judgmentWalk} settings={stored.settings} station={station} directionId={direction.id} day={day} placeName={place?.name} preview={Boolean(preview)} onSelect={selectTrain}/>}
     {first?<div className="decision-actions">{firstJudge?.status!=='unknown'&&<button onClick={openManual}>実測時間を使う</button>}<a href="#walking-settings">徒歩条件を確認 ↓</a></div>:<p className="decision-empty">{state==='ready'?'この運行日の発車は終了しました':availabilityLabels[state]}。<a href="#timetable-details">時刻表の状態・次の操作を確認 ↓</a></p>}
    </section>
    <p className="sr-only" role="status">{choiceNotice}</p>
@@ -145,7 +146,7 @@ export default function App(){
      {selection.notice&&<p className="selection-notice" role="status">{selection.notice}</p>}
      <div className="departure-board"><div className="board-top"><span><i className="live-dot"/> {referenceOnly?'参考時刻（現行未確認）':'発車予定'}</span><span>時刻表ベース</span></div>
       {referenceOnly&&<div className="alert" role="status">現行未確認の参考時刻です。適用ダイヤまたは検証が未確認のため、この時刻表による乗車判断はできません。徒歩経路が取得できても判定不可です。</div>}
-      {first?<><div className="next-train"><div className="train-meta"><span className="pill">{departureRank(selection.index)} · 選択中</span><span>{first.trainType??'種別不明'}</span><span className="platform">{first.platform?`${first.platform}番線`:'番線未確認'}</span></div><div className="destination-row"><div><h2>{first.destination}<small>行き</small></h2><p>{first.time} 発</p></div><div className="big-countdown"><span>{referenceOnly?'参考時刻まで':'発車まで'}</span><strong>{countdown(first.epoch).split('分')[0]}<small>{countdown(first.epoch).includes('分')?'分':''}</small></strong>{countdown(first.epoch).includes('分')&&<span className="seconds">{countdown(first.epoch).split('分')[1]}</span>}</div></div>
+      {first?<><div className="next-train"><div className="train-meta"><span className="pill">{departureRank(selection.index)} · 選択中</span><TrainTypeBadge stationId={station.id} type={first.trainType}/><span className="platform">{first.platform?`${first.platform}番線`:'番線未確認'}</span></div><div className="destination-row"><div><h2>{first.destination}<small>行き</small></h2><p>{first.time} 発</p></div><div className="big-countdown"><span>{referenceOnly?'参考時刻まで':'発車まで'}</span><strong>{countdown(first.epoch).split('分')[0]}<small>{countdown(first.epoch).includes('分')?'分':''}</small></strong>{countdown(first.epoch).includes('分')&&<span className="seconds">{countdown(first.epoch).split('分')[1]}</span>}</div></div>
 
       </div></>:<div className="empty-state"><span className="empty-icon">{icon('train')}</span><h2>{state==='ready'?'この運行日の発車は終了しました':availabilityLabels[state]}</h2><p>{state==='missing'?'この駅・方面・運行日の時刻表はまだ取り込んでいません。':state==='expired'?'取得元の適用期間、またはアプリの30日再確認期限を超えています。':state==='special'?'年末年始などの特別ダイヤを確認する必要があります。':state==='ready'?'終電後です。運行日をまたぐ便は翌日表示で扱います。':'確認できた時刻表が必要です。'}</p>{tomorrow&&<p>次の運行日 {addDays(day,1)} の始発：<b>{tomorrow.time} {tomorrow.destination}行き</b></p>}<a href={station.sourceUrl} target="_blank" rel="noreferrer">公式の駅情報を確認 ↗</a>{state!=='ready'&&fallbackReady&&<button onClick={()=>chooseStation('kobe-gakuentoshi')}>取得済みの学園都市を表示</button>}</div>}
       <div className="board-footer"><span>◷ 時刻表に基づく予定。遅延・運休は未反映</span><button onClick={()=>setShowSources(!showSources)}>出典・確認日 ↗</button></div>
