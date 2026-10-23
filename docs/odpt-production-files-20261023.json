@@ -1,0 +1,1373 @@
+{
+  "checkedAt": "2026-10-23T08:41:46.028958+00:00",
+  "origin": "https://train-time-three.vercel.app",
+  "assets": [
+    {
+      "path": "/assets/index-C1NDZ_Tk.js",
+      "status": 200,
+      "sha256": "07c2237f41e09c531034f373f494568c6745bab12fe9083246ff2a0d143db22b",
+      "matchesLocalBuild": true
+    },
+    {
+      "path": "/assets/index-BK4Wsxhd.css",
+      "status": 200,
+      "sha256": "ffb16134a07a5787f0c56680bf12c33cfba829026d15b1df0e0d4de312a86e08",
+      "matchesLocalBuild": true
+    }
+  ],
+  "serviceWorkerCache": "mania-u-v2-4eb583f7b49f",
+  "serviceWorkerMatchesExceptCacheName": true,
+  "stationFiles": [
+    {
+      "station": "泉岳寺",
+      "path": "/data/odpt/odpt-toei-fb17c8003b67f478-3e7f008d9bda.json",
+      "status": 200,
+      "sha256": "3e7f008d9bdab4d4f83f62851e800003a1ea51a51c30903c711d7d0dc49230bc"
+    },
+    {
+      "station": "三田",
+      "path": "/data/odpt/odpt-toei-eda4f8f50f6e15bd-30111113a383.json",
+      "status": 200,
+      "sha256": "30111113a383e2f32fac429f3294373dd6af77910540095074587c5b608c4a54"
+    },
+    {
+      "station": "大門",
+      "path": "/data/odpt/odpt-toei-edcf26e0f2476f28-7ce121134192.json",
+      "status": 200,
+      "sha256": "7ce12113419283a640dd661b132a9df8e5d441be72aced2181715aa1849716d3"
+    },
+    {
+      "station": "新橋",
+      "path": "/data/odpt/odpt-toei-4d58d57a0eaf6a15-99f3bc9be519.json",
+      "status": 200,
+      "sha256": "99f3bc9be51986de3a5f16f2cd4733c63bdbc6344c37cb123830b18402c81b2f"
+    },
+    {
+      "station": "東銀座",
+      "path": "/data/odpt/odpt-toei-f65342e86ff56e74-056f949a59b1.json",
+      "status": 200,
+      "sha256": "056f949a59b10bbccc253411c4af1d94b354733c98b04320d3d48b938fc97b5e"
+    },
+    {
+      "station": "宝町",
+      "path": "/data/odpt/odpt-toei-f449182de82fd840-0ba380c26ef8.json",
+      "status": 200,
+      "sha256": "0ba380c26ef891a5a68fdaee6f5e29f7f80ff6fa0bc20dd29d58e4810c3a498b"
+    },
+    {
+      "station": "日本橋",
+      "path": "/data/odpt/odpt-toei-a2f6d9b3f174af12-b74489ad5e15.json",
+      "status": 200,
+      "sha256": "b74489ad5e1591e99531cd73004a5a299d5015f285b499493447fc34ad5501a5"
+    },
+    {
+      "station": "人形町",
+      "path": "/data/odpt/odpt-toei-466415cbd9813edc-14502a00d2e8.json",
+      "status": 200,
+      "sha256": "14502a00d2e8043f7a01b0c37883f8975a0f7beaf7ec4737105cc3c23085de87"
+    },
+    {
+      "station": "東日本橋",
+      "path": "/data/odpt/odpt-toei-97e3c5af8ebf3cea-2aa5f297df12.json",
+      "status": 200,
+      "sha256": "2aa5f297df1256b6975da2ded5443a7f454e147580aed528b5c35a11811cdc8a"
+    },
+    {
+      "station": "浅草橋",
+      "path": "/data/odpt/odpt-toei-48c31a25356a7bc3-00d04930376e.json",
+      "status": 200,
+      "sha256": "00d04930376e3618c3864cb97a85b962c198dc415f98a15793c5f728c827ae16"
+    },
+    {
+      "station": "蔵前",
+      "path": "/data/odpt/odpt-toei-0c388ec1af138c49-58c031aca4cb.json",
+      "status": 200,
+      "sha256": "58c031aca4cbe7c98166b52749b92b79fb15887de8e3f872d767fcef296cd96d"
+    },
+    {
+      "station": "浅草",
+      "path": "/data/odpt/odpt-toei-f8f857d236eb5df9-9561dd3a5365.json",
+      "status": 200,
+      "sha256": "9561dd3a5365f34e00ef19207c1889caa92791cc467420a8b5069dec9a091776"
+    },
+    {
+      "station": "本所吾妻橋",
+      "path": "/data/odpt/odpt-toei-9e9370e10edd462a-a08fabc2308f.json",
+      "status": 200,
+      "sha256": "a08fabc2308f7e8d04f5de4494da0afb7848666d37880e6ba8750d4c68156cdc"
+    },
+    {
+      "station": "押上",
+      "path": "/data/odpt/odpt-toei-e90f72491080b40f-ea3bfe9b61d7.json",
+      "status": 200,
+      "sha256": "ea3bfe9b61d7c49f4603fa1fed734e1f9fbe3fac7915801656c95f357219ee9b"
+    },
+    {
+      "station": "西馬込",
+      "path": "/data/odpt/odpt-toei-304aba3644fa977e-7f69188f727f.json",
+      "status": 200,
+      "sha256": "7f69188f727f3663041c2694119763d786c5f74ef8bcea2cef3b1faf0df8597c"
+    },
+    {
+      "station": "馬込",
+      "path": "/data/odpt/odpt-toei-e386225653b1caaa-c58423c6b3ee.json",
+      "status": 200,
+      "sha256": "c58423c6b3ee7c6c747c5ca7750aabbf17be89a2223ec0c3e3b192ef09152ba5"
+    },
+    {
+      "station": "中延",
+      "path": "/data/odpt/odpt-toei-6d5da5d491f9c0d2-417fc5652380.json",
+      "status": 200,
+      "sha256": "417fc565238085b3d71e13f0e08d6cd04f38c1f5a149b72f30264fb7533bba43"
+    },
+    {
+      "station": "戸越",
+      "path": "/data/odpt/odpt-toei-89cc41fd4f3b09a0-26d2186fa46e.json",
+      "status": 200,
+      "sha256": "26d2186fa46ea328318fad1e63c1c004ba59731a6f8b63fb11037f289f889ac2"
+    },
+    {
+      "station": "五反田",
+      "path": "/data/odpt/odpt-toei-47d929c795c7929a-d1c0945404c9.json",
+      "status": 200,
+      "sha256": "d1c0945404c96968d90dc2d50cab5ae3119e87a6adcc8adae5b0a3edac49f082"
+    },
+    {
+      "station": "高輪台",
+      "path": "/data/odpt/odpt-toei-92c2ee0fda4c6da5-69dd61223085.json",
+      "status": 200,
+      "sha256": "69dd6122308512c5593cabc3baa8347bed4518a6b0aa10082106b9ccc8d5ac6e"
+    },
+    {
+      "station": "目黒",
+      "path": "/data/odpt/odpt-toei-a873cbc8867022f8-876567f01c0b.json",
+      "status": 200,
+      "sha256": "876567f01c0b25a287622322af754594e58702d2340035185547865e030451ee"
+    },
+    {
+      "station": "白金台",
+      "path": "/data/odpt/odpt-toei-a09ee27d3c60ad10-64e009de0686.json",
+      "status": 200,
+      "sha256": "64e009de0686958b3c1f6f43bf53e4083d0f6dbd615a0847c12f927eafa3b14f"
+    },
+    {
+      "station": "白金高輪",
+      "path": "/data/odpt/odpt-toei-f05b00966308b2c0-2cb692c35184.json",
+      "status": 200,
+      "sha256": "2cb692c35184018666765bdafd0b8927b3170758ce3b455e1500a579c3ada393"
+    },
+    {
+      "station": "三田",
+      "path": "/data/odpt/odpt-toei-710da199a83f9633-fc538f69fc02.json",
+      "status": 200,
+      "sha256": "fc538f69fc0245904e791a356d95f1579e45a959c3d2503921c5e0f9e3bf3392"
+    },
+    {
+      "station": "芝公園",
+      "path": "/data/odpt/odpt-toei-0eed50d5d422cb78-71093a934221.json",
+      "status": 200,
+      "sha256": "71093a9342216354e95e1dfd314809df8b10668379a614d75ad34016fb2ceebd"
+    },
+    {
+      "station": "御成門",
+      "path": "/data/odpt/odpt-toei-24a127b64bc9efb6-2919830b2e6c.json",
+      "status": 200,
+      "sha256": "2919830b2e6cd3b8ad49cf1a9e1fc94dbadbe78fa18dd6eec9837380cc8e2308"
+    },
+    {
+      "station": "内幸町",
+      "path": "/data/odpt/odpt-toei-bdfb5e4e219feb5f-5352722b7174.json",
+      "status": 200,
+      "sha256": "5352722b7174fc72dcb8988aab8ee9ab268354e410c3d85e6f5dd71f6a02f13a"
+    },
+    {
+      "station": "日比谷",
+      "path": "/data/odpt/odpt-toei-7f03589d427d953b-5e795ab58283.json",
+      "status": 200,
+      "sha256": "5e795ab58283c6769e0c9e129b1617e89f658ff86c82dc3447cadd32a2f94e58"
+    },
+    {
+      "station": "大手町",
+      "path": "/data/odpt/odpt-toei-4440b76e61abdd99-6db4ffaa5248.json",
+      "status": 200,
+      "sha256": "6db4ffaa524855256dcdb3c11f692e3e796a1c07feb9d33b30b2d15dd7cf0589"
+    },
+    {
+      "station": "神保町",
+      "path": "/data/odpt/odpt-toei-0c9e02e5f9badb41-b37083c59604.json",
+      "status": 200,
+      "sha256": "b37083c59604e2e167b757a5ab991e2d809123f78bb89b9cd017a8f031120455"
+    },
+    {
+      "station": "水道橋",
+      "path": "/data/odpt/odpt-toei-733b54fc39f683f4-56517a7ef911.json",
+      "status": 200,
+      "sha256": "56517a7ef911c2703aacd31e796892516b8b751a27b3dfc2045b71af6ec53534"
+    },
+    {
+      "station": "春日",
+      "path": "/data/odpt/odpt-toei-a95dd3c9d0d8963c-e17be441a8a2.json",
+      "status": 200,
+      "sha256": "e17be441a8a2591df37974084a99b6368d259545013f1c5dfed84bc8735a7ede"
+    },
+    {
+      "station": "白山",
+      "path": "/data/odpt/odpt-toei-ff653b97f8a76969-9f7a507c6163.json",
+      "status": 200,
+      "sha256": "9f7a507c616348830aeb69f19eb87c42528449c65a5e813459bcb59515299c06"
+    },
+    {
+      "station": "千石",
+      "path": "/data/odpt/odpt-toei-23fa2794a374021f-c36de1fb9e7c.json",
+      "status": 200,
+      "sha256": "c36de1fb9e7ca0eaf424c2d41dad0470ad9d6f84f8e820a4ce4f0c5387e7212d"
+    },
+    {
+      "station": "巣鴨",
+      "path": "/data/odpt/odpt-toei-ca936a03b41b92ac-33e3825feaba.json",
+      "status": 200,
+      "sha256": "33e3825feabab2ea2a9c1260ee49d74cddb773a7fe9bcca58b62388172f22509"
+    },
+    {
+      "station": "西巣鴨",
+      "path": "/data/odpt/odpt-toei-1b4a0025efa4a503-1ba6546cab03.json",
+      "status": 200,
+      "sha256": "1ba6546cab0392d43ee185ce6561e46640c1935bcaf809587b34fce580c1b179"
+    },
+    {
+      "station": "新板橋",
+      "path": "/data/odpt/odpt-toei-bdeb31ef6ac1f261-1b07bc71f38f.json",
+      "status": 200,
+      "sha256": "1b07bc71f38f1d1d124d24cc29dbbfd31ec4d7c2f2816094b023c1334746d518"
+    },
+    {
+      "station": "板橋区役所前",
+      "path": "/data/odpt/odpt-toei-6f9ff7c66c2690eb-460f1c5791da.json",
+      "status": 200,
+      "sha256": "460f1c5791dafd5a640b60ef2ec8222261c933d9904186ab764863cf159047ae"
+    },
+    {
+      "station": "板橋本町",
+      "path": "/data/odpt/odpt-toei-86d461619bed876c-efe27e4c12fc.json",
+      "status": 200,
+      "sha256": "efe27e4c12fc6dde80caeca9fde23e261b93f10f5838c1d15333a335a38becf0"
+    },
+    {
+      "station": "本蓮沼",
+      "path": "/data/odpt/odpt-toei-006e7ea4dfb7b08f-eae1e6ac3847.json",
+      "status": 200,
+      "sha256": "eae1e6ac38474ab003ef8d5c6a710ce1617f2097bc228dd219922aedfc5af1c5"
+    },
+    {
+      "station": "志村坂上",
+      "path": "/data/odpt/odpt-toei-8663902bbb37c6ef-70bcbb6ff8e1.json",
+      "status": 200,
+      "sha256": "70bcbb6ff8e1286e7ff51e727c5fb74099e2714bf934c00346a174081d5ba9fd"
+    },
+    {
+      "station": "志村三丁目",
+      "path": "/data/odpt/odpt-toei-286c2eac6d48001a-ec568aa77395.json",
+      "status": 200,
+      "sha256": "ec568aa773959c38f91236f9e91a4550932614cba9b5d48b82715839cbc4320b"
+    },
+    {
+      "station": "蓮根",
+      "path": "/data/odpt/odpt-toei-6c430e66723c4a72-633141dadfdc.json",
+      "status": 200,
+      "sha256": "633141dadfdcad72027ea8fa314bb95d702593e5953e209090c15704ec092762"
+    },
+    {
+      "station": "西台",
+      "path": "/data/odpt/odpt-toei-6daa15db45d192f4-b93fa5938f5b.json",
+      "status": 200,
+      "sha256": "b93fa5938f5b5d0506c6538276cd3335152ca1ffa932da4a14859c9b6ed22880"
+    },
+    {
+      "station": "高島平",
+      "path": "/data/odpt/odpt-toei-071588ac08510220-a169cb62103a.json",
+      "status": 200,
+      "sha256": "a169cb62103a362e7cf50a7301791f79403fbe402acbadff30a28bae5b3dfe70"
+    },
+    {
+      "station": "新高島平",
+      "path": "/data/odpt/odpt-toei-0dc361e6ab982640-541afbedfecf.json",
+      "status": 200,
+      "sha256": "541afbedfecf4a23fe9406b604c1754098caa6ad981bb658908cab3e0beba97c"
+    },
+    {
+      "station": "西高島平",
+      "path": "/data/odpt/odpt-toei-88b45371d0eb5f83-57bbca4acfb2.json",
+      "status": 200,
+      "sha256": "57bbca4acfb291737a7908a5bc432141a43df8f7286de6822f9cec76aa572ec9"
+    },
+    {
+      "station": "新宿",
+      "path": "/data/odpt/odpt-toei-8d7e0184d76c2d6b-a5282d1cb016.json",
+      "status": 200,
+      "sha256": "a5282d1cb016de3b42458c34735ba4748fa02269dc8263ff94c7d3507e655360"
+    },
+    {
+      "station": "新宿三丁目",
+      "path": "/data/odpt/odpt-toei-a021e71cbe493647-621a1da6cd97.json",
+      "status": 200,
+      "sha256": "621a1da6cd97a594347564a0a9a65a2844329345a68a3c9f136847fbddc86500"
+    },
+    {
+      "station": "曙橋",
+      "path": "/data/odpt/odpt-toei-34abf4847d3ec1c6-5875e855950b.json",
+      "status": 200,
+      "sha256": "5875e855950b23a5196542c3a96e4259251b8155b3cede244acd4961b7e65a94"
+    },
+    {
+      "station": "市ヶ谷",
+      "path": "/data/odpt/odpt-toei-07af8940c7e8f5ce-b0f7e5429549.json",
+      "status": 200,
+      "sha256": "b0f7e5429549b331037ce43f3c0c07dec33990c2d207da7f962ed72aec9f0544"
+    },
+    {
+      "station": "九段下",
+      "path": "/data/odpt/odpt-toei-9481200e1e645154-43a7f86ec75f.json",
+      "status": 200,
+      "sha256": "43a7f86ec75ff456f01a299835d1b8f8c485d48a015ba45b7785aed8bd6f6dac"
+    },
+    {
+      "station": "神保町",
+      "path": "/data/odpt/odpt-toei-6518be8e38bac45b-68ea955902dd.json",
+      "status": 200,
+      "sha256": "68ea955902ddee55fc2b65fec309649d641033776d6b211dda39f8a2554ffc73"
+    },
+    {
+      "station": "小川町",
+      "path": "/data/odpt/odpt-toei-75d0dd13338fe449-80065bdf1a6e.json",
+      "status": 200,
+      "sha256": "80065bdf1a6e8c80b9a6393a038553f657957733c778490e883ee26a275baf34"
+    },
+    {
+      "station": "岩本町",
+      "path": "/data/odpt/odpt-toei-69d22cd1b9e47d21-02e5192a2245.json",
+      "status": 200,
+      "sha256": "02e5192a22458549b03287ce00f58bfb72722869920496e0b3f362c56efc7439"
+    },
+    {
+      "station": "馬喰横山",
+      "path": "/data/odpt/odpt-toei-1689fd2725adcc2e-0807f87ab2ec.json",
+      "status": 200,
+      "sha256": "0807f87ab2ecdc475e99ed3bf62d27f416d7745d6b1ea874b843da0e7144c370"
+    },
+    {
+      "station": "浜町",
+      "path": "/data/odpt/odpt-toei-f76b84f04608a0ba-319132f45ae2.json",
+      "status": 200,
+      "sha256": "319132f45ae289aecc90d4c07b2ad46065deb914a059319fbf0d0e328e28c682"
+    },
+    {
+      "station": "森下",
+      "path": "/data/odpt/odpt-toei-ac4dabc86c70361b-a9d0c4d9932f.json",
+      "status": 200,
+      "sha256": "a9d0c4d9932f49e61347f8155417f00b10b95df1d9801daacf9a3544ec4d94b3"
+    },
+    {
+      "station": "菊川",
+      "path": "/data/odpt/odpt-toei-cf781717883c19f6-63dd9c533acf.json",
+      "status": 200,
+      "sha256": "63dd9c533acfa73859db23068368ed77c6e9329fb0ee94d802c623511e18b2f8"
+    },
+    {
+      "station": "住吉",
+      "path": "/data/odpt/odpt-toei-798dbe63bbe76806-07307d3461d0.json",
+      "status": 200,
+      "sha256": "07307d3461d0b0f471725f83aefb90e69ab05978fa1bef75fa628b6c21f3bb28"
+    },
+    {
+      "station": "西大島",
+      "path": "/data/odpt/odpt-toei-76194f79be10a349-f8ae7f717d5d.json",
+      "status": 200,
+      "sha256": "f8ae7f717d5d242576f1133cfd2ac9c2cd6c88303a4a70cd35420d95546c8296"
+    },
+    {
+      "station": "大島",
+      "path": "/data/odpt/odpt-toei-d9a83f63ec59864f-178f058bdefc.json",
+      "status": 200,
+      "sha256": "178f058bdefcb343241e091918df43dc26a819734e06a32a9070de38cecb4bb1"
+    },
+    {
+      "station": "東大島",
+      "path": "/data/odpt/odpt-toei-7ca37c207ae4ced9-57c26db3ff18.json",
+      "status": 200,
+      "sha256": "57c26db3ff18584a88c0bbdfa9cde23d0adce47dcfe2019ca9e059c56145fb58"
+    },
+    {
+      "station": "船堀",
+      "path": "/data/odpt/odpt-toei-e4c7e2fdbef2dd4d-002f5cc68699.json",
+      "status": 200,
+      "sha256": "002f5cc6869998b8194361485b599c29493378e08c8f641976f7dd51cdcdce70"
+    },
+    {
+      "station": "一之江",
+      "path": "/data/odpt/odpt-toei-ac417fd8e580e051-e64ea7734219.json",
+      "status": 200,
+      "sha256": "e64ea77342193a9f5a60215d980845c7cb12fbb06040d627936c81f85ba63c64"
+    },
+    {
+      "station": "瑞江",
+      "path": "/data/odpt/odpt-toei-cc3c90d5172250ed-d0c065d5c3bb.json",
+      "status": 200,
+      "sha256": "d0c065d5c3bbd10bb5080d42c7566eda897de1aed938cbe73aed42aa2e1709bf"
+    },
+    {
+      "station": "篠崎",
+      "path": "/data/odpt/odpt-toei-7eab966b04bc477a-5f4e6c4a5c72.json",
+      "status": 200,
+      "sha256": "5f4e6c4a5c7295710a7f8d83e8689032ec1cec008dac3bc091c68ca7143b980f"
+    },
+    {
+      "station": "本八幡",
+      "path": "/data/odpt/odpt-toei-ae077d49d4dadfc6-9d7b50e71f5f.json",
+      "status": 200,
+      "sha256": "9d7b50e71f5f4f6db3cb63a69129c37d2b66037c208d8a0324d4ec4503dba16a"
+    },
+    {
+      "station": "都庁前",
+      "path": "/data/odpt/odpt-toei-83154da00f20fd4c-0a64d191cdd4.json",
+      "status": 200,
+      "sha256": "0a64d191cdd49b40c4ba23d89d7c2f175ea06c3b19619dc8b871beffc2f5cb93"
+    },
+    {
+      "station": "新宿西口",
+      "path": "/data/odpt/odpt-toei-a032a98ac1a32f16-2ed0a1a7094c.json",
+      "status": 200,
+      "sha256": "2ed0a1a7094c0129af5e98e319277fa15f8e3c8fd1a4459caee0fdc68d838c3c"
+    },
+    {
+      "station": "東新宿",
+      "path": "/data/odpt/odpt-toei-cd78b22fdab6573d-be6c4ced0682.json",
+      "status": 200,
+      "sha256": "be6c4ced0682cbe097870db15d92e9e55e6ff59c46fbdfc8d9ca844f1f52aac0"
+    },
+    {
+      "station": "若松河田",
+      "path": "/data/odpt/odpt-toei-4603d40eb12111ff-b9e15ead9b44.json",
+      "status": 200,
+      "sha256": "b9e15ead9b446ef2a3296eb03517b0f6dc122b3574bc2d67f4900a300af889b1"
+    },
+    {
+      "station": "牛込柳町",
+      "path": "/data/odpt/odpt-toei-41387707f302130b-2aa9fba817a9.json",
+      "status": 200,
+      "sha256": "2aa9fba817a98d2c108b0445d909d01eaf45a3f66ccc3f24be8fec27826de948"
+    },
+    {
+      "station": "牛込神楽坂",
+      "path": "/data/odpt/odpt-toei-2113271044d6f683-618beb55bd49.json",
+      "status": 200,
+      "sha256": "618beb55bd492a2b985a5d83e538064c0abb61ad9eb35fce473a189c8c40607a"
+    },
+    {
+      "station": "飯田橋",
+      "path": "/data/odpt/odpt-toei-6f7c713a1343350d-96e7f1e1c10c.json",
+      "status": 200,
+      "sha256": "96e7f1e1c10cc07919c4f0c4da14f6d63a8471d6bb0df564495a75a0635469d9"
+    },
+    {
+      "station": "春日",
+      "path": "/data/odpt/odpt-toei-b01b8a08bc44cb6f-d9ca002ce426.json",
+      "status": 200,
+      "sha256": "d9ca002ce426f8b159039d818798e955183cd6a07d48c3442e2731acd3156788"
+    },
+    {
+      "station": "本郷三丁目",
+      "path": "/data/odpt/odpt-toei-9c61f1205bb6bf32-19418cbd84de.json",
+      "status": 200,
+      "sha256": "19418cbd84de3323bd657fd5b58e4ccbf37565b439883a26f28bbcc0466ef022"
+    },
+    {
+      "station": "上野御徒町",
+      "path": "/data/odpt/odpt-toei-5acf312698c0c5aa-454bc67f6fea.json",
+      "status": 200,
+      "sha256": "454bc67f6fea81f2c13054cd6610059d9cda5798bdfccf4be15cdfcf5902c2c9"
+    },
+    {
+      "station": "新御徒町",
+      "path": "/data/odpt/odpt-toei-3b0f1be380838418-93b98574ebfa.json",
+      "status": 200,
+      "sha256": "93b98574ebfa892f0fea92ec9c354648c2a14a7300d771e34d1cc24175ea20c0"
+    },
+    {
+      "station": "蔵前",
+      "path": "/data/odpt/odpt-toei-3eda3109ca04c756-b85f697f0663.json",
+      "status": 200,
+      "sha256": "b85f697f0663ed74c320bf379e53b8ec2ae2b821fdb1a34b2a9832e73a3f3603"
+    },
+    {
+      "station": "両国",
+      "path": "/data/odpt/odpt-toei-580f810987a71c5e-8b01765df2dc.json",
+      "status": 200,
+      "sha256": "8b01765df2dc502d2d293c224aadd5ac560610ceaadf36a2cc6fc44b8079707d"
+    },
+    {
+      "station": "森下",
+      "path": "/data/odpt/odpt-toei-a8a62fb507da193a-acc0a848348e.json",
+      "status": 200,
+      "sha256": "acc0a848348e995d00c12e2237bdc2bd90b677e276d9e77bd91dab76010b77ae"
+    },
+    {
+      "station": "清澄白河",
+      "path": "/data/odpt/odpt-toei-99676598060f95c2-34ea0b52c218.json",
+      "status": 200,
+      "sha256": "34ea0b52c21849decc058648cf6efb2bdb86af89f8ab8132a58e643ca3de7020"
+    },
+    {
+      "station": "門前仲町",
+      "path": "/data/odpt/odpt-toei-591d3ab5dd54083a-9bfbd44990e4.json",
+      "status": 200,
+      "sha256": "9bfbd44990e458df4b4e33c1cd7054988cc93a57dc889014bef74efc1f9483b0"
+    },
+    {
+      "station": "月島",
+      "path": "/data/odpt/odpt-toei-1b1599a9e564d5fd-764476541ce7.json",
+      "status": 200,
+      "sha256": "764476541ce7db86f5a3baaab8b05215602e67df64980b66f2fbef980717d512"
+    },
+    {
+      "station": "勝どき",
+      "path": "/data/odpt/odpt-toei-448e1912613761de-b0c8649913ad.json",
+      "status": 200,
+      "sha256": "b0c8649913ad5fb0fbd9a376561f502e23c4ca323b79f0fe14f1eff96e663b3b"
+    },
+    {
+      "station": "築地市場",
+      "path": "/data/odpt/odpt-toei-87ec8696f2af244a-83a4c6cec52c.json",
+      "status": 200,
+      "sha256": "83a4c6cec52cfe829e7f38f81f3b2844285f7d7c1106bce41a59318e6d710a29"
+    },
+    {
+      "station": "汐留",
+      "path": "/data/odpt/odpt-toei-005217737f22159a-ea02d38364d1.json",
+      "status": 200,
+      "sha256": "ea02d38364d1d83b2442b0edc8342f51c93654eb86abb6e26c4a7459c568c7e9"
+    },
+    {
+      "station": "大門",
+      "path": "/data/odpt/odpt-toei-851eed1c1445fba1-d0c593c43801.json",
+      "status": 200,
+      "sha256": "d0c593c43801dc16530c669ec772ee6b125525e7fe5f316b755f611b6193617d"
+    },
+    {
+      "station": "赤羽橋",
+      "path": "/data/odpt/odpt-toei-1053d24fbc72b202-a6474129b709.json",
+      "status": 200,
+      "sha256": "a6474129b70979afa18d37b071f75c9be9033e4268e568e64f539c112bcf7c61"
+    },
+    {
+      "station": "麻布十番",
+      "path": "/data/odpt/odpt-toei-8209c47bb80e2a63-646126cbfef4.json",
+      "status": 200,
+      "sha256": "646126cbfef4c9d75fb327a5fa1487dcca17e927efa5fe1e7f641854720a59e2"
+    },
+    {
+      "station": "六本木",
+      "path": "/data/odpt/odpt-toei-9cbfb3a63039bc0c-a350e213f4c2.json",
+      "status": 200,
+      "sha256": "a350e213f4c284c14f2fa2c82c1b7dc9a7030b035b309149b7cbd9d5f1c22e4a"
+    },
+    {
+      "station": "青山一丁目",
+      "path": "/data/odpt/odpt-toei-24725833b70e5173-d3ac1cda1a5f.json",
+      "status": 200,
+      "sha256": "d3ac1cda1a5f926db48249cdc9b9b1bc25e041a27fc4fcbdccb201d4fdaabfd5"
+    },
+    {
+      "station": "国立競技場",
+      "path": "/data/odpt/odpt-toei-5c8f300e707edd94-9f5060452469.json",
+      "status": 200,
+      "sha256": "9f506045246986920416f99e81f5c5f2b08f808bd05e97985dec0425936aa6bf"
+    },
+    {
+      "station": "代々木",
+      "path": "/data/odpt/odpt-toei-57eafdab37203fcf-3d2ddba0bb9e.json",
+      "status": 200,
+      "sha256": "3d2ddba0bb9e8d1179b603117a1187a6aa8e7205d0114ae90f66f701f9013244"
+    },
+    {
+      "station": "新宿",
+      "path": "/data/odpt/odpt-toei-8ac6faab59ec6d7b-7cc114cd9c08.json",
+      "status": 200,
+      "sha256": "7cc114cd9c0840285b4c23f0622935ede4d4807a5acf1fcbd54de0688bc8c7dd"
+    },
+    {
+      "station": "西新宿五丁目",
+      "path": "/data/odpt/odpt-toei-96090a9a7ee983de-d9d32b1d5c81.json",
+      "status": 200,
+      "sha256": "d9d32b1d5c81c5197c9f9e5006bd323685ca0df3b880dfb2f088fceb75ff476f"
+    },
+    {
+      "station": "中野坂上",
+      "path": "/data/odpt/odpt-toei-7d91c3434ce5a895-9cbe34220a48.json",
+      "status": 200,
+      "sha256": "9cbe34220a486c3dcbe3907712aff7f0878537ecd4942c3c7018ecffdde76521"
+    },
+    {
+      "station": "東中野",
+      "path": "/data/odpt/odpt-toei-1f2af8b84bd39cd7-b6fb2c3b9a0e.json",
+      "status": 200,
+      "sha256": "b6fb2c3b9a0e5bc959045afeaff2299b369f0d474654cfd2397f265f52f5bee0"
+    },
+    {
+      "station": "中井",
+      "path": "/data/odpt/odpt-toei-1b8996b4edfc8544-640f113c84ec.json",
+      "status": 200,
+      "sha256": "640f113c84ec41821e806e27ec37e43c64e65b5ab79c1ea68cfb1bab187f74cc"
+    },
+    {
+      "station": "落合南長崎",
+      "path": "/data/odpt/odpt-toei-75a80245609d303c-e4edbe6dc023.json",
+      "status": 200,
+      "sha256": "e4edbe6dc023ca94927d6f0be0d3b45a48718687f4590c9273bc9569c4dcf481"
+    },
+    {
+      "station": "新江古田",
+      "path": "/data/odpt/odpt-toei-619bc2fe4dcdfce2-1d6878dc9bea.json",
+      "status": 200,
+      "sha256": "1d6878dc9bea7b5581d9105b2c3be6a4cb33ee0e1d8cefdb85841849e529c52f"
+    },
+    {
+      "station": "練馬",
+      "path": "/data/odpt/odpt-toei-b8d1eaeba102b1cb-222349f39c02.json",
+      "status": 200,
+      "sha256": "222349f39c02e41c2a9bf6689b035e27523f2d05b95f83abd4ed91e41c1aaf4d"
+    },
+    {
+      "station": "豊島園",
+      "path": "/data/odpt/odpt-toei-92833c9fb5f6d580-395b53b18d52.json",
+      "status": 200,
+      "sha256": "395b53b18d5240b2e480fd28a6ee8f48c0bc992a004af51242aa36ecbbe1618a"
+    },
+    {
+      "station": "練馬春日町",
+      "path": "/data/odpt/odpt-toei-8443f7fb212b53b0-8126c0649c40.json",
+      "status": 200,
+      "sha256": "8126c0649c40b21e611516fb4afb28d398019cd3b5d4a03fa1462f4e88f3f059"
+    },
+    {
+      "station": "光が丘",
+      "path": "/data/odpt/odpt-toei-3620e1ec4c861550-e12f7984693e.json",
+      "status": 200,
+      "sha256": "e12f7984693eac57317e98dba1e61622f40914b9aa6e2d691214b2ee073b7cad"
+    },
+    {
+      "station": "日暮里",
+      "path": "/data/odpt/odpt-toei-dc0b306d1c599be1-602c703486ab.json",
+      "status": 200,
+      "sha256": "602c703486ab04ea2cb5b9abf9c7f76abd25a93a8421ce8d6690d511a9c7ea9c"
+    },
+    {
+      "station": "西日暮里",
+      "path": "/data/odpt/odpt-toei-24663afc2003695a-7a987320364a.json",
+      "status": 200,
+      "sha256": "7a987320364a150da4a26a31426865f9061c0bdc4e5f58bda086421077ac96d1"
+    },
+    {
+      "station": "赤土小学校前",
+      "path": "/data/odpt/odpt-toei-13a68ac4d7477e43-0c1b553b3b37.json",
+      "status": 200,
+      "sha256": "0c1b553b3b379cbad48c688abefe50ccdee2ad4c1c500679fee98e6cb8380e93"
+    },
+    {
+      "station": "熊野前",
+      "path": "/data/odpt/odpt-toei-ebad0251df637041-4a2c21c4fa39.json",
+      "status": 200,
+      "sha256": "4a2c21c4fa39615732ba4a374c7b70c17e830a1593c04d97f2d100e9ae685c1a"
+    },
+    {
+      "station": "足立小台",
+      "path": "/data/odpt/odpt-toei-9082e0919222c33f-d4f506dc2103.json",
+      "status": 200,
+      "sha256": "d4f506dc2103b21c430a1bf412d2a3122651112e7332a042a636913b9d058364"
+    },
+    {
+      "station": "扇大橋",
+      "path": "/data/odpt/odpt-toei-6bffdef3936001bd-7090272eda60.json",
+      "status": 200,
+      "sha256": "7090272eda60aeefe0bf00080fbd0b7be3eb861a20a742041351f25a2d7a44d3"
+    },
+    {
+      "station": "高野",
+      "path": "/data/odpt/odpt-toei-4ab333a54e979826-c4b7de0badcc.json",
+      "status": 200,
+      "sha256": "c4b7de0badccd5964f56d9dc40addffa9629a025f0e2e4816b574d9fd96c191a"
+    },
+    {
+      "station": "江北",
+      "path": "/data/odpt/odpt-toei-dadabf98fa555c9d-5a22eafff1bb.json",
+      "status": 200,
+      "sha256": "5a22eafff1bb1f9a4f5e75d27f2fdb04fecceb39cd2693d1e3c1646fe33fa1a2"
+    },
+    {
+      "station": "西新井大師西",
+      "path": "/data/odpt/odpt-toei-3721f00f84e9c394-b4f05e0bc5a6.json",
+      "status": 200,
+      "sha256": "b4f05e0bc5a6ee7da5fde6f3133e63dff0fe1266844e402232d671fcc0a44e02"
+    },
+    {
+      "station": "谷在家",
+      "path": "/data/odpt/odpt-toei-fe8e1d06c806bae3-d7d9de6e070d.json",
+      "status": 200,
+      "sha256": "d7d9de6e070d38f99875acdfe5a749851d01783017fad09e88edebf1e24d6ce5"
+    },
+    {
+      "station": "舎人公園",
+      "path": "/data/odpt/odpt-toei-6af543ba0d12d489-4de4023caeb3.json",
+      "status": 200,
+      "sha256": "4de4023caeb3e4ac74ee6f38790c7642178248712e9df71cebb32ed6211bcbca"
+    },
+    {
+      "station": "舎人",
+      "path": "/data/odpt/odpt-toei-6b3d6634f36f1dd3-ba54ca6b85c2.json",
+      "status": 200,
+      "sha256": "ba54ca6b85c2468520ef6eb8026ebd8b204887afcd1f8f0611381fc4eab500a6"
+    },
+    {
+      "station": "見沼代親水公園",
+      "path": "/data/odpt/odpt-toei-971c996fe70c5cdd-49dfcc3e8beb.json",
+      "status": 200,
+      "sha256": "49dfcc3e8bebc89e45f97c86d345d7b2f0379727a5bd14f2893b923deb1b54c1"
+    },
+    {
+      "station": "荒川車庫前",
+      "path": "/data/odpt/odpt-toei-3dd59ef7c2e406be-8ef2562fd25e.json",
+      "status": 200,
+      "sha256": "8ef2562fd25e36b819ceb597d97459d6f17350afbb36caa6e0473eab2379162b"
+    },
+    {
+      "station": "梶原",
+      "path": "/data/odpt/odpt-toei-ac7c7fb344c409d4-c97e1512ae91.json",
+      "status": 200,
+      "sha256": "c97e1512ae9195c18b8fc6a957b999d0974560df36e319f8d2a2b6aca0a93d42"
+    },
+    {
+      "station": "栄町",
+      "path": "/data/odpt/odpt-toei-0a800b5de7c69e15-e2073e07c3f3.json",
+      "status": 200,
+      "sha256": "e2073e07c3f3cbacd16e98bec76205e537c761f1632cad7393194da48ff83251"
+    },
+    {
+      "station": "王子駅前",
+      "path": "/data/odpt/odpt-toei-e3f6d2e7844f22a2-62f269876e51.json",
+      "status": 200,
+      "sha256": "62f269876e5102aec3505c49daf347b2d2ab26914d0f7ada4dd8051f58411540"
+    },
+    {
+      "station": "飛鳥山",
+      "path": "/data/odpt/odpt-toei-151e1a61bd7cfb50-fed719861361.json",
+      "status": 200,
+      "sha256": "fed719861361ec7994953f0afc8ebc9ebb3fe89db1538151df7f144c76977f1e"
+    },
+    {
+      "station": "滝野川一丁目",
+      "path": "/data/odpt/odpt-toei-4cf436f2033d3a9c-7391a7013121.json",
+      "status": 200,
+      "sha256": "7391a7013121b0ec48385b5fb52e323d8e0eb5b8e17f977cb1c258480e07bea2"
+    },
+    {
+      "station": "西ヶ原四丁目",
+      "path": "/data/odpt/odpt-toei-18ed87a96e1406d7-760e6bff4c21.json",
+      "status": 200,
+      "sha256": "760e6bff4c21ac0230239bb242156881d0349268c65121c721c5e14f333e04ee"
+    },
+    {
+      "station": "新庚申塚",
+      "path": "/data/odpt/odpt-toei-2744b15e92226e43-d4a3f651cf09.json",
+      "status": 200,
+      "sha256": "d4a3f651cf09aba795433352b02a35927af0de774f498a39316793415b739c70"
+    },
+    {
+      "station": "庚申塚",
+      "path": "/data/odpt/odpt-toei-d853e471e5f60386-d8720214765e.json",
+      "status": 200,
+      "sha256": "d8720214765ec6d89ae40e5c47dbc2bb8af532b5577ca0e8cda53b6220b4ae2a"
+    },
+    {
+      "station": "巣鴨新田",
+      "path": "/data/odpt/odpt-toei-c18ac9dfb7a89272-d44a649c5e2d.json",
+      "status": 200,
+      "sha256": "d44a649c5e2d10481ccfd1f82494d4fe95224d890235c49b34942bd7a2e93e85"
+    },
+    {
+      "station": "大塚駅前",
+      "path": "/data/odpt/odpt-toei-a2aa62e7d0e5dc66-ae0f6cb5e22d.json",
+      "status": 200,
+      "sha256": "ae0f6cb5e22dc1233e130e9aeca679622d81aea07ebcca48ddeeec728f698e03"
+    },
+    {
+      "station": "向原",
+      "path": "/data/odpt/odpt-toei-00844dc9ae07e60c-73aae4414b51.json",
+      "status": 200,
+      "sha256": "73aae4414b51e88be5fec5ad7d9bce7430802101fe5398d86552dc430c784e1e"
+    },
+    {
+      "station": "東池袋四丁目",
+      "path": "/data/odpt/odpt-toei-d725ca712a395c50-4bdc79565127.json",
+      "status": 200,
+      "sha256": "4bdc795651271c19e6add65ea55836b01b74d8b8782bf56482a2f345e36c38e5"
+    },
+    {
+      "station": "都電雑司ヶ谷",
+      "path": "/data/odpt/odpt-toei-4bdea701c758e202-3cb75ccfef7b.json",
+      "status": 200,
+      "sha256": "3cb75ccfef7b6b863dbf36a7cc367b8518ddfdc249663319d83855741037a063"
+    },
+    {
+      "station": "鬼子母神前",
+      "path": "/data/odpt/odpt-toei-c3c738432e298987-21486aa708cb.json",
+      "status": 200,
+      "sha256": "21486aa708cbd54a9e7f21d463c384589df52f41e1a97c9caa2185c2618721bb"
+    },
+    {
+      "station": "学習院下",
+      "path": "/data/odpt/odpt-toei-25c9ec4ac9f8257f-4c8067444a58.json",
+      "status": 200,
+      "sha256": "4c8067444a58fc1871125a54a9fd7959af5ba9f62610ee9c8765a7a4d4666dd8"
+    },
+    {
+      "station": "面影橋",
+      "path": "/data/odpt/odpt-toei-1dcc34c468c649c0-b038ac762752.json",
+      "status": 200,
+      "sha256": "b038ac76275285887f2bd472e6e47be0e1868ee49e5c812d0710317206e6936d"
+    },
+    {
+      "station": "三ノ輪橋",
+      "path": "/data/odpt/odpt-toei-e619be6113f28c1e-6f1c71dbb890.json",
+      "status": 200,
+      "sha256": "6f1c71dbb8905a9152186028972661d48fd2e55a629760a6778e0180cad9c317"
+    },
+    {
+      "station": "荒川一中前",
+      "path": "/data/odpt/odpt-toei-c46ae103ab6f8724-bf0cb250d3f9.json",
+      "status": 200,
+      "sha256": "bf0cb250d3f92220b8f4d9f3fc5362912499b1a02df49c74ef17586d79b1df02"
+    },
+    {
+      "station": "荒川区役所前",
+      "path": "/data/odpt/odpt-toei-8fdf75df8afe7707-763b02e0b9d6.json",
+      "status": 200,
+      "sha256": "763b02e0b9d63af0f02c3a33cff768ea3da0cb68922ff226736abc83dd56715c"
+    },
+    {
+      "station": "荒川二丁目",
+      "path": "/data/odpt/odpt-toei-67922c9374194ac3-38f7dca21d32.json",
+      "status": 200,
+      "sha256": "38f7dca21d32057de47fa978202a7d17262ee6a659b4a83d76ad02faac0b113b"
+    },
+    {
+      "station": "荒川七丁目",
+      "path": "/data/odpt/odpt-toei-1bb09fd434edda16-01cec8cb4e6b.json",
+      "status": 200,
+      "sha256": "01cec8cb4e6bd709489d230653bfa2a114cef27866efbac8d6f34b7f9ceeb2a7"
+    },
+    {
+      "station": "町屋駅前",
+      "path": "/data/odpt/odpt-toei-92af92d331dbe6df-c045d6591f94.json",
+      "status": 200,
+      "sha256": "c045d6591f94a072c0217328333253733b3f09e525c548ac74b299ba2b0bd9ec"
+    },
+    {
+      "station": "町屋二丁目",
+      "path": "/data/odpt/odpt-toei-ed7d1eca9974c56b-c4301bfae052.json",
+      "status": 200,
+      "sha256": "c4301bfae0521f43a1c5a9c03940fd692c9e1b31a014f6d36d30363fb9d952b5"
+    },
+    {
+      "station": "東尾久三丁目",
+      "path": "/data/odpt/odpt-toei-5bbf9ac0890bbd1e-7010f8b2bd02.json",
+      "status": 200,
+      "sha256": "7010f8b2bd02fdd3dd46d47fd81dc46fbfdc38d05dad1cda0bbfaacf0d22dcd0"
+    },
+    {
+      "station": "熊野前",
+      "path": "/data/odpt/odpt-toei-cbc51754c79d66ee-b61cb7408146.json",
+      "status": 200,
+      "sha256": "b61cb740814681c2f65a60ba9f4b9d4ccbff119cddbe858450da975649d25de3"
+    },
+    {
+      "station": "宮ノ前",
+      "path": "/data/odpt/odpt-toei-44373a5ac1a58776-7ea6e7573a42.json",
+      "status": 200,
+      "sha256": "7ea6e7573a42e0fc62029bbe70c91a5850ba6fa60b990706514257841b5260e6"
+    },
+    {
+      "station": "小台",
+      "path": "/data/odpt/odpt-toei-b401ed75e92fac4d-38ff502d1982.json",
+      "status": 200,
+      "sha256": "38ff502d19827af3f7379c2bcbc7812bffe9e10d6a3518b8216a6c4189dd6a7d"
+    },
+    {
+      "station": "荒川遊園地前",
+      "path": "/data/odpt/odpt-toei-6bf93b52aacaa805-2db89ae58336.json",
+      "status": 200,
+      "sha256": "2db89ae58336200e22f04ac623821d2f4b4dc21c2fdd8aecd5e77a1f73b54749"
+    },
+    {
+      "station": "早稲田",
+      "path": "/data/odpt/odpt-toei-9c17648268c641a4-bc90aed6904a.json",
+      "status": 200,
+      "sha256": "bc90aed6904a76dee755399463fef49e3a71ada42174141f273b46eb14c3d727"
+    },
+    {
+      "station": "鏡川橋",
+      "path": "/data/odpt/odpt-tosaden-bc40a1a7c1545be8-b3ca84d0a1fc.json",
+      "status": 200,
+      "sha256": "b3ca84d0a1fc377c2a3a84ced60a2bd84038f390f848adc8715b891cfddcff4e"
+    },
+    {
+      "station": "鴨部",
+      "path": "/data/odpt/odpt-tosaden-ab57ae62692c03e3-f11826f42af9.json",
+      "status": 200,
+      "sha256": "f11826f42af9e70486620d9f7b08050de80251466b241c31c887c466003f57f9"
+    },
+    {
+      "station": "曙町東町",
+      "path": "/data/odpt/odpt-tosaden-45b9387b5fdfcdab-1d677a806056.json",
+      "status": 200,
+      "sha256": "1d677a80605683b2a30976cb320496d15918d06fb1de04dff14f9099d9bf3002"
+    },
+    {
+      "station": "曙町",
+      "path": "/data/odpt/odpt-tosaden-86e97d6f6fafe98a-5dec15bd435c.json",
+      "status": 200,
+      "sha256": "5dec15bd435cc27a257c3e3e083617e799c153b2c0ac1c9bc7d53715b17a1d11"
+    },
+    {
+      "station": "朝倉",
+      "path": "/data/odpt/odpt-tosaden-558fd329329baf23-acbffa7778e9.json",
+      "status": 200,
+      "sha256": "acbffa7778e98d43247510677c3f9efa710b485def41027d347c64b39326299e"
+    },
+    {
+      "station": "朝倉駅前",
+      "path": "/data/odpt/odpt-tosaden-20a17cdf376b07ba-691e8002d818.json",
+      "status": 200,
+      "sha256": "691e8002d8182f488d4fb924eb04c2fc339eeae5872130931c5998047892e2cd"
+    },
+    {
+      "station": "朝倉神社前",
+      "path": "/data/odpt/odpt-tosaden-87638523449c9398-5ac6a2f29b1c.json",
+      "status": 200,
+      "sha256": "5ac6a2f29b1cea89f370580fe7e012a19a694e0319b534a2c7de9a9f5f08309f"
+    },
+    {
+      "station": "宮の奥",
+      "path": "/data/odpt/odpt-tosaden-025ad7952d1c8c36-0745c60bdf82.json",
+      "status": 200,
+      "sha256": "0745c60bdf8204cc293de493f736ae28478324e8368298db0d2db845f1b41a16"
+    },
+    {
+      "station": "咥内",
+      "path": "/data/odpt/odpt-tosaden-5b0199376b99f9bc-8a7c281759eb.json",
+      "status": 200,
+      "sha256": "8a7c281759eb2ad983908f14f62d1236d9774292d195478ef2fdb4cfd730a951"
+    },
+    {
+      "station": "宇治団地前",
+      "path": "/data/odpt/odpt-tosaden-84dafd2f34ec2668-984a4aa92c9d.json",
+      "status": 200,
+      "sha256": "984a4aa92c9d31d8f8ad7b7146d602584249989f6841f8911d4f92d6a4704d68"
+    },
+    {
+      "station": "八代通",
+      "path": "/data/odpt/odpt-tosaden-89f56a67b67403a9-46aaf39a2922.json",
+      "status": 200,
+      "sha256": "46aaf39a2922ca0d69b90a1e943084a0a62bb384c1d903109131abe5d4feff36"
+    },
+    {
+      "station": "中山",
+      "path": "/data/odpt/odpt-tosaden-12436866a8005e61-7c2818889bc9.json",
+      "status": 200,
+      "sha256": "7c2818889bc92bc62d66fb3075b965ebd371139d76ae88b584f7cf4b667ffe20"
+    },
+    {
+      "station": "枝川",
+      "path": "/data/odpt/odpt-tosaden-6fa1b7957aa4757d-c999c9f1cb5c.json",
+      "status": 200,
+      "sha256": "c999c9f1cb5c8f59d8ef93b8a941ad799d6f3ef4a4a3215cc69507f35b5fd6a2"
+    },
+    {
+      "station": "伊野商業前",
+      "path": "/data/odpt/odpt-tosaden-fae171d2bb6d976c-e52dd359fc4b.json",
+      "status": 200,
+      "sha256": "e52dd359fc4b337f5385fb16960b470fc624f52254cf9f31c1c0dd76a8071e59"
+    },
+    {
+      "station": "北内",
+      "path": "/data/odpt/odpt-tosaden-d77be7a8cfc07965-05f640ffa2a4.json",
+      "status": 200,
+      "sha256": "05f640ffa2a4f204be1c3b97aba8ca7f71ad1271eaa0ffe9ea02156938a5e8f1"
+    },
+    {
+      "station": "北山",
+      "path": "/data/odpt/odpt-tosaden-9bb5b3555773b1b2-89645286727c.json",
+      "status": 200,
+      "sha256": "89645286727c6d0fd5230ca969ab49eaa3b52e2abe529ec880b309b6c46b6113"
+    },
+    {
+      "station": "鳴谷",
+      "path": "/data/odpt/odpt-tosaden-4b7cc70a86918638-24fb61ac2d09.json",
+      "status": 200,
+      "sha256": "24fb61ac2d0944866f7f1e1e49e7a66ef119cfaee21232fca6f773b3957575dd"
+    },
+    {
+      "station": "伊野駅前",
+      "path": "/data/odpt/odpt-tosaden-5a6c2e88e0514977-031269846594.json",
+      "status": 200,
+      "sha256": "0312698465947112155d98a75b25067fe92940b1837151d46a5f4026ab0ad15e"
+    },
+    {
+      "station": "桟橋通四丁目",
+      "path": "/data/odpt/odpt-tosaden-3e2fcdd95ea72457-ebc284755f1f.json",
+      "status": 200,
+      "sha256": "ebc284755f1fba5168a7b470c4fb43e99772fd41e5a055e400850173ebd8a689"
+    },
+    {
+      "station": "桟橋通三丁目",
+      "path": "/data/odpt/odpt-tosaden-0e3394dfc0dec376-6107d0a0c05a.json",
+      "status": 200,
+      "sha256": "6107d0a0c05a4af6bbd6a65f3d2805268da00a5a452a2269d8aa0e022567208f"
+    },
+    {
+      "station": "桟橋通二丁目",
+      "path": "/data/odpt/odpt-tosaden-a4e48d0fe83c3531-538d1abdf175.json",
+      "status": 200,
+      "sha256": "538d1abdf175a29acc76387d950c3121e87d9afead906b67613ccffe6be400e1"
+    },
+    {
+      "station": "桟橋通一丁目",
+      "path": "/data/odpt/odpt-tosaden-008fa8d0af14ec7e-47ff2be20a39.json",
+      "status": 200,
+      "sha256": "47ff2be20a398f574abf28bc033b4fbc091242307f9e049cbf60e43de6fa1df0"
+    },
+    {
+      "station": "梅の辻",
+      "path": "/data/odpt/odpt-tosaden-9cf24e6c0d00cac0-cca36a1b87f5.json",
+      "status": 200,
+      "sha256": "cca36a1b87f5d9d18f8a9bdf64a0db86887a942d9b4552d3bd2fc5d2854bc03b"
+    },
+    {
+      "station": "はりまや橋",
+      "path": "/data/odpt/odpt-tosaden-8265741d643c374e-18d8fcafe2c2.json",
+      "status": 200,
+      "sha256": "18d8fcafe2c218913c6c22e39ab7958de23c571fbd686299011a66482ebf89e1"
+    },
+    {
+      "station": "デンテツ・ターミナルビル前",
+      "path": "/data/odpt/odpt-tosaden-7d08ac6d3323194e-2c587ada79cc.json",
+      "status": 200,
+      "sha256": "2c587ada79cc2481a29ee591666192c1837738e9dbfef91e988149f1e9fd0c91"
+    },
+    {
+      "station": "菜園場町",
+      "path": "/data/odpt/odpt-tosaden-8f03a39003d800d3-779ae5e6bcc3.json",
+      "status": 200,
+      "sha256": "779ae5e6bcc36ef162e126d8cb81d9072bbff1bdcfc596cfc1d03d92969fd952"
+    },
+    {
+      "station": "宝永町",
+      "path": "/data/odpt/odpt-tosaden-3a8f6e651cece455-78b5235795f6.json",
+      "status": 200,
+      "sha256": "78b5235795f662370a8dcf4d463fa89862dec84cf2b6171e6788c8799916de32"
+    },
+    {
+      "station": "知寄町一丁目",
+      "path": "/data/odpt/odpt-tosaden-465d4e7fdd1f0b13-f3113bce8ba6.json",
+      "status": 200,
+      "sha256": "f3113bce8ba67d69d89d1b47109399dfc6740833d6292cbac48560b909657d94"
+    },
+    {
+      "station": "知寄町二丁目",
+      "path": "/data/odpt/odpt-tosaden-a553715ee4a61cb6-85580e130cbd.json",
+      "status": 200,
+      "sha256": "85580e130cbd933f97d8cec9a0c69ac6083dadd591370a08a51c5f414d8180b0"
+    },
+    {
+      "station": "堀詰",
+      "path": "/data/odpt/odpt-tosaden-397f6ea31d8abf73-5502321fb5eb.json",
+      "status": 200,
+      "sha256": "5502321fb5eb347c78a1937dd99b5f52b8988c4bc096f32bf3cbe986d6d8aa2d"
+    },
+    {
+      "station": "大橋通",
+      "path": "/data/odpt/odpt-tosaden-da19c19fee9ddb86-ded2974c0449.json",
+      "status": 200,
+      "sha256": "ded2974c0449eee0e2352111f17009803b77c49ee6c2d43bbab4c8fe2143ac15"
+    },
+    {
+      "station": "高知城前",
+      "path": "/data/odpt/odpt-tosaden-a19b52ee5c0eab6f-da9e089a0156.json",
+      "status": 200,
+      "sha256": "da9e089a015628fe8458de1ab29fc2230ade22ea0c2ac52218a1d1c9fa97c0e4"
+    },
+    {
+      "station": "県庁前",
+      "path": "/data/odpt/odpt-tosaden-9192f1b5c182c8e2-2cb410c7c97e.json",
+      "status": 200,
+      "sha256": "2cb410c7c97e709e4e8bebaa31d9c19b6d755db8558414e064be5bc3fd64b113"
+    },
+    {
+      "station": "グランド通",
+      "path": "/data/odpt/odpt-tosaden-cc7c1d282a3e7f95-65f881c0361c.json",
+      "status": 200,
+      "sha256": "65f881c0361c57a0fba9e4cd3dc7b50fcf35c51229697374086220c5cea9c346"
+    },
+    {
+      "station": "枡形",
+      "path": "/data/odpt/odpt-tosaden-897e59a526ab75ed-55bfb61bd1d2.json",
+      "status": 200,
+      "sha256": "55bfb61bd1d2d741a7984cddbbf75afcf3d462509794a7d1752507c20f6a551f"
+    },
+    {
+      "station": "上町一丁目",
+      "path": "/data/odpt/odpt-tosaden-efa4eca7dec50cfa-f916d69844d5.json",
+      "status": 200,
+      "sha256": "f916d69844d54071e058a31e45b2b1a6d2dd630c8a6210cb474eda51ada008cf"
+    },
+    {
+      "station": "上町二丁目",
+      "path": "/data/odpt/odpt-tosaden-84ef7f85fe3f2695-a5c00cc86f9d.json",
+      "status": 200,
+      "sha256": "a5c00cc86f9d3b4130a0b1968d88a8709828e09b77aea618d56fa71d42b93505"
+    },
+    {
+      "station": "上町四丁目",
+      "path": "/data/odpt/odpt-tosaden-ed729dc477f70547-1a2f2cca422a.json",
+      "status": 200,
+      "sha256": "1a2f2cca422a26d34ba22f51e64fa4dda12ed8d12dcccb6a68e985a1c751e9dc"
+    },
+    {
+      "station": "上町五丁目",
+      "path": "/data/odpt/odpt-tosaden-d8ff0fc2a4648045-f48c02327dd0.json",
+      "status": 200,
+      "sha256": "f48c02327dd0b192d1ac2c9ad26c6735d5c7d15c3d9b791121906d3277231e48"
+    },
+    {
+      "station": "旭町一丁目",
+      "path": "/data/odpt/odpt-tosaden-e250ece22694d632-cc144c5efc0e.json",
+      "status": 200,
+      "sha256": "cc144c5efc0e101e9481555532f10581bafc35eaffb97a2856754a95d512f244"
+    },
+    {
+      "station": "旭駅前通",
+      "path": "/data/odpt/odpt-tosaden-7d703f24a4d4eb2e-982302e6662f.json",
+      "status": 200,
+      "sha256": "982302e6662f650ddce79a035c9794f67ecbab13ac4f549fd1dfe97d73e0a35c"
+    },
+    {
+      "station": "旭町三丁目",
+      "path": "/data/odpt/odpt-tosaden-193b0ff055224037-025288db2b3a.json",
+      "status": 200,
+      "sha256": "025288db2b3a179f6a62d0e4cae2df844ab5426c7305e04ffce9bb65eebe30fa"
+    },
+    {
+      "station": "蛍橋",
+      "path": "/data/odpt/odpt-tosaden-0e846863d374089f-6caead021d4e.json",
+      "status": 200,
+      "sha256": "6caead021d4e373033189f080cc2dc98d501c77806773e591e98fe1264c0c8ad"
+    },
+    {
+      "station": "後免町",
+      "path": "/data/odpt/odpt-tosaden-e328b3f887d99fd3-493404d84dad.json",
+      "status": 200,
+      "sha256": "493404d84dad86281d4ac1c17afb48a9c5a0872c7efbbefff4a1c9e7b9e91e14"
+    },
+    {
+      "station": "後免東町",
+      "path": "/data/odpt/odpt-tosaden-85f15a619dbe40bb-eb4cddaf46d1.json",
+      "status": 200,
+      "sha256": "eb4cddaf46d1b061b301388fb733e2ab35ccce4a13bfb71ea084879986bec2c0"
+    },
+    {
+      "station": "後免中町",
+      "path": "/data/odpt/odpt-tosaden-df2df36356215040-3885ac56095d.json",
+      "status": 200,
+      "sha256": "3885ac56095de103e01c216dab7ca7c0e82db3f67a0463cd45d37728588556d9"
+    },
+    {
+      "station": "後免西町",
+      "path": "/data/odpt/odpt-tosaden-ba866fd8ac0d0f48-430190161d09.json",
+      "status": 200,
+      "sha256": "430190161d09fd6fc654cdaef5d39da9110d2e200aba51a04dee4eea0f44d3d1"
+    },
+    {
+      "station": "東工業前",
+      "path": "/data/odpt/odpt-tosaden-48213aef0411fb1c-edc3a124ec9e.json",
+      "status": 200,
+      "sha256": "edc3a124ec9e9aa44316a235b2c7964bba6ea99da384eb46251d6abc6a8fb125"
+    },
+    {
+      "station": "住吉通",
+      "path": "/data/odpt/odpt-tosaden-fab0903cb74db8b0-ee60155a68c1.json",
+      "status": 200,
+      "sha256": "ee60155a68c146527a7d72189c18f52df53bae299c00d0a79e46df49fb59744f"
+    },
+    {
+      "station": "篠原",
+      "path": "/data/odpt/odpt-tosaden-355f8c132592e080-2b9dc71d877e.json",
+      "status": 200,
+      "sha256": "2b9dc71d877e8bf0ee614afe14e83dca624e708e847c8f76ded54d51763a99e1"
+    },
+    {
+      "station": "小篭通",
+      "path": "/data/odpt/odpt-tosaden-f523d166834c991e-5cc5e322e004.json",
+      "status": 200,
+      "sha256": "5cc5e322e00415bbf7c6d0d3f87b80bbf136524f3ebae29f4eaa5d5a6ee61508"
+    },
+    {
+      "station": "長崎",
+      "path": "/data/odpt/odpt-tosaden-30a6679fb2ad0afc-81ffb26a3e1c.json",
+      "status": 200,
+      "sha256": "81ffb26a3e1ca349ea2c1a84ed6469bced4cd31b2be299ccec82e6ba9b41fff4"
+    },
+    {
+      "station": "明見橋",
+      "path": "/data/odpt/odpt-tosaden-dca5f9ee07259184-6257b5f4bafd.json",
+      "status": 200,
+      "sha256": "6257b5f4bafdcedd90342b07093b1d7c84bd252821ba2cfbe3ed34a10ebf0a1e"
+    },
+    {
+      "station": "一条橋",
+      "path": "/data/odpt/odpt-tosaden-d69bf9706c4d95d2-3b2b661d1133.json",
+      "status": 200,
+      "sha256": "3b2b661d1133a58a0f64119e20e949b1c7e90356e7ff0c5f760cc89d3caaa6b5"
+    },
+    {
+      "station": "清和学園前",
+      "path": "/data/odpt/odpt-tosaden-e115623e55145cce-401c69586f38.json",
+      "status": 200,
+      "sha256": "401c69586f38ef2800551589054aa6dc695af4956f796ad3cc57cd9478ad13f8"
+    },
+    {
+      "station": "領石通",
+      "path": "/data/odpt/odpt-tosaden-5c963de8fd579924-da12132bce36.json",
+      "status": 200,
+      "sha256": "da12132bce36571408d56eba56686b095c392555a3fc33deb224efaab9e493fb"
+    },
+    {
+      "station": "北浦",
+      "path": "/data/odpt/odpt-tosaden-fd2a48b1f009a76a-91bd1e00c3e6.json",
+      "status": 200,
+      "sha256": "91bd1e00c3e6185713a4eed42393021e94549b8c951b0b4bf75e3461d5dea548"
+    },
+    {
+      "station": "舟戸",
+      "path": "/data/odpt/odpt-tosaden-dadb7a8819b77d08-9ffeeb42c323.json",
+      "status": 200,
+      "sha256": "9ffeeb42c3234348f7973415a215093c8deffa037d6f35a4dae226aa5d42629d"
+    },
+    {
+      "station": "鹿児",
+      "path": "/data/odpt/odpt-tosaden-9e87ddc3ce7fdd28-647a9f7ade5a.json",
+      "status": 200,
+      "sha256": "647a9f7ade5af6f087a05f02dcd61db33d5ffa516930d1d93cbe18c2ed921d45"
+    },
+    {
+      "station": "田辺島通",
+      "path": "/data/odpt/odpt-tosaden-447d6a423bcc1108-2221a69bb686.json",
+      "status": 200,
+      "sha256": "2221a69bb686585a44005a8d8ddfd8b58db892ba317789a1601668d8d80730ac"
+    },
+    {
+      "station": "東新木",
+      "path": "/data/odpt/odpt-tosaden-449de40f8ec5ced2-ed5143da93a2.json",
+      "status": 200,
+      "sha256": "ed5143da93a290c9fae63efde7f66a369afd6ebb71331adfe65cc9ac49a0558d"
+    },
+    {
+      "station": "新木",
+      "path": "/data/odpt/odpt-tosaden-27044fd143347922-1acbe6a5b276.json",
+      "status": 200,
+      "sha256": "1acbe6a5b276e92bce591b2085a2c0f1e6b55a0fe50b74c35fa18126ff97be8a"
+    },
+    {
+      "station": "介良通",
+      "path": "/data/odpt/odpt-tosaden-32b127d7911968c8-b2c2ecf92296.json",
+      "status": 200,
+      "sha256": "b2c2ecf92296c7c195672cb1c1b1d71350b11bac05b392038d8733fafce9b822"
+    },
+    {
+      "station": "文珠通",
+      "path": "/data/odpt/odpt-tosaden-81a4cf36210c9c5a-170dfa9d2a44.json",
+      "status": 200,
+      "sha256": "170dfa9d2a4474dc0b837cbddd6a785ce6f6e376d7e76903bfc511084ff7b12f"
+    },
+    {
+      "station": "高須",
+      "path": "/data/odpt/odpt-tosaden-2f865c7d80146cd3-204b1d01be2f.json",
+      "status": 200,
+      "sha256": "204b1d01be2fc512716bca608f238ecb322e69a0b3dec8ec549f9c7661b6b723"
+    },
+    {
+      "station": "県立美術館通",
+      "path": "/data/odpt/odpt-tosaden-0a829517adaa9a27-37625e27bab3.json",
+      "status": 200,
+      "sha256": "37625e27bab386557592796095463799eb169b4fb4b3b9d3f7a3e514af98f405"
+    },
+    {
+      "station": "西高須",
+      "path": "/data/odpt/odpt-tosaden-32213874db902607-0f32ce42fa4f.json",
+      "status": 200,
+      "sha256": "0f32ce42fa4f51360055b22c8cec845e8adeed66ba1d70f9c976c171ccb13eab"
+    },
+    {
+      "station": "葛島橋東詰",
+      "path": "/data/odpt/odpt-tosaden-335c54a47e74d085-be029249a3b3.json",
+      "status": 200,
+      "sha256": "be029249a3b326aa35667e9240e8943f01070c67c7de5efad461f49648764ad4"
+    },
+    {
+      "station": "知寄町三丁目",
+      "path": "/data/odpt/odpt-tosaden-5f2750228093eab6-088dcc944dbe.json",
+      "status": 200,
+      "sha256": "088dcc944dbe1bf03c2fe59b933deba4c8b598c90d48b9db2c605356709f90dd"
+    },
+    {
+      "station": "知寄町",
+      "path": "/data/odpt/odpt-tosaden-4f905297856b0f0d-8febdd170413.json",
+      "status": 200,
+      "sha256": "8febdd170413c075d13e1a24219bbace8fe0bfa27deff6792648b62918ea7171"
+    },
+    {
+      "station": "蓮池町通",
+      "path": "/data/odpt/odpt-tosaden-60a1d2c50ca44dac-13aacbb040a9.json",
+      "status": 200,
+      "sha256": "13aacbb040a91d86e688b30ccd3921acc1ea25b7b96ab47b8340a7420d513c68"
+    },
+    {
+      "station": "高知橋",
+      "path": "/data/odpt/odpt-tosaden-acd61cf2b0b563f6-2c407841a515.json",
+      "status": 200,
+      "sha256": "2c407841a515239917e163568811b118612d25ffeb050d47921c60111a5cb7a2"
+    },
+    {
+      "station": "桟橋通五丁目",
+      "path": "/data/odpt/odpt-tosaden-1f89ebecd43aa4b2-87a6d62897a8.json",
+      "status": 200,
+      "sha256": "87a6d62897a8329f0802303a6e16167dbdace0429c1c977f2fbaf735cdf0b3b3"
+    },
+    {
+      "station": "桟橋車庫前",
+      "path": "/data/odpt/odpt-tosaden-a342fb17749fbb99-9e31ef315321.json",
+      "status": 200,
+      "sha256": "9e31ef315321a5839f6e0eae71c2d0b95d63dc4a4a76c397608486cfb330a4c6"
+    },
+    {
+      "station": "伊野",
+      "path": "/data/odpt/odpt-tosaden-02f1c9a8d6701e8e-926e0536c208.json",
+      "status": 200,
+      "sha256": "926e0536c208ccd6fefd2a12695cff9ae6b30cd30281d3bcd3f065a0b04b0a5a"
+    },
+    {
+      "station": "高知駅前",
+      "path": "/data/odpt/odpt-tosaden-20e915c4a17fbd80-30330a00c4d1.json",
+      "status": 200,
+      "sha256": "30330a00c4d19bcbdddfb58b3e47c1b4e55f2e27ece9d176168e30ed73577682"
+    }
+  ],
+  "matchedStationCount": 225
+}
