@@ -7,7 +7,7 @@ test('current position shows remaining stay time, departure deadline and passage
  await page.getByRole('button',{name:'北大路・国際会館方面'}).click();
  await expect(page.locator('.stay-countdown')).toContainText('計算できません');
  await locate(page);await expect(page.locator('.stay-origin')).toHaveText('今の場所にいられる目安');
- await expect(page.locator('.stay-countdown')).toHaveText('あと 4分 00秒');await expect(page.locator('.stay-deadline')).toContainText('14:04:00');
+ await expect(page.locator('.stay-countdown')).toHaveText('あと 4分 00秒');await expect(page.locator('.stay-deadline')).toHaveText('今の場所を出る目安 14:04:00');
  await page.clock.fastForward(10000);await expect(page.locator('.stay-countdown')).toHaveText('あと 3分 50秒');
  await page.screenshot({path:`docs/screenshots/${info.project.name}-stay-time-current.png`,fullPage:true});
  await page.clock.fastForward(230000);await expect(page.locator('.stay-countdown')).toHaveText('出発の目安は今です');

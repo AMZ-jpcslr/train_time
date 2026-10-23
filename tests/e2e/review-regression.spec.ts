@@ -12,7 +12,7 @@ test('first viewport identifies the train, leave deadline and scheduled-only lim
  const summary=page.getByRole('region',{name:'出発判断',exact:true});
  await expect(summary).toContainText('今出川');await expect(summary).toContainText('北大路・国際会館方面');await expect(summary).toContainText('14:08 発');await expect(summary).toContainText('14:04:00');await expect(summary).toContainText('遅延／運休は未反映');
  for(const selector of ['.station-controls','.decision-train','.stay-countdown','.stay-deadline','.decision-constraint']){
-  const box=(await page.locator(selector).boundingBox())!;expect(box.y).toBeGreaterThanOrEqual(0);expect(box.y+box.height).toBeLessThanOrEqual(page.viewportSize()!.height);
+  const box=(await page.locator(selector).boundingBox())!;expect(box.y,`${selector} top`).toBeGreaterThanOrEqual(0);expect(box.y+box.height,`${selector} bottom`).toBeLessThanOrEqual(page.viewportSize()!.height);
  }
  const second=await page.locator('.train-choice').nth(1).locator('time').innerText();
  const next=page.getByRole('button',{name:'一本後を選ぶ',exact:true});await next.focus();await next.press('Enter');
