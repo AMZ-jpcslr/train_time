@@ -100,7 +100,10 @@ test('repeated selection and changing direction during animation finish at the i
 
 test('official JR and Hankyu colors keep readable text and full service names',async({page},info)=>{
  await setup(page,false);
- if(!process.env.INTERACTION_URL)await page.clock.setFixedTime(new Date('2026-10-22T14:00:00+09:00'));
+ // Live API expiry uses the real acquisition clock. A future scenario clock
+ // would correctly reject a cache that is still fresh at the time of this run.
+ const colorClock=process.env.INTERACTION_URL?new Date():new Date('2026-10-22T14:00:00+09:00');
+ await page.clock.setFixedTime(colorClock);await info.attach('color-verification-clock',{body:colorClock.toISOString(),contentType:'text/plain'});
  await chooseStation(page,'jr-osaka');
  for(const color of ['#000000','#FF9900','#0000FF'])await expect(page.locator(`.train-type[data-type-color="${color}"]`).first()).toBeAttached();
  await page.locator('.departure-card:has(.train-choice):has(.train-type[data-type-color="#0000FF"]) .train-choice').first().click();await aligned(page);

@@ -80,6 +80,17 @@ node scripts/test-webkit-compat.mjs <@playwright/test@1.56.1の絶対ディレ�
 
 配信照合対象は `index-lYzND8mg.js`（SHA256 `C5E2D569401BFD78D147C15680C2E713A31FA2E6C97E88FFE760B1DC18D5049B`）と `index-WfTDGNFP.css`（`D8459F8FF1E9EBC7358E8B512D68784BC8DC96B8FA42C0928699053AC80C5BD4`）。公開URLでの照合結果・操作試験・GitHub CIの最終状態は、この変更の完了報告に記載する。
 
+### 公開版の確認
+
+- 実装修正コミット `316d70a7fce9c3fe77556e01ba47643baaab3068` をmainにpush。Vercelのsuccessを確認し、2026-10-23 10:33 JSTに公開HTMLから上記2資産を取得。どちらもHTTP 200、ローカルとのSHA256一致。
+- 公開版Chromium操作：10件成功後、配色試験の時計条件を修正して2件再実行成功。計12ケースを確認。
+- 公開版WebKit操作：12件成功後、配色3件を再実行成功。計15ケースを確認。CDPタッチ非対応3枠はスキップのまま。
+- 公開版journeys：320/360/390px・PCの8件すべて成功。
+- 当初の配色5ケースは、テスト時計14:00が実際のJR応答の失効時刻12:23 JSTより後だったため、アプリが正しく「未取得」にしたことで失敗した。APIはreadyで、実時刻10:35頃には有効だった。計算試験の固定日時は維持し、公開の配色試験だけ実行時刻を採取・固定し、添付 `color-verification-clock` に保存。時刻表応答を改変せず再試験した。
+- スクリーンショット：`docs/screenshots/interactions-20261023/production-*`。同じ640px高での前後比較は `docs/screenshots/mobile-20261023/before-interactions-*` と `after-interactions-*`。
+
+この記録とテスト条件の修正による追加コミットはアプリの配信資産を変更しない。最終HEADのCI状態は完了報告を参照。
+
 ## 人による短いテスト（未実施）
 
 初見3〜5人に説明せず、同じ固定JSTと架空地点を渡す。
