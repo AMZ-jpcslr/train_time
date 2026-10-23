@@ -9,7 +9,7 @@ test('installed PWA keeps checked tables offline, never invents a route and expi
  expect(await page.evaluate(()=>Object.keys(JSON.parse(localStorage.getItem('mania-u:jr-daily:v2')||'{}')))).toContain('2026-10-23');
  // Disable API mocks too: a fulfilled mock must not bypass offline mode.
  api.offline=true;await context.setOffline(true);await page.reload();await previewAt(page,'2026-10-23T14:00');
- await expect(page.locator('.timetable-update')).toContainText('同日の保存データを表示中');await expect(page.getByTestId('data-coverage')).toContainText('2026-10-23');await expect(page.locator('.next-train')).toBeVisible();await expect(page.locator('.following-row')).toHaveCount(5);
+ await expect(page.locator('.timetable-update')).toContainText('同日の保存データを表示中');await expect(page.getByTestId('data-coverage')).toContainText('2026-10-23');await expect(page.locator('.next-train')).toBeVisible();expect(await page.locator('.train-choice').count()).toBeGreaterThan(5);
  await installGps(page,'jr-osaka');await page.getByRole('button',{name:'現在地を更新',exact:true}).click();await expect(page.locator('.route-error')).toContainText('経路取得失敗');await expect(page.locator('.judgment')).toContainText('判定不可');await expect(page.locator('.route-diagram')).toHaveCount(0);
  await chooseStation(page,'kyoto-imadegawa');await expect(page.locator('.next-train')).toBeVisible();await page.getByRole('button',{name:/出典・確認日/}).click();await expect(page.locator('.source-detail')).toContainText('出典照合済');await expect(page.locator('.judgment')).toContainText('判定不可');
  await saveMeasuredPlace(page,'オフラインの登録地点');await expect(page.locator('.judgment')).not.toContainText('判定不可');await chooseStation(page,'jr-osaka');await actualTime(page,'2026-10-22T20:00:00+09:00');

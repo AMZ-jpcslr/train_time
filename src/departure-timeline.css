@@ -1,0 +1,51 @@
+:root{--rail-bg:#111d19;--rail-card:#18271f;--rail-line:#657954;--rail-muted:#c0cfba;--rail-text:#e7efde;--rail-past:#182022;--rail-space:12px}
+.decision-summary{background:var(--rail-bg);padding:20px;overflow:hidden}
+.departure-timeline{min-width:0;color:var(--rail-text)}
+.rail-caption{display:flex;justify-content:space-between;align-items:center;margin-top:12px;color:var(--rail-muted);font-size:12px}.rail-caption b{font:600 22px var(--display-font);color:var(--accent);margin-left:8px}
+.rail-stations{display:grid;grid-template-columns:1fr 1.2fr 1fr;align-items:center;text-align:center;font-size:13px;gap:8px}.rail-stations strong{color:var(--accent);font-size:22px}.rail-stations small{display:block;font-size:10px;font-weight:400;color:var(--rail-muted)}
+.rail-track{position:relative;height:54px;margin:6px 6% 0;border-top:3px solid var(--rail-line);overflow:hidden}.rail-track>i{position:absolute;top:-3px;width:9px;height:9px;border-radius:50%;background:var(--accent);left:0}.rail-track>i:nth-child(2){left:50%}.rail-track>i:nth-child(3){left:calc(100% - 9px)}
+.rail-train{position:absolute;left:calc(50% - 16px);top:6px;width:32px;text-align:center;color:var(--accent);will-change:transform}.rail-train svg{width:32px;height:22px;fill:var(--rail-bg);stroke:currentColor;stroke-width:1.6}.rail-train small{display:block;font:12px var(--display-font)}
+.rail-disclaimer{color:var(--rail-muted);font-size:12px;line-height:1.5;margin:0 0 10px}
+.timeline-toolbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.timeline-toolbar>span{margin-right:auto;color:var(--rail-muted);font-size:12px}.timeline-toolbar button,.timeline-footer button{min-height:44px;font-size:13px;padding:8px 12px;cursor:pointer}.timeline-toolbar button:disabled,.timeline-footer button:disabled{cursor:default}
+.timeline-help{display:flex;justify-content:space-between;gap:8px;color:var(--rail-muted);font-size:12px;margin:10px 0}
+.timeline-strip{display:flex;gap:var(--rail-space);position:relative;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;scrollbar-color:var(--rail-line) var(--rail-bg);padding:4px 2px 14px;scroll-padding-inline:2px}
+.timeline-strip:after{content:'';flex:0 0 calc(100% - min(300px,calc(100% - 22px)) - 12px);pointer-events:none}
+.departure-card{flex:0 0 300px;min-width:0;scroll-snap-align:start;border:1px solid var(--rail-line);border-radius:12px;padding:16px;background:var(--rail-card);display:flex;flex-direction:column;gap:8px;overflow-wrap:anywhere}
+.departure-card.is-selected{border-color:var(--accent);box-shadow:inset 0 3px var(--accent)}.departure-card.is-past{background:var(--rail-past)}
+.card-kicker{display:flex;justify-content:space-between;font-size:12px;color:var(--rail-muted)}.card-kicker b{color:var(--accent)}
+.departure-card .decision-train,.card-train{display:flex;justify-content:space-between;gap:8px;align-items:center;margin:0}.departure-card .decision-train strong,.card-train strong{font:600 34px/1.15 var(--display-font);margin:0}.departure-card .decision-train span,.card-train span{font-size:13px;color:var(--rail-muted)}
+.card-destination{font-size:16px;min-height:26px;line-height:1.5}.card-destination small{display:block;font-size:12px;color:var(--rail-muted)}
+.departure-card .decision-countdown,.card-countdown{font-size:12px;color:var(--rail-muted)}
+.departure-card .judgment,.card-judgment{padding:6px 10px;border-radius:4px;border:1px solid var(--rail-line);margin:0;font-size:14px;min-height:34px}.departure-card .judgment strong{font-size:14px}
+.departure-card .stay-time,.card-stay{padding-top:8px;margin:0;border-top:1px dashed var(--rail-line);flex:1;min-height:125px;line-height:1.5}.departure-card .stay-origin,.card-stay>span{font-size:14px;display:block;color:var(--rail-muted)}.departure-card .stay-countdown,.card-stay>strong{display:block;font-size:21px;line-height:1.4;color:var(--rail-text)}.departure-card .stay-countdown b{font-size:30px}.departure-card .stay-deadline,.card-stay>p{font-size:14px;color:var(--rail-text)}.departure-card .stay-note{font-size:12px}.departure-card .stay-deadline time{font-size:14px}
+.departure-card>button{min-height:44px;width:100%;font-size:14px;margin-top:auto}.departure-card>button[aria-pressed=true]{border-color:var(--accent);color:var(--accent)}
+.timeline-footer{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--rail-muted);gap:8px}.timeline-availability{font-size:13px;color:var(--rail-muted);margin-top:8px}
+.decision-summary .station-controls{padding:0;background:none;border:0}.decision-summary .direction-tabs{margin:10px 0}.decision-summary .decision-station{font-size:12px}.decision-summary .decision-station strong{font-size:12px}.decision-summary .decision-heading{margin-bottom:8px}
+.decision-summary .decision-actions{border-top:1px solid var(--rail-line);padding-top:10px}.decision-location-note{font-size:14px;color:var(--rail-muted);margin-top:8px}
+.board-section .next-train{padding:16px}.board-section .destination-row{margin:10px 0}.board-section .destination-row h2{font-size:22px}.board-section .big-countdown strong{font-size:32px}
+@media(max-width:760px){.decision-summary{padding:12px}.departure-card{flex-basis:min(300px,calc(100% - 22px));padding:12px}.page-heading h1{display:none}.page-heading{justify-content:flex-end;padding:6px 0}.clock>span,.clock small{display:none}.clock strong{font-size:16px}.rail-stations strong{font-size:20px}.timeline-toolbar>span{width:100%}.timeline-help span{display:none}.decision-summary .direction-tabs button{font-size:13px;min-height:44px}.rail-disclaimer{font-size:11px}.decision-summary .decision-heading{margin-bottom:6px}}
+@media(prefers-reduced-motion:reduce){.timeline-strip{scroll-behavior:auto;scroll-snap-type:none}.rail-train{transition:none}}
+.decision-summary .decision-heading a,.decision-summary>.line-info,.decision-summary>.decision-station{display:none}
+.decision-summary .decision-heading h2{font-size:12px;letter-spacing:.12em}
+.decision-summary .station-trigger{padding:6px 12px;min-height:44px}.decision-summary .station-trigger small{display:none}.decision-summary .station-trigger strong{font-size:22px}
+.decision-summary .station-badge{width:40px;height:40px;font-size:18px}.decision-summary .favorite{width:44px;height:44px;min-height:44px;font-size:24px}.decision-summary .station-controls{gap:8px}
+.decision-summary .direction-tabs{gap:6px;margin:8px 0}.decision-summary .direction-tabs button{padding:8px;line-height:1.4;font-size:12px}
+.decision-summary .decision-constraint{font-size:12px;margin:6px 0}.rail-caption{margin-top:4px}.rail-track{height:46px}.rail-stations strong{font-size:18px}.rail-stations small{display:none}.rail-disclaimer{margin-bottom:4px}.timeline-toolbar{margin:8px 0}
+.timeline-note{font-size:12px;color:var(--rail-muted);margin-top:8px}.manual-shortcut{min-height:44px;font-size:14px;margin-top:6px}.decision-summary>.location-actions{display:inline-flex;margin-right:8px}.decision-location-note{font-size:13px}
+.topbar{min-height:58px}.page-heading{padding:8px 0;align-items:center}.page-heading h1{font-size:20px}.page-heading h1 br,.page-heading p,.page-heading .eyebrow{display:none}.clock strong{font-size:20px}.clock small,.clock>span{font-size:11px}
+.departure-card{gap:6px}.card-destination{font-size:14px;min-height:22px}.card-destination small{display:inline;margin-left:6px}.departure-card .stay-origin{line-height:1.4}.departure-card .stay-countdown{margin:0}.departure-card .stay-time{min-height:0}
+@media(max-width:760px){.page-heading{padding:4px 0}.clock strong{font-size:16px}.departure-card .stay-origin,.card-stay>span{font-size:13px}}
+.timeline-next{min-height:44px;padding:6px 12px;font-size:13px}.timeline-help{align-items:center;margin:4px 0}.timeline-help span{display:inline}.timeline-strip{scroll-margin-top:12px}
+/* Functional mobile alternative retained for reproducible development comparison only. */
+.departure-timeline.is-vertical{display:grid;grid-template-columns:68px minmax(0,1fr);column-gap:8px}
+.is-vertical .rail-caption,.is-vertical .rail-disclaimer,.is-vertical .timeline-help,.is-vertical .timeline-toolbar,.is-vertical .timeline-footer,.is-vertical .timeline-availability,.is-vertical .timeline-note{grid-column:1/-1}
+.is-vertical .rail-caption{grid-row:1}.is-vertical .rail-disclaimer{grid-row:2}.is-vertical .timeline-help{grid-row:3}
+.is-vertical .rail-scene{grid-column:1;grid-row:4;position:relative;height:470px}
+.is-vertical .rail-stations{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:space-between;height:100%;font-size:12px;pointer-events:none}
+.is-vertical .rail-stations>*{background:var(--rail-bg);padding:4px 0;width:100%;overflow-wrap:anywhere}.is-vertical .rail-stations strong{font-size:16px}
+.is-vertical .rail-track{position:absolute;inset:22px 0;margin:0;height:auto;border-top:0;border-left:3px solid var(--rail-line);left:32px;overflow:visible}
+.is-vertical .rail-train{left:-16px;top:calc(50% - 18px)}.is-vertical .rail-track>i{display:none}
+.is-vertical .timeline-strip{grid-column:2;grid-row:4;flex-direction:column;height:470px;overflow-y:auto;overflow-x:hidden;overscroll-behavior-y:contain;scroll-snap-type:y proximity;scroll-padding:4px 0;padding:4px 2px}
+.is-vertical .departure-card{flex:0 0 auto;width:100%;min-height:420px;padding:12px}.is-vertical .timeline-strip:after{flex:0 0 34px}
+.is-vertical .departure-card .decision-train,.is-vertical .card-train{flex-wrap:wrap}
+@media(prefers-reduced-motion:reduce){.is-vertical .timeline-strip{scroll-snap-type:none}}

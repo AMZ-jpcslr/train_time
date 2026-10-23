@@ -48,13 +48,13 @@ test('unknown location to measured departure, next train and saved-place reuse',
  await expect(page.locator('.stay-countdown')).toContainText('4分');
  await expect(page.locator('.stay-deadline')).toContainText('14:04:00');
  await screenshot(page,info.project.name,'selected');
- if(!baseline)await inViewport(page,'.decision-actions button');
+ if(!baseline)await inViewport(page,'.timeline-next');
  await page.getByRole('button',{name:'一本後を選ぶ',exact:true}).click();
  await expect(page.locator('.decision-train')).toContainText('14:15 発');
  await expect(page.locator('.stay-countdown')).toContainText('11分');
  await expect(page.locator('.stay-deadline')).toContainText('14:11:00');
  await screenshot(page,info.project.name,'next');
- if(!baseline)for(const selector of ['.decision-station','.decision-train','.stay-countdown','.stay-deadline'])await inViewport(page,selector);
+ if(!baseline)for(const selector of ['.rail-stations','.decision-train','.stay-countdown','.stay-deadline'])await inViewport(page,selector);
  expect(await page.locator('html').evaluate(e=>e.scrollWidth<=e.clientWidth)).toBe(true);
  await page.reload();
  await expect(page.locator('.stay-countdown')).toHaveText('計算できません');

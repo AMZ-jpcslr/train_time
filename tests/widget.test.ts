@@ -1,9 +1,9 @@
 import {describe,it,expect} from 'vitest';
-import {buildWidgetSnapshot,type WidgetInput} from '../src/domain/widget';
+import {buildWidgetSnapshot,widgetDepartureId,type WidgetInput} from '../src/domain/widget';
 import {stations} from '../src/data/stations';
 import municipal from '../src/data/municipal.json';
 import entrances from '../src/data/entrances.json';
-import {selectTable} from '../src/domain/time';
+import {selectTable,upcoming} from '../src/domain/time';
 import type {Timetable} from '../src/domain/types';
 const now=Date.parse('2026-10-22T14:00:00+09:00');
 function fixture():WidgetInput {
@@ -13,6 +13,12 @@ function fixture():WidgetInput {
  return {now,preview:false,station,directionName:station.directions[0].name,table:{...table,checkedAt:new Date(now-60000).toISOString()},settings:{speedKmh:4.8,stationMinutes:3},position,entrance,route:{kind:'route',entranceId:entrance.id,origin:{lat:position.lat,lon:position.lon},distanceMeters:80,roadDistanceMeters:80,durationSeconds:60,snapDistances:[0,0],geometry:[[position.lon,position.lat],[entrance.lon,entrance.lat]],steps:[],fetchedAt:now,provider:'test',cached:false,dataVersion:null}};
 }
 describe('native snapshot boundaries',()=>{
+ it('retains a selected train beyond the fifth and rejects a selection outside the validity window',()=>{
+  const input=fixture(),trains=upcoming(input.table!,'2026-10-22',now,Infinity);
+  input.selectedId=widgetDepartureId(trains[8]);const data=buildWidgetSnapshot(input)!;
+  expect(data.selectedDepartureId).toBe(input.selectedId);expect(data.departures[0].id).toBe(input.selectedId);expect(data.departures).toHaveLength(5);
+  input.selectedId=widgetDepartureId(trains.at(-1)!);expect(buildWidgetSnapshot(input)).toBeNull();
+ });
  it('exports five departures and only a fresh coordinate-free route estimate',()=>{
   const data=buildWidgetSnapshot(fixture())!;expect(data.departures).toHaveLength(5);expect(data.walkMinutes).toBe(1);expect(data.walkingValidUntil).toBe(now+300000);expect(data.timetableValidUntil).toBe(now+6*3600000);
   expect(JSON.stringify(data)).not.toMatch(/"(?:lat|lon|latitude|longitude|bufferMinutes|geometry)"/);expect(data.routingTarget?.stationId).toBe('kobe-gakuentoshi');

@@ -1,8 +1,8 @@
 import {test,expect} from '@playwright/test';
 import {FIXED_TIME,mockRuntime,chooseStation,saveMeasuredPlace,locate,previewAt} from '../fixtures/runtime';
 test.beforeEach(async({page})=>{await page.clock.install({time:new Date(FIXED_TIME.getTime()-60000)});await page.clock.pauseAt(FIXED_TIME);await mockRuntime(page);await page.goto('/');await chooseStation(page,'kyoto-imadegawa');await page.getByRole('button',{name:'北大路・国際会館方面'}).click();});
-test('all five trains show stay time and selection survives the earlier departure',async({page},info)=>{
- await saveMeasuredPlace(page,'休憩場所');const rows=page.locator('.train-choice');await expect(rows).toHaveCount(5);await expect(rows.first().locator('.choice-stay')).toContainText('4分');
+test('more than five trains show stay time and selection survives the earlier departure',async({page},info)=>{
+ await saveMeasuredPlace(page,'休憩場所');const rows=page.locator('.train-choice');expect(await rows.count()).toBeGreaterThan(5);await expect(rows.first().locator('.choice-stay')).toContainText('4分');
  const secondTime=await rows.nth(1).locator('time').innerText();await rows.nth(1).click();await expect(rows.nth(1)).toHaveAttribute('aria-pressed','true');await expect(page.locator('.next-train .destination-row')).toContainText(secondTime);await expect(page.locator('.next-train .pill')).toContainText('次発');
  await page.clock.fastForward(8*60000+1000);await expect(page.locator('.next-train .destination-row')).toContainText(secondTime);await expect(page.locator('.next-train .pill')).toContainText('先発');
  const [h,m]=secondTime.split(':').map(Number);const elapsed=(h*60+m-14*60)*60000+1000-(8*60000+1000);await page.clock.fastForward(elapsed);await expect(page.locator('.selection-notice')).toContainText('予定発車時刻を過ぎた');await expect(page.locator('.next-train .destination-row')).not.toContainText(secondTime);

@@ -11,7 +11,7 @@ test('first viewport identifies the train, leave deadline and scheduled-only lim
  await locate(page);await page.evaluate(()=>window.scrollTo(0,0));
  const summary=page.getByRole('region',{name:'出発判断',exact:true});
  await expect(summary).toContainText('今出川');await expect(summary).toContainText('北大路・国際会館方面');await expect(summary).toContainText('14:08 発');await expect(summary).toContainText('14:04:00');await expect(summary).toContainText('遅延／運休は未反映');
- for(const selector of ['.decision-station','.decision-train','.stay-countdown','.stay-deadline','.decision-constraint']){
+ for(const selector of ['.station-controls','.decision-train','.stay-countdown','.stay-deadline','.decision-constraint']){
   const box=(await page.locator(selector).boundingBox())!;expect(box.y).toBeGreaterThanOrEqual(0);expect(box.y+box.height).toBeLessThanOrEqual(page.viewportSize()!.height);
  }
  const second=await page.locator('.train-choice').nth(1).locator('time').innerText();
@@ -46,7 +46,7 @@ test('key decision text meets normal-text contrast and primary controls have 44p
   const rgb=(text:string)=>text.match(/[\d.]+/g)!.slice(0,3).map(Number);
   const luminance=(text:string)=>rgb(text).map(n=>{n/=255;return n<=.04045?n/12.92:((n+.055)/1.055)**2.4;}).reduce((sum,n,i)=>sum+n*[.2126,.7152,.0722][i],0);
   const background=luminance(getComputedStyle(root).backgroundColor);
-  return ['.decision-station','.decision-countdown','.stay-countdown','.stay-deadline','.decision-constraint'].map(selector=>{
+  return ['.station-controls','.decision-countdown','.stay-countdown','.stay-deadline','.decision-constraint'].map(selector=>{
    const foreground=luminance(getComputedStyle(root.querySelector(selector)!).color);
    return (Math.max(foreground,background)+.05)/(Math.min(foreground,background)+.05);
   });

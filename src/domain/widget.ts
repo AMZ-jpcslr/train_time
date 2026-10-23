@@ -25,7 +25,12 @@ export function buildWidgetSnapshot(input:WidgetInput):WidgetSnapshot|null {
  const ttl=station.id.startsWith('jr-')?6*3600000:30*86400000;
  const timetableValidUntil=Math.min(now+6*3600000,Date.parse(table.checkedAt)+ttl,Date.parse(addDays(day,1)+'T04:00:00+09:00'));
  if(!Number.isFinite(timetableValidUntil)||timetableValidUntil<=now)return null;
- const departures=upcoming(table,day,now).filter(d=>d.epoch<=timetableValidUntil).map(d=>({id:widgetDepartureId(d),departureAt:d.epoch,time:d.time,destination:d.destination,trainType:d.trainType,platform:d.platform}));
+ const candidates=upcoming(table,day,now,Infinity).filter(d=>d.epoch<=timetableValidUntil);
+ const chosen=input.selectedId?candidates.findIndex(d=>widgetDepartureId(d)===input.selectedId):0;
+ // Never silently save a different train when the web timeline reaches beyond five.
+ if(input.selectedId&&chosen<0)return null;
+ const start=chosen>=5?chosen:0;
+ const departures=candidates.slice(start,start+5).map(d=>({id:widgetDepartureId(d),departureAt:d.epoch,time:d.time,destination:d.destination,trainType:d.trainType,platform:d.platform}));
  if(!departures.length)return null;
  let walkMinutes:number|null=null,walkingValidUntil:number|null=null,routeUpdatedAt:number|null=null;
  if(place&&place.stationId===station.id&&Number.isFinite(place.walkMinutes)&&place.walkMinutes>=0&&place.walkMinutes<=240){

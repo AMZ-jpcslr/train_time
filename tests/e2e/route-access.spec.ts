@@ -19,7 +19,7 @@ test('indoor access displays a walking estimate and unverified connections witho
  await expect(page.locator('.walk-summary')).toContainText('約 4分');
  await expect(page.locator('.walk-summary')).toContainText('道路経路 約240m');
  await expect(page.locator('.route-access')).toContainText('出発側 約70m ／ 入口側 約10m');
- await expect(page.locator('.judgment')).toContainText('判定不可');await expect(page.locator('.judgment')).toContainText('接続区間が未確認');
+ await expect(page.locator('.judgment')).toContainText('判定不可');await expect(page.locator('.decision-location-note')).toContainText('接続区間が未確認');
  await expect(page.locator('.route-diagram figcaption')).toContainText('破線');
  const link=page.getByRole('link',{name:'Googleマップで徒歩経路を見る ↗'});
  const url=new URL((await link.getAttribute('href'))!);

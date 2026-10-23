@@ -1,0 +1,2 @@
+import {defineConfig} from '@playwright/test';
+export default defineConfig({testDir:'./tests/layout',outputDir:'test-results/layout',workers:2,use:{baseURL:'http://127.0.0.1:5173',timezoneId:'Asia/Tokyo',deviceScaleFactor:1,trace:'retain-on-failure'},webServer:{command:'npm run dev -- --port 5173',url:'http://127.0.0.1:5173',reuseExistingServer:true},projects:[320,375,390].map(width=>({name:`mobile-${width}`,use:{viewport:{width,height:740}}}))});

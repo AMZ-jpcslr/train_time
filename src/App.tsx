@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import municipal from './data/municipal.json';
 import hankyu from './data/hankyu.json';
 import jr from './data/jr.json';
@@ -12,8 +12,8 @@ import { distanceKm, judge, positionStatus, routeMinutes, type Walking } from '.
 import {useGeolocation} from './useGeolocation';
 import LocationHelp from './LocationHelp';
 import StationPicker from './StationPicker';
-import StayTime from './StayTime';
-import TrainChoices from './TrainChoices';
+import DepartureTimeline from './DepartureTimeline';
+import {serviceTimeline,recommendedTrain} from './domain/timeline';
 import {useTrainSelection,departureRank} from './useTrainSelection';
 import ChoicePicker from './ChoicePicker';
 import InstallApp from './InstallApp';
@@ -63,7 +63,8 @@ export default function App(){
  const fallbackReady=station.id!=='kobe-gakuentoshi'&&availability(selectTable(tables,'kobe-gakuentoshi','east',day),day,now)==='ready';
  useEffect(()=>setChoiceNotice(''),[station.id,direction.id,day,preview]);
  const referenceOnly=state==='unverified'&&table?.verification==='partial';
- const departures=(state==='ready'||referenceOnly)&&table?upcoming(table,day,time):[];
+ const timeline=useMemo(()=>(state==='ready'||referenceOnly)?serviceTimeline(table,day):[],[table,day,state,referenceOnly]);
+ const departures=timeline.filter(train=>train.epoch>time);
  const tomorrowTable=selectTable(tables,station.id,direction.id,addDays(day,1));
  const tomorrow=departures.length===0 && state==='ready' && tomorrowTable && availability(tomorrowTable,addDays(day,1),now)==='ready'?upcoming(tomorrowTable,addDays(day,1),time,1)[0]:undefined;
  const place=stored.places.find(p=>p.id===placeId&&p.stationId===station.id);
@@ -83,6 +84,8 @@ export default function App(){
  useEffect(()=>{if(place?.id)focusDecision();},[place?.id]);
  const judgmentWalk:Walking=state==='ready'?walk:{kind:'unavailable'};
  const firstJudge=first?judge(first.epoch,time,judgmentWalk,stored.settings):null;
+ // Reconsider the initial target when walking conditions change, not on each clock tick.
+ useEffect(()=>{const target=recommendedTrain(timeline,time,judgmentWalk,stored.settings);if(target&&target!==departures[0])selection.select(target);},[walkMinutes,walk.kind,stored.settings.stationMinutes,station.id,direction.id,day,preview,state]);
  const selectTrain=(train:typeof first)=>{
   if(!train)return;
   selection.select(train);setChoiceNotice(`${train.time}発 ${train.destination}行きに変更しました。出発目安を確認してください。`);
@@ -117,17 +120,15 @@ export default function App(){
    {preview&&<div className="alert">時刻指定プレビュー：実時刻ではありません。実データを指定時刻で確認しています。<button onClick={()=>setPreview('')}>現在に戻す</button></div>}
    {savingError&&<div className="alert" role="alert">端末内保存に失敗しました。この画面を閉じると設定が失われる可能性があります。</div>}
    <section className="decision-summary" aria-label="出発判断">
-    <div className="decision-heading"><h2 ref={decisionHeading} tabIndex={-1}>出発判断</h2><a href="#station-controls">駅・方面を変更 ↓</a></div>
+    <div className="decision-heading"><h2 ref={decisionHeading} tabIndex={-1}>出発判断</h2><a href="#walking-settings">徒歩条件 ↓</a></div>
+     <div className="station-controls" id="station-controls"><div className="station-badge">{station.code}</div><StationPicker stations={stations} station={station} onChange={chooseStation}/><button className={'favorite '+(isFavorite?'active':'')} onClick={toggleFavorite} aria-pressed={isFavorite} aria-label="この駅と方面をお気に入り">{isFavorite?'★':'☆'}</button></div>
+     <div className="line-info"><span className="line-dot"/>{station.operator} <span>/</span> {station.line}</div>
+     <div className="direction-tabs" aria-label="方面">{station.directions.map(d=><button key={d.id} className={d.id===direction.id?'selected':''} aria-pressed={d.id===direction.id} onClick={()=>setStored({...stored,directionId:d.id})}>{d.name}<span>↗</span></button>)}</div>
     <p className="decision-station"><strong>{station.name}</strong> · {direction.name}</p>
     <p className="decision-constraint">定刻ベース・遅延／運休は未反映。乗車を保証しません。</p>
-    {first?<><p className="decision-train"><strong>{first.time} 発</strong> {first.trainType??'種別不明'} · {first.destination}行き <span>（{departureRank(selection.index)}）</span></p>
-     <p className="decision-countdown">電車の発車まで {countdown(first.epoch)}{first.platform?` · ${first.platform}番線`:' · 番線未確認'}</p>
-       <div className={'judgment '+firstJudge?.status}><span className="judgment-symbol">{firstJudge?.status==='comfortable'?'✓':firstJudge?.status==='unknown'?'—':'◷'}</span><div><strong>{firstJudge?.label}</strong><p>{referenceOnly?'現行ダイヤ未確認のため、公式時刻表を確認してください。':firstJudge?.slack===null?walking.loading?'現在地から駅入口までの徒歩経路を計算しています。':locationJudgmentMessage:firstJudge&&firstJudge.slack!>=0?`${Math.floor(firstJudge.slack!)}分以内に出発するのが目安です。`:'余裕を持って、後の便をご検討ください。'}</p></div></div>
-       {firstJudge?.status==='unknown'&&locationActions}
-       <StayTime departure={first.epoch} now={time} walk={judgmentWalk} settings={stored.settings} placeName={place?.name} preview={Boolean(preview)}/>
-     <div className="decision-actions"><button onClick={()=>selectTrain(departures[selection.index+1])} disabled={!departures[selection.index+1]}>一本後を選ぶ</button><button onClick={openManual}>実測時間を使う</button><a href="#walking-settings">徒歩条件を確認 ↓</a></div>
-     {!departures[selection.index+1]&&<p className="decision-limit">表示中の候補（最大5本）では最後の便です。</p>}
-    </>:<p className="decision-empty">{state==='ready'?'この運行日の発車は終了しました':availabilityLabels[state]}。<a href="#station-controls">時刻表の状態・次の操作を確認 ↓</a></p>}
+    {firstJudge?.status==='unknown'&&<><p className="decision-location-note">{referenceOnly?'現行ダイヤ未確認のため、公式時刻表を確認してください。':walking.loading?'徒歩経路を計算しています。':locationJudgmentMessage}</p>{locationActions}<button className="manual-shortcut" onClick={openManual}>実測時間を使う</button></>}
+    {timeline.length>0&&<DepartureTimeline trains={timeline} selected={first} now={time} walk={judgmentWalk} settings={stored.settings} station={station} directionId={direction.id} day={day} placeName={place?.name} preview={Boolean(preview)} onSelect={selectTrain}/>}
+    {first?<div className="decision-actions">{firstJudge?.status!=='unknown'&&<button onClick={openManual}>実測時間を使う</button>}<a href="#walking-settings">徒歩条件を確認 ↓</a></div>:<p className="decision-empty">{state==='ready'?'この運行日の発車は終了しました':availabilityLabels[state]}。<a href="#timetable-details">時刻表の状態・次の操作を確認 ↓</a></p>}
    </section>
    <p className="sr-only" role="status">{choiceNotice}</p>
    <section className="location-panel" aria-label="現在地と徒歩検索"><div className="location-heading"><span className="eyebrow">01 / YOUR LOCATION</span><h2>現在地から徒歩時間を計算</h2></div>{!(first&&firstJudge?.status==='unknown')&&locationActions}<p className="location-status" role="status">{locationMessage}</p>
@@ -138,10 +139,7 @@ export default function App(){
    <section className="favorites-section" aria-label="お気に入りの駅と方面"><div><h2>いつもの駅・方面</h2><p>☆で登録して、次回もすぐに。</p></div><div className="favorite-chips">{stored.favorites.length?stored.favorites.map(key=>{const [sid,did]=key.split(':');const s=stations.find(s=>s.id===sid);const d=s?.directions.find(d=>d.id===did);return s&&d?<button key={key} onClick={()=>chooseStation(sid,did)} aria-pressed={favoriteKey===key}><span>★ {s.name}</span><small>{d.name}</small></button>:null;}):<span className="muted">お気に入りはまだありません</span>}</div></section>
    </div>
    <div className="dashboard">
-    <section className="board-section" aria-label="発車案内">
-     <div className="station-controls" id="station-controls"><div className="station-badge">{station.code}</div><StationPicker stations={stations} station={station} onChange={chooseStation}/><button className={'favorite '+(isFavorite?'active':'')} onClick={toggleFavorite} aria-pressed={isFavorite} aria-label="この駅と方面をお気に入り">{isFavorite?'★':'☆'}</button></div>
-     <div className="line-info"><span className="line-dot"/>{station.operator} <span>/</span> {station.line}</div>
-     <div className="direction-tabs" aria-label="方面">{station.directions.map(d=><button key={d.id} className={d.id===direction.id?'selected':''} aria-pressed={d.id===direction.id} onClick={()=>setStored({...stored,directionId:d.id})}>{d.name}<span>↗</span></button>)}</div>
+    <section className="board-section" id="timetable-details" aria-label="発車案内">
      {directionTables.length>0&&<p className="small-note" data-testid="data-coverage">この方面の収録範囲：{[...coverageDates,...coverageDays].join('、')}{coverageDates.length>0?' の運行日限定':''}。{directionTables.some(t=>t.verification==='partial')?'現行適用・検証に未確認事項があります。':''}</p>}
      {timetableFeed.message&&<div className="timetable-update" role="status">{timetableFeed.message}<button disabled={timetableFeed.loading} onClick={timetableFeed.refresh}>日付別時刻表を更新</button></div>}
      {selection.notice&&<p className="selection-notice" role="status">{selection.notice}</p>}
@@ -149,7 +147,7 @@ export default function App(){
       {referenceOnly&&<div className="alert" role="status">現行未確認の参考時刻です。適用ダイヤまたは検証が未確認のため、この時刻表による乗車判断はできません。徒歩経路が取得できても判定不可です。</div>}
       {first?<><div className="next-train"><div className="train-meta"><span className="pill">{departureRank(selection.index)} · 選択中</span><span>{first.trainType??'種別不明'}</span><span className="platform">{first.platform?`${first.platform}番線`:'番線未確認'}</span></div><div className="destination-row"><div><h2>{first.destination}<small>行き</small></h2><p>{first.time} 発</p></div><div className="big-countdown"><span>{referenceOnly?'参考時刻まで':'発車まで'}</span><strong>{countdown(first.epoch).split('分')[0]}<small>{countdown(first.epoch).includes('分')?'分':''}</small></strong>{countdown(first.epoch).includes('分')&&<span className="seconds">{countdown(first.epoch).split('分')[1]}</span>}</div></div>
 
-      </div><TrainChoices trains={departures} selected={first} now={time} walk={judgmentWalk} settings={stored.settings} placeName={place?.name} onSelect={selectTrain} countdown={countdown}/></>:<div className="empty-state"><span className="empty-icon">{icon('train')}</span><h2>{state==='ready'?'この運行日の発車は終了しました':availabilityLabels[state]}</h2><p>{state==='missing'?'この駅・方面・運行日の時刻表はまだ取り込んでいません。':state==='expired'?'取得元の適用期間、またはアプリの30日再確認期限を超えています。':state==='special'?'年末年始などの特別ダイヤを確認する必要があります。':state==='ready'?'終電後です。運行日をまたぐ便は翌日表示で扱います。':'確認できた時刻表が必要です。'}</p>{tomorrow&&<p>次の運行日 {addDays(day,1)} の始発：<b>{tomorrow.time} {tomorrow.destination}行き</b></p>}<a href={station.sourceUrl} target="_blank" rel="noreferrer">公式の駅情報を確認 ↗</a>{state!=='ready'&&fallbackReady&&<button onClick={()=>chooseStation('kobe-gakuentoshi')}>取得済みの学園都市を表示</button>}</div>}
+      </div></>:<div className="empty-state"><span className="empty-icon">{icon('train')}</span><h2>{state==='ready'?'この運行日の発車は終了しました':availabilityLabels[state]}</h2><p>{state==='missing'?'この駅・方面・運行日の時刻表はまだ取り込んでいません。':state==='expired'?'取得元の適用期間、またはアプリの30日再確認期限を超えています。':state==='special'?'年末年始などの特別ダイヤを確認する必要があります。':state==='ready'?'終電後です。運行日をまたぐ便は翌日表示で扱います。':'確認できた時刻表が必要です。'}</p>{tomorrow&&<p>次の運行日 {addDays(day,1)} の始発：<b>{tomorrow.time} {tomorrow.destination}行き</b></p>}<a href={station.sourceUrl} target="_blank" rel="noreferrer">公式の駅情報を確認 ↗</a>{state!=='ready'&&fallbackReady&&<button onClick={()=>chooseStation('kobe-gakuentoshi')}>取得済みの学園都市を表示</button>}</div>}
       <div className="board-footer"><span>◷ 時刻表に基づく予定。遅延・運休は未反映</span><button onClick={()=>setShowSources(!showSources)}>出典・確認日 ↗</button></div>
      </div>
      <p className="disclaimer">判定は目安であり、乗車を保証するものではありません。駆け込み乗車はお控えください。</p>
