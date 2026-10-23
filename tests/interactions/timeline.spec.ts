@@ -23,17 +23,18 @@ async function aligned(page:Page,selector='.departure-card.is-selected'){
 }
 async function sample(page:Page){
  await page.evaluate(()=>{
-  const samples:{x:number;cursor:string;transform:string}[]=[];
+  const samples:{x:number;cursor:string;transform:string;icon:number|null}[]=[];
   Object.assign(window,{__scrollSamples:samples});
   // Start on the actual click, after Playwright's visibility/stability waits.
   document.addEventListener('click',()=>{
    const start=performance.now();
-   function frame(){const strip=document.querySelector('.timeline-strip')!;samples.push({x:strip.scrollLeft,cursor:document.querySelector('.rail-caption b')!.textContent!,transform:(document.querySelector('.rail-train') as HTMLElement)?.style.transform});if(performance.now()-start<3000)requestAnimationFrame(frame);}
+   const epoch=document.querySelector('.departure-card.is-selected')!.getAttribute('data-epoch');
+   function frame(){const strip=document.querySelector('.timeline-strip')!;samples.push({x:strip.scrollLeft,cursor:document.querySelector('.rail-caption b')!.textContent!,transform:(document.querySelector('.rail-train') as HTMLElement)?.style.transform,icon:document.querySelector(`.rail-train[data-epoch="${epoch}"]`)?.getBoundingClientRect().left??null});if(performance.now()-start<3000)requestAnimationFrame(frame);}
    frame();
   },{capture:true,once:true});
  });
 }
-async function samples(page:Page){return page.evaluate(()=>(window as typeof window&{__scrollSamples:{x:number;cursor:string;transform:string}[]}).__scrollSamples);}
+async function samples(page:Page){return page.evaluate(()=>(window as typeof window&{__scrollSamples:{x:number;cursor:string;transform:string;icon:number|null}[]}).__scrollSamples);}
 async function screenshot(page:Page,name:string,project:string){await page.screenshot({path:`docs/screenshots/interactions-20261023/${process.env.INTERACTION_CAPTURE??'local'}-${project}-${name}.png`});}
 
 test('button selection animates the cards and rail together; controls are adjacent and labels fit',async({page},info)=>{
@@ -48,6 +49,8 @@ test('button selection animates the cards and rail together; controls are adjace
  await info.attach('animation-frames',{body:JSON.stringify(frames),contentType:'application/json'});
  expect(end).toBeGreaterThan(start+100);expect(frames.filter(s=>s.x>start+5&&s.x<end-5).length).toBeGreaterThan(1);
  expect(new Set(frames.map(s=>s.cursor)).size).toBeGreaterThan(1);expect(new Set(frames.map(s=>s.transform)).size).toBeGreaterThan(2);
+ // Follow the SAME train: both its card and icon must move left for a later train.
+ expect(frames.some(s=>s.x>start+5&&s.icon!==null&&s.icon<frames[0].icon!-1)).toBe(true);
  const labelFit=await page.locator('.rail-train small').evaluateAll(es=>es.every(e=>{const r=e.getBoundingClientRect(),p=e.closest('.rail-track')!.getBoundingClientRect();return r.bottom<=p.bottom+1&&e.scrollWidth<=e.clientWidth;}));expect(labelFit).toBe(true);
  await screenshot(page,'next',info.project.name);
  await page.getByRole('button',{name:'現在付近へ',exact:true}).click();await aligned(page,'.departure-card:has(.train-choice)');
@@ -60,6 +63,8 @@ test('browser touch swipe moves the timeline without changing the chosen train o
  await setup(page);await aligned(page);const selected=await page.locator('.decision-train').innerText(),deadline=await page.locator('.stay-deadline').innerText();
  const strip=page.locator('.timeline-strip');await strip.scrollIntoViewIfNeeded();const box=(await strip.boundingBox())!,session=await context.newCDPSession(page);
  const start=await strip.evaluate(e=>e.scrollLeft),caption=await page.locator('.rail-caption').innerText();
+ const epoch=await page.locator('.departure-card.is-selected').getAttribute('data-epoch');
+ const icon=page.locator(`.rail-train[data-epoch="${epoch}"]`),iconBefore=(await icon.boundingBox())!.x;
  const y=Math.min(box.y+120,750),right=box.x+box.width-25,left=box.x+25;
  async function swipe(from:number,to:number){
   await session.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:from,y}]});
@@ -67,8 +72,10 @@ test('browser touch swipe moves the timeline without changing the chosen train o
   await session.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});
  }
  await swipe(right,left);await expect.poll(()=>strip.evaluate(e=>e.scrollLeft)).toBeGreaterThan(start+100);
+ await expect.poll(async()=>(await icon.boundingBox())?.x??Infinity).toBeLessThan(iconBefore-10);
  await expect(page.locator('.rail-caption')).not.toHaveText(caption);expect(await page.locator('.decision-train').innerText()).toBe(selected);expect(await page.locator('.stay-deadline').innerText()).toBe(deadline);
- await page.waitForTimeout(700);const after=await strip.evaluate(e=>e.scrollLeft);await swipe(left,right);await expect.poll(()=>strip.evaluate(e=>e.scrollLeft)).toBeLessThan(after-100);
+ await page.waitForTimeout(700);const after=await strip.evaluate(e=>e.scrollLeft),iconAfter=(await icon.boundingBox())!.x;await swipe(left,right);await expect.poll(()=>strip.evaluate(e=>e.scrollLeft)).toBeLessThan(after-100);
+ await expect.poll(async()=>(await icon.boundingBox())?.x??-Infinity).toBeGreaterThan(iconAfter+10);
  await page.getByRole('button',{name:'出発に余裕のある便へ'}).click();await aligned(page);await screenshot(page,'swipe-return',info.project.name);
 });
 

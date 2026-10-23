@@ -83,7 +83,7 @@ export default function DepartureTimeline({trains,selected,now,walk,settings,sta
   <div className="rail-scene" aria-label={`${station.name}の線路概略図。時刻表のイメージで、列車の実位置ではありません。`} role="img">
    <div className="rail-stations"><span>{neighbors.before}</span><strong>{station.name.replace(/^(JR|阪急|阪神)/,'')}<small>監視中の駅</small></strong><span>{neighbors.after}</span></div>
    <div className="rail-track" aria-hidden="true"><i/><i/><i/>
-    {iconTrains.map(({train,index})=><span className="rail-train" key={departureKey(train)} data-epoch={train.epoch} style={{transform:`translate${vertical?'Y':'X'}(${(fractional-index)*96}px)`,'--type-color':trainTypeColor(station.id,train.trainType)??'#727D78'} as CSSProperties}><svg viewBox="0 0 32 22"><rect x="2" y="2" width="28" height="15" rx="3"/><path d="M8 17v3m16-3v3M6 6h7v6H6zm13 0h7v6h-7z"/></svg><small>{train.time}</small></span>)}
+    {iconTrains.map(({train,index})=><span className="rail-train" key={departureKey(train)} data-epoch={train.epoch} style={{transform:`translate${vertical?'Y':'X'}(${(index-fractional)*96}px)`,'--type-color':trainTypeColor(station.id,train.trainType)??'#727D78'} as CSSProperties}><svg viewBox="0 0 32 22"><rect x="2" y="2" width="28" height="15" rx="3"/><path d="M8 17v3m16-3v3M6 6h7v6H6zm13 0h7v6h-7z"/></svg><small>{train.time}</small></span>)}
    </div>
   </div>
   <p className="rail-disclaimer">時刻表の相対表示・実位置ではありません</p>
