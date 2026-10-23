@@ -1,63 +1,68 @@
-import {useEffect,useId,useRef,useState,type CSSProperties,type KeyboardEvent} from 'react';
+import {useEffect,useId,useMemo,useRef,useState,type CSSProperties,type KeyboardEvent} from 'react';
 import type {Station} from './domain/types';
+import {searchStations} from './domain/stationSearch';
+import './station-search.css';
 
-const normalize=(value:string)=>value.normalize('NFKC').toLocaleLowerCase('ja').replace(/\s+/g,'');
-
-/** A modal station chooser: native focus containment, custom visual controls. */
-export default function StationPicker({stations,station,onChange}:{stations:Station[];station:Station;onChange:(id:string)=>void}){
- const dialog=useRef<HTMLDialogElement>(null);
- const trigger=useRef<HTMLButtonElement>(null);
- const list=useRef<HTMLDivElement>(null);
- const closeButton=useRef<HTMLButtonElement>(null);
- const id=useId();
- const [open,setOpen]=useState(false);
- const [query,setQuery]=useState('');
- const [active,setActive]=useState(0);
+export default function StationPicker({stations,station,onChange,favorites,onFavorite}:{
+ stations:Station[];station:Station;onChange:(id:string)=>void;favorites:string[];onFavorite:(id:string)=>void;
+}){
+ const dialog=useRef<HTMLDialogElement>(null),trigger=useRef<HTMLButtonElement>(null),input=useRef<HTMLInputElement>(null);
+ const list=useRef<HTMLDivElement>(null),id=useId();
+ const [open,setOpen]=useState(false),[query,setQuery]=useState(''),[limit,setLimit]=useState(40);
  const [anchor,setAnchor]=useState({left:0,top:0});
- const filtered=stations.filter(s=>normalize(s.name+s.operator+s.line+s.code).includes(normalize(query)));
- const activeStation=filtered[active];
- useEffect(()=>{if(open)list.current?.focus();},[open]);
- useEffect(()=>{if(open&&activeStation)document.getElementById(`${id}-${activeStation.id}`)?.scrollIntoView({block:'nearest'});},[open,activeStation,id]);
+ const searching=Boolean(query.trim());
+ const matches=useMemo(()=>searching?searchStations(stations,query):stations.filter(s=>s.id===station.id||favorites.includes(s.id)),[stations,query,searching,favorites,station.id]);
+ const results=matches.slice(0,limit);
+ useEffect(()=>{if(open)input.current?.focus();},[open]);
  const show=()=>{
   const rect=trigger.current!.getBoundingClientRect();
-  setAnchor({left:Math.max(16,Math.min(rect.left,window.innerWidth-456)),top:Math.max(16,Math.min(rect.bottom+10,window.innerHeight-420))});
-  setQuery('');setActive(stations.findIndex(s=>s.id===station.id));setOpen(true);dialog.current?.showModal();
+  setAnchor({left:Math.max(16,Math.min(rect.left,window.innerWidth-456)),top:Math.max(16,Math.min(rect.bottom+10,window.innerHeight-540))});
+  setQuery('');setLimit(40);setOpen(true);dialog.current?.showModal();
  };
  const close=()=>{dialog.current?.close();setOpen(false);};
- const select=(next:Station)=>{onChange(next.id);close();};
- const move=(event:KeyboardEvent)=>{
-  if(!filtered.length)return;
-  let index=active;
-  if(event.key==='ArrowDown')index=(active+1)%filtered.length;
-  else if(event.key==='ArrowUp')index=(active-1+filtered.length)%filtered.length;
-  else if(event.key==='Home')index=0;
-  else if(event.key==='End')index=filtered.length-1;
-  else if(event.key==='Enter'||event.key===' '){event.preventDefault();if(activeStation)select(activeStation);return;}
+ const focusResult=(index:number)=>list.current?.querySelectorAll<HTMLButtonElement>('button[data-station-id]')[index]?.focus();
+ const move=(event:KeyboardEvent,index:number)=>{
+  let next=index;
+  if(event.key==='ArrowDown')next=(index+1)%results.length;
+  else if(event.key==='ArrowUp')next=(index-1+results.length)%results.length;
+  else if(event.key==='Home')next=0;
+  else if(event.key==='End')next=results.length-1;
   else return;
-  event.preventDefault();setActive(index);
+  event.preventDefault();focusResult(next);
  };
  return <div className="station-picker">
   <button ref={trigger} className="station-trigger" aria-label="乗車駅" aria-haspopup="dialog" aria-expanded={open} aria-controls={id} onClick={show}>
-   <span><small>乗車駅を選択</small><strong>{station.name}</strong></span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+   <span><small>駅を検索・選択</small><strong>{station.name}</strong></span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
   </button>
-  <dialog id={id} ref={dialog} className="station-dialog" aria-labelledby={`${id}-title`} onClose={()=>setOpen(false)} onCancel={()=>setOpen(false)} onKeyDown={event=>{
-   if(event.key!=='Tab')return;
-   if(!event.shiftKey&&event.target===list.current){event.preventDefault();closeButton.current?.focus();}
-   if(event.shiftKey&&event.target===closeButton.current){event.preventDefault();list.current?.focus();}
-  }} style={{'--picker-left':`${anchor.left}px`,'--picker-top':`${anchor.top}px`} as CSSProperties} onClick={event=>{
-   if(event.target!==event.currentTarget)return;
-   const rect=event.currentTarget.getBoundingClientRect();if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)close();
-  }}>
-   <div className="station-dialog-header"><div><span className="eyebrow">SELECT YOUR STATION</span><h2 id={`${id}-title`}>乗車駅を選ぶ</h2></div><button ref={closeButton} className="station-close" aria-label="駅選択を閉じる" onClick={close}>×</button></div>
-   <label className="station-search"><span>駅名・路線で検索</span><input type="search" value={query} placeholder="茨木、神戸線、阪急…" autoComplete="off" onChange={event=>{setQuery(event.target.value);setActive(0);}} onKeyDown={event=>{if(event.key==='ArrowDown'){event.preventDefault();list.current?.focus();}}}/></label>
-   <p className="station-result-count" role="status">{filtered.length}駅{query?'が見つかりました':'から選択'}<span>事業者・路線を確認して選べます</span></p>
-   <div className="station-options" role="listbox" aria-label="対象駅" ref={list} tabIndex={0} aria-activedescendant={activeStation?`${id}-${activeStation.id}`:undefined} onKeyDown={move}>
-    {filtered.map((s,index)=><button type="button" role="option" tabIndex={-1} id={`${id}-${s.id}`} data-station-id={s.id} aria-selected={s.id===station.id} key={s.id} className={`station-option ${active===index?'is-focused':''}`} onFocus={()=>setActive(index)} onClick={()=>select(s)}>
-     <span className="option-code" aria-hidden="true">{s.code}</span><span className="option-text"><strong>{s.name}</strong><small>{s.operator} · {s.line}</small></span><span className="option-check" aria-hidden="true">{s.id===station.id?'✓':'↗'}</span>
-    </button>)}
-    {filtered.length===0&&<p className="station-no-results">一致する駅がありません。駅名や路線名を変えて検索してください。</p>}
+  <dialog id={id} ref={dialog} className="station-dialog" aria-labelledby={`${id}-title`} onClose={()=>{setOpen(false);trigger.current?.focus();}} onCancel={()=>setOpen(false)}
+   onKeyDown={event=>{
+    if(event.key!=='Tab')return;
+    const controls=Array.from(event.currentTarget.querySelectorAll<HTMLElement>('button:not(:disabled),input')).filter(el=>el.getClientRects().length>0);
+    const first=controls[0],last=controls.at(-1);
+    if(event.shiftKey&&event.target===first){event.preventDefault();last?.focus();}
+    else if(!event.shiftKey&&event.target===last){event.preventDefault();first?.focus();}
+   }}
+   style={{'--picker-left':`${anchor.left}px`,'--picker-top':`${anchor.top}px`} as CSSProperties} onClick={event=>{
+    if(event.target!==event.currentTarget)return;
+    const rect=event.currentTarget.getBoundingClientRect();if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)close();
+   }}>
+   <div className="station-dialog-header"><div><span className="eyebrow">FIND YOUR STATION</span><h2 id={`${id}-title`}>乗車駅を選ぶ</h2></div><button className="station-close" aria-label="駅選択を閉じる" onClick={close}>×</button></div>
+   <label className="station-search"><span>駅名・路線で検索</span><input ref={input} type="search" value={query} placeholder="駅名・路線・事業者・地域" autoComplete="off" onChange={event=>{setQuery(event.target.value);setLimit(40);}} onKeyDown={event=>{if(event.key==='ArrowDown'&&results.length){event.preventDefault();focusResult(0);}}}/></label>
+   <p className="station-result-count" role="status">{searching?`${matches.length}件が見つかりました`:'選択中・お気に入りの駅'}<span>{stations.length}駅・路線から検索</span></p>
+   <div className="station-options" ref={list}>
+    {!searching&&<p className="station-search-hint">駅名などを入力して検索。☆で駅を変更せずに登録できます。</p>}
+    <ul className="station-search-results" aria-label="駅の検索結果">
+     {results.map((s,index)=><li key={s.id} className="station-search-row">
+      <button type="button" data-station-id={s.id} aria-label={`${s.name}（${s.operator}・${s.line}）を選択`} aria-current={s.id===station.id?'true':undefined} className="station-option" onKeyDown={event=>move(event,index)} onClick={()=>{onChange(s.id);close();}}>
+       <span className="option-code" aria-hidden="true">{s.code}</span><span className="option-text"><strong>{s.name}</strong><small>{s.operator} · {s.line}</small>{s.region&&<small>{s.region}</small>}</span>
+      </button>
+      <button type="button" className="station-result-favorite" aria-label={`${s.name}（${s.line}）をお気に入り${favorites.includes(s.id)?'から解除':'に登録'}`} aria-pressed={favorites.includes(s.id)} onClick={()=>onFavorite(s.id)}>{favorites.includes(s.id)?'★':'☆'}</button>
+     </li>)}
+    </ul>
+    {searching&&matches.length===0&&<p className="station-no-results">一致する駅がありません。駅名や路線名を変えて検索してください。未対応の事業者は「対応路線とデータ」で確認できます。</p>}
+    {matches.length>limit&&<button className="station-more" onClick={()=>setLimit(n=>n+40)}>さらに40件を表示（{limit} / {matches.length}件）</button>}
    </div>
-   <p className="station-dialog-footnote">現在地の近くの駅は「駅までの道のり」に表示します。</p>
+   <p className="station-dialog-footnote">同じ駅名でも事業者・路線ごとに表示。☆はこの端末に保存します。</p>
   </dialog>
  </div>;
 }

@@ -7,7 +7,7 @@ export interface Timetable {
   serviceDates?: string[]; excludedDates?: string[];
   verification: 'verified' | 'partial' | 'unverified'; notes: string[];
 }
-export interface Station { id: string; name: string; operator: string; line: string; code: string; lat: number; lon: number; directions: { id: string; name: string }[]; sourceUrl: string }
+export interface Station { id: string; name: string; operator: string; line: string; code: string; lat: number; lon: number; directions: { id: string; name: string }[]; sourceUrl: string; aliases?:string[]; region?:string; timetablePath?:string }
 export interface SavedPlace { id: string; name: string; stationId: string; entrance: string; walkMinutes: number }
 export interface Position { lat: number; lon: number; accuracy: number; timestamp: number }
 export interface Entrance {id:string;stationId:string;name:string;lat:number;lon:number;sourceUrl:string;checkedAt:string;note?:string}

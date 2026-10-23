@@ -5,8 +5,8 @@ export function tokyoDate(time: number): string { return new Date(time + 9*60*MI
 export function addDays(date: string, days: number): string { return new Date(Date.parse(date+'T00:00:00+09:00')+days*86400000+9*60*MINUTE).toISOString().slice(0,10); }
 export function serviceDate(now: number): string { return tokyoDate(now-4*60*MINUTE); }
 export function timeMinutes(time: string): number {
-  if (!/^(?:[01]\d|2[0-7]):[0-5]\d$/.test(time)) throw new Error(`Invalid service time: ${time}`);
-  const [h,m] = time.split(':').map(Number); return h*60+m;
+  if (!/^(?:[01]\d|2[0-7]):[0-5]\d(?::[0-5]\d)?$/.test(time)) throw new Error(`Invalid service time: ${time}`);
+  const [h,m,s=0] = time.split(':').map(Number); return h*60+m+s/60;
 }
 export function departureEpoch(day: string, time: string): number { return Date.parse(day+'T00:00:00+09:00')+timeMinutes(time)*MINUTE; }
 export function dayType(date: string): 'weekday' | 'saturday' | 'holiday' | null {

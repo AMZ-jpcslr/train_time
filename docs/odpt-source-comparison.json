@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "operator": "東京都交通局",
+      "date": "2026-10-23",
+      "sourceDepartures": 58525,
+      "importedDepartures": 58525,
+      "difference": 0
+    },
+    {
+      "operator": "東京都交通局",
+      "date": "2026-10-24",
+      "sourceDepartures": 51036,
+      "importedDepartures": 51036,
+      "difference": 0
+    },
+    {
+      "operator": "東京都交通局",
+      "date": "2026-10-25",
+      "sourceDepartures": 50468,
+      "importedDepartures": 50468,
+      "difference": 0
+    },
+    {
+      "operator": "東京都交通局",
+      "date": "2026-11-03",
+      "sourceDepartures": 50468,
+      "importedDepartures": 50468,
+      "difference": 0
+    },
+    {
+      "operator": "東京都交通局",
+      "date": "2026-12-31",
+      "sourceDepartures": 58525,
+      "importedDepartures": 58525,
+      "difference": 0
+    },
+    {
+      "operator": "東京都交通局",
+      "date": "2027-01-01",
+      "sourceDepartures": 50468,
+      "importedDepartures": 50468,
+      "difference": 0
+    },
+    {
+      "operator": "東京都交通局",
+      "date": "2027-03-12",
+      "sourceDepartures": 58525,
+      "importedDepartures": 58525,
+      "difference": 0
+    },
+    {
+      "operator": "とさでん交通",
+      "date": "2026-10-23",
+      "sourceDepartures": 13755,
+      "importedDepartures": 13755,
+      "difference": 0
+    },
+    {
+      "operator": "とさでん交通",
+      "date": "2026-10-24",
+      "sourceDepartures": 12706,
+      "importedDepartures": 12706,
+      "difference": 0
+    },
+    {
+      "operator": "とさでん交通",
+      "date": "2026-10-25",
+      "sourceDepartures": 12706,
+      "importedDepartures": 12706,
+      "difference": 0
+    },
+    {
+      "operator": "とさでん交通",
+      "date": "2026-11-03",
+      "sourceDepartures": 12706,
+      "importedDepartures": 12706,
+      "difference": 0
+    },
+    {
+      "operator": "とさでん交通",
+      "date": "2026-12-31",
+      "sourceDepartures": 12706,
+      "importedDepartures": 12706,
+      "difference": 0
+    },
+    {
+      "operator": "とさでん交通",
+      "date": "2027-01-01",
+      "sourceDepartures": 12706,
+      "importedDepartures": 12706,
+      "difference": 0
+    },
+    {
+      "operator": "とさでん交通",
+      "date": "2027-04-30",
+      "sourceDepartures": 13755,
+      "importedDepartures": 13755,
+      "difference": 0
+    }
+  ],
+  "ambiguousDepartureTables": [],
+  "stationCount": 225
+}

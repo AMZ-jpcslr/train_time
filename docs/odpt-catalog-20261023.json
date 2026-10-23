@@ -1,0 +1,1674 @@
+{
+  "checkedDate": "2026-10-23",
+  "railwayDatasetCount": 129,
+  "datasets": [
+    {
+      "title": "とさでん交通 路面電車 / Tosaden Traffic Streetcar",
+      "url": "https://ckan.odpt.org/dataset/tosaden_traffic_streetcar",
+      "status": "GTFSを取り込み済み",
+      "resources": [
+        {
+          "name": "とさでん交通 路面電車-20260801 / Tosaden Traffic...GTFS/GTFS-JP",
+          "url": "https://api-public.odpt.org/api/v4/files/odpt/TosadenTraffic/Streetcar.zip?date=20260801",
+          "page": "https://ckan.odpt.org/dataset/tosaden_traffic_streetcar/resource/5a457076-fda6-4e15-99c9-12cb37e0c759"
+        },
+        {
+          "name": "とさでん交通 路面電車-20260722 / Tosaden Traffic...GTFS/GTFS-JP",
+          "url": "https://api-public.odpt.org/api/v4/files/odpt/TosadenTraffic/Streetcar.zip?date=20260722",
+          "page": "https://ckan.odpt.org/dataset/tosaden_traffic_streetcar/resource/631d5824-7332-41d8-812d-cdb3d9c2bf15"
+        }
+      ]
+    },
+    {
+      "title": "東京都交通局 鉄道関連情報 / Train information of Bureau of Transportation, Tokyo Metropol...",
+      "url": "https://ckan.odpt.org/dataset/train-toei",
+      "status": "GTFSを取り込み済み",
+      "resources": [
+        {
+          "name": "鉄道関連情報 / Train informationGTFS/GTFS-JP",
+          "url": "https://api-public.odpt.org/api/v4/files/Toei/data/Toei-Train-GTFS.zip",
+          "page": "https://ckan.odpt.org/dataset/train-toei/resource/35b68908-4558-47ae-bfa5-867e58544a1a"
+        },
+        {
+          "name": "鉄道関連情報(GTFS-Pathways) / Train informationGTFS/GTFS-JP",
+          "url": "https://api-public.odpt.org/api/v4/files/Toei/data/Toei-Train-GTFS-Pathway.zip",
+          "page": "https://ckan.odpt.org/dataset/train-toei/resource/b1019650-4cf5-4f2f-b2c6-87156825e365"
+        }
+      ]
+    },
+    {
+      "title": "京王電鉄 列車ロケーション情報 / Train location information of Keio",
+      "url": "https://ckan.odpt.org/dataset/keio__r_train_location",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "京王電鉄 列車ロケーション情報 / Train location information of KeioJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:Train?odpt:operator=odpt.Operator:Keio&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/keio__r_train_location/resource/4537b413-b389-46bc-bb53-61d0bdd8fba6"
+        }
+      ]
+    },
+    {
+      "title": "京王電鉄 鉄道関連リアルタイム情報 / Train realtime information of Keio",
+      "url": "https://ckan.odpt.org/dataset/r_train_gtfs_rt-odpt_train-keio",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "鉄道関連リアルタイム情報(Alert) / Train realtime informationProtocol Buffers",
+          "url": "https://api-challenge.odpt.org/api/v4/gtfs/realtime/keio_odpt_train_alert?acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/r_train_gtfs_rt-odpt_train-keio/resource/6d5311b2-ca49-4619-9638-deeb98319073"
+        },
+        {
+          "name": "鉄道関連リアルタイム情報(VehiclePosition) / Train realtime...Protocol Buffers",
+          "url": "https://api-challenge.odpt.org/api/v4/gtfs/realtime/keio_odpt_train_vehicle?acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/r_train_gtfs_rt-odpt_train-keio/resource/b0da2f93-e8d4-430f-9e64-6b285923c3bc"
+        },
+        {
+          "name": "鉄道関連リアルタイム情報(TripUpdate) / Train realtime informationProtocol Buffers",
+          "url": "https://api-challenge.odpt.org/api/v4/gtfs/realtime/keio_odpt_train_trip_update?acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/r_train_gtfs_rt-odpt_train-keio/resource/6d9d2a9e-37db-4ff6-8676-072453a457e7"
+        }
+      ]
+    },
+    {
+      "title": "函館市電 / Hakodate City Tram",
+      "url": "https://ckan.odpt.org/dataset/hakodate_city_alllines",
+      "status": "変換検証済み・一般公開前の事業者承認が必要",
+      "resources": [
+        {
+          "name": "函館市電-20260815 / Hakodate City Tram-20260815GTFS/GTFS-JP",
+          "url": "https://api-public.odpt.org/api/v4/files/odpt/HakodateCity/Alllines.zip?date=20260815",
+          "page": "https://ckan.odpt.org/dataset/hakodate_city_alllines/resource/06f185f3-46a4-4454-8caa-a251073a02d6"
+        }
+      ]
+    },
+    {
+      "title": "JR東日本 駅情報 / Station information of JR East",
+      "url": "https://ckan.odpt.org/dataset/jreast__r_station",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "駅情報 / Station informationJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:Station?odpt:operator=odpt.Operator:JR-East&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/jreast__r_station/resource/6556197d-8368-443a-9225-ed79d17c42d0"
+        }
+      ]
+    },
+    {
+      "title": "JR東日本 鉄道関連リアルタイム情報 / Train realtime information of JR East",
+      "url": "https://ckan.odpt.org/dataset/odpt_jreast_tokyo_area",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "JR東日本 鉄道関連リアルタイム情報 / Train realtime...Protocol Buffers",
+          "url": "https://api-challenge.odpt.org/api/v4/gtfs/realtime/jreast_odpt_train_vehicle?acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/odpt_jreast_tokyo_area/resource/57b9db0e-6a52-43cb-b16e-cdd174407ffe"
+        },
+        {
+          "name": "JR東日本 鉄道関連リアルタイム情報 / Train realtime...Protocol Buffers",
+          "url": "https://api-challenge.odpt.org/api/v4/gtfs/realtime/jreast_odpt_train_trip_update?acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/odpt_jreast_tokyo_area/resource/51ead9cd-f124-46c2-86ef-e1d1f442e4ca"
+        }
+      ]
+    },
+    {
+      "title": "JR東日本 列車時刻表 / Train timetable of JR East",
+      "url": "https://ckan.odpt.org/dataset/jreast__r_train_timetable",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "JR東日本 列車時刻表 / Train timetable of JR EastJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:TrainTimetable?odpt:operator=odpt.Operator:JR-East&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/jreast__r_train_timetable/resource/5df12c9e-c840-4d5f-8222-05be1d7a8a18"
+        }
+      ]
+    },
+    {
+      "title": "JR東日本 路線系統情報 / Route information of JR East",
+      "url": "https://ckan.odpt.org/dataset/jreast__r_route",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "JR東日本 路線系統情報 / Route information of JR EastJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:Railway?odpt:operator=odpt.Operator:JR-East&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/jreast__r_route/resource/f34feb93-f4f4-41dc-a816-18a20be525bc"
+        }
+      ]
+    },
+    {
+      "title": "JR東日本 乗降者数情報 / Passenger survey of JR East",
+      "url": "https://ckan.odpt.org/dataset/jreast__r_passenger_survey",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "JR東日本 乗降者数情報 / Passenger survey of JR EastJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:PassengerSurvey?odpt:operator=odpt.Operator:JR-East&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/jreast__r_passenger_survey/resource/d7f9e00b-936a-49b5-b6fd-2fc62f9c4a66"
+        }
+      ]
+    },
+    {
+      "title": "JR東日本 列車ロケーション情報 / Train location information of JR East",
+      "url": "https://ckan.odpt.org/dataset/jreast__r_train_location",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "JR東日本 列車ロケーション情報 / Train location information...JSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:Train?odpt:operator=odpt.Operator:JR-East&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/jreast__r_train_location/resource/e1f98dc5-94f1-4f3b-9b52-993c1b01ba94"
+        }
+      ]
+    },
+    {
+      "title": "JR東日本 鉄道関連情報 / Train information of JR East",
+      "url": "https://ckan.odpt.org/dataset/jreast_tokyo_area",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "JR東日本 鉄道関連情報 / Train information of JR EastGTFS/GTFS-JP",
+          "url": "https://api-challenge.odpt.org/api/v4/files/JR-East/data/JR-East-Train-GTFS.zip?acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/jreast_tokyo_area/resource/a6f842e9-e053-4be5-a926-87d0b49753d3"
+        }
+      ]
+    },
+    {
+      "title": "JR東日本 駅時刻表 / Station timetable of JR East",
+      "url": "https://ckan.odpt.org/dataset/jreast__r_station_timetable",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "JR東日本 駅時刻表 / Station timetable of JR EastJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:StationTimetable?odpt:operator=odpt.Operator:JR-East&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/jreast__r_station_timetable/resource/a9f2e0cf-94fc-4610-9fdb-1cfc0a52d4cd"
+        }
+      ]
+    },
+    {
+      "title": "小田急電鉄 駅情報 / Station information of Odakyu",
+      "url": "https://ckan.odpt.org/dataset/odakyu__r_station",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "駅情報 / Station informationJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:Station?odpt:operator=odpt.Operator:Odakyu&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/odakyu__r_station/resource/0a039c35-ee65-4f1f-8ad6-4ce4eebafe36"
+        }
+      ]
+    },
+    {
+      "title": "小田急電鉄 路線系統情報 / Route information of Odakyu",
+      "url": "https://ckan.odpt.org/dataset/odakyu__r_route",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "路線系統情報 / Route informationJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:Railway?odpt:operator=odpt.Operator:Odakyu&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/odakyu__r_route/resource/bce89716-0ebf-446d-9381-454705f6c569"
+        }
+      ]
+    },
+    {
+      "title": "小田急電鉄 駅時刻表 / Station timetable of Odakyu",
+      "url": "https://ckan.odpt.org/dataset/odakyu__r_station_timetable",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "駅時刻表 / Station timetableJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:StationTimetable?odpt:operator=odpt.Operator:Odakyu&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/odakyu__r_station_timetable/resource/3cccb762-f23d-48cf-8e98-26d98c7bbee9"
+        }
+      ]
+    },
+    {
+      "title": "小田急電鉄 乗降者数情報 / Passenger survey of Odakyu",
+      "url": "https://ckan.odpt.org/dataset/odakyu__r_passenger_survey",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "乗降者数情報 / Passenger surveyJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:PassengerSurvey?odpt:operator=odpt.Operator:Odakyu&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/odakyu__r_passenger_survey/resource/37fa8301-895d-4cc1-b7cc-5490ca435949"
+        }
+      ]
+    },
+    {
+      "title": "京急電鉄 駅情報 / Station information of Keikyu",
+      "url": "https://ckan.odpt.org/dataset/keikyu__r_station",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "駅情報 / Station informationJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:Station?odpt:operator=odpt.Operator:Keikyu&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/keikyu__r_station/resource/ad3bc483-bcfa-4ba2-b01a-0196f0394417"
+        }
+      ]
+    },
+    {
+      "title": "京急電鉄 運行情報 / Train status information of Keikyu",
+      "url": "https://ckan.odpt.org/dataset/keikyu__r_train_status",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "運行情報 / Train status informationJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:TrainInformation?odpt:operator=odpt.Operator:Keikyu&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/keikyu__r_train_status/resource/cdb5d613-393f-4edb-9cb9-f19cd12abdc7"
+        }
+      ]
+    },
+    {
+      "title": "京急電鉄 路線系統情報 / Route information of Keikyu",
+      "url": "https://ckan.odpt.org/dataset/keikyu__r_route",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "路線系統情報 / Route informationJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:Railway?odpt:operator=odpt.Operator:Keikyu&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/keikyu__r_route/resource/9c0f6166-6145-4d51-9e1e-119b5731e649"
+        }
+      ]
+    },
+    {
+      "title": "京急電鉄 列車ロケーション情報 / Train location information of Keikyu",
+      "url": "https://ckan.odpt.org/dataset/keikyu__r_train_location",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "列車ロケーション情報 / Train location informationJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:Train?odpt:operator=odpt.Operator:Keikyu&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/keikyu__r_train_location/resource/00362d12-0547-47ef-b798-b18cc18fcf1c"
+        }
+      ]
+    },
+    {
+      "title": "京急電鉄 乗降者数情報 / Passenger survey of Keikyu",
+      "url": "https://ckan.odpt.org/dataset/keikyu__r_passenger_survey",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "乗降者数情報 / Passenger surveyJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:PassengerSurvey?odpt:operator=odpt.Operator:Keikyu&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/keikyu__r_passenger_survey/resource/8123b3ad-d99e-4244-935c-f5ad5e2c9037"
+        }
+      ]
+    },
+    {
+      "title": "京急電鉄 駅時刻表 / Station timetable of Keikyu",
+      "url": "https://ckan.odpt.org/dataset/keikyu__r_station_timetable",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "駅時刻表 / Station timetableJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:StationTimetable?odpt:operator=odpt.Operator:Keikyu&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/keikyu__r_station_timetable/resource/7791ab19-370d-445a-b333-5c37459fbe02"
+        }
+      ]
+    },
+    {
+      "title": "京急電鉄 運賃情報 / Fare information of Keikyu",
+      "url": "https://ckan.odpt.org/dataset/keikyu__r_fare",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "運賃情報 / Fare informationJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:RailwayFare?odpt:operator=odpt.Operator:Keikyu&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/keikyu__r_fare/resource/da5e22be-26f2-428c-9376-19b9885b1337"
+        }
+      ]
+    },
+    {
+      "title": "相模鉄道 列車時刻表 / Train timetable of Sotetsu",
+      "url": "https://ckan.odpt.org/dataset/sotetsu__r_train_timetable",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "相模鉄道 列車時刻表 / Train timetable of SotetsuJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:TrainTimetable?odpt:operator=odpt.Operator:Sotetsu&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/sotetsu__r_train_timetable/resource/0026ac3e-26b5-461b-90ca-051be1035713"
+        }
+      ]
+    },
+    {
+      "title": "相模鉄道 駅情報 / Station information of Sotetsu",
+      "url": "https://ckan.odpt.org/dataset/sotetsu__r_station",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "相模鉄道 駅情報 / Station information of SotetsuJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:Station?odpt:operator=odpt.Operator:Sotetsu&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/sotetsu__r_station/resource/aeda76b6-ea1b-41c8-93a1-95d7dcf01456"
+        }
+      ]
+    },
+    {
+      "title": "相模鉄道 路線系統情報 / Route information of Sotetsu",
+      "url": "https://ckan.odpt.org/dataset/sotetsu__r_route",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "相模鉄道 路線系統情報 / Route information of SotetsuJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:Railway?odpt:operator=odpt.Operator:Sotetsu&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/sotetsu__r_route/resource/deed9179-70a4-41ba-b5e4-b9c4840c30a4"
+        }
+      ]
+    },
+    {
+      "title": "相模鉄道 運賃情報 / Fare information of Sotetsu",
+      "url": "https://ckan.odpt.org/dataset/sotetsu__r_fare",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "相模鉄道 運賃情報 / Fare information of SotetsuJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:RailwayFare?odpt:operator=odpt.Operator:Sotetsu&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/sotetsu__r_fare/resource/63722650-6320-49e8-bd32-1e56ea1229c1"
+        }
+      ]
+    },
+    {
+      "title": "相模鉄道 駅時刻表 / Station timetable of Sotetsu",
+      "url": "https://ckan.odpt.org/dataset/sotetsu__r_station_timetable",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "相模鉄道 駅時刻表 / Station timetable of SotetsuJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:StationTimetable?odpt:operator=odpt.Operator:Sotetsu&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/sotetsu__r_station_timetable/resource/04f670be-056b-41bf-903a-d448723791b6"
+        }
+      ]
+    },
+    {
+      "title": "相模鉄道 乗降者数情報 / Passenger survey of Sotetsu",
+      "url": "https://ckan.odpt.org/dataset/sotetsu__r_passenger_survey",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "相模鉄道 乗降者数情報 / Passenger survey of SotetsuJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:PassengerSurvey?odpt:operator=odpt.Operator:Sotetsu&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/sotetsu__r_passenger_survey/resource/17f009da-3128-4868-9c6b-4413596c9755"
+        }
+      ]
+    },
+    {
+      "title": "相模鉄道 鉄道関連情報 / Train information of Sotetsu",
+      "url": "https://ckan.odpt.org/dataset/sotetsu_train",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "鉄道関連情報 / Train informationGTFS/GTFS-JP",
+          "url": "https://api-challenge.odpt.org/api/v4/files/Sotetsu/data/Sotetsu-Train-GTFS.zip?acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/sotetsu_train/resource/7a45fbbd-a903-406f-954c-91445927deb0"
+        }
+      ]
+    },
+    {
+      "title": "京都市営地下鉄 / Kyoto City Subway",
+      "url": "https://ckan.odpt.org/dataset/kyoto_municipal_transportation_kyoto_city_subway_gtfs",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "京都市営地下鉄-20260703 / Kyoto City Subway　-20260703GTFS/GTFS-JP",
+          "url": "https://api.odpt.org/api/v4/files/odpt/KyotoMunicipalTransportation/Kyoto_City_Subway_GTFS.zip?date=20260703&acl:consumerKey=[アクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/kyoto_municipal_transportation_kyoto_city_subway_gtfs/resource/e5ad5273-fd1f-4c80-b5c8-cdfcde2c4bd8"
+        }
+      ]
+    },
+    {
+      "title": "京王電鉄 鉄道関連情報 / Train information of Keio",
+      "url": "https://ckan.odpt.org/dataset/keio_train",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "鉄道関連情報 / Train informationGTFS/GTFS-JP",
+          "url": "https://api-challenge.odpt.org/api/v4/files/Keio/data/Keio-Train-GTFS.zip?acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/keio_train/resource/2f1beecf-54f7-4c1f-8735-fdce2a18ed6e"
+        }
+      ]
+    },
+    {
+      "title": "京王電鉄 運賃情報 / Fare information of Keio",
+      "url": "https://ckan.odpt.org/dataset/keio__r_fare",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "運賃情報 / Fare informationJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:RailwayFare?odpt:operator=odpt.Operator:Keio&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/keio__r_fare/resource/4d3fa94f-b8da-49eb-9baa-b2de9e53a617"
+        }
+      ]
+    },
+    {
+      "title": "京王電鉄 乗降者数情報 / Passenger survey of Keio",
+      "url": "https://ckan.odpt.org/dataset/keio__r_passenger_survey",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "乗降者数情報 / Passenger surveyJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:PassengerSurvey?odpt:operator=odpt.Operator:Keio&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/keio__r_passenger_survey/resource/ad2b494a-68ef-4863-b5a1-acbce04e0c30"
+        }
+      ]
+    },
+    {
+      "title": "京王電鉄 列車時刻表 / Train timetable of Keio",
+      "url": "https://ckan.odpt.org/dataset/keio__r_train_timetable",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "列車時刻表 / Train timetableJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:TrainTimetable?odpt:operator=odpt.Operator:Keio&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/keio__r_train_timetable/resource/389db6dc-d53b-4740-a1ab-b4cdb522c50e"
+        }
+      ]
+    },
+    {
+      "title": "京王電鉄 駅情報 / Station information of Keio",
+      "url": "https://ckan.odpt.org/dataset/keio__r_station",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "駅情報 / Station informationJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:Station?odpt:operator=odpt.Operator:Keio&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/keio__r_station/resource/d397f5a9-71d1-49f4-adcc-79623355d549"
+        }
+      ]
+    },
+    {
+      "title": "京王電鉄 駅時刻表 / Station timetable of Keio",
+      "url": "https://ckan.odpt.org/dataset/keio__r_station_timetable",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "駅時刻表 / Station timetableJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:StationTimetable?odpt:operator=odpt.Operator:Keio&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/keio__r_station_timetable/resource/c813ad89-e0fc-4ba8-9f1e-0c321d55ce19"
+        }
+      ]
+    },
+    {
+      "title": "京王電鉄 路線系統情報 / Route information of Keio",
+      "url": "https://ckan.odpt.org/dataset/keio__r_route",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "路線系統情報 / Route informationJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:Railway?odpt:operator=odpt.Operator:Keio&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/keio__r_route/resource/3c223703-58a1-4584-a7c3-aaa8b76695a9"
+        }
+      ]
+    },
+    {
+      "title": "東武鉄道 駅情報 / Station information of Tobu",
+      "url": "https://ckan.odpt.org/dataset/tobu__r_station",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "駅情報 / Station informationJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:Station?odpt:operator=odpt.Operator:Tobu&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/tobu__r_station/resource/768e9231-0e5c-477a-8bfc-031824648cf2"
+        }
+      ]
+    },
+    {
+      "title": "東武鉄道 路線系統情報 / Route information of Tobu",
+      "url": "https://ckan.odpt.org/dataset/tobu__r_route",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "路線系統情報 / Route informationJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:Railway?odpt:operator=odpt.Operator:Tobu&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/tobu__r_route/resource/8aa7ad2e-1856-4415-ae63-463a14b82556"
+        }
+      ]
+    },
+    {
+      "title": "東武鉄道 運賃情報 / Fare information of Tobu",
+      "url": "https://ckan.odpt.org/dataset/tobu__r_fare",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "運賃情報 / Fare informationJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:RailwayFare?odpt:operator=odpt.Operator:Tobu&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/tobu__r_fare/resource/c5ea3fbb-bd10-45c9-b062-908d30dff9bf"
+        }
+      ]
+    },
+    {
+      "title": "東武鉄道 乗降者数情報 / Passenger survey of Tobu",
+      "url": "https://ckan.odpt.org/dataset/tobu__r_passenger_survey",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "乗降者数情報 / Passenger surveyJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:PassengerSurvey?odpt:operator=odpt.Operator:Tobu&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/tobu__r_passenger_survey/resource/2cad3b8c-8481-45f3-ac30-c338a14787c9"
+        }
+      ]
+    },
+    {
+      "title": "東武鉄道 列車時刻表 / Train timetable of Tobu",
+      "url": "https://ckan.odpt.org/dataset/tobu__r_train_timetable",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "列車時刻表 / Train timetableJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:TrainTimetable?odpt:operator=odpt.Operator:Tobu&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/tobu__r_train_timetable/resource/a36fdf4e-877f-4b9c-a966-c0ecf6ed6c8d"
+        }
+      ]
+    },
+    {
+      "title": "東武鉄道 駅時刻表 / Station timetable of Tobu",
+      "url": "https://ckan.odpt.org/dataset/tobu__r_station_timetable",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "駅時刻表 / Station timetableJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:StationTimetable?odpt:operator=odpt.Operator:Tobu&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/tobu__r_station_timetable/resource/0d16d012-3b85-4b32-826a-dd82ae6f0879"
+        }
+      ]
+    },
+    {
+      "title": "東武鉄道 鉄道関連情報 / Train information of Tobu",
+      "url": "https://ckan.odpt.org/dataset/tobu_train",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "鉄道関連情報 / Train informationGTFS/GTFS-JP",
+          "url": "https://api-challenge.odpt.org/api/v4/files/Tobu/data/Tobu-Train-GTFS.zip?acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/tobu_train/resource/444851f8-a7b8-43ba-a17d-6d3ce8035006"
+        }
+      ]
+    },
+    {
+      "title": "東武鉄道 列車ロケーション情報 / Train location information of Tobu",
+      "url": "https://ckan.odpt.org/dataset/tobu__r_train_location",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "東武鉄道 列車ロケーション情報 / Train location information of TobuJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:Train?odpt:operator=odpt.Operator:Tobu&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/tobu__r_train_location/resource/86a63309-62c4-4927-9403-eae5878969ea"
+        }
+      ]
+    },
+    {
+      "title": "東武鉄道 鉄道関連リアルタイム情報 / Train realtime information of Tobu",
+      "url": "https://ckan.odpt.org/dataset/r_train_gtfs_rt-odpt_train-tobu",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "鉄道関連リアルタイム情報(Alert) / Train realtime informationProtocol Buffers",
+          "url": "https://api-challenge.odpt.org/api/v4/gtfs/realtime/tobu_odpt_train_alert?acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/r_train_gtfs_rt-odpt_train-tobu/resource/e0ef4ff3-a813-41c4-bef2-343982a8c402"
+        },
+        {
+          "name": "鉄道関連リアルタイム情報(VehiclePosition) / Train realtime...Protocol Buffers",
+          "url": "https://api-challenge.odpt.org/api/v4/gtfs/realtime/tobu_odpt_train_vehicle?acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/r_train_gtfs_rt-odpt_train-tobu/resource/6f1c92dd-697e-41ff-8c8d-fc277aeea681"
+        },
+        {
+          "name": "鉄道関連リアルタイム情報(TripUpdate) / Train realtime informationProtocol Buffers",
+          "url": "https://api-challenge.odpt.org/api/v4/gtfs/realtime/tobu_odpt_train_trip_update?acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/r_train_gtfs_rt-odpt_train-tobu/resource/ba8b6bde-6a2a-4ccd-9081-d98acc69fd85"
+        }
+      ]
+    },
+    {
+      "title": "西武鉄道 駅情報 / Station information of Seibu",
+      "url": "https://ckan.odpt.org/dataset/seibu__r_station",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "駅情報 / Station informationJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:Station?odpt:operator=odpt.Operator:Seibu&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/seibu__r_station/resource/8046667c-569b-4b53-bcea-365b99bdec24"
+        }
+      ]
+    },
+    {
+      "title": "西武鉄道 路線系統情報 / Route information of Seibu",
+      "url": "https://ckan.odpt.org/dataset/seibu__r_route",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "路線系統情報 / Route informationJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:Railway?odpt:operator=odpt.Operator:Seibu&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/seibu__r_route/resource/532eb12e-c78e-41f8-8baa-578c70b1206f"
+        }
+      ]
+    },
+    {
+      "title": "西武鉄道 運賃情報 / Fare information of Seibu",
+      "url": "https://ckan.odpt.org/dataset/seibu__r_fare",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "運賃情報 / Fare informationJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:RailwayFare?odpt:operator=odpt.Operator:Seibu&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/seibu__r_fare/resource/b21346a0-8c90-47c1-9c9f-73ea91f64473"
+        }
+      ]
+    },
+    {
+      "title": "西武鉄道 駅時刻表 / Station timetable of Seibu",
+      "url": "https://ckan.odpt.org/dataset/seibu__r_station_timetable",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "駅時刻表 / Station timetableJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:StationTimetable?odpt:operator=odpt.Operator:Seibu&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/seibu__r_station_timetable/resource/a5d1fcbf-5c95-4b81-ac24-66a9ed3b0a10"
+        }
+      ]
+    },
+    {
+      "title": "西武鉄道 乗降者数情報 / Passenger survey of Seibu",
+      "url": "https://ckan.odpt.org/dataset/seibu__r_passenger_survey",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "乗降者数情報 / Passenger surveyJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:PassengerSurvey?odpt:operator=odpt.Operator:Seibu&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/seibu__r_passenger_survey/resource/d2234bf0-7af4-4f6c-83a0-dbca2e8a5c13"
+        }
+      ]
+    },
+    {
+      "title": "西武鉄道 運行情報 / Train status information of Seibu",
+      "url": "https://ckan.odpt.org/dataset/seibu__r_train_status",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "運行情報 / Train status informationJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:TrainInformation?odpt:operator=odpt.Operator:Seibu&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/seibu__r_train_status/resource/bd128e82-02b1-433c-ab39-102df4e118c6"
+        }
+      ]
+    },
+    {
+      "title": "JR東日本アイステイションズ 鉄道関連リアルタイム情報 / Train realtime information by JR East i-Stations",
+      "url": "https://ckan.odpt.org/dataset/r_train_gtfs_rt-odpt_train-jre-is",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "鉄道関連リアルタイム情報(Alert) / Train realtime informationProtocol Buffers",
+          "url": "https://api-challenge.odpt.org/api/v4/gtfs/realtime/jreis_odpt_train_alert?acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/r_train_gtfs_rt-odpt_train-jre-is/resource/acac6c8c-8690-4353-85fe-6b36d46480d7"
+        }
+      ]
+    },
+    {
+      "title": "JR東日本アイステイションズ 運行情報 / Train status information by JR East i-Stations",
+      "url": "https://ckan.odpt.org/dataset/jr-train-status-information-by-jr-east-i-stations",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "JR東日本アイステイションズ 運行情報 / Train status information...JSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:TrainInformation?odpt:operator=odpt.Operator:jre-is&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/jr-train-status-information-by-jr-east-i-stations/resource/6bbee0a9-4c4a-4a16-91c8-cb27fc100582"
+        }
+      ]
+    },
+    {
+      "title": "京王電鉄 運行情報 / Train status information of Keio",
+      "url": "https://ckan.odpt.org/dataset/keio__r_train_status",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "運行情報 / Train status informationJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:TrainInformation?odpt:operator=odpt.Operator:Keio&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/keio__r_train_status/resource/e4e13301-7e02-4181-a196-509b7266f9c8"
+        }
+      ]
+    },
+    {
+      "title": "東武鉄道 運行情報 / Train status information of Tobu",
+      "url": "https://ckan.odpt.org/dataset/tobu__r_train_status",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "運行情報 / Train status informationJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:TrainInformation?odpt:operator=odpt.Operator:Tobu&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/tobu__r_train_status/resource/143fdb44-ba92-4775-97a7-c56138cf4796"
+        }
+      ]
+    },
+    {
+      "title": "東急電鉄 駅情報 / Station information of Tokyu",
+      "url": "https://ckan.odpt.org/dataset/tokyu__r_station",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "駅情報 / Station informationJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:Station?odpt:operator=odpt.Operator:Tokyu&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/tokyu__r_station/resource/bd79e0fe-5b4a-4f6b-90db-ec01b4bd00ed"
+        }
+      ]
+    },
+    {
+      "title": "東急電鉄 路線系統情報 / Route information of Tokyu",
+      "url": "https://ckan.odpt.org/dataset/tokyu__r_route",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "路線系統情報 / Route informationJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:Railway?odpt:operator=odpt.Operator:Tokyu&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/tokyu__r_route/resource/8eb7e248-87b6-4e0d-8a60-066a5a305bca"
+        }
+      ]
+    },
+    {
+      "title": "ゆりかもめ 駅情報 / Station information of Yurikamome",
+      "url": "https://ckan.odpt.org/dataset/r_station-yurikamome",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "駅情報 / Station informationJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:Station?odpt:operator=odpt.Operator:Yurikamome&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_station-yurikamome/resource/8815e3f7-0ec7-4f8c-b5c8-e406e3354419"
+        }
+      ]
+    },
+    {
+      "title": "ゆりかもめ 駅時刻表 / Station timetable of Yurikamome",
+      "url": "https://ckan.odpt.org/dataset/r_station_timetable-yurikamome",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "駅時刻表 / Station timetableJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:StationTimetable?odpt:operator=odpt.Operator:Yurikamome&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_station_timetable-yurikamome/resource/d83a1b77-6d9f-494e-b63c-be082fea6c56"
+        }
+      ]
+    },
+    {
+      "title": "東京都交通局 乗降者数情報 / Passenger survey of Bureau of Transportation, Tokyo Metropoli...",
+      "url": "https://ckan.odpt.org/dataset/r_passenger_survey-toei",
+      "status": "時刻表以外・または他形式と重複",
+      "resources": [
+        {
+          "name": "乗降者数情報 / Passenger surveyJSON",
+          "url": "https://api-public.odpt.org/api/v4/odpt:PassengerSurvey?odpt:operator=odpt.Operator:Toei",
+          "page": "https://ckan.odpt.org/dataset/r_passenger_survey-toei/resource/399dc822-f1b6-492b-abe0-d3802dc32284"
+        }
+      ]
+    },
+    {
+      "title": "東京都交通局 運行情報 / Train status information of Bureau of Transportation, Tokyo Met...",
+      "url": "https://ckan.odpt.org/dataset/r_train_status-toei",
+      "status": "時刻表以外・または他形式と重複",
+      "resources": [
+        {
+          "name": "運行情報 / Train status informationJSON",
+          "url": "https://api-public.odpt.org/api/v4/odpt:TrainInformation?odpt:operator=odpt.Operator:Toei",
+          "page": "https://ckan.odpt.org/dataset/r_train_status-toei/resource/9fd75237-6524-4037-ad3b-8e037e601188"
+        }
+      ]
+    },
+    {
+      "title": "首都圏新都市鉄道（つくばエクスプレス） 路線系統情報 / Route information of Metropolitan Intercity Railway",
+      "url": "https://ckan.odpt.org/dataset/r_route-mir",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "路線系統情報 / Route informationJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:Railway?odpt:operator=odpt.Operator:MIR&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_route-mir/resource/127e3695-9c1f-4aa2-a875-e827078c8c66"
+        }
+      ]
+    },
+    {
+      "title": "首都圏新都市鉄道（つくばエクスプレス） 列車時刻表 / Train timetable of Metropolitan Intercity Railway",
+      "url": "https://ckan.odpt.org/dataset/r_train_timetable-mir",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "列車時刻表 / Train timetableJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:TrainTimetable?odpt:operator=odpt.Operator:MIR&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_train_timetable-mir/resource/827ecc7d-d48f-47cf-954e-3149b3fb579c"
+        }
+      ]
+    },
+    {
+      "title": "東京メトロ 乗降者数情報 / Passenger survey of Tokyo Metro",
+      "url": "https://ckan.odpt.org/dataset/r_passenger_survey-tokyometro",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "乗降者数情報 / Passenger surveyJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:PassengerSurvey?odpt:operator=odpt.Operator:TokyoMetro&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_passenger_survey-tokyometro/resource/e7ac30bb-8461-44e2-aef2-f75a394979bd"
+        }
+      ]
+    },
+    {
+      "title": "首都圏新都市鉄道（つくばエクスプレス） 駅情報 / Station information of Metropolitan Intercity Railway",
+      "url": "https://ckan.odpt.org/dataset/r_station-mir",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "駅情報 / Station informationJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:Station?odpt:operator=odpt.Operator:MIR&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_station-mir/resource/758a05d3-8b82-48e5-bd3c-68420d4f5fac"
+        }
+      ]
+    },
+    {
+      "title": "多摩都市モノレール 駅情報 / Station information of Tokyo Tama Intercity Monorail",
+      "url": "https://ckan.odpt.org/dataset/r_station-tamamonorail",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "駅情報 / Station informationJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:Station?odpt:operator=odpt.Operator:TamaMonorail&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_station-tamamonorail/resource/2119b68a-c9fb-4410-9a45-e231325b4007"
+        }
+      ]
+    },
+    {
+      "title": "東急電鉄 駅時刻表 / Station timetable of Tokyu",
+      "url": "https://ckan.odpt.org/dataset/tokyu__r_station_timetable",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "駅時刻表 / Station timetableJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:StationTimetable?odpt:operator=odpt.Operator:Tokyu&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/tokyu__r_station_timetable/resource/33d2e1c9-30d8-4c4e-b261-577648cd8d66"
+        }
+      ]
+    },
+    {
+      "title": "東急電鉄 乗降者数情報 / Passenger survey of Tokyu",
+      "url": "https://ckan.odpt.org/dataset/tokyu__r_passenger_survey",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "乗降者数情報 / Passenger surveyJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:PassengerSurvey?odpt:operator=odpt.Operator:Tokyu&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/tokyu__r_passenger_survey/resource/b3eec794-8699-4400-a306-b16c040f92fa"
+        }
+      ]
+    },
+    {
+      "title": "東急電鉄 運賃情報 / Fare information of Tokyu",
+      "url": "https://ckan.odpt.org/dataset/tokyu__r_fare",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "運賃情報 / Fare informationJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:RailwayFare?odpt:operator=odpt.Operator:Tokyu&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/tokyu__r_fare/resource/2f4c8969-766b-45a1-b91c-c99cad206c82"
+        }
+      ]
+    },
+    {
+      "title": "東急電鉄 運行情報 / Train status information of Tokyu",
+      "url": "https://ckan.odpt.org/dataset/tokyu__r_train_status",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "運行情報 / Train status informationJSON",
+          "url": "https://api-challenge.odpt.org/api/v4/odpt:TrainInformation?odpt:operator=odpt.Operator:Tokyu&acl:consumerKey=[Access_Token_for_Challenge2026]",
+          "page": "https://ckan.odpt.org/dataset/tokyu__r_train_status/resource/3540ba10-f8af-475b-a833-3e9d1b43537b"
+        }
+      ]
+    },
+    {
+      "title": "横浜市営地下鉄 / Yokohama Municipal Subway",
+      "url": "https://ckan.odpt.org/dataset/yokohama_municipal_train",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "横浜市営地下鉄-20251226 / Yokohama Municipal Subway-20251226GTFS/GTFS-JP",
+          "url": "https://api.odpt.org/api/v4/files/odpt/YokohamaMunicipal/Train.zip?date=20251226&acl:consumerKey=[アクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/yokohama_municipal_train/resource/27ed8a34-c89f-4c5c-98af-5950f04183e2"
+        },
+        {
+          "name": "横浜市営地下鉄-20251101 / Yokohama Municipal Subway-20251101GTFS/GTFS-JP",
+          "url": "https://api.odpt.org/api/v4/files/odpt/YokohamaMunicipal/Train.zip?date=20251101&acl:consumerKey=[アクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/yokohama_municipal_train/resource/6e4a9f99-e230-43b3-9fbc-6c6e85b8c679"
+        },
+        {
+          "name": "横浜市営地下鉄-20241227 / Yokohama Municipal Subway-20241227GTFS/GTFS-JP",
+          "url": "https://api.odpt.org/api/v4/files/odpt/YokohamaMunicipal/Train.zip?date=20241227&acl:consumerKey=[アクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/yokohama_municipal_train/resource/a8d08ebe-f07e-4783-a190-39cdba90ca04"
+        },
+        {
+          "name": "横浜市営地下鉄-20240101 / Yokohama Municipal Subway-20240101GTFS/GTFS-JP",
+          "url": "https://api.odpt.org/api/v4/files/odpt/YokohamaMunicipal/Train.zip?date=20240101&acl:consumerKey=[アクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/yokohama_municipal_train/resource/8f35c330-ea8b-4fba-bb48-307861b96083"
+        },
+        {
+          "name": "横浜市営地下鉄-20230318 / Yokohama Municipal Subway-20230318GTFS/GTFS-JP",
+          "url": "https://api.odpt.org/api/v4/files/odpt/YokohamaMunicipal/Train.zip?date=20230318&acl:consumerKey=[アクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/yokohama_municipal_train/resource/db746b88-d774-4f0b-a922-5cf254fb92f6"
+        },
+        {
+          "name": "横浜市営地下鉄-20220101 / Yokohama Municipal Subway-20220101GTFS/GTFS-JP",
+          "url": "https://api.odpt.org/api/v4/files/odpt/YokohamaMunicipal/Train.zip?date=20220101&acl:consumerKey=[アクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/yokohama_municipal_train/resource/6655c341-8745-4b2b-b953-7370f76b86c7"
+        }
+      ]
+    },
+    {
+      "title": "横浜市交通局 路線系統情報 / Route information of Transportation Bureau, City of Yokohama",
+      "url": "https://ckan.odpt.org/dataset/r_route-yokohamamunicipal",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "路線系統情報 / Route informationJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:Railway?odpt:operator=odpt.Operator:YokohamaMunicipal&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_route-yokohamamunicipal/resource/a1587556-12eb-4e1a-949c-98399d6f01fb"
+        }
+      ]
+    },
+    {
+      "title": "横浜市交通局 駅情報 / Station information of Transportation Bureau, City of Yokohama",
+      "url": "https://ckan.odpt.org/dataset/r_station-yokohamamunicipal",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "駅情報 / Station informationJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:Station?odpt:operator=odpt.Operator:YokohamaMunicipal&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_station-yokohamamunicipal/resource/b8d7eb1f-ad24-4220-a8ff-d148a2bdcfb3"
+        }
+      ]
+    },
+    {
+      "title": "横浜市交通局 運賃情報 / Fare information of Transportation Bureau, City of Yokohama",
+      "url": "https://ckan.odpt.org/dataset/r_fare-yokohamamunicipal",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "運賃情報 / Fare informationJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:RailwayFare?odpt:operator=odpt.Operator:YokohamaMunicipal&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_fare-yokohamamunicipal/resource/896cac3f-8b92-4679-af15-931567621487"
+        }
+      ]
+    },
+    {
+      "title": "横浜市交通局 乗降者数情報 / Passenger survey of Transportation Bureau, City of Yokohama",
+      "url": "https://ckan.odpt.org/dataset/r_passenger_survey-yokohamamunicipal",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "乗降者数情報 / Passenger surveyJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:PassengerSurvey?odpt:operator=odpt.Operator:YokohamaMunicipal&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_passenger_survey-yokohamamunicipal/resource/50295fa7-4958-48cb-81f6-d85b03bc642b"
+        }
+      ]
+    },
+    {
+      "title": "横浜市交通局 運行情報 / Train status information of Transportation Bureau, City of Yoko...",
+      "url": "https://ckan.odpt.org/dataset/r_train_status-yokohamamunicipal",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "運行情報 / Train status informationJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:TrainInformation?odpt:operator=odpt.Operator:YokohamaMunicipal&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_train_status-yokohamamunicipal/resource/fefff3d6-9aba-44bb-9ea1-ab845288d26c"
+        }
+      ]
+    },
+    {
+      "title": "横浜市交通局 駅時刻表 / Station timetable of Transportation Bureau, City of Yokohama",
+      "url": "https://ckan.odpt.org/dataset/r_station_timetable-yokohamamunicipal",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "駅時刻表 / Station timetableJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:StationTimetable?odpt:operator=odpt.Operator:YokohamaMunicipal&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_station_timetable-yokohamamunicipal/resource/7a348540-5f6f-4e59-b7f4-30dbd2d63782"
+        }
+      ]
+    },
+    {
+      "title": "横浜市交通局 列車時刻表 / Train timetable of Transportation Bureau, City of Yokohama",
+      "url": "https://ckan.odpt.org/dataset/r_train_timetable-yokohamamunicipal",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "列車時刻表 / Train timetableJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:TrainTimetable?odpt:operator=odpt.Operator:YokohamaMunicipal&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_train_timetable-yokohamamunicipal/resource/50b6a97a-c84a-4ee4-94a7-d85dcbf75909"
+        }
+      ]
+    },
+    {
+      "title": "横浜市交通局 列車ロケーション情報 / Train location information of Transportation Bureau, City...",
+      "url": "https://ckan.odpt.org/dataset/r_train_location-yokohamamunicipal",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "列車ロケーション情報 / Train location informationJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:Train?odpt:operator=odpt.Operator:YokohamaMunicipal&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_train_location-yokohamamunicipal/resource/f021788f-0f0b-4e2e-a48c-7a1f87e19b42"
+        }
+      ]
+    },
+    {
+      "title": "横浜市交通局 鉄道関連リアルタイム情報 / Train realtime information of Transportation Bureau, Ci...",
+      "url": "https://ckan.odpt.org/dataset/r_train_gtfs_rt-yokohamamunicipal",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "鉄道関連リアルタイム情報 / Train realtime informationProtocol Buffers",
+          "url": "https://api.odpt.org/api/v4/gtfs/realtime/YokohamaMunicipalTrain_vehicle?acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_train_gtfs_rt-yokohamamunicipal/resource/5733c027-5544-4322-abcb-3225510cd612"
+        },
+        {
+          "name": "鉄道関連リアルタイム情報 / Train realtime informationProtocol Buffers",
+          "url": "https://api.odpt.org/api/v4/gtfs/realtime/YokohamaMunicipalTrain_trip_update?acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_train_gtfs_rt-yokohamamunicipal/resource/2cbf9f9e-115b-4e0d-8fc6-e3edae2df447"
+        },
+        {
+          "name": "鉄道関連リアルタイム情報 / Train realtime informationProtocol Buffers",
+          "url": "https://api.odpt.org/api/v4/gtfs/realtime/YokohamaMunicipalTrain_alert?acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_train_gtfs_rt-yokohamamunicipal/resource/41cea16a-fc5e-458a-81b9-9a04988bac19"
+        }
+      ]
+    },
+    {
+      "title": "【リアルタイム情報】函館市電 / [realtime information] Hakodate City Tram",
+      "url": "https://ckan.odpt.org/dataset/odpt_hakodate_city_alllines",
+      "status": "時刻表以外・または他形式と重複",
+      "resources": [
+        {
+          "name": "【リアルタイム情報】函館市電 / [realtime information]...Protocol Buffers",
+          "url": "https://api-public.odpt.org/api/v4/gtfs/realtime/odpt_HakodateCity_Alllines_vehicle",
+          "page": "https://ckan.odpt.org/dataset/odpt_hakodate_city_alllines/resource/eb46b826-f9ea-4782-ba51-dea691540723"
+        },
+        {
+          "name": "【リアルタイム情報】函館市電 / [realtime information]...Protocol Buffers",
+          "url": "https://api-public.odpt.org/api/v4/gtfs/realtime/odpt_HakodateCity_Alllines_trip_update",
+          "page": "https://ckan.odpt.org/dataset/odpt_hakodate_city_alllines/resource/5f7e44f6-4ac0-437c-885b-5109f5e8656b"
+        },
+        {
+          "name": "【リアルタイム情報】函館市電 / [realtime information]...Protocol Buffers",
+          "url": "https://api-public.odpt.org/api/v4/gtfs/realtime/odpt_HakodateCity_Alllines_alert",
+          "page": "https://ckan.odpt.org/dataset/odpt_hakodate_city_alllines/resource/c6bbd42c-b7a4-4a5f-889d-d67373bd8de5"
+        }
+      ]
+    },
+    {
+      "title": "首都圏新都市鉄道（つくばエクスプレス） 鉄道関連リアルタイム情報 / Train realtime information of Metropolitan...",
+      "url": "https://ckan.odpt.org/dataset/r_train_gtfs_rt-odpt_train-mir",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "鉄道関連リアルタイム情報(Alert) / Train realtime informationProtocol Buffers",
+          "url": "https://api.odpt.org/api/v4/gtfs/realtime/mir_odpt_train_alert?acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_train_gtfs_rt-odpt_train-mir/resource/cfdc829a-3aae-46f0-83a3-d250f67c7797"
+        }
+      ]
+    },
+    {
+      "title": "多摩都市モノレール 鉄道関連リアルタイム情報 / Train realtime information of Tokyo Tama Intercity M...",
+      "url": "https://ckan.odpt.org/dataset/r_train_gtfs_rt-odpt_train-tamamonorail",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "鉄道関連リアルタイム情報(Alert) / Train realtime informationProtocol Buffers",
+          "url": "https://api.odpt.org/api/v4/gtfs/realtime/tamamonorail_odpt_train_alert?acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_train_gtfs_rt-odpt_train-tamamonorail/resource/f83e7aed-e72a-4afe-8975-8e021bc1f778"
+        }
+      ]
+    },
+    {
+      "title": "東京メトロ 鉄道関連リアルタイム情報 / Train realtime information of Tokyo Metro",
+      "url": "https://ckan.odpt.org/dataset/r_train_gtfs_rt-odpt_train-tokyometro",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "鉄道関連リアルタイム情報(Alert) / Train realtime informationProtocol Buffers",
+          "url": "https://api.odpt.org/api/v4/gtfs/realtime/tokyometro_odpt_train_alert?acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_train_gtfs_rt-odpt_train-tokyometro/resource/b273745e-f949-4576-9b68-0f390b1efe15"
+        }
+      ]
+    },
+    {
+      "title": "東京臨海高速鉄道 鉄道関連リアルタイム情報 / Train realtime information of TWR Rinkai Line",
+      "url": "https://ckan.odpt.org/dataset/r_train_gtfs_rt-odpt_train-twr",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "鉄道関連リアルタイム情報(Alert) / Train realtime informationProtocol Buffers",
+          "url": "https://api.odpt.org/api/v4/gtfs/realtime/twr_odpt_train_alert?acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_train_gtfs_rt-odpt_train-twr/resource/f604f37a-d75e-4aa1-96b0-f87e98b79d51"
+        }
+      ]
+    },
+    {
+      "title": "首都圏新都市鉄道（つくばエクスプレス） 鉄道関連情報 / Train information of Metropolitan Intercity Railway",
+      "url": "https://ckan.odpt.org/dataset/train-mir",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "鉄道関連情報 / Train informationGTFS/GTFS-JP",
+          "url": "https://api.odpt.org/api/v4/files/MIR/data/MIR-Train-GTFS.zip?acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/train-mir/resource/663ebc8f-6c0c-4151-b966-f97f5d9b148c"
+        }
+      ]
+    },
+    {
+      "title": "東京都交通局 鉄道関連リアルタイム情報 / Train realtime information of Bureau of Transportation,...",
+      "url": "https://ckan.odpt.org/dataset/r_train_gtfs_rt-odpt_train-toei",
+      "status": "時刻表以外・または他形式と重複",
+      "resources": [
+        {
+          "name": "鉄道関連リアルタイム情報(VehiclePosition) / Train realtime...Protocol Buffers",
+          "url": "https://api-public.odpt.org/api/v4/gtfs/realtime/toei_odpt_train_vehicle",
+          "page": "https://ckan.odpt.org/dataset/r_train_gtfs_rt-odpt_train-toei/resource/ab773be1-aab7-47f2-8cd7-1ddbd9d8c8b9"
+        },
+        {
+          "name": "鉄道関連リアルタイム情報(TripUpdate) / Train realtime informationProtocol Buffers",
+          "url": "https://api-public.odpt.org/api/v4/gtfs/realtime/toei_odpt_train_trip_update",
+          "page": "https://ckan.odpt.org/dataset/r_train_gtfs_rt-odpt_train-toei/resource/0e63c9af-98b8-4d88-a9d6-10dd96dbd9c4"
+        },
+        {
+          "name": "鉄道関連リアルタイム情報(Alert) / Train realtime informationProtocol Buffers",
+          "url": "https://api-public.odpt.org/api/v4/gtfs/realtime/toei_odpt_train_alert",
+          "page": "https://ckan.odpt.org/dataset/r_train_gtfs_rt-odpt_train-toei/resource/135dfdac-1d1c-4609-b7f2-57146d6ce059"
+        }
+      ]
+    },
+    {
+      "title": "多摩都市モノレール 鉄道関連情報 / Train information of Tokyo Tama Intercity Monorail",
+      "url": "https://ckan.odpt.org/dataset/train-tamamonorail",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "鉄道関連情報 / Train informationGTFS/GTFS-JP",
+          "url": "https://api.odpt.org/api/v4/files/TamaMonorail/data/TamaMonorail-Train-GTFS.zip?acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/train-tamamonorail/resource/c72cc2a7-f1d5-41cf-9fac-5545237fd425"
+        }
+      ]
+    },
+    {
+      "title": "東京臨海高速鉄道 鉄道関連情報 / Train information of TWR Rinkai Line",
+      "url": "https://ckan.odpt.org/dataset/train-twr",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "鉄道関連情報 / Train informationGTFS/GTFS-JP",
+          "url": "https://api.odpt.org/api/v4/files/TWR/data/TWR-Train-GTFS.zip?acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/train-twr/resource/f1953807-47da-4540-94bd-26c391e5caef"
+        }
+      ]
+    },
+    {
+      "title": "東京メトロ 鉄道関連情報 / Train information of Tokyo Metro",
+      "url": "https://ckan.odpt.org/dataset/train-tokyometro",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "鉄道関連情報 / Train informationGTFS/GTFS-JP",
+          "url": "https://api.odpt.org/api/v4/files/TokyoMetro/data/TokyoMetro-Train-GTFS.zip?acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/train-tokyometro/resource/d4f11962-1c5a-4316-9a16-7fb229c227ea"
+        }
+      ]
+    },
+    {
+      "title": "首都圏新都市鉄道（つくばエクスプレス） 乗降者数情報 / Passenger survey of Metropolitan Intercity Railway",
+      "url": "https://ckan.odpt.org/dataset/r_passenger_survey-mir",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "乗降者数情報 / Passenger surveyJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:PassengerSurvey?odpt:operator=odpt.Operator:MIR&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_passenger_survey-mir/resource/9280390f-76c2-4ca7-afa4-bb1a520073db"
+        }
+      ]
+    },
+    {
+      "title": "東京臨海高速鉄道 路線系統情報 / Route information of TWR Rinkai Line",
+      "url": "https://ckan.odpt.org/dataset/r_route-twr",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "路線系統情報 / Route informationJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:Railway?odpt:operator=odpt.Operator:TWR&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_route-twr/resource/1300464e-6703-4291-bfd7-26a344574498"
+        }
+      ]
+    },
+    {
+      "title": "多摩都市モノレール 運行情報 / Train status information of Tokyo Tama Intercity Monorail",
+      "url": "https://ckan.odpt.org/dataset/r_train_status-tamamonorail",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "運行情報 / Train status informationJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:TrainInformation?odpt:operator=odpt.Operator:TamaMonorail&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_train_status-tamamonorail/resource/677de10e-b2da-426c-89fa-157912f3fec8"
+        }
+      ]
+    },
+    {
+      "title": "首都圏新都市鉄道（つくばエクスプレス） 画像情報(鉄道関連) / Image data (railway-related) of Metropolitan...",
+      "url": "https://ckan.odpt.org/dataset/r_image-mir",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "施設図面情報(駅構内図) / Facility mapsZIP",
+          "url": "https://api.odpt.org/api/v4/files/MIR/Image/mir_2019_station_maps.zip?acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_image-mir/resource/8b181c87-db10-4aff-ae99-0711acd6bed7"
+        }
+      ]
+    },
+    {
+      "title": "ゆりかもめ 運賃情報 / Fare information of Yurikamome",
+      "url": "https://ckan.odpt.org/dataset/r_fare-yurikamome",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "運賃情報 / Fare informationJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:RailwayFare?odpt:operator=odpt.Operator:Yurikamome&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_fare-yurikamome/resource/12ad9649-5cd9-4895-934f-4155ced05382"
+        }
+      ]
+    },
+    {
+      "title": "東京臨海高速鉄道 運行情報 / Train status information of TWR Rinkai Line",
+      "url": "https://ckan.odpt.org/dataset/r_train_status-twr",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "運行情報 / Train status informationJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:TrainInformation?odpt:operator=odpt.Operator:TWR&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_train_status-twr/resource/2192b372-ecbe-4acc-9d93-6b29fa014904"
+        }
+      ]
+    },
+    {
+      "title": "東京メトロ 運賃情報 / Fare information of Tokyo Metro",
+      "url": "https://ckan.odpt.org/dataset/r_fare-tokyometro",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "運賃情報 / Fare informationJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:RailwayFare?odpt:operator=odpt.Operator:TokyoMetro&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_fare-tokyometro/resource/32ce0495-fbe1-4f90-99c1-de6aa98ba6e4"
+        }
+      ]
+    },
+    {
+      "title": "東京都交通局 運賃情報 / Fare information of Bureau of Transportation, Tokyo Metropolita...",
+      "url": "https://ckan.odpt.org/dataset/r_fare-toei",
+      "status": "時刻表以外・または他形式と重複",
+      "resources": [
+        {
+          "name": "運賃情報 / Fare informationJSON",
+          "url": "https://api-public.odpt.org/api/v4/odpt:RailwayFare?odpt:operator=odpt.Operator:Toei",
+          "page": "https://ckan.odpt.org/dataset/r_fare-toei/resource/898c9b83-1d64-41b1-a523-b1040704f475"
+        }
+      ]
+    },
+    {
+      "title": "東京都交通局 列車時刻表 / Train timetable of Bureau of Transportation, Tokyo Metropolita...",
+      "url": "https://ckan.odpt.org/dataset/r_train_timetable-toei",
+      "status": "時刻表以外・または他形式と重複",
+      "resources": [
+        {
+          "name": "列車時刻表 / Train timetableJSON",
+          "url": "https://api-public.odpt.org/api/v4/odpt:TrainTimetable?odpt:operator=odpt.Operator:Toei",
+          "page": "https://ckan.odpt.org/dataset/r_train_timetable-toei/resource/81bed0ce-2321-4422-aac9-9c94155306d3"
+        }
+      ]
+    },
+    {
+      "title": "多摩都市モノレール 路線系統情報 / Route information of Tokyo Tama Intercity Monorail",
+      "url": "https://ckan.odpt.org/dataset/r_route-tamamonorail",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "路線系統情報 / Route informationJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:Railway?odpt:operator=odpt.Operator:TamaMonorail&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_route-tamamonorail/resource/ddd2b957-c1b5-4700-865e-cc9da42450bf"
+        }
+      ]
+    },
+    {
+      "title": "東京メトロ 駅情報 / Station information of Tokyo Metro",
+      "url": "https://ckan.odpt.org/dataset/r_station-tokyometro",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "駅情報 / Station informationJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:Station?odpt:operator=odpt.Operator:TokyoMetro&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_station-tokyometro/resource/9a17b58f-9258-431b-a006-add6eb0cacc6"
+        }
+      ]
+    },
+    {
+      "title": "首都圏新都市鉄道（つくばエクスプレス） 運行情報 / Train status information of Metropolitan Intercity...",
+      "url": "https://ckan.odpt.org/dataset/r_train_status-mir",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "運行情報 / Train status informationJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:TrainInformation?odpt:operator=odpt.Operator:MIR&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_train_status-mir/resource/401a3f28-72e4-4fae-b02b-65bedb220033"
+        }
+      ]
+    },
+    {
+      "title": "東京臨海高速鉄道 乗降者数情報 / Passenger survey of TWR Rinkai Line",
+      "url": "https://ckan.odpt.org/dataset/r_passenger_survey-twr",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "乗降者数情報 / Passenger surveyJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:PassengerSurvey?odpt:operator=odpt.Operator:TWR&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_passenger_survey-twr/resource/9e428fec-96bc-4453-ba71-03d155d2c8e2"
+        }
+      ]
+    },
+    {
+      "title": "東京臨海高速鉄道 駅時刻表 / Station timetable of TWR Rinkai Line",
+      "url": "https://ckan.odpt.org/dataset/r_station_timetable-twr",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "駅時刻表 / Station timetableJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:StationTimetable?odpt:operator=odpt.Operator:TWR&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_station_timetable-twr/resource/99adffc7-5396-4805-815d-87f2b3bd8c53"
+        }
+      ]
+    },
+    {
+      "title": "東京メトロ 路線系統情報 / Route information of Tokyo Metro",
+      "url": "https://ckan.odpt.org/dataset/r_route-tokyometro",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "路線系統情報 / Route informationJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:Railway?odpt:operator=odpt.Operator:TokyoMetro&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_route-tokyometro/resource/81d953eb-65f8-4dfd-ba99-cd43d41e8b9b"
+        }
+      ]
+    },
+    {
+      "title": "東京都交通局 列車ロケーション情報 / Train location information of Bureau of Transportation, T...",
+      "url": "https://ckan.odpt.org/dataset/r_train_location-toei",
+      "status": "時刻表以外・または他形式と重複",
+      "resources": [
+        {
+          "name": "列車ロケーション情報 / Train location informationJSON",
+          "url": "https://api-public.odpt.org/api/v4/odpt:Train?odpt:operator=odpt.Operator:Toei",
+          "page": "https://ckan.odpt.org/dataset/r_train_location-toei/resource/431564fc-adf4-4b6c-8210-e82175078b3e"
+        }
+      ]
+    },
+    {
+      "title": "首都圏新都市鉄道（つくばエクスプレス） 駅時刻表 / Station timetable of Metropolitan Intercity Railway",
+      "url": "https://ckan.odpt.org/dataset/r_station_timetable-mir",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "駅時刻表 / Station timetableJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:StationTimetable?odpt:operator=odpt.Operator:MIR&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_station_timetable-mir/resource/1e104907-9fd7-4a21-b267-9421d98b845c"
+        }
+      ]
+    },
+    {
+      "title": "東京臨海高速鉄道 列車時刻表 / Train timetable of TWR Rinkai Line",
+      "url": "https://ckan.odpt.org/dataset/r_train_timetable-twr",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "列車時刻表 / Train timetableJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:TrainTimetable?odpt:operator=odpt.Operator:TWR&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_train_timetable-twr/resource/f720d074-6845-4ab4-a3b3-ccde4ae3d246"
+        }
+      ]
+    },
+    {
+      "title": "ゆりかもめ 路線系統情報 / Route information of Yurikamome",
+      "url": "https://ckan.odpt.org/dataset/r_route-yurikamome",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "路線系統情報 / Route informationJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:Railway?odpt:operator=odpt.Operator:Yurikamome&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_route-yurikamome/resource/0806342a-8baa-4a8b-8566-af97a0e02821"
+        }
+      ]
+    },
+    {
+      "title": "東京都交通局 画像情報(鉄道関連) / Image data (railway-related) of Bureau of Transportation,...",
+      "url": "https://ckan.odpt.org/dataset/r_image-toei",
+      "status": "時刻表以外・または他形式と重複",
+      "resources": [
+        {
+          "name": "駅ナンバリング / Station number iconsPDF",
+          "url": "https://api-public.odpt.org/api/v4/files/Toei/Image/odpt_Image-Toei_都営地下鉄_路線シンボルデータ.pdf",
+          "page": "https://ckan.odpt.org/dataset/r_image-toei/resource/84d444dd-298d-43ae-ab57-f791f6a3a60e"
+        },
+        {
+          "name": "駅ナンバリング / Station number iconsPDF",
+          "url": "https://api-public.odpt.org/api/v4/files/Toei/Image/odpt_Image-Toei_舎人ライナー_路線シンボルデータ.pdf",
+          "page": "https://ckan.odpt.org/dataset/r_image-toei/resource/c0603aab-996e-4907-a6cc-ba45db1c7377"
+        },
+        {
+          "name": "駅ナンバリング / Station number iconsPDF",
+          "url": "https://api-public.odpt.org/api/v4/files/Toei/Image/odpt_Image-Toei_さくらトラム_路線シンボルデータ.pdf",
+          "page": "https://ckan.odpt.org/dataset/r_image-toei/resource/eec28bdf-2d2e-4855-bcda-a985071fb8a6"
+        }
+      ]
+    },
+    {
+      "title": "東京臨海高速鉄道 運賃情報 / Fare information of TWR Rinkai Line",
+      "url": "https://ckan.odpt.org/dataset/r_fare-twr",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "運賃情報 / Fare informationJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:RailwayFare?odpt:operator=odpt.Operator:TWR&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_fare-twr/resource/ba43c6a7-598c-491f-b67b-5c4239391ef4"
+        }
+      ]
+    },
+    {
+      "title": "東京都交通局 路線系統情報 / Route information of Bureau of Transportation, Tokyo Metropol...",
+      "url": "https://ckan.odpt.org/dataset/r_route-toei",
+      "status": "時刻表以外・または他形式と重複",
+      "resources": [
+        {
+          "name": "路線系統情報 / Route informationJSON",
+          "url": "https://api-public.odpt.org/api/v4/odpt:Railway?odpt:operator=odpt.Operator:Toei",
+          "page": "https://ckan.odpt.org/dataset/r_route-toei/resource/b820e9ed-997f-418b-ae69-9e37dce68177"
+        }
+      ]
+    },
+    {
+      "title": "多摩都市モノレール 列車時刻表 / Train timetable of Tokyo Tama Intercity Monorail",
+      "url": "https://ckan.odpt.org/dataset/r_train_timetable-tamamonorail",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "列車時刻表 / Train timetableJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:TrainTimetable?odpt:operator=odpt.Operator:TamaMonorail&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_train_timetable-tamamonorail/resource/7a7af5c9-7a01-4869-9894-fd67813b442d"
+        }
+      ]
+    },
+    {
+      "title": "首都圏新都市鉄道（つくばエクスプレス） 運賃情報 / Fare information of Metropolitan Intercity Railway",
+      "url": "https://ckan.odpt.org/dataset/r_fare-mir",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "運賃情報 / Fare informationJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:RailwayFare?odpt:operator=odpt.Operator:MIR&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_fare-mir/resource/26c6bb70-f100-4bb3-88c3-e6d6c9207468"
+        }
+      ]
+    },
+    {
+      "title": "東京メトロ 駅時刻表 / Station timetable of Tokyo Metro",
+      "url": "https://ckan.odpt.org/dataset/r_station_timetable-tokyometro",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "駅時刻表 / Station timetableJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:StationTimetable?odpt:operator=odpt.Operator:TokyoMetro&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_station_timetable-tokyometro/resource/d087ffcd-19a0-44c6-99a3-c9586f560242"
+        }
+      ]
+    },
+    {
+      "title": "多摩都市モノレール 運賃情報 / Fare information of Tokyo Tama Intercity Monorail",
+      "url": "https://ckan.odpt.org/dataset/r_fare-tamamonorail",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "運賃情報 / Fare informationJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:RailwayFare?odpt:operator=odpt.Operator:TamaMonorail&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_fare-tamamonorail/resource/79f15b16-c007-4991-bd94-39b302311059"
+        }
+      ]
+    },
+    {
+      "title": "東京臨海高速鉄道 駅情報 / Station information of TWR Rinkai Line",
+      "url": "https://ckan.odpt.org/dataset/r_station-twr",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "駅情報 / Station informationJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:Station?odpt:operator=odpt.Operator:TWR&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_station-twr/resource/5c1be5ac-3782-4d5d-8d98-7102988b8d43"
+        }
+      ]
+    },
+    {
+      "title": "東京都交通局 駅情報 / Station information of Bureau of Transportation, Tokyo Metropoli...",
+      "url": "https://ckan.odpt.org/dataset/r_station-toei",
+      "status": "時刻表以外・または他形式と重複",
+      "resources": [
+        {
+          "name": "駅情報 / Station informationJSON",
+          "url": "https://api-public.odpt.org/api/v4/odpt:Station?odpt:operator=odpt.Operator:Toei",
+          "page": "https://ckan.odpt.org/dataset/r_station-toei/resource/4e2c86aa-188d-4101-8752-777428a524b1"
+        }
+      ]
+    },
+    {
+      "title": "東京メトロ 運行情報 / Train status information of Tokyo Metro",
+      "url": "https://ckan.odpt.org/dataset/r_train_status-tokyometro",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "運行情報 / Train status informationJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:TrainInformation?odpt:operator=odpt.Operator:TokyoMetro&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_train_status-tokyometro/resource/109fafb5-2b52-4d20-a9ba-08e615b57ee7"
+        }
+      ]
+    },
+    {
+      "title": "多摩都市モノレール 駅時刻表 / Station timetable of Tokyo Tama Intercity Monorail",
+      "url": "https://ckan.odpt.org/dataset/r_station_timetable-tamamonorail",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "駅時刻表 / Station timetableJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:StationTimetable?odpt:operator=odpt.Operator:TamaMonorail&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_station_timetable-tamamonorail/resource/ed321133-54d5-4102-b72f-15d819986c0a"
+        }
+      ]
+    },
+    {
+      "title": "多摩都市モノレール 乗降者数情報 / Passenger survey of Tokyo Tama Intercity Monorail",
+      "url": "https://ckan.odpt.org/dataset/r_passenger_survey-tamamonorail",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "乗降者数情報 / Passenger surveyJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:PassengerSurvey?odpt:operator=odpt.Operator:TamaMonorail&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_passenger_survey-tamamonorail/resource/bab710e8-642b-43cd-937d-02d16a61e9e2"
+        }
+      ]
+    },
+    {
+      "title": "東京臨海高速鉄道 画像情報(鉄道関連) / Image data (railway-related) of TWR Rinkai Line",
+      "url": "https://ckan.odpt.org/dataset/r_image-twr",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "駅ナンバリング / Station number iconsZIP",
+          "url": "https://api.odpt.org/api/v4/files/TWR/Image/twr_station_number_icon.zip?acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_image-twr/resource/ff13f0aa-576b-42f4-b6a0-f4742e852197"
+        },
+        {
+          "name": "施設図面情報(駅構内図) / Facility mapsZIP",
+          "url": "https://api.odpt.org/api/v4/files/TWR/Image/twr_station_map.zip?acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_image-twr/resource/a7793e90-2981-4a70-9f76-b5ef971165c5"
+        },
+        {
+          "name": "企業ロゴ / Company logoPNG",
+          "url": "https://api.odpt.org/api/v4/files/TWR/Image/img_logoMark.png?acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_image-twr/resource/6f6e9d6a-7bde-4c75-ae7f-3e307b46e4b7"
+        }
+      ]
+    },
+    {
+      "title": "東京メトロ 画像情報(鉄道関連) / Image data (railway-related) of Tokyo Metro",
+      "url": "https://ckan.odpt.org/dataset/r_image-tokyometro",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "駅ナンバリング画像および路線シンボルマーク / Station number icons...ZIP",
+          "url": "https://api.odpt.org/api/v4/files/TokyoMetro/Image/TokyoMetroStationNumberLineSymbol.zip?acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_image-tokyometro/resource/c7fdc672-c373-436c-bae2-f48a8a92b17b"
+        }
+      ]
+    },
+    {
+      "title": "東京都交通局 駅時刻表 / Station timetable of Bureau of Transportation, Tokyo Metropolit...",
+      "url": "https://ckan.odpt.org/dataset/r_station_timetable-toei",
+      "status": "時刻表以外・または他形式と重複",
+      "resources": [
+        {
+          "name": "駅時刻表 / Station timetableJSON",
+          "url": "https://api-public.odpt.org/api/v4/odpt:StationTimetable?odpt:operator=odpt.Operator:Toei",
+          "page": "https://ckan.odpt.org/dataset/r_station_timetable-toei/resource/3fe77edf-2132-47db-89a3-908ed0c01f3a"
+        }
+      ]
+    },
+    {
+      "title": "ゆりかもめ 画像情報(鉄道関連) / Image data (railway-related) of Yurikamome",
+      "url": "https://ckan.odpt.org/dataset/r_image-yurikamome",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "駅ナンバリング / Station number iconsZIP",
+          "url": "https://api.odpt.org/api/v4/files/Yurikamome/Image/odpt_Image-Yurikamome_駅ナンバリングデータ.pdf?acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_image-yurikamome/resource/c53ff0d9-e284-4c47-9912-ceaefa587f5d"
+        },
+        {
+          "name": "施設図面情報(駅構内図) / Facility mapsZIP",
+          "url": "https://api.odpt.org/api/v4/files/Yurikamome/Image/yurikamome_station_map.zip?acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_image-yurikamome/resource/67e03a50-09b6-41de-9d99-b8bd484905f0"
+        },
+        {
+          "name": "企業ロゴ / Company logoPNG",
+          "url": "https://api.odpt.org/api/v4/files/Yurikamome/Image/odpt_Image-Yurikamome_ロゴ.png?acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_image-yurikamome/resource/4e6878ba-5a15-4046-9385-de533e740e20"
+        }
+      ]
+    },
+    {
+      "title": "東京メトロ 列車時刻表 / Train timetable of Tokyo Metro",
+      "url": "https://ckan.odpt.org/dataset/r_train_timetable-tokyometro",
+      "status": "認証が必要",
+      "resources": [
+        {
+          "name": "列車時刻表 / Train timetableJSON",
+          "url": "https://api.odpt.org/api/v4/odpt:TrainTimetable?odpt:operator=odpt.Operator:TokyoMetro&acl:consumerKey=[発行されたアクセストークン/YOUR_ACCESS_TOKEN]",
+          "page": "https://ckan.odpt.org/dataset/r_train_timetable-tokyometro/resource/f030d032-c3ce-4f3f-ba25-f3b78fbd5848"
+        }
+      ]
+    }
+  ]
+}

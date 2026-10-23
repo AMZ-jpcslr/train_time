@@ -12,6 +12,9 @@ public final class WidgetLogicTest {
     static void reject(String json, String name) { try { WidgetSnapshot.receive(json, NOW); throw new AssertionError(name); } catch (IllegalArgumentException expected) { assertions++; } }
     public static void main(String[] args) {
         WidgetSnapshot snapshot = WidgetSnapshot.receive(data(), NOW);
+        String seconds = data().replace("12:20", "12:20:30").replace(Long.toString(NOW + 20 * 60000L), Long.toString(NOW + 20 * 60000L + 30000));
+        yes(WidgetSnapshot.receive(seconds, NOW).selectedAt(NOW).departureAt == NOW + 20 * 60000L + 30000, "GTFS seconds retained");
+        reject(seconds.replace("12:20:30", "12:20:60"), "invalid GTFS seconds");
         yes(snapshot.selectedAt(NOW).id.equals("second"), "selected later train takes precedence");
         yes(snapshot.leaveAt(snapshot.selectedAt(NOW), NOW) == NOW + 9 * 60000, "no separate boarding buffer");
         yes(snapshot.leaveAt(snapshot.selectedAt(NOW), NOW + 300000) == null, "walking expiry equality");

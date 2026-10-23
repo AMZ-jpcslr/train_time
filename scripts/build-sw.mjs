@@ -31,6 +31,23 @@ self.addEventListener('activate',event=>event.waitUntil((async()=>{
 self.addEventListener('fetch',event=>{
  const url=new URL(event.request.url);
  if(event.request.method!=='GET'||url.origin!==self.location.origin)return;
+ // Versioned station files are loaded only when selected; keep the latest 16 for offline use.
+ if(new RegExp('^/data/odpt/odpt-[a-z]+-[a-f0-9]{16}-[a-f0-9]{12}[.]json$').test(url.pathname)){
+  event.respondWith((async()=>{
+   const cache=await caches.open(CACHE),saved=await cache.match(url.pathname);
+   if(saved)return saved;
+   const response=await fetch(event.request);
+   if(response.ok&&response.headers.get('content-type')?.includes('application/json')){
+    const data=await response.clone().json();
+    if(Array.isArray(data)&&data.length&&data.every(t=>t.stationId&&Array.isArray(t.departures))){
+     await cache.put(url.pathname,response.clone());
+     const keys=(await cache.keys()).filter(r=>new URL(r.url).pathname.startsWith('/data/odpt/'));
+     for(const key of keys.slice(0,Math.max(0,keys.length-16)))await cache.delete(key);
+    }
+   }
+   return response;
+  })());return;
+ }
  if(event.request.mode==='navigate'){
   event.respondWith((async()=>{
    const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),3000);

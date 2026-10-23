@@ -133,10 +133,11 @@ struct WidgetSnapshot: Codable, Equatable {
         return date
     }
     private static func matchesServiceTime(_ departure: WidgetDeparture, dayStartMilliseconds: Double) -> Bool {
-        guard departure.time.range(of: "^(?:[01][0-9]|2[0-7]):[0-5][0-9]$", options: .regularExpression) != nil else { return false }
+        guard departure.time.range(of: "^(?:[01][0-9]|2[0-7]):[0-5][0-9](?::[0-5][0-9])?$", options: .regularExpression) != nil else { return false }
         let components = departure.time.split(separator: ":").compactMap { Int($0) }
-        guard components.count == 2 else { return false }
-        return departure.departureAt == dayStartMilliseconds + Double(components[0] * 60 + components[1]) * 60_000
+        guard components.count == 2 || components.count == 3 else { return false }
+        let seconds = components.count == 3 ? components[2] : 0
+        return departure.departureAt == dayStartMilliseconds + Double(components[0] * 3600 + components[1] * 60 + seconds) * 1000
     }
 }
 

@@ -1,5 +1,6 @@
 import {expect,type Page} from '@playwright/test';
 import {readFileSync} from 'node:fs';
+import {stations} from '../../src/data/stations';
 import type {Timetable,Entrance} from '../../src/domain/types';
 const jr=JSON.parse(readFileSync(new URL('../../src/data/jr.json',import.meta.url),'utf8')) as Timetable[];
 const entrances=JSON.parse(readFileSync(new URL('../../src/data/entrances.json',import.meta.url),'utf8')) as Entrance[];
@@ -72,6 +73,7 @@ export async function saveMeasuredPlace(page:Page,name='試験登録地点'){
 
 export async function chooseStation(page:Page,stationId:string){
  await page.getByRole('button',{name:'乗車駅',exact:true}).click();
+ await page.getByRole('dialog',{name:'乗車駅を選ぶ'}).getByLabel('駅名・路線で検索').fill(stations.find(s=>s.id===stationId)!.name);
  await page.getByRole('dialog',{name:'乗車駅を選ぶ'}).locator(`[data-station-id="${stationId}"]`).click();
  await expect(page.getByRole('dialog',{name:'乗車駅を選ぶ'})).not.toBeVisible();
 }

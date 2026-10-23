@@ -1,0 +1,115 @@
+[
+  {
+    "id": "toei",
+    "dataset": "train-toei",
+    "operator": "東京都交通局",
+    "region": "東京",
+    "url": "https://api-public.odpt.org/api/v4/files/Toei/data/Toei-Train-GTFS.zip",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "attribution": "東京都交通局・公共交通オープンデータ協議会",
+    "sourceUrl": "https://ckan.odpt.org/dataset/train-toei",
+    "checkedAt": "2026-10-23T07:58:22.907528+00:00",
+    "sha256": "a1772c5086e8b1df92622e3482ce4bb280bb4717f3ef96c20afdd34c0f4036f4",
+    "stationCount": 149,
+    "lines": [
+      {
+        "name": "三田線",
+        "stationCount": 27
+      },
+      {
+        "name": "大江戸線",
+        "stationCount": 38
+      },
+      {
+        "name": "新宿線",
+        "stationCount": 21
+      },
+      {
+        "name": "日暮里・舎人ライナー",
+        "stationCount": 13
+      },
+      {
+        "name": "東京さくらトラム（都電荒川線）",
+        "stationCount": 30
+      },
+      {
+        "name": "浅草線",
+        "stationCount": 20
+      }
+    ],
+    "validFrom": "2026-03-14",
+    "validTo": "2027-03-12",
+    "audit": {
+      "sourceStopTimes": 122798,
+      "importedStopTimes": 117997,
+      "throughBoundary": 1339,
+      "notBoardable": 4801
+    },
+    "bytes": 14650266,
+    "status": "imported"
+  },
+  {
+    "id": "tosaden",
+    "dataset": "tosaden_traffic_streetcar",
+    "operator": "とさでん交通",
+    "region": "高知",
+    "url": "https://api-public.odpt.org/api/v4/files/odpt/TosadenTraffic/Streetcar.zip?date=current",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "attribution": "とさでん交通株式会社・公共交通オープンデータ協議会",
+    "sourceUrl": "https://ckan.odpt.org/dataset/tosaden_traffic_streetcar",
+    "checkedAt": "2026-10-23T08:08:04.285243+00:00",
+    "sha256": "212b51162d6b4aac6c0f8a2c80543f6699126e11c098ba519d663932c43501a2",
+    "stationCount": 76,
+    "lines": [
+      {
+        "name": "とさでん路面電車（東西線・南北線）",
+        "stationCount": 76
+      }
+    ],
+    "validFrom": "2026-08-01",
+    "validTo": "2027-04-30",
+    "audit": {
+      "sourceStopTimes": 27485,
+      "importedStopTimes": 26461,
+      "notBoardable": 1024
+    },
+    "bytes": 4954990,
+    "status": "imported"
+  },
+  {
+    "id": "hakodate",
+    "dataset": "hakodate_city_alllines",
+    "operator": "函館市電",
+    "region": "北海道・函館",
+    "url": "https://api-public.odpt.org/api/v4/files/odpt/HakodateCity/Alllines.zip?date=20260815",
+    "license": "GTFSデータに関する利用の手引き（GTFS-RU）",
+    "licenseUrl": "https://gtfs-jp.org/GTFS-RUL(ODPT).pdf",
+    "attribution": "函館市企業局・公共交通オープンデータ協議会",
+    "restricted": true,
+    "sourceUrl": "https://ckan.odpt.org/dataset/hakodate_city_alllines",
+    "checkedAt": "2026-10-23T07:58:29.937141+00:00",
+    "sha256": "9cb401ba8a9ce05b4b273039540b282859da3eac4ef442ab8b13d28048df3413",
+    "stationCount": 46,
+    "lines": [
+      {
+        "name": "②系統",
+        "stationCount": 23
+      },
+      {
+        "name": "⑤系統",
+        "stationCount": 23
+      }
+    ],
+    "validFrom": "2026-08-15",
+    "validTo": "2027-08-14",
+    "audit": {
+      "sourceStopTimes": 10504,
+      "importedStopTimes": 9998,
+      "notBoardable": 506
+    },
+    "bytes": 1880730,
+    "status": "approval-required"
+  }
+]

@@ -28,13 +28,14 @@ public final class WidgetSnapshot {
         public final long departureAt;
         Departure(Map<?, ?> value, long dayStart) {
             keys(value, "id", "departureAt", "time", "destination", "trainType", "platform");
-            id = string(value, "id", 160); time = string(value, "time", 5);
+            id = string(value, "id", 160); time = string(value, "time", 8);
             destination = string(value, "destination", 80);
             trainType = nullableString(value, "trainType", 40); platform = nullableString(value, "platform", 20);
             departureAt = integer(value, "departureAt");
-            if (!time.matches("(?:[01][0-9]|2[0-7]):[0-5][0-9]")) throw bad();
-            int hours = Integer.parseInt(time.substring(0, 2)), minutes = Integer.parseInt(time.substring(3));
-            long expected = dayStart + (hours * 60L + minutes) * MINUTE;
+            if (!time.matches("(?:[01][0-9]|2[0-7]):[0-5][0-9](?::[0-5][0-9])?")) throw bad();
+            int hours = Integer.parseInt(time.substring(0, 2)), minutes = Integer.parseInt(time.substring(3, 5));
+            int seconds = time.length() == 8 ? Integer.parseInt(time.substring(6, 8)) : 0;
+            long expected = dayStart + (hours * 60L + minutes) * MINUTE + seconds * 1000L;
             // Official 00:xx and operational 24:xx are both accepted for the following calendar day.
             if (departureAt != expected && !(hours < 4 && departureAt == expected + 24 * HOUR)) throw bad();
         }

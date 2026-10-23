@@ -17,7 +17,7 @@ describe('retired boarding buffer storage migration',()=>{
   vi.stubGlobal('localStorage',{getItem,setItem});
   const loaded=load();
   expect(getItem).toHaveBeenCalledWith('mania-u:v1');
-  expect(loaded).toEqual({...legacy,settings:{stationMinutes:7,speedKmh:3.6}});
+  expect(loaded).toEqual({...legacy,stationFavorites:[],settings:{stationMinutes:7,speedKmh:3.6}});
   expect(loaded.settings).not.toHaveProperty('bufferMinutes');
   expect(setItem).not.toHaveBeenCalled();
   expect(save(loaded)).toBe(true);

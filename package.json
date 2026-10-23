@@ -18,7 +18,11 @@
     "test:pwa": "npm run build && playwright test --config=playwright.pwa.config.ts",
     "data:hanshin": "node scripts/import-hanshin.mjs",
     "data:entrances": "node scripts/import-entrances.mjs",
-    "check:package": "node scripts/check-package.mjs"
+    "check:package": "node scripts/check-package.mjs",
+    "data:odpt": "python -X utf8 scripts/import-odpt.py",
+    "data:odpt:refresh": "python -X utf8 scripts/import-odpt.py --refresh",
+    "data:odpt:catalog": "node scripts/discover-odpt.mjs",
+    "data:odpt:audit": "python -X utf8 scripts/verify-odpt.py"
   },
   "dependencies": {
     "cheerio": "^1.2.0",

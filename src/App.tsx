@@ -12,6 +12,8 @@ import { distanceKm, judge, positionStatus, routeMinutes, type Walking } from '.
 import {useGeolocation} from './useGeolocation';
 import LocationHelp from './LocationHelp';
 import StationPicker from './StationPicker';
+import DataCoverage from './DataCoverage';
+import {useStationTimetables} from './useStationTimetables';
 import DepartureTimeline from './DepartureTimeline';
 import TrainTypeBadge from './TrainTypeBadge';
 import {serviceTimeline,recommendedTrain} from './domain/timeline';
@@ -55,7 +57,8 @@ export default function App(){
  const direction=station.directions.find(d=>d.id===stored.directionId)??station.directions[0];
  const day=serviceDate(time);
  const timetableFeed=useTimetables(bundledTables,station.id,day,now);
- const tables=timetableFeed.tables;
+ const stationFeed=useStationTimetables(station);
+ const tables=useMemo(()=>[...timetableFeed.tables,...stationFeed.tables],[timetableFeed.tables,stationFeed.tables]);
  const table=selectTable(tables,station.id,direction.id,day);
  const directionTables=tables.filter(t=>t.stationId===station.id&&t.directionId===direction.id);
  const coverageDates=[...new Set(directionTables.flatMap(t=>t.serviceDates??[]))];
@@ -105,10 +108,11 @@ export default function App(){
  const favoriteKey=station.id+':'+direction.id;
  const isFavorite=stored.favorites.includes(favoriteKey);
  const posState=positionStatus(position,now);
- const locationJudgmentMessage=locationMessage.includes('拒否')||locationMessage.includes('取得できません')||locationMessage.includes('タイムアウト')?locationMessage:locating?'より正確な位置を確認しています。取得後に徒歩経路を計算します。':posState==='inaccurate'?'位置精度が不足しています。画面上部の位置情報案内をご確認ください。':posState==='stale'?'現在地が古くなっています。もう一度「現在地を更新」を押してください。':accessUnverified?'道路までの接続区間が未確認のため、徒歩時間は概算・乗車判定は保留です。':walking.error?'徒歩経路を取得できませんでした。入口の切替やGoogleマップで確認できます。':'現在地を更新すると、歩行経路から徒歩時間を計算します。';
+ const locationJudgmentMessage=locationMessage.includes('拒否')||locationMessage.includes('取得できません')||locationMessage.includes('タイムアウト')?locationMessage:locating?'より正確な位置を確認しています。取得後に徒歩経路を計算します。':posState==='inaccurate'?'位置精度が不足しています。画面上部の位置情報案内をご確認ください。':posState==='stale'?'現在地が古くなっています。もう一度「現在地を更新」を押してください。':accessUnverified?'道路までの接続区間が未確認のため、徒歩時間は概算・乗車判定は保留です。':walking.error?'徒歩経路を取得できませんでした。入口の切替やGoogleマップで確認できます。':!entrance?'この駅の入口位置は未確認です。「実測時間を使う」から登録してください。':'現在地を更新すると、歩行経路から徒歩時間を計算します。';
  const nearby=position?[...stations].sort((a,b)=>distanceKm(position,a)-distanceKm(position,b)).slice(0,3):[];
  const chooseStation=(id:string,dir?:string)=>{const s=stations.find(s=>s.id===id)!;setStored({...stored,stationId:id,directionId:dir??s.directions[0].id});setPlaceId('');setEntranceId('');};
  const toggleFavorite=()=>setStored({...stored,favorites:isFavorite?stored.favorites.filter(f=>f!==favoriteKey):[...stored.favorites,favoriteKey]});
+ const toggleStationFavorite=(id:string)=>setStored(previous=>({...previous,stationFavorites:(previous.stationFavorites??[]).includes(id)?previous.stationFavorites!.filter(s=>s!==id):[...(previous.stationFavorites??[]),id]}));
  const locate=()=>{setPlaceId('');startLocation();};
  const addPlace=(e:React.FormEvent)=>{e.preventDefault();const minutes=Number(newPlace.minutes);if(!newPlace.name.trim()||!newPlace.entrance.trim()||newPlace.minutes===''||!Number.isFinite(minutes)||minutes<0||minutes>240){setFormError('地点名・駅入口名・0〜240分の実測徒歩時間を入力してください。');return;}const p:SavedPlace={id:crypto.randomUUID(),name:newPlace.name.trim(),entrance:newPlace.entrance.trim(),walkMinutes:minutes,stationId:station.id};setStored({...stored,places:[...stored.places,p]});setPlaceId(p.id);setNewPlace({name:'',entrance:'',minutes:''});setFormError('');decisionHeading.current?.focus();};
  const countdown=(epoch:number)=>{const sec=Math.max(0,Math.ceil((epoch-time)/1000));return sec<60?`${sec}秒`:`${Math.floor(sec/60)}分${String(sec%60).padStart(2,'0')}秒`;};
@@ -122,9 +126,11 @@ export default function App(){
    {savingError&&<div className="alert" role="alert">端末内保存に失敗しました。この画面を閉じると設定が失われる可能性があります。</div>}
    <section className="decision-summary" aria-label="出発判断">
     <div className="decision-heading"><h2 ref={decisionHeading} tabIndex={-1}>出発判断</h2><a href="#walking-settings">徒歩条件 ↓</a></div>
-     <div className="station-controls" id="station-controls"><div className="station-badge">{station.code}</div><StationPicker stations={stations} station={station} onChange={chooseStation}/><button className={'favorite '+(isFavorite?'active':'')} onClick={toggleFavorite} aria-pressed={isFavorite} aria-label="この駅と方面をお気に入り">{isFavorite?'★':'☆'}</button></div>
+     <div className="station-controls" id="station-controls"><div className="station-badge">{station.code}</div><StationPicker stations={stations} station={station} onChange={chooseStation} favorites={stored.stationFavorites??[]} onFavorite={toggleStationFavorite}/><button className={'favorite '+(isFavorite?'active':'')} onClick={toggleFavorite} aria-pressed={isFavorite} aria-label="この駅と方面をお気に入り">{isFavorite?'★':'☆'}</button></div>
      <div className="line-info"><span className="line-dot"/>{station.operator} <span>/</span> {station.line}</div>
      <div className="direction-tabs" aria-label="方面">{station.directions.map(d=><button key={d.id} className={d.id===direction.id?'selected':''} aria-pressed={d.id===direction.id} onClick={()=>setStored({...stored,directionId:d.id})}>{d.name}<span>↗</span></button>)}</div>
+    {station.timetablePath&&<p className="small-note"><a href="#data-coverage">対応路線・データの範囲を確認 ↓</a></p>}
+    {(stationFeed.loading||stationFeed.error)&&<div className="odpt-feed-message" role="status">{stationFeed.loading?"選択した駅の時刻表を読み込んでいます…":stationFeed.error}{stationFeed.error&&<button onClick={stationFeed.retry}>時刻表を再読み込み</button>}</div>}
     <p className="decision-station"><strong>{station.name}</strong> · {direction.name}</p>
     <p className="decision-constraint">定刻ベース・遅延／運休は未反映。乗車を保証しません。</p>
     {firstJudge?.status==='unknown'&&<><p className="decision-location-note">{referenceOnly?'現行ダイヤ未確認のため、公式時刻表を確認してください。':walking.loading?'徒歩経路を計算しています。':locationJudgmentMessage}</p>{locationActions}<button className="manual-shortcut" onClick={openManual}>実測時間を使う</button></>}
@@ -137,11 +143,12 @@ export default function App(){
      {!locating&&posState==='inaccurate'&&<LocationHelp/>}
 <details className="location-privacy"><summary>位置情報の取り扱い</summary><p className="small-note">現在地の取得後、座標と選んだ駅入口を{routingConfig?.provider??'設定済みの徒歩経路サービス'}へ送信します。アプリは現在地の履歴を保存しません。経路提供先のアクセスログには記録される場合があります。</p></details></section>
    <div className="quick-access">
+   {(stored.stationFavorites??[]).length>0&&<section className="favorites-section station-favorite-chips" aria-label="お気に入りの駅"><div><h2>お気に入りの駅</h2><p>検索結果の☆から登録できます。</p></div><div className="favorite-chips">{(stored.stationFavorites??[]).map(id=>{const s=stations.find(s=>s.id===id);return s?<button key={id} onClick={()=>chooseStation(id)} aria-pressed={id===station.id}><span>★ {s.name}</span><small>{s.operator} · {s.line}</small></button>:null;})}</div></section>}
    <section className="favorites-section" aria-label="お気に入りの駅と方面"><div><h2>いつもの駅・方面</h2><p>☆で登録して、次回もすぐに。</p></div><div className="favorite-chips">{stored.favorites.length?stored.favorites.map(key=>{const [sid,did]=key.split(':');const s=stations.find(s=>s.id===sid);const d=s?.directions.find(d=>d.id===did);return s&&d?<button key={key} onClick={()=>chooseStation(sid,did)} aria-pressed={favoriteKey===key}><span>★ {s.name}</span><small>{d.name}</small></button>:null;}):<span className="muted">お気に入りはまだありません</span>}</div></section>
    </div>
    <div className="dashboard">
     <section className="board-section" id="timetable-details" aria-label="発車案内">
-     {directionTables.length>0&&<p className="small-note" data-testid="data-coverage">この方面の収録範囲：{[...coverageDates,...coverageDays].join('、')}{coverageDates.length>0?' の運行日限定':''}。{directionTables.some(t=>t.verification==='partial')?'現行適用・検証に未確認事項があります。':''}</p>}
+     {directionTables.length>0&&<p className="small-note" data-testid="data-coverage">この方面の収録範囲：{station.timetablePath?`${[...coverageDates].sort()[0]}〜${[...coverageDates].sort().at(-1)}（運行日カレンダーに従う）`:[...coverageDates,...coverageDays].join('、')}{!station.timetablePath&&coverageDates.length>0?' の運行日限定':''}。{directionTables.some(t=>t.verification==='partial')?'現行適用・検証に未確認事項があります。':''}</p>}
      {timetableFeed.message&&<div className="timetable-update" role="status">{timetableFeed.message}<button disabled={timetableFeed.loading} onClick={timetableFeed.refresh}>日付別時刻表を更新</button></div>}
      {selection.notice&&<p className="selection-notice" role="status">{selection.notice}</p>}
      <div className="departure-board"><div className="board-top"><span><i className="live-dot"/> {referenceOnly?'参考時刻（現行未確認）':'発車予定'}</span><span>時刻表ベース</span></div>
@@ -158,8 +165,8 @@ export default function App(){
      {entrance&&<p className="small-note"><a href={entrance.sourceUrl} target="_blank" rel="noreferrer">入口の地図情報 ↗</a> · 選択肢の先頭は現在地から直線で近い入口です。最短の歩行経路を保証しません。</p>}
      {walking.loading&&<p role="status" className="route-status">歩行者用の道路経路を計算しています…</p>}
      {walking.error&&!place&&<><p role="alert" className="route-error">経路取得失敗：{walking.error}</p><button className="route-retry" onClick={walking.refresh} disabled={walking.loading||locating||posState!=='fresh'}>徒歩経路を再取得</button></>}
-     {position&&!entrance&&<p role="alert" className="route-error">入口位置を確認できていないため、この駅の自動徒歩判定はまだ利用できません。</p>}
-     <div className="walk-summary"><span>{place?`登録地点「${place.name}」から駅入口までの徒歩`:!place&&accessUnverified?'現在地から駅入口までの徒歩（接続区間は概算）':'現在地から駅入口までの徒歩'}</span><strong>{!place&&accessUnverified&&<small>約 </small>}{walkMinutes??'—'}<small>分</small></strong><span>{place?`登録地点の実測時間 · ${place.entrance}`:walking.route?`道路経路 約${Math.ceil(walking.route.roadDistanceMeters)}m · ${entrance?.name}`:'「現在地を更新」で自動計算'}</span></div>
+     {!entrance&&<p role="status" className="route-error">入口位置を確認できていないため、この駅の自動徒歩判定はまだ利用できません。</p>}
+     <div className="walk-summary"><span>{place?`登録地点「${place.name}」から駅入口までの徒歩`:!place&&accessUnverified?'現在地から駅入口までの徒歩（接続区間は概算）':'現在地から駅入口までの徒歩'}</span><strong>{!place&&accessUnverified&&<small>約 </small>}{walkMinutes??'—'}<small>分</small></strong><span>{place?`登録地点の実測時間 · ${place.entrance}`:walking.route?`道路経路 約${Math.ceil(walking.route.roadDistanceMeters)}m · ${entrance?.name}`:!entrance?'駅入口が未確認のため実測時間を登録してください':'「現在地を更新」で自動計算'}</span></div>
      {walking.route&&!place&&<div className={'route-access '+(accessUnverified?'unverified':'')} role={accessUnverified?'status':undefined}><p>道路までの接続：出発側 約{Math.ceil(walking.route.snapDistances[0])}m ／ 入口側 約{Math.ceil(walking.route.snapDistances[1])}m</p>{accessUnverified&&<p>上の徒歩時間は、道路経路に接続区間の直線距離を加えた概算です。建物の出口・階段・柵・横断箇所を確認できていないため、実際は遠回りになる場合があります。Googleマップや現地で経路を確認してください。</p>}</div>}
      <div className="time-breakdown"><div><span>入口からホームへ（乗車までの余裕を含む）</span><b>{stored.settings.stationMinutes}分</b></div><div className="total"><span>合計の所要時間</span><b>{walkMinutes===null?'—':walkMinutes+stored.settings.stationMinutes}分</b></div></div>
      {walking.route&&!place&&<><RouteDiagram route={walking.route}/><p className="small-note">設定歩行速度 {stored.settings.speedKmh}km/h。地図上の歩行経路に基づく目安です。階段・信号待ち・混雑・工事や入口の開閉で変わります。{entrance?.note}</p><a className="route-map-link" href={`https://www.openstreetmap.org/directions?engine=fossgis_osrm_foot&route=${position?.lat}%2C${position?.lon}%3B${entrance?.lat}%2C${entrance?.lon}`} target="_blank" rel="noreferrer">経路を地図で確認 ↗</a></>}
@@ -177,7 +184,8 @@ export default function App(){
    </div>
    <WidgetTransfer input={{now,preview:Boolean(preview),station,directionName:direction.name,table,settings:stored.settings,position:locating?null:position,route:walking.route,entrance,place,selectedId:first?widgetDepartureId(first):undefined}}/>
    <InstallApp/>
-   {showSources&&<section className="sources" aria-label="出典とデータ対応状況"><h2>出典とデータ対応状況</h2><p>選択中：{availabilityLabels[state]}。確認日と掲載改正日を区別しています。JRは取得から6時間、曜日別時刻表は確認から30日で再確認が必要です。臨時運転の網羅は未確認です。</p>{table&&<div className="source-detail"><p>対象運行日：{table.serviceDates?.join('、')??`曜日別（${table.dayType}）`} ／ 検証状態：{table.verification==='verified'?'出典照合済':table.verification==='partial'?'一部検証・現行未確認':'未検証'}</p><p>取得：{table.retrievedAt}</p><p>確認：{table.checkedAt} ／ 掲載改正：{table.revisionDate??'不明'} ／ 適用：{table.validFrom??'不明'} 〜 {table.validTo??'終了日未公表'}</p><a href={table.sourceUrl} target="_blank" rel="noreferrer">選択中の時刻表出典 ↗</a><ul>{table.notes.map((note,i)=><li key={i}>{note}</li>)}</ul></div>}<div className="coverage-grid">{stations.map(s=>{const acquired=tables.filter(t=>t.stationId===s.id);const count=acquired.length;const checked=acquired.filter(t=>t.verification==='verified').length;const available=s.directions.filter(d=>availability(selectTable(tables,s.id,d.id,day),day,now)==='ready').length;return <div key={s.id}><strong>{s.name}</strong><span>{s.operator} / {s.line}</span><b>{count?`${count}表を取得済 / ${checked===count?'出典照合済':'現行未確認あり'}`:'未取得・取込保留'}</b>{count>0&&<small>{available?`選択運行日に利用可：${available}方面`:'選択運行日は判定不可'}</small>}<a href={s.sourceUrl} target="_blank" rel="noreferrer">公式ページ ↗</a></div>;})}</div><p>出典：神戸市交通局「地下鉄オープンデータ」を加工。<a href="https://creativecommons.org/licenses/by/2.1/jp/" target="_blank" rel="noreferrer">CC BY 2.1 JP</a>。祝日：<a href="https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html" target="_blank" rel="noreferrer">内閣府</a>。詳細な取得・保留理由は同梱README参照。</p></section>}
+   {showSources&&<section className="sources" aria-label="出典とデータ対応状況"><h2>出典とデータ対応状況</h2><p>選択中：{availabilityLabels[state]}。確認日と掲載改正日を区別しています。JRは取得から6時間、曜日別時刻表は確認から30日で再確認が必要です。臨時運転の網羅は未確認です。</p>{table&&<div className="source-detail"><p>対象運行日：{station.timetablePath?`${table.validFrom}〜${table.validTo}のうち${table.serviceDates?.length}日（選択日 ${day}）`:table.serviceDates?.join('、')??`曜日別（${table.dayType}）`} ／ 検証状態：{table.verification==='verified'?'出典照合済':table.verification==='partial'?'一部検証・現行未確認':'未検証'}</p><p>取得：{table.retrievedAt}</p><p>確認：{table.checkedAt} ／ 掲載改正：{table.revisionDate??'不明'} ／ 適用：{table.validFrom??'不明'} 〜 {table.validTo??'終了日未公表'}</p><a href={table.sourceUrl} target="_blank" rel="noreferrer">選択中の時刻表出典 ↗</a><ul>{table.notes.map((note,i)=><li key={i}>{note}</li>)}</ul></div>}<div className="coverage-grid">{stations.filter(s=>!s.timetablePath).map(s=>{const acquired=tables.filter(t=>t.stationId===s.id);const count=acquired.length;const checked=acquired.filter(t=>t.verification==='verified').length;const available=s.directions.filter(d=>availability(selectTable(tables,s.id,d.id,day),day,now)==='ready').length;return <div key={s.id}><strong>{s.name}</strong><span>{s.operator} / {s.line}</span><b>{count?`${count}表を取得済 / ${checked===count?'出典照合済':'現行未確認あり'}`:'未取得・取込保留'}</b>{count>0&&<small>{available?`選択運行日に利用可：${available}方面`:'選択運行日は判定不可'}</small>}<a href={s.sourceUrl} target="_blank" rel="noreferrer">公式ページ ↗</a></div>;})}</div><p>出典：神戸市交通局「地下鉄オープンデータ」を加工。<a href="https://creativecommons.org/licenses/by/2.1/jp/" target="_blank" rel="noreferrer">CC BY 2.1 JP</a>。祝日：<a href="https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html" target="_blank" rel="noreferrer">内閣府</a>。詳細な取得・保留理由は同梱README参照。</p></section>}
+   <DataCoverage/>
    <PwaUpdate/>
   </main><footer className="site-footer"><span>まにあう <small> / 予定を知って、余裕をつくる。</small></span><span>現在地は経路計算時だけ送信 · アカウント不要</span><span>PWA対応 / ウィジェットは専用アプリが必要</span></footer>
  </div>;

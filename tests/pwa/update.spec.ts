@@ -26,7 +26,9 @@ async function loadCount(page:Page){return page.evaluate(()=>Number(sessionStora
 async function cachedNames(page:Page){return page.evaluate(()=>caches.keys());}
 async function assertStoredPlace(page:Page){
  const value=await page.evaluate(()=>JSON.parse(localStorage.getItem('mania-u:v1')??'null'));
- expect(value).toEqual(stored);
+ const {stationFavorites,...original}=value;
+ expect(original).toEqual(stored);
+ if(stationFavorites!==undefined)expect(stationFavorites).toEqual([]);
 }
 
 test('old installed cache-first app migrates all open tabs once without clearing registered places',async({page,context})=>{
