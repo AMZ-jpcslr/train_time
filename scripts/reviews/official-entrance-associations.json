@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-10-25",
+  "associations": [
+    {
+      "station": "白金台",
+      "operator": "東京都交通局",
+      "line": "三田線",
+      "nodeId": 2196837258,
+      "areaId": 2814747,
+      "ref": "2",
+      "name": "2番出入口（日吉坂方面）",
+      "sourceUrl": "https://www.tokyometro.jp/ticket/particularcase/meguro_shiroganetakanawa/index.html",
+      "exitSourceUrl": "https://www.tokyometro.jp/station/shirokanedai/index.html",
+      "note": "東京メトロ公式の目黒・白金高輪間の施設共用案内と白金台駅の出口案内を照合。OSMでは東京地下鉄管理の駅施設グループに所属する2番入口を、共用する都営三田線にも対応付ける。公式地図の転載や入口座標の公式測量を意味しない。"
+    }
+  ],
+  "excluded": [
+    {
+      "nodeId": 2196837257,
+      "sourceUrl": "https://www.tokyometro.jp/station/shirokanedai/index.html",
+      "reason": "1番出入口は公式出口案内の時間制限付き出入口。時間帯別の利用判定がないため除外。"
+    }
+  ]
+}

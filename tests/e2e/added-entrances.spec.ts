@@ -6,7 +6,8 @@ const added=JSON.parse(readFileSync(new URL('../../src/data/added-entrances.json
 import {challengeProviderNames} from '../../src/useChallengeCatalog';
 const providers=Object.keys(challengeProviderNames),did='d-'+'1'.repeat(16),checkedAt='2026-10-24T04:59:00Z';
 const fixture=(provider:string)=>{
- const entrance=added.find(e=>e.stationId.startsWith(`challenge-${provider}-`))!;
+ const entrance=added.find(e=>e.stationId.startsWith(`challenge-${provider}-`)&&e.osm?.association==='station-footpath')
+  ??added.find(e=>e.stationId.startsWith(`challenge-${provider}-`))!;
  const operator=challengeProviderNames[provider as keyof typeof challengeProviderNames];
  const station={id:entrance.stationId,name:'架空入口検証駅',operator,line:'架空入口検証線',code:'TEST',lat:entrance.lat+.0001,lon:entrance.lon,sourceUrl:'https://ckan.odpt.org/dataset/fictitious_test',region:'首都圏',directions:[{id:did,name:'架空終点方面'}],challengeProvider:provider,timetablePath:`/api/odpt/timetable?station=${entrance.stationId}`};
  return {stations:[station],coverage:{id:provider,operator,stationCount:1,checkedAt,sourceUrl:station.sourceUrl,lines:[{name:station.line,stationCount:1}],audit:{unsupportedCalendars:0,unknownDestinations:0}}};
@@ -38,4 +39,16 @@ test('unmapped tram stops retain the measured-time fallback without sending a fa
  await dialog.getByLabel('駅名・路線で検索').fill('とさでん 高知駅前');await dialog.locator('[data-station-id]').first().click();
  await expect(page.locator('.route-error')).toContainText('入口位置を確認できていない');expect(api.walking).toHaveLength(0);
  await expect(page.getByRole('region',{name:'対応路線とデータ'})).toContainText('0 / 76駅・路線');
+});
+
+test('officially reviewed shared-station entrance works and exposes its official source',async({page})=>{
+ await page.clock.install({time:FIXED_TIME});const api=await mockRuntime(page);
+ const entrance=added.find(e=>e.osm?.association==='official-shared-station')!;
+ await page.goto('/');await page.getByRole('button',{name:'乗車駅',exact:true}).click();
+ const dialog=page.getByRole('dialog',{name:'乗車駅を選ぶ'});await dialog.getByLabel('駅名・路線で検索').fill('白金台');
+ await dialog.locator(`[data-station-id="${entrance.stationId}"]`).click();
+ await expect(page.getByRole('link',{name:'事業者の公式案内 ↗'})).toHaveAttribute('href','https://www.tokyometro.jp/station/shirokanedai/index.html');
+ await installGps(page,entrance.stationId,10);await page.getByRole('button',{name:'現在地を更新',exact:true}).click();
+ await expect.poll(()=>api.walking.at(-1)?.entranceId).toBe(entrance.id);
+ await expect(page.locator('.walk-summary')).toContainText('2番出入口');
 });

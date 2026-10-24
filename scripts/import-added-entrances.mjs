@@ -1,7 +1,8 @@
-import {mkdir,readFile,writeFile} from 'node:fs/promises';
+import {mkdir,readFile,writeFile,readdir} from 'node:fs/promises';
 import {gunzipSync} from 'node:zlib';
 import {createHash} from 'node:crypto';
 import {matchEntrances,meters} from './lib/entrance-match.mjs';
+import {applyOfficialReviews} from './lib/official-entrance-reviews.mjs';
 const stations=JSON.parse(await readFile('src/data/odpt-stations.json','utf8'));
 for(const provider of ['jr-east','odakyu','keikyu','sotetsu','keio','tobu','seibu','tokyu']){
  const snapshot=JSON.parse(gunzipSync(await readFile(`.cache/odpt-challenge/${provider}.json.gz`)));
@@ -14,8 +15,20 @@ for(const region of ['kanto','kochi','buildings']){
  const data=JSON.parse(raw);if(data.remark)throw Error('Incomplete OSM response');
  elements.push(...data.elements);sources.push({...meta,region});
 }
-const checkedAt=sources.map(s=>s.retrievedAt).sort()[0];
-const {entrances,audit}=matchEntrances(stations,[...new Map(elements.map(e=>[e.type+'/'+e.id,e])).values()],checkedAt);
+// Connection/platform evidence is optional on an initial import, but every cached
+// file used here must have its original download hash and query beside it.
+for(const file of (await readdir('.cache/osm/connections').catch(()=>[])).filter(f=>f.endsWith('.json')&&!f.endsWith('-meta.json')).sort()){
+ const raw=await readFile('.cache/osm/connections/'+file),meta=JSON.parse(await readFile('.cache/osm/connections/'+file.replace('.json','-meta.json'),'utf8'));
+ if(createHash('sha256').update(raw).digest('hex')!==meta.sha256)throw Error('OSM evidence hash mismatch: '+file);
+ const data=JSON.parse(raw);if(data.remark)throw Error('Incomplete OSM response');
+ elements.push(...data.elements);sources.push({...meta,region:'connections/'+file});
+}
+const checkedAt=sources.map(s=>s.retrievedAt).sort().at(-1);
+const uniqueElements=[...new Map(elements.map(e=>[e.type+'/'+e.id,e])).values()];
+const matched=matchEntrances(stations,uniqueElements,checkedAt),audit=matched.audit;
+const reviews=JSON.parse(await readFile('scripts/reviews/official-entrance-associations.json','utf8'));
+const entrances=applyOfficialReviews(stations,uniqueElements,matched.entrances,reviews);
+for(const row of audit)row.entranceCount=entrances.filter(e=>e.stationId===row.stationId).length;
 for(const e of entrances){
  const station=stations.find(s=>s.id===e.stationId);
  if(!station||meters(station,e)>650||(station.lat===e.lat&&station.lon===e.lon))throw Error('Invalid station access coordinate: '+e.id);
