@@ -11,7 +11,11 @@
     }
   },
   "rewrites": [
-    { "source": "/api/:path*", "destination": "/api?__path=:path*" }
+    { "source": "/api/config", "destination": "/api?__path=config" },
+    { "source": "/api/jr", "destination": "/api?__path=jr" },
+    { "source": "/api/walking", "destination": "/api?__path=walking" },
+    { "source": "/api/odpt/catalog", "destination": "/api?__path=odpt/catalog" },
+    { "source": "/api/odpt/timetable", "destination": "/api?__path=odpt/timetable" }
   ],
   "headers": [
     { "source": "/sw.js", "headers": [{ "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }] },

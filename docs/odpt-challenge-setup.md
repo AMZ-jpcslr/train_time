@@ -28,6 +28,8 @@ Vercel側ではサーバー専用の環境変数 `ODPT_CHALLENGE_TOKEN` に設�
 
 今回の実装コードだけをデプロイしても、Vercel側にトークンが設定されていなければ認証データは有効になりません。ローカルの暗号化設定とVercelの設定は別です。
 
+VercelのAPI転送は5つの公開エンドポイントを固定して指定しています。動的な名前付きパスはVercelによって検索パラメーターにも追加されるため、ODPT APIの厳密なパラメーター検証と衝突します。`/api/:path*` のような包括転送へ変更する場合は、この差を考慮した本番疎通確認が必要です。API側で不明な検索パラメーターを無条件に許容する対応は行っていません。[Vercelの転送設定](https://vercel.com/docs/project-configuration/vercel-json)
+
 ## 照合と確認
 
 ```powershell
