@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitest/config';
 import { loadEnv } from 'vite';
+import {availableParallelism} from 'node:os';
 import react from '@vitejs/plugin-react';
 // @ts-expect-error Native Node backend shared by Vite dev and preview.
 import {localApiPlugin} from './server/api.mjs';
@@ -15,5 +16,5 @@ export default defineConfig(({mode})=>{
   watch: { ignored: ['**/.cache/**','**/docs/screenshots/**','**/test-results/**'] },
   fs: { deny: ['.env','.env.*','*.{crt,pem}','**/.git/**','**/.cache/**'] },
  },
- test: { include: ['tests/**/*.test.ts'] },
+ test: { include: ['tests/**/*.test.ts'],maxWorkers:Math.min(4,availableParallelism()) },
 };});

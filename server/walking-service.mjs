@@ -1,4 +1,3 @@
-import {readFile} from 'node:fs/promises';
 const DEFAULT_URL='https://routing.openstreetmap.de/routed-foot/route/v1/foot/';
 export const MAX_ROAD_SNAP_METERS=200;
 export const MAX_PENDING_ROUTES=8;
@@ -107,6 +106,7 @@ export function createWalkingService({fetchImpl=fetch,clock=Date.now,wait=ms=>ne
  return {route,config};
 }
 export async function loadWalkingService(env=process.env){
- const entrances=JSON.parse(await readFile(new URL('../src/data/entrances.json',import.meta.url),'utf8'));
+ const {loadEntrances}=await import('./entrances.mjs');
+ const entrances=await loadEntrances();
  return createWalkingService({entrances,contactEmail:env.ROUTING_CONTACT_EMAIL??'',baseUrl:env.ROUTING_FOOT_URL||DEFAULT_URL});
 }

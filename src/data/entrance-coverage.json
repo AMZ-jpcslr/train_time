@@ -1,0 +1,88 @@
+{
+  "checkedAt": "2026-10-24T10:58:34.794Z",
+  "sources": [
+    {
+      "sourceUrl": "https://overpass-api.de/api/interpreter",
+      "retrievedAt": "2026-10-24T10:58:34.794Z",
+      "sha256": "0c2e409c0a9fbf030d13b6b60b8c47ad21e0f6dfad72c449f55b7a2175b6dbab",
+      "query": "[out:json][timeout:100];\n (node[railway~\"^(subway_entrance|train_station_entrance)$\"](34.9,138.1,38,141.2);node[public_transport=entrance](34.9,138.1,38,141.2);)->.entrances;\n (nwr[railway=station](34.9,138.1,38,141.2);nwr[public_transport=station](34.9,138.1,38,141.2);way[building=train_station](34.9,138.1,38,141.2);)->.stations;\n rel[public_transport=stop_area](34.9,138.1,38,141.2)->.areas;\n (node(w.stations)[entrance];.entrances;.stations;.areas;);out body center;",
+      "region": "kanto"
+    },
+    {
+      "sourceUrl": "https://overpass-api.de/api/interpreter",
+      "retrievedAt": "2026-10-24T10:58:50.494Z",
+      "sha256": "ad2ec0707fbea34ebe79c5ec8fb29e733d42303744eae2648c8738937287f2c3",
+      "query": "[out:json][timeout:100];\n (node[railway~\"^(subway_entrance|train_station_entrance)$\"](33.45,133.35,33.65,133.8);node[public_transport=entrance](33.45,133.35,33.65,133.8);)->.entrances;\n (nwr[railway=station](33.45,133.35,33.65,133.8);nwr[public_transport=station](33.45,133.35,33.65,133.8);way[building=train_station](33.45,133.35,33.65,133.8);)->.stations;\n rel[public_transport=stop_area](33.45,133.35,33.65,133.8)->.areas;\n (node(w.stations)[entrance];.entrances;.stations;.areas;);out body center;",
+      "region": "kochi"
+    },
+    {
+      "sourceUrl": "https://overpass-api.de/api/interpreter",
+      "retrievedAt": "2026-10-24T11:06:30.769Z",
+      "sha256": "97d3864be1869412104fcf105621cbdac19f629bf132047cc1b0b99db8796152",
+      "query": "[out:json][timeout:60];way[building=train_station](34.9,138.1,38.0,141.2);out geom;",
+      "region": "buildings"
+    }
+  ],
+  "coverage": [
+    {
+      "operator": "東京都交通局",
+      "total": 149,
+      "covered": 108,
+      "entranceCount": 550
+    },
+    {
+      "operator": "とさでん交通",
+      "total": 76,
+      "covered": 0,
+      "entranceCount": 0
+    },
+    {
+      "operator": "JR東日本",
+      "total": 710,
+      "covered": 313,
+      "entranceCount": 836
+    },
+    {
+      "operator": "小田急電鉄",
+      "total": 72,
+      "covered": 39,
+      "entranceCount": 73
+    },
+    {
+      "operator": "京急電鉄",
+      "total": 77,
+      "covered": 29,
+      "entranceCount": 43
+    },
+    {
+      "operator": "相模鉄道",
+      "total": 29,
+      "covered": 6,
+      "entranceCount": 14
+    },
+    {
+      "operator": "京王電鉄",
+      "total": 76,
+      "covered": 41,
+      "entranceCount": 81
+    },
+    {
+      "operator": "東武鉄道",
+      "total": 220,
+      "covered": 78,
+      "entranceCount": 125
+    },
+    {
+      "operator": "西武鉄道",
+      "total": 105,
+      "covered": 51,
+      "entranceCount": 87
+    },
+    {
+      "operator": "東急電鉄",
+      "total": 117,
+      "covered": 72,
+      "entranceCount": 156
+    }
+  ]
+}

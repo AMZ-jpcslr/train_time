@@ -23,7 +23,9 @@
     "data:odpt:refresh": "python -X utf8 scripts/import-odpt.py --refresh",
     "data:odpt:catalog": "node scripts/discover-odpt.mjs",
     "data:odpt:audit": "python -X utf8 scripts/verify-odpt.py",
-    "odpt:setup": "node scripts/setup-odpt-token.mjs"
+    "odpt:setup": "node scripts/setup-odpt-token.mjs",
+    "data:entrances:added": "node scripts/import-added-entrances.mjs",
+    "data:entrances:fetch": "node scripts/fetch-added-entrances.mjs --refresh && node scripts/fetch-station-buildings.mjs --refresh && node scripts/fetch-tram-access.mjs --refresh"
   },
   "dependencies": {
     "cheerio": "^1.2.0",

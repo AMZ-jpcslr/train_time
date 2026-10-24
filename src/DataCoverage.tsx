@@ -1,4 +1,5 @@
 import coverage from './data/odpt-coverage.json';
+import entranceCoverage from './data/entrance-coverage.json';
 import {stations as baseStations} from './data/stations';
 import type {Station} from './domain/types';
 import type {ChallengeCoverage} from './useChallengeCatalog';
@@ -6,13 +7,15 @@ export default function DataCoverage({stations=baseStations,challenge=[],challen
  const added=coverage.filter(p=>p.status==='imported');
  const legacy=stations.filter(s=>!s.timetablePath);
  const lines=[...new Set(legacy.map(s=>s.operator+' / '+s.line))];
+ const entranceInfo=(operator:string)=>{const row=entranceCoverage.coverage.find(r=>r.operator===operator);return row?<p>入口データ：{row.covered} / {row.total}駅・路線、{row.entranceCount}地点（{entranceCoverage.checkedAt.slice(0,10)}取得）。入口がある駅は現在地から徒歩時間を自動計算できます。未収録の駅は実測時間を登録してください。</p>:null;};
  return <section className="coverage-section" id="data-coverage" aria-label="対応路線とデータ">
   <h2>対応路線とデータ</h2>
   <p>検索対象：{stations.length}駅・路線。同じ駅名も路線ごとに表示します。時刻表は定刻の予定で、遅延・運休は反映しません。</p>
   {challengeEnabled&&<div className="challenge-coverage"><p>チャレンジ2026限定データ：サーバー側で認証して取得。元データ・トークンは公開配信ファイルに含めません。提供期間は2027-03-12までです。</p>
    {challenge.map(provider=><details key={provider.id}><summary><strong>{provider.operator}</strong> · {provider.lines.length}路線 / {provider.stationCount}駅・路線</summary>
     <ul>{provider.lines.map(line=><li key={line.name}>{line.name}：{line.stationCount}駅・路線</li>)}</ul>
-    <p>取得確認：{provider.checkedAt.slice(0,10)}。サーバー側の取得キャッシュは6時間。原資料の平日・土曜・休日区分を使用し、年末年始の特別ダイヤは未確認のため表示を停止します。駅入口は未確認です。徒歩判定には実測時間を登録してください。</p>
+    <p>取得確認：{provider.checkedAt.slice(0,10)}。サーバー側の取得キャッシュは6時間。原資料の平日・土曜・休日区分を使用し、年末年始の特別ダイヤは未確認のため表示を停止します。</p>
+    {entranceInfo(provider.operator)}
     {provider.id==='keio'&&<p>競馬場開催日は、ODPTが明記した開催日カレンダーの対象日に限り、開催日用の時刻表を使用します。</p>}
     {provider.id==='jr-east'&&<p>関東の一部の在来線のみ。新幹線、中央・青梅線の特急は含みません。常磐線は坂元以南、中央線は高尾以東が対象です。臨時・他路線直通列車などの一部を含まない場合があります。</p>}
     {(provider.audit.unsupportedCalendars>0||provider.audit.unknownDestinations>0)&&<p>未対応の運行区分：{provider.audit.unsupportedCalendars}表。行先名の参照未確認：{provider.audit.unknownDestinations}件。行先・種別は確認できたものだけを表示します。</p>}
@@ -25,7 +28,8 @@ export default function DataCoverage({stations=baseStations,challenge=[],challen
    <summary><strong>{provider.operator}</strong> · {provider.region} · {provider.id==='tosaden'?'東西線・南北線':`${provider.lines.length}路線`} / {provider.stationCount}駅・路線</summary>
    <ul>{provider.lines.map(line=><li key={line.name}>{line.name}：{line.stationCount}駅・路線</li>)}</ul>
    <p>元データの期間：{provider.validFrom}〜{provider.validTo}。取得確認：{provider.checkedAt.slice(0,10)}。確認から30日を過ぎると再取得まで乗車判定を停止します。運行日・方面により収録便は異なります。</p>
-   <p>方面は次の停車駅（他社線への直通境界では「他社線への直通方面」）で表示。駅中心の位置情報を収録していますが、駅入口・徒歩経路は未確認です。徒歩判断には実測時間を登録してください。</p>
+   <p>方面は次の停車駅（他社線への直通境界では「他社線への直通方面」）で表示。</p>
+   {entranceInfo(provider.operator)}
    <p>{provider.attribution}のデータを加工。<a href={provider.sourceUrl} target="_blank" rel="noreferrer">公開データ・出典 ↗</a> · <a href={provider.licenseUrl} target="_blank" rel="noreferrer">{provider.license}</a></p>
   </details>)}
   <details><summary><strong>関西の既存データ</strong> · {legacy.length}駅（一部駅のみ）</summary><ul>{lines.map(line=><li key={line}>{line}：{legacy.filter(s=>s.operator+' / '+s.line===line).map(s=>s.name).join('、')}</li>)}</ul><p>各駅・方面の取得範囲と現在の利用可否は、選択後の「出典・確認日」で確認できます。路線全駅への対応ではありません。</p></details>

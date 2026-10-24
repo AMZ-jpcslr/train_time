@@ -3,7 +3,7 @@ import {readFileSync} from 'node:fs';
 import {stations} from '../../src/data/stations';
 import type {Timetable,Entrance} from '../../src/domain/types';
 const jr=JSON.parse(readFileSync(new URL('../../src/data/jr.json',import.meta.url),'utf8')) as Timetable[];
-const entrances=JSON.parse(readFileSync(new URL('../../src/data/entrances.json',import.meta.url),'utf8')) as Entrance[];
+const entrances=['entrances.json','added-entrances.json'].flatMap(file=>JSON.parse(readFileSync(new URL('../../src/data/'+file,import.meta.url),'utf8'))) as Entrance[];
 
 // Deterministic test responses. Facts come from exact-date source fixtures;
 // this is not a live routing/API test and does not invent unacquired departures.

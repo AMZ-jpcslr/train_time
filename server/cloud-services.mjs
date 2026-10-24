@@ -1,4 +1,3 @@
-import {readFile} from 'node:fs/promises';
 import {createRedis,namespace} from './redis.mjs';
 import {createCloudJrService} from './cloud-jr.mjs';
 import {createRoutingGate} from './cloud-routing.mjs';
@@ -14,7 +13,7 @@ export async function createCloudServices(env=process.env,{redis:injectedRedis,e
  try{redis=injectedRedis===undefined?createRedis(env,fetchImpl):injectedRedis;}catch{redisReason='共有キャッシュの環境変数を確認してください。';}
  const prefix=namespace(env),appOrigin=deploymentOrigin(env),jr=createCloudJrService({redis,prefix,clock,loader:jrLoader});
  const odpt=createChallengeService({env,redis,prefix,fetchImpl,clock});
- const entrances=injectedEntrances??JSON.parse(await readFile(new URL('../src/data/entrances.json',import.meta.url),'utf8'));
+ const entrances=injectedEntrances??await (await import('./entrances.mjs')).loadEntrances();
  const disabledReason=redisReason||(!redis?'公開版の経路計算には共有キャッシュの設定が必要です。':!appOrigin?'APP_ORIGINにこのアプリのHTTPS公開URLを設定してください。':null);
  let walking;
  try{walking=createWalkingService({entrances,fetchImpl,clock,contactEmail:env.ROUTING_CONTACT_EMAIL??'',baseUrl:env.ROUTING_FOOT_URL||undefined,privacyUrl:env.ROUTING_PRIVACY_URL||null,localPrototype:false,appOrigin:appOrigin||'https://invalid.example',disabledReason,gate:createRoutingGate({redis,prefix})});}

@@ -4,9 +4,9 @@ import hankyu from './data/hankyu.json';
 import jr from './data/jr.json';
 import kyoto from './data/kyoto.json';
 import hanshin from './data/hanshin.json';
-import entrancesData from './data/entrances.json';
+import {entrances} from './data/entrances';
 import { stations as baseStations } from './data/stations';
-import type { Timetable, SavedPlace, Entrance } from './domain/types';
+import type { Timetable, SavedPlace } from './domain/types';
 import { addDays, availability, dayType, formatClock, selectTable, serviceDate, upcoming } from './domain/time';
 import { distanceKm, judge, positionStatus, routeMinutes, type Walking } from './domain/journey';
 import {useGeolocation} from './useGeolocation';
@@ -30,7 +30,6 @@ import {useTimetables} from './useTimetables';
 import RouteDiagram from './RouteDiagram';
 import { load, save } from './domain/storage';
 const bundledTables=[...municipal,...hankyu,...jr,...kyoto,...hanshin] as Timetable[];
-const entrances=entrancesData as Entrance[];
 const availabilityLabels={ready:'実データ・出典照合済',missing:'未取得',expired:'ダイヤ適用期間外 / 要再確認',unverified:'現行未確認・参考時刻',special:'特定日のダイヤ未確認','calendar-unknown':'祝日データの対象年外'};
 const icon=(name:string)=> name==='train'?<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="5" y="3" width="14" height="15" rx="4"/><path d="M5 10h14M9 3v7M15 3v7M8 18l-2 3m10-3 2 3M8 14h1m6 0h1"/></svg>:<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="6"/><path d="M12 2v4m0 12v4M2 12h4m12 0h4"/></svg>;
 
@@ -168,7 +167,7 @@ export default function App(){
     </section>
     <aside className="journey-panel" id="walking-settings"><div className="panel-title"><span className="eyebrow">YOUR WALK</span><h2>駅までの道のり</h2></div>{position&&<div className="nearby">{nearby.map(s=><button key={s.id} onClick={()=>chooseStation(s.id)}>{s.name}<small>直線 約{distanceKm(position,s).toFixed(1)}km</small></button>)}</div>}
      <div className="entrance-field"><ChoicePicker label="歩いて向かう駅入口" value={entrance?.id??''} options={stationEntrances.map(e=>({id:e.id,label:e.name,description:station.name}))} emptyText="この駅の入口座標は未確認" onChange={id=>{setEntranceId(id);setPlaceId('');}}/></div>
-     {entrance&&<p className="small-note"><a href={entrance.sourceUrl} target="_blank" rel="noreferrer">入口の地図情報 ↗</a> · 選択肢の先頭は現在地から直線で近い入口です。最短の歩行経路を保証しません。</p>}
+     {entrance&&<p className="small-note"><a href={entrance.sourceUrl} target="_blank" rel="noreferrer">入口の地図情報 ↗</a>{entrance.osm&&<> · <a href={entrance.osm.featureUrl} target="_blank" rel="noreferrer">駅との対応根拠 ↗</a></>} · {stationEntrances.length}地点収録。選択肢の先頭は現在地から直線で近い入口です。最短の歩行経路を保証しません。{entrance.osm&&<> 入口情報：{entrance.checkedAt.slice(0,10)}取得、© OpenStreetMap contributors（ODbL）。</>}</p>}
      {walking.loading&&<p role="status" className="route-status">歩行者用の道路経路を計算しています…</p>}
      {walking.error&&!place&&<><p role="alert" className="route-error">経路取得失敗：{walking.error}</p><button className="route-retry" onClick={walking.refresh} disabled={walking.loading||locating||posState!=='fresh'}>徒歩経路を再取得</button></>}
      {!entrance&&<p role="status" className="route-error">入口位置を確認できていないため、この駅の自動徒歩判定はまだ利用できません。</p>}

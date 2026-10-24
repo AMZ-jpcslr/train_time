@@ -12,7 +12,7 @@ const ignore=file=>/^(?:\.cache|\.git|\.vercel|docs|tests|test-results|playwrigh
 const trace=await nodeFileTrace(['api/index.mjs'],{base:root,processCwd:root,ignore});
 if(trace.warnings.size)throw Error('Unresolved runtime dependencies: '+[...trace.warnings].map(w=>w.message).join('\n'));
 const files=[...trace.fileList].map(f=>f.replaceAll('\\','/'));
-for(const required of ['api/index.mjs','src/data/entrances.json','scripts/import-jr.mjs','server/redis.mjs'])if(!files.includes(required))throw Error('Runtime file missing from trace: '+required);
+for(const required of ['api/index.mjs','src/data/entrances.json','src/data/added-entrances.json','scripts/import-jr.mjs','server/redis.mjs'])if(!files.includes(required))throw Error('Runtime file missing from trace: '+required);
 if(files.some(f=>/^(?:\.cache|\.git|\.env|docs|tests|test-results)(?:[/.]|$)/.test(f)))throw Error('Private or test material included in runtime trace');
 const stage=await mkdtemp(path.join(tmpdir(),'maniau-function-'));
 let bytes=0;
