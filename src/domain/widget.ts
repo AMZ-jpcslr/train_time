@@ -3,7 +3,7 @@ import {addDays, availability, serviceDate, upcoming} from './time';
 import {positionStatus, routeMinutes} from './journey';
 import {needsAccessCheck,validWalkingRoute} from './routing';
 
-export const widgetDepartureId=(d:{epoch:number;destination:string;trainType:string|null;platform:string|null})=>JSON.stringify([d.epoch,d.destination,d.trainType,d.platform]);
+export const widgetDepartureId=(d:{epoch:number;destination:string;trainType:string|null;platform:string|null;trainNumber?:string})=>JSON.stringify([d.epoch,d.destination,d.trainType,d.platform,...(d.trainNumber?[d.trainNumber]:[])]);
 export interface WidgetSnapshot {
  schemaVersion:1; generatedAt:number; stationName:string; directionName:string; serviceDate:string;
  timetableValidUntil:number; walkingValidUntil:number|null; originLabel:string; walkMinutes:number|null;
@@ -22,7 +22,7 @@ export function buildWidgetSnapshot(input:WidgetInput):WidgetSnapshot|null {
  const day=serviceDate(now);
  if(input.preview||!table||availability(table,day,now)!=='ready'||table.stationId!==station.id)return null;
  if(!Number.isFinite(settings.stationMinutes)||settings.stationMinutes<0||settings.stationMinutes>60||!Number.isFinite(settings.speedKmh)||settings.speedKmh<1||settings.speedKmh>6)return null;
- const ttl=station.id.startsWith('jr-')?6*3600000:30*86400000;
+ const ttl=station.id.startsWith('jr-')||station.challengeProvider?6*3600000:30*86400000;
  const timetableValidUntil=Math.min(now+6*3600000,Date.parse(table.checkedAt)+ttl,Date.parse(addDays(day,1)+'T04:00:00+09:00'));
  if(!Number.isFinite(timetableValidUntil)||timetableValidUntil<=now)return null;
  const candidates=upcoming(table,day,now,Infinity).filter(d=>d.epoch<=timetableValidUntil);

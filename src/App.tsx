@@ -5,7 +5,7 @@ import jr from './data/jr.json';
 import kyoto from './data/kyoto.json';
 import hanshin from './data/hanshin.json';
 import entrancesData from './data/entrances.json';
-import { stations } from './data/stations';
+import { stations as baseStations } from './data/stations';
 import type { Timetable, SavedPlace, Entrance } from './domain/types';
 import { addDays, availability, dayType, formatClock, selectTable, serviceDate, upcoming } from './domain/time';
 import { distanceKm, judge, positionStatus, routeMinutes, type Walking } from './domain/journey';
@@ -14,6 +14,7 @@ import LocationHelp from './LocationHelp';
 import StationPicker from './StationPicker';
 import DataCoverage from './DataCoverage';
 import {useStationTimetables} from './useStationTimetables';
+import {useChallengeCatalog} from './useChallengeCatalog';
 import DepartureTimeline from './DepartureTimeline';
 import TrainTypeBadge from './TrainTypeBadge';
 import {serviceTimeline,recommendedTrain} from './domain/timeline';
@@ -48,22 +49,25 @@ export default function App(){
  const [newPlace,setNewPlace]=useState({name:'',entrance:'',minutes:''});
  const [formError,setFormError]=useState('');
  const [entranceId,setEntranceId]=useState('');
- const [routingConfig,setRoutingConfig]=useState<{enabled:boolean;contactEmail:string|null;provider:string;privacyUrl:string|null;localPrototype?:boolean;disabledReason?:string|null;deployment?:string}|null>(null);
+ const [routingConfig,setRoutingConfig]=useState<{enabled:boolean;contactEmail:string|null;provider:string;privacyUrl:string|null;localPrototype?:boolean;disabledReason?:string|null;deployment?:string;odptChallenge?:{enabled:boolean;configured:boolean;reason:string|null}}|null>(null);
+ const challenge=useChallengeCatalog(Boolean(routingConfig?.odptChallenge?.enabled),now);
+ const stations=useMemo(()=>[...baseStations,...challenge.stations],[challenge.stations]);
  useEffect(()=>{fetch('/api/config').then(r=>r.json()).then(setRoutingConfig).catch(()=>setRoutingConfig(null));},[]);
  useEffect(()=>{const tick=()=>setNow(Date.now()); const timer=setInterval(tick,1000);document.addEventListener('visibilitychange',tick);window.addEventListener('pageshow',tick);return()=>{clearInterval(timer);document.removeEventListener('visibilitychange',tick);window.removeEventListener('pageshow',tick);};},[]);
  useEffect(()=>{setSavingError(!save(stored));},[stored]);
  const time=preview?Date.parse(preview+':00+09:00'):now;
  const station=stations.find(s=>s.id===stored.stationId)??stations[0];
+ const pendingSavedStation=stored.stationId.startsWith('challenge-')&&!stations.some(s=>s.id===stored.stationId);
  const direction=station.directions.find(d=>d.id===stored.directionId)??station.directions[0];
  const day=serviceDate(time);
  const timetableFeed=useTimetables(bundledTables,station.id,day,now);
- const stationFeed=useStationTimetables(station);
+ const stationFeed=useStationTimetables(station,day,now);
  const tables=useMemo(()=>[...timetableFeed.tables,...stationFeed.tables],[timetableFeed.tables,stationFeed.tables]);
  const table=selectTable(tables,station.id,direction.id,day);
  const directionTables=tables.filter(t=>t.stationId===station.id&&t.directionId===direction.id);
  const coverageDates=[...new Set(directionTables.flatMap(t=>t.serviceDates??[]))];
  const coverageDays=[...new Set(directionTables.filter(t=>!t.serviceDates).map(t=>({weekday:'平日',saturday:'土曜',holiday:'休日',weekend:'土曜・休日'})[t.dayType]))];
- const state=availability(table,day,now);
+ const state=pendingSavedStation?'missing':availability(table,day,now);
  const fallbackReady=station.id!=='kobe-gakuentoshi'&&availability(selectTable(tables,'kobe-gakuentoshi','east',day),day,now)==='ready';
  useEffect(()=>setChoiceNotice(''),[station.id,direction.id,day,preview]);
  const referenceOnly=state==='unverified'&&table?.verification==='partial';
@@ -128,6 +132,8 @@ export default function App(){
     <div className="decision-heading"><h2 ref={decisionHeading} tabIndex={-1}>出発判断</h2><a href="#walking-settings">徒歩条件 ↓</a></div>
      <div className="station-controls" id="station-controls"><div className="station-badge">{station.code}</div><StationPicker stations={stations} station={station} onChange={chooseStation} favorites={stored.stationFavorites??[]} onFavorite={toggleStationFavorite}/><button className={'favorite '+(isFavorite?'active':'')} onClick={toggleFavorite} aria-pressed={isFavorite} aria-label="この駅と方面をお気に入り">{isFavorite?'★':'☆'}</button></div>
      <div className="line-info"><span className="line-dot"/>{station.operator} <span>/</span> {station.line}</div>
+     {challenge.loading&&<p className="small-note" role="status">認証付きの駅データを確認中：{challenge.active}。取得できた駅から検索に追加します。</p>}
+     {pendingSavedStation&&<p className="alert" role="status">保存した認証付きの駅はまだ読み込めていません。取得が完了するまで発車・徒歩判定を停止しています。別の駅を検索して選ぶこともできます。</p>}
      <div className="direction-tabs" aria-label="方面">{station.directions.map(d=><button key={d.id} className={d.id===direction.id?'selected':''} aria-pressed={d.id===direction.id} onClick={()=>setStored({...stored,directionId:d.id})}>{d.name}<span>↗</span></button>)}</div>
     {station.timetablePath&&<p className="small-note"><a href="#data-coverage">対応路線・データの範囲を確認 ↓</a></p>}
     {(stationFeed.loading||stationFeed.error)&&<div className="odpt-feed-message" role="status">{stationFeed.loading?"選択した駅の時刻表を読み込んでいます…":stationFeed.error}{stationFeed.error&&<button onClick={stationFeed.retry}>時刻表を再読み込み</button>}</div>}
@@ -185,7 +191,7 @@ export default function App(){
    <WidgetTransfer input={{now,preview:Boolean(preview),station,directionName:direction.name,table,settings:stored.settings,position:locating?null:position,route:walking.route,entrance,place,selectedId:first?widgetDepartureId(first):undefined}}/>
    <InstallApp/>
    {showSources&&<section className="sources" aria-label="出典とデータ対応状況"><h2>出典とデータ対応状況</h2><p>選択中：{availabilityLabels[state]}。確認日と掲載改正日を区別しています。JRは取得から6時間、曜日別時刻表は確認から30日で再確認が必要です。臨時運転の網羅は未確認です。</p>{table&&<div className="source-detail"><p>対象運行日：{station.timetablePath?`${table.validFrom}〜${table.validTo}のうち${table.serviceDates?.length}日（選択日 ${day}）`:table.serviceDates?.join('、')??`曜日別（${table.dayType}）`} ／ 検証状態：{table.verification==='verified'?'出典照合済':table.verification==='partial'?'一部検証・現行未確認':'未検証'}</p><p>取得：{table.retrievedAt}</p><p>確認：{table.checkedAt} ／ 掲載改正：{table.revisionDate??'不明'} ／ 適用：{table.validFrom??'不明'} 〜 {table.validTo??'終了日未公表'}</p><a href={table.sourceUrl} target="_blank" rel="noreferrer">選択中の時刻表出典 ↗</a><ul>{table.notes.map((note,i)=><li key={i}>{note}</li>)}</ul></div>}<div className="coverage-grid">{stations.filter(s=>!s.timetablePath).map(s=>{const acquired=tables.filter(t=>t.stationId===s.id);const count=acquired.length;const checked=acquired.filter(t=>t.verification==='verified').length;const available=s.directions.filter(d=>availability(selectTable(tables,s.id,d.id,day),day,now)==='ready').length;return <div key={s.id}><strong>{s.name}</strong><span>{s.operator} / {s.line}</span><b>{count?`${count}表を取得済 / ${checked===count?'出典照合済':'現行未確認あり'}`:'未取得・取込保留'}</b>{count>0&&<small>{available?`選択運行日に利用可：${available}方面`:'選択運行日は判定不可'}</small>}<a href={s.sourceUrl} target="_blank" rel="noreferrer">公式ページ ↗</a></div>;})}</div><p>出典：神戸市交通局「地下鉄オープンデータ」を加工。<a href="https://creativecommons.org/licenses/by/2.1/jp/" target="_blank" rel="noreferrer">CC BY 2.1 JP</a>。祝日：<a href="https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html" target="_blank" rel="noreferrer">内閣府</a>。詳細な取得・保留理由は同梱README参照。</p></section>}
-   <DataCoverage/>
+   <DataCoverage stations={stations} challenge={challenge.coverage} challengeErrors={challenge.errors} challengeLoading={challenge.loading} challengeEnabled={Boolean(routingConfig?.odptChallenge?.enabled)} onRetry={challenge.retry}/>
    <PwaUpdate/>
   </main><footer className="site-footer"><span>まにあう <small> / 予定を知って、余裕をつくる。</small></span><span>現在地は経路計算時だけ送信 · アカウント不要</span><span>PWA対応 / ウィジェットは専用アプリが必要</span></footer>
  </div>;

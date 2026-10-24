@@ -22,7 +22,8 @@
     "data:odpt": "python -X utf8 scripts/import-odpt.py",
     "data:odpt:refresh": "python -X utf8 scripts/import-odpt.py --refresh",
     "data:odpt:catalog": "node scripts/discover-odpt.mjs",
-    "data:odpt:audit": "python -X utf8 scripts/verify-odpt.py"
+    "data:odpt:audit": "python -X utf8 scripts/verify-odpt.py",
+    "odpt:setup": "node scripts/setup-odpt-token.mjs"
   },
   "dependencies": {
     "cheerio": "^1.2.0",

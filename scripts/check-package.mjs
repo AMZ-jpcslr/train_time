@@ -17,7 +17,7 @@ if(files.some(f=>/^(?:\.cache|\.git|\.env|docs|tests|test-results)(?:[/.]|$)/.te
 const stage=await mkdtemp(path.join(tmpdir(),'maniau-function-'));
 let bytes=0;
 for(const file of files){const source=path.join(root,file),target=path.join(stage,file);await mkdir(path.dirname(target),{recursive:true});await copyFile(source,target);bytes+=(await stat(source)).size;}
-const env=Object.fromEntries(Object.entries(process.env).filter(([key])=>!/^(?:UPSTASH_|KV_REST_|ROUTING_|APP_ORIGIN$|VERCEL_|VERCEL$)/.test(key)));
+const env=Object.fromEntries(Object.entries(process.env).filter(([key])=>!/^(?:ODPT_|UPSTASH_|KV_REST_|ROUTING_|APP_ORIGIN$|VERCEL_|VERCEL$)/.test(key)));
 // Import only the traced bundle, from an unrelated /tmp-style directory.
 // Missing deployment settings must fail closed rather than contact providers.
 const smoke=spawnSync(process.execPath,['--input-type=module','-e',`const {default:handler}=await import('./api/index.mjs'); if(typeof handler!=='function')throw Error('Missing serverless handler'); const headers={}; const req={method:'GET',url:'/api/config',headers:{host:'test.vercel.app'}}; let body; const res={statusCode:200,setHeader(k,v){headers[k]=v;},end(value){body=value;}}; await handler(req,res); const config=JSON.parse(body); if(res.statusCode!==200||config.enabled!==false)throw Error('Missing cloud config must disable external routing'); console.log(JSON.stringify({handlerLoaded:true,unconfiguredRoutingDisabled:true,status:res.statusCode}));`],{cwd:stage,encoding:'utf8',env:{...env,VERCEL:'1',VERCEL_URL:'test.vercel.app'}});

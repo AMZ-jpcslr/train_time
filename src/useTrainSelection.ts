@@ -1,7 +1,7 @@
 import {useEffect,useState} from 'react';
 import type {Departure} from './domain/types';
 export type ScheduledDeparture=Departure&{epoch:number};
-export const departureKey=(train:ScheduledDeparture)=>JSON.stringify([train.epoch,train.destination,train.trainType,train.platform]);
+export const departureKey=(train:ScheduledDeparture)=>JSON.stringify([train.epoch,train.destination,train.trainType,train.platform,...(train.trainNumber?[train.trainNumber]:[])]);
 export const departureRank=(index:number)=>index===0?'先発':index===1?'次発':`${index+1}本目`;
 
 export function useTrainSelection(departures:ScheduledDeparture[],context:string,now:number){

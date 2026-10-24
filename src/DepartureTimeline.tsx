@@ -71,11 +71,11 @@ export default function DepartureTimeline({trains,selected,now,walk,settings,sta
     return <article key={departureKey(train)} className={`departure-card ${active?'is-selected':''} ${past?'is-past':''}`} data-epoch={train.epoch}>
      <div className="card-kicker"><span>{past?'発車時刻を過ぎた便':departureRank(rank)}</span><b>{active?'選択中':Number(train.time.slice(0,2))>=24?'翌日':''}</b></div>
      <p className={active?'decision-train':'card-train'}><strong>{train.time} 発</strong><TrainTypeBadge stationId={station.id} type={train.trainType}/></p>
-     <p className="card-destination">{train.destination}行き <small>{train.platform?`${train.platform}番線`:'番線未確認'}</small></p>
+     <p className="card-destination">{train.destination}行き <small>{train.platform?`${train.platform}番線`:'番線未確認'}{train.trainNumber?` · 列車番号 ${train.trainNumber}`:''}</small></p>
      {active?<StayTime departure={train.epoch} now={now} walk={walk} settings={settings} placeName={placeName} preview={preview}/>:<div className="card-stay"><span>{placeName?`登録地点「${placeName}」`:'今の場所'}にいられる目安</span><strong>{past?'乗車対象にできません':!stay?'計算できません':stay.remainingMs<0?'出発目安を過ぎています':stay.remainingMs===0?'出発の目安は今です':`あと ${Math.floor(stay.seconds/60)}分`}</strong>{!past&&stay&&<p>{formatClock(stay.leaveAt).slice(0,5)} までに出発する目安</p>}</div>}
      <p className={active?'decision-countdown':'card-countdown'}>{past?'発車済み（定刻）':`電車の発車まで ${Math.max(0,Math.ceil((train.epoch-now)/60000))}分`}</p>
      <div className={`${active?'judgment':'card-judgment'} ${past?'unknown':judgment.status}`}><strong>{past?'過去の時刻表':judgment.label}</strong></div>
-     <button className={past?'past-choice':'train-choice'} disabled={past} aria-pressed={past?undefined:active} aria-label={`${past?'過去の便':departureRank(rank)} ${train.time}発 ${train.destination}行きを選ぶ`} onClick={()=>onSelect(train)}>{past?'発車済み':active?'選択中':'この電車を選ぶ'}<time className="sr-only">{train.time}</time><span className="choice-stay sr-only">{!stay?'計算できません':`${Math.floor(stay.seconds/60)}分`}</span></button>
+     <button className={past?'past-choice':'train-choice'} disabled={past} aria-pressed={past?undefined:active} aria-label={`${past?'過去の便':departureRank(rank)} ${train.time}発 ${train.destination}行き${train.trainNumber?` 列車番号${train.trainNumber}`:''}を選ぶ`} onClick={()=>onSelect(train)}>{past?'発車済み':active?'選択中':'この電車を選ぶ'}<time className="sr-only">{train.time}</time><span className="choice-stay sr-only">{!stay?'計算できません':`${Math.floor(stay.seconds/60)}分`}</span></button>
     </article>;
    }),[trains,station.id,selectedKey,now,walk.kind,'minutes' in walk?walk.minutes:null,settings.stationMinutes,placeName,preview,onSelect]);
  return <div className={`departure-timeline${vertical?' is-vertical':''}`}>

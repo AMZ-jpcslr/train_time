@@ -1,5 +1,5 @@
 export type DayType = 'weekday' | 'saturday' | 'holiday' | 'weekend';
-export interface Departure { time: string; destination: string; trainType: string | null; platform: string | null; notes?: string[] }
+export interface Departure { time: string; destination: string; trainType: string | null; platform: string | null; trainNumber?:string; notes?: string[] }
 export interface Timetable {
   id: string; stationId: string; operator: string; line: string; directionId: string; direction: string;
   dayType: DayType; departures: Departure[]; sourceUrl: string; retrievedAt: string; checkedAt: string;
@@ -7,7 +7,7 @@ export interface Timetable {
   serviceDates?: string[]; excludedDates?: string[];
   verification: 'verified' | 'partial' | 'unverified'; notes: string[];
 }
-export interface Station { id: string; name: string; operator: string; line: string; code: string; lat: number; lon: number; directions: { id: string; name: string }[]; sourceUrl: string; aliases?:string[]; region?:string; timetablePath?:string }
+export interface Station { id: string; name: string; operator: string; line: string; code: string; lat: number; lon: number; directions: { id: string; name: string }[]; sourceUrl: string; aliases?:string[]; region?:string; timetablePath?:string; challengeProvider?:string }
 export interface SavedPlace { id: string; name: string; stationId: string; entrance: string; walkMinutes: number }
 export interface Position { lat: number; lon: number; accuracy: number; timestamp: number }
 export interface Entrance {id:string;stationId:string;name:string;lat:number;lon:number;sourceUrl:string;checkedAt:string;note?:string}
