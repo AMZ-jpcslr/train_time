@@ -4,7 +4,7 @@ import {releaseLock} from './redis.mjs';
 const ROOT='https://api.transit.ls8h.com',TTL=3600000;
 const feeds=new Map(catalog.feeds.map(f=>[f.feedId,f]));
 const operator=id=>id.startsWith('jrwest-')?'JR西日本':id==='scrape-hankyu'?'阪急電鉄':'阪神電気鉄道';
-export const westernCoverage=catalog.feeds.map(f=>({operator:operator(f.feedId),line:f.name,sourceUrl:f.downloadUrl,sourceRetrievedAt:f.fetchedAt}));
+export const westernCoverage=catalog.feeds.flatMap(f=>(f.lines?.length?f.lines:[f.name]).map(line=>({operator:operator(f.feedId),line,sourceUrl:f.downloadUrl,sourceRetrievedAt:f.fetchedAt})));
 function decode(id){
  if(typeof id!=='string'||!/^western-[A-Za-z0-9_-]{10,900}$/.test(id))throw Error('西日本APIの駅識別子が不正です。');
  const raw=Buffer.from(id.slice(8),'base64url').toString('utf8'),feed=raw.split(':')[0];

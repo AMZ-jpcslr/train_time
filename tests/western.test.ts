@@ -1,6 +1,6 @@
 import {describe,it,expect,vi} from 'vitest';
 // @ts-expect-error Server-only public API adapter
-import {createWesternService,westernStation} from '../server/western-service.mjs';
+import {createWesternService,westernStation,westernCoverage} from '../server/western-service.mjs';
 import {validWesternStation} from '../src/domain/westernStation';
 import {validStationTables} from '../src/useStationTimetables';
 import {availability} from '../src/domain/time';
@@ -11,6 +11,11 @@ const station=westernStation(detail),now=Date.parse('2026-10-25T12:00:00+09:00')
 const departure=(n:number,seconds=14400+n*60)=>({routeName:'試験神戸線',mode:'rail',tripId:'fictional-'+n,stopId:raw,headsign:'試験行先',departureSecs:seconds,headwayBased:false});
 const response=(departures:unknown[],override={})=>Response.json({stationId:raw,date,timezone:'Asia/Tokyo',departures,...override});
 describe('western public API integration',()=>{
+ it('publishes explicit line names for all three operators instead of just the feed name',()=>{
+  expect(westernCoverage.some((row:any)=>row.operator==='阪急電鉄'&&row.line.includes('神戸線'))).toBe(true);
+  expect(westernCoverage.some((row:any)=>row.operator==='阪神電気鉄道'&&row.line.includes('なんば線'))).toBe(true);
+  expect(westernCoverage.some((row:any)=>row.operator==='JR西日本'&&row.line.includes('山陽'))).toBe(true);
+ });
  it('pages inclusively, deduplicates boundary trains and marks all results reference-only',async()=>{
   let pages=0;const fetchImpl=vi.fn(async(url:string)=>url.includes('/departures?')?response(++pages===1?Array.from({length:100},(_,i)=>departure(i)):[departure(99),departure(100)]):Response.json(detail));
   const s=createWesternService({local:true,fetchImpl,clock:()=>now,delay:async()=>{}}),tables=await s.timetable(station.id,day);

@@ -10,7 +10,12 @@
       "downloadUrl": "https://www.hanshin.co.jp/station/",
       "fetchedAt": "2026-07-03T13:03:13.844Z",
       "serviceStart": "19550321",
-      "serviceEnd": "20271123"
+      "serviceEnd": "20271123",
+      "lines": [
+        "阪神電気鉄道なんば線",
+        "阪神電気鉄道本線",
+        "阪神電気鉄道武庫川線"
+      ]
     },
     {
       "feedId": "hanshin-rail-part-02",
@@ -20,7 +25,11 @@
       "downloadUrl": "https://www.hanshin.co.jp/station/",
       "fetchedAt": "2026-07-03T13:03:13.845Z",
       "serviceStart": "19550321",
-      "serviceEnd": "20271123"
+      "serviceEnd": "20271123",
+      "lines": [
+        "阪急電鉄神戸高速線",
+        "阪神電気鉄道神戸高速線"
+      ]
     },
     {
       "feedId": "jrwest-bantan",
@@ -30,7 +39,10 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-06-29T00:24:45.632Z",
       "serviceStart": "20260619",
-      "serviceEnd": "20261229"
+      "serviceEnd": "20261229",
+      "lines": [
+        "JR播但線"
+      ]
     },
     {
       "feedId": "jrwest-etsumihoku",
@@ -40,7 +52,10 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-06-29T06:22:58.925Z",
       "serviceStart": "20260629",
-      "serviceEnd": "20261229"
+      "serviceEnd": "20261229",
+      "lines": [
+        "JR越美北線"
+      ]
     },
     {
       "feedId": "jrwest-fukuchiyama",
@@ -50,7 +65,10 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-06-30T07:16:37.401Z",
       "serviceStart": "20260619",
-      "serviceEnd": "20261229"
+      "serviceEnd": "20261229",
+      "lines": [
+        "JR福知山線"
+      ]
     },
     {
       "feedId": "jrwest-fukuen",
@@ -60,7 +78,10 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-06-28T22:56:31.092Z",
       "serviceStart": "20260629",
-      "serviceEnd": "20261229"
+      "serviceEnd": "20261229",
+      "lines": [
+        "JR福塩線"
+      ]
     },
     {
       "feedId": "jrwest-gantoku",
@@ -70,7 +91,10 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-06-28T22:22:51.056Z",
       "serviceStart": "20260619",
-      "serviceEnd": "20261229"
+      "serviceEnd": "20261229",
+      "lines": [
+        "JR岩徳線"
+      ]
     },
     {
       "feedId": "jrwest-hanwa-hagoromo",
@@ -80,7 +104,10 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-07-01T00:37:56.439Z",
       "serviceStart": "20260619",
-      "serviceEnd": "20261231"
+      "serviceEnd": "20261231",
+      "lines": [
+        "JR阪和線東羽衣支線"
+      ]
     },
     {
       "feedId": "jrwest-hanwa",
@@ -90,7 +117,10 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-06-29T01:01:21.433Z",
       "serviceStart": "20260619",
-      "serviceEnd": "20261229"
+      "serviceEnd": "20261229",
+      "lines": [
+        "JR阪和線"
+      ]
     },
     {
       "feedId": "jrwest-himi",
@@ -100,7 +130,10 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-06-29T05:59:34.663Z",
       "serviceStart": "20260629",
-      "serviceEnd": "20261229"
+      "serviceEnd": "20261229",
+      "lines": [
+        "JR氷見線"
+      ]
     },
     {
       "feedId": "jrwest-hokuriku-main",
@@ -110,7 +143,10 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-06-29T02:43:00.421Z",
       "serviceStart": "20260619",
-      "serviceEnd": "20261229"
+      "serviceEnd": "20261229",
+      "lines": [
+        "北陸本線"
+      ]
     },
     {
       "feedId": "jrwest-inbi-north",
@@ -120,7 +156,8 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-07-04T04:06:48.385Z",
       "serviceStart": "20260619",
-      "serviceEnd": "20270103"
+      "serviceEnd": "20270103",
+      "lines": []
     },
     {
       "feedId": "jrwest-johana",
@@ -130,7 +167,10 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-06-29T05:57:35.270Z",
       "serviceStart": "20260619",
-      "serviceEnd": "20261229"
+      "serviceEnd": "20261229",
+      "lines": [
+        "JR城端線"
+      ]
     },
     {
       "feedId": "jrwest-kabe",
@@ -140,7 +180,10 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-06-28T22:21:39.978Z",
       "serviceStart": "20260619",
-      "serviceEnd": "20261229"
+      "serviceEnd": "20261229",
+      "lines": [
+        "JR可部線"
+      ]
     },
     {
       "feedId": "jrwest-kakogawa",
@@ -150,7 +193,10 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-06-29T06:14:52.795Z",
       "serviceStart": "20260619",
-      "serviceEnd": "20261229"
+      "serviceEnd": "20261229",
+      "lines": [
+        "JR加古川線"
+      ]
     },
     {
       "feedId": "jrwest-kansai-kamo-kameyama",
@@ -160,7 +206,11 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-06-30T10:42:53.986Z",
       "serviceStart": "20260619",
-      "serviceEnd": "20261230"
+      "serviceEnd": "20261230",
+      "lines": [
+        "JR関西本線",
+        "JR関西線(関西本線)"
+      ]
     },
     {
       "feedId": "jrwest-katamachi",
@@ -170,7 +220,10 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-06-29T00:32:44.336Z",
       "serviceStart": "20260619",
-      "serviceEnd": "20261229"
+      "serviceEnd": "20261229",
+      "lines": [
+        "片町線"
+      ]
     },
     {
       "feedId": "jrwest-kisei",
@@ -180,7 +233,8 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-06-29T00:39:28.853Z",
       "serviceStart": "20260619",
-      "serviceEnd": "20261229"
+      "serviceEnd": "20261229",
+      "lines": []
     },
     {
       "feedId": "jrwest-kisuki",
@@ -190,7 +244,10 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-06-29T00:25:53.893Z",
       "serviceStart": "20260619",
-      "serviceEnd": "20261229"
+      "serviceEnd": "20261229",
+      "lines": [
+        "JR木次線"
+      ]
     },
     {
       "feedId": "jrwest-kosei",
@@ -200,7 +257,10 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-06-29T02:40:57.143Z",
       "serviceStart": "20260619",
-      "serviceEnd": "20261229"
+      "serviceEnd": "20261229",
+      "lines": [
+        "JR湖西線"
+      ]
     },
     {
       "feedId": "jrwest-kure",
@@ -210,7 +270,10 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-06-28T23:03:45.220Z",
       "serviceStart": "20260619",
-      "serviceEnd": "20261229"
+      "serviceEnd": "20261229",
+      "lines": [
+        "JR呉線"
+      ]
     },
     {
       "feedId": "jrwest-kusatsu",
@@ -220,7 +283,10 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-06-28T16:45:34.207Z",
       "serviceStart": "20260619",
-      "serviceEnd": "20261229"
+      "serviceEnd": "20261229",
+      "lines": [
+        "JR草津線"
+      ]
     },
     {
       "feedId": "jrwest-maizuru",
@@ -230,7 +296,10 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-06-28T22:12:21.462Z",
       "serviceStart": "20260619",
-      "serviceEnd": "20261229"
+      "serviceEnd": "20261229",
+      "lines": [
+        "JR舞鶴線"
+      ]
     },
     {
       "feedId": "jrwest-nanao",
@@ -240,7 +309,10 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-06-30T07:19:56.043Z",
       "serviceStart": "20260619",
-      "serviceEnd": "20261229"
+      "serviceEnd": "20261229",
+      "lines": [
+        "JR七尾線"
+      ]
     },
     {
       "feedId": "jrwest-obama",
@@ -250,7 +322,10 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-06-28T22:43:04.291Z",
       "serviceStart": "20260619",
-      "serviceEnd": "20261229"
+      "serviceEnd": "20261229",
+      "lines": [
+        "JR小浜線"
+      ]
     },
     {
       "feedId": "jrwest-onoda",
@@ -260,7 +335,10 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-06-28T17:38:43.576Z",
       "serviceStart": "20260629",
-      "serviceEnd": "20261229"
+      "serviceEnd": "20261229",
+      "lines": [
+        "JR小野田線"
+      ]
     },
     {
       "feedId": "jrwest-osaka-higashi",
@@ -270,7 +348,11 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-06-28T09:55:27.334Z",
       "serviceStart": "20260619",
-      "serviceEnd": "20261228"
+      "serviceEnd": "20261228",
+      "lines": [
+        "JRおおさか東線",
+        "おおさか東線"
+      ]
     },
     {
       "feedId": "jrwest-osaka-loop",
@@ -280,7 +362,12 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-06-28T10:06:07.265Z",
       "serviceStart": "20260619",
-      "serviceEnd": "20261228"
+      "serviceEnd": "20261228",
+      "lines": [
+        "JR東西線",
+        "大阪環状線",
+        "梅田貨物線"
+      ]
     },
     {
       "feedId": "jrwest-sakai",
@@ -290,7 +377,10 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-10-02T12:22:49.253Z",
       "serviceStart": "20260918",
-      "serviceEnd": "20261231"
+      "serviceEnd": "20261231",
+      "lines": [
+        "JR境線"
+      ]
     },
     {
       "feedId": "jrwest-sakurai",
@@ -300,7 +390,10 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-06-28T17:19:58.085Z",
       "serviceStart": "20260619",
-      "serviceEnd": "20261229"
+      "serviceEnd": "20261229",
+      "lines": [
+        "JR万葉まほろば線(桜井線)"
+      ]
     },
     {
       "feedId": "jrwest-sakurajima",
@@ -310,7 +403,10 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-07-01T00:41:55.631Z",
       "serviceStart": "20260619",
-      "serviceEnd": "20261231"
+      "serviceEnd": "20261231",
+      "lines": [
+        "桜島線（JRゆめ咲線）"
+      ]
     },
     {
       "feedId": "jrwest-sanin-central",
@@ -320,7 +416,8 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-06-29T00:51:55.256Z",
       "serviceStart": "20260619",
-      "serviceEnd": "20261229"
+      "serviceEnd": "20261229",
+      "lines": []
     },
     {
       "feedId": "jrwest-sanin-east",
@@ -330,7 +427,11 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-07-03T13:58:51.097Z",
       "serviceStart": "20260619",
-      "serviceEnd": "20270102"
+      "serviceEnd": "20270102",
+      "lines": [
+        "JR山陰線",
+        "山陰本線"
+      ]
     },
     {
       "feedId": "jrwest-sanin-far-west",
@@ -340,7 +441,8 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-07-03T14:01:37.245Z",
       "serviceStart": "20260619",
-      "serviceEnd": "20270102"
+      "serviceEnd": "20270102",
+      "lines": []
     },
     {
       "feedId": "jrwest-sanin-west",
@@ -350,7 +452,8 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-06-29T00:52:40.571Z",
       "serviceStart": "20260619",
-      "serviceEnd": "20261229"
+      "serviceEnd": "20261229",
+      "lines": []
     },
     {
       "feedId": "jrwest-sanyo-central",
@@ -360,7 +463,10 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-06-28T09:53:37.364Z",
       "serviceStart": "20260619",
-      "serviceEnd": "20261228"
+      "serviceEnd": "20261228",
+      "lines": [
+        "JR山陽本線"
+      ]
     },
     {
       "feedId": "jrwest-sanyo-east",
@@ -370,7 +476,10 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-06-28T09:53:37.000Z",
       "serviceStart": "20260619",
-      "serviceEnd": "20261228"
+      "serviceEnd": "20261228",
+      "lines": [
+        "山陽本線"
+      ]
     },
     {
       "feedId": "jrwest-sanyo-west",
@@ -380,7 +489,10 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-06-28T09:53:37.682Z",
       "serviceStart": "20260619",
-      "serviceEnd": "20261228"
+      "serviceEnd": "20261228",
+      "lines": [
+        "JR山陽線"
+      ]
     },
     {
       "feedId": "jrwest-takayama",
@@ -390,7 +502,8 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-07-06T08:06:43.832Z",
       "serviceStart": "20260619",
-      "serviceEnd": "20270105"
+      "serviceEnd": "20270105",
+      "lines": []
     },
     {
       "feedId": "jrwest-tokaido",
@@ -400,7 +513,12 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-06-28T10:10:49.557Z",
       "serviceStart": "20260619",
-      "serviceEnd": "20261228"
+      "serviceEnd": "20261228",
+      "lines": [
+        "JR東海道本線",
+        "JR東海道線",
+        "北方貨物線"
+      ]
     },
     {
       "feedId": "jrwest-ube",
@@ -410,7 +528,10 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-06-28T22:42:34.023Z",
       "serviceStart": "20260629",
-      "serviceEnd": "20261229"
+      "serviceEnd": "20261229",
+      "lines": [
+        "JR宇部線"
+      ]
     },
     {
       "feedId": "jrwest-wadamisaki",
@@ -420,7 +541,10 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-10-02T12:24:22.604Z",
       "serviceStart": "20260918",
-      "serviceEnd": "20261231"
+      "serviceEnd": "20261231",
+      "lines": [
+        "山陽本線（和田岬線）"
+      ]
     },
     {
       "feedId": "jrwest-wakayama",
@@ -430,7 +554,10 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-06-28T16:52:38.215Z",
       "serviceStart": "20260619",
-      "serviceEnd": "20261229"
+      "serviceEnd": "20261229",
+      "lines": [
+        "JR和歌山線"
+      ]
     },
     {
       "feedId": "jrwest-yamaguchi",
@@ -440,7 +567,10 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-06-28T23:07:50.187Z",
       "serviceStart": "20260619",
-      "serviceEnd": "20261229"
+      "serviceEnd": "20261229",
+      "lines": [
+        "JR山口線"
+      ]
     },
     {
       "feedId": "jrwest-yamatoji",
@@ -450,7 +580,10 @@
       "downloadUrl": "https://timetable.jr-odekake.net/",
       "fetchedAt": "2026-06-30T03:12:31.764Z",
       "serviceStart": "20260619",
-      "serviceEnd": "20261230"
+      "serviceEnd": "20261230",
+      "lines": [
+        "JR大和路線(関西本線)"
+      ]
     },
     {
       "feedId": "scrape-hankyu",
@@ -460,7 +593,21 @@
       "downloadUrl": "https://www.hankyu.co.jp/station/",
       "fetchedAt": "2026-06-25T04:27:44.551Z",
       "serviceStart": "19550321",
-      "serviceEnd": "20271123"
+      "serviceEnd": "20271123",
+      "lines": [
+        "阪急電鉄京都線",
+        "阪急電鉄今津線",
+        "阪急電鉄伊丹線",
+        "阪急電鉄千里線",
+        "阪急電鉄宝塚本線",
+        "阪急電鉄宝塚線",
+        "阪急電鉄嵐山線",
+        "阪急電鉄甲陽線",
+        "阪急電鉄神戸線",
+        "阪急電鉄箕面線"
+      ]
     }
-  ]
+  ],
+  "lineSourceUrl": "https://api.transit.ls8h.com/api/v1/route-map",
+  "linesCheckedAt": "2026-10-25T13:24:24.983Z"
 }
