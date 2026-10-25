@@ -4,6 +4,7 @@ import {createWesternService,westernStation} from '../server/western-service.mjs
 import {validWesternStation} from '../src/domain/westernStation';
 import {validStationTables} from '../src/useStationTimetables';
 import {availability} from '../src/domain/time';
+import {searchStations} from '../src/domain/stationSearch';
 const raw='scrape-hankyu:fictional-station',day='2026-10-25',date='20261025';
 const detail={id:raw,feedId:'scrape-hankyu',name:'試験十三',lat:34.72,lon:135.48,routes:[{name:'試験神戸線',mode:'rail'}]};
 const station=westernStation(detail),now=Date.parse('2026-10-25T12:00:00+09:00');
@@ -34,6 +35,7 @@ describe('western public API integration',()=>{
   const fetchImpl=vi.fn(async(url:string)=>url.includes('suggest?')?Response.json({stations:[{id:raw,feedId:'scrape-hankyu'},{id:'unrelated:x',feedId:'unrelated'}]}):Response.json(detail));
   const s=createWesternService({local:true,fetchImpl,clock:()=>now,delay:async()=>{}}),result=await s.search('阪急 十三');
   expect(result.stations).toEqual([station]);expect(fetchImpl.mock.calls[0][0]).toContain('q='+encodeURIComponent('十三'));
+  expect(searchStations(result.stations,'阪急試験十三')).toEqual([station]);expect(searchStations(result.stations,'阪急電鉄試験十三')).toEqual([station]);
   expect(validWesternStation({...station,sourceUrl:'https://evil.example/'})).toBe(false);await s.search('阪急 十三');expect(fetchImpl).toHaveBeenCalledTimes(2);
  });
  it('retains actual Hanshin departure times with an explicit unknown destination instead of dropping them',async()=>{
