@@ -4,6 +4,16 @@ import {request} from 'node:http';
 import {startTokenSetup} from '../scripts/setup-odpt-token.mjs';
 const sample='fictional_setup_test_token_12345';
 describe('loopback token entry',()=>{
+ it('keeps standard credentials separate and returns safe, retryable JSON errors',async()=>{
+  const onSaveError=vi.fn(),saveToken=vi.fn().mockRejectedValueOnce(Object.assign(Error(sample),{code:'ODPT_SAVE_RUNTIME'})).mockResolvedValueOnce(undefined);
+  const setup=await startTokenSetup({kind:'standard',saveToken,onSaveError});
+  const post=()=>fetch(setup.url,{method:'POST',headers:{Accept:'application/json','Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams({token:sample})});
+  try{
+   expect(await (await fetch(setup.url)).text()).toContain('通常版ODPT');
+   const failed=await post();expect(failed.status).toBe(500);const error=await failed.json();expect(error.ok).toBe(false);expect(error.message).toContain('PowerShell');expect(error.message).not.toContain(sample);expect(onSaveError).toHaveBeenCalledExactlyOnceWith('ODPT_SAVE_RUNTIME');
+   const saved=await post();expect(saved.status).toBe(200);expect((await saved.json()).ok).toBe(true);expect(saveToken).toHaveBeenLastCalledWith(sample,{kind:'standard'});
+  }finally{setup.server.close();}
+ });
  it('accepts a legitimate no-referrer form Origin:null only at the secret one-time path and never echoes the token',async()=>{
   const saveToken=vi.fn(async()=>{}),setup=await startTokenSetup({saveToken});
   try{

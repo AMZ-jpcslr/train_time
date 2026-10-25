@@ -3,7 +3,7 @@ import entranceCoverage from './data/entrance-coverage.json';
 import {stations as baseStations} from './data/stations';
 import type {Station} from './domain/types';
 import type {ChallengeCoverage} from './useChallengeCatalog';
-export default function DataCoverage({stations=baseStations,challenge=[],challengeErrors=[],challengeLoading=false,challengeEnabled=false,onRetry}:{stations?:Station[];challenge?:ChallengeCoverage[];challengeErrors?:string[];challengeLoading?:boolean;challengeEnabled?:boolean;onRetry?:()=>void}){
+export default function DataCoverage({stations=baseStations,challenge=[],challengeErrors=[],challengeLoading=false,challengeEnabled=false,onRetry,westernCoverage=[]}:{stations?:Station[];challenge?:ChallengeCoverage[];challengeErrors?:string[];challengeLoading?:boolean;challengeEnabled?:boolean;onRetry?:()=>void;westernCoverage?:{operator:string;line:string}[]}){
  const added=coverage.filter(p=>p.status==='imported');
  const legacy=stations.filter(s=>!s.timetablePath);
  const lines=[...new Set(legacy.map(s=>s.operator+' / '+s.line))];
@@ -11,6 +11,7 @@ export default function DataCoverage({stations=baseStations,challenge=[],challen
  return <section className="coverage-section" id="data-coverage" aria-label="対応路線とデータ">
   <h2>対応路線とデータ</h2>
   <p>検索対象：{stations.length}駅・路線。同じ駅名も路線ごとに表示します。時刻表は定刻の予定で、遅延・運休は反映しません。</p>
+  {westernCoverage.length>0&&<details><summary><strong>JR西日本・阪急・阪神の追加API</strong> · 駅名から追加検索</summary><p>乗車駅の検索画面で駅名を入力し「JR西日本・阪急・阪神の駅も検索」を押してください。APIに収録された駅を選択・お気に入り登録できます。全駅の収録を保証するものではありません。</p><ul>{[...new Set(westernCoverage.map(row=>row.operator))].map(name=><li key={name}>{name}：{[...new Set(westernCoverage.filter(row=>row.operator===name).map(row=>row.line))].join('、')}</li>)}</ul><p>Transit APIの非公式データを加工。原資料は2026年6〜7月に取得されたものを含み、現行ダイヤの正確性・完全性・最新性は未確認です。追加分は全方面をまとめた参考表示に限り、乗車可否を判定しません。APIに発車便がない日は公式情報をご確認ください。入口未収録の駅は実測時間を登録してください。</p><p>出典・帰属・原典の取得日は選択後の「出典・確認日」に表示します。取得キャッシュは1時間、駅検索は6時間。<a href="https://api.transit.ls8h.com/" target="_blank" rel="noreferrer">Transit API</a> · <a href="https://transit.ls8h.com/terms" target="_blank" rel="noreferrer">利用条件</a> · <a href="https://transit.ls8h.com/jr-data-statement" target="_blank" rel="noreferrer">JR由来データ取得方針</a></p></details>}
   {challengeEnabled&&<div className="challenge-coverage"><p>チャレンジ2026限定データ：サーバー側で認証して取得。元データ・トークンは公開配信ファイルに含めません。提供期間は2027-03-12までです。</p>
    {challenge.map(provider=><details key={provider.id}><summary><strong>{provider.operator}</strong> · {provider.lines.length}路線 / {provider.stationCount}駅・路線</summary>
     <ul>{provider.lines.map(line=><li key={line.name}>{line.name}：{line.stationCount}駅・路線</li>)}</ul>

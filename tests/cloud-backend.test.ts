@@ -129,11 +129,12 @@ describe('configuration, Redis transport and deployed request dispatch',()=>{
   const service={getConfig:async()=>({enabled:true}),getJrTimetables:vi.fn(async(date:string)=>({date})),route:vi.fn()},handler=createServerlessHandler(async()=>service);
   expect((await request(handler,{url:'/api?__path=config'})).data).toEqual({enabled:true});expect((await request(handler,{url:'/api/jr?date=2026-10-22'})).data.date).toBe(day);expect((await request(handler,{url:'/api/jr?date=bad'})).status).toBe(400);expect((await request(handler,{url:'/api/walking'})).status).toBe(405);expect((await request(handler,{url:'/api?__path=https://other'})).status).toBe(404);
  });
- it('preserves ODPT query parameters through the deployed rewrite without injecting a wildcard path parameter',async()=>{
+ it('preserves ODPT and western query parameters through fixed deployed rewrites',async()=>{
   const {readFile}=await import('node:fs/promises');const config=JSON.parse(await readFile(new URL('../vercel.json',import.meta.url),'utf8'));
   const odpt={catalog:vi.fn(async(provider:string)=>({provider})),timetable:vi.fn(async(station:string,date:string)=>({station,date}))};
-  const handler=createServerlessHandler(async()=>({odpt}));
-  for(const path of ['/api/odpt/catalog?provider=jr-east','/api/odpt/timetable?station=fictional&date=2026-10-24']){
+  const western={search:vi.fn(async(q:string)=>({q})),timetable:vi.fn(async(station:string,date:string)=>({station,date}))};
+  const handler=createServerlessHandler(async()=>({odpt,western}));
+  for(const path of ['/api/odpt/catalog?provider=jr-east','/api/odpt/timetable?station=fictional&date=2026-10-24','/api/western/search?q=Juso','/api/western/timetable?station=fictional&date=2026-10-24']){
    const source=new URL(path,'https://train.example'),rule=config.rewrites.find((r:any)=>r.source===source.pathname);
    expect(rule,'ODPT routes must not inject named wildcard captures into the query').toBeDefined();
    const target=new URL(rule.destination,'https://train.example');for(const [key,value] of source.searchParams)target.searchParams.append(key,value);
@@ -141,6 +142,7 @@ describe('configuration, Redis transport and deployed request dispatch',()=>{
    target.searchParams.set('path','untrusted');expect((await request(handler,{url:target.pathname+target.search})).status).toBe(400);
   }
   expect(odpt.catalog).toHaveBeenCalledExactlyOnceWith('jr-east');expect(odpt.timetable).toHaveBeenCalledExactlyOnceWith('fictional','2026-10-24');
+  expect(western.search).toHaveBeenCalledExactlyOnceWith('Juso');expect(western.timetable).toHaveBeenCalledExactlyOnceWith('fictional','2026-10-24');
  });
  it('handles Vercel parsed bodies and native streams and rejects cross-origin/oversize/malformed JSON',async()=>{
   const route=vi.fn(async(value:any)=>value),handler=createServerlessHandler(async()=>({route}));const headers={'content-type':'application/json',origin:'https://train.example'};

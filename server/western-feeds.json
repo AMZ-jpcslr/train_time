@@ -1,0 +1,466 @@
+{
+  "checkedAt": "2026-10-25T12:45:04.823Z",
+  "sourceUrl": "https://api.transit.ls8h.com/api/v1/feeds",
+  "feeds": [
+    {
+      "feedId": "hanshin-rail-part-01",
+      "name": "阪神電気鉄道 本線・阪神なんば線・武庫川線",
+      "attribution": "阪神電気鉄道公式時刻表PDF",
+      "license": "出典明記・再配布条件は原典規約に従う（スクレイプ由来）",
+      "downloadUrl": "https://www.hanshin.co.jp/station/",
+      "fetchedAt": "2026-07-03T13:03:13.844Z",
+      "serviceStart": "19550321",
+      "serviceEnd": "20271123"
+    },
+    {
+      "feedId": "hanshin-rail-part-02",
+      "name": "阪神電気鉄道 神戸高速線",
+      "attribution": "阪神電気鉄道公式時刻表PDF",
+      "license": "出典明記・再配布条件は原典規約に従う（スクレイプ由来）",
+      "downloadUrl": "https://www.hanshin.co.jp/station/",
+      "fetchedAt": "2026-07-03T13:03:13.845Z",
+      "serviceStart": "19550321",
+      "serviceEnd": "20271123"
+    },
+    {
+      "feedId": "jrwest-bantan",
+      "name": "播但線（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-06-29T00:24:45.632Z",
+      "serviceStart": "20260619",
+      "serviceEnd": "20261229"
+    },
+    {
+      "feedId": "jrwest-etsumihoku",
+      "name": "越美北線（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-06-29T06:22:58.925Z",
+      "serviceStart": "20260629",
+      "serviceEnd": "20261229"
+    },
+    {
+      "feedId": "jrwest-fukuchiyama",
+      "name": "福知山線（JR宝塚線）（尼崎〜福知山）（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-06-30T07:16:37.401Z",
+      "serviceStart": "20260619",
+      "serviceEnd": "20261229"
+    },
+    {
+      "feedId": "jrwest-fukuen",
+      "name": "福塩線（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-06-28T22:56:31.092Z",
+      "serviceStart": "20260629",
+      "serviceEnd": "20261229"
+    },
+    {
+      "feedId": "jrwest-gantoku",
+      "name": "岩徳線（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-06-28T22:22:51.056Z",
+      "serviceStart": "20260619",
+      "serviceEnd": "20261229"
+    },
+    {
+      "feedId": "jrwest-hanwa-hagoromo",
+      "name": "阪和線（羽衣線）（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-07-01T00:37:56.439Z",
+      "serviceStart": "20260619",
+      "serviceEnd": "20261231"
+    },
+    {
+      "feedId": "jrwest-hanwa",
+      "name": "阪和線（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-06-29T01:01:21.433Z",
+      "serviceStart": "20260619",
+      "serviceEnd": "20261229"
+    },
+    {
+      "feedId": "jrwest-himi",
+      "name": "氷見線（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-06-29T05:59:34.663Z",
+      "serviceStart": "20260629",
+      "serviceEnd": "20261229"
+    },
+    {
+      "feedId": "jrwest-hokuriku-main",
+      "name": "北陸本線（敦賀〜米原）（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-06-29T02:43:00.421Z",
+      "serviceStart": "20260619",
+      "serviceEnd": "20261229"
+    },
+    {
+      "feedId": "jrwest-inbi-north",
+      "name": "因美線（智頭〜鳥取）（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-07-04T04:06:48.385Z",
+      "serviceStart": "20260619",
+      "serviceEnd": "20270103"
+    },
+    {
+      "feedId": "jrwest-johana",
+      "name": "城端線（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-06-29T05:57:35.270Z",
+      "serviceStart": "20260619",
+      "serviceEnd": "20261229"
+    },
+    {
+      "feedId": "jrwest-kabe",
+      "name": "可部線（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-06-28T22:21:39.978Z",
+      "serviceStart": "20260619",
+      "serviceEnd": "20261229"
+    },
+    {
+      "feedId": "jrwest-kakogawa",
+      "name": "加古川線（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-06-29T06:14:52.795Z",
+      "serviceStart": "20260619",
+      "serviceEnd": "20261229"
+    },
+    {
+      "feedId": "jrwest-kansai-kamo-kameyama",
+      "name": "関西本線（加茂〜亀山）（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-06-30T10:42:53.986Z",
+      "serviceStart": "20260619",
+      "serviceEnd": "20261230"
+    },
+    {
+      "feedId": "jrwest-katamachi",
+      "name": "学研都市線（片町線）（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-06-29T00:32:44.336Z",
+      "serviceStart": "20260619",
+      "serviceEnd": "20261229"
+    },
+    {
+      "feedId": "jrwest-kisei",
+      "name": "きのくに線（紀勢本線）（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-06-29T00:39:28.853Z",
+      "serviceStart": "20260619",
+      "serviceEnd": "20261229"
+    },
+    {
+      "feedId": "jrwest-kisuki",
+      "name": "木次線（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-06-29T00:25:53.893Z",
+      "serviceStart": "20260619",
+      "serviceEnd": "20261229"
+    },
+    {
+      "feedId": "jrwest-kosei",
+      "name": "湖西線（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-06-29T02:40:57.143Z",
+      "serviceStart": "20260619",
+      "serviceEnd": "20261229"
+    },
+    {
+      "feedId": "jrwest-kure",
+      "name": "呉線（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-06-28T23:03:45.220Z",
+      "serviceStart": "20260619",
+      "serviceEnd": "20261229"
+    },
+    {
+      "feedId": "jrwest-kusatsu",
+      "name": "草津線（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-06-28T16:45:34.207Z",
+      "serviceStart": "20260619",
+      "serviceEnd": "20261229"
+    },
+    {
+      "feedId": "jrwest-maizuru",
+      "name": "舞鶴線（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-06-28T22:12:21.462Z",
+      "serviceStart": "20260619",
+      "serviceEnd": "20261229"
+    },
+    {
+      "feedId": "jrwest-nanao",
+      "name": "七尾線（津幡〜和倉温泉）（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-06-30T07:19:56.043Z",
+      "serviceStart": "20260619",
+      "serviceEnd": "20261229"
+    },
+    {
+      "feedId": "jrwest-obama",
+      "name": "小浜線（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-06-28T22:43:04.291Z",
+      "serviceStart": "20260619",
+      "serviceEnd": "20261229"
+    },
+    {
+      "feedId": "jrwest-onoda",
+      "name": "小野田線（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-06-28T17:38:43.576Z",
+      "serviceStart": "20260629",
+      "serviceEnd": "20261229"
+    },
+    {
+      "feedId": "jrwest-osaka-higashi",
+      "name": "おおさか東線（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-06-28T09:55:27.334Z",
+      "serviceStart": "20260619",
+      "serviceEnd": "20261228"
+    },
+    {
+      "feedId": "jrwest-osaka-loop",
+      "name": "大阪環状線（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-06-28T10:06:07.265Z",
+      "serviceStart": "20260619",
+      "serviceEnd": "20261228"
+    },
+    {
+      "feedId": "jrwest-sakai",
+      "name": "境線（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-10-02T12:22:49.253Z",
+      "serviceStart": "20260918",
+      "serviceEnd": "20261231"
+    },
+    {
+      "feedId": "jrwest-sakurai",
+      "name": "万葉まほろば線（桜井線）（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-06-28T17:19:58.085Z",
+      "serviceStart": "20260619",
+      "serviceEnd": "20261229"
+    },
+    {
+      "feedId": "jrwest-sakurajima",
+      "name": "JRゆめ咲線（桜島線）（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-07-01T00:41:55.631Z",
+      "serviceStart": "20260619",
+      "serviceEnd": "20261231"
+    },
+    {
+      "feedId": "jrwest-sanin-central",
+      "name": "山陰本線（鳥取〜松江）（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-06-29T00:51:55.256Z",
+      "serviceStart": "20260619",
+      "serviceEnd": "20261229"
+    },
+    {
+      "feedId": "jrwest-sanin-east",
+      "name": "山陰本線（京都〜鳥取）（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-07-03T13:58:51.097Z",
+      "serviceStart": "20260619",
+      "serviceEnd": "20270102"
+    },
+    {
+      "feedId": "jrwest-sanin-far-west",
+      "name": "山陰本線（益田〜下関）（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-07-03T14:01:37.245Z",
+      "serviceStart": "20260619",
+      "serviceEnd": "20270102"
+    },
+    {
+      "feedId": "jrwest-sanin-west",
+      "name": "山陰本線（松江〜益田）（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-06-29T00:52:40.571Z",
+      "serviceStart": "20260619",
+      "serviceEnd": "20261229"
+    },
+    {
+      "feedId": "jrwest-sanyo-central",
+      "name": "山陽本線（岡山〜広島）（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-06-28T09:53:37.364Z",
+      "serviceStart": "20260619",
+      "serviceEnd": "20261228"
+    },
+    {
+      "feedId": "jrwest-sanyo-east",
+      "name": "山陽本線（神戸〜岡山）（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-06-28T09:53:37.000Z",
+      "serviceStart": "20260619",
+      "serviceEnd": "20261228"
+    },
+    {
+      "feedId": "jrwest-sanyo-west",
+      "name": "山陽本線（広島〜下関）（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-06-28T09:53:37.682Z",
+      "serviceStart": "20260619",
+      "serviceEnd": "20261228"
+    },
+    {
+      "feedId": "jrwest-takayama",
+      "name": "高山本線（猪谷〜富山）（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-07-06T08:06:43.832Z",
+      "serviceStart": "20260619",
+      "serviceEnd": "20270105"
+    },
+    {
+      "feedId": "jrwest-tokaido",
+      "name": "東海道本線（JR京都線・神戸線・琵琶湖線）（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-06-28T10:10:49.557Z",
+      "serviceStart": "20260619",
+      "serviceEnd": "20261228"
+    },
+    {
+      "feedId": "jrwest-ube",
+      "name": "宇部線（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-06-28T22:42:34.023Z",
+      "serviceStart": "20260629",
+      "serviceEnd": "20261229"
+    },
+    {
+      "feedId": "jrwest-wadamisaki",
+      "name": "山陽本線（和田岬線）（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-10-02T12:24:22.604Z",
+      "serviceStart": "20260918",
+      "serviceEnd": "20261231"
+    },
+    {
+      "feedId": "jrwest-wakayama",
+      "name": "和歌山線（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-06-28T16:52:38.215Z",
+      "serviceStart": "20260619",
+      "serviceEnd": "20261229"
+    },
+    {
+      "feedId": "jrwest-yamaguchi",
+      "name": "山口線（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-06-28T23:07:50.187Z",
+      "serviceStart": "20260619",
+      "serviceEnd": "20261229"
+    },
+    {
+      "feedId": "jrwest-yamatoji",
+      "name": "大和路線（関西本線）（加茂〜JR難波）（JR西日本）",
+      "attribution": "JRおでかけネット 駅時刻表",
+      "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+      "downloadUrl": "https://timetable.jr-odekake.net/",
+      "fetchedAt": "2026-06-30T03:12:31.764Z",
+      "serviceStart": "20260619",
+      "serviceEnd": "20261230"
+    },
+    {
+      "feedId": "scrape-hankyu",
+      "name": "阪急電鉄",
+      "attribution": "阪急電鉄公式時刻表",
+      "license": "出典明記・再配布条件は原典規約に従う（スクレイプ由来）",
+      "downloadUrl": "https://www.hankyu.co.jp/station/",
+      "fetchedAt": "2026-06-25T04:27:44.551Z",
+      "serviceStart": "19550321",
+      "serviceEnd": "20271123"
+    }
+  ]
+}

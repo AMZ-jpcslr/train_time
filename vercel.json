@@ -15,7 +15,9 @@
     { "source": "/api/jr", "destination": "/api?__path=jr" },
     { "source": "/api/walking", "destination": "/api?__path=walking" },
     { "source": "/api/odpt/catalog", "destination": "/api?__path=odpt/catalog" },
-    { "source": "/api/odpt/timetable", "destination": "/api?__path=odpt/timetable" }
+    { "source": "/api/odpt/timetable", "destination": "/api?__path=odpt/timetable" },
+    { "source": "/api/western/search", "destination": "/api?__path=western/search" },
+    { "source": "/api/western/timetable", "destination": "/api?__path=western/timetable" }
   ],
   "headers": [
     { "source": "/sw.js", "headers": [{ "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }] },

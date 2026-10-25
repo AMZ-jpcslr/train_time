@@ -15,6 +15,7 @@ import StationPicker from './StationPicker';
 import DataCoverage from './DataCoverage';
 import {useStationTimetables} from './useStationTimetables';
 import {useChallengeCatalog} from './useChallengeCatalog';
+import {useWesternStations} from './useWesternStations';
 import DepartureTimeline from './DepartureTimeline';
 import TrainTypeBadge from './TrainTypeBadge';
 import {serviceTimeline,recommendedTrain} from './domain/timeline';
@@ -48,9 +49,10 @@ export default function App(){
  const [newPlace,setNewPlace]=useState({name:'',entrance:'',minutes:''});
  const [formError,setFormError]=useState('');
  const [entranceId,setEntranceId]=useState('');
- const [routingConfig,setRoutingConfig]=useState<{enabled:boolean;contactEmail:string|null;provider:string;privacyUrl:string|null;localPrototype?:boolean;disabledReason?:string|null;deployment?:string;odptChallenge?:{enabled:boolean;configured:boolean;reason:string|null}}|null>(null);
+ const [routingConfig,setRoutingConfig]=useState<{enabled:boolean;contactEmail:string|null;provider:string;privacyUrl:string|null;localPrototype?:boolean;disabledReason?:string|null;deployment?:string;odptChallenge?:{enabled:boolean;configured:boolean;reason:string|null};western?:{enabled:boolean;coverage:{operator:string;line:string}[]}}|null>(null);
  const challenge=useChallengeCatalog(Boolean(routingConfig?.odptChallenge?.enabled),now);
- const stations=useMemo(()=>[...baseStations,...challenge.stations],[challenge.stations]);
+ const western=useWesternStations(stored.stationId,stored.stationFavorites??[],stored.favorites);
+ const stations=useMemo(()=>[...baseStations,...challenge.stations,...western.stations],[challenge.stations,western.stations]);
  useEffect(()=>{fetch('/api/config').then(r=>r.json()).then(setRoutingConfig).catch(()=>setRoutingConfig(null));},[]);
  useEffect(()=>{const tick=()=>setNow(Date.now()); const timer=setInterval(tick,1000);document.addEventListener('visibilitychange',tick);window.addEventListener('pageshow',tick);return()=>{clearInterval(timer);document.removeEventListener('visibilitychange',tick);window.removeEventListener('pageshow',tick);};},[]);
  useEffect(()=>{setSavingError(!save(stored));},[stored]);
@@ -129,7 +131,7 @@ export default function App(){
    {savingError&&<div className="alert" role="alert">端末内保存に失敗しました。この画面を閉じると設定が失われる可能性があります。</div>}
    <section className="decision-summary" aria-label="出発判断">
     <div className="decision-heading"><h2 ref={decisionHeading} tabIndex={-1}>出発判断</h2><a href="#walking-settings">徒歩条件 ↓</a></div>
-     <div className="station-controls" id="station-controls"><div className="station-badge">{station.code}</div><StationPicker stations={stations} station={station} onChange={chooseStation} favorites={stored.stationFavorites??[]} onFavorite={toggleStationFavorite}/><button className={'favorite '+(isFavorite?'active':'')} onClick={toggleFavorite} aria-pressed={isFavorite} aria-label="この駅と方面をお気に入り">{isFavorite?'★':'☆'}</button></div>
+     <div className="station-controls" id="station-controls"><div className="station-badge">{station.code}</div><StationPicker stations={stations} station={station} onChange={chooseStation} favorites={stored.stationFavorites??[]} onFavorite={toggleStationFavorite} onWesternSearch={routingConfig?.western?.enabled?western.search:undefined} westernLoading={western.loading} westernMessage={western.message} westernError={western.error}/><button className={'favorite '+(isFavorite?'active':'')} onClick={toggleFavorite} aria-pressed={isFavorite} aria-label="この駅と方面をお気に入り">{isFavorite?'★':'☆'}</button></div>
      <div className="line-info"><span className="line-dot"/>{station.operator} <span>/</span> {station.line}</div>
      {challenge.loading&&<p className="small-note" role="status">認証付きの駅データを確認中：{challenge.active}。取得できた駅から検索に追加します。</p>}
      {pendingSavedStation&&<p className="alert" role="status">保存した認証付きの駅はまだ読み込めていません。取得が完了するまで発車・徒歩判定を停止しています。別の駅を検索して選ぶこともできます。</p>}
@@ -158,7 +160,7 @@ export default function App(){
      {selection.notice&&<p className="selection-notice" role="status">{selection.notice}</p>}
      <div className="departure-board"><div className="board-top"><span><i className="live-dot"/> {referenceOnly?'参考時刻（現行未確認）':'発車予定'}</span><span>時刻表ベース</span></div>
       {referenceOnly&&<div className="alert" role="status">現行未確認の参考時刻です。適用ダイヤまたは検証が未確認のため、この時刻表による乗車判断はできません。徒歩経路が取得できても判定不可です。</div>}
-      {first?<><div className="next-train"><div className="train-meta"><span className="pill">{departureRank(selection.index)} · 選択中</span><TrainTypeBadge stationId={station.id} type={first.trainType}/><span className="platform">{first.platform?`${first.platform}番線`:'番線未確認'}</span></div><div className="destination-row"><div><h2>{first.destination}<small>行き</small></h2><p>{first.time} 発</p></div><div className="big-countdown"><span>{referenceOnly?'参考時刻まで':'発車まで'}</span><strong>{countdown(first.epoch).split('分')[0]}<small>{countdown(first.epoch).includes('分')?'分':''}</small></strong>{countdown(first.epoch).includes('分')&&<span className="seconds">{countdown(first.epoch).split('分')[1]}</span>}</div></div>
+      {first?<><div className="next-train"><div className="train-meta"><span className="pill">{departureRank(selection.index)} · 選択中</span><TrainTypeBadge stationId={station.id} type={first.trainType}/><span className="platform">{first.platform?`${first.platform}番線`:'番線未確認'}</span></div><div className="destination-row"><div><h2>{first.destination}<small>{first.destination==='行先未収録'?'（公式で確認）':'行き'}</small></h2><p>{first.time} 発</p></div><div className="big-countdown"><span>{referenceOnly?'参考時刻まで':'発車まで'}</span><strong>{countdown(first.epoch).split('分')[0]}<small>{countdown(first.epoch).includes('分')?'分':''}</small></strong>{countdown(first.epoch).includes('分')&&<span className="seconds">{countdown(first.epoch).split('分')[1]}</span>}</div></div>
 
       </div></>:<div className="empty-state"><span className="empty-icon">{icon('train')}</span><h2>{state==='ready'?'この運行日の発車は終了しました':availabilityLabels[state]}</h2><p>{state==='missing'?'この駅・方面・運行日の時刻表はまだ取り込んでいません。':state==='expired'?'取得元の適用期間、またはアプリの30日再確認期限を超えています。':state==='special'?'年末年始などの特別ダイヤを確認する必要があります。':state==='ready'?'終電後です。運行日をまたぐ便は翌日表示で扱います。':'確認できた時刻表が必要です。'}</p>{tomorrow&&<p>次の運行日 {addDays(day,1)} の始発：<b>{tomorrow.time} {tomorrow.destination}行き</b></p>}<a href={station.sourceUrl} target="_blank" rel="noreferrer">公式の駅情報を確認 ↗</a>{state!=='ready'&&fallbackReady&&<button onClick={()=>chooseStation('kobe-gakuentoshi')}>取得済みの学園都市を表示</button>}</div>}
       <div className="board-footer"><span>◷ 時刻表に基づく予定。遅延・運休は未反映</span><button onClick={()=>setShowSources(!showSources)}>出典・確認日 ↗</button></div>
@@ -190,7 +192,7 @@ export default function App(){
    <WidgetTransfer input={{now,preview:Boolean(preview),station,directionName:direction.name,table,settings:stored.settings,position:locating?null:position,route:walking.route,entrance,place,selectedId:first?widgetDepartureId(first):undefined}}/>
    <InstallApp/>
    {showSources&&<section className="sources" aria-label="出典とデータ対応状況"><h2>出典とデータ対応状況</h2><p>選択中：{availabilityLabels[state]}。確認日と掲載改正日を区別しています。JRは取得から6時間、曜日別時刻表は確認から30日で再確認が必要です。臨時運転の網羅は未確認です。</p>{table&&<div className="source-detail"><p>対象運行日：{station.timetablePath?`${table.validFrom}〜${table.validTo}のうち${table.serviceDates?.length}日（選択日 ${day}）`:table.serviceDates?.join('、')??`曜日別（${table.dayType}）`} ／ 検証状態：{table.verification==='verified'?'出典照合済':table.verification==='partial'?'一部検証・現行未確認':'未検証'}</p><p>取得：{table.retrievedAt}</p><p>確認：{table.checkedAt} ／ 掲載改正：{table.revisionDate??'不明'} ／ 適用：{table.validFrom??'不明'} 〜 {table.validTo??'終了日未公表'}</p><a href={table.sourceUrl} target="_blank" rel="noreferrer">選択中の時刻表出典 ↗</a><ul>{table.notes.map((note,i)=><li key={i}>{note}</li>)}</ul></div>}<div className="coverage-grid">{stations.filter(s=>!s.timetablePath).map(s=>{const acquired=tables.filter(t=>t.stationId===s.id);const count=acquired.length;const checked=acquired.filter(t=>t.verification==='verified').length;const available=s.directions.filter(d=>availability(selectTable(tables,s.id,d.id,day),day,now)==='ready').length;return <div key={s.id}><strong>{s.name}</strong><span>{s.operator} / {s.line}</span><b>{count?`${count}表を取得済 / ${checked===count?'出典照合済':'現行未確認あり'}`:'未取得・取込保留'}</b>{count>0&&<small>{available?`選択運行日に利用可：${available}方面`:'選択運行日は判定不可'}</small>}<a href={s.sourceUrl} target="_blank" rel="noreferrer">公式ページ ↗</a></div>;})}</div><p>出典：神戸市交通局「地下鉄オープンデータ」を加工。<a href="https://creativecommons.org/licenses/by/2.1/jp/" target="_blank" rel="noreferrer">CC BY 2.1 JP</a>。祝日：<a href="https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html" target="_blank" rel="noreferrer">内閣府</a>。詳細な取得・保留理由は同梱README参照。</p></section>}
-   <DataCoverage stations={stations} challenge={challenge.coverage} challengeErrors={challenge.errors} challengeLoading={challenge.loading} challengeEnabled={Boolean(routingConfig?.odptChallenge?.enabled)} onRetry={challenge.retry}/>
+   <DataCoverage stations={stations} challenge={challenge.coverage} challengeErrors={challenge.errors} challengeLoading={challenge.loading} challengeEnabled={Boolean(routingConfig?.odptChallenge?.enabled)} onRetry={challenge.retry} westernCoverage={routingConfig?.western?.enabled?routingConfig.western.coverage:[]}/>
    <PwaUpdate/>
   </main><footer className="site-footer"><span>まにあう <small> / 予定を知って、余裕をつくる。</small></span><span>現在地は経路計算時だけ送信 · アカウント不要</span><span>PWA対応 / ウィジェットは専用アプリが必要</span></footer>
  </div>;

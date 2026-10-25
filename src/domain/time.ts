@@ -28,7 +28,7 @@ export function availability(table: Timetable | undefined, day: string, now: num
   if (dayType(day)===null && !table.serviceDates) return 'calendar-unknown';
   if ((table.validFrom && day<table.validFrom)||(table.validTo && day>table.validTo)) return 'expired';
   // Product re-check policy, NOT an operator supplied validity end date.
-  const freshness=table.stationId.startsWith('challenge-')?6*3600000:30*86400000;
+  const freshness=table.stationId.startsWith('western-')?3600000:table.stationId.startsWith('challenge-')?6*3600000:30*86400000;
   if (!Number.isFinite(Date.parse(table.checkedAt)) || now-Date.parse(table.checkedAt)>freshness) return 'expired';
   if (table.verification!=='verified') return 'unverified';
   return 'ready';
