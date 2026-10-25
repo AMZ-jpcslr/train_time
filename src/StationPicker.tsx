@@ -9,7 +9,7 @@ export default function StationPicker({stations,station,onChange,favorites,onFav
 }){
  const dialog=useRef<HTMLDialogElement>(null),trigger=useRef<HTMLButtonElement>(null),input=useRef<HTMLInputElement>(null);
  const list=useRef<HTMLDivElement>(null),id=useId();
- const [open,setOpen]=useState(false),[query,setQuery]=useState(''),[limit,setLimit]=useState(40);
+ const [open,setOpen]=useState(false),[query,setQuery]=useState(''),[limit,setLimit]=useState(40),[remoteQuery,setRemoteQuery]=useState('');
  const [anchor,setAnchor]=useState({left:0,top:0});
  const searching=Boolean(query.trim());
  const matches=useMemo(()=>searching?searchStations(stations,query):stations.filter(s=>s.id===station.id||favorites.includes(s.id)),[stations,query,searching,favorites,station.id]);
@@ -18,7 +18,7 @@ export default function StationPicker({stations,station,onChange,favorites,onFav
  const show=()=>{
   const rect=trigger.current!.getBoundingClientRect();
   setAnchor({left:Math.max(16,Math.min(rect.left,window.innerWidth-456)),top:Math.max(16,Math.min(rect.bottom+10,window.innerHeight-540))});
-  setQuery('');setLimit(40);setOpen(true);dialog.current?.showModal();
+  setQuery('');setRemoteQuery('');setLimit(40);setOpen(true);dialog.current?.showModal();
  };
  const close=()=>{dialog.current?.close();setOpen(false);};
  const focusResult=(index:number)=>list.current?.querySelectorAll<HTMLButtonElement>('button[data-station-id]')[index]?.focus();
@@ -51,7 +51,7 @@ export default function StationPicker({stations,station,onChange,favorites,onFav
    <label className="station-search"><span>駅名・路線で検索</span><input ref={input} type="search" value={query} placeholder="駅名・路線・事業者・地域" autoComplete="off" onChange={event=>{setQuery(event.target.value);setLimit(40);}} onKeyDown={event=>{if(event.key==='ArrowDown'&&results.length){event.preventDefault();focusResult(0);}}}/></label>
    <p className="station-result-count" role="status">{searching?`${matches.length}件が見つかりました`:'選択中・お気に入りの駅'}<span>{stations.length}駅・路線から検索</span></p>
    <div className="station-options" ref={list}>
-    {onWesternSearch&&<div className="western-search"><button type="button" disabled={!searching||westernLoading} onClick={()=>onWesternSearch(query)}>{westernLoading?'西日本の駅を検索中…':'JR西日本・阪急・阪神の駅も検索'}</button><p className="small-note">駅名を入力して追加検索できます。「阪急 十三」など事業者名でも絞り込めます。追加時刻表は非公式APIの参考情報です。</p>{westernMessage&&<p role="status">{westernMessage}</p>}{westernError&&<p role="alert">{westernError}</p>}</div>}
+    {onWesternSearch&&<div className="western-search"><button type="button" disabled={!searching||westernLoading} onClick={()=>{setRemoteQuery(query);onWesternSearch(query);}}>{westernLoading?'西日本の駅を検索中…':'JR西日本・阪急・阪神の駅も検索'}</button><p className="small-note">駅名を入力して追加検索できます。「阪急 十三」など事業者名でも絞り込めます。追加時刻表は非公式APIの参考情報です。</p>{remoteQuery&&query===remoteQuery&&westernMessage&&<p role="status">{westernMessage}</p>}{remoteQuery&&query===remoteQuery&&westernError&&<p role="alert">{westernError}</p>}</div>}
     {!searching&&<p className="station-search-hint">駅名などを入力して検索。☆で駅を変更せずに登録できます。</p>}
     <ul className="station-search-results" aria-label="駅の検索結果">
      {results.map((s,index)=><li key={s.id} className="station-search-row">
