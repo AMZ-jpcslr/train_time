@@ -47,14 +47,13 @@ export default function ChoicePicker({label,value,options,onChange,emptyText='�
    if(event.target!==event.currentTarget)return;
    const rect=event.currentTarget.getBoundingClientRect();if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)close();
   }}>
-   <div className="choice-dialog-header"><div><span className="eyebrow">YOUR WALK / YOUR WAY</span><h2 id={`${id}-title`}>{label}を選ぶ</h2></div><button type="button" className="choice-close" ref={closeButton} aria-label={`${label}の選択を閉じる`} onClick={close}>×</button></div>
+   <div className="choice-dialog-header"><div><h2 id={`${id}-title`}>{label}を選ぶ</h2></div><button type="button" className="choice-close" ref={closeButton} aria-label={`${label}の選択を閉じる`} onClick={close}>×</button></div>
    <div ref={list} className="choice-options" role="listbox" aria-label={label} tabIndex={0} aria-activedescendant={options.length?`${id}-option-${activeIndex}`:undefined} onKeyDown={move}>
     {options.map((option,index)=><button type="button" role="option" id={`${id}-option-${index}`} key={option.id} tabIndex={-1} data-value={option.id} aria-selected={option.id===value} className={`choice-option ${index===activeIndex?'is-focused':''}`} onFocus={()=>setActive(index)} onClick={()=>select(option)}>
      <span><strong>{option.label}</strong>{option.description&&<small>{option.description}</small>}</span><span className="choice-check" aria-hidden="true">{option.id===value?'✓':'→'}</span>
     </button>)}
     {!options.length&&<p className="choice-empty">{emptyText}</p>}
    </div>
-   <p className="choice-footnote">選択した項目を徒歩時間の計算に使います。</p>
   </dialog>
  </div>;
 }

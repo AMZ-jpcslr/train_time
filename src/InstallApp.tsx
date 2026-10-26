@@ -35,12 +35,12 @@ export default function InstallApp(){
  };
  const message=state==='installed'?'アプリとして追加済みです。ホーム画面のアイコンから開けます。'
   :state==='installing'?'ブラウザの追加画面で操作を続けてください。'
-  :state==='accepted'?'追加の操作を受け付けました。ホーム画面のアイコンを確認してください。'
+  :state==='accepted'?'ホーム画面に「まにあう」のアイコンがあるか確認してください。'
   :state==='declined'?'今回は追加しませんでした。必要になったらブラウザのメニューから追加できます。'
   :state==='failed'?'追加画面を開けませんでした。下のブラウザ操作で追加してください。'
-  :'いつもの電車を、ホーム画面からすぐに確認できます。';
+  :'ホーム画面のアイコンから「まにあう」を開けます。';
  return <section className="install-app" aria-label="アプリのホーム画面追加">
-  <div className="install-summary"><span className="eyebrow">ONE TAP TO YOUR TRAIN</span><p>{state==='installed'?'ホーム画面から、いつもの電車へ。':'ホーム画面から、すぐ「まにあう」。'}</p></div>
+  <div className="install-summary"><p>{state==='installed'?'ホーム画面に追加済み':'ホーム画面から開く'}</p></div>
   <button type="button" ref={trigger} className="install-open" onClick={show} aria-haspopup="dialog" aria-expanded={open} aria-controls={id}><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 4h12v16H6zM9 8h6m-3-3v6m-3 6h6"/></svg>{state==='installed'?'追加済み・使い方':'ホーム画面に追加'}</button>
   <dialog ref={dialog} id={id} className="install-dialog" aria-labelledby={`${id}-title`} onClose={()=>{setOpen(false);trigger.current?.focus();}} onCancel={event=>{event.preventDefault();close();}} onKeyDown={event=>{
    if(event.key!=='Tab')return;
@@ -52,9 +52,9 @@ export default function InstallApp(){
    if(event.target!==event.currentTarget)return;
    const rect=event.currentTarget.getBoundingClientRect();if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)close();
   }}>
-   <div className="choice-dialog-header"><div><span className="eyebrow">TAKE THE BOARD WITH YOU</span><h2 id={`${id}-title`}>ホーム画面に追加</h2></div><button type="button" className="choice-close" aria-label="追加の案内を閉じる" onClick={close}>×</button></div>
+   <div className="choice-dialog-header"><div><h2 id={`${id}-title`}>ホーム画面に追加</h2></div><button type="button" className="choice-close" aria-label="追加の案内を閉じる" onClick={close}>×</button></div>
    <div className="install-dialog-body">
-    <div className="install-identity"><img src="/icon-192.png" alt="" width="56" height="56"/><div><strong>まにあう</strong><span>次の電車と、今いる場所にいられる時間。</span></div></div>
+    <div className="install-identity"><img src="/icon-192.png" alt="" width="56" height="56"/><div><strong>まにあう</strong><span>次の電車と、ここを出る目安を確認できます。</span></div></div>
     <p className="install-status" role="status">{message}</p>
     {available&&state!=='installed'&&<button type="button" className="install-confirm" onClick={()=>void install()}>この端末に追加する</button>}
     {state!=='installed'&&<>

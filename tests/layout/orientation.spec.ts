@@ -1,8 +1,13 @@
 import {test,expect} from '@playwright/test';
 import {mkdirSync,writeFileSync} from 'node:fs';
 import {FIXED_TIME,mockRuntime,chooseStation} from '../fixtures/runtime';
+import {openTimelineDiagram} from '../fixtures/timeline-view';
 
 for(const orientation of ['horizontal','vertical'])for(const minutes of [1,60])test(`${orientation}, walk ${minutes} minutes`,async({page},info)=>{
+ // This suite compares layout and keyboard endpoints on a paused clock. Native
+ // smooth scrolling has a separate compositor clock and need not finish in 100 ms.
+ // Live-timer rAF/touch animation remains covered in tests/interactions/timeline.spec.ts.
+ await page.emulateMedia({reducedMotion:'reduce'});
  await page.clock.install({time:new Date(FIXED_TIME.getTime()-60000)});await page.clock.pauseAt(FIXED_TIME);
  const api=await mockRuntime(page);await page.goto(`/?timeline=${orientation}`);await chooseStation(page,'kyoto-imadegawa');await page.getByRole('button',{name:'北大路・国際会館方面'}).click();
  await expect(page.locator('.stay-countdown')).toHaveText('計算できません');
@@ -13,19 +18,26 @@ for(const orientation of ['horizontal','vertical'])for(const minutes of [1,60])t
  const dir='docs/screenshots/timeline-20261023/comparison';mkdirSync(dir,{recursive:true});const name=`${info.project.name}-${orientation}-${minutes}`;
  await page.screenshot({path:`${dir}/${name}.png`});
  const initial=await page.evaluate(()=>{
-  const card=document.querySelector('.departure-card.is-selected')!,deadline=card.querySelector('.stay-deadline')!,train=card.querySelector('.decision-train')!,strip=document.querySelector('.timeline-strip')!;
+  const card=document.querySelector('.departure-card.is-selected')!,hero=document.querySelector('.action-decision')!,deadline=hero.querySelector('.stay-deadline')!,train=hero.querySelector('.decision-train')!,strip=document.querySelector('.timeline-strip')!;
   const box=(e:Element)=>{const r=e.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom};};
-  return {card:box(card),deadline:box(deadline),train:box(train),strip:box(strip),deadlineVisible:deadline.getBoundingClientRect().bottom<=innerHeight,overflow:document.documentElement.scrollWidth>innerWidth,visibleCards:[...strip.children].filter(e=>e.classList.contains('departure-card')).filter(e=>{const r=e.getBoundingClientRect(),s=strip.getBoundingClientRect();return Math.min(r.right,s.right,innerWidth)-Math.max(r.left,s.left,0)>20&&Math.min(r.bottom,s.bottom,innerHeight)-Math.max(r.top,s.top,0)>20;}).length};
+  return {card:box(card),hero:box(hero),deadline:box(deadline),train:box(train),strip:box(strip),deadlineVisible:deadline.getBoundingClientRect().bottom<=innerHeight,overflow:document.documentElement.scrollWidth>innerWidth,visibleCards:[...strip.children].filter(e=>e.classList.contains('departure-card')).filter(e=>{const r=e.getBoundingClientRect(),s=strip.getBoundingClientRect();return Math.min(r.right,s.right,innerWidth)-Math.max(r.left,s.left,0)>20&&Math.min(r.bottom,s.bottom,innerHeight)-Math.max(r.top,s.top,0)>20;}).length};
  });expect(initial.overflow).toBe(false);
- const note=(await page.locator('.is-selected .stay-note').boundingBox())!,departureCountdown=(await page.locator('.decision-countdown').boundingBox())!;
+ // The action view brings the main departure/time estimate into view after saving.
+ for(const box of [initial.train,initial.deadline]){expect(box.y).toBeGreaterThanOrEqual(0);expect(box.bottom).toBeLessThanOrEqual(page.viewportSize()!.height);expect(box.x).toBeGreaterThanOrEqual(0);expect(box.x+box.width).toBeLessThanOrEqual(page.viewportSize()!.width);}
+ const note=(await page.locator('.action-decision .stay-note').boundingBox())!,departureCountdown=(await page.locator('.action-decision .decision-countdown').boundingBox())!;
  expect(note.y+note.height).toBeLessThanOrEqual(departureCountdown.y);
  const first=await page.locator('.decision-train').innerText();await page.getByRole('button',{name:'一本後を選ぶ',exact:true}).click();await page.clock.runFor(100);expect(await page.locator('.decision-train').innerText()).not.toBe(first);
+ await openTimelineDiagram(page);
  const strip=page.locator('.timeline-strip');await strip.focus();const before=await page.locator('.rail-caption').innerText();await strip.press(orientation==='vertical'?'ArrowDown':'ArrowRight');await page.clock.runFor(100);expect(await page.locator('.rail-caption').innerText()).not.toBe(before);
  await strip.press('Home');await page.clock.runFor(100);await expect(page.locator('.departure-card').first()).toBeInViewport();await strip.press('End');await page.clock.runFor(100);await expect(page.locator('.departure-card').last()).toBeInViewport();
  await page.getByRole('button',{name:'現在付近へ',exact:true}).click();await page.clock.runFor(100);await expect(page.locator('.train-choice').first()).toBeInViewport();
- await page.getByRole('button',{name:'出発に余裕のある便へ'}).click();await page.clock.runFor(100);await expect(page.locator('.departure-card.is-selected')).toBeInViewport();
+ await page.getByRole('button',{name:'出発に余裕のある便へ'}).click();await page.clock.runFor(100);
+ await expect(page.getByRole('heading',{name:'出発判断',exact:true})).toBeFocused();await expect(page.locator('.stay-deadline')).toBeInViewport();
+ // Scroll the whole strip into the page viewport; do not scroll the selected card
+ // itself, which could conceal a broken horizontal/vertical selection alignment.
+ await strip.scrollIntoViewIfNeeded();await expect(page.locator('.departure-card.is-selected')).toBeInViewport();
  // Real browser wheel dispatch measures scroll ownership, not human task time.
- await page.evaluate(()=>window.scrollTo(0,0));const b=(await strip.boundingBox())!;await page.mouse.move(b.x+b.width/2,Math.min(b.y+120,700));
+ await strip.scrollIntoViewIfNeeded();const b=(await strip.boundingBox())!;await page.mouse.move(b.x+b.width/2,Math.min(b.y+120,page.viewportSize()!.height-10));
  const wheelBefore=await page.evaluate(()=>({page:scrollY,inner:document.querySelector('.timeline-strip')!.scrollTop}));await page.mouse.wheel(0,240);await page.clock.runFor(500);
  await expect.poll(()=>page.evaluate(()=>scrollY+document.querySelector('.timeline-strip')!.scrollTop)).not.toBe(wheelBefore.page+wheelBefore.inner);
  const wheelAfter=await page.evaluate(()=>({page:scrollY,inner:document.querySelector('.timeline-strip')!.scrollTop}));

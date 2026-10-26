@@ -1,5 +1,6 @@
 import {test,expect,type Page} from '@playwright/test';
 import {chooseStation,mockRuntime} from '../fixtures/runtime';
+import {openTimelineDiagram} from '../fixtures/timeline-view';
 
 async function setup(page:Page,measured=true){
  // Fixed Date, live timers: native scrolling and rAF must really animate.
@@ -12,6 +13,7 @@ async function setup(page:Page,measured=true){
  });
  await page.goto('/');await chooseStation(page,'kyoto-imadegawa');await page.getByRole('button',{name:'北大路・国際会館方面'}).click();
  if(measured)await measure(page);
+ await openTimelineDiagram(page);
 }
 async function measure(page:Page,minutes='1'){
  await page.getByRole('button',{name:'実測時間を使う',exact:true}).click();
@@ -37,20 +39,32 @@ async function sample(page:Page){
 async function samples(page:Page){return page.evaluate(()=>(window as typeof window&{__scrollSamples:{x:number;cursor:string;transform:string;icon:number|null}[]}).__scrollSamples);}
 async function screenshot(page:Page,name:string,project:string){await page.screenshot({path:`docs/screenshots/interactions-20261023/${process.env.INTERACTION_CAPTURE??'local'}-${project}-${name}.png`});}
 
-test('button selection animates the cards and rail together; controls are adjacent and labels fit',async({page},info)=>{
+test('selection synchronizes immediately and manual browsing animates cards and rail without changing the choice',async({page},info)=>{
  await setup(page);await aligned(page);await screenshot(page,'decision',info.project.name);
  const controls=page.getByRole('group',{name:'列車の移動と選択'});await expect(controls.getByRole('button')).toHaveCount(3);
  const bounds=await controls.getByRole('button').evaluateAll(es=>es.map(e=>e.getBoundingClientRect().toJSON()));
  expect(new Set(bounds.map(b=>b.y)).size).toBe(1);for(const b of bounds)expect(b.height).toBeGreaterThanOrEqual(44);
- const start=await page.locator('.timeline-strip').evaluate(e=>e.scrollLeft);await sample(page);
+ const selectionStart=await page.locator('.timeline-strip').evaluate(e=>e.scrollLeft);
  await page.getByRole('button',{name:'一本後を選ぶ',exact:true}).click();await aligned(page);
- await expect(page.locator('.decision-train')).toContainText('14:15 発');await expect(page.locator('.stay-deadline')).toContainText('14:11:00');
+ await expect(page.locator('.decision-train')).toContainText('14:15 発');await expect(page.locator('.stay-deadline')).toContainText('14:11');await expect(page.locator('.stay-deadline time')).toHaveAttribute('datetime','2026-10-23T05:11:00.000Z');
+ await expect(page.getByRole('heading',{name:'出発判断',exact:true})).toBeFocused();
+ await expect(page.locator('.rail-caption b')).toHaveText('14:15');
+ await expect(page.locator('.departure-card.is-selected .train-choice')).toHaveAttribute('aria-pressed','true');
+ expect(await page.locator('.timeline-strip').evaluate(e=>e.scrollLeft)).toBeGreaterThan(selectionStart+100);
+ // Selection synchronizes without animation so the hero's focus cannot cancel it.
+ // The separate browsing control still uses native smooth scrolling and rAF.
+ const chosen=await page.locator('.decision-train').textContent(),deadline=await page.locator('.stay-deadline').textContent();
+ const start=await page.locator('.timeline-strip').evaluate(e=>e.scrollLeft);await sample(page);
+ await page.getByRole('button',{name:'後の便 →',exact:true}).click();await aligned(page,'.departure-card.is-selected + .departure-card');
  const end=await page.locator('.timeline-strip').evaluate(e=>e.scrollLeft),frames=await samples(page);
  await info.attach('animation-frames',{body:JSON.stringify(frames),contentType:'application/json'});
  expect(end).toBeGreaterThan(start+100);expect(frames.filter(s=>s.x>start+5&&s.x<end-5).length).toBeGreaterThan(1);
  expect(new Set(frames.map(s=>s.cursor)).size).toBeGreaterThan(1);expect(new Set(frames.map(s=>s.transform)).size).toBeGreaterThan(2);
  // Follow the SAME train: both its card and icon must move left for a later train.
  expect(frames.some(s=>s.x>start+5&&s.icon!==null&&s.icon<frames[0].icon!-1)).toBe(true);
+ await expect(page.locator('.rail-caption b')).toHaveText('14:23');
+ await expect(page.locator('.decision-train')).toHaveText(chosen!);await expect(page.locator('.stay-deadline')).toHaveText(deadline!);
+ await expect(page.locator('.departure-card.is-selected .train-choice')).toHaveAccessibleName('次発 14:15発 国際会館行きを選ぶ');
  const labelFit=await page.locator('.rail-train small').evaluateAll(es=>es.every(e=>{const r=e.getBoundingClientRect(),p=e.closest('.rail-track')!.getBoundingClientRect();return r.bottom<=p.bottom+1&&e.scrollWidth<=e.clientWidth;}));expect(labelFit).toBe(true);
  await screenshot(page,'next',info.project.name);
  await page.getByRole('button',{name:'現在付近へ',exact:true}).click();await aligned(page,'.departure-card:has(.train-choice)');
@@ -91,7 +105,7 @@ test('reduced motion, keyboard boundaries and long operator/type names remain us
  await page.emulateMedia({reducedMotion:'reduce'});await setup(page);await aligned(page);
  const strip=page.locator('.timeline-strip');await strip.focus();await strip.press('Home');await expect(page.locator('.departure-card').first()).toBeInViewport();await expect(page.locator('.past-choice').first()).toBeDisabled();
  await strip.press('End');await expect(page.locator('.departure-card').last()).toBeInViewport();await expect(strip).toBeFocused();
- await chooseStation(page,'hankyu-umeda');await expect(page.locator('.rail-stations')).toContainText('大阪梅田');
+ await chooseStation(page,'hankyu-umeda');await openTimelineDiagram(page);await expect(page.locator('.rail-stations')).toContainText('大阪梅田');
  await expect(page.locator('.train-type[data-type-color="#EA5504"]').first()).toBeAttached();
  expect(await page.locator('html').evaluate(e=>e.scrollWidth<=e.clientWidth)).toBe(true);await screenshot(page,'hankyu',info.project.name);
 });
@@ -100,7 +114,7 @@ test('repeated selection and changing direction during animation finish at the i
  await setup(page);await aligned(page);
  const next=page.getByRole('button',{name:'一本後を選ぶ',exact:true});await next.click();await next.click();await aligned(page);
  await expect(page.locator('.decision-train')).toContainText('14:23 発');
- await next.click();await page.getByRole('button',{name:'京都・竹田・近鉄奈良方面'}).click();await aligned(page);
+ await next.click();await page.getByRole('button',{name:'京都・竹田・近鉄奈良方面'}).click();await openTimelineDiagram(page);await aligned(page);
  await expect(page.locator('.rail-stations')).toContainText('丸太町');
  await expect.poll(async()=>await page.locator('.rail-caption b').innerText()).toBe((await page.locator('.decision-train strong').innerText()).split(' ')[0]);
 });
@@ -112,11 +126,13 @@ test('official JR and Hankyu colors keep readable text and full service names',a
  const colorClock=process.env.INTERACTION_URL?new Date():new Date('2026-10-22T14:00:00+09:00');
  await page.clock.setFixedTime(colorClock);await info.attach('color-verification-clock',{body:colorClock.toISOString(),contentType:'text/plain'});
  await chooseStation(page,'jr-osaka');
+ await openTimelineDiagram(page);
  for(const color of ['#000000','#FF9900','#0000FF'])await expect(page.locator(`.train-type[data-type-color="${color}"]`).first()).toBeAttached();
  await page.locator('.departure-card:has(.train-choice):has(.train-type[data-type-color="#0000FF"]) .train-choice').first().click();await aligned(page);
- await expect(page.locator('.decision-train .train-type')).toHaveCSS('color','rgb(23, 34, 28)');
- await expect(page.locator('.decision-train .train-type')).toContainText('新快速');await screenshot(page,'jr-type',info.project.name);
+ await expect(page.locator('.action-destination .train-type')).toHaveCSS('color','rgb(23, 34, 28)');
+ await expect(page.locator('.action-destination .train-type')).toContainText('新快速');await screenshot(page,'jr-type',info.project.name);
  await chooseStation(page,'hankyu-umeda');
+ await openTimelineDiagram(page);
  await page.locator('.departure-card:has(.train-choice):has(.train-type[data-type-color="#EA5504"]) .train-choice').first().click();await aligned(page);
- await expect(page.locator('.decision-train .train-type')).toHaveCSS('border-left-color','rgb(234, 85, 4)');await screenshot(page,'hankyu-type',info.project.name);
+ await expect(page.locator('.action-destination .train-type')).toHaveCSS('border-left-color','rgb(234, 85, 4)');await screenshot(page,'hankyu-type',info.project.name);
 });

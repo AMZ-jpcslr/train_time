@@ -1,8 +1,10 @@
 import {load} from 'cheerio';
+import {SITE} from './site-metadata.mjs';
+export {SITE} from './site-metadata.mjs';
 
-export const SOCIAL_TITLE='まにあう｜次の電車と、歩く時間。';
-export const SOCIAL_DESCRIPTION='次の電車までの時間、徒歩経路、今いる場所にあと何分いられるかをまとめて確認。JR・阪急・阪神・地下鉄の予定時刻に基づく交通アプリです。';
-export const SOCIAL_IMAGE_ALT='黒い電光掲示板風の背景に「まにあう」「次の電車と、歩く時間。」「あと何分、ここにいられる？」と表示した紹介画像';
+export const SOCIAL_TITLE=SITE.title;
+export const SOCIAL_DESCRIPTION=SITE.description;
+export const SOCIAL_IMAGE_ALT=SITE.imageAlt;
 
 /** Accept only an origin; never copy paths, credentials, or arbitrary markup into a card. */
 export function normalizeSocialOrigin(value){
@@ -20,25 +22,55 @@ export function normalizeSocialOrigin(value){
 
 const escapeAttribute=value=>String(value).replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll("'",'&#39;').replaceAll('<','&lt;').replaceAll('>','&gt;');
 
+/** Root has a trailing slash; asset paths do not. Queries never become canonical pages. */
+export function canonicalUrl(origin,path='/'){
+ if(typeof path!=='string'||!/^\/(?!\/)[A-Za-z0-9/_.-]*$/.test(path)||path.split('/').includes('..'))throw Error('Canonical path must be an internal path without query or fragment.');
+ return new URL(path==='/'?path:path.replace(/\/+$/,''),normalizeSocialOrigin(origin)+'/').href;
+}
+
+/** @typedef {{'@type': 'WebSite'|'WebApplication', '@id': string, name: string, url: string, description?: string, inLanguage: string, [key: string]: unknown}} SiteEntity */
+export function buildSiteJsonLd(origin){
+ const url=canonicalUrl(origin);
+ /** @type {SiteEntity[]} */
+ const graph=[
+  {'@type':'WebSite','@id':url+'#website',name:SITE.name,url,description:SITE.description,inLanguage:SITE.language},
+  {'@type':'WebApplication','@id':url+'#app',name:SITE.name,url,description:SITE.description,inLanguage:SITE.language,applicationCategory:'TravelApplication',operatingSystem:'Web',isPartOf:{'@id':url+'#website'}},
+ ];
+ return {'@context':'https://schema.org','@graph':graph};
+}
+
+/** Only the actual public home page is indexable; no invented station routes or feeds. */
+export function buildDiscoveryAssets(origin,{indexable=true}={}){
+ const url=canonicalUrl(origin);
+ return {
+  'sitemap.xml':`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${indexable?`\n  <url><loc>${escapeAttribute(url)}</loc></url>`:''}\n</urlset>\n`,
+  'robots.txt':indexable?`User-agent: *\nAllow: /\nDisallow: /api/\nSitemap: ${canonicalUrl(origin,'/sitemap.xml')}\n`:'User-agent: *\nDisallow: /\n',
+ };
+}
+
 /** Render metadata into the server-delivered HTML, before React or browser JavaScript. */
-export function transformSocialHtml(html,origin){
+export function transformSocialHtml(html,origin,{indexable=true}={}){
  const base=normalizeSocialOrigin(origin);
- const url=base+'/';
- const image=base+'/og-image.png';
+ const url=canonicalUrl(base);
+ const image=canonicalUrl(base,SITE.imagePath);
  const $=load(html.replace(/\n?<!-- train-time:social:start -->[\s\S]*?<!-- train-time:social:end -->\n?/g,''));
+ $('title').remove();
+ $('head').prepend(`<title>${escapeAttribute(SITE.title)}</title>`);
  const tags=[
   ['name','description',SOCIAL_DESCRIPTION],
+  ['name','theme-color',SITE.themeColor],
+  ['name','robots',indexable?'index, follow, max-image-preview:large':'noindex, nofollow'],
   ['property','og:type','website'],
   ['property','og:title',SOCIAL_TITLE],
   ['property','og:description',SOCIAL_DESCRIPTION],
   ['property','og:url',url],
   ['property','og:image',image],
   ['property','og:image:type','image/png'],
-  ['property','og:image:width','1200'],
-  ['property','og:image:height','630'],
+  ['property','og:image:width',SITE.imageWidth],
+  ['property','og:image:height',SITE.imageHeight],
   ['property','og:image:alt',SOCIAL_IMAGE_ALT],
-  ['property','og:site_name','まにあう'],
-  ['property','og:locale','ja_JP'],
+  ['property','og:site_name',SITE.name],
+  ['property','og:locale',SITE.locale],
   ['name','twitter:card','summary_large_image'],
   ['name','twitter:title',SOCIAL_TITLE],
   ['name','twitter:description',SOCIAL_DESCRIPTION],
@@ -49,6 +81,8 @@ export function transformSocialHtml(html,origin){
  $('meta[property="og:image:secure_url"]').remove();
  for(const [key,name] of tags)$(`meta[${key}="${name}"]`).remove();
  $('link[rel="canonical"]').remove();
- $('head').append('\n<!-- train-time:social:start -->\n'+tags.map(([key,name,content])=>`<meta ${key}="${name}" content="${escapeAttribute(content)}">`).join('\n')+`\n<link rel="canonical" href="${escapeAttribute(url)}">\n<!-- train-time:social:end -->\n`);
+ $('script[data-site-structured-data]').remove();
+ const jsonLd=JSON.stringify(buildSiteJsonLd(base)).replaceAll('<','\\u003c');
+ $('head').append('\n<!-- train-time:social:start -->\n'+tags.map(([key,name,content])=>`<meta ${key}="${name}" content="${escapeAttribute(content)}">`).join('\n')+`\n<link rel="canonical" href="${escapeAttribute(url)}">\n<script type="application/ld+json" data-site-structured-data>${jsonLd}</script>\n<!-- train-time:social:end -->\n`);
  return $.html();
 }

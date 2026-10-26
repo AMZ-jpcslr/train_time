@@ -1,0 +1,18 @@
+.kansai-coverage { margin-block: 1.5rem; }
+.kansai-coverage h3 { font-size: 1.15rem; margin-block: 0 .6rem; }
+.kansai-coverage p { line-height: 1.65; }
+.kansai-coverage details { border-block-start: 1px solid #c1c8c6; padding-block: .35rem; }
+.kansai-coverage summary { min-height: 48px; padding: .75rem .2rem; cursor: pointer; font-weight: 700; }
+.kansai-coverage summary span { display: block; font-size: .85rem; font-weight: 400; margin: .3rem 0 0 1rem; }
+.kansai-coverage-note { font-size: .85rem; }
+.kansai-coverage-scroll { overflow-x: auto; max-height: 28rem; border: 1px solid #c1c8c6; border-radius: .3rem; }
+.kansai-coverage table { border-collapse: collapse; width: 100%; min-width: 38rem; font-size: .85rem; line-height: 1.6; }
+.kansai-coverage caption { text-align: start; padding: .7rem; font-weight: 700; }
+.kansai-coverage th, .kansai-coverage td { text-align: start; vertical-align: top; padding: .75rem; border-block-end: 1px solid #d9dedc; }
+.kansai-coverage thead th { background: #eaf0ed; color: #14261d; }
+.kansai-coverage small { display: block; margin-block-start: .3rem; font-size: .8rem; font-weight: 400; }
+.kansai-coverage-ready { font-weight: 700; }
+.kansai-coverage a { display: inline-block; min-height: 44px; padding-block: .5rem; text-decoration: underline; }
+.kansai-coverage dt { font-weight: 700; margin-block-start: 1rem; }
+.kansai-coverage dd { margin: .4rem 0 1rem; line-height: 1.7; }
+.kansai-coverage :focus-visible { outline: 3px solid #4066d9; outline-offset: 3px; }

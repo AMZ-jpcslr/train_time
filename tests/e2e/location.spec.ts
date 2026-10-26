@@ -15,7 +15,7 @@ test('a coarse first fix improves to 17m before a single walking request is made
 test('a persistent 202m fix remains reference-only with help and no routing request',async({page})=>{
  const api=await mockRuntime(page);await page.goto('/');await installControlledGps(page);await page.getByRole('button',{name:'現在地を更新',exact:true}).click();await emitGps(page,202);
  await page.clock.fastForward(19999);await expect(page.getByRole('button',{name:'取得を中止',exact:true})).toBeVisible();expect(api.walking).toHaveLength(0);await page.clock.fastForward(1);
- await expect(page.locator('.location-help')).toBeVisible();await expect(page.locator('.location-status')).toContainText('20秒確認しました');await expect(page.locator('.location-accuracy')).toContainText('推定誤差 半径約202m');await expect(page.locator('.judgment')).toContainText('判定不可');await expect(page.getByRole('button',{name:'現在地を更新',exact:true})).toBeEnabled();
+ await expect(page.locator('.location-help')).toBeVisible();await expect(page.locator('.location-status')).toContainText('現在地の誤差が大きいため、出発目安を計算できません');await expect(page.locator('.location-accuracy')).toContainText('推定誤差 半径約202m');await expect(page.locator('.judgment')).toContainText('判定不可');await expect(page.getByRole('button',{name:'現在地を更新',exact:true})).toBeEnabled();
  expect(api.walking).toHaveLength(0);expect((await gpsWatchState(page)).cleared).toEqual([1]);expect(api.external).toEqual([]);
 });
 

@@ -156,11 +156,11 @@ export function useTimetables(bundled: Timetable[], stationId: string, day: stri
   let message = current.message;
   if (current.phase === 'loading' || current.phase === 'idle') message = chosen
     ? 'JR時刻表を確認しています。同日の保存データ（取得から6時間以内）を表示しています。'
-    : 'この運行日のJR時刻表を確認しています。再取得するまで徒歩判定はできません。';
+    : 'この運行日のJR時刻表を確認しています。再取得するまで出発目安は計算できません。';
   else if (current.phase === 'offline') message += chosen
     ? ' 同日の保存データを表示中です。取得から6時間を超えると使用を停止します。'
-    : ' 利用可能な同日の保存データがありません（未取得または6時間期限切れ）。';
-  else if (current.phase === 'unavailable') message += ' この日の時刻表による徒歩判定は停止しています。';
-  else if (!chosen) message = '保存したJR時刻表の6時間期限を過ぎています。再取得するまで徒歩判定はできません。';
+    : ' この日の保存データがないか、取得から6時間を過ぎたため利用できません。';
+  else if (current.phase === 'unavailable') message += ' この日の時刻表では出発目安を計算できません。';
+  else if (!chosen) message = '保存したJR時刻表は取得から6時間を過ぎています。再取得するまで出発目安は計算できません。';
   return { tables, message: isJr ? message : '', loading: isJr && (current.phase === 'loading' || current.phase === 'idle'), refresh: () => setRefresh(value => value + 1) };
 }

@@ -51,7 +51,7 @@ jobs:
       # Source parsers use authored fixtures; data checks use normalized facts.
       # No .cache, .env, accounts, or provider calls are required by these tests.
       - name: Unit tests
-        run: npm test
+        run: npm test -- --maxWorkers=2 --testTimeout=15000
       - name: Type check and production build
         run: npm run build
       - name: Check serverless package contents
@@ -63,6 +63,8 @@ jobs:
         run: npm run test:e2e -- --workers=1
       - name: Touch gestures and WebKit timeline interactions
         run: npx playwright test --config=playwright.interactions.config.ts --workers=1
+      - name: Narrow screens and enlarged text
+        run: npx playwright test --config=playwright.layout.config.ts --workers=1
       - name: Offline PWA test
         run: npx playwright test --config=playwright.pwa.config.ts --workers=1
       - name: Upload failed browser diagnostics

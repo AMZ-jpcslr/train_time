@@ -12,7 +12,7 @@ export default function WidgetTransfer({input}:{input:WidgetInput}){
  const pending=useRef(false),timer=useRef<ReturnType<typeof setTimeout>|undefined>(undefined);
  const available=buildWidgetSnapshot(input)!==null;
  useEffect(()=>{
-  const result=(event:Event)=>{if(!pending.current)return;const detail=(event as CustomEvent).detail;if(!detail||typeof detail.ok!=='boolean')return;clearTimeout(timer.current);pending.current=false;setSending(false);setStatus(detail.ok?'ウィジェット用の情報を保存しました。ホーム画面で「まにあう」のウィジェットを追加してください。':'ウィジェットに保存できませんでした。アプリの接続先を確認して再度お試しください。');};
+  const result=(event:Event)=>{if(!pending.current)return;const detail=(event as CustomEvent).detail;if(!detail||typeof detail.ok!=='boolean')return;clearTimeout(timer.current);pending.current=false;setSending(false);setStatus(detail.ok?'ウィジェット用の情報を保存しました。ホーム画面で「まにあう」のウィジェットを追加してください。':'ウィジェットに保存できませんでした。アプリの接続先を確認して、もう一度保存してください。');};
   window.addEventListener('maniauwidgetresult',result);
   return()=>{window.removeEventListener('maniauwidgetresult',result);clearTimeout(timer.current);pending.current=false;};
  },[]);
@@ -20,8 +20,8 @@ export default function WidgetTransfer({input}:{input:WidgetInput}){
   const data=buildWidgetSnapshot({...input,now:Date.now()});const target=bridge();
   if(!data||!target){setStatus('現在の時刻表を表示してから、もう一度保存してください。');return;}
   pending.current=true;setSending(true);setStatus('ウィジェットに保存しています…');
-  timer.current=setTimeout(()=>{pending.current=false;setSending(false);setStatus('保存結果を確認できませんでした。ネイティブアプリを開き直してお試しください。');},5000);
+  timer.current=setTimeout(()=>{pending.current=false;setSending(false);setStatus('保存結果を確認できませんでした。専用アプリを開き直して、もう一度保存してください。');},5000);
   try{target.postMessage(JSON.stringify(data));}catch{clearTimeout(timer.current);pending.current=false;setSending(false);setStatus('ウィジェットへの送信に失敗しました。');}
  };
- return <section className="widget-transfer" aria-label="ホーム画面ウィジェット"><div><span className="eyebrow">HOME SCREEN WIDGET</span><h2>ホーム画面でも、出発の目安を。</h2><p>選んだ電車と次の便、今の場所を出る時刻を表示します。</p></div>{native?<div><button className="primary-button" onClick={transfer} disabled={!available||sending}>{sending?'保存中…':'選んだ電車をウィジェットに保存'}</button>{!available&&<p>実時刻の確認済み時刻表で、保存期限内（最大6時間先）の便を選ぶと保存できます。</p>}<p>選択便を含む最大5本を保存します。発車済み・期限切れになったらアプリを開いて再保存してください。</p><p>背景での徒歩時間更新は、アプリ本体の「背景更新」でONにできます。登録地点は実測時間を使います。</p></div>:<p>ウィジェットにはAndroid・iPhone用の専用アプリのインストールが必要です。下のホーム画面追加はWebアプリとしての起動用です。専用アプリのソースと導入手順はリポジトリのnativeフォルダに収録しています。</p>}<p className="small-note">位置情報と時刻表には有効期限があります。古い情報では徒歩判定を表示しません。背景更新もOS・省電力設定で停止することがあります。</p>{status&&<p role="status">{status}</p>}</section>;
+ return <section className="widget-transfer" aria-label="ホーム画面ウィジェット"><div><h2>ホーム画面ウィジェット</h2><p>選んだ電車と次の便、ここを出る目安を保存して表示します。</p></div>{native?<div><button className="primary-button" onClick={transfer} disabled={!available||sending}>{sending?'保存中…':'選んだ電車をウィジェットに保存'}</button>{!available&&<p>現在の日時で使える確認済み時刻表から、最大6時間先までの便を選ぶと保存できます。</p>}<p>選んだ便を含む最大5本を保存します。発車済み・期限切れになったらアプリを開いて保存し直してください。</p><p>画面を閉じた後の徒歩時間の更新は、専用アプリの「背景更新」でオンにできます。登録地点は実測時間を使います。</p></div>:<><p>Android・iPhone用の専用アプリが必要です。「ホーム画面に追加」で入るWebアプリには、ウィジェット機能はありません。</p><details><summary>専用アプリの導入について</summary><p>専用アプリのソースと導入手順は、リポジトリのnativeフォルダにあります。</p></details></>}<p className="small-note">位置情報と時刻表には有効期限があります。期限を過ぎると出発目安を表示しません。背景更新はOSや省電力設定で停止する場合があります。</p>{status&&<p role="status">{status}</p>}</section>;
 }

@@ -19,7 +19,7 @@ test('install prompt waits for explicit action and confirms appinstalled separat
  await installEvent(page,'accepted');expect(await promptCount(page)).toBe(0);
  const dialog=await openInstall(page);expect(await promptCount(page)).toBe(0);
  await dialog.getByRole('button',{name:'この端末に追加する',exact:true}).click();expect(await promptCount(page)).toBe(1);
- await expect(dialog.getByRole('status')).toContainText('追加の操作を受け付けました');await expect(dialog.getByRole('button',{name:'この端末に追加する',exact:true})).toHaveCount(0);
+ await expect(dialog.getByRole('status')).toContainText('アイコンがあるか確認してください');await expect(dialog.getByRole('button',{name:'この端末に追加する',exact:true})).toHaveCount(0);
  await page.evaluate(()=>window.dispatchEvent(new Event('appinstalled')));await expect(dialog.getByRole('status')).toContainText('アプリとして追加済み');
  await dialog.getByRole('button',{name:'案内を閉じる',exact:true}).click();await expect(page.getByRole('button',{name:'追加済み・使い方',exact:true})).toBeFocused();expect(api.external).toEqual([]);
 });

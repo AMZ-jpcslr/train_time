@@ -1,5 +1,6 @@
 import {test,expect} from '@playwright/test';
 import {FIXED_TIME,mockRuntime} from '../fixtures/runtime';
+import {stations} from '../../src/data/stations';
 
 test.beforeEach(async({page})=>{await page.clock.install({time:new Date(FIXED_TIME.getTime()-60_000)});await page.clock.pauseAt(FIXED_TIME);});
 
@@ -28,10 +29,15 @@ test('keyboard selection, no matches, Escape and focus containment work',async({
  const trigger=page.getByRole('button',{name:'乗車駅',exact:true});await trigger.focus();await trigger.press('Enter');
  const dialog=page.getByRole('dialog',{name:'乗車駅を選ぶ'}),search=dialog.getByLabel('駅名・路線で検索');
  await search.fill('阪神');await search.press('ArrowDown');await page.keyboard.press('Enter');await expect(trigger).toContainText('阪神甲子園');
- await trigger.click();await search.fill('神戸市営');await search.press('ArrowDown');await page.keyboard.press('End');await page.keyboard.press('Enter');await expect(trigger).toContainText('妙法寺');
+ await trigger.click();await search.fill('神戸市営');
+ const results=dialog.locator('[data-station-id]');await expect(results).toHaveCount(stations.filter(s=>s.operator==='神戸市営地下鉄').length);
+ const lastId=await results.last().getAttribute('data-station-id'),lastStation=stations.find(s=>s.id===lastId)!;
+ await search.press('ArrowDown');await expect(results.first()).toBeFocused();await page.keyboard.press('End');await expect(results.last()).toBeFocused();
+ await page.keyboard.press('Enter');await expect(trigger).toContainText(lastStation.name);
+ await expect.poll(()=>page.evaluate(()=>JSON.parse(localStorage.getItem('mania-u:v1')!).stationId)).toBe(lastId);
  await trigger.click();await search.fill('存在しない駅');await expect(dialog.locator('[data-station-id]')).toHaveCount(0);await expect(dialog).toContainText('一致する駅がありません');
  await search.press('Tab');await expect(dialog.getByRole('button',{name:'駅選択を閉じる'})).toBeFocused();
- await page.keyboard.press('Escape');await expect(dialog).not.toBeVisible();await expect(trigger).toBeFocused();await expect(trigger).toContainText('妙法寺');
+ await page.keyboard.press('Escape');await expect(dialog).not.toBeVisible();await expect(trigger).toBeFocused();await expect(trigger).toContainText(lastStation.name);
 });
 
 test('location action appears before the departure board and fits a narrow phone',async({page},info)=>{

@@ -1,5 +1,6 @@
 import {test,expect,type Page} from '@playwright/test';
 import {chooseStation,mockRuntime} from '../fixtures/runtime';
+import {openTimelineDiagram} from '../fixtures/timeline-view';
 
 const baseline=process.env.JOURNEY_BASELINE==='1';
 const capture=process.env.JOURNEY_CAPTURE??'local';
@@ -46,15 +47,20 @@ test('unknown location to measured departure, next train and saved-place reuse',
  await page.getByLabel('入口までの実測徒歩時間（分）',{exact:true}).fill('1');
  await page.getByRole('button',{name:'端末に保存して使う',exact:true}).click();
  await expect(page.locator('.stay-countdown')).toContainText('4分');
- await expect(page.locator('.stay-deadline')).toContainText('14:04:00');
+ await expect(page.locator('.stay-deadline')).toContainText(baseline?'14:04:00':'14:04');
+ if(!baseline)await expect(page.locator('.stay-deadline time')).toHaveAttribute('datetime','2026-10-23T05:04:00.000Z');
  await screenshot(page,info.project.name,'selected');
- if(!baseline)await inViewport(page,'.timeline-next');
+ if(!baseline){await inViewport(page,'.stay-deadline');await page.locator('.timeline-next').scrollIntoViewIfNeeded();await inViewport(page,'.timeline-next');expect((await page.locator('.timeline-next').boundingBox())!.height).toBeGreaterThanOrEqual(44);}
  await page.getByRole('button',{name:'一本後を選ぶ',exact:true}).click();
  await expect(page.locator('.decision-train')).toContainText('14:15 発');
  await expect(page.locator('.stay-countdown')).toContainText('11分');
- await expect(page.locator('.stay-deadline')).toContainText('14:11:00');
+ await expect(page.locator('.stay-deadline')).toContainText(baseline?'14:11:00':'14:11');
+ if(!baseline)await expect(page.locator('.stay-deadline time')).toHaveAttribute('datetime','2026-10-23T05:11:00.000Z');
  await screenshot(page,info.project.name,'next');
- if(!baseline)for(const selector of ['.rail-stations','.decision-train','.stay-countdown','.stay-deadline'])await inViewport(page,selector);
+ if(!baseline){
+  for(const selector of ['.decision-train','.stay-countdown','.stay-deadline'])await inViewport(page,selector);
+  await openTimelineDiagram(page);await page.locator('.rail-stations').scrollIntoViewIfNeeded();await inViewport(page,'.rail-stations');
+ }
  expect(await page.locator('html').evaluate(e=>e.scrollWidth<=e.clientWidth)).toBe(true);
  await page.reload();
  await expect(page.locator('.stay-countdown')).toHaveText('計算できません');

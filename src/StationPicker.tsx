@@ -33,7 +33,7 @@ export default function StationPicker({stations,station,onChange,favorites,onFav
  };
  return <div className="station-picker">
   <button ref={trigger} className="station-trigger" aria-label="乗車駅" aria-haspopup="dialog" aria-expanded={open} aria-controls={id} onClick={show}>
-   <span><small>駅を検索・選択</small><strong>{station.name}</strong></span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+   <span><small>駅を変更</small><strong>{station.name}</strong></span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
   </button>
   <dialog id={id} ref={dialog} className="station-dialog" aria-labelledby={`${id}-title`} onClose={()=>{setOpen(false);trigger.current?.focus();}} onCancel={()=>setOpen(false)}
    onKeyDown={event=>{
@@ -47,12 +47,12 @@ export default function StationPicker({stations,station,onChange,favorites,onFav
     if(event.target!==event.currentTarget)return;
     const rect=event.currentTarget.getBoundingClientRect();if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)close();
    }}>
-   <div className="station-dialog-header"><div><span className="eyebrow">FIND YOUR STATION</span><h2 id={`${id}-title`}>乗車駅を選ぶ</h2></div><button className="station-close" aria-label="駅選択を閉じる" onClick={close}>×</button></div>
+   <div className="station-dialog-header"><div><h2 id={`${id}-title`}>乗車駅を選ぶ</h2></div><button className="station-close" aria-label="駅選択を閉じる" onClick={close}>×</button></div>
    <label className="station-search"><span>駅名・路線で検索</span><input ref={input} type="search" value={query} placeholder="駅名・路線・事業者・地域" autoComplete="off" onChange={event=>{setQuery(event.target.value);setLimit(40);}} onKeyDown={event=>{if(event.key==='ArrowDown'&&results.length){event.preventDefault();focusResult(0);}}}/></label>
    <p className="station-result-count" role="status">{searching?`${matches.length}件が見つかりました`:'選択中・お気に入りの駅'}<span>{stations.length}駅・路線から検索</span></p>
    <div className="station-options" ref={list}>
-    {onWesternSearch&&<div className="western-search"><button type="button" disabled={!searching||westernLoading} onClick={()=>{setRemoteQuery(query);onWesternSearch(query);}}>{westernLoading?'西日本の駅を検索中…':'JR西日本・阪急・阪神の駅も検索'}</button><p className="small-note">駅名を入力して追加検索できます。「阪急 十三」など事業者名でも絞り込めます。追加時刻表は非公式APIの参考情報です。</p>{remoteQuery&&query===remoteQuery&&westernMessage&&<p role="status">{westernMessage}</p>}{remoteQuery&&query===remoteQuery&&westernError&&<p role="alert">{westernError}</p>}</div>}
-    {!searching&&<p className="station-search-hint">駅名などを入力して検索。☆で駅を変更せずに登録できます。</p>}
+    {onWesternSearch&&<div className="western-search"><button type="button" disabled={!searching||westernLoading} onClick={()=>{setRemoteQuery(query);onWesternSearch(query);}}>{westernLoading?'西日本の駅を検索中…':'JR西日本・阪急・阪神の駅も検索'}</button><p className="small-note">「阪急 十三」のように鉄道会社名でも絞り込めます。追加される時刻表は非公式の参考情報で、出発目安の計算には使いません。</p>{remoteQuery&&query===remoteQuery&&westernMessage&&<p role="status">{westernMessage}</p>}{remoteQuery&&query===remoteQuery&&westernError&&<p role="alert">{westernError}</p>}</div>}
+    {!searching&&<p className="station-search-hint">駅名・路線名を入力してください。☆を押すと、この端末のお気に入りに保存します。</p>}
     <ul className="station-search-results" aria-label="駅の検索結果">
      {results.map((s,index)=><li key={s.id} className="station-search-row">
       <button type="button" data-station-id={s.id} aria-label={`${s.name}（${s.operator}・${s.line}）を選択`} aria-current={s.id===station.id?'true':undefined} className="station-option" onKeyDown={event=>move(event,index)} onClick={()=>{onChange(s.id);close();}}>
@@ -64,7 +64,7 @@ export default function StationPicker({stations,station,onChange,favorites,onFav
     {searching&&matches.length===0&&<p className="station-no-results">一致する駅がありません。駅名や路線名を変えて検索してください。未対応の事業者は「対応路線とデータ」で確認できます。</p>}
     {matches.length>limit&&<button className="station-more" onClick={()=>setLimit(n=>n+40)}>さらに40件を表示（{limit} / {matches.length}件）</button>}
    </div>
-   <p className="station-dialog-footnote">同じ駅名でも事業者・路線ごとに表示。☆はこの端末に保存します。</p>
+   <p className="station-dialog-footnote">同じ駅名でも事業者・路線ごとに表示します。お気に入りはこの端末に保存します。</p>
   </dialog>
  </div>;
 }

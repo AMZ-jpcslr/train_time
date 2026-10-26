@@ -2,9 +2,14 @@ import {leavingWindow,type Walking} from './domain/journey';
 import {formatClock} from './domain/time';
 import type {Settings} from './domain/types';
 
-export default function StayTime({departure,now,walk,settings,placeName,preview}:{departure:number;now:number;walk:Walking;settings:Settings;placeName?:string;preview:boolean}){
+export default function StayTime({departure,now,walk,settings,placeName,preview,display='countdown'}:{departure:number;now:number;walk:Walking;settings:Settings;placeName?:string;preview:boolean;display?:'clock'|'countdown'}){
  const window=leavingWindow(departure,now,walk,settings);
  const past=window!==null&&window.remainingMs<0;
+ if(display==='clock')return <div className={`stay-time action-stay ${!window?'unavailable':past?'past':''}`} aria-label="今いる場所の出発目安">
+  <p className="stay-origin">{placeName?`登録地点「${placeName}」を出る目安`:'ここを出る目安'}{preview&&<small>指定時刻での試算</small>}</p>
+  {window?<div className="action-deadline-row"><p className="stay-deadline"><time dateTime={new Date(window.leaveAt).toISOString()}>{formatClock(window.leaveAt).slice(0,5)}</time><span>まで</span></p><strong className="stay-countdown">{past?'出発目安を過ぎています':window.remainingMs===0?'出発の目安は今です':<>あと <b>{Math.floor(window.seconds/60)}</b>分</>}</strong></div>:<strong className="stay-countdown">計算できません</strong>}
+  <p className="stay-note">{!window?'徒歩時間と、この日の時刻表が必要です。':past?'余裕を持って乗れるよう、後の便を選んでください。':'徒歩時間と、駅構内の移動・乗車の余裕を差し引いた目安です。'}</p>
+ </div>;
  return <div className={`stay-time ${!window?'unavailable':past?'past':''}`} aria-label="今いる場所の出発目安">
   <div className="stay-heading"><span className="eyebrow">TIME TO LEAVE</span><span>{preview?'指定時刻での試算 · ':''}選択した電車に乗る場合</span></div>
   <p className="stay-origin">{placeName?`登録地点「${placeName}」にいられる目安`:'今の場所にいられる目安'}</p>

@@ -10,7 +10,7 @@ let applyTimer:ReturnType<typeof setTimeout>|undefined;
 const publish=(next:UpdateState)=>{state=next;listeners.forEach(listener=>listener());};
 export const subscribePwaUpdate=(listener:()=>void)=>{listeners.add(listener);return()=>{listeners.delete(listener);};};
 export const getPwaUpdate=()=>state;
-const available=()=>publish({phase:'available',message:'新しいバージョンが使えます。登録地点・お気に入りを残して画面を更新します。入力途中の内容は更新前に保存してください。'});
+const available=()=>publish({phase:'available',message:'新しいバージョンが使えます。「最新版に更新」を押すと切り替わります。登録地点・お気に入りは残ります。入力途中の内容は先に保存してください。'});
 function observe(worker:ServiceWorker){
  worker.addEventListener('statechange',()=>{
   if(worker.state==='installed'&&navigator.serviceWorker.controller)available();
@@ -28,7 +28,7 @@ export function checkPwaUpdate(manual=false):Promise<void>{
  checking=registration.update().then(()=>{
   if(registration?.waiting)available();
   else if(!registration?.installing)publish({phase:'current',message:'アプリの更新を確認しました。'});
- }).catch(()=>publish({phase:'error',message:'更新を確認できませんでした。通信を確認して再度お試しください。'})).finally(()=>{checking=undefined;});
+ }).catch(()=>publish({phase:'error',message:'アプリの更新を確認できませんでした。通信状態を確認して、もう一度お試しください。'})).finally(()=>{checking=undefined;});
  return checking;
 }
 export function applyPwaUpdate(){

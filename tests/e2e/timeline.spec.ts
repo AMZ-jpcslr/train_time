@@ -1,5 +1,6 @@
 import {test,expect} from '@playwright/test';
 import {FIXED_TIME,mockRuntime,chooseStation,saveMeasuredPlace,actualTime} from '../fixtures/runtime';
+import {openTimelineDiagram} from '../fixtures/timeline-view';
 test.beforeEach(async({page})=>{
  await page.clock.install({time:new Date(FIXED_TIME.getTime()-60000)});await page.clock.pauseAt(FIXED_TIME);await mockRuntime(page);await page.goto('/');await chooseStation(page,'kyoto-imadegawa');await page.getByRole('button',{name:'北大路・国際会館方面'}).click();
 });
@@ -10,16 +11,19 @@ test('long walk reveals reachable trains beyond five, allows past/future browsin
  expect(await page.locator('.departure-card .comfortable,.departure-card .tight').count()).toBeGreaterThanOrEqual(3);
  await expect(page.locator('.departure-card.is-selected')).not.toContainText('出発目安を過ぎています');
  const selectedEpoch=Number(await page.locator('.departure-card.is-selected').getAttribute('data-epoch'));expect(selectedEpoch).toBeGreaterThanOrEqual(FIXED_TIME.getTime()+63*60000);
- await expect(page.locator('.rail-disclaimer')).toContainText('実位置ではありません');
+ await expect(page.locator('.action-decision .decision-train')).toContainText('15:08 発');await expect(page.locator('.stay-deadline time')).toHaveText('14:05');
+ await expect(page.locator('.stay-deadline time')).toHaveAttribute('datetime','2026-10-22T05:05:00.000Z');
+ await openTimelineDiagram(page);
  await page.screenshot({path:`docs/screenshots/timeline-20261023/${info.project.name}-reachable.png`});
  const strip=page.locator('.timeline-strip');await strip.focus();await strip.press('Home');await page.clock.runFor(100);
  await expect(page.locator('.departure-card').first()).toBeInViewport();await expect(page.locator('.past-choice').first()).toBeDisabled();
  const before=await page.locator('.rail-caption').innerText();await strip.press('ArrowRight');await page.clock.runFor(100);expect(await page.locator('.rail-caption').innerText()).not.toBe(before);
  await strip.press('End');await page.clock.runFor(100);await expect(page.locator('.departure-card').last()).toBeInViewport();
  await page.getByRole('button',{name:'現在付近へ',exact:true}).click();await page.clock.runFor(100);await expect(page.locator('.train-choice').first()).toBeInViewport();
- await page.getByRole('button',{name:'出発に余裕のある便へ'}).click();await page.clock.runFor(100);await expect(page.locator('.departure-card.is-selected')).toBeInViewport();
+ await page.getByRole('button',{name:'出発に余裕のある便へ'}).click();await page.clock.runFor(100);await expect(page.getByRole('heading',{name:'出発判断',exact:true})).toBeFocused();await expect(page.locator('.stay-deadline')).toBeInViewport();
+ await strip.scrollIntoViewIfNeeded();await expect(page.locator('.departure-card.is-selected')).toBeInViewport();
  expect(await page.locator('html').evaluate(e=>e.scrollWidth<=e.clientWidth)).toBe(true);
- await page.getByRole('button',{name:'京都・竹田・近鉄奈良方面'}).click();await expect(page.locator('.rail-stations')).toContainText('丸太町');
+ await page.getByRole('button',{name:'京都・竹田・近鉄奈良方面'}).click();await openTimelineDiagram(page);await expect(page.locator('.rail-stations')).toContainText('丸太町');
 });
 test('unknown location never produces reachable advice; after last departure history remains and no trains are invented',async({page},info)=>{
  await expect(page.locator('.stay-countdown')).toHaveText('計算できません');await expect(page.getByRole('button',{name:'出発に余裕のある便へ'})).toBeDisabled();

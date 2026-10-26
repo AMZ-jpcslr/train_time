@@ -10,13 +10,13 @@ test('first viewport identifies the train, leave deadline and scheduled-only lim
  await page.setViewportSize(info.project.name==='mobile'?{width:390,height:664}:{width:1280,height:720});
  await locate(page);await page.evaluate(()=>window.scrollTo(0,0));
  const summary=page.getByRole('region',{name:'出発判断',exact:true});
- await expect(summary).toContainText('今出川');await expect(summary).toContainText('北大路・国際会館方面');await expect(summary).toContainText('14:08 発');await expect(summary).toContainText('14:04:00');await expect(summary).toContainText('遅延／運休は未反映');
+ await expect(summary).toContainText('今出川');await expect(summary).toContainText('北大路・国際会館方面');await expect(summary).toContainText('14:08 発');await expect(page.locator('.stay-deadline time')).toHaveText('14:04');await expect(page.locator('.stay-deadline time')).toHaveAttribute('datetime','2026-10-22T05:04:00.000Z');await expect(summary).toContainText('遅延／運休は未反映');
  for(const selector of ['.station-controls','.decision-train','.stay-countdown','.stay-deadline','.decision-constraint']){
   const box=(await page.locator(selector).boundingBox())!;expect(box.y,`${selector} top`).toBeGreaterThanOrEqual(0);expect(box.y+box.height,`${selector} bottom`).toBeLessThanOrEqual(page.viewportSize()!.height);
  }
  const second=await page.locator('.train-choice').nth(1).locator('time').innerText();
  const next=page.getByRole('button',{name:'一本後を選ぶ',exact:true});await next.focus();await next.press('Enter');
- await expect(summary).toContainText(`${second} 発`);await expect(summary.getByRole('heading')).toBeFocused();
+ await expect(summary).toContainText(`${second} 発`);await expect(summary.getByRole('heading',{name:'出発判断',exact:true})).toBeFocused();
  await expect(page.locator('.train-choice').nth(1)).toHaveAttribute('aria-pressed','true');
  expect(await page.locator('.stay-countdown').evaluate(e=>!!e.closest('[aria-live="polite"],[aria-live="assertive"],[role="status"],[role="alert"]'))).toBe(false);
  const announced=await page.locator('.sr-only[role=status]').textContent();await page.clock.fastForward(1000);await expect(page.locator('.sr-only[role=status]')).toHaveText(announced!);
@@ -45,9 +45,10 @@ test('key decision text meets normal-text contrast and primary controls have 44p
  const ratios=await page.locator('.decision-summary').evaluate(root=>{
   const rgb=(text:string)=>text.match(/[\d.]+/g)!.slice(0,3).map(Number);
   const luminance=(text:string)=>rgb(text).map(n=>{n/=255;return n<=.04045?n/12.92:((n+.055)/1.055)**2.4;}).reduce((sum,n,i)=>sum+n*[.2126,.7152,.0722][i],0);
-  const background=luminance(getComputedStyle(root).backgroundColor);
-  return ['.station-controls','.decision-countdown','.stay-countdown','.stay-deadline','.decision-constraint'].map(selector=>{
-   const foreground=luminance(getComputedStyle(root.querySelector(selector)!).color);
+  // Test the actual text against its painted ancestor, including the new hero and station button surfaces.
+  const surface=(element:Element):string=>{let current:Element|null=element;while(current){const color=getComputedStyle(current).backgroundColor;const values=color.match(/[\d.]+/g)?.map(Number)??[];if(values.length===3||values[3]===1)return color;if(values.length===4&&values[3]!==0)throw Error('Blend translucent surface before asserting contrast');current=current.parentElement;}return 'rgb(255,255,255)';};
+  return ['.station-trigger strong','.action-destination>strong','.decision-countdown','.stay-countdown','.stay-deadline time','.decision-constraint'].map(selector=>{
+   const element=root.querySelector(selector)!;const foreground=luminance(getComputedStyle(element).color),background=luminance(surface(element));
    return (Math.max(foreground,background)+.05)/(Math.min(foreground,background)+.05);
   });
  });

@@ -39,11 +39,11 @@ export function useGeolocation() {
     setPosition(null);
     if (!navigator.geolocation) {
       setLocating(false);
-      setMessage('この環境は位置情報に対応していません。登録地点を使えます。');
+      setMessage('このブラウザでは位置情報を使えません。駅入口までの実測時間を入力してください。');
       return;
     }
     setLocating(true);
-    setMessage('現在地を確認しています。より正確な位置を最大20秒待ちます…');
+    setMessage('現在地を確認しています（最大20秒）。');
     let finished = false;
     const release = collectPosition(navigator.geolocation, sample => {
       if (run !== generation.current) return;
@@ -58,7 +58,7 @@ export function useGeolocation() {
       const quality = positionStatus(result.position, Date.now());
       setMessage(quality === 'fresh' ? '現在地を更新しました' : result.position
         ? quality === 'stale' ? '新しい位置を取得できませんでした。位置情報の設定を確認して、再取得してください。'
-          : '20秒確認しましたが、徒歩判定に必要な精度に届きませんでした。下の案内をご確認ください。'
+          : '現在地の誤差が大きいため、出発目安を計算できません。位置を取り直すか、実測時間を使ってください。'
         : geolocationError(result.errorCode ?? 2));
     });
     if (!finished) stop.current = release;

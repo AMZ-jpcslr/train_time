@@ -31,14 +31,15 @@ export function useStationTimetables(station:Station,day?:string,now=Date.now())
   let active=true;let refresh:ReturnType<typeof setTimeout>|undefined;const controller=new AbortController();
   setState({path:'',tables:[],error:''});
   fetch(path,{signal:controller.signal}).then(async response=>{
-   if(!response.ok){const failure=await response.json().catch(()=>null);throw Error(typeof failure?.error==='string'&&/^(ODPT|西日本API)/.test(failure.error)?failure.error:'時刻表を読み込めませんでした。通信状態を確認して再試行してください。');}
+   if(!response.ok&&!navigator.onLine)throw Error('オフラインのため、この駅の時刻表を読み込めません。通信が戻ってから、もう一度読み込んでください。');
+   if(!response.ok){const failure=await response.json().catch(()=>null);throw Error(typeof failure?.error==='string'&&/^(ODPT|西日本API)/.test(failure.error)?failure.error:'時刻表を読み込めませんでした。通信状態を確認して、もう一度読み込んでください。');}
    const data:unknown=await response.json();
-   if(!validStationTables(data,station))throw Error('時刻表の形式を確認できませんでした。再取得してください。');
+   if(!validStationTables(data,station))throw Error('取得した時刻表の内容を確認できませんでした。もう一度読み込んでください。');
    if(active){
     setState({path,tables:data,error:''});
     if(dated){const expires=Math.min(...data.map(t=>Date.parse(t.checkedAt)))+interval;refresh=setTimeout(()=>setAttempt(n=>n+1),Math.max(30000,expires-Date.now()+1000));}
    }
-  }).catch(error=>{if(active)setState({path,tables:[],error:error instanceof TypeError?'時刻表を読み込めませんでした。オフラインの場合は、一度オンラインでこの駅を開いてください。':error instanceof Error?error.message:'時刻表の読み込みに失敗しました。'});});
+  }).catch(error=>{if(active)setState({path,tables:[],error:error instanceof TypeError&&!navigator.onLine?'オフラインのため、この駅の時刻表を読み込めません。通信が戻ってから、もう一度読み込んでください。':error instanceof TypeError?'時刻表を読み込めませんでした。通信状態を確認して、もう一度読み込んでください。':error instanceof Error?error.message:'時刻表の読み込みに失敗しました。'});});
   return()=>{active=false;controller.abort();if(refresh)clearTimeout(refresh);};
  },[path,attempt,refreshWindow]);
  return {tables:state.path===path?state.tables:[],loading:Boolean(path&&state.path!==path),

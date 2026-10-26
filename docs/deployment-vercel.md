@@ -1,10 +1,12 @@
 # Vercel公開手順
 
-2026-10-22確認。GitHubへソースを保存し、Vercelで動かすための構成を用意した。Vercelへのプロジェクト作成、契約、データベース作成、環境変数の登録、デプロイは利用者が行う。検証範囲は [配信構成の検証](deployment-verification.md) に記録しており、実際のVercel公開成功の記録ではない。
+既存の公開先は [まにあう](https://train-time-three.vercel.app/)、GitHubは [AMZ-jpcslr/train_time](https://github.com/AMZ-jpcslr/train_time)（公開）です。mainの更新を既存のVercel連携が取り込みます。2026-10-26の改修前確認ではページと `/api/config` がHTTP 200で応答し、JR取得・徒歩計算の設定が有効でした。新しい変更の配信成功は、push後に配信されたファイルとPWA更新番号を照合して別途確認します。
+
+以下は別環境へ新規に設置する場合の手順です。プロジェクトやデータベースの新規作成、契約、環境変数の登録は既存環境の更新には不要です。過去のローカル検証は [配信構成の検証](deployment-verification.md) に保持しています。
 
 ## 1. GitHubから取り込む
 
-Vercelの **Add New → Project → Import Git Repository** で [AMZ-jpcslr/train_time](https://github.com/AMZ-jpcslr/train_time) を選択する。非公開リポジトリなので、表示されないときはVercelのGitHub連携でこのリポジトリへのアクセスを許可する。
+Vercelの **Add New → Project → Import Git Repository** で [AMZ-jpcslr/train_time](https://github.com/AMZ-jpcslr/train_time) を選択する。表示されないときはVercelのGitHub連携でこのリポジトリへのアクセスを確認する。
 
 |項目|設定|
 |---|---|
@@ -49,7 +51,7 @@ Vercel連携が `KV_REST_API_URL` / `KV_REST_API_TOKEN` を作成する場合も
 
 ## 4. デプロイ後に確認する
 
-1. HTTPSのアプリURLで11駅の選択肢が表示される。
+1. HTTPSのアプリURLで駅を検索でき、採用したB案の出発目安画面が表示される。関西の対応範囲は画面の「関西の対応状況」と最新の対応一覧で確認する。駅数だけで全方面・全曜日への対応を判断しない。
 2. `/api/config` で `deployment: "vercel"`、`enabled: true`、`jrEnabled: true` を確認する。トークン類が表示されていないことも確認する。
 3. JR駅を選び、現在の運行日の日付と「日付別公式時刻表を確認済み」を確認する。初回は4駅8方面の取得・検証に時間がかかる。元サイトの拒否や書式変更があれば、取得不能を表示する。
 4. スマートフォンから「現在地を更新」を押して位置情報を許可し、道路経路・徒歩時間・駅構内移動・乗車余裕を確認する。GPSを許可する前は位置を取得しない。
@@ -67,7 +69,7 @@ Vercel連携が `KV_REST_API_URL` / `KV_REST_API_TOKEN` を作成する場合も
 
 ## 公開範囲と権利条件
 
-GitHubは非公開で作成した。コードと正規化データ・照合記録を保存し、原HTML/PDF、`.cache`、秘密情報、個人の連絡先を含むローカル画面画像は除外する。非公開GitHubからVercelへデプロイしても、完成したWebサイトの公開範囲は別である。
+GitHubは現在公開です。コードと正規化データ・照合記録を保存し、`.cache`、秘密情報、個人の連絡先を含むローカル画面画像は除外します。原HTML/PDFは保存対象に含めません。神戸海岸線の原CSVはCC BY 2.1 JPの出典・加工表示とともに検証用の保全コピーを保存しています。取得・公開の条件は資料ごとに確認します。
 
 神戸地下鉄CSVはCC BY 2.1 JP、OSM道路・入口はODbLに従い帰属を表示。JR・阪急・駅探等について、抽出データの公開・再利用条件が解決済みという意味ではない。公開前に [READMEの出典・利用条件](../README.md#出典利用条件の境界) と各調査資料を確認する。必要ならVercelの公開範囲を制限して確認を進める。コードにデプロイ設定があることと、時刻データの再配布許諾があることを混同しない。
 

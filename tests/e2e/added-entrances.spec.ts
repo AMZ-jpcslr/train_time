@@ -2,6 +2,7 @@ import {test,expect} from '@playwright/test';
 import {mockRuntime,installGps,chooseChoice,FIXED_TIME} from '../fixtures/runtime';
 import {readFileSync} from 'node:fs';
 import type {Entrance} from '../../src/domain/types';
+import {stations as bundledStations} from '../../src/data/stations';
 const added=JSON.parse(readFileSync(new URL('../../src/data/added-entrances.json',import.meta.url),'utf8')) as Entrance[];
 import {challengeProviderNames} from '../../src/useChallengeCatalog';
 const providers=Object.keys(challengeProviderNames),did='d-'+'1'.repeat(16),checkedAt='2026-10-24T04:59:00Z';
@@ -17,7 +18,7 @@ test('added stations across all eight authenticated operators calculate GPS walk
  await page.route('**/api/config',r=>r.fulfill({json:{enabled:true,odptChallenge:{enabled:true,configured:true,reason:null}}}));
  await page.route('**/api/odpt/catalog?*',r=>r.fulfill({json:fixture(new URL(r.request().url()).searchParams.get('provider')!)}));
  await page.route('**/api/odpt/timetable?*',r=>r.fulfill({json:[]}));
- await page.goto('/');await expect(page.getByRole('region',{name:'対応路線とデータ'})).toContainText('244');
+ await page.goto('/');await expect(page.getByRole('region',{name:'対応路線とデータ'})).toContainText(`検索対象：${bundledStations.length+providers.length}駅・路線`);
  for(const provider of providers){
   const station=fixture(provider).stations[0];
   await page.getByRole('button',{name:'乗車駅',exact:true}).click();const dialog=page.getByRole('dialog',{name:'乗車駅を選ぶ'});

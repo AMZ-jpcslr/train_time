@@ -11,8 +11,8 @@ import TrainTypeBadge from './TrainTypeBadge';
 import {trainTypeColor} from './domain/trainType';
 
 
-type Props={trains:ScheduledDeparture[];selected?:ScheduledDeparture;now:number;walk:Walking;settings:Settings;station:Station;directionId:string;day:string;placeName?:string;preview:boolean;onSelect:(train:ScheduledDeparture)=>void};
-export default function DepartureTimeline({trains,selected,now,walk,settings,station,directionId,day,placeName,preview,onSelect}:Props){
+type Props={trains:ScheduledDeparture[];selected?:ScheduledDeparture;now:number;walk:Walking;settings:Settings;station:Station;directionId:string;day:string;placeName?:string;preview:boolean;onSelect:(train:ScheduledDeparture)=>void;compact?:boolean};
+export default function DepartureTimeline({trains,selected,now,walk,settings,station,directionId,day,placeName,preview,onSelect,compact=false}:Props){
  // Development-only comparison; the evaluated production layout is horizontal.
  const vertical=import.meta.env.DEV&&new URLSearchParams(location.search).get('timeline')==='vertical';
  const strip=useRef<HTMLDivElement>(null);
@@ -20,11 +20,15 @@ export default function DepartureTimeline({trains,selected,now,walk,settings,sta
  const animateUntil=useRef(0);
  const previousContext=useRef('');
  const [fractional,setFractional]=useState(0);
+ const committedFractional=useRef(0);
+ const [railOpen,setRailOpen]=useState(!compact);
  const cursor=timelineCursor(trains,fractional)??now;
  const viewIndex=Math.max(0,Math.min(trains.length-1,Math.round(fractional)));
  const selectedKey=selected?departureKey(selected):'';
- const reachable=reachableTrains(trains,now,walk,settings);
- const future=trains.filter(train=>train.epoch>now);
+ const reachable=useMemo(()=>reachableTrains(trains,now,walk,settings),[trains,now,walk,settings]);
+ const comfortable=useMemo(()=>trains.find(train=>train.epoch>now&&judge(train.epoch,now,walk,settings).status==='comfortable'),[trains,now,walk,settings]);
+ const future=useMemo(()=>trains.filter(train=>train.epoch>now),[trains,now]);
+ const futureRanks=useMemo(()=>new Map(future.map((train,index)=>[train,index])),[future]);
  const next=selected?future[future.findIndex(train=>departureKey(train)===selectedKey)+1]:undefined;
  const neighbors=neighboringStations(station.id,directionId);
  const jump=(index:number,animate=true)=>{
@@ -33,16 +37,17 @@ export default function DepartureTimeline({trains,selected,now,walk,settings,sta
    const smooth=animate&&!matchMedia('(prefers-reduced-motion: reduce)').matches;
    strip.current.scrollTo(vertical?{top:element.offsetTop-4,behavior:smooth?'smooth':'instant'}:{left:element.offsetLeft-2,behavior:smooth?'smooth':'instant'});
    // During animation the diagram follows the actual scroll position, not its destination.
-   if(!smooth){animateUntil.current=0;if(frame.current!==null)cancelAnimationFrame(frame.current);frame.current=null;setFractional(index);}
+   if(!smooth){animateUntil.current=0;if(frame.current!==null)cancelAnimationFrame(frame.current);frame.current=null;committedFractional.current=index;setFractional(index);}
    else {animateUntil.current=performance.now()+2000;onScroll();}
   }
  };
  useEffect(()=>{
   const context=`${station.id}/${directionId}/${day}`;
-  jump(selectedKey?Math.max(0,trains.findIndex(train=>departureKey(train)===selectedKey)):trains.length-1,previousContext.current===context);
+  jump(selectedKey?Math.max(0,trains.findIndex(train=>departureKey(train)===selectedKey)):trains.length-1,!compact&&previousContext.current===context);
   previousContext.current=context;
  },[selectedKey,station.id,directionId,day]);
  useEffect(()=>()=>{if(frame.current!==null)cancelAnimationFrame(frame.current);frame.current=null;},[]);
+ useEffect(()=>{if(railOpen)onScroll();},[railOpen]);
  const onScroll=()=>{
   if(frame.current!==null)return;
   frame.current=requestAnimationFrame(()=>{
@@ -56,41 +61,52 @@ export default function DepartureTimeline({trains,selected,now,walk,settings,sta
    for(let i=1;i<cards.length&&offset(cards[i])<=position;i++)base=i;
    const pitch=cards[base+1]?offset(cards[base+1])-offset(cards[base]):1;
    const index=base+(cards[base+1]?(position-offset(cards[base]))/pitch:0);
-   // Commit this small diagram update before paint: concurrent rendering can
-   // otherwise defer it until WebKit's native scroll animation has finished.
-   flushSync(()=>setFractional(Math.max(0,Math.min(trains.length-1,index))));
+   const bounded=Math.max(0,Math.min(trains.length-1,index));
+   // A closed diagram needs only the card index for keyboard/footer controls.
+   // Avoid synchronously re-rendering the timeline on every pixel of scrolling.
+   const nextFractional=railOpen?bounded:Math.round(bounded);
+   if(nextFractional!==committedFractional.current){
+    committedFractional.current=nextFractional;
+    // Keep the visible diagram synchronized with native WebKit scrolling.
+    if(railOpen)flushSync(()=>setFractional(nextFractional));
+    else setFractional(nextFractional);
+   }
    // WebKit can coalesce scroll events during native smooth scrolling.
    // Sample every frame while a button-initiated animation may still be moving.
-   if(performance.now()<animateUntil.current)onScroll();
+   if(railOpen&&performance.now()<animateUntil.current)onScroll();
   });
  };
- const iconTrains=trains.map((train,index)=>({train,index})).filter(({index})=>Math.abs(index-viewIndex)<=2);
+ const iconStart=Math.max(0,viewIndex-2);
+ const iconTrains=trains.slice(iconStart,viewIndex+3).map((train,index)=>({train,index:index+iconStart}));
  const cards=useMemo(()=>trains.map(train=>{
-    const past=train.epoch<=now,active=selectedKey===departureKey(train),rank=future.indexOf(train);
+    const past=train.epoch<=now,active=selectedKey===departureKey(train),rank=futureRanks.get(train)??-1;
     const judgment=judge(train.epoch,now,walk,settings),stay=leavingWindow(train.epoch,now,walk,settings);
     return <article key={departureKey(train)} className={`departure-card ${active?'is-selected':''} ${past?'is-past':''}`} data-epoch={train.epoch}>
      <div className="card-kicker"><span>{past?'発車時刻を過ぎた便':departureRank(rank)}</span><b>{active?'選択中':Number(train.time.slice(0,2))>=24?'翌日':''}</b></div>
-     <p className={active?'decision-train':'card-train'}><strong>{train.time} 発</strong><TrainTypeBadge stationId={station.id} type={train.trainType}/></p>
+     <p className={active&&!compact?'decision-train':'card-train'}><strong>{train.time} 発</strong><TrainTypeBadge stationId={station.id} type={train.trainType}/></p>
      <p className="card-destination">{train.destination}行き <small>{train.platform?`${train.platform}番線`:'番線未確認'}{train.trainNumber?` · 列車番号 ${train.trainNumber}`:''}</small></p>
-     {active?<StayTime departure={train.epoch} now={now} walk={walk} settings={settings} placeName={placeName} preview={preview}/>:<div className="card-stay"><span>{placeName?`登録地点「${placeName}」`:'今の場所'}にいられる目安</span><strong>{past?'乗車対象にできません':!stay?'計算できません':stay.remainingMs<0?'出発目安を過ぎています':stay.remainingMs===0?'出発の目安は今です':`あと ${Math.floor(stay.seconds/60)}分`}</strong>{!past&&stay&&<p>{formatClock(stay.leaveAt).slice(0,5)} までに出発する目安</p>}</div>}
-     <p className={active?'decision-countdown':'card-countdown'}>{past?'発車済み（定刻）':`電車の発車まで ${Math.max(0,Math.ceil((train.epoch-now)/60000))}分`}</p>
-     <div className={`${active?'judgment':'card-judgment'} ${past?'unknown':judgment.status}`}><strong>{past?'過去の時刻表':judgment.label}</strong></div>
+     {active&&!compact?<StayTime departure={train.epoch} now={now} walk={walk} settings={settings} placeName={placeName} preview={preview}/>:<div className="card-stay"><span>{placeName?`登録地点「${placeName}」`:'ここ'}を出る目安</span><strong>{past?'乗車対象にできません':!stay?'計算できません':stay.remainingMs<0?'出発目安を過ぎています':stay.remainingMs===0?'出発の目安は今です':`あと ${Math.floor(stay.seconds/60)}分`}</strong>{!past&&stay&&<p>{formatClock(stay.leaveAt).slice(0,5)} までに出発する目安</p>}</div>}
+     <p className={active&&!compact?'decision-countdown':'card-countdown'}>{past?'発車済み（定刻）':`電車の発車まで ${Math.max(0,Math.ceil((train.epoch-now)/60000))}分`}</p>
+     <div className={`${active&&!compact?'judgment':'card-judgment'} ${past?'unknown':judgment.status}`}><strong>{past?'過去の時刻表':judgment.label}</strong></div>
      <button className={past?'past-choice':'train-choice'} disabled={past} aria-pressed={past?undefined:active} aria-label={`${past?'過去の便':departureRank(rank)} ${train.time}発 ${train.destination}行き${train.trainNumber?` 列車番号${train.trainNumber}`:''}を選ぶ`} onClick={()=>onSelect(train)}>{past?'発車済み':active?'選択中':'この電車を選ぶ'}<time className="sr-only">{train.time}</time><span className="choice-stay sr-only">{!stay?'計算できません':`${Math.floor(stay.seconds/60)}分`}</span></button>
     </article>;
-   }),[trains,station.id,selectedKey,now,walk.kind,'minutes' in walk?walk.minutes:null,settings.stationMinutes,placeName,preview,onSelect]);
- return <div className={`departure-timeline${vertical?' is-vertical':''}`}>
+   }),[trains,station.id,selectedKey,now,walk.kind,'minutes' in walk?walk.minutes:null,settings.stationMinutes,placeName,preview,onSelect,compact]);
+ const rail=<>
   <div className="rail-caption"><span>時刻表の流れ <b>{formatClock(cursor).slice(0,5)}</b></span><span>閲覧時刻 · JST</span></div>
   <div className="rail-scene" aria-label={`${station.name}の線路概略図。時刻表のイメージで、列車の実位置ではありません。`} role="img">
-   <div className="rail-stations"><span>{neighbors.before}</span><strong>{station.name.replace(/^(JR|阪急|阪神)/,'')}<small>監視中の駅</small></strong><span>{neighbors.after}</span></div>
+   <div className="rail-stations"><span>{neighbors.before}</span><strong>{station.name.replace(/^(JR|阪急|阪神)/,'')}<small>選んだ駅</small></strong><span>{neighbors.after}</span></div>
    <div className="rail-track" aria-hidden="true"><i/><i/><i/>
     {iconTrains.map(({train,index})=><span className="rail-train" key={departureKey(train)} data-epoch={train.epoch} style={{transform:`translate${vertical?'Y':'X'}(${(index-fractional)*96}px)`,'--type-color':trainTypeColor(station.id,train.trainType)??'#727D78'} as CSSProperties}><svg viewBox="0 0 32 22"><rect x="2" y="2" width="28" height="15" rx="3"/><path d="M8 17v3m16-3v3M6 6h7v6H6zm13 0h7v6h-7z"/></svg><small>{train.time}</small></span>)}
    </div>
   </div>
   <p className="rail-disclaimer">時刻表の相対表示・実位置ではありません</p>
+ </>;
+ return <div className={`departure-timeline${vertical?' is-vertical':''}`}>
+  {compact?<details className="rail-disclosure" onToggle={event=>setRailOpen(event.currentTarget.open)}><summary>時刻表の流れを見る</summary>{rail}</details>:rail}
   <div className="timeline-help" role="group" aria-label="列車の移動と選択">
    <button className="timeline-next" aria-label="一本後を選ぶ" disabled={!next} onClick={()=>{if(next)onSelect(next);}}>一本後へ</button>
    <button onClick={()=>jump(Math.max(0,trains.findIndex(train=>train.epoch>now)))}>現在付近へ</button>
-   <button aria-label="出発に余裕のある便へ" disabled={!reachable.length} onClick={()=>{const train=reachable[0];if(train){jump(trains.indexOf(train));onSelect(train);}}}>余裕のある便へ</button>
+   <button aria-label="出発に余裕のある便へ" disabled={!comfortable} onClick={()=>{if(comfortable){jump(trains.indexOf(comfortable),false);onSelect(comfortable);}}}>余裕のある便へ</button>
   </div>
   <div className="timeline-strip" ref={strip} onScroll={onScroll} role="group" aria-label="時系列の列車カード" tabIndex={0} onKeyDown={event=>{
    if(event.target!==event.currentTarget)return;

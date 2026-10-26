@@ -13,6 +13,6 @@ test('installed PWA keeps checked tables offline, never invents a route and expi
  await installGps(page,'jr-osaka');await page.getByRole('button',{name:'現在地を更新',exact:true}).click();await expect(page.locator('.route-error')).toContainText('経路取得失敗');await expect(page.locator('.judgment')).toContainText('判定不可');await expect(page.locator('.route-diagram')).toHaveCount(0);
  await chooseStation(page,'kyoto-imadegawa');await expect(page.locator('.next-train')).toBeVisible();await page.getByRole('button',{name:/出典・確認日/}).click();await expect(page.locator('.source-detail')).toContainText('出典照合済');await expect(page.locator('.judgment')).toContainText('判定不可');
  await saveMeasuredPlace(page,'オフラインの登録地点');await expect(page.locator('.judgment')).not.toContainText('判定不可');await chooseStation(page,'jr-osaka');await actualTime(page,'2026-10-22T20:00:00+09:00');
- await expect(page.getByRole('heading',{name:'未取得',exact:true})).toBeVisible();await expect(page.locator('.timetable-update')).toContainText('6時間期限切れ');
+ await expect(page.getByRole('heading',{name:'未取得',exact:true})).toBeVisible();await expect(page.locator('.timetable-update')).toContainText('この日の保存データがないか、取得から6時間を過ぎたため利用できません');
  await chooseStation(page,'kyoto-imadegawa');await page.getByRole('button',{name:'現在に戻す',exact:true}).click();await actualTime(page,'2026-12-01T14:00:00+09:00');await expect(page.getByRole('heading',{name:'ダイヤ適用期間外 / 要再確認'})).toBeVisible();expect(errors).toEqual([]);expect(api.external).toEqual([]);
 });
