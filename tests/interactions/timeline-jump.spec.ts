@@ -5,7 +5,7 @@ import {openTimelineDiagram} from '../fixtures/timeline-view';
 async function setup(page:Page,measured=true){
  // Fixed Date, live timers: native scrolling and rAF must really animate.
  await page.clock.setFixedTime(new Date('2026-10-23T14:00:00+09:00'));
- if(!process.env.INTERACTION_URL)await mockRuntime(page);
+ if(!process.env.INTERACTION_URL||process.env.INTERACTION_FIXTURES==='1')await mockRuntime(page);
  await page.route('**/api/walking',route=>route.abort());
  await page.addInitScript(()=>{
   navigator.geolocation.getCurrentPosition=()=>{throw Error('Real GPS prohibited in this test');};
@@ -42,23 +42,55 @@ test('explicit return corrects a residual native snap without changing selection
  expect(await page.locator('.stay-deadline').innerText()).toBe(deadline);
 });
 
-for(const input of ['pointerdown','touchstart','wheel'])test(`a new ${input} cancels the return correction`,async({page})=>{
+for(const input of ['pointerdown','touchstart','wheel'])test(`a new ${input} after scrollend cancels the return correction`,async({page})=>{
  await setup(page);
  await page.evaluate(input=>{
   const strip=document.querySelector('.timeline-strip') as HTMLElement;
   strip.style.scrollSnapType='none';
   const scroll=strip.scrollTo.bind(strip);let first=true;
   Object.assign(window,{__manualScrollEnded:false});
-  strip.addEventListener('scrollend',()=>Object.assign(window,{__manualScrollEnded:true}),{once:true});
+  strip.addEventListener('scrollend',()=>requestAnimationFrame(()=>{
+   // The user starts browsing between scrollend and the deferred correction.
+   strip.dispatchEvent(new Event(input,{bubbles:true}));
+   requestAnimationFrame(()=>Object.assign(window,{__manualScrollEnded:true}));
+  }),{once:true});
   strip.scrollTo=((options:ScrollToOptions)=>{
    if(first){
     first=false;scroll({...options,left:options.left!+9});
-    // A user's next gesture wins over the earlier return command.
-    strip.dispatchEvent(new Event(input,{bubbles:true}));
    } else scroll(options);
   }) as typeof strip.scrollTo;
  },input);
  await page.getByRole('button',{name:'出発に余裕のある便へ'}).click();
  await expect.poll(()=>page.evaluate(()=>(window as Window&{__manualScrollEnded?:boolean}).__manualScrollEnded)).toBe(true);
  expect(await page.locator('.departure-card.is-selected').evaluate(card=>Math.abs(card.getBoundingClientRect().left-card.parentElement!.getBoundingClientRect().left-2))).toBe(9);
+});
+
+// A natural Chromium swipe reproduced a second compositor write after scrollend:
+// 18431 -> synchronous correction 18426 -> next-frame native position 18430.
+test('return waits for a late compositor snap after scrollend',async({page})=>{
+ await setup(page);
+ const selected=await page.locator('.decision-train').innerText();
+ const deadline=await page.locator('.stay-deadline').innerText();
+ await page.evaluate(()=>{
+  const strip=document.querySelector('.timeline-strip') as HTMLElement;
+  strip.style.scrollSnapType='none';
+  const scroll=strip.scrollTo.bind(strip);let first=true;
+  Object.assign(window,{__lateSnapWritten:false});
+  strip.scrollTo=((options:ScrollToOptions)=>{
+   if(first){
+    first=false;
+    strip.addEventListener('scrollend',()=>requestAnimationFrame(()=>{
+     // Model the compositor's write after the JS scrollend handler returned.
+     scroll({...options,left:options.left!+4});
+     Object.assign(window,{__lateSnapWritten:true});
+    }),{once:true});
+    scroll({...options,left:options.left!+9});
+   } else scroll(options);
+  }) as typeof strip.scrollTo;
+ });
+ await page.getByRole('button',{name:'出発に余裕のある便へ'}).click();
+ await expect.poll(()=>page.evaluate(()=>(window as Window&{__lateSnapWritten?:boolean}).__lateSnapWritten)).toBe(true);
+ await expect.poll(()=>page.locator('.departure-card.is-selected').evaluate(card=>Math.abs(card.getBoundingClientRect().left-card.parentElement!.getBoundingClientRect().left-2))).toBeLessThan(3);
+ expect(await page.locator('.decision-train').innerText()).toBe(selected);
+ expect(await page.locator('.stay-deadline').innerText()).toBe(deadline);
 });

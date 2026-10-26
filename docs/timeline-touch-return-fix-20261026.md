@@ -63,3 +63,32 @@ WebKit390では新規9px固定raceは成功。一方、既存smooth同期テス�
 2回目は5構成すべて成功（54.1秒、exit0）。中間style更新はChromium320=12件/390=11件、WebKit320=2件/390=5件/1280=2件。全更新の最大同期誤差はChromiumで0.000051 CSS px以下、WebKitで0.0000037 CSS px以下。各試験で3種類のreplay負例をrejectした。結果JSONは`.cache/timeline-synchronization-v2-repeat-20261026.json`、集計は`.cache/timeline-synchronization-v2-metrics-20261026.json`。
 
 この追加作業で製品runtimeは未編集。前後のDepartureTimeline.tsx実バイトSHA256はともに`d90ffc7a373d783c0e701c435c92683f7dcce9f85d192227155c9e946b5fac9f`。変更は試験と本記録だけで、ビルドし直していない。
+
+## 追加: d684108の再失敗とcompositor完了後の補正
+
+CI run `40277066797` / job `121421954017` では、上記の新しいnative/rail同期検査は全5構成で成功した。一方、Chromium touch390の実CDP swipe後の「余裕のある便へ」操作で、整列誤差9pxが残った（interactions 46成功・3skip・1失敗、layout18成功、PWA9成功）。この失敗はフレーム測定の問題ではなく、実際のカード位置の不具合。
+
+artifact `12630673990` を保存しSHA256 `b3528682f8ed12736485502855e802ca251edc9e0280f74ea7884b368aaf7761` の一致を確認した。原本は `.cache/ci-d684108/artifacts.zip`。traceでは逆swipe後18359→18360→18363→18368→18375とsnap進行中に戻る操作が入り、action時18402、操作後18435で固定した（目標18426）。traceにはscrollendイベント自体がないため、この資料だけからJSイベント順は断定しない。
+
+別ポート5187・保存済みfixture・1 workerでイベント記録を加えた自然swipeを2回実施。1回成功、1回は4px残留で失敗した。CIの9pxと同一数値の再現ではない。失敗回の記録 `.cache/ci-d684108/events-failed.json` は以下を示す。
+
+|performance.now()|操作/イベント|scrollLeft|
+|---|---|---:|
+|5856ms|戻るscrollTo前→直後|18417→18426|
+|6015ms|native scrollend|18431|
+|6015ms|scrollendハンドラー内の旧補正|18431→18426|
+|6030ms|次のnative scrollend|18430|
+
+最初の補正は呼ばれていたが、その直後の描画で残ったcompositor snapが位置を再び上書きした。『先に届いた旧scrollendで、まだ一致している目標を消費しただけ』という当初仮説とは異なる観測である。
+
+修正は `DepartureTimeline.tsx` の補正時点だけ。scrollendハンドラー内で即座にscrollToせず、2つのrequestAnimationFrameで次の描画境界をまたいでから実位置を読み、必要な場合に一度だけ補正する。補正前に目標refを消費して常時吸着や再補正ループを避ける。待ち中のpointerdown/touchstart/wheel/keydown、別ジャンプ、駅・方面変更、unmountでは目標と待ちフレームを取り消す。smooth閲覧、計算、CSS、整列閾値は変更していない。scrollend非対応環境の動作は従来どおりで、追加補正を検証済みとはしない。
+
+新fixtureはテスト内の最初のscrollToへ9px残留を入れ、最初のscrollendが返った次のrAFに4px残留を再度書く。旧実装ではExpected<3 / Received4で失敗した。これは観測したイベント順を固定する障害注入であり、CDP実gestureそのものとは区別する。手動操作の取消し検査も、scrollend後・補正前のフレームに新入力を置き、待ちフレームが取り消されることを確認する。
+
+最初の修正後10ケースは9成功、touch320 wheelケースだけ30秒の試験上限で終了した。4px/9px残留のassert失敗とは扱わない。両幅の旧9pxfixtureと新4px二段fixtureは成功。根拠は `.cache/ci-d684108/jump-fix.json`。最終検証結果を下に追記する。
+
+最終固定fixtureはChromium touch320/390・WebKit390の各5件、計15件すべて成功（104.0秒、exit0）。内訳は単段9px補正、二段4px再上書き補正、scrollend後に入るpointerdown/touchstart/wheelの3取消し。各成功時に選択便・出発目安の不変または手動閲覧を引き戻さないことを確認した。結果は `.cache/ci-d684108/final-jump.json`、出力は `test-results/ci-d684108-final-jump`。30秒timeoutを含む初回記録は残している。
+
+修正後の既存CDP自然swipeはtouch320/390を各2回、計4回成功（105.9秒、exit0、`.cache/ci-d684108/natural-fixed.json`）。この4回では負荷により戻るclickがnative snap完了後に届いたため、競合条件を4回発生させて解消したとは主張しない。競合の修正前後差は上記の固定fixtureで検証した。`npx tsc --noEmit` はexit0。CSS・既存のnative/rail同期試験は未変更。製品コードを変更したため本番ビルドと全CIの結果は親の公開報告で別途確認する。
+
+専用ローカル検証は `INTERACTION_URL=http://127.0.0.1:5187` と `INTERACTION_FIXTURES=1` を指定した。既存5173のブラウザー環境には接続していない。診断用spec/configは `.cache/ci-d684108` のみで、通常CIの対象へ追加していない。

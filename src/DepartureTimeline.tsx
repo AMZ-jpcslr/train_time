@@ -22,6 +22,7 @@ export default function DepartureTimeline({trains,selected,now,walk,settings,sta
  const [fractional,setFractional]=useState(0);
  const committedFractional=useRef(0);
  const pendingJump=useRef<{card:HTMLElement;vertical:boolean}|null>(null);
+ const jumpFrame=useRef<number|null>(null);
  const [railOpen,setRailOpen]=useState(!compact);
  const cursor=timelineCursor(trains,fractional)??now;
  const viewIndex=Math.max(0,Math.min(trains.length-1,Math.round(fractional)));
@@ -32,8 +33,13 @@ export default function DepartureTimeline({trains,selected,now,walk,settings,sta
  const futureRanks=useMemo(()=>new Map(future.map((train,index)=>[train,index])),[future]);
  const next=selected?future[future.findIndex(train=>departureKey(train)===selectedKey)+1]:undefined;
  const neighbors=neighboringStations(station.id,directionId);
- const jump=(index:number,animate=true)=>{
+ const cancelJump=()=>{
   pendingJump.current=null;
+  if(jumpFrame.current!==null)cancelAnimationFrame(jumpFrame.current);
+  jumpFrame.current=null;
+ };
+ const jump=(index:number,animate=true)=>{
+  cancelJump();
   const element=strip.current?.children[Math.max(0,index)] as HTMLElement|undefined;
   if(element&&strip.current){
    const smooth=animate&&!matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -45,24 +51,31 @@ export default function DepartureTimeline({trains,selected,now,walk,settings,sta
   }
  };
  const finishJump=()=>{
-  const pending=pendingJump.current;
-  pendingJump.current=null;
-  const element=strip.current;
-  if(!pending||!element||pending.card.parentElement!==element)return;
-  // Chromium may finish an older touch snap after an instant return command.
-  // Reconcile once after native scrolling ends; a new gesture always cancels it.
-  const target=pending.vertical?pending.card.offsetTop-4:pending.card.offsetLeft-2;
-  const maximum=pending.vertical?element.scrollHeight-element.clientHeight:element.scrollWidth-element.clientWidth;
-  const bounded=Math.max(0,Math.min(maximum,target));
-  const actual=pending.vertical?element.scrollTop:element.scrollLeft;
-  if(Math.abs(actual-bounded)>1)element.scrollTo(pending.vertical?{top:bounded,behavior:'instant'}:{left:bounded,behavior:'instant'});
+  if(!pendingJump.current||jumpFrame.current!==null)return;
+  // A compositor snap can write once more in the frame after scrollend.
+  // Cross that rendering boundary before reconciling, instead of fighting it
+  // inside the event. A new gesture/context cancels both pending frames.
+  jumpFrame.current=requestAnimationFrame(()=>{
+   jumpFrame.current=requestAnimationFrame(()=>{
+    jumpFrame.current=null;
+    const pending=pendingJump.current;
+    pendingJump.current=null;
+    const element=strip.current;
+    if(!pending||!element||pending.card.parentElement!==element)return;
+    const target=pending.vertical?pending.card.offsetTop-4:pending.card.offsetLeft-2;
+    const maximum=pending.vertical?element.scrollHeight-element.clientHeight:element.scrollWidth-element.clientWidth;
+    const bounded=Math.max(0,Math.min(maximum,target));
+    const actual=pending.vertical?element.scrollTop:element.scrollLeft;
+    if(Math.abs(actual-bounded)>1)element.scrollTo(pending.vertical?{top:bounded,behavior:'instant'}:{left:bounded,behavior:'instant'});
+   });
+  });
  };
  useEffect(()=>{
   const context=`${station.id}/${directionId}/${day}`;
   jump(selectedKey?Math.max(0,trains.findIndex(train=>departureKey(train)===selectedKey)):trains.length-1,!compact&&previousContext.current===context);
   previousContext.current=context;
  },[selectedKey,station.id,directionId,day]);
- useEffect(()=>()=>{pendingJump.current=null;if(frame.current!==null)cancelAnimationFrame(frame.current);frame.current=null;},[]);
+ useEffect(()=>()=>{cancelJump();if(frame.current!==null)cancelAnimationFrame(frame.current);frame.current=null;},[]);
  useEffect(()=>{if(railOpen)onScroll();},[railOpen]);
  const onScroll=()=>{
   if(frame.current!==null)return;
@@ -124,8 +137,8 @@ export default function DepartureTimeline({trains,selected,now,walk,settings,sta
    <button onClick={()=>jump(Math.max(0,trains.findIndex(train=>train.epoch>now)))}>現在付近へ</button>
    <button aria-label="出発に余裕のある便へ" disabled={!comfortable} onClick={()=>{if(comfortable){jump(trains.indexOf(comfortable),false);onSelect(comfortable);}}}>余裕のある便へ</button>
   </div>
-  <div className="timeline-strip" ref={strip} onScroll={onScroll} onScrollEnd={finishJump} onPointerDown={()=>{pendingJump.current=null;}} onTouchStart={()=>{pendingJump.current=null;}} onWheel={()=>{pendingJump.current=null;}} role="group" aria-label="時系列の列車カード" tabIndex={0} onKeyDown={event=>{
-   pendingJump.current=null;
+  <div className="timeline-strip" ref={strip} onScroll={onScroll} onScrollEnd={finishJump} onPointerDown={cancelJump} onTouchStart={cancelJump} onWheel={cancelJump} role="group" aria-label="時系列の列車カード" tabIndex={0} onKeyDown={event=>{
+   cancelJump();
    if(event.target!==event.currentTarget)return;
    if(event.key==='ArrowRight'||(vertical&&event.key==='ArrowDown')){event.preventDefault();jump(Math.min(trains.length-1,viewIndex+1));}
    if(event.key==='ArrowLeft'||(vertical&&event.key==='ArrowUp')){event.preventDefault();jump(Math.max(0,viewIndex-1));}
