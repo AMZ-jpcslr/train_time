@@ -56,7 +56,7 @@ export default function StationPicker({stations,station,onChange,favorites,onFav
     <ul className="station-search-results" aria-label="駅の検索結果">
      {results.map((s,index)=><li key={s.id} className="station-search-row">
       <button type="button" data-station-id={s.id} aria-label={`${s.name}（${s.operator}・${s.line}）を選択`} aria-current={s.id===station.id?'true':undefined} className="station-option" onKeyDown={event=>move(event,index)} onClick={()=>{onChange(s.id);close();}}>
-       <span className="option-code" aria-hidden="true">{s.code}</span><span className="option-text"><strong>{s.name}</strong><small>{s.operator} · {s.line}</small>{s.region&&<small>{s.region}</small>}</span>
+       <span className="option-code" aria-hidden="true">{s.code}</span><span className="option-text"><strong>{s.name}</strong><small>{s.operator} · {s.line}</small>{s.region&&<small>{s.region}</small>}{s.catalogOnly&&<small>駅名検索のみ・時刻表未対応</small>}</span>
       </button>
       <button type="button" className="station-result-favorite" aria-label={`${s.name}（${s.line}）をお気に入り${favorites.includes(s.id)?'から解除':'に登録'}`} aria-pressed={favorites.includes(s.id)} onClick={()=>onFavorite(s.id)}>{favorites.includes(s.id)?'★':'☆'}</button>
      </li>)}

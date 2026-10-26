@@ -57,6 +57,7 @@ jobs:
       - name: Check serverless package contents
         run: npm run check:package
       - name: Install Chromium and WebKit
+        id: browsers
         timeout-minutes: 20
         run: npx playwright install --with-deps chromium webkit
       - name: Desktop and mobile browser tests
@@ -64,8 +65,10 @@ jobs:
       - name: Touch gestures and WebKit timeline interactions
         run: npx playwright test --config=playwright.interactions.config.ts --workers=1
       - name: Narrow screens and enlarged text
+        if: ${{ !cancelled() && steps.browsers.outcome == 'success' }}
         run: npx playwright test --config=playwright.layout.config.ts --workers=1
       - name: Offline PWA test
+        if: ${{ !cancelled() && steps.browsers.outcome == 'success' }}
         run: npx playwright test --config=playwright.pwa.config.ts --workers=1
       - name: Upload failed browser diagnostics
         if: failure()

@@ -80,3 +80,13 @@ body:has(.action-live){background:#f7f4ed;color-scheme:light}
 /* Enlarged text also enlarges the fixed navigation; keep the last content reachable. */
 .action-live{padding-bottom:calc(6.5rem + env(safe-area-inset-bottom))}
 .action-live .station-badge{width:max(38px,2.8em);height:max(38px,2.8em);min-width:max(38px,2.8em);white-space:nowrap;flex-shrink:0}
+
+/* A station index cannot answer the departure question; show the next action directly. */
+.action-live .catalog-source-info{font-size:13px;margin-top:4px}
+.action-live .catalog-source-info>summary{min-height:44px;padding:12px 0;cursor:pointer}
+.action-live .catalog-source{line-height:1.8;padding-bottom:12px}
+.action-live .catalog-unavailable{display:grid;gap:12px;margin-top:12px;padding:18px;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:8px;background:#fff}
+.action-live .catalog-unavailable h2{font-size:20px;line-height:1.5}
+.action-live .catalog-unavailable p{font-size:14px;line-height:1.8}
+.action-live .catalog-unavailable a{display:flex;align-items:center;min-height:48px;font-size:16px}
+.action-live .catalog-unavailable button{justify-self:start}
