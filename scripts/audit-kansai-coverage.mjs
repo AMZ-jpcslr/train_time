@@ -102,6 +102,16 @@ export function diffCoverage(before, after) {
     }
   }
   result.removed = [...old.keys()];
+  if(before.catalogOnlyStations||after.catalogOnlyStations){
+    const previous=new Map((before.catalogOnlyStations??[]).map(s=>[s.stationId,s]));
+    result.catalogOnly={added:[],removed:[],changed:[]};
+    for(const station of after.catalogOnlyStations??[]){
+      const prior=previous.get(station.stationId);previous.delete(station.stationId);
+      if(!prior)result.catalogOnly.added.push(station.stationId);
+      else if(sha(prior)!==sha(station))result.catalogOnly.changed.push(station.stationId);
+    }
+    result.catalogOnly.removed=[...previous.keys()];
+  }
   return result;
 }
 
@@ -162,7 +172,12 @@ export async function buildCoverage({ root = ROOT, dates, now = Date.now() }) {
       evidence: evidence.map(v => v.file), evidenceStatus: independentEvidence ? 'recorded-crosscheck' : 'additional-review-required',
       dates: dates.map(day => ({ day, status: assessDate(t, day, now, holidays) })) };
   });
-  const rows = [...allStations.values()].flatMap(station => station.directions.flatMap(direction => dates.map(day => {
+  // A geographic station index has no reviewed train direction or operating day.
+  // Keep it out of direction/day-cell counts instead of inventing one direction.
+  const catalogOnlyStations = stations.filter(s => s.catalogOnly).map(s => ({stationId:s.id,station:s.name,line:s.line,operator:s.operator,
+    physicalStationId:s.physicalStationId,searchable:true,timetableAcquired:false,timetableVerified:false,
+    directionsVerified:false,currentDayValid:false,boardingJudgment:false,source:s.catalogSource}));
+  const rows = [...allStations.values()].filter(station=>!station.catalogOnly).flatMap(station => station.directions.flatMap(direction => dates.map(day => {
     const available = audited.filter(t => t.stationId === station.id && t.directionId === direction.id);
     const applicable = available.filter(t => !['missing-date', 'wrong-day-type'].includes(t.dates.find(d => d.day === day).status));
     const ready = applicable.filter(t => t.connected && t.dates.find(d => d.day === day).status === 'ready');
@@ -201,7 +216,7 @@ export async function buildCoverage({ root = ROOT, dates, now = Date.now() }) {
       acquiredStationLines: new Set(tables.map(t => t.stationId)).size, acquiredTables: tables.length, connectedTables: audited.filter(t => t.connected).length,
       structuralFailures: audited.filter(t => t.structureErrors.length).length, duplicateTableIds: duplicates,
       dateCells: rows.length, validDateCells: rows.filter(r => r.validForDate).length },
-    sourceHashes, retainedArtifacts, rows, tables: audited,
+    sourceHashes, retainedArtifacts, catalogOnlyStations, rows, tables: audited,
     pendingNetworks: { kyoto: kyotoPending, kobeKaigan: kaiganCoverage },
     dynamicSearch: { checkedAt: feeds.checkedAt, searchIsNotCoverage: true, stationInventory: 'unknown; API search is capped, not a full line inventory',
       feeds: feeds.feeds.filter(f => /hankyu|hanshin|tokaido|sanyo/.test(f.feedId)).map(f => ({ ...f, acquired: 'not-probed-this-audit', verified: false, validForDate: 'unknown', timetableAllowsEstimate: false })) } };
@@ -214,6 +229,10 @@ export function coverageMarkdown(report) {
     '|駅 / 路線|方面|運行日|検索|取得|検証印|照合記録|当日有効|目安可|不足・制約|', '|---|---|---|---|---|---|---|---|---|---|',
     ...report.rows.map(r => `|${r.station} / ${r.line}|${r.direction}|${r.day} (${r.dayType ?? '暦不明'})|${yes(r.searchable)}|${yes(r.acquired)}|${yes(r.verifiedFlag)}|${yes(r.independentlyRecorded)}|${yes(r.validForDate)}|${yes(r.timetableAllowsEstimate)}|${r.gaps.join(', ') || '徒歩等の条件入力が必要'}|`), '',
     'JSON版に各表の出典、取得日、検証日、改正日、適用期間、便数、ハッシュ、照合記録への参照を収録。未設定の期間終端は無期限の最新性保証ではない。', '',
+    '## 公式の駅名検索用データ', '',
+    `追加の${report.catalogOnlyStations?.length??0}駅・路線は駅名検索のみ。時刻表・実際の方面・運行日を取得しておらず、上の方面×運行日セルには含めない。国土数値情報の駅座標は入口ではない。`, '',
+    '|駅 / 路線|検索|時刻表|方面|当日有効|出発目安|出典・基準日|', '|---|---|---|---|---|---|---|',
+    ...(report.catalogOnlyStations??[]).map(s=>`|${s.station} / ${s.line}|○|未対応|未対応|判定不可|不可|[国土数値情報](${s.source.url})・${s.source.dataAsOf}・${s.source.license}を加工|`), '',
     '## 追加検索の範囲', '', '既存の非公式API検索は駅一覧の網羅を保証しない。今回の監査では通信せず、取得済み・当日有効とは数えない。全方面の参考表示であり乗車目安は判定しない。', '',
     '|フィード|路線|原資料取得日|運行期間（API登録値）|判定|', '|---|---|---|---|---|',
     ...report.dynamicSearch.feeds.map(f => `|${f.feedId}|${f.lines.join('・')}|${f.fetchedAt}|${f.serviceStart}〜${f.serviceEnd}|参考表示のみ|`), '',

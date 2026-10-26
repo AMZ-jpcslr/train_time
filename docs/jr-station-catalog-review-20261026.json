@@ -1,0 +1,172 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-26T04:37:09.965017+00:00",
+  "status": "reviewed-station-membership-only",
+  "sourceDataAsOf": "2025-12-31",
+  "sourceGeoJsonSha256": "908e2c3036e9c80760ae3514be3682c77f81f0bd60ab5fb1b3da1aa9352bbd94",
+  "sourceArchiveSha256": "aaf76af133b2e771e538fabc4646d2e443dc1d5a67b221382a28d744e706cc9f",
+  "sourceUrls": [
+    "https://www.jr-odekake.net/station/pdf/teisya_01.pdf",
+    "https://www.jr-odekake.net/station/pdf/ubn.pdf"
+  ],
+  "referenceRevision": "2026-03-14",
+  "referencePdfHashes": {
+    "ubn.pdf": "c4761e2f29a20f215fc1b771688cea29c433482f0929e3d82420ebb036761c5f",
+    "teisya_01.pdf": "519d85d7198a407d414e6ad8283a1edfb19c8d8516acce8a0145e4f322e3da2c"
+  },
+  "reviewMethod": "公式PDF画像の駅名・A09からA85までの駅順を目視照合。所属の事実のみ。時刻・運行日・方面・入口は未確認",
+  "routes": [
+    {
+      "slug": "kobe",
+      "name": "JR神戸線",
+      "stationNames": [
+        "大阪",
+        "塚本",
+        "尼崎",
+        "立花",
+        "甲子園口",
+        "西宮",
+        "さくら夙川",
+        "芦屋",
+        "甲南山手",
+        "摂津本山",
+        "住吉",
+        "六甲道",
+        "摩耶",
+        "灘",
+        "三ノ宮",
+        "元町",
+        "神戸",
+        "兵庫",
+        "新長田",
+        "鷹取",
+        "須磨海浜公園",
+        "須磨",
+        "塩屋",
+        "垂水",
+        "舞子",
+        "朝霧",
+        "明石",
+        "西明石",
+        "大久保",
+        "魚住",
+        "土山",
+        "東加古川",
+        "加古川",
+        "宝殿",
+        "曽根",
+        "ひめじ別所",
+        "御着",
+        "東姫路",
+        "姫路"
+      ]
+    },
+    {
+      "slug": "kyoto",
+      "name": "JR京都線",
+      "stationNames": [
+        "京都",
+        "西大路",
+        "桂川",
+        "向日町",
+        "長岡京",
+        "山崎",
+        "島本",
+        "高槻",
+        "摂津富田",
+        "JR総持寺",
+        "茨木",
+        "千里丘",
+        "岸辺",
+        "吹田",
+        "東淀川",
+        "新大阪",
+        "大阪"
+      ]
+    },
+    {
+      "slug": "biwako",
+      "name": "琵琶湖線",
+      "stationNames": [
+        "長浜",
+        "田村",
+        "坂田",
+        "米原",
+        "彦根",
+        "南彦根",
+        "河瀬",
+        "稲枝",
+        "能登川",
+        "安土",
+        "近江八幡",
+        "篠原",
+        "野洲",
+        "守山",
+        "栗東",
+        "草津",
+        "南草津",
+        "瀬田",
+        "石山",
+        "膳所",
+        "大津",
+        "山科",
+        "京都"
+      ]
+    }
+  ],
+  "expectedCounts": {
+    "physicalStationCandidates": 77,
+    "routeMemberships": 79,
+    "sourceFeatures": 87,
+    "routeCounts": {
+      "JR神戸線": 39,
+      "JR京都線": 17,
+      "琵琶湖線": 23
+    }
+  },
+  "duplicateGeometryStations": {
+    "神戸": 2,
+    "兵庫": 2,
+    "米原": 4,
+    "新大阪": 2,
+    "大阪": 5
+  },
+  "baselinePreserved": [
+    {
+      "name": "大阪",
+      "id": "jr-osaka"
+    },
+    {
+      "name": "西宮",
+      "id": "jr-nishinomiya"
+    },
+    {
+      "name": "茨木",
+      "id": "jr-ibaraki"
+    },
+    {
+      "name": "南草津",
+      "id": "jr-minamikusatsu"
+    }
+  ],
+  "excludedBranchNames": [
+    "福島",
+    "和田岬"
+  ],
+  "exceptions": {
+    "福島": "東海道線の支線地物だが対象のJR京都線・JR神戸線停車駅一覧に含めない",
+    "和田岬": "山陽線所属だが和田岬支線でJR神戸線候補に含めない",
+    "兵庫": "同名・同コード2地物を保全。線形状から方面や入口は作らない",
+    "大阪": "同名・同コード5地物に地下区間等も含む。平均点は出入口ではない",
+    "米原": "会社境界。JR東海運営地物は対象外。JR西日本の2原路線4地物を保全",
+    "N02_005g": "同名300m内のグループで他社を含み得る。アプリ物理駅IDへ直接転用しない"
+  },
+  "limitations": [
+    "Search metadata only; no times, service days, entrances or train directions.",
+    "N02 snapshot is 2025-12-31; current station membership compared only with dated 2026-03-14 JR PDF, not all subsequent notices.",
+    "N02 station/group codes are geographic identifiers and can change across releases; group codes may span operators and are not app physicalStationIds.",
+    "Route membership names use a short factual sequence visually crosschecked against JR PDF; PDF graphics are not licensed under N02.",
+    "Representative coordinates are not entrances and must not enable walking/boarding decisions."
+  ],
+  "selectedFeatureSha256": "8aa3392f00e8a6d8e1e18cfe9c395548c554cf51baa5c024fa512c59728fb2b4"
+}

@@ -1,0 +1,2668 @@
+[
+  {
+    "id": "jr-catalog-007009-kobe",
+    "physicalStationId": "jr-catalog-007009",
+    "name": "JR塚本",
+    "sourceStationName": "塚本",
+    "aliases": [
+      "塚本"
+    ],
+    "operator": "JR西日本",
+    "line": "JR神戸線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.712734999999995,
+    "lon": 135.46889,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "007009"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-006919-kobe",
+    "physicalStationId": "jr-catalog-006919",
+    "name": "JR尼崎",
+    "sourceStationName": "尼崎",
+    "aliases": [
+      "尼崎"
+    ],
+    "operator": "JR西日本",
+    "line": "JR神戸線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.731854999999996,
+    "lon": 135.43178,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "006919"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-006886-kobe",
+    "physicalStationId": "jr-catalog-006886",
+    "name": "JR立花",
+    "sourceStationName": "立花",
+    "aliases": [
+      "立花"
+    ],
+    "operator": "JR西日本",
+    "line": "JR神戸線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.737885000000006,
+    "lon": 135.39960000000002,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "006886"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-006879-kobe",
+    "physicalStationId": "jr-catalog-006879",
+    "name": "JR甲子園口",
+    "sourceStationName": "甲子園口",
+    "aliases": [
+      "甲子園口"
+    ],
+    "operator": "JR西日本",
+    "line": "JR神戸線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.739059999999995,
+    "lon": 135.37439,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "006879"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-006880-kobe",
+    "physicalStationId": "jr-catalog-006880",
+    "name": "JRさくら夙川",
+    "sourceStationName": "さくら夙川",
+    "aliases": [
+      "さくら夙川"
+    ],
+    "operator": "JR西日本",
+    "line": "JR神戸線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.739035,
+    "lon": 135.3312675,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "006880"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-006908-kobe",
+    "physicalStationId": "jr-catalog-006908",
+    "name": "JR芦屋",
+    "sourceStationName": "芦屋",
+    "aliases": [
+      "芦屋"
+    ],
+    "operator": "JR西日本",
+    "line": "JR神戸線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.73426499999999,
+    "lon": 135.307395,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "006908"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-006926-kobe",
+    "physicalStationId": "jr-catalog-006926",
+    "name": "JR甲南山手",
+    "sourceStationName": "甲南山手",
+    "aliases": [
+      "甲南山手"
+    ],
+    "operator": "JR西日本",
+    "line": "JR神戸線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.730635,
+    "lon": 135.29260499999998,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "006926"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-006941-kobe",
+    "physicalStationId": "jr-catalog-006941",
+    "name": "JR摂津本山",
+    "sourceStationName": "摂津本山",
+    "aliases": [
+      "摂津本山"
+    ],
+    "operator": "JR西日本",
+    "line": "JR神戸線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.726805,
+    "lon": 135.27757,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "006941"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-006974-kobe",
+    "physicalStationId": "jr-catalog-006974",
+    "name": "JR住吉",
+    "sourceStationName": "住吉",
+    "aliases": [
+      "住吉"
+    ],
+    "operator": "JR西日本",
+    "line": "JR神戸線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.719743333333334,
+    "lon": 135.26262333333332,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "006974"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-007004-kobe",
+    "physicalStationId": "jr-catalog-007004",
+    "name": "JR六甲道",
+    "sourceStationName": "六甲道",
+    "aliases": [
+      "六甲道"
+    ],
+    "operator": "JR西日本",
+    "line": "JR神戸線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.714805,
+    "lon": 135.238405,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "007004"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-007033-kobe",
+    "physicalStationId": "jr-catalog-007033",
+    "name": "JR摩耶",
+    "sourceStationName": "摩耶",
+    "aliases": [
+      "摩耶"
+    ],
+    "operator": "JR西日本",
+    "line": "JR神戸線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.708519807500004,
+    "lon": 135.22475202750002,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "007033"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-007046-kobe",
+    "physicalStationId": "jr-catalog-007046",
+    "name": "JR灘",
+    "sourceStationName": "灘",
+    "aliases": [
+      "灘"
+    ],
+    "operator": "JR西日本",
+    "line": "JR神戸線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.705875,
+    "lon": 135.216545,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "007046"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-007105-kobe",
+    "physicalStationId": "jr-catalog-007105",
+    "name": "JR三ノ宮",
+    "sourceStationName": "三ノ宮",
+    "aliases": [
+      "三ノ宮"
+    ],
+    "operator": "JR西日本",
+    "line": "JR神戸線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.694795,
+    "lon": 135.19504,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "007105"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-007151-kobe",
+    "physicalStationId": "jr-catalog-007151",
+    "name": "JR元町",
+    "sourceStationName": "元町",
+    "aliases": [
+      "元町"
+    ],
+    "operator": "JR西日本",
+    "line": "JR神戸線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.689586,
+    "lon": 135.18737399999998,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "007151"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-007224-kobe",
+    "physicalStationId": "jr-catalog-007224",
+    "name": "JR神戸",
+    "sourceStationName": "神戸",
+    "aliases": [
+      "神戸"
+    ],
+    "operator": "JR西日本",
+    "line": "JR神戸線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.67922,
+    "lon": 135.17822,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "007224",
+      "007225"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-007298-kobe",
+    "physicalStationId": "jr-catalog-007298",
+    "name": "JR兵庫",
+    "sourceStationName": "兵庫",
+    "aliases": [
+      "兵庫"
+    ],
+    "operator": "JR西日本",
+    "line": "JR神戸線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.66788791,
+    "lon": 135.16443868,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "007298"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-007386-kobe",
+    "physicalStationId": "jr-catalog-007386",
+    "name": "JR新長田",
+    "sourceStationName": "新長田",
+    "aliases": [
+      "新長田"
+    ],
+    "operator": "JR西日本",
+    "line": "JR神戸線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.65772483333333,
+    "lon": 135.14563983333332,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "007386"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-007417-kobe",
+    "physicalStationId": "jr-catalog-007417",
+    "name": "JR鷹取",
+    "sourceStationName": "鷹取",
+    "aliases": [
+      "鷹取"
+    ],
+    "operator": "JR西日本",
+    "line": "JR神戸線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.6517275,
+    "lon": 135.1353525,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "007417"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-007441-kobe",
+    "physicalStationId": "jr-catalog-007441",
+    "name": "JR須磨海浜公園",
+    "sourceStationName": "須磨海浜公園",
+    "aliases": [
+      "須磨海浜公園"
+    ],
+    "operator": "JR西日本",
+    "line": "JR神戸線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.64716,
+    "lon": 135.12660499999998,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "007441"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-007466-kobe",
+    "physicalStationId": "jr-catalog-007466",
+    "name": "JR須磨",
+    "sourceStationName": "須磨",
+    "aliases": [
+      "須磨"
+    ],
+    "operator": "JR西日本",
+    "line": "JR神戸線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.642265,
+    "lon": 135.11265500000002,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "007466"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-007495-kobe",
+    "physicalStationId": "jr-catalog-007495",
+    "name": "JR塩屋",
+    "sourceStationName": "塩屋",
+    "aliases": [
+      "塩屋"
+    ],
+    "operator": "JR西日本",
+    "line": "JR神戸線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.63372,
+    "lon": 135.0832775,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "007495"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-007516-kobe",
+    "physicalStationId": "jr-catalog-007516",
+    "name": "JR垂水",
+    "sourceStationName": "垂水",
+    "aliases": [
+      "垂水"
+    ],
+    "operator": "JR西日本",
+    "line": "JR神戸線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.62909,
+    "lon": 135.053855,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "007516"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-007497-kobe",
+    "physicalStationId": "jr-catalog-007497",
+    "name": "JR舞子",
+    "sourceStationName": "舞子",
+    "aliases": [
+      "舞子"
+    ],
+    "operator": "JR西日本",
+    "line": "JR神戸線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.633245,
+    "lon": 135.034235,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "007497"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-007453-kobe",
+    "physicalStationId": "jr-catalog-007453",
+    "name": "JR朝霧",
+    "sourceStationName": "朝霧",
+    "aliases": [
+      "朝霧"
+    ],
+    "operator": "JR西日本",
+    "line": "JR神戸線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.644239999999996,
+    "lon": 135.01748,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "007453"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-007428-kobe",
+    "physicalStationId": "jr-catalog-007428",
+    "name": "JR明石",
+    "sourceStationName": "明石",
+    "aliases": [
+      "明石"
+    ],
+    "operator": "JR西日本",
+    "line": "JR神戸線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.64903333333333,
+    "lon": 134.99317666666667,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "007428"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-007328-kobe",
+    "physicalStationId": "jr-catalog-007328",
+    "name": "JR西明石",
+    "sourceStationName": "西明石",
+    "aliases": [
+      "西明石"
+    ],
+    "operator": "JR西日本",
+    "line": "JR神戸線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.66588,
+    "lon": 134.96018666666666,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "007328"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-007196-kobe",
+    "physicalStationId": "jr-catalog-007196",
+    "name": "JR大久保",
+    "sourceStationName": "大久保",
+    "aliases": [
+      "大久保"
+    ],
+    "operator": "JR西日本",
+    "line": "JR神戸線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.681985,
+    "lon": 134.93917499999998,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "007196"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-007096-kobe",
+    "physicalStationId": "jr-catalog-007096",
+    "name": "JR魚住",
+    "sourceStationName": "魚住",
+    "aliases": [
+      "魚住"
+    ],
+    "operator": "JR西日本",
+    "line": "JR神戸線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.696439999999996,
+    "lon": 134.90611,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "007096"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-006969-kobe",
+    "physicalStationId": "jr-catalog-006969",
+    "name": "JR土山",
+    "sourceStationName": "土山",
+    "aliases": [
+      "土山"
+    ],
+    "operator": "JR西日本",
+    "line": "JR神戸線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.72031666666667,
+    "lon": 134.88902333333334,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "006969"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-006854-kobe",
+    "physicalStationId": "jr-catalog-006854",
+    "name": "JR東加古川",
+    "sourceStationName": "東加古川",
+    "aliases": [
+      "東加古川"
+    ],
+    "operator": "JR西日本",
+    "line": "JR神戸線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.745685,
+    "lon": 134.869275,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "006854"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-006755-kobe",
+    "physicalStationId": "jr-catalog-006755",
+    "name": "JR加古川",
+    "sourceStationName": "加古川",
+    "aliases": [
+      "加古川"
+    ],
+    "operator": "JR西日本",
+    "line": "JR神戸線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.767555,
+    "lon": 134.839515,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "006755"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-006698-kobe",
+    "physicalStationId": "jr-catalog-006698",
+    "name": "JR宝殿",
+    "sourceStationName": "宝殿",
+    "aliases": [
+      "宝殿"
+    ],
+    "operator": "JR西日本",
+    "line": "JR神戸線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.78464333333333,
+    "lon": 134.81252666666668,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "006698"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-006665-kobe",
+    "physicalStationId": "jr-catalog-006665",
+    "name": "JR曽根",
+    "sourceStationName": "曽根",
+    "aliases": [
+      "曽根"
+    ],
+    "operator": "JR西日本",
+    "line": "JR神戸線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.79325,
+    "lon": 134.7699225,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "006665"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-006605-kobe",
+    "physicalStationId": "jr-catalog-006605",
+    "name": "JRひめじ別所",
+    "sourceStationName": "ひめじ別所",
+    "aliases": [
+      "ひめじ別所"
+    ],
+    "operator": "JR西日本",
+    "line": "JR神戸線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.80556,
+    "lon": 134.752975,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "006605"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-006558-kobe",
+    "physicalStationId": "jr-catalog-006558",
+    "name": "JR御着",
+    "sourceStationName": "御着",
+    "aliases": [
+      "御着"
+    ],
+    "operator": "JR西日本",
+    "line": "JR神戸線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.817004999999995,
+    "lon": 134.73533,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "006558"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-006523-kobe",
+    "physicalStationId": "jr-catalog-006523",
+    "name": "JR東姫路",
+    "sourceStationName": "東姫路",
+    "aliases": [
+      "東姫路"
+    ],
+    "operator": "JR西日本",
+    "line": "JR神戸線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.824379855,
+    "lon": 134.71184766166667,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "006523"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-006509-kobe",
+    "physicalStationId": "jr-catalog-006509",
+    "name": "JR姫路",
+    "sourceStationName": "姫路",
+    "aliases": [
+      "姫路"
+    ],
+    "operator": "JR西日本",
+    "line": "JR神戸線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.826737,
+    "lon": 134.690754,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "006509"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-006077-kyoto",
+    "physicalStationId": "jr-catalog-006077",
+    "name": "JR京都",
+    "sourceStationName": "京都",
+    "aliases": [
+      "京都"
+    ],
+    "operator": "JR西日本",
+    "line": "JR京都線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.98566333333333,
+    "lon": 135.75858,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "006077"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-006096-kyoto",
+    "physicalStationId": "jr-catalog-006096",
+    "name": "JR西大路",
+    "sourceStationName": "西大路",
+    "aliases": [
+      "西大路"
+    ],
+    "operator": "JR西日本",
+    "line": "JR京都線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.98099,
+    "lon": 135.73149333333333,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "006096"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-006152-kyoto",
+    "physicalStationId": "jr-catalog-006152",
+    "name": "JR桂川",
+    "sourceStationName": "桂川",
+    "aliases": [
+      "桂川"
+    ],
+    "operator": "JR西日本",
+    "line": "JR京都線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.96478166666667,
+    "lon": 135.71041333333332,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "006152"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-006178-kyoto",
+    "physicalStationId": "jr-catalog-006178",
+    "name": "JR向日町",
+    "sourceStationName": "向日町",
+    "aliases": [
+      "向日町"
+    ],
+    "operator": "JR西日本",
+    "line": "JR京都線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.95511666666667,
+    "lon": 135.70978333333335,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "006178"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-006258-kyoto",
+    "physicalStationId": "jr-catalog-006258",
+    "name": "JR長岡京",
+    "sourceStationName": "長岡京",
+    "aliases": [
+      "長岡京"
+    ],
+    "operator": "JR西日本",
+    "line": "JR京都線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.923500000000004,
+    "lon": 135.7009,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "006258"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-006329-kyoto",
+    "physicalStationId": "jr-catalog-006329",
+    "name": "JR山崎",
+    "sourceStationName": "山崎",
+    "aliases": [
+      "山崎"
+    ],
+    "operator": "JR西日本",
+    "line": "JR京都線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.8922,
+    "lon": 135.6790425,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "006329"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-006359-kyoto",
+    "physicalStationId": "jr-catalog-006359",
+    "name": "JR島本",
+    "sourceStationName": "島本",
+    "aliases": [
+      "島本"
+    ],
+    "operator": "JR西日本",
+    "line": "JR京都線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.88036666666667,
+    "lon": 135.66251,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "006359"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-006432-kyoto",
+    "physicalStationId": "jr-catalog-006432",
+    "name": "JR高槻",
+    "sourceStationName": "高槻",
+    "aliases": [
+      "高槻"
+    ],
+    "operator": "JR西日本",
+    "line": "JR京都線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.851245,
+    "lon": 135.61711,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "006432"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-006467-kyoto",
+    "physicalStationId": "jr-catalog-006467",
+    "name": "JR摂津富田",
+    "sourceStationName": "摂津富田",
+    "aliases": [
+      "摂津富田"
+    ],
+    "operator": "JR西日本",
+    "line": "JR京都線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.83768,
+    "lon": 135.59333,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "006467"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-006498-kyoto",
+    "physicalStationId": "jr-catalog-006498",
+    "name": "JR総持寺",
+    "sourceStationName": "JR総持寺",
+    "aliases": [
+      "JR総持寺"
+    ],
+    "operator": "JR西日本",
+    "line": "JR京都線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.828520115,
+    "lon": 135.577674775,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "006498"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-006672-kyoto",
+    "physicalStationId": "jr-catalog-006672",
+    "name": "JR千里丘",
+    "sourceStationName": "千里丘",
+    "aliases": [
+      "千里丘"
+    ],
+    "operator": "JR西日本",
+    "line": "JR京都線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.791439999999994,
+    "lon": 135.55142,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "006672"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-006721-kyoto",
+    "physicalStationId": "jr-catalog-006721",
+    "name": "JR岸辺",
+    "sourceStationName": "岸辺",
+    "aliases": [
+      "岸辺"
+    ],
+    "operator": "JR西日本",
+    "line": "JR京都線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.776935,
+    "lon": 135.541325,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "006721"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-006779-kyoto",
+    "physicalStationId": "jr-catalog-006779",
+    "name": "JR吹田",
+    "sourceStationName": "吹田",
+    "aliases": [
+      "吹田"
+    ],
+    "operator": "JR西日本",
+    "line": "JR京都線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.763220000000004,
+    "lon": 135.523765,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "006779"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-006878-kyoto",
+    "physicalStationId": "jr-catalog-006878",
+    "name": "JR東淀川",
+    "sourceStationName": "東淀川",
+    "aliases": [
+      "東淀川"
+    ],
+    "operator": "JR西日本",
+    "line": "JR京都線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.73921,
+    "lon": 135.503995,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "006878"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-006910-kyoto",
+    "physicalStationId": "jr-catalog-006910",
+    "name": "JR新大阪",
+    "sourceStationName": "新大阪",
+    "aliases": [
+      "新大阪"
+    ],
+    "operator": "JR西日本",
+    "line": "JR京都線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.733965885,
+    "lon": 135.501816176,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "006910"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-004895-biwako",
+    "physicalStationId": "jr-catalog-004895",
+    "name": "JR長浜",
+    "sourceStationName": "長浜",
+    "aliases": [
+      "長浜"
+    ],
+    "operator": "JR西日本",
+    "line": "琵琶湖線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 35.378605,
+    "lon": 136.26499,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "004895"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-004954-biwako",
+    "physicalStationId": "jr-catalog-004954",
+    "name": "JR田村",
+    "sourceStationName": "田村",
+    "aliases": [
+      "田村"
+    ],
+    "operator": "JR西日本",
+    "line": "琵琶湖線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 35.35631,
+    "lon": 136.28188,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "004954"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-005006-biwako",
+    "physicalStationId": "jr-catalog-005006",
+    "name": "JR坂田",
+    "sourceStationName": "坂田",
+    "aliases": [
+      "坂田"
+    ],
+    "operator": "JR西日本",
+    "line": "琵琶湖線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 35.336125,
+    "lon": 136.28768,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "005006"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-005075-biwako",
+    "physicalStationId": "jr-catalog-005075",
+    "name": "JR米原",
+    "sourceStationName": "米原",
+    "aliases": [
+      "米原"
+    ],
+    "operator": "JR西日本",
+    "line": "琵琶湖線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 35.31435525,
+    "lon": 136.28986425,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "005075",
+      "005077"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-005176-biwako",
+    "physicalStationId": "jr-catalog-005176",
+    "name": "JR彦根",
+    "sourceStationName": "彦根",
+    "aliases": [
+      "彦根"
+    ],
+    "operator": "JR西日本",
+    "line": "琵琶湖線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 35.272485,
+    "lon": 136.2634,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "005176"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-005249-biwako",
+    "physicalStationId": "jr-catalog-005249",
+    "name": "JR南彦根",
+    "sourceStationName": "南彦根",
+    "aliases": [
+      "南彦根"
+    ],
+    "operator": "JR西日本",
+    "line": "琵琶湖線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 35.24608,
+    "lon": 136.248015,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "005249"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-005292-biwako",
+    "physicalStationId": "jr-catalog-005292",
+    "name": "JR河瀬",
+    "sourceStationName": "河瀬",
+    "aliases": [
+      "河瀬"
+    ],
+    "operator": "JR西日本",
+    "line": "琵琶湖線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 35.225385,
+    "lon": 136.225315,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "005292"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-005341-biwako",
+    "physicalStationId": "jr-catalog-005341",
+    "name": "JR稲枝",
+    "sourceStationName": "稲枝",
+    "aliases": [
+      "稲枝"
+    ],
+    "operator": "JR西日本",
+    "line": "琵琶湖線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 35.20332500000001,
+    "lon": 136.19446,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "005341"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-005415-biwako",
+    "physicalStationId": "jr-catalog-005415",
+    "name": "JR能登川",
+    "sourceStationName": "能登川",
+    "aliases": [
+      "能登川"
+    ],
+    "operator": "JR西日本",
+    "line": "琵琶湖線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 35.179955,
+    "lon": 136.166015,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "005415"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-005553-biwako",
+    "physicalStationId": "jr-catalog-005553",
+    "name": "JR安土",
+    "sourceStationName": "安土",
+    "aliases": [
+      "安土"
+    ],
+    "operator": "JR西日本",
+    "line": "琵琶湖線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 35.14257333333333,
+    "lon": 136.13379666666665,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "005553"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-005619-biwako",
+    "physicalStationId": "jr-catalog-005619",
+    "name": "JR近江八幡",
+    "sourceStationName": "近江八幡",
+    "aliases": [
+      "近江八幡"
+    ],
+    "operator": "JR西日本",
+    "line": "琵琶湖線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 35.12254,
+    "lon": 136.10255,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "005619"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-005700-biwako",
+    "physicalStationId": "jr-catalog-005700",
+    "name": "JR篠原",
+    "sourceStationName": "篠原",
+    "aliases": [
+      "篠原"
+    ],
+    "operator": "JR西日本",
+    "line": "琵琶湖線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 35.09928,
+    "lon": 136.07176,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "005700"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-005772-biwako",
+    "physicalStationId": "jr-catalog-005772",
+    "name": "JR野洲",
+    "sourceStationName": "野洲",
+    "aliases": [
+      "野洲"
+    ],
+    "operator": "JR西日本",
+    "line": "琵琶湖線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 35.068435,
+    "lon": 136.02239,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "005772"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-005831-biwako",
+    "physicalStationId": "jr-catalog-005831",
+    "name": "JR守山",
+    "sourceStationName": "守山",
+    "aliases": [
+      "守山"
+    ],
+    "operator": "JR西日本",
+    "line": "琵琶湖線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 35.050937999999995,
+    "lon": 135.996464,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "005831"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-005862-biwako",
+    "physicalStationId": "jr-catalog-005862",
+    "name": "JR栗東",
+    "sourceStationName": "栗東",
+    "aliases": [
+      "栗東"
+    ],
+    "operator": "JR西日本",
+    "line": "琵琶湖線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 35.037485000000004,
+    "lon": 135.980105,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "005862"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-005901-biwako",
+    "physicalStationId": "jr-catalog-005901",
+    "name": "JR草津",
+    "sourceStationName": "草津",
+    "aliases": [
+      "草津"
+    ],
+    "operator": "JR西日本",
+    "line": "琵琶湖線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 35.0226325,
+    "lon": 135.96237499999998,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "005901"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-006069-biwako",
+    "physicalStationId": "jr-catalog-006069",
+    "name": "JR瀬田",
+    "sourceStationName": "瀬田",
+    "aliases": [
+      "瀬田"
+    ],
+    "operator": "JR西日本",
+    "line": "琵琶湖線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.987285,
+    "lon": 135.92584,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "006069"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-006098-biwako",
+    "physicalStationId": "jr-catalog-006098",
+    "name": "JR石山",
+    "sourceStationName": "石山",
+    "aliases": [
+      "石山"
+    ],
+    "operator": "JR西日本",
+    "line": "琵琶湖線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.980064999999996,
+    "lon": 135.898785,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "006098"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-006012-biwako",
+    "physicalStationId": "jr-catalog-006012",
+    "name": "JR膳所",
+    "sourceStationName": "膳所",
+    "aliases": [
+      "膳所"
+    ],
+    "operator": "JR西日本",
+    "line": "琵琶湖線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.999126000000004,
+    "lon": 135.880902,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "006012"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-006000-biwako",
+    "physicalStationId": "jr-catalog-006000",
+    "name": "JR大津",
+    "sourceStationName": "大津",
+    "aliases": [
+      "大津"
+    ],
+    "operator": "JR西日本",
+    "line": "琵琶湖線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 35.003015,
+    "lon": 135.86500999999998,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "006000"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-006044-biwako",
+    "physicalStationId": "jr-catalog-006044",
+    "name": "JR山科",
+    "sourceStationName": "山科",
+    "aliases": [
+      "山科"
+    ],
+    "operator": "JR西日本",
+    "line": "琵琶湖線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.992599999999996,
+    "lon": 135.81658,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "006044"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  },
+  {
+    "id": "jr-catalog-006077-biwako",
+    "physicalStationId": "jr-catalog-006077",
+    "name": "JR京都",
+    "sourceStationName": "京都",
+    "aliases": [
+      "京都"
+    ],
+    "operator": "JR西日本",
+    "line": "琵琶湖線",
+    "code": "JR",
+    "region": "関西",
+    "lat": 34.98566333333333,
+    "lon": 135.75858,
+    "directions": [
+      {
+        "id": "unavailable",
+        "name": "方面は未対応"
+      }
+    ],
+    "directionNote": "内部の未対応表示用。実在する列車方面を表すものではありません。",
+    "sourceUrl": "https://www.jr-odekake.net/",
+    "catalogOnly": true,
+    "coordinateKind": "station-representative-not-entrance",
+    "sourceStationCodes": [
+      "006077"
+    ],
+    "catalogSource": {
+      "name": "国土数値情報（鉄道データ・2025年度）",
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "license": "CC BY 4.0",
+      "dataAsOf": "2025-12-31",
+      "retrievedAt": "2026-10-26T04:34:08.175223+00:00",
+      "checkedAt": "2026-10-26T04:37:09.965017+00:00"
+    }
+  }
+]

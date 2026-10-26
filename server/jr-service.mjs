@@ -3,7 +3,8 @@ import { readFile, writeFile, mkdir, rename, copyFile } from 'node:fs/promises';
 import { createHash, randomUUID } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
-import { collectJr, JR_STATIONS, JR_SCOPE_VERSION, validDate, currentJrServiceDate } from '../scripts/import-jr.mjs';
+import { collectJr, JR_SCOPE_VERSION, validDate, currentJrServiceDate } from '../scripts/import-jr.mjs';
+import {JR_SCOPE,expectedJrDirectionKeys,matchesJrDirection} from '../src/domain/jr-scope.mjs';
 
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
 const HOUR = 60 * 60 * 1000;
@@ -20,12 +21,12 @@ async function atomicJson(target, value) {
 
 export function validateResult(day, value) {
   if (!value || !Array.isArray(value.tables) || !Array.isArray(value.evidence)) throw Error('JR daily result missing');
-  const expected = new Set(JR_STATIONS.flatMap(s => s.routes.map(([direction]) => `${s.id}-${direction}-${day}`)));
+  const expected = new Set([...expectedJrDirectionKeys()].map(key=>`${key}-${day}`));
   if (value.tables.length !== expected.size || value.evidence.length !== expected.size) throw Error('JR daily direction coverage mismatch');
   for (const table of value.tables) {
-    if (!expected.delete(table.id) || table.scopeVersion !== JR_SCOPE_VERSION || table.verification !== 'verified' || table.validFrom !== day || table.validTo !== day || JSON.stringify(table.serviceDates) !== JSON.stringify([day])) throw Error('JR daily date/verification/scope mismatch');
+    if (!expected.delete(table.id) || !matchesJrDirection(table) || table.id!==`${table.stationId}-${table.directionId}-${day}` || table.scopeVersion !== JR_SCOPE_VERSION || table.verification !== 'verified' || table.validFrom !== day || table.validTo !== day || JSON.stringify(table.serviceDates) !== JSON.stringify([day])) throw Error('JR daily date/verification/scope mismatch');
     const url = new URL(table.sourceUrl);
-    if (url.origin !== 'https://timetable.jr-odekake.net' || !/^\/station-timetable\/\d+$/.test(url.pathname) || url.search !== `?date=${day.replaceAll('-', '')}`) throw Error('JR daily source mismatch');
+    if (url.origin !== JR_SCOPE.sourceOrigin || !/^\/station-timetable\/\d+$/.test(url.pathname) || url.search !== `?date=${day.replaceAll('-', '')}`) throw Error('JR daily source mismatch');
     if (!Number.isFinite(Date.parse(table.retrievedAt)) || table.checkedAt !== table.retrievedAt || !table.departures?.length) throw Error('JR daily provenance missing');
     const keys = new Set();
     for (let i = 0; i < table.departures.length; i++) {

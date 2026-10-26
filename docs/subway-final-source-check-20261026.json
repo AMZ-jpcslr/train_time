@@ -1,0 +1,92 @@
+{
+  "runId": "2026-10-26T05-13-10-149Z",
+  "createdAt": "2026-10-26T05:13:19.420Z",
+  "kyoto": {
+    "id": "kyoto-catalog",
+    "url": "https://data.city.kyoto.lg.jp/dataset/00692/?page=1",
+    "startedAt": "2026-10-26T05:13:10.154Z",
+    "method": "GET",
+    "timeoutLimitMs": 9000,
+    "retries": 0,
+    "redirectsFollowed": 0,
+    "httpStatus": null,
+    "bodyBytes": 0,
+    "retainedBytes": 0,
+    "dns": {
+      "ms": 96,
+      "address": "133.18.11.31",
+      "family": 4,
+      "error": null
+    },
+    "tcpMs": null,
+    "tlsMs": null,
+    "httpMs": null,
+    "error": {
+      "code": "ECONNRESET",
+      "message": "socket hang up"
+    },
+    "finishedAt": "2026-10-26T05:13:19.238Z",
+    "elapsedMs": 9084,
+    "reason": "timeout",
+    "stage": "tcp-connect-incomplete",
+    "bodyFile": ".cache/subway-final-source-check-20261026/2026-10-26T05-13-10-149Z/kyoto-catalog.response.bin",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "hashScope": "received-body",
+    "acquisitionCandidate": false
+  },
+  "kobe": [
+    {
+      "id": "kobe-w-west",
+      "url": "https://kotsu.city.kobe.lg.jp/wp-content/uploads/open_kaigan_w_west_r080314.csv",
+      "startedAt": "2026-10-26T05:13:19.251Z",
+      "method": "GET",
+      "timeoutLimitMs": 9000,
+      "retries": 0,
+      "redirectsFollowed": 0,
+      "httpStatus": 403,
+      "bodyBytes": 919,
+      "retainedBytes": 919,
+      "dns": {
+        "ms": 93,
+        "address": "18.65.148.23",
+        "family": 4,
+        "error": null
+      },
+      "tcpMs": 103,
+      "tlsMs": 118,
+      "httpMs": 127,
+      "tlsAuthorized": true,
+      "headers": {
+        "content-type": "text/html",
+        "content-length": "919",
+        "date": "Mon, 26 Oct 2026 05:13:18 GMT",
+        "server": "CloudFront"
+      },
+      "responseAllowed": false,
+      "finishedAt": "2026-10-26T05:13:19.382Z",
+      "elapsedMs": 131,
+      "reason": "http-status-or-challenge-rejected",
+      "stage": "http-response",
+      "bodyFile": ".cache/subway-final-source-check-20261026/2026-10-26T05-13-10-149Z/kobe-w-west.response.bin",
+      "sha256": "afa6d4d974a875cddad4be743eb70de95b8715dc89114b9b047282154a8d1816",
+      "hashScope": "received-body",
+      "acquisitionCandidate": false
+    }
+  ],
+  "skippedKobeKeys": [
+    "h-east",
+    "h-west"
+  ],
+  "applicationTablesWritten": 0,
+  "verificationDatesChanged": false,
+  "contactSent": false,
+  "recordNotes": [
+    "京都のreason=timeoutが終了理由。error=ECONNRESETはタイムアウト後のソケット破棄で記録され、サーバー側のリセットを証明しない。",
+    "拒否応答の内的原因は未確認。既存のverified日付は更新していない。"
+  ],
+  "validation": {
+    "rawFilesHashVerified": 2,
+    "timetableContentAcquired": false,
+    "applicationTests": "not_run_no_code_changes"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "scopeVersion": 2,
+  "operator": "JR西日本",
+  "sourceOrigin": "https://timetable.jr-odekake.net",
+  "acquisitionScope": "existing",
+  "reusePermission": "unresolved-existing",
+  "qualityReview": "docs/jr-validation.json",
+  "corridors": [
+    {"id": "kobe", "name": "JR神戸線"},
+    {"id": "kyoto", "name": "JR京都線"},
+    {"id": "biwako", "name": "琵琶湖線"}
+  ],
+  "stations": [
+    {"id": "jr-nishinomiya", "name": "西宮", "eid": "0610136", "routes": [
+      {"directionId": "west", "corridorId": "kobe", "sourceLine": "ＪＲ神戸線", "direction": "三ノ宮・姫路方面"},
+      {"directionId": "east", "corridorId": "kobe", "sourceLine": "ＪＲ神戸線", "direction": "尼崎・大阪・北新地・京都方面"}
+    ]},
+    {"id": "jr-osaka", "name": "大阪", "eid": "0610130", "routes": [
+      {"directionId": "east", "corridorId": "kyoto", "sourceLine": "ＪＲ京都線（快速・普通）", "direction": "新大阪・高槻・京都方面"},
+      {"directionId": "west", "corridorId": "kobe", "sourceLine": "ＪＲ神戸線（快速・普通）", "direction": "三ノ宮・姫路方面"}
+    ]},
+    {"id": "jr-ibaraki", "name": "茨木", "eid": "0610124", "routes": [
+      {"directionId": "east", "corridorId": "kyoto", "sourceLine": "ＪＲ京都線", "direction": "高槻・京都方面"},
+      {"directionId": "west", "corridorId": "kyoto", "sourceLine": "ＪＲ京都線", "direction": "新大阪・大阪・三ノ宮方面"}
+    ]},
+    {"id": "jr-minamikusatsu", "name": "南草津", "eid": "0610149", "routes": [
+      {"directionId": "west", "corridorId": "biwako", "sourceLine": "琵琶湖線", "direction": "京都・大阪方面"},
+      {"directionId": "east", "corridorId": "biwako", "sourceLine": "琵琶湖線", "direction": "草津・米原方面"}
+    ]}
+  ]
+}

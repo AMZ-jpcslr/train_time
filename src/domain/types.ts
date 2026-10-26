@@ -9,7 +9,12 @@ export interface Timetable {
   /** A retained download can have a known import time without a known HTTP acquisition time. */
   sourceAcquisition?: {kind:'retained-official-download';downloadedAt:string|null;fileModifiedAt:string;importedAt:string};
 }
-export interface Station { id: string; name: string; operator: string; line: string; code: string; lat: number; lon: number; directions: { id: string; name: string }[]; sourceUrl: string; aliases?:string[]; region?:string; timetablePath?:string; challengeProvider?:string; westernProvider?:string }
+export interface Station { id: string; name: string; operator: string; line: string; code: string; lat: number; lon: number; directions: { id: string; name: string }[]; sourceUrl: string; aliases?:string[]; region?:string; timetablePath?:string; challengeProvider?:string; westernProvider?:string;
+  physicalStationId?:string;
+  /** Official geographic station index only; never a timetable, entrance or real train direction. */
+  catalogOnly?:boolean;
+  catalogSource?:{name:string;url:string;license:string;dataAsOf:string;retrievedAt:string;checkedAt:string};
+}
 export interface SavedPlace { id: string; name: string; stationId: string; entrance: string; walkMinutes: number }
 export interface Position { lat: number; lon: number; accuracy: number; timestamp: number }
 export interface Entrance {id:string;stationId:string;name:string;lat:number;lon:number;sourceUrl:string;checkedAt:string;note?:string;officialSourceUrl?:string;osm?:{nodeId:number;association:string;feature:string;featureUrl:string;paths?:string[]}}

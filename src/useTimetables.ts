@@ -1,13 +1,10 @@
 import { useEffect, useState } from 'react';
 import type { Timetable } from './domain/types';
+import {JR_SCOPE,JR_SCOPE_VERSION,expectedJrDirectionKeys,matchesJrDirection,isJrAcquisitionStation} from './domain/jr-scope.mjs';
 
 export const JR_DAILY_TTL_MS = 6 * 3600000;
 const RETRY_MS = 15 * 60000;
 const STORAGE_KEY = 'mania-u:jr-daily:v2';
-const DIRECTIONS = new Set([
-  'jr-nishinomiya-east', 'jr-nishinomiya-west', 'jr-osaka-east', 'jr-osaka-west',
-  'jr-ibaraki-east', 'jr-ibaraki-west', 'jr-minamikusatsu-east', 'jr-minamikusatsu-west',
-]);
 export type DailyResult = {
   schemaVersion: 2; serviceDate: string; tables: Timetable[]; status: 'ready'; expiresAt: string; errors: string[];
 };
@@ -25,10 +22,10 @@ const strings = (value: unknown): value is string[] => Array.isArray(value) && v
 export function validDailyResult(value: unknown, date: string): value is DailyResult {
   if (!isDate(date) || !value || typeof value !== 'object') return false;
   const result = value as DailyResult;
-  if (result.schemaVersion !== 2 || result.serviceDate !== date || result.status !== 'ready' || !Array.isArray(result.tables) || result.tables.length !== 8 || !strings(result.errors)) return false;
-  const remaining = new Set(DIRECTIONS);
+  const remaining = expectedJrDirectionKeys();
+  if (result.schemaVersion !== JR_SCOPE_VERSION || result.serviceDate !== date || result.status !== 'ready' || !Array.isArray(result.tables) || result.tables.length !== remaining.size || !strings(result.errors)) return false;
   for (const table of result.tables) {
-    if (!table || typeof table !== 'object' || (table as Timetable & { scopeVersion?: number }).scopeVersion !== 2) return false;
+    if (!table || typeof table !== 'object' || !matchesJrDirection(table) || (table as Timetable & { scopeVersion?: number }).scopeVersion !== JR_SCOPE_VERSION) return false;
     const key = `${table.stationId}-${table.directionId}`;
     if (!remaining.delete(key) || table.id !== `${key}-${date}` || table.validFrom !== date || table.validTo !== date
       || table.serviceDates?.length !== 1 || table.serviceDates[0] !== date || table.verification !== 'verified'
@@ -37,7 +34,7 @@ export function validDailyResult(value: unknown, date: string): value is DailyRe
       || ![table.operator, table.line, table.direction].every(x => typeof x === 'string' && x.length > 0)) return false;
     try {
       const url = new URL(table.sourceUrl);
-      if (url.origin !== 'https://timetable.jr-odekake.net' || !/^\/station-timetable\/\d+$/.test(url.pathname)
+      if (url.origin !== JR_SCOPE.sourceOrigin || !/^\/station-timetable\/\d+$/.test(url.pathname)
         || url.search !== `?date=${date.replaceAll('-', '')}`) return false;
     } catch { return false; }
     if (!Array.isArray(table.departures) || table.departures.length === 0 || table.departures.length > 1000) return false;
@@ -106,7 +103,7 @@ export function useTimetables(bundled: Timetable[], stationId: string, day: stri
   const [daily, setDaily] = useState(savedDaily);
   const [status, setStatus] = useState<DailyStatus>(initialStatus);
   const [refresh, setRefresh] = useState(0);
-  const isJr = stationId.startsWith('jr-');
+  const isJr = isJrAcquisitionStation(stationId);
   useEffect(() => {
     if (!isJr) return;
     let active = true;

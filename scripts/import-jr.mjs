@@ -4,20 +4,15 @@ import { readFile, writeFile, mkdir, copyFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { pathToFileURL, fileURLToPath } from 'node:url';
 import path from 'node:path';
+import {JR_SCOPE,JR_STATIONS,JR_SCOPE_VERSION} from '../src/domain/jr-scope.mjs';
+export {JR_STATIONS,JR_SCOPE_VERSION} from '../src/domain/jr-scope.mjs';
 const ROOT=fileURLToPath(new URL('../',import.meta.url));
-const ORIGIN='https://timetable.jr-odekake.net';
-export const JR_SCOPE_VERSION=2;
+const ORIGIN=JR_SCOPE.sourceOrigin;
 const OSAKA_KOBE_DESTINATIONS=new Set(['尼崎','甲子園口','神戸','須磨','西明石','加古川','姫路','網干','播州赤穂','上郡']);
 export const OSAKA_TAKARAZUKA_PROOF={
  '宝塚':{sourceUrl:'https://timetable.jr-odekake.net/train-timetable/172201?date=20261023',trainNumber:'1167C',path:['大阪','塚本','尼崎','塚口','猪名寺','伊丹','北伊丹','川西池田','中山寺','宝塚']},
  '新三田':{sourceUrl:'https://timetable.jr-odekake.net/train-timetable/2811?date=20261023',trainNumber:'1169C',path:['大阪','塚本','尼崎','塚口','猪名寺','伊丹','北伊丹','川西池田','中山寺','宝塚','生瀬','西宮名塩','武田尾','道場','三田','新三田']},
 };
-export const JR_STATIONS=[
- {id:'jr-nishinomiya',name:'西宮',eid:'0610136',routes:[['west','ＪＲ神戸線','三ノ宮・姫路方面'],['east','ＪＲ神戸線','尼崎・大阪・北新地・京都方面']]},
- {id:'jr-osaka',name:'大阪',eid:'0610130',routes:[['east','ＪＲ京都線（快速・普通）','新大阪・高槻・京都方面'],['west','ＪＲ神戸線（快速・普通）','三ノ宮・姫路方面']]},
- {id:'jr-ibaraki',name:'茨木',eid:'0610124',routes:[['east','ＪＲ京都線','高槻・京都方面'],['west','ＪＲ京都線','新大阪・大阪・三ノ宮方面']]},
- {id:'jr-minamikusatsu',name:'南草津',eid:'0610149',routes:[['west','琵琶湖線','京都・大阪方面'],['east','琵琶湖線','草津・米原方面']]},
-];
 const digest=s=>createHash('sha256').update(s).digest('hex');
 const clean=s=>s.replace(/\s+/g,' ').trim();
 export function serviceTime(value){if(!/^\d{1,2}:\d{2}$/.test(value))throw Error('Invalid time');let[h,m]=value.split(':').map(Number);if(h>27||m>59)throw Error('Invalid time');if(h<4)h+=24;return`${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}`;}

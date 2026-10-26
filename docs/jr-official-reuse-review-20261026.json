@@ -1,0 +1,311 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-26T04:36:36.320Z",
+  "scope": {
+    "operator": "JR西日本",
+    "lines": [
+      "JR神戸線",
+      "JR京都線",
+      "琵琶湖線"
+    ],
+    "purpose": "新駅の時刻表取得・公開アプリ再利用条件"
+  },
+  "decision": {
+    "confirmedFreeOfficialReusableTimetableSources": 0,
+    "status": "no_verified_free_reuse_source_in_reviewed_scope",
+    "notProofOfNonexistence": true,
+    "stationSearchMetadataIsSeparate": true,
+    "timetableTablesAdded": 0,
+    "codeChanged": false,
+    "queriesSent": false,
+    "contractsOrPayments": false
+  },
+  "candidates": [
+    {
+      "id": "jr-official-viewer",
+      "urls": [
+        "https://timetable.jr-odekake.net/cgi-bin/mydia_sp.cgi?MD=3&FN=0&EID=0610130&date=20261026",
+        "https://www.jr-odekake.net/use/about.html"
+      ],
+      "view": "public_viewer",
+      "automatedAcquisition": "permission_and_rate_limit_not_confirmed",
+      "storage": "continuing_storage_offline_permission_not_confirmed",
+      "appDisplay": "explicit_unpermitted_republication_restriction",
+      "redistribution": "explicit_unpermitted_copying_and_conversion_restriction",
+      "commercial": "no_confirmed_noncommercial_exception",
+      "cache": "provider_duration_not_confirmed",
+      "sourceEdition": "JR時刻表2026年11月号",
+      "appSixHourTtlIsNotProviderLicense": true
+    },
+    {
+      "id": "jr-top-link",
+      "url": "https://www.jr-odekake.net/use/about.html",
+      "link": "conditional_top_page_separate_window_no_frame",
+      "timetableReuse": false
+    },
+    {
+      "id": "odpt",
+      "url": "https://ckan.odpt.org/dataset",
+      "view": "public_catalog",
+      "automatedAcquisition": "per_dataset_license",
+      "storage": "per_dataset_license",
+      "appDisplay": "per_dataset_license",
+      "redistribution": "per_dataset_license",
+      "commercial": "per_dataset_license",
+      "cache": "per_dataset_license",
+      "jrWestTargetFeedConfirmed": false
+    },
+    {
+      "id": "kotsu-data-sales",
+      "url": "https://www.kotsu.co.jp/service/jikoku_solution/data_sales/",
+      "formats": [
+        "CSV",
+        "XML",
+        "GTFS"
+      ],
+      "scope": "JR旅客6社",
+      "eligibleCustomers": "法人・団体",
+      "free": false,
+      "automatedAcquisition": "contract_required",
+      "storage": "contract_scope_unconfirmed",
+      "appDisplay": "contract_scope_unconfirmed",
+      "redistribution": "contract_scope_unconfirmed",
+      "commercial": "contract_scope_unconfirmed",
+      "cache": "contract_scope_unconfirmed",
+      "targetLineCompleteness": "not_yet_confirmed"
+    },
+    {
+      "id": "kotsu-web-api",
+      "url": "https://www.kotsu.co.jp/service/jikoku_solution/create_homepage/",
+      "free": false,
+      "appDisplay": "separate_timetable_information_use_license_contract_required",
+      "automatedAcquisition": "contracted_api_or_asp",
+      "storage": "contract_scope_unconfirmed",
+      "redistribution": "contract_scope_unconfirmed",
+      "commercial": "contract_scope_unconfirmed",
+      "cache": "contract_scope_unconfirmed",
+      "pricingExample": {
+        "product": "シンプルシリーズASP",
+        "monthlyJpyFrom": 150000,
+        "initialJpyFrom": 100000,
+        "exampleStationLimit": 10,
+        "isOfferForThisApp": false,
+        "taxAndCurrentApplicability": "not_confirmed",
+        "url": "https://www.kotsu.co.jp/service/files/pdf/05d048ae43d886ef24f1e815a6cbeed7e1a82085.pdf"
+      }
+    },
+    {
+      "id": "ekispert-free-api",
+      "url": "https://docs.ekispert.com/v1/le/api/",
+      "freePlanExists": true,
+      "keyRequired": true,
+      "listedTimetableEndpoint": false,
+      "routeResponse": "external_result_page_URL",
+      "usableAsTargetTimetableFeed": false,
+      "storage": "full_license_not_reviewed_not_adopted",
+      "appDisplay": "full_license_not_reviewed_not_adopted",
+      "redistribution": "full_license_not_reviewed_not_adopted",
+      "commercial": "full_license_not_reviewed_not_adopted",
+      "cache": "full_license_not_reviewed_not_adopted"
+    }
+  ],
+  "catalogChecks": [
+    {
+      "query": "西日本",
+      "type": "dataset",
+      "count": 0,
+      "evidenceId": "odpt-west-datasets"
+    },
+    {
+      "query": "西日本",
+      "type": "organization",
+      "count": 0,
+      "evidenceId": "odpt-west-organizations"
+    },
+    {
+      "query": "JR",
+      "type": "dataset",
+      "count": 19,
+      "titles": [
+        "JR東日本 路線系統情報 / Route information of JR East",
+        "JR東日本 駅情報 / Station information of JR East",
+        "JR東日本 乗降者数情報 / Passenger survey of JR East",
+        "JR東日本 列車時刻表 / Train timetable of JR East",
+        "JR東日本 駅時刻表 / Station timetable of JR East",
+        "JR東日本 鉄道関連情報 / Train information of JR East",
+        "JR東日本アイステイションズ 運行情報 / Train status information by JR East i-Stations",
+        "JR東日本 鉄道関連リアルタイム情報 / Train realtime information of JR East",
+        "JR東日本 列車ロケーション情報 / Train location information of JR East",
+        "JR東日本アイステイションズ 鉄道関連リアルタイム情報 / Train realtime information by JR East i-Stations",
+        "JR貨物 コンテナ時刻表 鉄道関連情報 / JR Freight Container transportation timetable",
+        "歩行空間ネットワークデータ（JR東日本 池袋駅）",
+        "歩行空間ネットワークデータ（JR東日本 渋谷駅）",
+        "歩行空間ネットワークデータ（JR東日本 品川駅）",
+        "歩行空間ネットワークデータ（JR東日本 新宿駅）",
+        "歩行空間ネットワークデータ（JR東日本 高輪ゲートウェイ駅）",
+        "歩行空間ネットワークデータ（JR東日本 東京駅）",
+        "【リアルタイム情報】秋葉バス / [realtime information] Akiha Bus Service",
+        "秋葉バス / Akiha Bus Service"
+      ],
+      "evidenceId": "odpt-jr-datasets"
+    },
+    {
+      "query": "JR-West",
+      "type": "dataset",
+      "interpretation": "query_tokenization_matches_non_target_data_do_not_treat_count_as_JRWest_coverage",
+      "evidenceId": "odpt-english-west"
+    }
+  ],
+  "additionalSources": [
+    {
+      "url": "https://challenge2026.odpt.org/",
+      "checkedDate": "2026-10-26",
+      "finding": "JR東日本とJR貨物の公開告知。JR西日本対象線の許諾には転用しない。"
+    },
+    {
+      "url": "https://www.odpt.org/overview/",
+      "checkedDate": "2026-10-26",
+      "finding": "登録無料とデータ個別条件を区別"
+    },
+    {
+      "url": "https://docs.ekispert.com/v1/le/api/search/course/light.html",
+      "checkedDate": "2026-10-26",
+      "finding": "ResourceURI response; access key required"
+    },
+    {
+      "url": "https://laws.e-gov.go.jp/law/345AC0000000048",
+      "checkedDate": "2026-10-26",
+      "finding": "創作的表現、編集物、DBの構成と個々の事実を分離。個別行為の法的結論は出さない。",
+      "limitation": "現行トップのweb本文抽出は空。検索索引の2025-12-31版第12条/第12条の2を参照した概念整理。個別適法判断には用いない。"
+    },
+    {
+      "url": "https://www.jr-odekake.net/info/info.html",
+      "checkedDate": "2026-10-26",
+      "finding": "個人宛回答の再利用・転載制限。問い合わせ下書きのみ。"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "odpt-west-datasets",
+      "url": "https://ckan.odpt.org/dataset?q=%E8%A5%BF%E6%97%A5%E6%9C%AC",
+      "finalUrl": "https://ckan.odpt.org/dataset?q=%E8%A5%BF%E6%97%A5%E6%9C%AC",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-26T04:32:48.756Z",
+      "bytes": 9626,
+      "sha256": "76d19bf0b48b1e06b4f003ff6b9887ad92e9eef119399c939fff50178255cb98",
+      "file": ".cache/jr-official-reuse-review-20261026/odpt-west-datasets.html",
+      "localOnly": true
+    },
+    {
+      "id": "odpt-west-organizations",
+      "url": "https://ckan.odpt.org/organization?q=%E8%A5%BF%E6%97%A5%E6%9C%AC",
+      "finalUrl": "https://ckan.odpt.org/organization?q=%E8%A5%BF%E6%97%A5%E6%9C%AC",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-26T04:32:49.546Z",
+      "bytes": 7766,
+      "sha256": "f4fbed5402db6afae62b9a45a6ffb978384e20f32384c20376902d7b51d23dff",
+      "file": ".cache/jr-official-reuse-review-20261026/odpt-west-organizations.html",
+      "localOnly": true
+    },
+    {
+      "id": "jr-station-index",
+      "url": "https://timetable.jr-odekake.net/cgi-bin/mydia_sp.cgi?MD=3&FN=0&EID=0610130&date=20261026",
+      "finalUrl": "https://timetable.jr-odekake.net/cgi-bin/mydia_sp.cgi?MD=3&FN=0&EID=0610130&date=20261026",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-26T04:32:49.605Z",
+      "bytes": 13531,
+      "sha256": "5d855f40f5f2f07dccee32d2b47905b619f09bbf512f73345154c749d1c52c26",
+      "file": ".cache/jr-official-reuse-review-20261026/jr-station-index.html",
+      "localOnly": true
+    },
+    {
+      "id": "kotsu-data",
+      "url": "https://www.kotsu.co.jp/service/jikoku_solution/data_sales/",
+      "finalUrl": "https://www.kotsu.co.jp/service/jikoku_solution/data_sales/",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-26T04:32:49.728Z",
+      "bytes": 23430,
+      "sha256": "a3c4c14d9b0465c80a090be06b64f5769ef7ae901570176ddc23a5c0c9e99d79",
+      "file": ".cache/jr-official-reuse-review-20261026/kotsu-data.html",
+      "localOnly": true
+    },
+    {
+      "id": "kotsu-web",
+      "url": "https://www.kotsu.co.jp/service/jikoku_solution/create_homepage/",
+      "finalUrl": "https://www.kotsu.co.jp/service/jikoku_solution/create_homepage/",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-26T04:32:50.091Z",
+      "bytes": 28301,
+      "sha256": "9797f927801f48bc2f489b09061defb54361721c47b121bc58aa23d17a492867",
+      "file": ".cache/jr-official-reuse-review-20261026/kotsu-web.html",
+      "localOnly": true
+    },
+    {
+      "id": "jr-terms",
+      "url": "https://www.jr-odekake.net/use/about.html",
+      "finalUrl": "https://www.jr-odekake.net/use/about.html",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-26T04:32:50.132Z",
+      "bytes": 115477,
+      "sha256": "c66721174e23599714a91a34633b3e50d845b66a3c061d051951296c07311d79",
+      "file": ".cache/jr-official-reuse-review-20261026/jr-terms.html",
+      "localOnly": true
+    },
+    {
+      "id": "kotsu-jrlogo",
+      "url": "https://www.kotsu.co.jp/jrlogo/",
+      "finalUrl": "https://www.kotsu.co.jp/jrlogo/",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-26T04:33:20.811Z",
+      "bytes": 21298,
+      "sha256": "9f39e5c291010a1d3ae8fa807adb37fbab0b47d572b639245ef28f48f3ad63bd",
+      "file": ".cache/jr-official-reuse-review-20261026/kotsu-jrlogo.html",
+      "localOnly": true
+    },
+    {
+      "id": "odpt-jr-datasets",
+      "url": "https://ckan.odpt.org/dataset?q=JR",
+      "finalUrl": "https://ckan.odpt.org/dataset?q=JR",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-26T04:33:20.996Z",
+      "bytes": 42065,
+      "sha256": "fd1a557337cf02f50422e52556769e4d6b35f8a893efae2dbbc55803161806f1",
+      "file": ".cache/jr-official-reuse-review-20261026/odpt-jr-datasets.html",
+      "localOnly": true
+    },
+    {
+      "id": "odpt-english-west",
+      "url": "https://ckan.odpt.org/dataset?q=JR-West",
+      "finalUrl": "https://ckan.odpt.org/dataset?q=JR-West",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-26T04:33:21.212Z",
+      "bytes": 33892,
+      "sha256": "e2a0ad1cf7526ece17148c9223ad5f34b3695a0e21272a61032a0eb6bb333298",
+      "file": ".cache/jr-official-reuse-review-20261026/odpt-english-west.html",
+      "localOnly": true
+    },
+    {
+      "id": "ekispert-free-api",
+      "url": "https://docs.ekispert.com/v1/le/api/",
+      "finalUrl": "https://docs.ekispert.com/v1/le/api/",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-26T04:33:21.330Z",
+      "bytes": 15558,
+      "sha256": "91bc2e411d75c9a6a10387d2c83e7851a22cb30c88775418d75dcf29d6ca543a",
+      "file": ".cache/jr-official-reuse-review-20261026/ekispert-free-api.html",
+      "localOnly": true
+    }
+  ],
+  "validation": {
+    "rawFilesHashVerified": 10,
+    "catalogCountsChecked": true,
+    "jrTermsChecked": true,
+    "kotsuContractAndFormatsChecked": true,
+    "applicationTests": "not_run_documentation_only"
+  },
+  "inquiry": {
+    "draftDocument": "docs/jr-official-reuse-review-20261026.md",
+    "sent": false,
+    "destinationCandidate": "https://form.kotsu.co.jp/jikokuhyou_ss"
+  }
+}

@@ -2,6 +2,7 @@ import type { Station } from '../domain/types';
 import odptStations from './odpt-stations.json' with {type:'json'};
 import kobeExpandedStations from './kobe-expanded-stations.json' with {type:'json'};
 import kobeKaiganStations from './kobe-kaigan-stations.json' with {type:'json'};
+import jrStationCatalog from './jr-station-catalog.json' with {type:'json'};
 // Coordinates are approximate station centres, used ONLY to rank nearby stations.
 // They are never treated as verified entrances or walking routes.
 export const stations: Station[] = [
@@ -16,5 +17,5 @@ export const stations: Station[] = [
  {id:'hankyu-sannomiya',name:'阪急神戸三宮',operator:'阪急電鉄',line:'神戸線',code:'HK16',lat:34.6933,lon:135.1927,directions:[{id:'east',name:'大阪梅田方面'},{id:'west',name:'新開地・姫路方面'}],sourceUrl:'https://www.hankyu.co.jp/station/sannomiya.html'},
  {id:'hankyu-umeda',name:'阪急大阪梅田',operator:'阪急電鉄',line:'神戸線',code:'HK01',lat:34.7055,lon:135.4983,directions:[{id:'west',name:'神戸三宮・新開地方面'}],sourceUrl:'https://www.hankyu.co.jp/station/umeda.html/'},
  {id:'hanshin-koshien',name:'阪神甲子園',operator:'阪神電気鉄道',line:'阪神本線',code:'HS14',lat:34.723885,lon:135.363285,directions:[{id:'east',name:'大阪梅田・大阪難波・近鉄奈良方面'},{id:'west',name:'神戸三宮・山陽姫路方面'}],sourceUrl:'https://www.hanshin.co.jp/station/koshien.html'}
- ,...kobeExpandedStations,...kobeKaiganStations,...odptStations
+ ,...kobeExpandedStations,...kobeKaiganStations,...jrStationCatalog,...odptStations
 ];

@@ -1,0 +1,380 @@
+{
+  "reviewCheckedAt": "2026-10-26T04:37:09.965017+00:00",
+  "sourceFeatureSha256": "8aa3392f00e8a6d8e1e18cfe9c395548c554cf51baa5c024fa512c59728fb2b4",
+  "count": 74,
+  "physicalStationCount": 73,
+  "added": [
+    {
+      "id": "jr-catalog-007009-kobe",
+      "name": "JR塚本",
+      "line": "JR神戸線"
+    },
+    {
+      "id": "jr-catalog-006919-kobe",
+      "name": "JR尼崎",
+      "line": "JR神戸線"
+    },
+    {
+      "id": "jr-catalog-006886-kobe",
+      "name": "JR立花",
+      "line": "JR神戸線"
+    },
+    {
+      "id": "jr-catalog-006879-kobe",
+      "name": "JR甲子園口",
+      "line": "JR神戸線"
+    },
+    {
+      "id": "jr-catalog-006880-kobe",
+      "name": "JRさくら夙川",
+      "line": "JR神戸線"
+    },
+    {
+      "id": "jr-catalog-006908-kobe",
+      "name": "JR芦屋",
+      "line": "JR神戸線"
+    },
+    {
+      "id": "jr-catalog-006926-kobe",
+      "name": "JR甲南山手",
+      "line": "JR神戸線"
+    },
+    {
+      "id": "jr-catalog-006941-kobe",
+      "name": "JR摂津本山",
+      "line": "JR神戸線"
+    },
+    {
+      "id": "jr-catalog-006974-kobe",
+      "name": "JR住吉",
+      "line": "JR神戸線"
+    },
+    {
+      "id": "jr-catalog-007004-kobe",
+      "name": "JR六甲道",
+      "line": "JR神戸線"
+    },
+    {
+      "id": "jr-catalog-007033-kobe",
+      "name": "JR摩耶",
+      "line": "JR神戸線"
+    },
+    {
+      "id": "jr-catalog-007046-kobe",
+      "name": "JR灘",
+      "line": "JR神戸線"
+    },
+    {
+      "id": "jr-catalog-007105-kobe",
+      "name": "JR三ノ宮",
+      "line": "JR神戸線"
+    },
+    {
+      "id": "jr-catalog-007151-kobe",
+      "name": "JR元町",
+      "line": "JR神戸線"
+    },
+    {
+      "id": "jr-catalog-007224-kobe",
+      "name": "JR神戸",
+      "line": "JR神戸線"
+    },
+    {
+      "id": "jr-catalog-007298-kobe",
+      "name": "JR兵庫",
+      "line": "JR神戸線"
+    },
+    {
+      "id": "jr-catalog-007386-kobe",
+      "name": "JR新長田",
+      "line": "JR神戸線"
+    },
+    {
+      "id": "jr-catalog-007417-kobe",
+      "name": "JR鷹取",
+      "line": "JR神戸線"
+    },
+    {
+      "id": "jr-catalog-007441-kobe",
+      "name": "JR須磨海浜公園",
+      "line": "JR神戸線"
+    },
+    {
+      "id": "jr-catalog-007466-kobe",
+      "name": "JR須磨",
+      "line": "JR神戸線"
+    },
+    {
+      "id": "jr-catalog-007495-kobe",
+      "name": "JR塩屋",
+      "line": "JR神戸線"
+    },
+    {
+      "id": "jr-catalog-007516-kobe",
+      "name": "JR垂水",
+      "line": "JR神戸線"
+    },
+    {
+      "id": "jr-catalog-007497-kobe",
+      "name": "JR舞子",
+      "line": "JR神戸線"
+    },
+    {
+      "id": "jr-catalog-007453-kobe",
+      "name": "JR朝霧",
+      "line": "JR神戸線"
+    },
+    {
+      "id": "jr-catalog-007428-kobe",
+      "name": "JR明石",
+      "line": "JR神戸線"
+    },
+    {
+      "id": "jr-catalog-007328-kobe",
+      "name": "JR西明石",
+      "line": "JR神戸線"
+    },
+    {
+      "id": "jr-catalog-007196-kobe",
+      "name": "JR大久保",
+      "line": "JR神戸線"
+    },
+    {
+      "id": "jr-catalog-007096-kobe",
+      "name": "JR魚住",
+      "line": "JR神戸線"
+    },
+    {
+      "id": "jr-catalog-006969-kobe",
+      "name": "JR土山",
+      "line": "JR神戸線"
+    },
+    {
+      "id": "jr-catalog-006854-kobe",
+      "name": "JR東加古川",
+      "line": "JR神戸線"
+    },
+    {
+      "id": "jr-catalog-006755-kobe",
+      "name": "JR加古川",
+      "line": "JR神戸線"
+    },
+    {
+      "id": "jr-catalog-006698-kobe",
+      "name": "JR宝殿",
+      "line": "JR神戸線"
+    },
+    {
+      "id": "jr-catalog-006665-kobe",
+      "name": "JR曽根",
+      "line": "JR神戸線"
+    },
+    {
+      "id": "jr-catalog-006605-kobe",
+      "name": "JRひめじ別所",
+      "line": "JR神戸線"
+    },
+    {
+      "id": "jr-catalog-006558-kobe",
+      "name": "JR御着",
+      "line": "JR神戸線"
+    },
+    {
+      "id": "jr-catalog-006523-kobe",
+      "name": "JR東姫路",
+      "line": "JR神戸線"
+    },
+    {
+      "id": "jr-catalog-006509-kobe",
+      "name": "JR姫路",
+      "line": "JR神戸線"
+    },
+    {
+      "id": "jr-catalog-006077-kyoto",
+      "name": "JR京都",
+      "line": "JR京都線"
+    },
+    {
+      "id": "jr-catalog-006096-kyoto",
+      "name": "JR西大路",
+      "line": "JR京都線"
+    },
+    {
+      "id": "jr-catalog-006152-kyoto",
+      "name": "JR桂川",
+      "line": "JR京都線"
+    },
+    {
+      "id": "jr-catalog-006178-kyoto",
+      "name": "JR向日町",
+      "line": "JR京都線"
+    },
+    {
+      "id": "jr-catalog-006258-kyoto",
+      "name": "JR長岡京",
+      "line": "JR京都線"
+    },
+    {
+      "id": "jr-catalog-006329-kyoto",
+      "name": "JR山崎",
+      "line": "JR京都線"
+    },
+    {
+      "id": "jr-catalog-006359-kyoto",
+      "name": "JR島本",
+      "line": "JR京都線"
+    },
+    {
+      "id": "jr-catalog-006432-kyoto",
+      "name": "JR高槻",
+      "line": "JR京都線"
+    },
+    {
+      "id": "jr-catalog-006467-kyoto",
+      "name": "JR摂津富田",
+      "line": "JR京都線"
+    },
+    {
+      "id": "jr-catalog-006498-kyoto",
+      "name": "JR総持寺",
+      "line": "JR京都線"
+    },
+    {
+      "id": "jr-catalog-006672-kyoto",
+      "name": "JR千里丘",
+      "line": "JR京都線"
+    },
+    {
+      "id": "jr-catalog-006721-kyoto",
+      "name": "JR岸辺",
+      "line": "JR京都線"
+    },
+    {
+      "id": "jr-catalog-006779-kyoto",
+      "name": "JR吹田",
+      "line": "JR京都線"
+    },
+    {
+      "id": "jr-catalog-006878-kyoto",
+      "name": "JR東淀川",
+      "line": "JR京都線"
+    },
+    {
+      "id": "jr-catalog-006910-kyoto",
+      "name": "JR新大阪",
+      "line": "JR京都線"
+    },
+    {
+      "id": "jr-catalog-004895-biwako",
+      "name": "JR長浜",
+      "line": "琵琶湖線"
+    },
+    {
+      "id": "jr-catalog-004954-biwako",
+      "name": "JR田村",
+      "line": "琵琶湖線"
+    },
+    {
+      "id": "jr-catalog-005006-biwako",
+      "name": "JR坂田",
+      "line": "琵琶湖線"
+    },
+    {
+      "id": "jr-catalog-005075-biwako",
+      "name": "JR米原",
+      "line": "琵琶湖線"
+    },
+    {
+      "id": "jr-catalog-005176-biwako",
+      "name": "JR彦根",
+      "line": "琵琶湖線"
+    },
+    {
+      "id": "jr-catalog-005249-biwako",
+      "name": "JR南彦根",
+      "line": "琵琶湖線"
+    },
+    {
+      "id": "jr-catalog-005292-biwako",
+      "name": "JR河瀬",
+      "line": "琵琶湖線"
+    },
+    {
+      "id": "jr-catalog-005341-biwako",
+      "name": "JR稲枝",
+      "line": "琵琶湖線"
+    },
+    {
+      "id": "jr-catalog-005415-biwako",
+      "name": "JR能登川",
+      "line": "琵琶湖線"
+    },
+    {
+      "id": "jr-catalog-005553-biwako",
+      "name": "JR安土",
+      "line": "琵琶湖線"
+    },
+    {
+      "id": "jr-catalog-005619-biwako",
+      "name": "JR近江八幡",
+      "line": "琵琶湖線"
+    },
+    {
+      "id": "jr-catalog-005700-biwako",
+      "name": "JR篠原",
+      "line": "琵琶湖線"
+    },
+    {
+      "id": "jr-catalog-005772-biwako",
+      "name": "JR野洲",
+      "line": "琵琶湖線"
+    },
+    {
+      "id": "jr-catalog-005831-biwako",
+      "name": "JR守山",
+      "line": "琵琶湖線"
+    },
+    {
+      "id": "jr-catalog-005862-biwako",
+      "name": "JR栗東",
+      "line": "琵琶湖線"
+    },
+    {
+      "id": "jr-catalog-005901-biwako",
+      "name": "JR草津",
+      "line": "琵琶湖線"
+    },
+    {
+      "id": "jr-catalog-006069-biwako",
+      "name": "JR瀬田",
+      "line": "琵琶湖線"
+    },
+    {
+      "id": "jr-catalog-006098-biwako",
+      "name": "JR石山",
+      "line": "琵琶湖線"
+    },
+    {
+      "id": "jr-catalog-006012-biwako",
+      "name": "JR膳所",
+      "line": "琵琶湖線"
+    },
+    {
+      "id": "jr-catalog-006000-biwako",
+      "name": "JR大津",
+      "line": "琵琶湖線"
+    },
+    {
+      "id": "jr-catalog-006044-biwako",
+      "name": "JR山科",
+      "line": "琵琶湖線"
+    },
+    {
+      "id": "jr-catalog-006077-biwako",
+      "name": "JR京都",
+      "line": "琵琶湖線"
+    }
+  ],
+  "removed": [],
+  "changed": []
+}
