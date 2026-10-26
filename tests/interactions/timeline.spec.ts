@@ -23,20 +23,45 @@ async function measure(page:Page,minutes='1'){
 async function aligned(page:Page,selector='.departure-card.is-selected'){
  await expect.poll(()=>page.locator(selector).first().evaluate(card=>Math.abs(card.getBoundingClientRect().left-card.parentElement!.getBoundingClientRect().left-2)),{timeout:8000}).toBeLessThan(3);
 }
+type ScrollSample={phase:'initial'|'frame'|'mutation'|'final';x:number;cursor:string;transform:number;expected:number;icon:number};
+function synchronizationErrors(rows:ScrollSample[],start:number,end:number){
+ const committed=rows.filter(s=>s.phase==='mutation'||s.phase==='final');
+ const errors:string[]=[];
+ if(!committed.some(s=>s.phase==='mutation'&&s.x>start+0.5&&s.x<end-0.5))errors.push('no intermediate rail update');
+ if(!committed.length||committed.some(s=>!Number.isFinite(s.transform)||Math.abs(s.transform-s.expected)>1))errors.push('rail/native mismatch');
+ const last=rows.at(-1);
+ if(!last||last.phase!=='final'||Math.abs(last.x-end)>1||Math.abs(last.transform-last.expected)>1)errors.push('final mismatch');
+ return errors;
+}
 async function sample(page:Page){
  await page.evaluate(()=>{
-  const samples:{x:number;cursor:string;transform:string;icon:number|null}[]=[];
-  Object.assign(window,{__scrollSamples:samples});
-  // Start on the actual click, after Playwright's visibility/stability waits.
+  // rAF can run before React's rAF in the same frame. Keep those samples as
+  // diagnostics; compare synchronization only after actual style mutations.
   document.addEventListener('click',()=>{
-   const start=performance.now();
-   const epoch=document.querySelector('.departure-card.is-selected')!.getAttribute('data-epoch');
-   function frame(){const strip=document.querySelector('.timeline-strip')!;samples.push({x:strip.scrollLeft,cursor:document.querySelector('.rail-caption b')!.textContent!,transform:(document.querySelector('.rail-train') as HTMLElement)?.style.transform,icon:document.querySelector(`.rail-train[data-epoch="${epoch}"]`)?.getBoundingClientRect().left??null});if(performance.now()-start<3000)requestAnimationFrame(frame);}
-   frame();
+   const strip=document.querySelector('.timeline-strip') as HTMLElement;
+   const selected=strip.querySelector('.is-selected') as HTMLElement;
+   const neighbor=selected.nextElementSibling as HTMLElement;
+   const epoch=selected.dataset.epoch;
+   const icon=document.querySelector(`.rail-train[data-epoch="${epoch}"]`) as HTMLElement;
+   const neighborIcon=document.querySelector(`.rail-train[data-epoch="${neighbor.dataset.epoch}"]`) as HTMLElement;
+   const translate=(el:HTMLElement)=>new DOMMatrixReadOnly(el.style.transform).m41;
+   const railPitch=translate(neighborIcon)-translate(icon);
+   const cardPitch=neighbor.offsetLeft-selected.offsetLeft;
+   const selectedStart=selected.offsetLeft-(strip.firstElementChild as HTMLElement).offsetLeft;
+   if(!(cardPitch>0&&railPitch>0))throw Error('Missing independent card/rail pitch');
+   const rows:ScrollSample[]=[];let stopped=false;
+   const capture=(phase:ScrollSample['phase'])=>rows.push({phase,x:strip.scrollLeft,cursor:document.querySelector('.rail-caption b')!.textContent!,transform:translate(icon),expected:-(strip.scrollLeft-selectedStart)/cardPitch*railPitch,icon:icon.getBoundingClientRect().left});
+   capture('initial');
+   const observer=new MutationObserver(()=>capture('mutation'));
+   observer.observe(icon,{attributes:true,attributeFilter:['style']});
+   const until=performance.now()+3000;
+   function frame(){if(stopped)return;capture('frame');if(performance.now()<until)requestAnimationFrame(frame);}
+   requestAnimationFrame(frame);
+   Object.assign(window,{__finishScrollSamples:()=>{stopped=true;observer.disconnect();capture('final');return rows;}});
   },{capture:true,once:true});
  });
 }
-async function samples(page:Page){return page.evaluate(()=>(window as typeof window&{__scrollSamples:{x:number;cursor:string;transform:string;icon:number|null}[]}).__scrollSamples);}
+async function samples(page:Page){return page.evaluate(()=>(window as typeof window&{__finishScrollSamples:()=>ScrollSample[]}).__finishScrollSamples());}
 async function screenshot(page:Page,name:string,project:string){await page.screenshot({path:`docs/screenshots/interactions-20261023/${process.env.INTERACTION_CAPTURE??'local'}-${project}-${name}.png`});}
 
 test('selection synchronizes immediately and manual browsing animates cards and rail without changing the choice',async({page},info)=>{
@@ -56,13 +81,19 @@ test('selection synchronizes immediately and manual browsing animates cards and 
  const chosen=await page.locator('.decision-train').textContent(),deadline=await page.locator('.stay-deadline').textContent();
  const start=await page.locator('.timeline-strip').evaluate(e=>e.scrollLeft);await sample(page);
  await page.getByRole('button',{name:'後の便 →',exact:true}).click();await aligned(page,'.departure-card.is-selected + .departure-card');
- const end=await page.locator('.timeline-strip').evaluate(e=>e.scrollLeft),frames=await samples(page);
- await info.attach('animation-frames',{body:JSON.stringify(frames),contentType:'application/json'});
- expect(end).toBeGreaterThan(start+100);expect(frames.filter(s=>s.x>start+5&&s.x<end-5).length).toBeGreaterThan(1);
- expect(new Set(frames.map(s=>s.cursor)).size).toBeGreaterThan(1);expect(new Set(frames.map(s=>s.transform)).size).toBeGreaterThan(2);
- // Follow the SAME train: both its card and icon must move left for a later train.
- expect(frames.some(s=>s.x>start+5&&s.icon!==null&&s.icon<frames[0].icon!-1)).toBe(true);
  await expect(page.locator('.rail-caption b')).toHaveText('14:23');
+ const end=await page.locator('.timeline-strip').evaluate(e=>e.scrollLeft),frames=await samples(page);
+ await info.attach('native-rail-synchronization',{body:JSON.stringify(frames),contentType:'application/json'});
+ expect(end).toBeGreaterThan(start+100);
+ expect(synchronizationErrors(frames,start,end)).toEqual([]);
+ // Same train, not whichever icon happens to be first after re-rendering.
+ expect(frames.at(-1)!.icon).toBeLessThan(frames[0].icon-10);
+ // Negative controls replay the same native trajectory. They do not stop product JS.
+ const finalOnly=frames.map(s=>s.phase==='final'?s:{...s,transform:frames[0].transform});
+ expect(synchronizationErrors(finalOnly,start,end)).toContain('rail/native mismatch');
+ const reversed=frames.map(s=>({...s,transform:-s.expected}));
+ expect(synchronizationErrors(reversed,start,end)).toContain('rail/native mismatch');
+ expect(synchronizationErrors(frames.filter(s=>s.phase!=='mutation'),start,end)).toContain('no intermediate rail update');
  await expect(page.locator('.decision-train')).toHaveText(chosen!);await expect(page.locator('.stay-deadline')).toHaveText(deadline!);
  await expect(page.locator('.departure-card.is-selected .train-choice')).toHaveAccessibleName('次発 14:15発 国際会館行きを選ぶ');
  const labelFit=await page.locator('.rail-train small').evaluateAll(es=>es.every(e=>{const r=e.getBoundingClientRect(),p=e.closest('.rail-track')!.getBoundingClientRect();return r.bottom<=p.bottom+1&&e.scrollWidth<=e.clientWidth;}));expect(labelFit).toBe(true);

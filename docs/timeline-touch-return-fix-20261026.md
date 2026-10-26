@@ -47,3 +47,19 @@ WebKit390では新規9px固定raceは成功。一方、既存smooth同期テス�
 今回のscrollend接続だけをテスト用配信置換で取り除いた対照でも、同じ中間フレーム数1で失敗した。今回の補正処理が原因であることを支持しないが、環境負荷が原因だと断定する測定も行っていない。フレーム数閾値は緩和せず、これ以上の性能改修は行わない。GitHub CIで別途再確認する。
 
 出力は `test-results/timeline-return-webkit-20261026`、`timeline-return-webkit-repeat-20261026`、`timeline-webkit-nohandler-control-20261026`。診断用specは`.cache`へ移して通常試験から除外済み。新fixtureの一時Windowプロパティはoptional型に修正した。
+
+## 追加: native scrollと図の同期を直接測る試験へ変更
+
+7d9のGitHub CIではWebKit320のみ中間フレーム数が1で失敗し、他の操作・layout・PWAは成功した。[CSSOM View現行草案3.1](https://drafts.csswg.org/cssom-view/#concept-smooth-scroll)（2026-10-08 Editor's Draft、2026-10-26確認）はsmooth scrollの進み方と所要時間をUAに委ねており、特定の中間フレーム数は保証しない。草案であることと、同期不具合を許容する根拠ではないことを区別する。
+
+`tests/interactions/timeline.spec.ts`の試験だけを変更した。1カードの「後の便→」操作と最終整列、選択便・出発目安の不変、同じ列車アイコンが左へ動く検査は保持。rAF採取は診断用に残し、React更新より先に呼ばれる同フレームのrAF値を同期誤差判定には使わない。MutationObserverで追跡対象アイコンのstyle更新が反映された直後に、native scrollLeftと同じアイコンのtransformを同時採取する。
+
+期待位置は、選択カード・隣カードの実offset差と、対応する2つの列車アイコンの初期transform差から算出する。製品コードの96px定数やfractional stateは読み込まない。全style更新と最終採取で誤差1 CSS px以下、途中のstyle更新が最低1件、最終位置一致を要求する。中間rAFフレーム数2以上という検査を単に1へ緩めたものではなく、各更新の方向・量・最終値を直接検査する。
+
+同じnative軌跡の測定列を用い、図が中間は初期値で凍結し最終だけ更新される負例、移動符号が逆になる負例、中間style更新が欠落する負例を同一テスト内でrejectすることを確認する。これらは測定列のreplay負例であり、製品JSを実際に停止した実機試験ではない。
+
+初回5構成ではChromium320とWebKit320/390/1280の4件成功。最大同期誤差0.000051 CSS px以下。Chromium390はpage.goto(load)の30秒timeoutで操作前に失敗し、同期判定の失敗とは区別する。`npx tsc --noEmit`成功。
+
+2回目は5構成すべて成功（54.1秒、exit0）。中間style更新はChromium320=12件/390=11件、WebKit320=2件/390=5件/1280=2件。全更新の最大同期誤差はChromiumで0.000051 CSS px以下、WebKitで0.0000037 CSS px以下。各試験で3種類のreplay負例をrejectした。結果JSONは`.cache/timeline-synchronization-v2-repeat-20261026.json`、集計は`.cache/timeline-synchronization-v2-metrics-20261026.json`。
+
+この追加作業で製品runtimeは未編集。前後のDepartureTimeline.tsx実バイトSHA256はともに`d90ffc7a373d783c0e701c435c92683f7dcce9f85d192227155c9e946b5fac9f`。変更は試験と本記録だけで、ビルドし直していない。
