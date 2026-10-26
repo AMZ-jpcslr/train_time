@@ -1,0 +1,5681 @@
+[
+  {
+    "id": "kobe-k02-east-weekday",
+    "stationId": "kobe-k02",
+    "operator": "神戸市営地下鉄",
+    "line": "海岸線",
+    "directionId": "east",
+    "direction": "三宮・花時計前方面",
+    "dayType": "weekday",
+    "departures": [
+      {
+        "time": "05:50",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:06",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:21",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:34",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:46",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:57",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:03",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:09",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:15",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:21",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:27",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:33",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:39",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:45",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:51",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:57",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:03",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:09",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:15",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:21",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:27",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:33",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:39",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:45",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:51",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:57",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:03",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:11",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:20",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:32",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:47",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "10:02",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "10:17",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "10:32",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "10:47",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "11:02",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "11:17",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "11:32",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "11:47",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "12:02",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "12:17",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "12:32",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "12:47",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:02",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:17",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:32",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:47",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:51",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "14:02",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "14:17",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "14:32",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "14:47",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "15:02",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "15:17",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "15:32",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "15:47",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:02",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:15",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:25",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:35",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:45",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:55",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:01",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:05",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:15",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:23",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:30",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:38",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:45",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:53",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:00",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:08",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:15",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:23",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:30",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:38",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:45",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:53",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:00",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:09",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:19",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:29",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:39",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:49",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:59",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:09",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:20",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:32",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:47",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "21:02",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "21:17",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "21:32",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "21:47",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "22:02",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "22:17",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "22:32",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "22:47",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "23:02",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "23:17",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "23:37",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "24:00",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      }
+    ],
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/wp-content/uploads/open_kaigan_w_east_r080314.csv",
+    "retrievedAt": "2026-10-26T02:43:27.489Z",
+    "sourceAcquisition": {
+      "kind": "retained-official-download",
+      "downloadedAt": null,
+      "fileModifiedAt": "2026-10-25T12:03:31.784Z",
+      "importedAt": "2026-10-26T02:43:27.489Z"
+    },
+    "checkedAt": "2026-10-26T02:45:00.000Z",
+    "validFrom": "2026-03-14",
+    "validTo": null,
+    "revisionDate": "2026-03-14",
+    "verification": "partial",
+    "notes": [
+      "保存済み原本の取込。元のネット取得日時は不明。取得日時欄はローカル取込日時です。",
+      "神戸市交通局オープンデータ（CC BY 2.1 JP）を加工。",
+      "公式HTML3駅の初発・12時台・最終・行先を照合。全駅全便の独立照合ではありません。",
+      "西行と土休日の現行CSVは未取得。旧版・別方面・別日では補完しません。",
+      "取得来歴と独立照合の確認が残る参考候補。乗車可否の判定に使いません。"
+    ]
+  },
+  {
+    "id": "kobe-k03-east-weekday",
+    "stationId": "kobe-k03",
+    "operator": "神戸市営地下鉄",
+    "line": "海岸線",
+    "directionId": "east",
+    "direction": "三宮・花時計前方面",
+    "dayType": "weekday",
+    "departures": [
+      {
+        "time": "05:48",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:04",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:19",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:32",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:44",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:55",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:01",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:07",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:13",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:19",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:25",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:31",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:37",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:43",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:49",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:55",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:01",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:07",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:13",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:19",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:25",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:31",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:37",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:43",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:49",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:55",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:01",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:09",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:18",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:30",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:45",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "10:00",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "10:15",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "10:30",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "10:45",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "11:00",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "11:15",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "11:30",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "11:45",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "12:00",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "12:15",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "12:30",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "12:45",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:00",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:15",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:30",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:45",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:49",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "14:00",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "14:15",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "14:30",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "14:45",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "15:00",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "15:15",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "15:30",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "15:45",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:00",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:13",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:23",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:33",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:43",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:53",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:59",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:03",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:14",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:21",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:29",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:36",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:44",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:51",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:59",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:06",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:14",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:21",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:29",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:36",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:44",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:51",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:59",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:08",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:17",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:27",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:37",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:47",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:57",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:07",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:18",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:30",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:45",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "21:00",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "21:15",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "21:30",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "21:45",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "22:00",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "22:15",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "22:30",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "22:45",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "23:00",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "23:15",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "23:35",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "23:58",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      }
+    ],
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/wp-content/uploads/open_kaigan_w_east_r080314.csv",
+    "retrievedAt": "2026-10-26T02:43:27.489Z",
+    "sourceAcquisition": {
+      "kind": "retained-official-download",
+      "downloadedAt": null,
+      "fileModifiedAt": "2026-10-25T12:03:31.784Z",
+      "importedAt": "2026-10-26T02:43:27.489Z"
+    },
+    "checkedAt": "2026-10-26T02:45:00.000Z",
+    "validFrom": "2026-03-14",
+    "validTo": null,
+    "revisionDate": "2026-03-14",
+    "verification": "partial",
+    "notes": [
+      "保存済み原本の取込。元のネット取得日時は不明。取得日時欄はローカル取込日時です。",
+      "神戸市交通局オープンデータ（CC BY 2.1 JP）を加工。",
+      "公式HTML3駅の初発・12時台・最終・行先を照合。全駅全便の独立照合ではありません。",
+      "西行と土休日の現行CSVは未取得。旧版・別方面・別日では補完しません。",
+      "取得来歴と独立照合の確認が残る参考候補。乗車可否の判定に使いません。"
+    ]
+  },
+  {
+    "id": "kobe-k04-east-weekday",
+    "stationId": "kobe-k04",
+    "operator": "神戸市営地下鉄",
+    "line": "海岸線",
+    "directionId": "east",
+    "direction": "三宮・花時計前方面",
+    "dayType": "weekday",
+    "departures": [
+      {
+        "time": "05:46",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:02",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:17",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:30",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:42",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:53",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:59",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:05",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:11",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:17",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:23",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:29",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:35",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:41",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:47",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:53",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:59",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:05",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:11",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:17",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:23",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:29",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:35",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:41",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:47",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:53",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:59",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:07",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:16",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:28",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:43",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:58",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "10:13",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "10:28",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "10:43",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "10:58",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "11:13",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "11:28",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "11:43",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "11:58",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "12:13",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "12:28",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "12:43",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "12:58",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:13",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:28",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:43",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:48",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:58",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "14:13",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "14:28",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "14:43",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "14:58",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "15:13",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "15:28",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "15:43",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "15:58",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:11",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:21",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:31",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:41",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:51",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:57",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:01",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:12",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:19",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:27",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:34",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:42",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:49",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:57",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:04",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:12",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:19",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:27",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:34",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:42",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:49",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:57",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:06",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:15",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:25",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:35",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:45",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:55",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:05",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:16",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:28",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:43",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:58",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "21:13",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "21:28",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "21:43",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "21:58",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "22:13",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "22:28",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "22:43",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "22:58",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "23:13",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "23:33",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "23:57",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      }
+    ],
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/wp-content/uploads/open_kaigan_w_east_r080314.csv",
+    "retrievedAt": "2026-10-26T02:43:27.489Z",
+    "sourceAcquisition": {
+      "kind": "retained-official-download",
+      "downloadedAt": null,
+      "fileModifiedAt": "2026-10-25T12:03:31.784Z",
+      "importedAt": "2026-10-26T02:43:27.489Z"
+    },
+    "checkedAt": "2026-10-26T02:45:00.000Z",
+    "validFrom": "2026-03-14",
+    "validTo": null,
+    "revisionDate": "2026-03-14",
+    "verification": "partial",
+    "notes": [
+      "保存済み原本の取込。元のネット取得日時は不明。取得日時欄はローカル取込日時です。",
+      "神戸市交通局オープンデータ（CC BY 2.1 JP）を加工。",
+      "公式HTML3駅の初発・12時台・最終・行先を照合。全駅全便の独立照合ではありません。",
+      "西行と土休日の現行CSVは未取得。旧版・別方面・別日では補完しません。",
+      "取得来歴と独立照合の確認が残る参考候補。乗車可否の判定に使いません。"
+    ]
+  },
+  {
+    "id": "kobe-k05-east-weekday",
+    "stationId": "kobe-k05",
+    "operator": "神戸市営地下鉄",
+    "line": "海岸線",
+    "directionId": "east",
+    "direction": "三宮・花時計前方面",
+    "dayType": "weekday",
+    "departures": [
+      {
+        "time": "05:44",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:00",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:15",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:28",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:40",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:51",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:57",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:03",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:09",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:15",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:21",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:27",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:33",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:39",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:45",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:51",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:57",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:03",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:09",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:15",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:21",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:27",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:33",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:39",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:45",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:51",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:57",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:05",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:14",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:26",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:41",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:56",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "10:11",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "10:26",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "10:41",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "10:56",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "11:11",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "11:26",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "11:41",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "11:56",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "12:11",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "12:26",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "12:41",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "12:56",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:11",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:26",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:41",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:45",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:56",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "14:11",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "14:26",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "14:41",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "14:56",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "15:11",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "15:26",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "15:41",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "15:56",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:09",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:19",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:29",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:39",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:49",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:54",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:59",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:09",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:17",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:24",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:32",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:39",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:47",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:54",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:02",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:09",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:17",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:24",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:32",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:39",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:47",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:54",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:03",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:13",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:23",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:33",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:43",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:53",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:03",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:14",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:26",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:41",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:56",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "21:11",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "21:26",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "21:41",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "21:56",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "22:11",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "22:26",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "22:41",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "22:56",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "23:11",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "23:31",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "23:54",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      }
+    ],
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/wp-content/uploads/open_kaigan_w_east_r080314.csv",
+    "retrievedAt": "2026-10-26T02:43:27.489Z",
+    "sourceAcquisition": {
+      "kind": "retained-official-download",
+      "downloadedAt": null,
+      "fileModifiedAt": "2026-10-25T12:03:31.784Z",
+      "importedAt": "2026-10-26T02:43:27.489Z"
+    },
+    "checkedAt": "2026-10-26T02:45:00.000Z",
+    "validFrom": "2026-03-14",
+    "validTo": null,
+    "revisionDate": "2026-03-14",
+    "verification": "partial",
+    "notes": [
+      "保存済み原本の取込。元のネット取得日時は不明。取得日時欄はローカル取込日時です。",
+      "神戸市交通局オープンデータ（CC BY 2.1 JP）を加工。",
+      "公式HTML3駅の初発・12時台・最終・行先を照合。全駅全便の独立照合ではありません。",
+      "西行と土休日の現行CSVは未取得。旧版・別方面・別日では補完しません。",
+      "取得来歴と独立照合の確認が残る参考候補。乗車可否の判定に使いません。"
+    ]
+  },
+  {
+    "id": "kobe-k06-east-weekday",
+    "stationId": "kobe-k06",
+    "operator": "神戸市営地下鉄",
+    "line": "海岸線",
+    "directionId": "east",
+    "direction": "三宮・花時計前方面",
+    "dayType": "weekday",
+    "departures": [
+      {
+        "time": "05:42",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "05:58",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:13",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:26",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:38",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:49",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:55",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:01",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:07",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:13",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:19",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:25",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:31",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:37",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:43",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:49",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:55",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:01",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:07",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:13",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:19",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:25",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:31",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:37",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:43",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:49",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:55",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:03",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:12",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:24",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:39",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:54",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "10:09",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "10:24",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "10:39",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "10:54",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "11:09",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "11:24",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "11:39",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "11:54",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "12:09",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "12:24",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "12:39",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "12:54",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:09",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:24",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:39",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:43",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:54",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "14:09",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "14:24",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "14:39",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "14:54",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "15:09",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "15:24",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "15:39",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "15:54",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:07",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:17",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:27",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:37",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:47",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:53",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:57",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:07",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:15",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:22",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:30",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:37",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:45",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:52",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:00",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:07",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:15",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:22",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:30",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:37",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:45",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:52",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:01",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:11",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:21",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:31",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:41",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:51",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:01",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:12",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:24",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:39",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:54",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "21:09",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "21:24",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "21:39",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "21:54",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "22:09",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "22:24",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "22:39",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "22:54",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "23:09",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "23:29",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "23:52",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      }
+    ],
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/wp-content/uploads/open_kaigan_w_east_r080314.csv",
+    "retrievedAt": "2026-10-26T02:43:27.489Z",
+    "sourceAcquisition": {
+      "kind": "retained-official-download",
+      "downloadedAt": null,
+      "fileModifiedAt": "2026-10-25T12:03:31.784Z",
+      "importedAt": "2026-10-26T02:43:27.489Z"
+    },
+    "checkedAt": "2026-10-26T02:45:00.000Z",
+    "validFrom": "2026-03-14",
+    "validTo": null,
+    "revisionDate": "2026-03-14",
+    "verification": "partial",
+    "notes": [
+      "保存済み原本の取込。元のネット取得日時は不明。取得日時欄はローカル取込日時です。",
+      "神戸市交通局オープンデータ（CC BY 2.1 JP）を加工。",
+      "公式HTML3駅の初発・12時台・最終・行先を照合。全駅全便の独立照合ではありません。",
+      "西行と土休日の現行CSVは未取得。旧版・別方面・別日では補完しません。",
+      "取得来歴と独立照合の確認が残る参考候補。乗車可否の判定に使いません。"
+    ]
+  },
+  {
+    "id": "kobe-k07-east-weekday",
+    "stationId": "kobe-k07",
+    "operator": "神戸市営地下鉄",
+    "line": "海岸線",
+    "directionId": "east",
+    "direction": "三宮・花時計前方面",
+    "dayType": "weekday",
+    "departures": [
+      {
+        "time": "05:40",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "05:56",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:11",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:24",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:36",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:47",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:53",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:59",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:05",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:11",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:17",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:23",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:29",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:35",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:41",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:47",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:53",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:59",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:05",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:11",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:17",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:23",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:29",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:35",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:41",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:47",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:53",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:01",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:10",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:22",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:37",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:52",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "10:07",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "10:22",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "10:37",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "10:52",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "11:07",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "11:22",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "11:37",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "11:52",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "12:07",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "12:22",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "12:37",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "12:52",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:07",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:22",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:37",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:41",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:52",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "14:07",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "14:22",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "14:37",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "14:52",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "15:07",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "15:22",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "15:37",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "15:52",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:05",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:15",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:25",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:35",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:45",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:51",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:55",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:05",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:13",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:20",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:28",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:35",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:43",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:50",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:58",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:05",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:13",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:20",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:28",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:35",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:43",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:50",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:59",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:09",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:19",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:29",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:39",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:49",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:59",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:10",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:22",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:37",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:52",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "21:07",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "21:22",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "21:37",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "21:52",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "22:07",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "22:22",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "22:37",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "22:52",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "23:07",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "23:27",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "23:50",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      }
+    ],
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/wp-content/uploads/open_kaigan_w_east_r080314.csv",
+    "retrievedAt": "2026-10-26T02:43:27.489Z",
+    "sourceAcquisition": {
+      "kind": "retained-official-download",
+      "downloadedAt": null,
+      "fileModifiedAt": "2026-10-25T12:03:31.784Z",
+      "importedAt": "2026-10-26T02:43:27.489Z"
+    },
+    "checkedAt": "2026-10-26T02:45:00.000Z",
+    "validFrom": "2026-03-14",
+    "validTo": null,
+    "revisionDate": "2026-03-14",
+    "verification": "partial",
+    "notes": [
+      "保存済み原本の取込。元のネット取得日時は不明。取得日時欄はローカル取込日時です。",
+      "神戸市交通局オープンデータ（CC BY 2.1 JP）を加工。",
+      "公式HTML3駅の初発・12時台・最終・行先を照合。全駅全便の独立照合ではありません。",
+      "西行と土休日の現行CSVは未取得。旧版・別方面・別日では補完しません。",
+      "取得来歴と独立照合の確認が残る参考候補。乗車可否の判定に使いません。"
+    ]
+  },
+  {
+    "id": "kobe-k08-east-weekday",
+    "stationId": "kobe-k08",
+    "operator": "神戸市営地下鉄",
+    "line": "海岸線",
+    "directionId": "east",
+    "direction": "三宮・花時計前方面",
+    "dayType": "weekday",
+    "departures": [
+      {
+        "time": "05:39",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "05:54",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:09",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:22",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:34",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:45",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:57",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:09",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:21",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:27",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:33",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:39",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:45",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:51",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:57",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:03",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:09",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:15",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:21",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:27",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:33",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:39",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:45",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:51",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:59",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:08",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:20",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:35",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:50",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "10:05",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "10:20",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "10:35",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "10:50",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "11:05",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "11:20",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "11:35",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "11:50",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "12:05",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "12:20",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "12:35",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "12:50",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:05",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:20",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:35",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:50",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "14:05",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "14:20",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "14:35",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "14:50",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "15:05",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "15:20",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "15:35",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "15:50",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:03",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:13",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:23",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:33",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:43",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:53",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:03",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:11",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:18",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:26",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:33",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:41",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:48",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:56",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:03",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:11",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:18",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:26",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:33",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:41",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:48",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:57",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:07",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:12",
+        "destination": "御崎公園",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:17",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:27",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:37",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:47",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:57",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:08",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:20",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:35",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:50",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "21:05",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "21:20",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "21:35",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "21:50",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "22:05",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "22:20",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "22:35",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "22:50",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "23:05",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "23:25",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "23:49",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "23:59",
+        "destination": "御崎公園",
+        "trainType": null,
+        "platform": null
+      }
+    ],
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/wp-content/uploads/open_kaigan_w_east_r080314.csv",
+    "retrievedAt": "2026-10-26T02:43:27.489Z",
+    "sourceAcquisition": {
+      "kind": "retained-official-download",
+      "downloadedAt": null,
+      "fileModifiedAt": "2026-10-25T12:03:31.784Z",
+      "importedAt": "2026-10-26T02:43:27.489Z"
+    },
+    "checkedAt": "2026-10-26T02:45:00.000Z",
+    "validFrom": "2026-03-14",
+    "validTo": null,
+    "revisionDate": "2026-03-14",
+    "verification": "partial",
+    "notes": [
+      "保存済み原本の取込。元のネット取得日時は不明。取得日時欄はローカル取込日時です。",
+      "神戸市交通局オープンデータ（CC BY 2.1 JP）を加工。",
+      "公式HTML3駅の初発・12時台・最終・行先を照合。全駅全便の独立照合ではありません。",
+      "西行と土休日の現行CSVは未取得。旧版・別方面・別日では補完しません。",
+      "取得来歴と独立照合の確認が残る参考候補。乗車可否の判定に使いません。"
+    ]
+  },
+  {
+    "id": "kobe-k09-east-weekday",
+    "stationId": "kobe-k09",
+    "operator": "神戸市営地下鉄",
+    "line": "海岸線",
+    "directionId": "east",
+    "direction": "三宮・花時計前方面",
+    "dayType": "weekday",
+    "departures": [
+      {
+        "time": "05:37",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "05:52",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:08",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:20",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:32",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:43",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:55",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:07",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:19",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:25",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:31",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:37",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:43",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:49",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:55",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:01",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:07",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:13",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:19",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:25",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:31",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:37",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:43",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:49",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:57",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:06",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:18",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:33",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:48",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "10:03",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "10:18",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "10:33",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "10:48",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "11:03",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "11:18",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "11:33",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "11:48",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "12:03",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "12:18",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "12:33",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "12:48",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:03",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:18",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:33",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:48",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "14:03",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "14:18",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "14:33",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "14:48",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "15:03",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "15:18",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "15:33",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "15:48",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:02",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:12",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:22",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:32",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:42",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:52",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:02",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:09",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:17",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:24",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:32",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:39",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:47",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:54",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:02",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:09",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:17",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:24",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:32",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:39",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:47",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:56",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:06",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:11",
+        "destination": "御崎公園",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:16",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:26",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:36",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:46",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:56",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:06",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:18",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:33",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:48",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "21:03",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "21:18",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "21:33",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "21:48",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "22:03",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "22:18",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "22:33",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "22:48",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "23:03",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "23:23",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "23:47",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "23:58",
+        "destination": "御崎公園",
+        "trainType": null,
+        "platform": null
+      }
+    ],
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/wp-content/uploads/open_kaigan_w_east_r080314.csv",
+    "retrievedAt": "2026-10-26T02:43:27.489Z",
+    "sourceAcquisition": {
+      "kind": "retained-official-download",
+      "downloadedAt": null,
+      "fileModifiedAt": "2026-10-25T12:03:31.784Z",
+      "importedAt": "2026-10-26T02:43:27.489Z"
+    },
+    "checkedAt": "2026-10-26T02:45:00.000Z",
+    "validFrom": "2026-03-14",
+    "validTo": null,
+    "revisionDate": "2026-03-14",
+    "verification": "partial",
+    "notes": [
+      "保存済み原本の取込。元のネット取得日時は不明。取得日時欄はローカル取込日時です。",
+      "神戸市交通局オープンデータ（CC BY 2.1 JP）を加工。",
+      "公式HTML3駅の初発・12時台・最終・行先を照合。全駅全便の独立照合ではありません。",
+      "西行と土休日の現行CSVは未取得。旧版・別方面・別日では補完しません。",
+      "取得来歴と独立照合の確認が残る参考候補。乗車可否の判定に使いません。"
+    ]
+  },
+  {
+    "id": "kobe-k10-east-weekday",
+    "stationId": "kobe-k10",
+    "operator": "神戸市営地下鉄",
+    "line": "海岸線",
+    "directionId": "east",
+    "direction": "三宮・花時計前方面",
+    "dayType": "weekday",
+    "departures": [
+      {
+        "time": "05:35",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "05:51",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:06",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:19",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:31",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:42",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "06:54",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:06",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:18",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:24",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:30",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:36",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:42",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:48",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "07:54",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:00",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:06",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:12",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:18",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:24",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:30",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:36",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:42",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:48",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "08:56",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:05",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:17",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:32",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "09:47",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "10:02",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "10:17",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "10:32",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "10:47",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "11:02",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "11:17",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "11:32",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "11:47",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "12:02",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "12:17",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "12:32",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "12:47",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:02",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:17",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:32",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "13:47",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "14:02",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "14:17",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "14:32",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "14:47",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "15:02",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "15:17",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "15:32",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "15:47",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:00",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:10",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:20",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:30",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:40",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "16:50",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:00",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:08",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:15",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:23",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:30",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:38",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:45",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "17:53",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:00",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:08",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:15",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:23",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:30",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:38",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:45",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "18:54",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:04",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:09",
+        "destination": "御崎公園",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:14",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:24",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:34",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:44",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "19:54",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:05",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:17",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:32",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "20:47",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "21:02",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "21:17",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "21:32",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "21:47",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "22:02",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "22:17",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "22:32",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "22:47",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "23:02",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "23:22",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "23:45",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      {
+        "time": "23:56",
+        "destination": "御崎公園",
+        "trainType": null,
+        "platform": null
+      }
+    ],
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/wp-content/uploads/open_kaigan_w_east_r080314.csv",
+    "retrievedAt": "2026-10-26T02:43:27.489Z",
+    "sourceAcquisition": {
+      "kind": "retained-official-download",
+      "downloadedAt": null,
+      "fileModifiedAt": "2026-10-25T12:03:31.784Z",
+      "importedAt": "2026-10-26T02:43:27.489Z"
+    },
+    "checkedAt": "2026-10-26T02:45:00.000Z",
+    "validFrom": "2026-03-14",
+    "validTo": null,
+    "revisionDate": "2026-03-14",
+    "verification": "partial",
+    "notes": [
+      "保存済み原本の取込。元のネット取得日時は不明。取得日時欄はローカル取込日時です。",
+      "神戸市交通局オープンデータ（CC BY 2.1 JP）を加工。",
+      "公式HTML3駅の初発・12時台・最終・行先を照合。全駅全便の独立照合ではありません。",
+      "西行と土休日の現行CSVは未取得。旧版・別方面・別日では補完しません。",
+      "取得来歴と独立照合の確認が残る参考候補。乗車可否の判定に使いません。"
+    ]
+  }
+]

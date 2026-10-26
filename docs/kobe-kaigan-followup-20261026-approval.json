@@ -1,0 +1,376 @@
+{
+  "checkedAt": "2026-10-26T02:49:27.941Z",
+  "generatedAt": "2026-10-26T03:10:34.353Z",
+  "revisionDate": "2026-03-14",
+  "rawSha256": "a671284c499450cd336fa72d44ba644efd1c078b691fc30e518dfcb7f822bf40",
+  "independentReviewSha256": "1fb9133d91561e08a8e6cc3913f73833ef6f0e2f1f0a7f72f00aea3ff4e30a54",
+  "candidateSha256": "e2611ce43c749ad1efd0a3a2f908667c5d5eb7401d254e773a20af3ac26c4795",
+  "approvedSha256": "f860464be54e5d399a5d0b21200d19f6a194fda6495e86ce2b77195d62997b0c",
+  "approvedTables": 9,
+  "approvedDepartures": 900,
+  "sampledDepartures": 54,
+  "fullDepartureCrosscheck": false,
+  "missingTables": 27,
+  "coverage": [
+    {
+      "stationId": "kobe-k01",
+      "name": "三宮・花時計前",
+      "direction": "west",
+      "dayType": "weekday",
+      "currentCsvAvailable": false,
+      "verification": "missing",
+      "dailyValidity": false,
+      "boardingDecision": false
+    },
+    {
+      "stationId": "kobe-k01",
+      "name": "三宮・花時計前",
+      "direction": "west",
+      "dayType": "weekend",
+      "currentCsvAvailable": false,
+      "verification": "missing",
+      "dailyValidity": false,
+      "boardingDecision": false
+    },
+    {
+      "stationId": "kobe-k02",
+      "name": "旧居留地・大丸前",
+      "direction": "east",
+      "dayType": "weekday",
+      "currentCsvAvailable": true,
+      "verification": "verified",
+      "dailyValidity": "date-and-freshness-dependent",
+      "boardingDecision": "requires-date-validity-and-walk-estimate"
+    },
+    {
+      "stationId": "kobe-k02",
+      "name": "旧居留地・大丸前",
+      "direction": "east",
+      "dayType": "weekend",
+      "currentCsvAvailable": false,
+      "verification": "missing",
+      "dailyValidity": false,
+      "boardingDecision": false
+    },
+    {
+      "stationId": "kobe-k02",
+      "name": "旧居留地・大丸前",
+      "direction": "west",
+      "dayType": "weekday",
+      "currentCsvAvailable": false,
+      "verification": "missing",
+      "dailyValidity": false,
+      "boardingDecision": false
+    },
+    {
+      "stationId": "kobe-k02",
+      "name": "旧居留地・大丸前",
+      "direction": "west",
+      "dayType": "weekend",
+      "currentCsvAvailable": false,
+      "verification": "missing",
+      "dailyValidity": false,
+      "boardingDecision": false
+    },
+    {
+      "stationId": "kobe-k03",
+      "name": "みなと元町",
+      "direction": "east",
+      "dayType": "weekday",
+      "currentCsvAvailable": true,
+      "verification": "verified",
+      "dailyValidity": "date-and-freshness-dependent",
+      "boardingDecision": "requires-date-validity-and-walk-estimate"
+    },
+    {
+      "stationId": "kobe-k03",
+      "name": "みなと元町",
+      "direction": "east",
+      "dayType": "weekend",
+      "currentCsvAvailable": false,
+      "verification": "missing",
+      "dailyValidity": false,
+      "boardingDecision": false
+    },
+    {
+      "stationId": "kobe-k03",
+      "name": "みなと元町",
+      "direction": "west",
+      "dayType": "weekday",
+      "currentCsvAvailable": false,
+      "verification": "missing",
+      "dailyValidity": false,
+      "boardingDecision": false
+    },
+    {
+      "stationId": "kobe-k03",
+      "name": "みなと元町",
+      "direction": "west",
+      "dayType": "weekend",
+      "currentCsvAvailable": false,
+      "verification": "missing",
+      "dailyValidity": false,
+      "boardingDecision": false
+    },
+    {
+      "stationId": "kobe-k04",
+      "name": "ハーバーランド",
+      "direction": "east",
+      "dayType": "weekday",
+      "currentCsvAvailable": true,
+      "verification": "verified",
+      "dailyValidity": "date-and-freshness-dependent",
+      "boardingDecision": "requires-date-validity-and-walk-estimate"
+    },
+    {
+      "stationId": "kobe-k04",
+      "name": "ハーバーランド",
+      "direction": "east",
+      "dayType": "weekend",
+      "currentCsvAvailable": false,
+      "verification": "missing",
+      "dailyValidity": false,
+      "boardingDecision": false
+    },
+    {
+      "stationId": "kobe-k04",
+      "name": "ハーバーランド",
+      "direction": "west",
+      "dayType": "weekday",
+      "currentCsvAvailable": false,
+      "verification": "missing",
+      "dailyValidity": false,
+      "boardingDecision": false
+    },
+    {
+      "stationId": "kobe-k04",
+      "name": "ハーバーランド",
+      "direction": "west",
+      "dayType": "weekend",
+      "currentCsvAvailable": false,
+      "verification": "missing",
+      "dailyValidity": false,
+      "boardingDecision": false
+    },
+    {
+      "stationId": "kobe-k05",
+      "name": "中央市場前",
+      "direction": "east",
+      "dayType": "weekday",
+      "currentCsvAvailable": true,
+      "verification": "verified",
+      "dailyValidity": "date-and-freshness-dependent",
+      "boardingDecision": "requires-date-validity-and-walk-estimate"
+    },
+    {
+      "stationId": "kobe-k05",
+      "name": "中央市場前",
+      "direction": "east",
+      "dayType": "weekend",
+      "currentCsvAvailable": false,
+      "verification": "missing",
+      "dailyValidity": false,
+      "boardingDecision": false
+    },
+    {
+      "stationId": "kobe-k05",
+      "name": "中央市場前",
+      "direction": "west",
+      "dayType": "weekday",
+      "currentCsvAvailable": false,
+      "verification": "missing",
+      "dailyValidity": false,
+      "boardingDecision": false
+    },
+    {
+      "stationId": "kobe-k05",
+      "name": "中央市場前",
+      "direction": "west",
+      "dayType": "weekend",
+      "currentCsvAvailable": false,
+      "verification": "missing",
+      "dailyValidity": false,
+      "boardingDecision": false
+    },
+    {
+      "stationId": "kobe-k06",
+      "name": "和田岬",
+      "direction": "east",
+      "dayType": "weekday",
+      "currentCsvAvailable": true,
+      "verification": "verified",
+      "dailyValidity": "date-and-freshness-dependent",
+      "boardingDecision": "requires-date-validity-and-walk-estimate"
+    },
+    {
+      "stationId": "kobe-k06",
+      "name": "和田岬",
+      "direction": "east",
+      "dayType": "weekend",
+      "currentCsvAvailable": false,
+      "verification": "missing",
+      "dailyValidity": false,
+      "boardingDecision": false
+    },
+    {
+      "stationId": "kobe-k06",
+      "name": "和田岬",
+      "direction": "west",
+      "dayType": "weekday",
+      "currentCsvAvailable": false,
+      "verification": "missing",
+      "dailyValidity": false,
+      "boardingDecision": false
+    },
+    {
+      "stationId": "kobe-k06",
+      "name": "和田岬",
+      "direction": "west",
+      "dayType": "weekend",
+      "currentCsvAvailable": false,
+      "verification": "missing",
+      "dailyValidity": false,
+      "boardingDecision": false
+    },
+    {
+      "stationId": "kobe-k07",
+      "name": "御崎公園",
+      "direction": "east",
+      "dayType": "weekday",
+      "currentCsvAvailable": true,
+      "verification": "verified",
+      "dailyValidity": "date-and-freshness-dependent",
+      "boardingDecision": "requires-date-validity-and-walk-estimate"
+    },
+    {
+      "stationId": "kobe-k07",
+      "name": "御崎公園",
+      "direction": "east",
+      "dayType": "weekend",
+      "currentCsvAvailable": false,
+      "verification": "missing",
+      "dailyValidity": false,
+      "boardingDecision": false
+    },
+    {
+      "stationId": "kobe-k07",
+      "name": "御崎公園",
+      "direction": "west",
+      "dayType": "weekday",
+      "currentCsvAvailable": false,
+      "verification": "missing",
+      "dailyValidity": false,
+      "boardingDecision": false
+    },
+    {
+      "stationId": "kobe-k07",
+      "name": "御崎公園",
+      "direction": "west",
+      "dayType": "weekend",
+      "currentCsvAvailable": false,
+      "verification": "missing",
+      "dailyValidity": false,
+      "boardingDecision": false
+    },
+    {
+      "stationId": "kobe-k08",
+      "name": "苅藻",
+      "direction": "east",
+      "dayType": "weekday",
+      "currentCsvAvailable": true,
+      "verification": "verified",
+      "dailyValidity": "date-and-freshness-dependent",
+      "boardingDecision": "requires-date-validity-and-walk-estimate"
+    },
+    {
+      "stationId": "kobe-k08",
+      "name": "苅藻",
+      "direction": "east",
+      "dayType": "weekend",
+      "currentCsvAvailable": false,
+      "verification": "missing",
+      "dailyValidity": false,
+      "boardingDecision": false
+    },
+    {
+      "stationId": "kobe-k08",
+      "name": "苅藻",
+      "direction": "west",
+      "dayType": "weekday",
+      "currentCsvAvailable": false,
+      "verification": "missing",
+      "dailyValidity": false,
+      "boardingDecision": false
+    },
+    {
+      "stationId": "kobe-k08",
+      "name": "苅藻",
+      "direction": "west",
+      "dayType": "weekend",
+      "currentCsvAvailable": false,
+      "verification": "missing",
+      "dailyValidity": false,
+      "boardingDecision": false
+    },
+    {
+      "stationId": "kobe-k09",
+      "name": "駒ヶ林",
+      "direction": "east",
+      "dayType": "weekday",
+      "currentCsvAvailable": true,
+      "verification": "verified",
+      "dailyValidity": "date-and-freshness-dependent",
+      "boardingDecision": "requires-date-validity-and-walk-estimate"
+    },
+    {
+      "stationId": "kobe-k09",
+      "name": "駒ヶ林",
+      "direction": "east",
+      "dayType": "weekend",
+      "currentCsvAvailable": false,
+      "verification": "missing",
+      "dailyValidity": false,
+      "boardingDecision": false
+    },
+    {
+      "stationId": "kobe-k09",
+      "name": "駒ヶ林",
+      "direction": "west",
+      "dayType": "weekday",
+      "currentCsvAvailable": false,
+      "verification": "missing",
+      "dailyValidity": false,
+      "boardingDecision": false
+    },
+    {
+      "stationId": "kobe-k09",
+      "name": "駒ヶ林",
+      "direction": "west",
+      "dayType": "weekend",
+      "currentCsvAvailable": false,
+      "verification": "missing",
+      "dailyValidity": false,
+      "boardingDecision": false
+    },
+    {
+      "stationId": "kobe-k10",
+      "name": "新長田",
+      "direction": "east",
+      "dayType": "weekday",
+      "currentCsvAvailable": true,
+      "verification": "verified",
+      "dailyValidity": "date-and-freshness-dependent",
+      "boardingDecision": "requires-date-validity-and-walk-estimate"
+    },
+    {
+      "stationId": "kobe-k10",
+      "name": "新長田",
+      "direction": "east",
+      "dayType": "weekend",
+      "currentCsvAvailable": false,
+      "verification": "missing",
+      "dailyValidity": false,
+      "boardingDecision": false
+    }
+  ]
+}

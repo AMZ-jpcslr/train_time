@@ -6,6 +6,8 @@ export interface Timetable {
   validFrom: string | null; validTo: string | null; revisionDate: string | null;
   serviceDates?: string[]; excludedDates?: string[];
   verification: 'verified' | 'partial' | 'unverified'; notes: string[];
+  /** A retained download can have a known import time without a known HTTP acquisition time. */
+  sourceAcquisition?: {kind:'retained-official-download';downloadedAt:string|null;fileModifiedAt:string;importedAt:string};
 }
 export interface Station { id: string; name: string; operator: string; line: string; code: string; lat: number; lon: number; directions: { id: string; name: string }[]; sourceUrl: string; aliases?:string[]; region?:string; timetablePath?:string; challengeProvider?:string; westernProvider?:string }
 export interface SavedPlace { id: string; name: string; stationId: string; entrance: string; walkMinutes: number }

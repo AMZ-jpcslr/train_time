@@ -1,0 +1,715 @@
+{
+  "reviewDate": "2026-10-26",
+  "currentRevisionDate": "2026-03-14",
+  "currentRevisionSource": "https://kotsu.city.kobe.lg.jp/subway/kaisei/",
+  "sourceEvidence": [
+    {
+      "filename": "open_kaigan_w_east.csv",
+      "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/f2d416e9-7dae-4938-b62e-7c717002d715/resource/628220af-e363-4358-a4be-cf34e2b337f8/download/open_kaigan_w_east.csv",
+      "retrievedAt": "2026-10-25T12:00:53.645Z",
+      "name": "海岸線 時刻表（平日ダイヤ）東行",
+      "resourceModified": "2026-03-05T00:53:11.170608",
+      "sha256": "b94b3730211ffca18104729e528865f7f6159625cb51577ab4760d9eb98f884f",
+      "station": "中央市場前",
+      "day": "w",
+      "direction": "east",
+      "count": 117,
+      "first": {
+        "time": "05:43",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      "noon": [
+        {
+          "time": "12:07",
+          "destination": "三宮・花時計前",
+          "trainType": null,
+          "platform": null
+        },
+        {
+          "time": "12:17",
+          "destination": "三宮・花時計前",
+          "trainType": null,
+          "platform": null
+        },
+        {
+          "time": "12:27",
+          "destination": "三宮・花時計前",
+          "trainType": null,
+          "platform": null
+        },
+        {
+          "time": "12:37",
+          "destination": "三宮・花時計前",
+          "trainType": null,
+          "platform": null
+        },
+        {
+          "time": "12:47",
+          "destination": "三宮・花時計前",
+          "trainType": null,
+          "platform": null
+        },
+        {
+          "time": "12:57",
+          "destination": "三宮・花時計前",
+          "trainType": null,
+          "platform": null
+        }
+      ],
+      "last": {
+        "time": "23:53",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      }
+    },
+    {
+      "filename": "open_kaigan_w_west.csv",
+      "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/f2d416e9-7dae-4938-b62e-7c717002d715/resource/d678abfa-7bf8-49dc-9fe6-4beb1158053a/download/open_kaigan_w_west.csv",
+      "retrievedAt": "2026-10-25T12:00:53.730Z",
+      "name": "海岸線 時刻表（平日ダイヤ）西行",
+      "resourceModified": "2026-03-05T00:53:31.299317",
+      "sha256": "727f404a1f71e2105c1edd627d3a1e9d68f12a1f4cef9cbb7f8891ba8d4c0f80",
+      "station": "中央市場前",
+      "day": "w",
+      "direction": "west",
+      "count": 117,
+      "first": {
+        "time": "05:49",
+        "destination": "新長田",
+        "trainType": null,
+        "platform": null
+      },
+      "noon": [
+        {
+          "time": "12:06",
+          "destination": "新長田",
+          "trainType": null,
+          "platform": null
+        },
+        {
+          "time": "12:16",
+          "destination": "新長田",
+          "trainType": null,
+          "platform": null
+        },
+        {
+          "time": "12:26",
+          "destination": "新長田",
+          "trainType": null,
+          "platform": null
+        },
+        {
+          "time": "12:36",
+          "destination": "新長田",
+          "trainType": null,
+          "platform": null
+        },
+        {
+          "time": "12:46",
+          "destination": "新長田",
+          "trainType": null,
+          "platform": null
+        },
+        {
+          "time": "12:56",
+          "destination": "新長田",
+          "trainType": null,
+          "platform": null
+        }
+      ],
+      "last": {
+        "time": "23:57",
+        "destination": "新長田",
+        "trainType": null,
+        "platform": null
+      }
+    },
+    {
+      "filename": "open_kaigan_h_east.csv",
+      "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/f2d416e9-7dae-4938-b62e-7c717002d715/resource/066f715c-8d31-4b9b-b3ce-9decb9ae70b1/download/open_kaigan_h_east.csv",
+      "retrievedAt": "2026-10-25T12:00:54.065Z",
+      "name": "海岸線 時刻表（土曜・休日ダイヤ）東行",
+      "resourceModified": "2026-03-05T01:02:53.593163",
+      "sha256": "d99642553dde9edcb5ed6b5bb65be99d9ae994cce72aba4db80e27729a17b60e",
+      "station": "中央市場前",
+      "day": "h",
+      "direction": "east",
+      "count": 107,
+      "first": {
+        "time": "05:43",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      },
+      "noon": [
+        {
+          "time": "12:08",
+          "destination": "三宮・花時計前",
+          "trainType": null,
+          "platform": null
+        },
+        {
+          "time": "12:18",
+          "destination": "三宮・花時計前",
+          "trainType": null,
+          "platform": null
+        },
+        {
+          "time": "12:28",
+          "destination": "三宮・花時計前",
+          "trainType": null,
+          "platform": null
+        },
+        {
+          "time": "12:38",
+          "destination": "三宮・花時計前",
+          "trainType": null,
+          "platform": null
+        },
+        {
+          "time": "12:48",
+          "destination": "三宮・花時計前",
+          "trainType": null,
+          "platform": null
+        },
+        {
+          "time": "12:58",
+          "destination": "三宮・花時計前",
+          "trainType": null,
+          "platform": null
+        }
+      ],
+      "last": {
+        "time": "23:53",
+        "destination": "三宮・花時計前",
+        "trainType": null,
+        "platform": null
+      }
+    },
+    {
+      "filename": "open_kaigan_h_west.csv",
+      "sourceUrl": "https://catalog.city.kobe.lg.jp/dataset/f2d416e9-7dae-4938-b62e-7c717002d715/resource/80b7cc7c-1ea3-4f5b-9bfb-badea44b9f41/download/open_kaigan_h_west.csv",
+      "retrievedAt": "2026-10-25T12:00:54.148Z",
+      "name": "海岸線 時刻表（土曜・休日ダイヤ）西行",
+      "resourceModified": "2026-03-05T00:52:52.880871",
+      "sha256": "01cca80655e785bc9d582d637018e3a6bcbad5c6fdc7d691a7b9afe97aff3beb",
+      "station": "中央市場前",
+      "day": "h",
+      "direction": "west",
+      "count": 107,
+      "first": {
+        "time": "05:49",
+        "destination": "新長田",
+        "trainType": null,
+        "platform": null
+      },
+      "noon": [
+        {
+          "time": "12:06",
+          "destination": "新長田",
+          "trainType": null,
+          "platform": null
+        },
+        {
+          "time": "12:16",
+          "destination": "新長田",
+          "trainType": null,
+          "platform": null
+        },
+        {
+          "time": "12:26",
+          "destination": "新長田",
+          "trainType": null,
+          "platform": null
+        },
+        {
+          "time": "12:36",
+          "destination": "新長田",
+          "trainType": null,
+          "platform": null
+        },
+        {
+          "time": "12:46",
+          "destination": "新長田",
+          "trainType": null,
+          "platform": null
+        },
+        {
+          "time": "12:56",
+          "destination": "新長田",
+          "trainType": null,
+          "platform": null
+        }
+      ],
+      "last": {
+        "time": "23:57",
+        "destination": "新長田",
+        "trainType": null,
+        "platform": null
+      }
+    }
+  ],
+  "currentIndependentSample": {
+    "station": "中央市場前",
+    "direction": "east",
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable1/chuoichibamae/",
+    "retrievalMethod": "official HTML text via web search",
+    "weekday": {
+      "first": "05:44",
+      "noon": [
+        "12:11",
+        "12:26",
+        "12:41",
+        "12:56"
+      ],
+      "last": "23:54"
+    },
+    "weekend": {
+      "first": "05:44",
+      "noon": [
+        "12:11",
+        "12:26",
+        "12:41",
+        "12:56"
+      ],
+      "last": "23:54"
+    }
+  },
+  "coverage": [
+    {
+      "stationCode": "K10",
+      "stationName": "新長田",
+      "direction": "east",
+      "dayType": "weekday",
+      "currentTimetableRetrieved": false,
+      "oldTimetableRetrieved": true,
+      "verified": false,
+      "currentDayApplicable": false,
+      "boardingJudgment": false,
+      "reason": "旧CSVは現行2026-03-14版と不一致。現行CSV本体未取得。"
+    },
+    {
+      "stationCode": "K10",
+      "stationName": "新長田",
+      "direction": "east",
+      "dayType": "weekend",
+      "currentTimetableRetrieved": false,
+      "oldTimetableRetrieved": true,
+      "verified": false,
+      "currentDayApplicable": false,
+      "boardingJudgment": false,
+      "reason": "旧CSVは現行2026-03-14版と不一致。現行CSV本体未取得。"
+    },
+    {
+      "stationCode": "K09",
+      "stationName": "駒ケ林",
+      "direction": "east",
+      "dayType": "weekday",
+      "currentTimetableRetrieved": false,
+      "oldTimetableRetrieved": true,
+      "verified": false,
+      "currentDayApplicable": false,
+      "boardingJudgment": false,
+      "reason": "旧CSVは現行2026-03-14版と不一致。現行CSV本体未取得。"
+    },
+    {
+      "stationCode": "K09",
+      "stationName": "駒ケ林",
+      "direction": "east",
+      "dayType": "weekend",
+      "currentTimetableRetrieved": false,
+      "oldTimetableRetrieved": true,
+      "verified": false,
+      "currentDayApplicable": false,
+      "boardingJudgment": false,
+      "reason": "旧CSVは現行2026-03-14版と不一致。現行CSV本体未取得。"
+    },
+    {
+      "stationCode": "K09",
+      "stationName": "駒ケ林",
+      "direction": "west",
+      "dayType": "weekday",
+      "currentTimetableRetrieved": false,
+      "oldTimetableRetrieved": true,
+      "verified": false,
+      "currentDayApplicable": false,
+      "boardingJudgment": false,
+      "reason": "旧CSVは現行2026-03-14版と不一致。現行CSV本体未取得。"
+    },
+    {
+      "stationCode": "K09",
+      "stationName": "駒ケ林",
+      "direction": "west",
+      "dayType": "weekend",
+      "currentTimetableRetrieved": false,
+      "oldTimetableRetrieved": true,
+      "verified": false,
+      "currentDayApplicable": false,
+      "boardingJudgment": false,
+      "reason": "旧CSVは現行2026-03-14版と不一致。現行CSV本体未取得。"
+    },
+    {
+      "stationCode": "K08",
+      "stationName": "苅藻",
+      "direction": "east",
+      "dayType": "weekday",
+      "currentTimetableRetrieved": false,
+      "oldTimetableRetrieved": true,
+      "verified": false,
+      "currentDayApplicable": false,
+      "boardingJudgment": false,
+      "reason": "旧CSVは現行2026-03-14版と不一致。現行CSV本体未取得。"
+    },
+    {
+      "stationCode": "K08",
+      "stationName": "苅藻",
+      "direction": "east",
+      "dayType": "weekend",
+      "currentTimetableRetrieved": false,
+      "oldTimetableRetrieved": true,
+      "verified": false,
+      "currentDayApplicable": false,
+      "boardingJudgment": false,
+      "reason": "旧CSVは現行2026-03-14版と不一致。現行CSV本体未取得。"
+    },
+    {
+      "stationCode": "K08",
+      "stationName": "苅藻",
+      "direction": "west",
+      "dayType": "weekday",
+      "currentTimetableRetrieved": false,
+      "oldTimetableRetrieved": true,
+      "verified": false,
+      "currentDayApplicable": false,
+      "boardingJudgment": false,
+      "reason": "旧CSVは現行2026-03-14版と不一致。現行CSV本体未取得。"
+    },
+    {
+      "stationCode": "K08",
+      "stationName": "苅藻",
+      "direction": "west",
+      "dayType": "weekend",
+      "currentTimetableRetrieved": false,
+      "oldTimetableRetrieved": true,
+      "verified": false,
+      "currentDayApplicable": false,
+      "boardingJudgment": false,
+      "reason": "旧CSVは現行2026-03-14版と不一致。現行CSV本体未取得。"
+    },
+    {
+      "stationCode": "K07",
+      "stationName": "御崎公園",
+      "direction": "east",
+      "dayType": "weekday",
+      "currentTimetableRetrieved": false,
+      "oldTimetableRetrieved": true,
+      "verified": false,
+      "currentDayApplicable": false,
+      "boardingJudgment": false,
+      "reason": "旧CSVは現行2026-03-14版と不一致。現行CSV本体未取得。"
+    },
+    {
+      "stationCode": "K07",
+      "stationName": "御崎公園",
+      "direction": "east",
+      "dayType": "weekend",
+      "currentTimetableRetrieved": false,
+      "oldTimetableRetrieved": true,
+      "verified": false,
+      "currentDayApplicable": false,
+      "boardingJudgment": false,
+      "reason": "旧CSVは現行2026-03-14版と不一致。現行CSV本体未取得。"
+    },
+    {
+      "stationCode": "K07",
+      "stationName": "御崎公園",
+      "direction": "west",
+      "dayType": "weekday",
+      "currentTimetableRetrieved": false,
+      "oldTimetableRetrieved": true,
+      "verified": false,
+      "currentDayApplicable": false,
+      "boardingJudgment": false,
+      "reason": "旧CSVは現行2026-03-14版と不一致。現行CSV本体未取得。"
+    },
+    {
+      "stationCode": "K07",
+      "stationName": "御崎公園",
+      "direction": "west",
+      "dayType": "weekend",
+      "currentTimetableRetrieved": false,
+      "oldTimetableRetrieved": true,
+      "verified": false,
+      "currentDayApplicable": false,
+      "boardingJudgment": false,
+      "reason": "旧CSVは現行2026-03-14版と不一致。現行CSV本体未取得。"
+    },
+    {
+      "stationCode": "K06",
+      "stationName": "和田岬",
+      "direction": "east",
+      "dayType": "weekday",
+      "currentTimetableRetrieved": false,
+      "oldTimetableRetrieved": true,
+      "verified": false,
+      "currentDayApplicable": false,
+      "boardingJudgment": false,
+      "reason": "旧CSVは現行2026-03-14版と不一致。現行CSV本体未取得。"
+    },
+    {
+      "stationCode": "K06",
+      "stationName": "和田岬",
+      "direction": "east",
+      "dayType": "weekend",
+      "currentTimetableRetrieved": false,
+      "oldTimetableRetrieved": true,
+      "verified": false,
+      "currentDayApplicable": false,
+      "boardingJudgment": false,
+      "reason": "旧CSVは現行2026-03-14版と不一致。現行CSV本体未取得。"
+    },
+    {
+      "stationCode": "K06",
+      "stationName": "和田岬",
+      "direction": "west",
+      "dayType": "weekday",
+      "currentTimetableRetrieved": false,
+      "oldTimetableRetrieved": true,
+      "verified": false,
+      "currentDayApplicable": false,
+      "boardingJudgment": false,
+      "reason": "旧CSVは現行2026-03-14版と不一致。現行CSV本体未取得。"
+    },
+    {
+      "stationCode": "K06",
+      "stationName": "和田岬",
+      "direction": "west",
+      "dayType": "weekend",
+      "currentTimetableRetrieved": false,
+      "oldTimetableRetrieved": true,
+      "verified": false,
+      "currentDayApplicable": false,
+      "boardingJudgment": false,
+      "reason": "旧CSVは現行2026-03-14版と不一致。現行CSV本体未取得。"
+    },
+    {
+      "stationCode": "K05",
+      "stationName": "中央市場前",
+      "direction": "east",
+      "dayType": "weekday",
+      "currentTimetableRetrieved": false,
+      "oldTimetableRetrieved": true,
+      "verified": false,
+      "currentDayApplicable": false,
+      "boardingJudgment": false,
+      "reason": "旧CSVは現行2026-03-14版と不一致。現行CSV本体未取得。"
+    },
+    {
+      "stationCode": "K05",
+      "stationName": "中央市場前",
+      "direction": "east",
+      "dayType": "weekend",
+      "currentTimetableRetrieved": false,
+      "oldTimetableRetrieved": true,
+      "verified": false,
+      "currentDayApplicable": false,
+      "boardingJudgment": false,
+      "reason": "旧CSVは現行2026-03-14版と不一致。現行CSV本体未取得。"
+    },
+    {
+      "stationCode": "K05",
+      "stationName": "中央市場前",
+      "direction": "west",
+      "dayType": "weekday",
+      "currentTimetableRetrieved": false,
+      "oldTimetableRetrieved": true,
+      "verified": false,
+      "currentDayApplicable": false,
+      "boardingJudgment": false,
+      "reason": "旧CSVは現行2026-03-14版と不一致。現行CSV本体未取得。"
+    },
+    {
+      "stationCode": "K05",
+      "stationName": "中央市場前",
+      "direction": "west",
+      "dayType": "weekend",
+      "currentTimetableRetrieved": false,
+      "oldTimetableRetrieved": true,
+      "verified": false,
+      "currentDayApplicable": false,
+      "boardingJudgment": false,
+      "reason": "旧CSVは現行2026-03-14版と不一致。現行CSV本体未取得。"
+    },
+    {
+      "stationCode": "K04",
+      "stationName": "ハーバーランド",
+      "direction": "east",
+      "dayType": "weekday",
+      "currentTimetableRetrieved": false,
+      "oldTimetableRetrieved": true,
+      "verified": false,
+      "currentDayApplicable": false,
+      "boardingJudgment": false,
+      "reason": "旧CSVは現行2026-03-14版と不一致。現行CSV本体未取得。"
+    },
+    {
+      "stationCode": "K04",
+      "stationName": "ハーバーランド",
+      "direction": "east",
+      "dayType": "weekend",
+      "currentTimetableRetrieved": false,
+      "oldTimetableRetrieved": true,
+      "verified": false,
+      "currentDayApplicable": false,
+      "boardingJudgment": false,
+      "reason": "旧CSVは現行2026-03-14版と不一致。現行CSV本体未取得。"
+    },
+    {
+      "stationCode": "K04",
+      "stationName": "ハーバーランド",
+      "direction": "west",
+      "dayType": "weekday",
+      "currentTimetableRetrieved": false,
+      "oldTimetableRetrieved": true,
+      "verified": false,
+      "currentDayApplicable": false,
+      "boardingJudgment": false,
+      "reason": "旧CSVは現行2026-03-14版と不一致。現行CSV本体未取得。"
+    },
+    {
+      "stationCode": "K04",
+      "stationName": "ハーバーランド",
+      "direction": "west",
+      "dayType": "weekend",
+      "currentTimetableRetrieved": false,
+      "oldTimetableRetrieved": true,
+      "verified": false,
+      "currentDayApplicable": false,
+      "boardingJudgment": false,
+      "reason": "旧CSVは現行2026-03-14版と不一致。現行CSV本体未取得。"
+    },
+    {
+      "stationCode": "K03",
+      "stationName": "みなと元町",
+      "direction": "east",
+      "dayType": "weekday",
+      "currentTimetableRetrieved": false,
+      "oldTimetableRetrieved": true,
+      "verified": false,
+      "currentDayApplicable": false,
+      "boardingJudgment": false,
+      "reason": "旧CSVは現行2026-03-14版と不一致。現行CSV本体未取得。"
+    },
+    {
+      "stationCode": "K03",
+      "stationName": "みなと元町",
+      "direction": "east",
+      "dayType": "weekend",
+      "currentTimetableRetrieved": false,
+      "oldTimetableRetrieved": true,
+      "verified": false,
+      "currentDayApplicable": false,
+      "boardingJudgment": false,
+      "reason": "旧CSVは現行2026-03-14版と不一致。現行CSV本体未取得。"
+    },
+    {
+      "stationCode": "K03",
+      "stationName": "みなと元町",
+      "direction": "west",
+      "dayType": "weekday",
+      "currentTimetableRetrieved": false,
+      "oldTimetableRetrieved": true,
+      "verified": false,
+      "currentDayApplicable": false,
+      "boardingJudgment": false,
+      "reason": "旧CSVは現行2026-03-14版と不一致。現行CSV本体未取得。"
+    },
+    {
+      "stationCode": "K03",
+      "stationName": "みなと元町",
+      "direction": "west",
+      "dayType": "weekend",
+      "currentTimetableRetrieved": false,
+      "oldTimetableRetrieved": true,
+      "verified": false,
+      "currentDayApplicable": false,
+      "boardingJudgment": false,
+      "reason": "旧CSVは現行2026-03-14版と不一致。現行CSV本体未取得。"
+    },
+    {
+      "stationCode": "K02",
+      "stationName": "旧居留地・大丸前",
+      "direction": "east",
+      "dayType": "weekday",
+      "currentTimetableRetrieved": false,
+      "oldTimetableRetrieved": true,
+      "verified": false,
+      "currentDayApplicable": false,
+      "boardingJudgment": false,
+      "reason": "旧CSVは現行2026-03-14版と不一致。現行CSV本体未取得。"
+    },
+    {
+      "stationCode": "K02",
+      "stationName": "旧居留地・大丸前",
+      "direction": "east",
+      "dayType": "weekend",
+      "currentTimetableRetrieved": false,
+      "oldTimetableRetrieved": true,
+      "verified": false,
+      "currentDayApplicable": false,
+      "boardingJudgment": false,
+      "reason": "旧CSVは現行2026-03-14版と不一致。現行CSV本体未取得。"
+    },
+    {
+      "stationCode": "K02",
+      "stationName": "旧居留地・大丸前",
+      "direction": "west",
+      "dayType": "weekday",
+      "currentTimetableRetrieved": false,
+      "oldTimetableRetrieved": true,
+      "verified": false,
+      "currentDayApplicable": false,
+      "boardingJudgment": false,
+      "reason": "旧CSVは現行2026-03-14版と不一致。現行CSV本体未取得。"
+    },
+    {
+      "stationCode": "K02",
+      "stationName": "旧居留地・大丸前",
+      "direction": "west",
+      "dayType": "weekend",
+      "currentTimetableRetrieved": false,
+      "oldTimetableRetrieved": true,
+      "verified": false,
+      "currentDayApplicable": false,
+      "boardingJudgment": false,
+      "reason": "旧CSVは現行2026-03-14版と不一致。現行CSV本体未取得。"
+    },
+    {
+      "stationCode": "K01",
+      "stationName": "三宮・花時計前",
+      "direction": "west",
+      "dayType": "weekday",
+      "currentTimetableRetrieved": false,
+      "oldTimetableRetrieved": true,
+      "verified": false,
+      "currentDayApplicable": false,
+      "boardingJudgment": false,
+      "reason": "旧CSVは現行2026-03-14版と不一致。現行CSV本体未取得。"
+    },
+    {
+      "stationCode": "K01",
+      "stationName": "三宮・花時計前",
+      "direction": "west",
+      "dayType": "weekend",
+      "currentTimetableRetrieved": false,
+      "oldTimetableRetrieved": true,
+      "verified": false,
+      "currentDayApplicable": false,
+      "boardingJudgment": false,
+      "reason": "旧CSVは現行2026-03-14版と不一致。現行CSV本体未取得。"
+    }
+  ]
+}

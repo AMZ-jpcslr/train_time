@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-10-26",
+  "remoteTimetableAcquisitionPerformed": false,
+  "bulkAcquisitionAllowedByThisManifest": false,
+  "publicationAllowedByThisManifest": false,
+  "operators": [
+    {
+      "operator": "JR西日本",
+      "lines": ["JR神戸線", "JR京都線", "琵琶湖線"],
+      "existingStationIds": ["jr-nishinomiya", "jr-osaka", "jr-ibaraki", "jr-minamikusatsu"],
+      "adapter": "scripts/import-jr.mjs",
+      "runtimeService": "server/jr-service.mjs",
+      "termsUrl": "https://www.jr-odekake.net/use/about.html",
+      "sourceIndex": "https://timetable.jr-odekake.net/",
+      "status": "blocked-pending-source-permission",
+      "newStations": "not-enumerated-as-supported",
+      "requiredReview": ["source acquisition and redistribution terms", "station-line-direction link identities", "exact service-date pages", "Osaka west Kobe/Takarazuka branch scope", "rapid/local versus limited-express source separation", "JR daily result schema and cache allowlist"],
+      "calendarPolicy": "Each requested date must have its own acquired table; no weekday pattern extrapolation.",
+      "existingFreshnessMs": 21600000
+    },
+    {
+      "operator": "阪急電鉄",
+      "lines": ["神戸線"],
+      "existingStationIds": ["hankyu-umeda", "hankyu-rokko", "hankyu-sannomiya"],
+      "adapter": "scripts/import-hankyu.mjs",
+      "termsUrl": "https://www.hankyu.co.jp/station/html/HK-13_ko_2_h.html",
+      "sourceIndex": "https://www.hankyu.co.jp/station/",
+      "status": "blocked-pending-source-permission",
+      "newStations": "not-enumerated-as-supported",
+      "requiredReview": ["Hankyu and Ekitan permission", "observed official station links, no guessed URL crawling", "revision and complete source body", "terminal departure directions", "unknown destination and train-type legends", "current edition facts hash"],
+      "calendarPolicy": "Weekday and Saturday/holiday tables remain separate; New Year and exceptional operation are not inferred."
+    },
+    {
+      "operator": "阪神電気鉄道",
+      "lines": ["阪神本線"],
+      "existingStationIds": ["hanshin-koshien"],
+      "adapter": "scripts/import-hanshin.mjs",
+      "termsUrl": "https://www.hanshin.co.jp/terms/",
+      "sourceIndex": "https://www.hanshin.co.jp/system/search/time/",
+      "status": "blocked-pending-source-permission-and-parser-generalization",
+      "newStations": "not-enumerated-as-supported",
+      "requiredReview": ["official PDF and Ekitan/Yahoo acquisition/reuse terms", "station-specific identity and PDF links", "generalize Koshien-specific hour rows and destination dictionaries", "Saturday versus holiday equality", "official PDF edition and terminal columns", "no inference from destination-missing third-party API rows"],
+      "calendarPolicy": "Saturday and holiday are acquired independently and merged only when all facts agree."
+    }
+  ],
+  "commonMaintenance": {
+    "auditCommand": "node scripts/audit-kansai-coverage.mjs --dates YYYY-MM-DD --out docs/kansai-coverage-NEW_TIMESTAMP",
+    "comparisonOption": "--compare docs/kansai-coverage-PREVIOUS_TIMESTAMP.json",
+    "sourceRetention": "Keep raw sources in ignored local cache with acquisition time and hash; keep prior output snapshots before adoption.",
+    "verification": "Review changed facts and source conditions; never renew checkedAt from cache reads or parser execution alone.",
+    "stopConditions": ["403", "429", "authentication request", "unknown source permissions", "changed station/direction/day identity", "missing/duplicate/unsorted departures"]
+  }
+}

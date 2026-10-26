@@ -1,0 +1,234 @@
+[
+  {
+    "id": "kobe-k01",
+    "name": "三宮・花時計前",
+    "code": "K01",
+    "operator": "神戸市営地下鉄",
+    "line": "海岸線",
+    "region": "兵庫・神戸",
+    "lat": 34.691763,
+    "lon": 135.1959069,
+    "directions": [
+      {
+        "id": "west",
+        "name": "新長田方面"
+      }
+    ],
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable1/sannomiya-hanadokeimae",
+    "coordinateSource": "https://www.openstreetmap.org/node/4044964918",
+    "coordinateKind": "station-centre-not-entrance",
+    "physicalStationId": "kobe-k01"
+  },
+  {
+    "id": "kobe-k02",
+    "name": "旧居留地・大丸前",
+    "code": "K02",
+    "operator": "神戸市営地下鉄",
+    "line": "海岸線",
+    "region": "兵庫・神戸",
+    "lat": 34.6895883,
+    "lon": 135.1905789,
+    "directions": [
+      {
+        "id": "east",
+        "name": "三宮・花時計前方面"
+      },
+      {
+        "id": "west",
+        "name": "新長田方面"
+      }
+    ],
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable1/kyukyoryuchi-daimarumae/",
+    "coordinateSource": "https://www.openstreetmap.org/node/7746771914",
+    "coordinateKind": "station-centre-not-entrance",
+    "physicalStationId": "kobe-k02"
+  },
+  {
+    "id": "kobe-k03",
+    "name": "みなと元町",
+    "code": "K03",
+    "operator": "神戸市営地下鉄",
+    "line": "海岸線",
+    "region": "兵庫・神戸",
+    "lat": 34.6856332,
+    "lon": 135.1835416,
+    "directions": [
+      {
+        "id": "east",
+        "name": "三宮・花時計前方面"
+      },
+      {
+        "id": "west",
+        "name": "新長田方面"
+      }
+    ],
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable1/minatomotomachi/",
+    "coordinateSource": "https://www.openstreetmap.org/node/7746786804",
+    "coordinateKind": "station-centre-not-entrance",
+    "physicalStationId": "kobe-k03"
+  },
+  {
+    "id": "kobe-k04",
+    "name": "ハーバーランド",
+    "code": "K04",
+    "operator": "神戸市営地下鉄",
+    "line": "海岸線",
+    "region": "兵庫・神戸",
+    "lat": 34.6790031,
+    "lon": 135.1788926,
+    "directions": [
+      {
+        "id": "east",
+        "name": "三宮・花時計前方面"
+      },
+      {
+        "id": "west",
+        "name": "新長田方面"
+      }
+    ],
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable1/harborland/",
+    "coordinateSource": "https://www.openstreetmap.org/node/7746786805",
+    "coordinateKind": "station-centre-not-entrance",
+    "physicalStationId": "kobe-k04"
+  },
+  {
+    "id": "kobe-k05",
+    "name": "中央市場前",
+    "code": "K05",
+    "operator": "神戸市営地下鉄",
+    "line": "海岸線",
+    "region": "兵庫・神戸",
+    "lat": 34.6661531,
+    "lon": 135.1758811,
+    "directions": [
+      {
+        "id": "east",
+        "name": "三宮・花時計前方面"
+      },
+      {
+        "id": "west",
+        "name": "新長田方面"
+      }
+    ],
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable1/chuoichibamae/",
+    "coordinateSource": "https://www.openstreetmap.org/node/7746743056",
+    "coordinateKind": "station-centre-not-entrance",
+    "physicalStationId": "kobe-k05"
+  },
+  {
+    "id": "kobe-k06",
+    "name": "和田岬",
+    "code": "K06",
+    "operator": "神戸市営地下鉄",
+    "line": "海岸線",
+    "region": "兵庫・神戸",
+    "lat": 34.658725,
+    "lon": 135.1768126,
+    "directions": [
+      {
+        "id": "east",
+        "name": "三宮・花時計前方面"
+      },
+      {
+        "id": "west",
+        "name": "新長田方面"
+      }
+    ],
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable1/wadamisaki/",
+    "coordinateSource": "https://www.openstreetmap.org/node/7746743057",
+    "coordinateKind": "station-centre-not-entrance",
+    "physicalStationId": "kobe-k06"
+  },
+  {
+    "id": "kobe-k07",
+    "name": "御崎公園",
+    "code": "K07",
+    "operator": "神戸市営地下鉄",
+    "line": "海岸線",
+    "region": "兵庫・神戸",
+    "lat": 34.6548849,
+    "lon": 135.1662916,
+    "directions": [
+      {
+        "id": "east",
+        "name": "三宮・花時計前方面"
+      },
+      {
+        "id": "west",
+        "name": "新長田方面"
+      }
+    ],
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable1/misakikoen/",
+    "coordinateSource": "https://www.openstreetmap.org/node/7746781968",
+    "coordinateKind": "station-centre-not-entrance",
+    "physicalStationId": "kobe-k07"
+  },
+  {
+    "id": "kobe-k08",
+    "name": "苅藻",
+    "code": "K08",
+    "operator": "神戸市営地下鉄",
+    "line": "海岸線",
+    "region": "兵庫・神戸",
+    "lat": 34.6540074,
+    "lon": 135.157555,
+    "directions": [
+      {
+        "id": "east",
+        "name": "三宮・花時計前方面"
+      },
+      {
+        "id": "west",
+        "name": "新長田方面"
+      }
+    ],
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable1/karumo/",
+    "coordinateSource": "https://www.openstreetmap.org/node/7746781969",
+    "coordinateKind": "station-centre-not-entrance",
+    "physicalStationId": "kobe-k08"
+  },
+  {
+    "id": "kobe-k09",
+    "name": "駒ヶ林",
+    "code": "K09",
+    "operator": "神戸市営地下鉄",
+    "line": "海岸線",
+    "region": "兵庫・神戸",
+    "lat": 34.6517099,
+    "lon": 135.1499556,
+    "directions": [
+      {
+        "id": "east",
+        "name": "三宮・花時計前方面"
+      },
+      {
+        "id": "west",
+        "name": "新長田方面"
+      }
+    ],
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable1/komagabayashi/",
+    "coordinateSource": "https://www.openstreetmap.org/node/7746781970",
+    "coordinateKind": "station-centre-not-entrance",
+    "physicalStationId": "kobe-k09"
+  },
+  {
+    "id": "kobe-k10",
+    "name": "新長田",
+    "code": "K10",
+    "operator": "神戸市営地下鉄",
+    "line": "海岸線",
+    "region": "兵庫・神戸",
+    "lat": 34.6562875,
+    "lon": 135.1454767,
+    "directions": [
+      {
+        "id": "east",
+        "name": "三宮・花時計前方面"
+      }
+    ],
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable1/k-shinnagata/",
+    "coordinateSource": "https://www.openstreetmap.org/node/7746781971",
+    "coordinateKind": "station-centre-not-entrance",
+    "physicalStationId": "kobe-s09"
+  }
+]

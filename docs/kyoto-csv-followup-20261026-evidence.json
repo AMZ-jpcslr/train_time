@@ -1,0 +1,349 @@
+{
+  "recordedAt": "2026-10-26T02:44:45.725Z",
+  "kind": "acquisition-blocker-evidence-not-timetable",
+  "catalog": "https://data.city.kyoto.lg.jp/dataset/00692/?page=1",
+  "tlsProbe": {
+    "startedAt": "2026-10-26T02:39:23.160Z",
+    "dns": {
+      "ms": 79,
+      "address": "133.18.11.31"
+    },
+    "tcpMs": 244,
+    "timeoutMs": 8073,
+    "tlsComplete": false,
+    "httpTested": false
+  },
+  "httpProbe": {
+    "url": "http://data.city.kyoto.lg.jp/",
+    "tcpSeconds": 0.167302,
+    "totalSeconds": 10.011621,
+    "httpCode": 0,
+    "receivedBytes": 0,
+    "error": "curl (28) timeout"
+  },
+  "control": {
+    "url": "https://www.city.kyoto.lg.jp/",
+    "httpCode": 200,
+    "tcpSeconds": 0.114495,
+    "tlsSeconds": 0.364496,
+    "totalSeconds": 0.42113,
+    "responseDate": "Mon, 26 Oct 2026 02:36:24 GMT"
+  },
+  "browser": {
+    "browser": "Brave",
+    "url": "https://data.city.kyoto.lg.jp/dataset/00692/?page=1",
+    "navigationTimeoutMs": 10000,
+    "finalUrl": "about:blank",
+    "catalogBodyReached": false,
+    "retries": 0
+  },
+  "maintenance": {
+    "source": "https://data.city.kyoto.lg.jp/",
+    "evidenceType": "search-index",
+    "noticeDate": "2026-10-21",
+    "scheduledStartJst": "2026-10-26T03:00:00+09:00",
+    "scheduledEndJst": "2026-10-26T04:00:00+09:00",
+    "causalLinkToFailure": "unconfirmed"
+  },
+  "inventory": {
+    "source": "C:\\Users\\yomas\\github\\train_time\\.cache\\kyoto-csv-followup-20261026\\bodik-open-data-list.csv",
+    "retrievedAt": "2026-10-26T02:40:05.906Z",
+    "httpStatus": 200,
+    "sha256": "0ad089bae5acc47218f6e18646c30cb9c21d0c10d9b4a83c7580b4c262d4ab66",
+    "bytes": 4725390,
+    "license": "CC-BY-4.0",
+    "licenseEvidence": "https://data.bodik.jp/dataset/261009_open_data_list/resource/24fd1681-00d1-43b1-8810-17e5d5d95866",
+    "catalogModified": "2025-02-28",
+    "scope": "Municipal open-data inventory, not current subway CSV",
+    "verifiedAt": "2026-10-26T02:41:36.278Z",
+    "totalRows": 19985,
+    "subwayResourceRows": 32,
+    "datasetTitles": [
+      "京都市営地下鉄時刻表（平成30年3月17日改正）",
+      "京都市営地下鉄時刻表（令和3年3月26日終電延長休止）",
+      "京都市営地下鉄時刻表（令和４年１２月１７日改正）",
+      "京都市営地下鉄時刻表（令和６年３月１６日烏丸線ダイヤ変更）"
+    ],
+    "resources": [
+      {
+        "dataset": "京都市営地下鉄時刻表（平成30年3月17日改正）",
+        "title": "東西線 平日 下り（太秦天神川方面）",
+        "datasetUrl": null,
+        "accessUrl": null,
+        "downloadUrl": null,
+        "modified": "2021-03-30"
+      },
+      {
+        "dataset": "京都市営地下鉄時刻表（平成30年3月17日改正）",
+        "title": "東西線 平日 上り（六地蔵/びわ湖浜大津方面）",
+        "datasetUrl": null,
+        "accessUrl": null,
+        "downloadUrl": null,
+        "modified": "2021-03-30"
+      },
+      {
+        "dataset": "京都市営地下鉄時刻表（平成30年3月17日改正）",
+        "title": "東西線 土曜・休日 下り（太秦天神川方面）",
+        "datasetUrl": null,
+        "accessUrl": null,
+        "downloadUrl": null,
+        "modified": "2021-03-30"
+      },
+      {
+        "dataset": "京都市営地下鉄時刻表（平成30年3月17日改正）",
+        "title": "東西線 土曜・休日 上り（六地蔵/びわ湖浜大津方面）",
+        "datasetUrl": null,
+        "accessUrl": null,
+        "downloadUrl": null,
+        "modified": "2021-03-30"
+      },
+      {
+        "dataset": "京都市営地下鉄時刻表（平成30年3月17日改正）",
+        "title": "烏丸線 平日 下り（竹田/新田辺・近鉄奈良方面",
+        "datasetUrl": null,
+        "accessUrl": null,
+        "downloadUrl": null,
+        "modified": "2021-03-30"
+      },
+      {
+        "dataset": "京都市営地下鉄時刻表（平成30年3月17日改正）",
+        "title": "烏丸線 平日 上り（国際会館方面）",
+        "datasetUrl": null,
+        "accessUrl": null,
+        "downloadUrl": null,
+        "modified": "2021-03-30"
+      },
+      {
+        "dataset": "京都市営地下鉄時刻表（平成30年3月17日改正）",
+        "title": "烏丸線 土曜・休日 下り（竹田/新田辺・近鉄奈良方面）",
+        "datasetUrl": null,
+        "accessUrl": null,
+        "downloadUrl": null,
+        "modified": "2021-03-30"
+      },
+      {
+        "dataset": "京都市営地下鉄時刻表（平成30年3月17日改正）",
+        "title": "烏丸線 土曜・休日 上り（国際会館方面）",
+        "datasetUrl": null,
+        "accessUrl": null,
+        "downloadUrl": null,
+        "modified": "2021-03-30"
+      },
+      {
+        "dataset": "京都市営地下鉄時刻表（令和3年3月26日終電延長休止）",
+        "title": "烏丸線　平日　上り（国際会館方面）",
+        "datasetUrl": null,
+        "accessUrl": null,
+        "downloadUrl": null,
+        "modified": "2021-03-30"
+      },
+      {
+        "dataset": "京都市営地下鉄時刻表（令和3年3月26日終電延長休止）",
+        "title": "烏丸線　平日　下り（竹田／新田辺・近鉄奈良方面）",
+        "datasetUrl": null,
+        "accessUrl": null,
+        "downloadUrl": null,
+        "modified": "2021-03-30"
+      },
+      {
+        "dataset": "京都市営地下鉄時刻表（令和3年3月26日終電延長休止）",
+        "title": "烏丸線　土曜・休日　上り（国際会館方面）",
+        "datasetUrl": null,
+        "accessUrl": null,
+        "downloadUrl": null,
+        "modified": "2021-03-30"
+      },
+      {
+        "dataset": "京都市営地下鉄時刻表（令和3年3月26日終電延長休止）",
+        "title": "烏丸線　土曜・休日　下り（竹田／新田辺・近鉄奈良方面）",
+        "datasetUrl": null,
+        "accessUrl": null,
+        "downloadUrl": null,
+        "modified": "2021-03-30"
+      },
+      {
+        "dataset": "京都市営地下鉄時刻表（令和3年3月26日終電延長休止）",
+        "title": "東西線　平日　上り（六地蔵／びわ湖浜大津方面）",
+        "datasetUrl": null,
+        "accessUrl": null,
+        "downloadUrl": null,
+        "modified": "2021-03-30"
+      },
+      {
+        "dataset": "京都市営地下鉄時刻表（令和3年3月26日終電延長休止）",
+        "title": "東西線　平日　下り（太秦天神川方面）",
+        "datasetUrl": null,
+        "accessUrl": null,
+        "downloadUrl": null,
+        "modified": "2021-03-30"
+      },
+      {
+        "dataset": "京都市営地下鉄時刻表（令和3年3月26日終電延長休止）",
+        "title": "東西線　土曜・休日　上り（六地蔵／びわ湖浜大津方面）",
+        "datasetUrl": null,
+        "accessUrl": null,
+        "downloadUrl": null,
+        "modified": "2021-03-30"
+      },
+      {
+        "dataset": "京都市営地下鉄時刻表（令和3年3月26日終電延長休止）",
+        "title": "東西線　土曜・休日　下り（太秦天神川方面）",
+        "datasetUrl": null,
+        "accessUrl": null,
+        "downloadUrl": null,
+        "modified": "2021-03-30"
+      },
+      {
+        "dataset": "京都市営地下鉄時刻表（令和４年１２月１７日改正）",
+        "title": "烏丸線　平日　下り（竹田／新田辺・近鉄奈良方面）",
+        "datasetUrl": null,
+        "accessUrl": null,
+        "downloadUrl": null,
+        "modified": "2022-12-22"
+      },
+      {
+        "dataset": "京都市営地下鉄時刻表（令和４年１２月１７日改正）",
+        "title": "烏丸線　平日　上り（国際会館方面）",
+        "datasetUrl": null,
+        "accessUrl": null,
+        "downloadUrl": null,
+        "modified": "2022-12-22"
+      },
+      {
+        "dataset": "京都市営地下鉄時刻表（令和４年１２月１７日改正）",
+        "title": "烏丸線　土曜・休日　下り（竹田／新田辺・近鉄奈良方面）",
+        "datasetUrl": null,
+        "accessUrl": null,
+        "downloadUrl": null,
+        "modified": "2022-12-22"
+      },
+      {
+        "dataset": "京都市営地下鉄時刻表（令和４年１２月１７日改正）",
+        "title": "烏丸線　土曜・休日　上り（国際会館方面）",
+        "datasetUrl": null,
+        "accessUrl": null,
+        "downloadUrl": null,
+        "modified": "2022-12-22"
+      },
+      {
+        "dataset": "京都市営地下鉄時刻表（令和４年１２月１７日改正）",
+        "title": "東西線　平日　下り（太秦天神川方面）",
+        "datasetUrl": null,
+        "accessUrl": null,
+        "downloadUrl": null,
+        "modified": "2022-12-22"
+      },
+      {
+        "dataset": "京都市営地下鉄時刻表（令和４年１２月１７日改正）",
+        "title": "東西線　平日　上り（六地蔵／びわ湖浜大津方面）",
+        "datasetUrl": null,
+        "accessUrl": null,
+        "downloadUrl": null,
+        "modified": "2022-12-22"
+      },
+      {
+        "dataset": "京都市営地下鉄時刻表（令和４年１２月１７日改正）",
+        "title": "東西線　土曜・休日　下り（太秦天神川方面）",
+        "datasetUrl": null,
+        "accessUrl": null,
+        "downloadUrl": null,
+        "modified": "2022-12-22"
+      },
+      {
+        "dataset": "京都市営地下鉄時刻表（令和４年１２月１７日改正）",
+        "title": "東西線　土曜・休日　上り（六地蔵／びわ湖浜大津方面）",
+        "datasetUrl": null,
+        "accessUrl": null,
+        "downloadUrl": null,
+        "modified": "2022-12-22"
+      },
+      {
+        "dataset": "京都市営地下鉄時刻表（令和６年３月１６日烏丸線ダイヤ変更）",
+        "title": "東西線　土曜・休日　下り（太秦天神川方面）",
+        "datasetUrl": null,
+        "accessUrl": null,
+        "downloadUrl": null,
+        "modified": "2024-03-15"
+      },
+      {
+        "dataset": "京都市営地下鉄時刻表（令和６年３月１６日烏丸線ダイヤ変更）",
+        "title": "東西線　土曜・休日　上り（六地蔵／びわ湖浜大津方面）",
+        "datasetUrl": null,
+        "accessUrl": null,
+        "downloadUrl": null,
+        "modified": "2024-03-15"
+      },
+      {
+        "dataset": "京都市営地下鉄時刻表（令和６年３月１６日烏丸線ダイヤ変更）",
+        "title": "東西線　平日　下り（太秦天神川方面）",
+        "datasetUrl": null,
+        "accessUrl": null,
+        "downloadUrl": null,
+        "modified": "2024-03-15"
+      },
+      {
+        "dataset": "京都市営地下鉄時刻表（令和６年３月１６日烏丸線ダイヤ変更）",
+        "title": "東西線　平日　上り（六地蔵／びわ湖浜大津方面）",
+        "datasetUrl": null,
+        "accessUrl": null,
+        "downloadUrl": null,
+        "modified": "2024-03-15"
+      },
+      {
+        "dataset": "京都市営地下鉄時刻表（令和６年３月１６日烏丸線ダイヤ変更）",
+        "title": "烏丸線　土曜・休日　下り（竹田／新田辺・近鉄奈良方面）",
+        "datasetUrl": null,
+        "accessUrl": null,
+        "downloadUrl": null,
+        "modified": "2024-03-15"
+      },
+      {
+        "dataset": "京都市営地下鉄時刻表（令和６年３月１６日烏丸線ダイヤ変更）",
+        "title": "烏丸線　土曜・休日　上り（国際会館方面）",
+        "datasetUrl": null,
+        "accessUrl": null,
+        "downloadUrl": null,
+        "modified": "2024-03-15"
+      },
+      {
+        "dataset": "京都市営地下鉄時刻表（令和６年３月１６日烏丸線ダイヤ変更）",
+        "title": "烏丸線　平日　下り（竹田／新田辺・近鉄奈良方面）",
+        "datasetUrl": null,
+        "accessUrl": null,
+        "downloadUrl": null,
+        "modified": "2024-03-15"
+      },
+      {
+        "dataset": "京都市営地下鉄時刻表（令和６年３月１６日烏丸線ダイヤ変更）",
+        "title": "烏丸線　平日　上り（国際会館方面）",
+        "datasetUrl": null,
+        "accessUrl": null,
+        "downloadUrl": null,
+        "modified": "2024-03-15"
+      }
+    ],
+    "currentTimetableAcquired": false
+  },
+  "application": {
+    "addedStations": 0,
+    "addedTables": 0,
+    "gtfsTimepointRuleChanged": false
+  },
+  "tests": {
+    "command": "npx vitest run tests/kyoto-csv.test.ts tests/kyoto-network.test.ts",
+    "filesPassed": 2,
+    "testsPassed": 15,
+    "testsFailed": 0,
+    "syntaxCheck": "passed"
+  },
+  "followupTests": {
+    "executedAtJst": "2026-10-26T11:47:24+09:00",
+    "command": "npx vitest run tests/kyoto-csv.test.ts tests/kyoto-network.test.ts",
+    "filesPassed": 2,
+    "testsPassed": 21,
+    "testsFailed": 0,
+    "durationSeconds": 3.77,
+    "network": "mocked fetcher for response tests; no new network requests",
+    "syntaxCheck": "passed"
+  }
+}

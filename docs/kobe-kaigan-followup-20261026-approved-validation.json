@@ -1,0 +1,97 @@
+{
+  "checkedAt": "2026-10-26T02:49:27.941Z",
+  "rawSha256": "a671284c499450cd336fa72d44ba644efd1c078b691fc30e518dfcb7f822bf40",
+  "independentReviewSha256": "1fb9133d91561e08a8e6cc3913f73833ef6f0e2f1f0a7f72f00aea3ff4e30a54",
+  "tables": [
+    {
+      "tableId": "kobe-k02-east-weekday",
+      "sourceUrl": "https://kotsu.city.kobe.lg.jp/wp-content/uploads/open_kaigan_w_east_r080314.csv",
+      "count": 101,
+      "sourceSampleVerification": "passed",
+      "sampleCount": 6,
+      "sampleSourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable1/kyukyoryuchi-daimarumae/",
+      "fullDepartureCrosscheck": false,
+      "checkedAt": "2026-10-26T02:49:27.941Z"
+    },
+    {
+      "tableId": "kobe-k03-east-weekday",
+      "sourceUrl": "https://kotsu.city.kobe.lg.jp/wp-content/uploads/open_kaigan_w_east_r080314.csv",
+      "count": 101,
+      "sourceSampleVerification": "passed",
+      "sampleCount": 6,
+      "sampleSourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable1/minatomotomachi/",
+      "fullDepartureCrosscheck": false,
+      "checkedAt": "2026-10-26T02:49:27.941Z"
+    },
+    {
+      "tableId": "kobe-k04-east-weekday",
+      "sourceUrl": "https://kotsu.city.kobe.lg.jp/wp-content/uploads/open_kaigan_w_east_r080314.csv",
+      "count": 101,
+      "sourceSampleVerification": "passed",
+      "sampleCount": 6,
+      "sampleSourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable1/harborland/",
+      "fullDepartureCrosscheck": false,
+      "checkedAt": "2026-10-26T02:49:27.941Z"
+    },
+    {
+      "tableId": "kobe-k05-east-weekday",
+      "sourceUrl": "https://kotsu.city.kobe.lg.jp/wp-content/uploads/open_kaigan_w_east_r080314.csv",
+      "count": 101,
+      "sourceSampleVerification": "passed",
+      "sampleCount": 6,
+      "sampleSourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable1/chuoichibamae/",
+      "fullDepartureCrosscheck": false,
+      "checkedAt": "2026-10-26T02:49:27.941Z"
+    },
+    {
+      "tableId": "kobe-k06-east-weekday",
+      "sourceUrl": "https://kotsu.city.kobe.lg.jp/wp-content/uploads/open_kaigan_w_east_r080314.csv",
+      "count": 101,
+      "sourceSampleVerification": "passed",
+      "sampleCount": 6,
+      "sampleSourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable1/wadamisaki/",
+      "fullDepartureCrosscheck": false,
+      "checkedAt": "2026-10-26T02:49:27.941Z"
+    },
+    {
+      "tableId": "kobe-k07-east-weekday",
+      "sourceUrl": "https://kotsu.city.kobe.lg.jp/wp-content/uploads/open_kaigan_w_east_r080314.csv",
+      "count": 101,
+      "sourceSampleVerification": "passed",
+      "sampleCount": 6,
+      "sampleSourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable1/misakikoen/",
+      "fullDepartureCrosscheck": false,
+      "checkedAt": "2026-10-26T02:49:27.941Z"
+    },
+    {
+      "tableId": "kobe-k08-east-weekday",
+      "sourceUrl": "https://kotsu.city.kobe.lg.jp/wp-content/uploads/open_kaigan_w_east_r080314.csv",
+      "count": 98,
+      "sourceSampleVerification": "passed",
+      "sampleCount": 6,
+      "sampleSourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable1/karumo/",
+      "fullDepartureCrosscheck": false,
+      "checkedAt": "2026-10-26T02:49:27.941Z"
+    },
+    {
+      "tableId": "kobe-k09-east-weekday",
+      "sourceUrl": "https://kotsu.city.kobe.lg.jp/wp-content/uploads/open_kaigan_w_east_r080314.csv",
+      "count": 98,
+      "sourceSampleVerification": "passed",
+      "sampleCount": 6,
+      "sampleSourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable1/komagabayashi/",
+      "fullDepartureCrosscheck": false,
+      "checkedAt": "2026-10-26T02:49:27.941Z"
+    },
+    {
+      "tableId": "kobe-k10-east-weekday",
+      "sourceUrl": "https://kotsu.city.kobe.lg.jp/wp-content/uploads/open_kaigan_w_east_r080314.csv",
+      "count": 98,
+      "sourceSampleVerification": "passed",
+      "sampleCount": 6,
+      "sampleSourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable1/k-shinnagata/",
+      "fullDepartureCrosscheck": false,
+      "checkedAt": "2026-10-26T02:49:27.941Z"
+    }
+  ]
+}

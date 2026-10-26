@@ -1,0 +1,698 @@
+{
+  "checkedAt": "2026-10-26T02:49:27.941Z",
+  "indexUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable/",
+  "purpose": "Independent source representation sample review, not an independent data provider or full-row validation.",
+  "candidate": {
+    "path": "src/data/kobe-kaigan-candidate.json",
+    "sha256": "e2611ce43c749ad1efd0a3a2f908667c5d5eb7401d254e773a20af3ac26c4795",
+    "tables": 9,
+    "departures": 900
+  },
+  "rawCsv": {
+    "path": ".cache/kobe-kaigan-followup/local-original/open_kaigan_w_east_r080314.csv",
+    "bytes": 8258,
+    "sha256": "a671284c499450cd336fa72d44ba644efd1c078b691fc30e518dfcb7f822bf40",
+    "originalAcquisitionAt": null
+  },
+  "samplePolicy": "First departure + all four departures in hour 12 + last departure, including destinations, for each of nine eastbound weekday tables.",
+  "samples": [
+    {
+      "tableId": "kobe-k10-east-weekday",
+      "station": "新長田",
+      "dayType": "weekday",
+      "direction": "east",
+      "sourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable1/k-shinnagata/",
+      "method": "web-open",
+      "sessionRefs": "turn48view0",
+      "readNotes": "平日5時35、12時2/17/32/47、23時56に■。■=御崎公園、無印=三宮・花時計前。",
+      "expected": {
+        "first": {
+          "time": "05:35",
+          "destination": "三宮・花時計前"
+        },
+        "noon": [
+          {
+            "time": "12:02",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:17",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:32",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:47",
+            "destination": "三宮・花時計前"
+          }
+        ],
+        "last": {
+          "time": "23:56",
+          "destination": "御崎公園"
+        }
+      },
+      "actual": {
+        "first": {
+          "time": "05:35",
+          "destination": "三宮・花時計前"
+        },
+        "noon": [
+          {
+            "time": "12:02",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:17",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:32",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:47",
+            "destination": "三宮・花時計前"
+          }
+        ],
+        "last": {
+          "time": "23:56",
+          "destination": "御崎公園"
+        }
+      },
+      "matched": true,
+      "localSourceOriginalSaved": false,
+      "sourceOriginalHash": null,
+      "searchCrawlAge": null
+    },
+    {
+      "tableId": "kobe-k09-east-weekday",
+      "station": "駒ヶ林",
+      "dayType": "weekday",
+      "direction": "east",
+      "sourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable1/komagabayashi/",
+      "method": "web-open",
+      "sessionRefs": "turn49view0",
+      "readNotes": "平日5時37、12時3/18/33/48、23時58に■。■=御崎公園、無印=三宮・花時計前。",
+      "expected": {
+        "first": {
+          "time": "05:37",
+          "destination": "三宮・花時計前"
+        },
+        "noon": [
+          {
+            "time": "12:03",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:18",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:33",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:48",
+            "destination": "三宮・花時計前"
+          }
+        ],
+        "last": {
+          "time": "23:58",
+          "destination": "御崎公園"
+        }
+      },
+      "actual": {
+        "first": {
+          "time": "05:37",
+          "destination": "三宮・花時計前"
+        },
+        "noon": [
+          {
+            "time": "12:03",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:18",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:33",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:48",
+            "destination": "三宮・花時計前"
+          }
+        ],
+        "last": {
+          "time": "23:58",
+          "destination": "御崎公園"
+        }
+      },
+      "matched": true,
+      "localSourceOriginalSaved": false,
+      "sourceOriginalHash": null,
+      "searchCrawlAge": null
+    },
+    {
+      "tableId": "kobe-k08-east-weekday",
+      "station": "苅藻",
+      "dayType": "weekday",
+      "direction": "east",
+      "sourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable1/karumo/",
+      "method": "web-open",
+      "sessionRefs": "turn49view1",
+      "readNotes": "平日5時39、12時5/20/35/50、23時59に■。■=御崎公園、無印=三宮・花時計前。",
+      "expected": {
+        "first": {
+          "time": "05:39",
+          "destination": "三宮・花時計前"
+        },
+        "noon": [
+          {
+            "time": "12:05",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:20",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:35",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:50",
+            "destination": "三宮・花時計前"
+          }
+        ],
+        "last": {
+          "time": "23:59",
+          "destination": "御崎公園"
+        }
+      },
+      "actual": {
+        "first": {
+          "time": "05:39",
+          "destination": "三宮・花時計前"
+        },
+        "noon": [
+          {
+            "time": "12:05",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:20",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:35",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:50",
+            "destination": "三宮・花時計前"
+          }
+        ],
+        "last": {
+          "time": "23:59",
+          "destination": "御崎公園"
+        }
+      },
+      "matched": true,
+      "localSourceOriginalSaved": false,
+      "sourceOriginalHash": null,
+      "searchCrawlAge": null
+    },
+    {
+      "tableId": "kobe-k07-east-weekday",
+      "station": "御崎公園",
+      "dayType": "weekday",
+      "direction": "east",
+      "sourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable1/misakikoen/",
+      "method": "official-search-body-and-other-reviewer-open",
+      "sessionRefs": "turn53search3",
+      "readNotes": "平日5時40、12時7/22/37/52、23時50。□は当駅始発、行先の記号ではない。",
+      "expected": {
+        "first": {
+          "time": "05:40",
+          "destination": "三宮・花時計前"
+        },
+        "noon": [
+          {
+            "time": "12:07",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:22",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:37",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:52",
+            "destination": "三宮・花時計前"
+          }
+        ],
+        "last": {
+          "time": "23:50",
+          "destination": "三宮・花時計前"
+        }
+      },
+      "actual": {
+        "first": {
+          "time": "05:40",
+          "destination": "三宮・花時計前"
+        },
+        "noon": [
+          {
+            "time": "12:07",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:22",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:37",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:52",
+            "destination": "三宮・花時計前"
+          }
+        ],
+        "last": {
+          "time": "23:50",
+          "destination": "三宮・花時計前"
+        }
+      },
+      "matched": true,
+      "localSourceOriginalSaved": false,
+      "sourceOriginalHash": null,
+      "searchCrawlAge": "Reported by web search as last month; this is not a fresh HTTP body acquisition timestamp."
+    },
+    {
+      "tableId": "kobe-k06-east-weekday",
+      "station": "和田岬",
+      "dayType": "weekday",
+      "direction": "east",
+      "sourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable1/wadamisaki/",
+      "method": "web-open-and-official-search-legend",
+      "sessionRefs": "turn49view2 / turn54search0",
+      "readNotes": "平日5時42、12時9/24/39/54、23時52。無印=三宮・花時計前。",
+      "expected": {
+        "first": {
+          "time": "05:42",
+          "destination": "三宮・花時計前"
+        },
+        "noon": [
+          {
+            "time": "12:09",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:24",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:39",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:54",
+            "destination": "三宮・花時計前"
+          }
+        ],
+        "last": {
+          "time": "23:52",
+          "destination": "三宮・花時計前"
+        }
+      },
+      "actual": {
+        "first": {
+          "time": "05:42",
+          "destination": "三宮・花時計前"
+        },
+        "noon": [
+          {
+            "time": "12:09",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:24",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:39",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:54",
+            "destination": "三宮・花時計前"
+          }
+        ],
+        "last": {
+          "time": "23:52",
+          "destination": "三宮・花時計前"
+        }
+      },
+      "matched": true,
+      "localSourceOriginalSaved": false,
+      "sourceOriginalHash": null,
+      "searchCrawlAge": "Reported by web search as last month; this is not a fresh HTTP body acquisition timestamp."
+    },
+    {
+      "tableId": "kobe-k05-east-weekday",
+      "station": "中央市場前",
+      "dayType": "weekday",
+      "direction": "east",
+      "sourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable1/chuoichibamae/",
+      "method": "official-search-body-and-other-reviewer-open",
+      "sessionRefs": "turn53search2 / turn54search3",
+      "readNotes": "平日5時44、12時11/26/41/56、23時54。無印=三宮・花時計前。",
+      "expected": {
+        "first": {
+          "time": "05:44",
+          "destination": "三宮・花時計前"
+        },
+        "noon": [
+          {
+            "time": "12:11",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:26",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:41",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:56",
+            "destination": "三宮・花時計前"
+          }
+        ],
+        "last": {
+          "time": "23:54",
+          "destination": "三宮・花時計前"
+        }
+      },
+      "actual": {
+        "first": {
+          "time": "05:44",
+          "destination": "三宮・花時計前"
+        },
+        "noon": [
+          {
+            "time": "12:11",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:26",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:41",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:56",
+            "destination": "三宮・花時計前"
+          }
+        ],
+        "last": {
+          "time": "23:54",
+          "destination": "三宮・花時計前"
+        }
+      },
+      "matched": true,
+      "localSourceOriginalSaved": false,
+      "sourceOriginalHash": null,
+      "searchCrawlAge": "Reported by web search as last month; this is not a fresh HTTP body acquisition timestamp."
+    },
+    {
+      "tableId": "kobe-k04-east-weekday",
+      "station": "ハーバーランド",
+      "dayType": "weekday",
+      "direction": "east",
+      "sourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable1/harborland/",
+      "method": "official-search-body-and-pdf",
+      "sessionRefs": "turn52search0 / turn55view2",
+      "readNotes": "平日5時46、12時13/28/43/58、23時57。無印=三宮・花時計前。",
+      "expected": {
+        "first": {
+          "time": "05:46",
+          "destination": "三宮・花時計前"
+        },
+        "noon": [
+          {
+            "time": "12:13",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:28",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:43",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:58",
+            "destination": "三宮・花時計前"
+          }
+        ],
+        "last": {
+          "time": "23:57",
+          "destination": "三宮・花時計前"
+        }
+      },
+      "actual": {
+        "first": {
+          "time": "05:46",
+          "destination": "三宮・花時計前"
+        },
+        "noon": [
+          {
+            "time": "12:13",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:28",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:43",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:58",
+            "destination": "三宮・花時計前"
+          }
+        ],
+        "last": {
+          "time": "23:57",
+          "destination": "三宮・花時計前"
+        }
+      },
+      "matched": true,
+      "localSourceOriginalSaved": false,
+      "sourceOriginalHash": null,
+      "searchCrawlAge": "Reported by web search as last month; this is not a fresh HTTP body acquisition timestamp."
+    },
+    {
+      "tableId": "kobe-k03-east-weekday",
+      "station": "みなと元町",
+      "dayType": "weekday",
+      "direction": "east",
+      "sourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable1/minatomotomachi/",
+      "method": "official-search-body-and-pdf",
+      "sessionRefs": "turn53search0 / turn55view0",
+      "readNotes": "平日5時48、12時0/15/30/45、23時58。PDFの方面は三宮・花時計前。",
+      "expected": {
+        "first": {
+          "time": "05:48",
+          "destination": "三宮・花時計前"
+        },
+        "noon": [
+          {
+            "time": "12:00",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:15",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:30",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:45",
+            "destination": "三宮・花時計前"
+          }
+        ],
+        "last": {
+          "time": "23:58",
+          "destination": "三宮・花時計前"
+        }
+      },
+      "actual": {
+        "first": {
+          "time": "05:48",
+          "destination": "三宮・花時計前"
+        },
+        "noon": [
+          {
+            "time": "12:00",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:15",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:30",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:45",
+            "destination": "三宮・花時計前"
+          }
+        ],
+        "last": {
+          "time": "23:58",
+          "destination": "三宮・花時計前"
+        }
+      },
+      "matched": true,
+      "localSourceOriginalSaved": false,
+      "sourceOriginalHash": null,
+      "searchCrawlAge": "Reported by web search as last month; this is not a fresh HTTP body acquisition timestamp."
+    },
+    {
+      "tableId": "kobe-k02-east-weekday",
+      "station": "旧居留地・大丸前",
+      "dayType": "weekday",
+      "direction": "east",
+      "sourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable1/kyukyoryuchi-daimarumae/",
+      "method": "official-search-body-and-other-reviewer-open",
+      "sessionRefs": "turn53search1 / turn54search1",
+      "readNotes": "平日5時50、12時2/17/32/47、00時0。無印=三宮・花時計前。00:00を24:00へ正規化。",
+      "expected": {
+        "first": {
+          "time": "05:50",
+          "destination": "三宮・花時計前"
+        },
+        "noon": [
+          {
+            "time": "12:02",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:17",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:32",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:47",
+            "destination": "三宮・花時計前"
+          }
+        ],
+        "last": {
+          "time": "24:00",
+          "destination": "三宮・花時計前"
+        }
+      },
+      "actual": {
+        "first": {
+          "time": "05:50",
+          "destination": "三宮・花時計前"
+        },
+        "noon": [
+          {
+            "time": "12:02",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:17",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:32",
+            "destination": "三宮・花時計前"
+          },
+          {
+            "time": "12:47",
+            "destination": "三宮・花時計前"
+          }
+        ],
+        "last": {
+          "time": "24:00",
+          "destination": "三宮・花時計前"
+        }
+      },
+      "matched": true,
+      "localSourceOriginalSaved": false,
+      "sourceOriginalHash": null,
+      "searchCrawlAge": "Reported by web search as last month; this is not a fresh HTTP body acquisition timestamp."
+    }
+  ],
+  "summary": {
+    "stationDirections": 9,
+    "sampledDepartures": 54,
+    "matched": 9,
+    "failed": 0,
+    "fullDepartureCrosscheck": false
+  },
+  "pdfEvidence": [
+    {
+      "station": "みなと元町",
+      "url": "https://kotsu.city.kobe.lg.jp/wp-content/uploads/2026-k03-e.pdf?1776757982=",
+      "revisionDate": "2026-03-14",
+      "opened": true,
+      "originalSaved": false
+    },
+    {
+      "station": "ハーバーランド",
+      "url": "https://kotsu.city.kobe.lg.jp/wp-content/uploads/2026-k04-e.pdf?1776400547=",
+      "revisionDate": "2026-03-14",
+      "opened": true,
+      "originalSaved": false
+    },
+    {
+      "station": "御崎公園",
+      "url": "https://kotsu.city.kobe.lg.jp/wp-content/uploads/2026-k07-e.pdf",
+      "revisionDate": "2026-03-14",
+      "opened": true,
+      "originalSaved": false
+    }
+  ],
+  "otherReviewerEvidence": {
+    "path": "docs/kobe-kaigan-followup-20261026-validation.json",
+    "scope": "K05 K07 K02: separate HTML source reading performed by Kobe agent, used to complement search-cache age limitations."
+  },
+  "limitations": [
+    "No current CSV body reacquisition; original download timestamp remains unknown.",
+    "Some direct web opens failed with 403; normal local fetch returned 202 with zero bytes. No bypass was performed.",
+    "Search body reflects cached official source text; checkedAt is review time, not original source acquisition.",
+    "No raw HTML/PDF body was saved locally by this reviewer; extracted facts and source URLs retained.",
+    "This review covers 54 selected departures, not all 900; no claim of full-line/day coverage or real-time operation.",
+    "Westbound and Saturday/holiday not reviewed.",
+    "Sample match alone does not establish an application validity period or justify replacing unknown acquisition time."
+  ],
+  "recommendation": {
+    "sampleVerification": "passed-nine-station-directions",
+    "automaticVerifiedPromotion": false,
+    "conditions": "Combine with importer structural checks, official current revision/link evidence, explicit original-acquisition-unknown metadata, source check date and application policy. Do not represent partial sample validation as all-row independent verification."
+  }
+}

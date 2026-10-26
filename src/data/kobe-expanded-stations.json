@@ -1,0 +1,354 @@
+[
+  {
+    "id": "kobe-s17",
+    "name": "西神中央",
+    "operator": "神戸市営地下鉄",
+    "line": "西神・山手線",
+    "code": "S17",
+    "lat": 34.7194162,
+    "lon": 135.0174576,
+    "region": "兵庫・神戸",
+    "directions": [
+      {
+        "id": "east",
+        "name": "名谷・三宮・新神戸・谷上方面"
+      }
+    ],
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable/",
+    "coordinateSource": "https://www.openstreetmap.org/node/3721936227",
+    "physicalStationId": "kobe-s17"
+  },
+  {
+    "id": "kobe-s16",
+    "name": "西神南",
+    "operator": "神戸市営地下鉄",
+    "line": "西神・山手線",
+    "code": "S16",
+    "lat": 34.6995602,
+    "lon": 135.0300386,
+    "region": "兵庫・神戸",
+    "directions": [
+      {
+        "id": "east",
+        "name": "名谷・三宮・新神戸・谷上方面"
+      },
+      {
+        "id": "west",
+        "name": "西神中央方面"
+      }
+    ],
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable/",
+    "coordinateSource": "https://www.openstreetmap.org/node/3903196860",
+    "physicalStationId": "kobe-s16"
+  },
+  {
+    "id": "kobe-s15",
+    "name": "伊川谷",
+    "operator": "神戸市営地下鉄",
+    "line": "西神・山手線",
+    "code": "S15",
+    "lat": 34.6878591,
+    "lon": 135.0413139,
+    "region": "兵庫・神戸",
+    "directions": [
+      {
+        "id": "east",
+        "name": "名谷・三宮・新神戸・谷上方面"
+      },
+      {
+        "id": "west",
+        "name": "西神中央方面"
+      }
+    ],
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable/",
+    "coordinateSource": "https://www.openstreetmap.org/node/3903196857",
+    "physicalStationId": "kobe-s15"
+  },
+  {
+    "id": "kobe-s13",
+    "name": "総合運動公園",
+    "operator": "神戸市営地下鉄",
+    "line": "西神・山手線",
+    "code": "S13",
+    "lat": 34.6816415,
+    "lon": 135.0758026,
+    "region": "兵庫・神戸",
+    "directions": [
+      {
+        "id": "east",
+        "name": "名谷・三宮・新神戸・谷上方面"
+      },
+      {
+        "id": "west",
+        "name": "西神中央方面"
+      }
+    ],
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable/",
+    "coordinateSource": "https://www.openstreetmap.org/node/3903196859",
+    "physicalStationId": "kobe-s13"
+  },
+  {
+    "id": "kobe-s12",
+    "name": "名谷",
+    "operator": "神戸市営地下鉄",
+    "line": "西神・山手線",
+    "code": "S12",
+    "lat": 34.6793087,
+    "lon": 135.094304,
+    "region": "兵庫・神戸",
+    "directions": [
+      {
+        "id": "east",
+        "name": "三宮・新神戸・谷上方面"
+      },
+      {
+        "id": "west",
+        "name": "西神中央方面"
+      }
+    ],
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable/",
+    "coordinateSource": "https://www.openstreetmap.org/node/3721652685",
+    "physicalStationId": "kobe-s12"
+  },
+  {
+    "id": "kobe-s10",
+    "name": "板宿",
+    "operator": "神戸市営地下鉄",
+    "line": "西神・山手線",
+    "code": "S10",
+    "lat": 34.6601006,
+    "lon": 135.1343556,
+    "region": "兵庫・神戸",
+    "directions": [
+      {
+        "id": "east",
+        "name": "三宮・新神戸・谷上方面"
+      },
+      {
+        "id": "west",
+        "name": "名谷・西神中央方面"
+      }
+    ],
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable/",
+    "coordinateSource": "https://www.openstreetmap.org/node/7733269975",
+    "physicalStationId": "kobe-s10"
+  },
+  {
+    "id": "kobe-s09",
+    "name": "新長田",
+    "operator": "神戸市営地下鉄",
+    "line": "西神・山手線",
+    "code": "S09",
+    "lat": 34.6584162,
+    "lon": 135.1460644,
+    "region": "兵庫・神戸",
+    "directions": [
+      {
+        "id": "east",
+        "name": "三宮・新神戸・谷上方面"
+      },
+      {
+        "id": "west",
+        "name": "名谷・西神中央方面"
+      }
+    ],
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable/",
+    "coordinateSource": "https://www.openstreetmap.org/node/7733269976",
+    "physicalStationId": "kobe-s09"
+  },
+  {
+    "id": "kobe-s08",
+    "name": "長田",
+    "operator": "神戸市営地下鉄",
+    "line": "西神・山手線",
+    "code": "S08",
+    "lat": 34.6684137,
+    "lon": 135.1513372,
+    "region": "兵庫・神戸",
+    "directions": [
+      {
+        "id": "east",
+        "name": "三宮・新神戸・谷上方面"
+      },
+      {
+        "id": "west",
+        "name": "名谷・西神中央方面"
+      }
+    ],
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable/",
+    "coordinateSource": "https://www.openstreetmap.org/node/7733269977",
+    "physicalStationId": "kobe-s08"
+  },
+  {
+    "id": "kobe-s07",
+    "name": "上沢",
+    "operator": "神戸市営地下鉄",
+    "line": "西神・山手線",
+    "code": "S07",
+    "lat": 34.6735156,
+    "lon": 135.1587903,
+    "region": "兵庫・神戸",
+    "directions": [
+      {
+        "id": "east",
+        "name": "三宮・新神戸・谷上方面"
+      },
+      {
+        "id": "west",
+        "name": "名谷・西神中央方面"
+      }
+    ],
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable/",
+    "coordinateSource": "https://www.openstreetmap.org/node/7733269978",
+    "physicalStationId": "kobe-s07"
+  },
+  {
+    "id": "kobe-s06",
+    "name": "湊川公園",
+    "operator": "神戸市営地下鉄",
+    "line": "西神・山手線",
+    "code": "S06",
+    "lat": 34.6787502,
+    "lon": 135.1665452,
+    "region": "兵庫・神戸",
+    "directions": [
+      {
+        "id": "east",
+        "name": "三宮・新神戸・谷上方面"
+      },
+      {
+        "id": "west",
+        "name": "名谷・西神中央方面"
+      }
+    ],
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable/",
+    "coordinateSource": "https://www.openstreetmap.org/node/7733269979",
+    "physicalStationId": "kobe-s06"
+  },
+  {
+    "id": "kobe-s05",
+    "name": "大倉山",
+    "operator": "神戸市営地下鉄",
+    "line": "西神・山手線",
+    "code": "S05",
+    "lat": 34.6846766,
+    "lon": 135.1746514,
+    "region": "兵庫・神戸",
+    "directions": [
+      {
+        "id": "east",
+        "name": "三宮・新神戸・谷上方面"
+      },
+      {
+        "id": "west",
+        "name": "名谷・西神中央方面"
+      }
+    ],
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable/",
+    "coordinateSource": "https://www.openstreetmap.org/node/7733269980",
+    "physicalStationId": "kobe-s05"
+  },
+  {
+    "id": "kobe-s04",
+    "name": "県庁前",
+    "operator": "神戸市営地下鉄",
+    "line": "西神・山手線",
+    "code": "S04",
+    "lat": 34.6910109,
+    "lon": 135.1839936,
+    "region": "兵庫・神戸",
+    "directions": [
+      {
+        "id": "east",
+        "name": "三宮・新神戸・谷上方面"
+      },
+      {
+        "id": "west",
+        "name": "名谷・西神中央方面"
+      }
+    ],
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable/",
+    "coordinateSource": "https://www.openstreetmap.org/node/7732405759",
+    "physicalStationId": "kobe-s04"
+  },
+  {
+    "id": "kobe-s03",
+    "name": "三宮",
+    "operator": "神戸市営地下鉄",
+    "line": "西神・山手線",
+    "code": "S03",
+    "lat": 34.6938976,
+    "lon": 135.1924441,
+    "region": "兵庫・神戸",
+    "directions": [
+      {
+        "id": "east",
+        "name": "新神戸・谷上方面"
+      },
+      {
+        "id": "west",
+        "name": "名谷・西神中央方面"
+      }
+    ],
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable/",
+    "coordinateSource": "https://www.openstreetmap.org/node/4044964915",
+    "physicalStationId": "kobe-s03"
+  },
+  {
+    "id": "kobe-s02",
+    "name": "新神戸",
+    "operator": "神戸市営地下鉄",
+    "line": "西神・山手線",
+    "code": "S02",
+    "lat": 34.7047051,
+    "lon": 135.1956697,
+    "region": "兵庫・神戸",
+    "directions": [
+      {
+        "id": "west",
+        "name": "三宮・名谷・西神中央方面"
+      }
+    ],
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable/",
+    "coordinateSource": "https://www.openstreetmap.org/node/359798283",
+    "physicalStationId": "kobe-s02"
+  },
+  {
+    "id": "kobe-s02-hokushin",
+    "name": "新神戸",
+    "operator": "神戸市営地下鉄",
+    "line": "北神線",
+    "code": "S02",
+    "lat": 34.7047051,
+    "lon": 135.1956697,
+    "region": "兵庫・神戸",
+    "directions": [
+      {
+        "id": "east",
+        "name": "谷上方面"
+      }
+    ],
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable/",
+    "coordinateSource": "https://www.openstreetmap.org/node/359798283",
+    "physicalStationId": "kobe-s02"
+  },
+  {
+    "id": "kobe-s01",
+    "name": "谷上",
+    "operator": "神戸市営地下鉄",
+    "line": "北神線",
+    "code": "S01",
+    "lat": 34.7615527,
+    "lon": 135.1714838,
+    "region": "兵庫・神戸",
+    "directions": [
+      {
+        "id": "west",
+        "name": "三宮・名谷・西神中央方面"
+      }
+    ],
+    "sourceUrl": "https://kotsu.city.kobe.lg.jp/subway/timetable/",
+    "coordinateSource": "https://www.openstreetmap.org/node/5214409621",
+    "physicalStationId": "kobe-s01"
+  }
+]

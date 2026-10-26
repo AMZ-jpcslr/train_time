@@ -1,0 +1,383 @@
+{
+  "checkedAt": "2026-10-26T02:43:36.409Z",
+  "scope": "Read-only JR follow-up audit; concurrent parent acquisition/network changes excluded",
+  "decision": "Existing four stations are implemented. New official corridor stations are not yet added. No explicit open licensed JR West timetable dataset found in scoped official searches; absence not proven.",
+  "preservedInputs": [
+    {
+      "path": "src/data/jr.json",
+      "sha256": "21820334468afa7b17bcae14d87230c5f894847e909d7344dd45d59dec6eca29"
+    },
+    {
+      "path": "scripts/import-jr.mjs",
+      "sha256": "98ccbb6e971bc24a4a83298d7bc0d964eea21ae2a3d4b4b5204dea22029f2e01"
+    },
+    {
+      "path": "server/jr-service.mjs",
+      "sha256": "b62333eeeaf9fdcff123f39b20b7305e8d214cd0237d45518b1dc7d042363289"
+    },
+    {
+      "path": "src/useTimetables.ts",
+      "sha256": "5f99c0e2bc2c55ddd6a98d335ea9789d516ff51ee6800adba448e59184a5a446"
+    },
+    {
+      "path": "server/western-service.mjs",
+      "sha256": "af1fddcdf17c913af923a94680ff85a5eb51e395870463804352fd18ae290591"
+    },
+    {
+      "path": "server/western-feeds.json",
+      "sha256": "2ad2c5872b6e871f9d540f9609ab1b05de110277695009148e072cd16c85dd80"
+    },
+    {
+      "path": "docs/jr-validation.json",
+      "sha256": "1f2cbd770f532ab5c8b4a95aa5aa880d833926611d214698e37bd1386e00172c"
+    },
+    {
+      "path": "docs/jr-scope-validation.json",
+      "sha256": "854b98546b451b78db10b5b8cff132c81a887a58837b61b6b667bd4c5ef78da8"
+    }
+  ],
+  "officialCoverage": {
+    "stationCount": 4,
+    "directionCount": 8,
+    "stations": [
+      {
+        "id": "jr-nishinomiya",
+        "name": "西宮",
+        "eid": "0610136",
+        "directions": [
+          {
+            "id": "west",
+            "line": "ＪＲ神戸線",
+            "direction": "三ノ宮・姫路方面"
+          },
+          {
+            "id": "east",
+            "line": "ＪＲ神戸線",
+            "direction": "尼崎・大阪・北新地・京都方面"
+          }
+        ]
+      },
+      {
+        "id": "jr-osaka",
+        "name": "大阪",
+        "eid": "0610130",
+        "directions": [
+          {
+            "id": "east",
+            "line": "ＪＲ京都線（快速・普通）",
+            "direction": "新大阪・高槻・京都方面"
+          },
+          {
+            "id": "west",
+            "line": "ＪＲ神戸線（快速・普通）",
+            "direction": "三ノ宮・姫路方面"
+          }
+        ]
+      },
+      {
+        "id": "jr-ibaraki",
+        "name": "茨木",
+        "eid": "0610124",
+        "directions": [
+          {
+            "id": "east",
+            "line": "ＪＲ京都線",
+            "direction": "高槻・京都方面"
+          },
+          {
+            "id": "west",
+            "line": "ＪＲ京都線",
+            "direction": "新大阪・大阪・三ノ宮方面"
+          }
+        ]
+      },
+      {
+        "id": "jr-minamikusatsu",
+        "name": "南草津",
+        "eid": "0610149",
+        "directions": [
+          {
+            "id": "west",
+            "line": "琵琶湖線",
+            "direction": "京都・大阪方面"
+          },
+          {
+            "id": "east",
+            "line": "琵琶湖線",
+            "direction": "草津・米原方面"
+          }
+        ]
+      }
+    ],
+    "tableCount": 32,
+    "departureCount": 6558,
+    "perDay": [
+      {
+        "day": "2026-10-22",
+        "dayTypes": [
+          "weekday"
+        ],
+        "tables": 8,
+        "departures": 1702,
+        "revisions": [
+          "2026-10-03"
+        ],
+        "retrievedAtMin": "2026-10-22T03:15:38.882Z",
+        "retrievedAtMax": "2026-10-22T03:16:21.809Z"
+      },
+      {
+        "day": "2026-10-23",
+        "dayTypes": [
+          "weekday"
+        ],
+        "tables": 8,
+        "departures": 1702,
+        "revisions": [
+          "2026-10-03"
+        ],
+        "retrievedAtMin": "2026-10-22T04:39:53.895Z",
+        "retrievedAtMax": "2026-10-22T04:40:08.421Z"
+      },
+      {
+        "day": "2026-10-24",
+        "dayTypes": [
+          "saturday"
+        ],
+        "tables": 8,
+        "departures": 1577,
+        "revisions": [
+          "2026-10-03"
+        ],
+        "retrievedAtMin": "2026-10-22T04:42:14.702Z",
+        "retrievedAtMax": "2026-10-22T04:42:29.806Z"
+      },
+      {
+        "day": "2026-10-25",
+        "dayTypes": [
+          "holiday"
+        ],
+        "tables": 8,
+        "departures": 1577,
+        "revisions": [
+          "2026-10-03"
+        ],
+        "retrievedAtMin": "2026-10-22T04:43:15.289Z",
+        "retrievedAtMax": "2026-10-22T04:43:30.379Z"
+      }
+    ],
+    "bundledOn20261026": 0,
+    "currentDayJudgment": "Requires successful fresh exact-day runtime acquisition; stored historical data is insufficient"
+  },
+  "runtime": {
+    "schemaVersion": 2,
+    "scopeVersion": 2,
+    "fixedDirections": 8,
+    "ttlHours": 6,
+    "retryMinutes": 15,
+    "queryDays": {
+      "past": 1,
+      "future": 31
+    },
+    "usualRequestsPerDate": 12,
+    "requestIntervalMs": 1200,
+    "publicDeveloperApi": false,
+    "delayIsPermission": false
+  },
+  "reference": {
+    "origin": "https://api.transit.ls8h.com",
+    "jrFeedCount": 43,
+    "representativeFeeds": [
+      {
+        "feedId": "jrwest-sanyo-east",
+        "name": "山陽本線（神戸〜岡山）（JR西日本）",
+        "attribution": "JRおでかけネット 駅時刻表",
+        "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+        "downloadUrl": "https://timetable.jr-odekake.net/",
+        "fetchedAt": "2026-06-28T09:53:37.000Z",
+        "serviceStart": "20260619",
+        "serviceEnd": "20261228",
+        "lines": [
+          "山陽本線"
+        ]
+      },
+      {
+        "feedId": "jrwest-tokaido",
+        "name": "東海道本線（JR京都線・神戸線・琵琶湖線）（JR西日本）",
+        "attribution": "JRおでかけネット 駅時刻表",
+        "license": "JR西日本公式駅別時刻表（JRおでかけネット）由来（取得日の発着時刻）",
+        "downloadUrl": "https://timetable.jr-odekake.net/",
+        "fetchedAt": "2026-06-28T10:10:49.557Z",
+        "serviceStart": "20260619",
+        "serviceEnd": "20261228",
+        "lines": [
+          "JR東海道本線",
+          "JR東海道線",
+          "北方貨物線"
+        ]
+      }
+    ],
+    "mode": "lazy-search",
+    "candidateLimit": 30,
+    "detailLimit": 8,
+    "direction": "all",
+    "verification": "partial",
+    "allowsRideJudgment": false,
+    "metadataLicenseDoesNotEstablishReusePermission": true
+  },
+  "officialSources": [
+    {
+      "url": "https://www.jr-odekake.net/use/about.html",
+      "finding": "Copyright restrictions for site works including databases; not an open-data reuse grant."
+    },
+    {
+      "url": "https://www.odpt.org/overview/",
+      "finding": "Official JSON API and GTFS platform; dataset-specific conditions apply."
+    },
+    {
+      "url": "https://www.kotsu.co.jp/service/jikoku_solution/data_sales/",
+      "finding": "Corporate/organizational sales of JR six-passenger-company CSV/XML/GTFS and search-engine API; no purchase/contact made."
+    }
+  ],
+  "odptCatalogSearches": [
+    {
+      "query": "JR西日本",
+      "url": "https://ckan.odpt.org/ja/dataset/?q=JR%E8%A5%BF%E6%97%A5%E6%9C%AC",
+      "observedAt": "2026-10-26T02:40:35Z",
+      "httpStatus": 200,
+      "observedText": "データセットが見つかりません",
+      "datasetResults": 0,
+      "method": "Normal HTML catalog search; API-like endpoint returned HTML and was not used as JSON-count evidence."
+    },
+    {
+      "query": "西日本旅客鉄道",
+      "url": "https://ckan.odpt.org/ja/dataset/?q=%E8%A5%BF%E6%97%A5%E6%9C%AC%E6%97%85%E5%AE%A2%E9%89%84%E9%81%93",
+      "observedAt": "2026-10-26T02:40:35Z",
+      "httpStatus": 200,
+      "observedText": "データセットが見つかりません",
+      "datasetResults": 0,
+      "method": "Normal HTML catalog search; API-like endpoint returned HTML and was not used as JSON-count evidence."
+    },
+    {
+      "query": "JR West",
+      "url": "https://ckan.odpt.org/ja/dataset/?q=JR%20West",
+      "observedAt": "2026-10-26T02:40:35Z",
+      "httpStatus": 200,
+      "observedText": "データセットが見つかりません",
+      "datasetResults": 0,
+      "method": "Normal HTML catalog search; API-like endpoint returned HTML and was not used as JSON-count evidence."
+    },
+    {
+      "query": "jrwest",
+      "url": "https://ckan.odpt.org/ja/dataset/?q=jrwest",
+      "observedAt": "2026-10-26T02:40:35Z",
+      "httpStatus": 200,
+      "observedText": "データセットが見つかりません",
+      "datasetResults": 0,
+      "method": "Normal HTML catalog search; API-like endpoint returned HTML and was not used as JSON-count evidence."
+    }
+  ],
+  "testReports": [
+    {
+      "path": ".cache/work-20261026-baseline/vitest-complete.json",
+      "stage": "previous-run",
+      "sha256": "4e0a87b0d7446c35d0bcd565e1d9a7e46a8729642d5aaf822fbed99b04bcab1b",
+      "mtime": "2026-10-25T17:54:44.638Z",
+      "total": 424,
+      "passed": 424,
+      "failed": 0,
+      "jr": [
+        {
+          "file": "C:/Users/yomas/github/train_time/tests/jr-cache.test.ts",
+          "status": "passed",
+          "count": 6
+        },
+        {
+          "file": "C:/Users/yomas/github/train_time/tests/jr-feed.test.ts",
+          "status": "passed",
+          "count": 13
+        },
+        {
+          "file": "C:/Users/yomas/github/train_time/tests/jr-service.test.ts",
+          "status": "passed",
+          "count": 9
+        },
+        {
+          "file": "C:/Users/yomas/github/train_time/tests/jr.test.ts",
+          "status": "passed",
+          "count": 23
+        }
+      ]
+    },
+    {
+      "path": ".cache/subway-followup-20261026T023455Z/jr-tests.json",
+      "stage": "current-parent-run",
+      "sha256": "159efc4b964a115d7d7bca944f5f599ab315cdd50f8e6a19bc3e4416f88830be",
+      "mtime": "2026-10-26T02:38:32.767Z",
+      "total": 51,
+      "passed": 51,
+      "failed": 0,
+      "jr": [
+        {
+          "file": "C:/Users/yomas/github/train_time/tests/jr-cache.test.ts",
+          "status": "passed",
+          "count": 6
+        },
+        {
+          "file": "C:/Users/yomas/github/train_time/tests/jr-feed.test.ts",
+          "status": "passed",
+          "count": 13
+        },
+        {
+          "file": "C:/Users/yomas/github/train_time/tests/jr-service.test.ts",
+          "status": "passed",
+          "count": 9
+        },
+        {
+          "file": "C:/Users/yomas/github/train_time/tests/jr.test.ts",
+          "status": "passed",
+          "count": 23
+        }
+      ]
+    }
+  ],
+  "workStages": {
+    "researched": [
+      "official daily HTML format",
+      "existing scope and tests",
+      "site usage rules",
+      "ODPT normal catalog searches",
+      "licensed data sales option"
+    ],
+    "implemented": [
+      "existing four-station date-specific acquisition and validation",
+      "reference-only third-party search"
+    ],
+    "existingValidation": [
+      "32 exact-day tables",
+      "PC/mobile full-row crosscheck",
+      "2026-10-22 first/noon/last/count samples",
+      "Osaka branch exclusion evidence"
+    ],
+    "currentValidation": [
+      "Parent re-ran JR 51 tests successfully; audit read the resulting JSON"
+    ],
+    "thisAuditTimetableAcquisition": {
+      "tables": 0
+    },
+    "notStarted": [
+      "new official stations along JR Kobe/Kyoto/Biwako corridors",
+      "source reuse agreement or suitable open dataset",
+      "new-station operational-day/source exception validation",
+      "generalize frontend eight-direction allowlist"
+    ]
+  },
+  "noActions": [
+    "bulk retrieval",
+    "external inquiry",
+    "paid contract",
+    "purchase",
+    "publication",
+    "deployment",
+    "existing code/data edits"
+  ]
+}
