@@ -8,7 +8,7 @@
 - `frontend-design`：出発目安を先頭、選んだ便をその次、条件ボタンを下に配置。広い画面は目安と便を横に置く。既存の自己配信フォントを再利用し、補足の文字サイズと拡大時の余白を調整。[設計・比較条件と検証](frontend-release-review-20261026-design.md)。
 - `frontend-developer`：閉じた線路図ではスクロール中の同期再描画をカード境界に抑え、カード生成を再利用。線路図を開いた場合の同期と、全便をたどる操作を保持した。位置情報は明示操作で取得し、保存設定の形式は変更しない。
 - `frontend-architecture`：`/api/config` の取得・応答検査をAPI窓口へ分け、フックがキャンセルと15秒の打ち切りを管理する。時刻表・徒歩計算の固有の鮮度検査は各フックに保持。[境界の説明](../src/shared/api-client/README.md)。
-- `frontend-seo`：サイト情報を一つの設定に集約し、配信HTMLのtitle/description/canonical/OG/X/JSON-LDとrobots/sitemapを生成。実在するホームだけを登録する。通常productionから比較画面とそのCSSを除去。[実装と検証](frontend-release-review-20261026-seo.md)。
+- `frontend-seo`：サイト情報を一つの設定に集約し、配信HTMLのtitle/description/canonical/OG/X/JSON-LDとrobots/sitemapを生成。実在するホームだけを登録する。A/B/C専用の比較モジュール・CSSは通常productionから除外し、通常画面はBに固定する。旧画面と共有するApp内のコード・共通CSSは残る。[実装と検証](frontend-release-review-20261026-seo.md)。
 - `frontend-slides`：改良前後の画像と操作確認へのリンクを、ローカルの5ページHTML資料に整理。スキルのviewport-base.cssを全文含め、既存のOFLフォントと画像を埋め込んだ。100dvhの制約はこの確認資料だけに適用し、アプリの縦スクロールや全便一覧は保持する。既にBが選ばれているため、別の3スタイル選定は繰り返していない。
 
 ## 比較条件と確認資料

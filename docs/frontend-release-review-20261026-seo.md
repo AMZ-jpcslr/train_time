@@ -24,7 +24,7 @@ Vite／React 19を維持した。存在しない記事、RSS、人物情報、�
 
 ## 通常画面と比較画面の境界
 
-`src/main.tsx` は、開発モードまたは明示した `--mode comparison` の場合だけ比較URLを読み、比較画面をlazy importする。通常productionでは `?design=board` 等を付けても採用Bを表示する。未採用3案のJS/CSSは通常productionのビルドから除外される。既存の開発用比較操作は維持した。
+`src/main.tsx` は、開発モードまたは明示した `--mode comparison` の場合だけ比較URLを読み、比較画面をlazy importする。通常productionでは `?design=board` 等を付けても採用Bを表示する。A/B/C専用の比較モジュール・CSSは通常productionのビルドから除外される。旧画面と通常画面が共有するApp内のコード・共通CSSまで除去したわけではない。既存の開発用比較操作は維持した。
 
 比較用ビルドは `npx vite build --mode comparison --outDir <専用出力先>` で作成できる。通常公開用は既存の `npm run build`。比較ビルドを通常公開に使用しない。
 
