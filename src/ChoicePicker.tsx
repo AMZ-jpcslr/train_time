@@ -1,17 +1,20 @@
 import {useEffect,useId,useRef,useState,type CSSProperties,type KeyboardEvent} from 'react';
 import './mobile-controls.css';
+import {useDialogHistory} from './useDialogHistory';
 
 type Choice = {id:string;label:string;description?:string};
-type Props = {label:string;value:string;options:Choice[];onChange:(id:string)=>void;emptyText?:string};
+type Props = {label:string;value:string;options:Choice[];onChange:(id:string)=>void;disabled?:boolean;emptyText?:string};
 
 /** A compact selector that shares the station board's desktop panel / mobile sheet. */
-export default function ChoicePicker({label,value,options,onChange,emptyText='選択してください'}:Props){
+export default function ChoicePicker({label,value,options,onChange,disabled=false,emptyText='選択してください'}:Props){
  const id=useId();
  const trigger=useRef<HTMLButtonElement>(null);
  const dialog=useRef<HTMLDialogElement>(null);
  const list=useRef<HTMLDivElement>(null);
  const closeButton=useRef<HTMLButtonElement>(null);
  const [open,setOpen]=useState(false);
+ const modal=useDialogHistory(dialog,()=>setOpen(false));
+ const typed=useRef({text:'',at:0});
  const [active,setActive]=useState(0);
  const [anchor,setAnchor]=useState({left:16,top:16});
  const selected=options.find(option=>option.id===value);
@@ -22,8 +25,8 @@ export default function ChoicePicker({label,value,options,onChange,emptyText='�
  };
  useEffect(()=>{if(open){list.current?.focus();window.addEventListener('resize',position);}return()=>window.removeEventListener('resize',position);},[open]);
  useEffect(()=>{if(open)document.getElementById(`${id}-option-${activeIndex}`)?.scrollIntoView({block:'nearest'});},[open,id,activeIndex]);
- const show=()=>{position();setActive(Math.max(0,options.findIndex(option=>option.id===value)));setOpen(true);dialog.current?.showModal();};
- const close=()=>{dialog.current?.close();setOpen(false);trigger.current?.focus();};
+ const show=()=>{position();setActive(Math.max(0,options.findIndex(option=>option.id===value)));if(modal.show())setOpen(true);};
+ const close=modal.close;
  const select=(option:Choice)=>{onChange(option.id);close();};
  const move=(event:KeyboardEvent)=>{
   if(!options.length)return;
@@ -32,15 +35,21 @@ export default function ChoicePicker({label,value,options,onChange,emptyText='�
   else if(event.key==='Home')setActive(0);
   else if(event.key==='End')setActive(options.length-1);
   else if(event.key==='Enter'||event.key===' ')select(options[activeIndex]);
-  else return;
+  else if(event.key.length===1&&!event.ctrlKey&&!event.metaKey&&!event.altKey){
+   const now=Date.now();typed.current={text:(now-typed.current.at<700?typed.current.text:'')+event.key,at:now};
+   const query=typed.current.text.normalize('NFKC').toLocaleLowerCase('ja');
+   const index=options.findIndex(option=>option.label.normalize('NFKC').toLocaleLowerCase('ja').startsWith(query));
+   if(index>=0)setActive(index);
+  }else return;
   event.preventDefault();
  };
  return <div className="choice-picker">
   <span className="choice-label">{label}</span>
-  <button type="button" ref={trigger} className="choice-trigger" aria-label={label} aria-haspopup="dialog" aria-expanded={open} aria-controls={id} onClick={show}>
-   <span>{selected?.label??emptyText}</span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+  <button type="button" ref={trigger} className="choice-trigger" disabled={disabled||!options.length} aria-label={label} aria-describedby={`${id}-value`} aria-haspopup="dialog" aria-expanded={open} aria-controls={id} onClick={show} onKeyDown={event=>{if(event.key==='ArrowDown'||event.key==='ArrowUp'){event.preventDefault();show();}}}>
+   <span id={`${id}-value`}>{selected?.label??emptyText}</span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
   </button>
-  <dialog ref={dialog} id={id} className="choice-dialog" aria-labelledby={`${id}-title`} style={{'--choice-left':`${anchor.left}px`,'--choice-top':`${anchor.top}px`} as CSSProperties} onClose={()=>setOpen(false)} onCancel={event=>{event.preventDefault();close();}} onKeyDown={event=>{
+  <dialog ref={dialog} id={id} className="choice-dialog" aria-labelledby={`${id}-title`} style={{'--choice-left':`${anchor.left}px`,'--choice-top':`${anchor.top}px`} as CSSProperties} onClose={event=>{event.stopPropagation();setOpen(false);}} onCancel={event=>{event.stopPropagation();event.preventDefault();close();}} onKeyDown={event=>{
+   event.stopPropagation();
    if(event.key!=='Tab')return;
    event.preventDefault();if(document.activeElement===closeButton.current)list.current?.focus();else closeButton.current?.focus();
   }} onClick={event=>{

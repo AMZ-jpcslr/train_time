@@ -1,0 +1,19 @@
+import {describe,expect,it} from 'vitest';
+import {activeTypes,filterContext,filterTrains,readTypePreferences,stationCapability,stationRegion} from '../src/domain/trainFilter';
+import {departureEpoch} from '../src/domain/time';
+import type {Station,Timetable} from '../src/domain/types';
+const day='2026-10-26',now=Date.parse(day+'T14:03:00+09:00');
+const station:Station={id:'test',name:'試験駅',operator:'試験',line:'試験線',code:'T',lat:35,lon:135,directions:[{id:'east',name:'東'},{id:'west',name:'西'}],sourceUrl:'https://example.test'};
+const trains=[{time:'14:10',destination:'試験',trainType:'特急',platform:null},{time:'14:12',destination:'試験',trainType:'普通',platform:null},{time:'14:20',destination:'試験',trainType:'特急',platform:null},{time:'25:10',destination:'試験',trainType:null,platform:null}];
+const table:Timetable={id:'test',stationId:'test',operator:'試験',line:'試験線',directionId:'east',direction:'東',dayType:'weekday',departures:trains,sourceUrl:'https://example.test',checkedAt:new Date(now).toISOString(),retrievedAt:new Date(now).toISOString(),validFrom:day,validTo:null,revisionDate:null,verification:'verified',notes:[]};
+describe('train conditions and capability boundaries',()=>{
+ it('keeps the next matching train and skips intervening other types',()=>{expect(filterTrains(trains,['特急']).map(t=>t.time)).toEqual(['14:10','14:20']);});
+ it('never silently clears empty or unmatched selections',()=>{expect(filterTrains(trains,[])).toEqual([]);expect(filterTrains(trains,['快速'])).toEqual([]);expect(filterTrains(trains,null)).toEqual(trains);});
+ it('treats unknown type independently and retains after-midnight service times',()=>{const result=filterTrains(trains,['種別不明']);expect(result).toHaveLength(1);expect(departureEpoch(day,result[0].time)).toBe(Date.parse('2026-10-27T01:10:00+09:00'));});
+ it('does not carry invalid types between contexts or turn them into all types',()=>{expect(activeTypes(['特急','快速'],['普通','特急'])).toEqual(['特急']);expect(activeTypes(['快速'],['普通'])).toEqual([]);expect(filterContext('a','east',day)).not.toBe(filterContext('a','west',day));expect(filterContext('a','east',day)).not.toBe(filterContext('a','east','2026-10-31'));});
+ it('bounds and validates stored conditions without modifying other app settings',()=>{expect(readTypePreferences('{"x":["普通"],"y":[],"bad":"all"}')).toEqual({x:['普通'],y:[]});expect(readTypePreferences('null')).toEqual({});expect(Object.keys(readTypePreferences(JSON.stringify(Object.fromEntries(Array.from({length:120},(_,i)=>[String(i),[]])))))).toHaveLength(100);});
+ it('reports directions and does not confuse searchable catalog entries with guidance',()=>{expect(stationCapability(station,[table],day,now)).toMatchObject({ready:true,detail:expect.stringContaining('1/2方面')});expect(stationCapability({...station,catalogOnly:true},[table],day,now)).toMatchObject({ready:false,label:'参考情報'});});
+ it('blocks partial, expired, special and missing-day tables',()=>{expect(stationCapability(station,[{...table,verification:'partial'}],day,now)).toMatchObject({ready:false,label:'参考情報'});expect(stationCapability(station,[{...table,checkedAt:'2026-01-01'}],day,now)).toMatchObject({ready:false,label:'時刻表のみ'});expect(stationCapability(station,[{...table,excludedDates:[day]}],day,now).ready).toBe(false);expect(stationCapability(station,[{...table,serviceDates:['2026-10-25']}],day,now).ready).toBe(false);});
+ it('does not label every JR West remote result as Kansai',()=>{expect(stationRegion({...station,operator:'JR西日本',westernProvider:'jrwest-test',region:'中国'})).toBe('中国');expect(stationRegion({...station,operator:'JR西日本',westernProvider:'jrwest-test'})).toBe('西日本（地域未分類）');});
+ it('keeps JR six-hour freshness separate from the selected day',()=>{const jr={...station,id:'jr-test'};expect(stationCapability(jr,[{...table,stationId:jr.id,serviceDates:[day],checkedAt:new Date(now-7*3600000).toISOString()}],day,now).ready).toBe(false);});
+});

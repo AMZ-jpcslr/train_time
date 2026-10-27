@@ -24,8 +24,8 @@ body:has(.action-live){background:#f7f4ed;color-scheme:light}
  --action-panel:#e9efdf;
  --action-rule:#bdcbb5;
  --action-control:#f7f9f1;
- --display-font:"Barlow Condensed","Zen Kaku Gothic New",sans-serif;
- --body-font:"Zen Kaku Gothic New","Yu Gothic",Meiryo,sans-serif;
+ --display-font:"Barlow Condensed","Hiragino Sans","Hiragino Kaku Gothic ProN",Meiryo,"Yu Gothic","Noto Sans JP","Noto Sans CJK JP",sans-serif;
+ --body-font:"Hiragino Sans","Hiragino Kaku Gothic ProN",Meiryo,"Yu Gothic","Noto Sans JP","Noto Sans CJK JP",sans-serif;
  font-family:var(--body-font);
 }
 .action-live .page-heading{padding-block:16px}

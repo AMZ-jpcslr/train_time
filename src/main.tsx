@@ -12,3 +12,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode>{
 if(import.meta.env.PROD)startPwaUpdates();
 import './departure-timeline.css';
 import './action-live.css';
+import './adopted-ui.css';
+
+import './signal-ui.css';

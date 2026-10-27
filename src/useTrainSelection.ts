@@ -16,5 +16,5 @@ export function useTrainSelection(departures:ScheduledDeparture[],context:string
   if(!missing)return;
   setChoice(null);setNotice(departed?'選んだ電車は予定発車時刻を過ぎたため、選択を解除しました。':'時刻表の更新で選んだ電車を確認できなくなったため、選択を解除しました。');
  },[missing,departed]);
- return {selected,index:selected?departures.indexOf(selected):-1,notice,select:(train:ScheduledDeparture)=>{setChoice({context,id:departureKey(train),epoch:train.epoch});setNotice('');}};
+ return {selected,index:selected?departures.indexOf(selected):-1,notice,manual:Boolean(match),reset:()=>{setChoice(null);setNotice('条件に合う次の電車に戻しました。');},select:(train:ScheduledDeparture)=>{setChoice({context,id:departureKey(train),epoch:train.epoch});setNotice('');}};
 }
