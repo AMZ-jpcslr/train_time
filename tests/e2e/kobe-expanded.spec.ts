@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { chooseStation, mockRuntime, saveMeasuredPlace, chooseChoice } from '../fixtures/runtime';
+import { chooseStation, mockRuntime, saveMeasuredPlace, chooseChoice ,openWalkingSettings,closeWalkingSettings,openWalkingAdvanced} from '../fixtures/runtime';
 import { stations } from '../../src/data/stations';
 
 // After the new source review, with no real geolocation or external requests.
@@ -11,7 +11,7 @@ test.beforeEach(async ({ page }) => {
 
 test('expanded Kobe search separates Shin-Kobe lines and exposes only departing terminal directions', async ({ page }) => {
   const api = await mockRuntime(page);
-  await page.goto('/');
+  await page.goto('/classic.html');
   const trigger = page.getByRole('button', { name: '乗車駅', exact: true });
   await trigger.click();
   const dialog = page.getByRole('dialog', { name: '乗車駅を選ぶ' });
@@ -22,7 +22,7 @@ test('expanded Kobe search separates Shin-Kobe lines and exposes only departing 
   await dialog.locator('[data-station-id="kobe-s02-hokushin"]').click();
   await expect(page.locator('.direction-tabs button')).toHaveCount(1);
   await expect(page.locator('.direction-tabs button')).toContainText('谷上方面');
-  await expect(page.locator('.next-train')).toBeVisible();
+  await expect(page.locator('.chosen-decision')).toBeVisible();
 
   for (const id of ['kobe-s17', 'kobe-s02', 'kobe-s01']) {
     const station = stations.find(s => s.id === id)!;
@@ -30,7 +30,7 @@ test('expanded Kobe search separates Shin-Kobe lines and exposes only departing 
     await expect(page.locator('.direction-tabs button')).toHaveCount(1);
     await expect(page.locator('.direction-tabs button')).toContainText(station.directions[0].name);
     await expect(page.locator('.direction-tabs button')).toHaveAttribute('aria-pressed', 'true');
-    await expect(page.locator('.next-train')).toBeVisible();
+    await expect(page.locator('.chosen-decision')).toBeVisible();
     await expect(page.locator('.departure-board')).not.toContainText('現行未確認');
   }
   expect(api.walking).toHaveLength(0);
@@ -39,16 +39,16 @@ test('expanded Kobe search separates Shin-Kobe lines and exposes only departing 
 
 test('new Kobe station keeps measured walking inputs and station-direction favorites across reload', async ({ page }) => {
   const api = await mockRuntime(page);
-  await page.goto('/');
+  await page.goto('/classic.html');
   await chooseStation(page, 'kobe-s17');
-  await expect(page.getByRole('button', { name: '歩いて向かう駅入口', exact: true })).toContainText('未確認');
-  await expect(page.locator('.judgment')).toContainText('判定不可');
+  await openWalkingSettings(page);await expect(page.getByRole('button', { name: '歩いて向かう駅入口', exact: true })).toContainText('未確認');
+  await expect(page.locator('.chosen-leave')).toHaveCount(0);
   await saveMeasuredPlace(page, '西神中央の実測地点');
   await expect(page.locator('.walk-summary')).toContainText('登録地点の実測時間');
-  await expect(page.locator('.judgment')).not.toContainText('判定不可');
-  await page.getByRole('button', { name: /徒歩・駅構内時間の設定/ }).click();
+  await expect(page.locator('.chosen-leave')).toHaveCount(1);
+  await openWalkingAdvanced(page);
   await page.getByLabel('入口からホームまで（分）', { exact: true }).fill('4');
-  await page.getByRole('button', { name: 'この駅と方面をお気に入り' }).click();
+  await closeWalkingSettings(page);await page.getByRole('button', { name: 'この駅と方面をお気に入り' }).click();
   const favorites = page.getByRole('region', { name: 'お気に入りの駅と方面', exact: true });
   const favorite = favorites.getByRole('button', { name: /西神中央/ });
   await expect(favorite).toHaveAttribute('aria-pressed', 'true');
@@ -60,8 +60,8 @@ test('new Kobe station keeps measured walking inputs and station-direction favor
   await page.reload();
   await expect(favorite).toHaveAttribute('aria-pressed', 'true');
   // A stored place persists, but it must be selected after reload before estimating.
-  await expect(page.locator('.judgment')).toContainText('判定不可');
-  await page.locator('.manual-fallback > summary').click();
+  await expect(page.locator('.chosen-leave')).toHaveCount(0);
+  await openWalkingSettings(page);await page.locator('.manual-fallback > summary').click();
   const saved = await page.evaluate(() => JSON.parse(localStorage.getItem('mania-u:v1')!));
   expect(saved.settings.stationMinutes).toBe(4);
   expect(saved.favorites).toContain('kobe-s17:east');
@@ -69,14 +69,14 @@ test('new Kobe station keeps measured walking inputs and station-direction favor
   expect(place).toMatchObject({ stationId: 'kobe-s17', walkMinutes: 1, entrance: '試験入口' });
   await chooseChoice(page, '出発地点', place.id);
   await expect(page.locator('.walk-summary')).toContainText('登録地点の実測時間');
-  await expect(page.locator('.judgment')).not.toContainText('判定不可');
+  await expect(page.locator('.chosen-leave')).toHaveCount(1);
   expect(api.walking).toHaveLength(0);
   expect(api.external).toEqual([]);
 });
 
 test('Kansai coverage separates connected Kobe data from pending Kyoto and Kaigan data', async ({ page }) => {
   const api = await mockRuntime(page);
-  await page.goto('/');
+  await page.goto('/classic.html');
   const coverage = page.getByRole('region', { name: '関西の対応状況', exact: true });
   const local = stations.filter(s => /^(kobe-|kyoto-|jr-|hankyu-|hanshin-)/.test(s.id));
   await expect(coverage).toContainText(`${local.length}駅・路線`);

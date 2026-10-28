@@ -25,7 +25,7 @@ export default function ChoicePicker({label,value,options,onChange,disabled=fals
  };
  useEffect(()=>{if(open){list.current?.focus();window.addEventListener('resize',position);}return()=>window.removeEventListener('resize',position);},[open]);
  useEffect(()=>{if(open)document.getElementById(`${id}-option-${activeIndex}`)?.scrollIntoView({block:'nearest'});},[open,id,activeIndex]);
- const show=()=>{position();setActive(Math.max(0,options.findIndex(option=>option.id===value)));if(modal.show())setOpen(true);};
+ const show=()=>{trigger.current?.focus();position();setActive(Math.max(0,options.findIndex(option=>option.id===value)));modal.show(()=>setOpen(true));};
  const close=modal.close;
  const select=(option:Choice)=>{onChange(option.id);close();};
  const move=(event:KeyboardEvent)=>{

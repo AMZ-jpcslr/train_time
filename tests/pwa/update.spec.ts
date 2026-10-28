@@ -9,12 +9,19 @@ async function controlled(page:Page){
  await page.evaluate(async()=>{await navigator.serviceWorker.ready;});
  await expect.poll(()=>page.evaluate(()=>!!navigator.serviceWorker.controller)).toBe(true);
 }
+async function showUpdatePanel(page:Page){
+ await expect(page.getByRole('button',{name:'乗車駅',exact:true})).toBeVisible();
+ const tools=page.locator('details').filter({has:page.getByText('ホーム画面・ウィジェット',{exact:true})});
+ if(await tools.count()&&!await tools.evaluate(e=>(e as HTMLDetailsElement).open))await tools.locator(':scope > summary').click();
+}
 async function updateUiReady(page:Page){
+ await showUpdatePanel(page);
  await expect(page.getByRole('region',{name:'アプリの更新',exact:true}).getByRole('status')).toContainText(/アプリの更新を確認しました|オフラインでも開く準備ができました/);
  await expect(page.getByRole('button',{name:'アプリの更新を確認',exact:true})).toBeEnabled();
 }
 async function releaseShown(page:Page,release:string){
  await expect(page.locator('html')).toHaveAttribute('data-test-release',release);
+ if(release!=='legacy')await showUpdatePanel(page);
 }
 async function requestUpdate(page:Page){
  await page.evaluate(async()=>{const registration=await navigator.serviceWorker.getRegistration();if(!registration)throw Error('Worker was not registered');await registration.update();});

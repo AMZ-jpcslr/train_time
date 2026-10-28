@@ -23,10 +23,10 @@ export default function StationPicker({tables,day,now,stations,station,onChange,
  const capabilities=useMemo(()=>new Map(stations.map(s=>[s.id,stationCapability(s,tables,day,now)])),[stations,tables,day,now]);
  const results=matches.slice(0,limit);
  useEffect(()=>{if(open)input.current?.focus();},[open]);
- const show=()=>{
+ const show=()=>{trigger.current?.focus();
   const rect=trigger.current!.getBoundingClientRect();
   setAnchor({left:Math.max(16,Math.min(rect.left,window.innerWidth-456)),top:Math.max(16,Math.min(rect.bottom+10,window.innerHeight-540))});
-  setQuery('');setRemoteQuery('');setRegion('');setOperator('');setLine('');setAll(false);setLimit(40);if(modal.show())setOpen(true);
+  setQuery('');setRemoteQuery('');setRegion('');setOperator('');setLine('');setAll(false);setLimit(40);modal.show(()=>setOpen(true));
  };
  const close=modal.close;
  const focusResult=(index:number)=>list.current?.querySelectorAll<HTMLButtonElement>('button[data-station-id]')[index]?.focus();

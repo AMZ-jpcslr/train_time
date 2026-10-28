@@ -1,0 +1,13 @@
+import React from 'react';
+import {createRoot} from 'react-dom/client';
+import App from '../App';
+import '../style.css';
+import '../decision-summary.css';
+import '../departure-timeline.css';
+import '../action-live.css';
+import '../adopted-ui.css';
+import '../signal-ui.css';
+import '../control-system.css';
+import './railway.css';
+import './walking-setup.css';
+createRoot(document.getElementById('root')!).render(<React.StrictMode><App railway/></React.StrictMode>);

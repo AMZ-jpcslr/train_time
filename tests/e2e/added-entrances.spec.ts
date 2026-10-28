@@ -1,5 +1,5 @@
 import {test,expect} from '@playwright/test';
-import {mockRuntime,installGps,chooseChoice,FIXED_TIME} from '../fixtures/runtime';
+import {mockRuntime,installGps,chooseChoice,FIXED_TIME,openWalkingSettings,closeWalkingSettings} from '../fixtures/runtime';
 import {readFileSync} from 'node:fs';
 import type {Entrance} from '../../src/domain/types';
 import {stations as bundledStations} from '../../src/data/stations';
@@ -18,14 +18,14 @@ test('added stations across all eight authenticated operators calculate GPS walk
  await page.route('**/api/config',r=>r.fulfill({json:{enabled:true,odptChallenge:{enabled:true,configured:true,reason:null}}}));
  await page.route('**/api/odpt/catalog?*',r=>r.fulfill({json:fixture(new URL(r.request().url()).searchParams.get('provider')!)}));
  await page.route('**/api/odpt/timetable?*',r=>r.fulfill({json:[]}));
- await page.goto('/');await expect(page.getByRole('region',{name:'対応路線とデータ'})).toContainText(`検索対象：${bundledStations.length+providers.length}駅・路線`);
+ await page.goto('/classic.html');await expect(page.getByRole('region',{name:'対応路線とデータ'})).toContainText(`検索対象：${bundledStations.length+providers.length}駅・路線`);
  for(const provider of providers){
   const station=fixture(provider).stations[0];
-  await page.getByRole('button',{name:'乗車駅',exact:true}).click();const dialog=page.getByRole('dialog',{name:'乗車駅を選ぶ'});
+  await closeWalkingSettings(page);await page.getByRole('button',{name:'乗車駅',exact:true}).click();const dialog=page.getByRole('dialog',{name:'乗車駅を選ぶ'});
   await dialog.getByLabel('駅名・路線で検索').fill(station.operator+' 架空入口検証駅');await dialog.locator(`[data-station-id="${station.id}"]`).click();
-  await expect(page.getByRole('button',{name:'歩いて向かう駅入口',exact:true})).not.toContainText('未確認');
+  await openWalkingSettings(page);await expect(page.getByRole('button',{name:'歩いて向かう駅入口',exact:true})).not.toContainText('未確認');
   await expect(page.getByRole('link',{name:'駅との対応根拠 ↗'})).toHaveAttribute('href',/^https:\/\/www.openstreetmap.org\/(node|way|relation)\//);
-  await installGps(page,station.id,10);await page.getByRole('button',{name:'現在地を更新',exact:true}).click();
+  await installGps(page,station.id,10);await openWalkingSettings(page);await page.getByRole('button',{name:'現在地を更新',exact:true}).click();
   await expect.poll(()=>api.walking.at(-1)?.stationId).toBe(station.id);await expect(page.locator('.walk-summary')).toContainText('道路経路');
   const requested=api.walking.at(-1)!;expect(added.some(e=>e.stationId===station.id&&e.id===requested.entranceId)).toBe(true);
   await expect(page.locator('.route-error')).toHaveCount(0);
@@ -36,7 +36,7 @@ test('added stations across all eight authenticated operators calculate GPS walk
 });
 test('unmapped tram stops retain the measured-time fallback without sending a fabricated entrance',async({page})=>{
  await page.clock.install({time:new Date('2026-10-24T14:00:00+09:00')});const api=await mockRuntime(page);
- await page.goto('/');await page.getByRole('button',{name:'乗車駅',exact:true}).click();const dialog=page.getByRole('dialog',{name:'乗車駅を選ぶ'});
+ await page.goto('/classic.html');await closeWalkingSettings(page);await page.getByRole('button',{name:'乗車駅',exact:true}).click();const dialog=page.getByRole('dialog',{name:'乗車駅を選ぶ'});
  await dialog.getByLabel('駅名・路線で検索').fill('とさでん 高知駅前');await dialog.locator('[data-station-id]').first().click();
  await expect(page.locator('.route-error')).toContainText('入口位置を確認できていない');expect(api.walking).toHaveLength(0);
  await expect(page.getByRole('region',{name:'対応路線とデータ'})).toContainText('0 / 76駅・路線');
@@ -45,11 +45,11 @@ test('unmapped tram stops retain the measured-time fallback without sending a fa
 test('officially reviewed shared-station entrance works and exposes its official source',async({page})=>{
  await page.clock.install({time:FIXED_TIME});const api=await mockRuntime(page);
  const entrance=added.find(e=>e.osm?.association==='official-shared-station')!;
- await page.goto('/');await page.getByRole('button',{name:'乗車駅',exact:true}).click();
+ await page.goto('/classic.html');await closeWalkingSettings(page);await page.getByRole('button',{name:'乗車駅',exact:true}).click();
  const dialog=page.getByRole('dialog',{name:'乗車駅を選ぶ'});await dialog.getByLabel('駅名・路線で検索').fill('白金台');
  await dialog.locator(`[data-station-id="${entrance.stationId}"]`).click();
- await expect(page.getByRole('link',{name:'事業者の公式案内 ↗'})).toHaveAttribute('href','https://www.tokyometro.jp/station/shirokanedai/index.html');
- await installGps(page,entrance.stationId,10);await page.getByRole('button',{name:'現在地を更新',exact:true}).click();
+ await openWalkingSettings(page);await expect(page.getByRole('link',{name:'事業者の公式案内 ↗'})).toHaveAttribute('href','https://www.tokyometro.jp/station/shirokanedai/index.html');
+ await installGps(page,entrance.stationId,10);await openWalkingSettings(page);await page.getByRole('button',{name:'現在地を更新',exact:true}).click();
  await expect.poll(()=>api.walking.at(-1)?.entranceId).toBe(entrance.id);
  await expect(page.locator('.walk-summary')).toContainText('2番出入口');
 });

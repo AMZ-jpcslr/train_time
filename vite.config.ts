@@ -11,6 +11,7 @@ export default defineConfig(({mode})=>{
  const origin=normalizeSocialOrigin(env.APP_ORIGIN||(env.VERCEL_PROJECT_PRODUCTION_URL?`https://${env.VERCEL_PROJECT_PRODUCTION_URL}`:SITE.origin));
  const indexable=mode!=='comparison'&&env.VERCEL_ENV!=='preview';
  return {
+ build:{rollupOptions:{input:{main:'index.html',classic:'classic.html',railway:'railway.html'}}},
  plugins: [react(),localApiPlugin(env),{
   name:'site-metadata',
   transformIndexHtml:(html:string)=>transformSocialHtml(html,origin,{indexable}),

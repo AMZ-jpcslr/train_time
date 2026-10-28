@@ -57,30 +57,46 @@ export async function emitGps(page:Page,accuracy:number,watchIndex=0,stationId='
 export async function gpsWatchState(page:Page){
  return page.evaluate(()=>{const state=(window as typeof window&{__controlledGps:ControlledGps}).__controlledGps;return {count:state.watches.length,cleared:state.cleared,options:state.watches.map(watch=>watch.options)};});
 }
+export async function openWalkingSettings(page:Page){
+ const dialog=page.getByRole('dialog',{name:'徒歩時間・駅構内の設定',exact:true});
+ if(!await dialog.isVisible())await page.getByRole('button',{name:'徒歩時間',exact:true}).first().click();
+ await expect(dialog).toBeVisible();return dialog;
+}
+export async function closeWalkingSettings(page:Page){
+ const dialog=page.getByRole('dialog',{name:'徒歩時間・駅構内の設定',exact:true});
+ if(await dialog.isVisible()){await dialog.getByRole('button',{name:'閉じる',exact:true}).click();await expect.poll(()=>page.evaluate(()=>history.state?.maniaDialog??null)).toBe(null);}
+ await expect(dialog).not.toBeVisible();
+}
+export async function openWalkingAdvanced(page:Page){
+ const dialog=await openWalkingSettings(page);
+ if(!await dialog.getByLabel('歩行速度（km/h）',{exact:true}).isVisible())await dialog.getByRole('button',{name:/徒歩・駅構内時間の設定/}).click();
+ return dialog;
+}
 export async function locate(page:Page,stationId='kyoto-imadegawa'){
- await installGps(page,stationId);await page.getByRole('button',{name:'現在地を更新',exact:true}).click();
- await expect(page.locator('.location-status')).toContainText('現在地を更新しました');await expect(page.locator('.walk-summary')).toContainText('道路経路');
+ await openWalkingSettings(page);await installGps(page,stationId);await page.getByRole('button',{name:'現在地を更新',exact:true}).click();
+ await expect(page.locator('.location-status')).toContainText('現在地を更新しました');await expect(page.locator('.walk-summary')).toContainText('道路経路');await closeWalkingSettings(page);
 }
 export async function previewAt(page:Page,dateTime:string){
- const input=page.getByLabel('時刻指定プレビュー',{exact:true});if(!await input.isVisible())await page.getByRole('button',{name:/徒歩・駅構内時間の設定/}).click();
+ await closeWalkingSettings(page);const input=page.getByLabel('日時指定プレビュー',{exact:true});if(!await input.isVisible())await page.getByText('別の日・時刻を確認',{exact:true}).click();
  await input.fill(dateTime);await expect(page.locator('.clock')).toContainText('指定時刻 / JST');
 }
 export async function actualTime(page:Page,dateTime:string){await page.clock.setSystemTime(new Date(dateTime));await page.evaluate(()=>document.dispatchEvent(new Event('visibilitychange')));}
-export async function saveMeasuredPlace(page:Page,name='試験登録地点'){
- await page.locator('.manual-fallback > summary').click();await page.locator('.place-form > summary').click();
- await page.getByLabel('地点名',{exact:true}).fill(name);await page.getByLabel('到着する駅入口',{exact:true}).fill('試験入口');await page.getByLabel('入口までの実測徒歩時間（分）',{exact:true}).fill('1');await page.getByRole('button',{name:'端末に保存して使う',exact:true}).click();
+export async function saveMeasuredPlace(page:Page,name='試験登録地点',minutes='1'){
+ await openWalkingSettings(page);if(await page.locator('.railway-shell').count()){const advanced=page.locator('details').filter({has:page.locator('.manual-fallback')});if(!await advanced.evaluate(e=>(e as HTMLDetailsElement).open))await advanced.locator(':scope > summary').click();}const fallback=page.locator('.manual-fallback');if(!await fallback.evaluate(e=>(e as HTMLDetailsElement).open))await fallback.locator(':scope > summary').click();const form=page.locator('.place-form');if(!await form.evaluate(e=>(e as HTMLDetailsElement).open))await form.locator(':scope > summary').click();
+ await page.getByLabel('地点名',{exact:true}).fill(name);await page.getByLabel('到着する駅入口',{exact:true}).fill('試験入口');await page.getByLabel('入口までの実測徒歩時間（分）',{exact:true}).fill(minutes);await page.getByRole('button',{name:'端末に保存して使う',exact:true}).click();await expect(page.getByRole('dialog',{name:'徒歩時間・駅構内の設定',exact:true})).not.toBeVisible();await expect.poll(()=>page.evaluate(()=>history.state?.maniaDialog??null)).toBe(null);
 }
 
-export async function chooseStation(page:Page,stationId:string){
+export async function chooseStation(page:Page,stationId:string,settleHistory=true){
+ await closeWalkingSettings(page);
  await page.getByRole('button',{name:'乗車駅',exact:true}).click();
  await page.getByRole('dialog',{name:'乗車駅を選ぶ'}).getByLabel('駅名・路線で検索').fill(stations.find(s=>s.id===stationId)!.name);
  await page.getByRole('dialog',{name:'乗車駅を選ぶ'}).locator(`[data-station-id="${stationId}"]`).click();
- await expect(page.getByRole('dialog',{name:'乗車駅を選ぶ'})).not.toBeVisible();
+ await expect(page.getByRole('dialog',{name:'乗車駅を選ぶ'})).not.toBeVisible();if(settleHistory)await expect.poll(()=>page.evaluate(()=>history.state?.maniaDialog??null)).toBe(null);
 }
 
 export async function chooseChoice(page:Page,label:string,value:string){
- await page.getByRole('button',{name:label,exact:true}).click();
+ const parent=await page.evaluate(()=>history.state?.maniaDialog??null);await page.getByRole('button',{name:label,exact:true}).click();
  const dialog=page.getByRole('dialog',{name:`${label}を選ぶ`,exact:true});
  await dialog.locator(`[role="option"][data-value="${value}"]`).click();
- await expect(dialog).not.toBeVisible();
+ await expect(dialog).not.toBeVisible();await expect.poll(()=>page.evaluate(()=>history.state?.maniaDialog??null)).toBe(parent);
 }

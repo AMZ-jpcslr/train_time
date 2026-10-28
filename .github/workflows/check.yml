@@ -62,6 +62,8 @@ jobs:
         run: npx playwright install --with-deps chromium webkit
       - name: Desktop and mobile browser tests
         run: npm run test:e2e -- --workers=1
+      - name: Railway app flow, live location and minute wheel
+        run: npx playwright test --config=playwright.railway.config.ts --workers=1
       - name: Touch gestures and WebKit timeline interactions
         run: npx playwright test --config=playwright.interactions.config.ts --workers=1
       - name: Narrow screens and enlarged text

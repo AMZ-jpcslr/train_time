@@ -1,5 +1,5 @@
 import {test,expect} from '@playwright/test';
-import {mockRuntime} from '../fixtures/runtime';
+import {mockRuntime,closeWalkingSettings} from '../fixtures/runtime';
 import {challengeProviderNames} from '../../src/useChallengeCatalog';
 import {stations as bundledStations} from '../../src/data/stations';
 const did='d-'+'1'.repeat(16),checkedAt='2026-10-24T04:59:00Z';
@@ -20,23 +20,23 @@ test('authenticated stations join search, favorites survive reload, date tables 
   await r.fulfill({json:[{id:'fictional-test-table',stationId:station.id,operator:station.operator,line:station.line,directionId:did,direction:'架空終点方面',dayType:'saturday',
    departures:[{time:'14:05:30',destination:'架空終点',trainType:'普通',platform:null}],sourceUrl:station.sourceUrl,checkedAt,retrievedAt:checkedAt,serviceDates:[day],validFrom:day,validTo:day,revisionDate:null,verification:'verified',notes:['架空テストデータ']}]});
  });
- await page.goto('/');await expect(page.getByRole('region',{name:'対応路線とデータ'})).toContainText(`検索対象：${bundledStations.length+Object.keys(challengeProviderNames).length}駅・路線`);expect(requests).toEqual([]);
- await page.getByRole('button',{name:'乗車駅',exact:true}).click();const dialog=page.getByRole('dialog',{name:'乗車駅を選ぶ'});
+ await page.goto('/classic.html');await expect(page.getByRole('region',{name:'対応路線とデータ'})).toContainText(`検索対象：${bundledStations.length+Object.keys(challengeProviderNames).length}駅・路線`);expect(requests).toEqual([]);
+ await closeWalkingSettings(page);await page.getByRole('button',{name:'乗車駅',exact:true}).click();const dialog=page.getByRole('dialog',{name:'乗車駅を選ぶ'});
  await dialog.getByLabel('駅名・路線で検索').fill('京王 架空検証駅');await expect(dialog.locator('[data-station-id]')).toHaveCount(1);
  await dialog.getByRole('button',{name:'架空検証駅（架空検証線）をお気に入りに登録'}).click();expect(requests).toEqual([]);
- await dialog.getByRole('button',{name:'駅選択を閉じる'}).click();await page.reload();
+ await dialog.getByRole('button',{name:'駅選択を閉じる'}).click();await expect.poll(()=>page.evaluate(()=>history.state?.maniaDialog??null)).toBe(null);await page.reload();
  await page.getByRole('region',{name:'お気に入りの駅',exact:true}).getByRole('button',{name:/架空検証駅/}).click();
- await expect(page.locator('.next-train')).toContainText('14:05:30');expect(requests).toHaveLength(1);expect(requests[0]).toContain('date=2026-10-24');
- await expect(page.locator('.line-info')).toContainText('京王電鉄');await expect(page.locator('.judgment')).toContainText('判定不可');
+ await expect(page.locator('.chosen-decision')).toContainText('14:05:30');expect(requests).toHaveLength(1);expect(requests[0]).toContain('date=2026-10-24');
+ await expect(page.locator('.line-info')).toContainText('京王電鉄');await expect(page.locator('.chosen-leave')).toHaveCount(0);
  await page.screenshot({path:`docs/screenshots/${info.project.name}-challenge-timetable.png`});
- fail=true;await page.reload();await expect(page.locator('.odpt-feed-message')).toContainText('ODPTの取得状況');await expect(page.locator('.next-train')).toHaveCount(0);
- fail=false;await page.getByRole('button',{name:'時刻表を再読み込み'}).click();await expect(page.locator('.next-train')).toContainText('14:05:30');
+ fail=true;await page.reload();await expect(page.locator('.odpt-feed-message')).toContainText('ODPTの取得状況');await expect(page.locator('.chosen-decision')).toHaveCount(0);
+ fail=false;await page.getByRole('button',{name:'時刻表を再読み込み'}).click();await expect(page.locator('.chosen-decision')).toContainText('14:05:30');
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
 });
 test('one unavailable provider keeps other operators usable and exposes no credential input in the public app',async({page})=>{
  await page.clock.install({time:new Date('2026-10-24T14:00:00+09:00')});await mockRuntime(page);
  await page.route('**/api/config',r=>r.fulfill({json:{enabled:false,odptChallenge:{enabled:true,configured:true,reason:null}}}));
  await page.route('**/api/odpt/catalog?*',r=>new URL(r.request().url()).searchParams.get('provider')==='jr-east'?r.fulfill({status:503,json:{error:'Unavailable'}}):r.fulfill({json:fixture(new URL(r.request().url()).searchParams.get('provider')!)}));
- await page.goto('/');const coverage=page.getByRole('region',{name:'対応路線とデータ'});await expect(coverage).toContainText('取得できなかった事業者：JR東日本');
+ await page.goto('/classic.html');const coverage=page.getByRole('region',{name:'対応路線とデータ'});await expect(coverage).toContainText('取得できなかった事業者：JR東日本');
  await expect(coverage).toContainText(`検索対象：${bundledStations.length+Object.keys(challengeProviderNames).length-1}駅・路線`);await expect(page.locator('input[type=password]')).toHaveCount(0);
 });

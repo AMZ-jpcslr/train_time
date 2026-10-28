@@ -13,13 +13,13 @@ test('ODPT station data is cached on demand, works offline, rejects unread stati
   return n;
  });
  expect(await count()).toBe(0);
- await chooseStation(page,selected.id);await expect(page.locator('.next-train')).toBeVisible();await expect.poll(count).toBe(1);
+ await chooseStation(page,selected.id);await expect(page.locator('.chosen-decision')).toBeVisible();await expect.poll(count).toBe(1);
  await page.getByRole('button',{name:'この駅と方面をお気に入り',exact:true}).click();
  api.offline=true;await context.setOffline(true);await page.reload();
- await expect(page.locator('.next-train')).toBeVisible();await expect(page.locator('.line-info')).toContainText('浅草線');
+ await expect(page.locator('.chosen-decision')).toBeVisible();await expect(page.locator('.line-info')).toContainText('浅草線');
  await expect(page.getByRole('button',{name:'この駅と方面をお気に入り',exact:true})).toHaveAttribute('aria-pressed','true');
- await chooseStation(page,unread.id);await expect(page.locator('.odpt-feed-message')).toContainText('オフライン');await expect(page.locator('.next-train')).toHaveCount(0);
- await chooseStation(page,selected.id);await expect(page.locator('.next-train')).toBeVisible();
- await actualTime(page,'2026-12-01T14:00:00+09:00');await expect(page.getByRole('heading',{name:'ダイヤ適用期間外 / 要再確認'})).toBeVisible();
+ await chooseStation(page,unread.id);await expect(page.locator('.odpt-feed-message')).toContainText('オフライン');await expect(page.locator('.chosen-decision')).toHaveCount(0);
+ await chooseStation(page,selected.id);await expect(page.locator('.chosen-decision')).toBeVisible();
+ await actualTime(page,'2026-12-01T14:00:00+09:00');await expect(page.locator('.decision-empty').getByRole('heading',{name:'ダイヤ適用期間外 / 要再確認'})).toBeVisible();
  expect(errors).toEqual([]);
 });

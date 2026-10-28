@@ -1,0 +1,40 @@
+.rail-walking-current{font-size:14px;margin:0 0 14px;color:var(--text)}
+.rail-mode-buttons{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
+.rail-mode-buttons button{display:flex;align-items:center;justify-content:center;gap:10px;min-height:68px;background:var(--surface);color:var(--text);padding:12px;border:2px solid var(--border)}
+.rail-mode-buttons button[aria-pressed=true]{border-color:var(--rail-color);box-shadow:inset 0 -4px var(--rail-color),0 3px 0 #6f8874}
+.rail-mode-buttons strong{font-size:15px}.rail-mode-buttons button>span{font:700 21px RailDigits,monospace}
+.rail-manual-form{margin:0 0 24px}.minute-picker-label{font-size:17px;font-weight:700;text-align:center;margin-bottom:16px}
+.minute-wheel-controls{display:grid;grid-template-columns:48px 180px 48px;gap:14px;align-items:center;justify-content:center}
+.minute-wheel-controls>button{background:var(--surface);color:var(--text);min-height:48px;font-size:23px;padding:6px}
+.minute-wheel{height:176px;overflow:hidden;position:relative;background:#102017;color:#f4f7eb;border:4px solid #7f9886;touch-action:none;user-select:none;cursor:ns-resize;border-radius:3px;outline-offset:4px}
+.minute-wheel-window{position:absolute;inset:56px 0 auto;height:56px;background:#233e2b;border-block:1px solid #a8bea7;pointer-events:none;z-index:1}
+.minute-wheel-numbers{position:relative;z-index:2;transition:transform 140ms ease-out;pointer-events:none}
+.minute-wheel-numbers>div{height:56px;display:flex;align-items:center;justify-content:center;padding-right:24px;font:600 48px/1 RailDigits,monospace;font-variant-numeric:tabular-nums;color:#9ba997}
+.minute-wheel-numbers>div.is-selected{color:#ffda85}
+.minute-wheel.is-dragging .minute-wheel-numbers{transition:none}
+.minute-wheel-unit{position:absolute;right:12px;top:72px;font-size:14px;z-index:3;color:#f4f7eb;pointer-events:none}
+.minute-wheel-hint{text-align:center;font-size:12px;margin:12px 0 18px;color:var(--text-muted)}
+.minute-picker-options{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:16px 0 22px}
+.minute-half{display:flex;align-items:center;gap:10px;min-height:44px;font-size:14px;cursor:pointer}.minute-half input{width:22px;height:22px;min-height:22px;accent-color:var(--rail-color)}
+.minute-direct{display:flex;align-items:center;gap:8px;font-size:13px}.railway-shell .minute-direct input{width:86px;font-size:18px;padding:8px;background:var(--surface);color:var(--text)}
+.minute-error{color:#8a2819;font-size:14px;margin-bottom:16px}
+.railway-shell .rail-apply-walk{width:100%;padding:13px;font-size:17px;font-weight:700}
+.rail-location-setup .rail-live-controls{margin-top:0}.rail-location-setup .location-status{margin:12px 0}.rail-location-setup .location-accuracy{font-size:13px}
+.rail-setup-help{margin-top:18px;border-top:1px solid var(--border);padding-top:10px;font-size:14px}.rail-setup-help>summary{min-height:44px;padding:9px 0;cursor:pointer;font-weight:700;color:var(--text)}
+.rail-setup-help p{font-size:14px;margin:12px 0;color:var(--text-muted)}
+.rail-station-margin{display:grid;grid-template-columns:1fr auto;align-items:center;gap:8px 16px;margin-top:24px;padding:18px 0;border-top:1px solid var(--border);font-size:15px;font-weight:700}
+.rail-station-margin>span{display:flex;align-items:center;gap:8px}.railway-shell .rail-station-margin input{width:76px;font-size:20px;background:var(--surface);color:var(--text)}
+.rail-station-margin small{grid-column:1/-1;font-size:12px;font-weight:400;color:var(--text-muted)}
+.rail-route-state{font-size:14px;padding:12px;border-left:3px solid #986d20;margin:12px 0;background:var(--surface)}
+.rail-route-state button{margin-top:8px}.rail-gps-duration{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid var(--border)}
+.rail-gps-duration>strong{font:600 40px RailDigits,monospace}.rail-gps-duration small{font:500 15px RailZen,sans-serif;margin-left:6px}
+.rail-help-summary{margin:18px 0;padding:12px 16px;border-top:1px solid var(--border);font-size:13px}.rail-help-summary>summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:700}.rail-help-summary p{margin:10px 0;color:var(--text-muted)}
+@media(max-width:520px){.minute-wheel-controls{grid-template-columns:44px minmax(0,156px) 44px;gap:10px}.rail-mode-buttons{gap:8px}.rail-mode-buttons button{flex-direction:column;gap:5px;padding:10px 6px}.rail-mode-buttons strong{font-size:14px}.rail-station-margin{font-size:14px}.railway-shell .rail-station-margin input{width:68px}.minute-picker-options{justify-content:center;gap:8px 18px}}
+@media(prefers-reduced-motion:reduce){.minute-wheel-numbers{transition:none!important}}
+.railway-shell .rail-setup-help :is(label,summary,.field>span){color:var(--text)}
+.railway-shell .rail-setup-help button{background:var(--surface-2);color:var(--text)}
+.railway-shell .rail-setup-help .primary-button{background:var(--rail-color);color:var(--rail-ink)}
+.railway-shell .choice-close{background:var(--surface);color:var(--text);min-width:44px;min-height:44px}
+.railway-shell .type-conditions>details>summary{min-height:44px;padding:10px 0;cursor:pointer;font-size:13px}
+.railway-shell .rail-setup-help .route-note b{color:var(--text)}
+.railway-shell .settings-sheet>header>button{white-space:nowrap;flex-shrink:0;min-width:64px}

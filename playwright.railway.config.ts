@@ -1,0 +1,2 @@
+import {defineConfig,devices} from '@playwright/test';
+export default defineConfig({testDir:'./tests/railway',outputDir:'test-results/railway',timeout:30000,workers:2,use:{baseURL:'http://127.0.0.1:5182',timezoneId:'Asia/Tokyo',trace:'retain-on-failure'},webServer:{command:'npm run dev -- --port 5182',url:'http://127.0.0.1:5182/',reuseExistingServer:true},projects:[{name:'desktop',use:{...devices['Desktop Chrome']}},{name:'mobile',use:{...devices['iPhone 13'],defaultBrowserType:'chromium'}},{name:'webkit',use:{browserName:'webkit',viewport:{width:390,height:844}}}]});
