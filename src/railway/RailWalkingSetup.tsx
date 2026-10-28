@@ -2,7 +2,7 @@ import type {FormEvent,ReactNode} from 'react';
 import type {Settings} from '../domain/types';
 import MinuteWheel from './MinuteWheel';
 export type WalkingPanel='choice'|'manual'|'location';
-type Props={panel:WalkingPanel;onPanel:(panel:WalkingPanel)=>void;draft:string;onDraft:(value:string)=>void;onSubmit:(event:FormEvent)=>void;currentLabel:string;locationControls:ReactNode;entrance:ReactNode;hasEntrance:boolean;routeError?:string;routeLoading:boolean;accessUnverified:boolean;walkMinutes:number|null;onRetry:()=>void;canRetry:boolean;locationDetails:ReactNode;advanced:ReactNode;settings:Settings;onStationMinutes:(value:number)=>void};
+type Props={panel:WalkingPanel;onPanel:(panel:WalkingPanel)=>void;draft:string;onDraft:(value:string)=>void;onSubmit:(event:FormEvent)=>void;currentLabel:string;locationControls:ReactNode;entrance:ReactNode;hasEntrance:boolean;routeError?:string;routeLoading:boolean;accessUnverified:boolean;accessOffsets?:number[];walkMinutes:number|null;onRetry:()=>void;canRetry:boolean;locationDetails:ReactNode;advanced:ReactNode;settings:Settings;onStationMinutes:(value:number)=>void};
 export default function RailWalkingSetup(props:Props){
  const duration=Number(props.draft),valid=props.draft.trim()!==''&&Number.isFinite(duration)&&duration>=0&&duration<=240&&duration*2===Math.round(duration*2);
  return <div className="rail-walking-setup">
@@ -16,8 +16,8 @@ export default function RailWalkingSetup(props:Props){
    {props.locationControls}
    {props.hasEntrance?<div className="rail-entrance-choice">{props.entrance}</div>:<p role="status">この駅の入口位置は未確認です。徒歩分数で設定できます。</p>}
    {props.routeLoading&&<p className="rail-route-state" role="status">徒歩経路を更新しています…</p>}
-   {props.routeError&&<div className="rail-route-state" role="alert"><p>徒歩経路を取得できませんでした。</p><button type="button" onClick={props.onRetry} disabled={!props.canRetry}>もう一度取得</button></div>}
-   {props.accessUnverified&&<p className="rail-route-state" role="status">経路の接続区間が未確認です。徒歩分数で設定するか、地図で経路を確認してください。</p>}
+   {props.routeError&&<div className="rail-route-state" role="alert"><p>{props.routeError.includes('タイムアウト')?'徒歩経路の取得がタイムアウトしました。':'徒歩経路を取得できませんでした。'}</p><button type="button" onClick={props.onRetry} disabled={!props.canRetry}>もう一度取得</button><button type="button" onClick={()=>props.onPanel('manual')}>徒歩時間を入力して続ける</button></div>}
+   {props.accessUnverified&&<div className="rail-route-state rail-access-check" role="status"><p>道路までの歩行を確認できません。</p>{props.accessOffsets&&<p>{props.accessOffsets.map((distance,index)=>distance>30?`${index===0?'現在地側':'駅入口側'} 約${Math.ceil(distance)}m`:null).filter(Boolean).join(' / ')}</p>}<p>徒歩時間を入力するか、上の駅入口を変更してください。</p><button type="button" onClick={()=>props.onPanel('manual')}>徒歩時間を入力して続ける</button></div>}
    {props.walkMinutes!==null&&!props.accessUnverified&&!props.routeError&&<div className="rail-gps-duration"><span>駅入口まで</span><strong>{props.walkMinutes}<small>分</small></strong></div>}
    <details className="rail-setup-help"><summary>位置情報・経路の詳細</summary>{props.locationDetails}</details>
   </section>}

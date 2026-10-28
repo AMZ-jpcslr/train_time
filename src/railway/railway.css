@@ -91,4 +91,43 @@ body:has(.railway-shell){background:#26372d}
 .railway-shell .rail-board-walk-actions button:first-child{background:var(--rail-color);color:var(--rail-ink)}
 .railway-shell .rail-ticket-heading:has(>h2:only-child){justify-content:flex-start}
 .railway-shell .choice-options:focus-visible{outline:3px solid var(--text);outline-offset:-3px}
+/* Contain the live announcement inside the scrolling pane, not the document. */
+html:has(.railway-shell){background:#26372d;color-scheme:light}
+.railway-shell>main{position:relative}
+/* A fixed header/search plus one scrolling body keeps station results reachable. */
+.railway-shell .station-dialog{left:50%;top:calc(var(--station-view-top,0px) + 12px);bottom:auto;transform:translateX(-50%);width:min(760px,calc(100vw - 24px));max-width:calc(100vw - 24px);height:min(760px,calc(var(--station-view-height,100dvh) - 24px));max-height:calc(var(--station-view-height,100dvh) - 24px);margin:0;padding:0;overflow:hidden}
+.railway-shell .station-dialog-header{padding:10px 16px;gap:12px;min-height:64px}
+.railway-shell .station-dialog-header:before{display:none}
+.railway-shell .station-dialog-header h2{font-size:20px}
+.railway-shell .station-close{flex:none;background:#d7e0d7;color:#213328;border-color:#8ca08f}
+.railway-shell .station-search{padding:8px 16px 12px;background:var(--surface);margin:0}
+.railway-shell .station-search>span{font-size:13px}
+.railway-shell .station-search input{min-height:48px}
+.railway-shell .station-dialog-content{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;padding:0 16px 16px;scroll-padding:12px}
+.railway-shell .station-options{overflow:visible;min-height:0;max-height:none;padding:0;background:var(--surface)}
+.railway-shell .station-refinements>summary,.railway-shell .station-more-sources>summary{min-height:44px;padding:10px 0;font-size:14px;cursor:pointer;overflow-wrap:anywhere;color:var(--text)}
+.railway-shell .station-refinements>summary small{display:block;color:var(--text-muted);font-size:12px}
+.railway-shell .station-refinements .coverage-filters{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:8px 0}
+.railway-shell .station-refinements .choice-label{font-size:13px}
+.railway-shell .station-refinements .choice-trigger{font-size:14px;padding:8px;gap:6px}
+.railway-shell .coverage-count{font-size:12px;color:var(--text-muted)}
+.railway-shell .station-result-count{padding:8px 0;font-size:13px;color:var(--text-muted)}
+.railway-shell .station-search-row{display:grid;grid-template-columns:minmax(0,1fr) 44px;gap:4px;border-color:var(--border)}
+.railway-shell .station-option{min-height:80px;padding:12px 8px;color:var(--text)}
+.railway-shell .station-option[aria-current=true]{background:var(--surface-2);box-shadow:inset 4px 0 var(--rail-color)}
+.railway-shell .option-text strong{font-size:17px}
+.railway-shell .option-text small,.railway-shell .station-dialog-footnote{font-size:13px;color:var(--text-muted)}
+.railway-shell .station-capability{font-size:13px;color:var(--text)}
+.railway-shell .option-code{color:var(--text-muted);border-color:var(--border)}
+.railway-shell .station-result-favorite{color:var(--text);background:var(--surface-2)}
+.railway-shell .station-result-favorite[aria-pressed=true]{background:var(--rail-color);color:var(--rail-ink)}
+.railway-shell .station-dialog-footnote{padding:12px 0 0;border:0}
+.railway-shell .station-more-sources{margin-top:12px;border-top:1px solid var(--border)}
+.railway-shell .western-search>button{color:var(--text);font-size:14px}
+.railway-shell .western-search p,.railway-shell .station-no-results{color:var(--text-muted);font-size:13px}
+@media(max-width:520px){.railway-shell .station-dialog{top:calc(var(--station-view-top,0px) + 8px);width:calc(100vw - 16px);max-width:calc(100vw - 16px);height:calc(var(--station-view-height,100dvh) - 16px);max-height:calc(var(--station-view-height,100dvh) - 16px)}.railway-shell .station-refinements .coverage-filters{grid-template-columns:1fr}.railway-shell .station-option .option-code{display:none}.railway-shell .station-dialog-header h2{font-size:18px}}
+@media(max-height:420px){.railway-shell .station-dialog-header{min-height:44px;padding:4px 12px}.railway-shell .station-search{padding:6px 12px}.railway-shell .station-search>span{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.railway-shell .station-search input{min-height:44px;padding:6px 12px}.railway-shell .station-result-count{padding-block:4px}}
 @media(max-width:520px){.railway-shell .action-bottom-nav button{font-size:12px;padding-inline:5px}.railway-shell .rail-board-walk-actions button{min-width:125px;font-size:14px}}
+
+.railway-shell .station-search input::placeholder{color:var(--text-muted);opacity:1}
+.railway-shell .station-result-count>span{color:var(--text-muted)}

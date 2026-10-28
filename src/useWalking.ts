@@ -10,8 +10,9 @@ export function useWalking(position:Position|null,entrance:Entrance|undefined,no
  useEffect(()=>{
   if(!fresh||!position||!entrance)return;
   const controller=new AbortController();setResult({key,loading:true});
-  requestWalking(position,entrance,controller.signal).then(route=>{if(!controller.signal.aborted)setResult({key,route});}).catch(error=>{if(!controller.signal.aborted)setResult({key,error:error instanceof TypeError?'徒歩経路を取得できませんでした。通信状態を確認して、もう一度計算してください。':error instanceof Error?error.message:'徒歩経路を取得できませんでした。'});});
-  return()=>controller.abort();
+  const timeout=setTimeout(()=>{if(controller.signal.aborted)return;controller.abort();setResult({key,error:'徒歩経路の取得がタイムアウトしました。もう一度取得するか、徒歩時間を入力してください。'});},20000);
+  requestWalking(position,entrance,controller.signal).then(route=>{clearTimeout(timeout);if(!controller.signal.aborted)setResult({key,route});}).catch(error=>{clearTimeout(timeout);if(!controller.signal.aborted)setResult({key,error:error instanceof TypeError?'徒歩経路を取得できませんでした。通信状態を確認して、もう一度計算してください。':error instanceof Error?error.message:'徒歩経路を取得できませんでした。'});});
+  return()=>{clearTimeout(timeout);controller.abort();};
  },[key,fresh]);
  const current=result.key===key&&fresh?result:undefined;
  return {route:current?.route&&position&&routeMatchesRequest(current.route,position,now)?current.route:undefined,loading:current?.loading??false,error:current?.error,refresh:()=>setRevision(value=>value+1)};
