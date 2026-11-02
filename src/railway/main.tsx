@@ -11,3 +11,5 @@ import '../control-system.css';
 import './railway.css';
 import './walking-setup.css';
 createRoot(document.getElementById('root')!).render(<React.StrictMode><App railway/></React.StrictMode>);
+
+import '../paper/paper.css';

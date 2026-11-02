@@ -1,5 +1,5 @@
 export type DayType = 'weekday' | 'saturday' | 'holiday' | 'weekend';
-export interface Departure { time: string; destination: string; trainType: string | null; platform: string | null; trainNumber?:string; notes?: string[] }
+export interface Departure { time: string; destination: string; trainType: string | null; platform: string | null; trainNumber?:string; carCount?:number | null; notes?: string[] }
 export interface Timetable {
   id: string; stationId: string; operator: string; line: string; directionId: string; direction: string;
   dayType: DayType; departures: Departure[]; sourceUrl: string; retrievedAt: string; checkedAt: string;

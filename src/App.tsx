@@ -1,3 +1,5 @@
+import TicketBoard from './paper/TicketBoard';
+import {useTheme} from './paper/useTheme';
 import ButtonIcon from './ButtonIcon';
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import {bundledTables} from './data/bundled';
@@ -46,7 +48,8 @@ import { defaults, load, save } from './domain/storage';
 const availabilityLabels={unsupported:'時刻表は未対応',ready:'実データ・出典照合済',missing:'未取得',expired:'ダイヤ適用期間外 / 要再確認',unverified:'現行未確認・参考時刻',special:'特定日のダイヤ未確認','calendar-unknown':'祝日データの対象年外'};
 const icon=(name:string)=> name==='train'?<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="5" y="3" width="14" height="15" rx="4"/><path d="M5 10h14M9 3v7M15 3v7M8 18l-2 3m10-3 2 3M8 14h1m6 0h1"/></svg>:<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="6"/><path d="M12 2v4m0 12v4M2 12h4m12 0h4"/></svg>;
 
-export default function App({comparison=false,railway=false}:{comparison?:boolean;railway?:boolean}){
+export default function App({comparison=false,railway=false,paper=false}:{comparison?:boolean;railway?:boolean;paper?:boolean}){
+ const theme=useTheme(paper);
  const [stored,setStored]=useState(()=>comparison?{...defaults,favorites:['kobe-gakuentoshi:east','kyoto-imadegawa:north'],places:[{id:'comparison-home',stationId:'kobe-gakuentoshi',name:'比較用の出発地点',entrance:'比較用の駅入口',walkMinutes:8}]}:load());
  const manualFallback=useRef<HTMLDetailsElement>(null);
  const shell=useRef<HTMLDivElement>(null),dock=useRef<HTMLElement>(null);
@@ -125,6 +128,7 @@ export default function App({comparison=false,railway=false}:{comparison?:boolea
  const selectionIndex=first?departures.indexOf(first):-1;
  const selectionFocus=useRef(false);
  const focusDecision=()=>{
+  if(paper)return;
   const result=document.querySelector<HTMLElement>('.chosen-decision')??decisionHeading.current;
   result?.focus({preventScroll:true});
   result?.scrollIntoView({block:'start'});
@@ -143,12 +147,14 @@ export default function App({comparison=false,railway=false}:{comparison?:boolea
  const favoriteKey=station.id+':'+direction.id;
  const isFavorite=station.catalogOnly?(stored.stationFavorites??[]).includes(station.id):stored.favorites.includes(favoriteKey);
  const posState=positionStatus(position,now);
- const locationJudgmentMessage=locationMessage.includes('拒否')||locationMessage.includes('取得できません')||locationMessage.includes('タイムアウト')?locationMessage:locating?'より正確な位置を確認しています。取得後に徒歩経路を計算します。':posState==='inaccurate'?'現在地の誤差が大きいため、出発目安を計算できません。位置情報の案内を確認してください。':posState==='stale'?'現在地が古くなっています。もう一度「現在地を更新」を押してください。':accessUnverified?'道路までの接続区間が未確認のため、徒歩時間は概算です。出発目安は計算できません。':walking.error?'徒歩経路を取得できませんでした。入口の切替やGoogleマップで確認できます。':!entrance?'この駅の入口位置は未確認です。「実測時間を使う」から登録してください。':'現在地を更新すると、歩行経路から徒歩時間を計算します。';
+ const locationJudgmentMessage=locationMessage.includes('許可')||locationMessage.includes('拒否')||locationMessage.includes('取得できません')||locationMessage.includes('タイムアウト')?locationMessage:locating?'より正確な位置を確認しています。取得後に徒歩経路を計算します。':posState==='inaccurate'?'現在地の誤差が大きいため、出発目安を計算できません。位置情報の案内を確認してください。':posState==='stale'?'現在地が古くなっています。もう一度「現在地を更新」を押してください。':accessUnverified?'道路までの接続区間が未確認のため、徒歩時間は概算です。出発目安は計算できません。':walking.error?'徒歩経路を取得できませんでした。入口の切替やGoogleマップで確認できます。':!entrance?'この駅の入口位置は未確認です。「実測時間を使う」から登録してください。':'現在地を更新すると、歩行経路から徒歩時間を計算します。';
  const nearby=position?[...stations].sort((a,b)=>distanceKm(position,a)-distanceKm(position,b)).slice(0,3):[];
  const chooseStation=(id:string,dir?:string)=>{const s=stations.find(s=>s.id===id);if(!s)return;setStored(previous=>({...previous,stationId:id,directionId:dir??s.directions[0]?.id??''}));setPlaceId('');setTemporaryWalk(null);setWalkDraft('');setEntranceId('');setSheet(null);if(!comparison)focusDecision();};
  const toggleFavorite=()=>setStored(previous=>({...previous,favorites:previous.favorites.includes(favoriteKey)?previous.favorites.filter(f=>f!==favoriteKey):[...previous.favorites,favoriteKey]}));
  const toggleStationFavorite=(id:string)=>setStored(previous=>({...previous,stationFavorites:(previous.stationFavorites??[]).includes(id)?previous.stationFavorites!.filter(s=>s!==id):[...(previous.stationFavorites??[]),id]}));
  const locate=()=>{if(railway){if(preview||!entrance)return;trackingEntrance.current=entrance.id;}setPlaceId('');setTemporaryWalk(null);if(railway)live.start();else snapshot.start();};
+ // GPS starts automatically for the current station context; changing only the theme never restarts it.
+ useEffect(()=>{if(paper&&!preview&&!station.catalogOnly){trackingEntrance.current=entrance?.id??'';live.start();}},[paper,liveContext,station.catalogOnly]);
  const addPlace=(e:React.FormEvent)=>{e.preventDefault();const minutes=Number(newPlace.minutes);if(!newPlace.name.trim()||!newPlace.entrance.trim()||newPlace.minutes===''||!Number.isFinite(minutes)||minutes<0||minutes>240){setFormError('地点名・駅入口名・0〜240分の実測徒歩時間を入力してください。');return;}if(railway)live.stop('登録地点の実測時間を使っています。位置情報の更新は停止しました。');const p:SavedPlace={id:crypto.randomUUID(),name:newPlace.name.trim(),entrance:newPlace.entrance.trim(),walkMinutes:minutes,stationId:station.id};setStored({...stored,places:[...stored.places,p]});setPlaceId(p.id);setTemporaryWalk(null);setSheet(null);setNewPlace({name:'',entrance:'',minutes:''});setFormError('');decisionHeading.current?.focus();};
  const countdown=(epoch:number)=>{const sec=Math.max(0,Math.ceil((epoch-time)/1000));return sec<60?`${sec}秒`:`${Math.floor(sec/60)}分${String(sec%60).padStart(2,'0')}秒`;};
  const locationActions=railway?<div className="rail-live-controls">{!live.active&&<p>開始すると、現在地と駅入口を{routingConfig?.provider??'設定済みの徒歩経路サービス'}へ送り、徒歩経路を計算します。</p>}<div><button className="location-button" onClick={locate} disabled={Boolean(preview)||!entrance}>{live.active?'位置情報を取り直す':'位置情報で更新を始める'}</button>{live.active&&<button onClick={()=>live.stop()}>更新を停止</button>}</div>{preview&&<p>日時指定中は位置更新を使えません。「現在に戻す」を押してから開始してください。</p>}</div>:<div className="location-actions"><button className="location-button" onClick={locate} disabled={locating}>{icon('location')}{locating?'取得中…':'現在地を更新'}</button>{locating&&<button className="location-cancel" onClick={()=>cancelLocation()}>取得を中止</button>}</div>;
@@ -170,15 +176,28 @@ export default function App({comparison=false,railway=false}:{comparison?:boolea
      <div className="route-note"><b>徒歩経路：{routingConfig?.enabled?'位置情報から取得できます':'現在は自動取得を利用できません'}</b><p>自動取得できないときは、徒歩時間の一時入力か登録地点の実測時間を使えます。</p><p>同じ経路の取得結果は10分間再利用します。</p><p><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">© OpenStreetMap contributors</a>（<a href="https://opendatacommons.org/licenses/odbl/1-0/" target="_blank" rel="noreferrer">ODbL</a>） · <a href="https://www.openstreetmap.org/fixthemap" target="_blank" rel="noreferrer">地図の誤りを報告</a>{routingConfig?.privacyUrl&&<> · <a href={routingConfig.privacyUrl} target="_blank" rel="noreferrer">経路サービスの条件・プライバシー</a></>}</p>{routingConfig?.contactEmail&&<p>このアプリの連絡先：<a href={'mailto:'+routingConfig.contactEmail}>{routingConfig.contactEmail}</a></p>}</div>
 </>;
  const colorTheme=routeTheme(station);
- return <div ref={shell} className={'app-shell'+(comparison?'':railway?' railway-shell':' action-live signal-live')} style={comparison?undefined:{'--rail-color':colorTheme.color,'--rail-ink':colorTheme.ink} as CSSProperties} data-color-kind={colorTheme.kind}>
+ return <div ref={shell} className={'app-shell'+(comparison?'':railway?' railway-shell'+(paper?' paper-shell':''):' action-live signal-live')} style={comparison?undefined:{'--rail-color':colorTheme.color,'--rail-ink':colorTheme.ink} as CSSProperties} data-color-kind={colorTheme.kind}>
   {comparison&&<aside className="alert">現行UIの比較用表示 · 10/26 14:00 · 徒歩8分＋構内3分。通常の保存設定は変更しません。<a href="/?design=board">A 発車案内</a> / <a href="/?design=action">B 出発目安</a> / <a href="/?design=favorites">C いつもの駅</a></aside>}
-  <header className="topbar"><a className="brand" href={railway?'/':'/classic.html'} aria-label="まにあう ホーム"><span className="brand-mark">{icon('train')}</span><span>まにあう<span className="brand-sub">乗りたい電車まで、あと何分ここにいられる？</span></span></a>{comparison&&<span className="prototype">{routingConfig?.deployment==='vercel'?'WEB PROTOTYPE':'LOCAL PROTOTYPE'} <span className="live-dot"/></span>}</header>
+  {paper?<header className="paper-header">
+   <div className="paper-brand-row"><a className="paper-brand" href="/">まにあう<span>TAKE YOUR TIME.</span></a><button className="theme-toggle" aria-label="配色を切り替え" onClick={theme.toggle}>{theme.theme==='dark'?'ライトに切替':'ダークに切替'}</button></div>
+   <div className="paper-station-row"><div className="station-controls" id="station-controls"><div className="station-badge">{station.code}</div><StationPicker compact={railway} tables={tables} day={day} now={now} stations={stations} station={station} onChange={chooseStation} favorites={stored.stationFavorites??[]} onFavorite={toggleStationFavorite} onWesternSearch={routingConfig?.western?.enabled?western.search:undefined} westernLoading={western.loading} westernMessage={western.message} westernError={western.error}/><button className={'favorite '+(isFavorite?'active':'')} onClick={()=>station.catalogOnly?toggleStationFavorite(station.id):toggleFavorite()} aria-pressed={isFavorite} aria-label={station.catalogOnly?"この駅をお気に入り":"この駅と方面をお気に入り"}>{isFavorite?'★':'☆'}</button></div><button className="paper-locate" onClick={locate} disabled={Boolean(preview)}>現在地を再取得</button></div>
+   <p className="paper-location" role="status">{live.active?(live.quality==='inaccurate'?'現在地の精度が不足しています。再取得できます。':live.quality==='stale'?'現在地が古くなっています。再取得してください。':locating?'現在地を取得中…':walking.loading?'徒歩経路を計算中…':walking.error?'徒歩経路を取得できません':accessUnverified?'徒歩経路は要確認':walkMinutes!==null?`現在地から駅入口まで 約${walkMinutes}分`:'現在地を更新中'):temporaryMinutes!==null?`入力した徒歩時間：${temporaryMinutes}分`:place?'登録地点の実測時間を使用中':/許可/.test(live.message)?'位置情報が許可されていません。時刻表は利用できます。':live.message}</p>
+   {theme.error&&<p role="alert">配色を保存できません。この画面では切り替えられます。</p>}
+  </header>:<header className="topbar"><a className="brand" href={railway?'/':'/classic.html'} aria-label="まにあう ホーム"><span className="brand-mark">{icon('train')}</span><span>まにあう<span className="brand-sub">乗りたい電車まで、あと何分ここにいられる？</span></span></a>{comparison&&<span className="prototype">{routingConfig?.deployment==='vercel'?'WEB PROTOTYPE':'LOCAL PROTOTYPE'} <span className="live-dot"/></span>}</header>}
   <main>
-   {railway&&<RailwayBoard station={station} direction={direction.name} train={catchable} selected={first} manual={selection.manual} now={time} walk={judgmentWalk} settings={stored.settings} status={railStatus} preview={Boolean(preview)} onConditions={openConditions} onManual={event=>openWalkingPanel('manual',event)} onLocation={event=>openWalkingPanel('location',event)} onReviewData={reviewTimetable} onDate={reviewDate} onTypes={()=>setSheet('types')} emptyKind={state!=='ready'?'data':!allDepartures.length?'date':!departures.length?'types':'walk'}/>}
+   {railway&&!paper&&<RailwayBoard station={station} direction={direction.name} train={catchable} selected={first} manual={selection.manual} now={time} walk={judgmentWalk} settings={stored.settings} status={railStatus} preview={Boolean(preview)} onConditions={openConditions} onManual={event=>openWalkingPanel('manual',event)} onLocation={event=>openWalkingPanel('location',event)} onReviewData={reviewTimetable} onDate={reviewDate} onTypes={()=>setSheet('types')} emptyKind={state!=='ready'?'data':!allDepartures.length?'date':!departures.length?'types':'walk'}/>}
+
    <div className="page-heading"><div>{comparison&&<><span className="eyebrow">DEPARTURE BOARD</span><h1>次の電車、歩いて間に合う？</h1></>}</div><div className="clock"><span>{preview?'指定時刻 / JST':'現在時刻 / JST'}</span><strong>{formatClock(time).slice(0,5)}</strong><small>{day} 運行日 · {dayLabel}</small></div></div>
    {preview&&<div className="alert">時刻指定プレビュー：実時刻ではありません。実データを指定時刻で確認しています。<button onClick={()=>setPreview('')}>現在に戻す</button></div>}
    {savingError&&<div className="alert" role="alert">端末内保存に失敗しました。この画面を閉じると設定が失われる可能性があります。</div>}
-   <section className="decision-summary" aria-label="出発判断">
+   {paper?<><TicketBoard trains={filterTrains(timeline,selectedTypes)} now={time} walk={judgmentWalk} settings={stored.settings} context={station.id+':'+direction.id+':'+day+':'+preview} reference={referenceOnly} preview={Boolean(preview)}
+    controls={<div className="paper-tools"><button onClick={openConditions}>徒歩時間</button><button onClick={()=>setSheet('types')}>種別</button></div>} locationMessage={locationJudgmentMessage} onWalk={openConditions}
+    directions={!station.catalogOnly&&<div className="paper-directions" aria-label="方面">{station.directions.map(d=><button key={d.id} aria-pressed={d.id===direction.id} onClick={()=>setStored(previous=>({...previous,directionId:d.id}))}>{d.name}</button>)}</div>}
+    empty={<div className="decision-empty" role="status"><h2>{state==='ready'?'この運行日の便はありません':availabilityLabels[state]}</h2><p>この駅・方面・運行日の確認済み時刻表を使います。</p><a href={station.sourceUrl} target="_blank" rel="noreferrer">公式の駅情報を確認</a></div>}/>
+
+    <details className="date-check"><summary>別の日・時刻を確認</summary><label>確認する日時（日本時間）<input aria-label="日時指定プレビュー" type="datetime-local" value={preview} onChange={e=>updatePreview(e.target.value)}/></label>{preview&&<button onClick={()=>setPreview('')}>現在に戻す</button>}</details>
+    {(stationFeed.loading||stationFeed.error)&&<p role="status">{stationFeed.loading?'時刻表を読み込み中…':stationFeed.error}{stationFeed.error&&<button onClick={stationFeed.retry}>時刻表を再読み込み</button>}</p>}
+   </>:<section className="decision-summary" aria-label="出発判断">
     <div className="decision-heading"><h1 ref={decisionHeading} tabIndex={-1}>出発目安</h1>{!station.catalogOnly&&<button onClick={openConditions}>徒歩時間</button>}</div>
      <div className="decision-overview"><div className="decision-controls"><div className="station-controls" id="station-controls"><div className="station-badge">{station.code}</div><StationPicker compact={railway} tables={tables} day={day} now={now} stations={stations} station={station} onChange={chooseStation} favorites={stored.stationFavorites??[]} onFavorite={toggleStationFavorite} onWesternSearch={routingConfig?.western?.enabled?western.search:undefined} westernLoading={western.loading} westernMessage={western.message} westernError={western.error}/><button className={'favorite '+(isFavorite?'active':'')} onClick={()=>station.catalogOnly?toggleStationFavorite(station.id):toggleFavorite()} aria-pressed={isFavorite} aria-label={station.catalogOnly?"この駅をお気に入り":"この駅と方面をお気に入り"}>{isFavorite?'★':'☆'}</button></div>
      <div className="line-info"><span className="line-dot"/>{station.operator} <span>/</span> {station.line}</div>
@@ -200,7 +219,7 @@ export default function App({comparison=false,railway=false}:{comparison?:boolea
      </div></div>
      {!comparison&&!station.catalogOnly&&<div className="selection-workspace"><aside>{typeControls}</aside><section className="train-list-section" aria-label="乗る電車を選ぶ"><h2>乗る電車を選ぶ</h2><p className="current-condition">条件：{conditionLabel} · {departures.length}便（表示時刻以降）</p>{typeFilter.saveError&&<p role="alert">種別の条件を端末に保存できません。この画面では引き続き選べます。</p>}<TrainList trains={departures} selected={first} onSelect={selectTrain}/>{!departures.length&&<p>現在の条件に合う候補はありません。</p>}{!railway&&<p className="condition-note">種別名だけで料金・停車駅・到着時刻は判断できません。詳細は公式情報で確認してください。</p>}</section></div>}
      {comparison&&timeline.length>0&&<DepartureTimeline key={`${station.id}/${direction.id}/${day}`} trains={timeline} selected={first} now={time} walk={judgmentWalk} settings={stored.settings} station={station} directionId={direction.id} day={day} placeName={place?.name} preview={Boolean(preview)} onSelect={selectTrain} compact={false}/>}
-   </section>
+   </section>}
    <p className="sr-only" role="status">{choiceNotice}</p>
    {(!railway||stored.favorites.length>0||(stored.stationFavorites??[]).length>0)&&<div className="quick-access" id="favorite-stations" tabIndex={-1}>
    {station.catalogOnly&&!stored.favorites.length&&!(stored.stationFavorites??[]).length&&<p className="small-note">お気に入りはまだありません</p>}

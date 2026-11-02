@@ -1,7 +1,7 @@
 import {test,expect} from '@playwright/test';
 import {FIXED_TIME,mockRuntime,chooseStation,installControlledGps,emitGps,gpsWatchState,closeWalkingSettings} from '../fixtures/runtime';
 import {manualSettings,locationSettings,setMinutes} from './walking-helpers';
-test.beforeEach(async({page})=>{await page.clock.install({time:FIXED_TIME});await mockRuntime(page);await page.goto('/');await chooseStation(page,'kyoto-imadegawa');await installControlledGps(page);});
+test.beforeEach(async({page})=>{await page.clock.install({time:FIXED_TIME});await mockRuntime(page);await page.goto('/railway.html');await chooseStation(page,'kyoto-imadegawa');await installControlledGps(page);});
 test('minutes wheel supports keys, half minutes, valid bounds and explicit apply',async({page})=>{
  const dialog=await manualSettings(page),wheel=dialog.getByRole('spinbutton',{name:'駅入口までの徒歩時間',exact:true}),direct=dialog.getByRole('spinbutton',{name:'駅入口までの徒歩時間（分）',exact:true});
  expect((await gpsWatchState(page)).count).toBe(0);

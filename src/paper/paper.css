@@ -1,0 +1,84 @@
+/* C: warm paper, olive ink, terracotta accents. Kept last in the cascade. */
+:root:has(.paper-shell){--paper-bg:#f5f0e5;--paper-card:#fffcf4;--paper-ink:#303a2a;--paper-muted:#626650;--paper-line:#c1bbaa;--paper-accent:#99452f;--paper-wash:#ebe5d6;--paper-red:#9a362a;--paper-red-bg:#fce5dd;--paper-yellow:#705100;--paper-yellow-bg:#fff0ba;--paper-green:#286044;--paper-green-bg:#e0efdf}
+:root[data-theme=dark]:has(.paper-shell){--paper-bg:#1d231d;--paper-card:#293129;--paper-ink:#f0efdf;--paper-muted:#c1c6b2;--paper-line:#66715f;--paper-accent:#f0a68e;--paper-wash:#353e32;--paper-red:#ffb9a6;--paper-red-bg:#4d302b;--paper-yellow:#f2d780;--paper-yellow-bg:#494025;--paper-green:#b0dfbc;--paper-green-bg:#2d4434}
+body:has(.paper-shell){background:var(--paper-bg)}
+.paper-shell.railway-shell{--bg:var(--paper-bg);--surface:var(--paper-card);--surface-2:var(--paper-wash);--surface-hover:var(--paper-wash);--text:var(--paper-ink);--text-muted:var(--paper-muted);--border:var(--paper-line);--accent:var(--paper-accent);--rail-color:var(--paper-accent)!important;--rail-ink:var(--paper-bg)!important;max-width:100%;padding:0 0 32px;background:var(--paper-bg);color:var(--paper-ink);font-family:RailZen,Meiryo,sans-serif}
+.paper-shell main,.paper-shell .site-footer{width:min(100% - 40px,840px);margin-inline:auto}
+.paper-shell main{padding-top:30px}
+.paper-shell button{border-radius:10px;box-shadow:none;cursor:pointer;background:var(--paper-card);color:var(--paper-ink);border-color:var(--paper-line);transition:background .18s,color .18s}
+.paper-shell button:not(:disabled):active{transform:none}
+.paper-shell a{color:var(--paper-accent)}
+.paper-shell .paper-header{position:sticky;top:0;z-index:30;background:var(--paper-bg);border-bottom:1px solid var(--paper-line);padding:12px max(20px,calc((100% - 840px)/2));box-shadow:0 4px 18px #00000008}
+.paper-brand-row{display:flex;justify-content:space-between;align-items:center;gap:14px}
+.paper-shell .paper-brand{font-size:25px;font-weight:900;letter-spacing:.07em;text-decoration:none;color:var(--paper-ink)}
+.paper-brand span{font-size:12px;letter-spacing:.14em;color:var(--paper-accent);margin-left:16px}
+.paper-shell .theme-toggle{font-size:13px;padding:8px 14px;white-space:nowrap}
+.paper-station-row{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:14px;margin-top:10px}
+.paper-shell .paper-station-row .station-controls{display:flex;min-width:0;align-items:center;gap:8px}
+.paper-shell .paper-station-row .station-trigger{border:1px solid var(--paper-line);border-radius:10px;box-shadow:none;background:var(--paper-card);min-width:0;width:100%;min-height:52px}
+.paper-shell .paper-station-row .station-badge{background:var(--paper-wash);font-size:12px}
+.paper-shell .paper-locate{padding:10px 14px;min-height:52px;font-weight:700;color:var(--paper-accent)}
+.paper-location{font-size:12px;color:var(--paper-muted);margin:8px 0 0;overflow-wrap:anywhere}
+.paper-heading{display:flex;justify-content:space-between;gap:20px;align-items:center;margin:4px 0 26px}
+.paper-kicker{font-size:11px;font-weight:800;letter-spacing:.2em;color:var(--paper-accent)}
+.paper-heading h1{font-size:clamp(24px,4vw,34px);margin:5px 0 8px;letter-spacing:.01em}
+.paper-heading p,.paper-note{font-size:13px;color:var(--paper-muted);margin:0}
+.paper-clock{flex-shrink:0;text-align:right;display:flex;flex-direction:column}
+.paper-clock span{font-size:11px;color:var(--paper-muted)}
+.paper-clock strong{font:600 38px/1.3 RailDigits,monospace;font-variant-numeric:tabular-nums}
+.paper-shell .paper-directions{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+.paper-shell .paper-directions button{padding:11px 18px;font-size:15px;flex:1}
+.paper-shell .paper-directions button[aria-pressed=true]{background:var(--paper-ink);color:var(--paper-bg);border-color:var(--paper-ink)}
+.paper-legend{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:12px;margin:0 0 8px}
+.paper-legend span:before{content:'';display:inline-block;width:8px;height:8px;border-radius:50%;background:currentColor;margin-right:6px}
+.paper-legend .miss{color:var(--paper-red)}.paper-legend .tight{color:var(--paper-yellow)}.paper-legend .comfortable{color:var(--paper-green)}
+.paper-timeline{list-style:none;margin:24px 0 30px;padding:0 0 0 23px;border-left:1px solid var(--paper-line)}
+.paper-ticket{position:relative;border:1px solid var(--paper-line);border-radius:12px;background:var(--paper-card);margin:0 0 15px;--state-ink:var(--paper-muted);--state-bg:var(--paper-wash)}
+.paper-ticket:before{content:'';position:absolute;left:-29px;top:35px;width:10px;height:10px;border:2px solid var(--paper-bg);border-radius:50%;background:var(--state-ink)}
+.paper-ticket.comfortable{--state-ink:var(--paper-green);--state-bg:var(--paper-green-bg)}
+.paper-ticket.tight{--state-ink:var(--paper-yellow);--state-bg:var(--paper-yellow-bg)}
+.paper-ticket.miss{--state-ink:var(--paper-red);--state-bg:var(--paper-red-bg)}
+.paper-ticket.expanded{border-color:var(--paper-accent);box-shadow:0 4px 14px #0000000a}
+.paper-shell .ticket-toggle{display:grid;grid-template-columns:105px minmax(0,1fr) 32px;width:100%;gap:20px;align-items:center;border:0;padding:21px 24px;background:transparent;color:var(--paper-ink);text-align:left;border-radius:12px}
+.ticket-time{font:600 39px/1.2 RailDigits,monospace;font-variant-numeric:tabular-nums;border-right:1px dashed var(--paper-line);align-self:stretch;display:flex;align-items:center;gap:6px}
+.ticket-time small{font:500 12px RailZen,sans-serif}
+.ticket-service{display:flex;flex-direction:column;align-items:flex-start;min-width:0;gap:4px}
+.ticket-service>small{font-size:12px;color:var(--paper-muted)}
+.ticket-service>strong{font-size:19px;overflow-wrap:anywhere;font-weight:800}
+.ticket-service .ticket-status{font-size:12px;font-weight:700;color:var(--state-ink);background:var(--state-bg);border-radius:5px;padding:3px 8px}
+.ticket-expand{color:var(--paper-accent);font-size:23px;text-align:right}
+.ticket-detail{border-top:1px dashed var(--paper-line);padding:21px 24px;position:relative}
+.ticket-detail:before,.ticket-detail:after{content:'';position:absolute;top:-7px;width:12px;height:12px;border-radius:50%;background:var(--paper-bg);border:1px solid var(--paper-line)}
+.ticket-detail:before{left:-7px}.ticket-detail:after{right:-7px}
+.ticket-detail p{font-size:14px;color:var(--paper-muted);margin:10px 0}
+.ticket-detail .ticket-remaining{font-size:18px;color:var(--paper-ink);font-variant-numeric:tabular-nums}
+.ticket-remaining strong{font:600 48px RailDigits,monospace}
+.ticket-metadata{display:flex;gap:20px}
+.paper-shell .paper-text-button{color:var(--paper-accent);padding:8px 12px;background:transparent}
+.paper-shell .paper-tools{display:flex;gap:8px;flex-wrap:wrap;padding:12px 0 24px}
+.paper-shell .paper-tools button{padding:8px 14px}
+.paper-shell .rail-details,.paper-shell .rail-help-summary,.paper-shell .date-check{background:var(--paper-card);color:var(--paper-ink);border:1px solid var(--paper-line);border-radius:10px;margin:12px 0;padding:14px}
+.paper-shell .rail-details>summary,.paper-shell .rail-help-summary>summary,.paper-shell .date-check>summary{color:var(--paper-ink);cursor:pointer;min-height:30px}
+.paper-shell .dashboard{display:block}
+.paper-shell .action-bottom-nav{display:none}
+.paper-shell :is(.station-dialog,.choice-dialog,.settings-sheet){background:var(--paper-card);color:var(--paper-ink);--text:var(--paper-ink);--text-muted:var(--paper-muted);--surface:var(--paper-card);--surface-2:var(--paper-wash);--border:var(--paper-line)}
+.paper-shell :is(input,select,textarea){background:var(--paper-card);color:var(--paper-ink);border-color:var(--paper-line)}
+.paper-shell :is(.station-result,.station-picker,.station-group,.station-search-input,.station-search-tools,.station-search-empty,.station-search-summary,.station-dialog-header,.choice-option,.sheet-header,.settings-sheet header){background:var(--paper-card);color:var(--paper-ink)}
+.paper-shell :is(.station-result small,.station-result-meta,.station-trigger small,.field>span,.location-status,.small-note,.rail-walking-current,.rail-route-state){color:var(--paper-muted)}
+.paper-shell :is(.rail-mode-buttons button,.rail-apply,.rail-walk-submit,.rail-live-controls button){background:var(--paper-wash);color:var(--paper-ink)}
+.paper-shell .site-footer{color:var(--paper-muted);border-top:1px dashed var(--paper-line);padding-top:22px}
+.paper-shell .decision-empty{border:1px dashed var(--paper-line);background:var(--paper-card);color:var(--paper-ink);padding:24px;border-radius:12px}
+.paper-shell :is(button,a,input,summary):focus-visible{outline:3px solid var(--paper-accent);outline-offset:3px;box-shadow:none}
+@media(max-width:600px){.paper-shell main,.paper-shell .site-footer{width:calc(100% - 28px)}.paper-shell main{padding-top:22px}.paper-shell .paper-header{padding:10px 14px}.paper-brand span{display:none}.paper-heading{gap:10px;margin-bottom:20px}.paper-heading p{font-size:12px;max-width:230px}.paper-clock strong{font-size:30px}.paper-heading h1{font-size:23px}.paper-station-row{gap:8px}.paper-shell .paper-locate{padding:8px 10px;font-size:13px}.paper-timeline{padding-left:14px;margin-left:4px}.paper-ticket:before{left:-20px}.paper-shell .ticket-toggle{grid-template-columns:76px minmax(0,1fr) 20px;gap:12px;padding:17px 14px}.ticket-time{font-size:31px}.ticket-service>strong{font-size:16px}.ticket-service .ticket-status{font-size:11px}.ticket-detail{padding:18px}.paper-shell .paper-directions button{padding:10px;font-size:14px}.paper-location{line-height:1.5}}
+@media(prefers-reduced-motion:reduce){.paper-shell *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Replace the previous split-pane scroll container with a sticky document header. */
+.paper-shell.railway-shell{display:block;height:auto;min-height:100dvh;overflow:visible;color-scheme:inherit}
+.paper-shell.railway-shell>main{overflow:visible;min-height:0;scroll-padding-top:190px;overscroll-behavior:auto}
+html:has(.paper-shell){background:var(--paper-bg);scroll-padding-top:190px}
+.paper-shell .paper-tools{padding:0 0 16px}
+.paper-ticket.past .ticket-toggle{padding-block:10px}
+.paper-ticket.past .ticket-time{font-size:29px}
+.paper-ticket.past .ticket-service>small{display:none}
+.paper-ticket.past .ticket-service>strong{font-size:15px}
+.paper-shell .paper-heading{margin-bottom:18px}
