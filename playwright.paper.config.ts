@@ -1,0 +1,2 @@
+import {defineConfig} from '@playwright/test';
+export default defineConfig({testDir:'./tests/paper',outputDir:'test-results/paper',timeout:30000,workers:2,use:{baseURL:'http://127.0.0.1:5196',timezoneId:'Asia/Tokyo',trace:'retain-on-failure'},webServer:{command:'npm run dev -- --port 5196',url:'http://127.0.0.1:5196',reuseExistingServer:false},projects:[{name:'desktop',use:{browserName:'chromium',viewport:{width:1360,height:1000}}},{name:'mobile',use:{browserName:'chromium',viewport:{width:390,height:844},isMobile:true,hasTouch:true}}]});

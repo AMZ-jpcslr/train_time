@@ -3,7 +3,7 @@ import {test,expect} from '@playwright/test';
 import {mkdir} from 'node:fs/promises';
 import {FIXED_TIME,mockRuntime,chooseStation,openWalkingSettings} from '../fixtures/runtime';
 test('railway actual app: responsive layout, chosen train, settings and reduced motion',async({page},info)=>{
- await page.clock.install({time:FIXED_TIME});await mockRuntime(page);await page.goto('/');await chooseStation(page,'kyoto-imadegawa');
+ await page.clock.install({time:FIXED_TIME});await mockRuntime(page);await page.goto('/railway.html');await chooseStation(page,'kyoto-imadegawa');
  await setMinutes(page);
  await expect(page.locator('.rail-board-service')).toBeVisible();
  for(const width of [320,375,390,768,1024,1440]){
@@ -16,7 +16,7 @@ test('railway actual app: responsive layout, chosen train, settings and reduced 
   await page.keyboard.press('Escape');
  }
  if(info.project.name==='desktop'){
-  await mkdir('docs/railway-live/screenshots',{recursive:true});await page.setViewportSize({width:390,height:844});await page.screenshot({path:'docs/railway-live/screenshots/mobile.png',fullPage:true,animations:'disabled'});await page.setViewportSize({width:1440,height:1000});await page.screenshot({path:'docs/railway-live/screenshots/desktop.png',fullPage:true,animations:'disabled'});
+  await mkdir('test-results/railway-captures',{recursive:true});await page.setViewportSize({width:390,height:844});await page.screenshot({path:'test-results/railway-captures/mobile.png',fullPage:true,animations:'disabled'});await page.setViewportSize({width:1440,height:1000});await page.screenshot({path:'test-results/railway-captures/desktop.png',fullPage:true,animations:'disabled'});
  }
  const first=page.locator('.vertical-train').nth(1);await first.click();await expect(page.locator('.rail-ticket .selection-mode')).toContainText('選んだ');
  await page.getByRole('button',{name:'条件に合う一本後',exact:true}).click();await expect(page.locator('.rail-ticket .selection-mode')).toContainText('選んだ');await page.getByRole('button',{name:'自動選択に戻す',exact:true}).click();await expect(page.locator('.rail-ticket .selection-mode')).toContainText('自動選択');
