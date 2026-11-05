@@ -1,0 +1,94 @@
+{
+  "checkedAt": "2026-11-05T09:22:21.955Z",
+  "baseCommit": "f412a1f",
+  "serviceDate": "2026-11-05",
+  "productionBeforeFix": {
+    "status": "unavailable",
+    "jrEnabled": true,
+    "sharedControls": "configured"
+  },
+  "reproducedError": "Displayed operating date mismatch",
+  "selectorLabel": "2026年11月05日(木)",
+  "headingLabel": "2026年11月5日(木)",
+  "localAfterFix": {
+    "status": "ready",
+    "tables": 8,
+    "departures": 1702
+  },
+  "evidence": [
+    {
+      "id": "jr-nishinomiya-west-2026-11-05",
+      "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2801012001?date=20261105",
+      "sha256": "6a5725099c8a9f32f689aa6ca52d5197e5916977295c72acadbe2c87e703c531",
+      "retrievedAt": "2026-11-05T09:20:15.535Z",
+      "count": 216,
+      "displayedDateMatched": true,
+      "pcMobileAllTimesAndPlatformsMatched": true
+    },
+    {
+      "id": "jr-nishinomiya-east-2026-11-05",
+      "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2801012002?date=20261105",
+      "sha256": "735629db844bf4863d2f5e5a4ffb0d35e86aee23bcc7d3e24e6fc89480aef587",
+      "retrievedAt": "2026-11-05T09:20:17.059Z",
+      "count": 217,
+      "displayedDateMatched": true,
+      "pcMobileAllTimesAndPlatformsMatched": true
+    },
+    {
+      "id": "jr-osaka-east-2026-11-05",
+      "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2796011001?date=20261105",
+      "sha256": "d6bb12e41b1d7cb1f34610c139a94e8b5b7a03e160ce7a691d10a87017c636fd",
+      "retrievedAt": "2026-11-05T09:20:19.718Z",
+      "count": 295,
+      "displayedDateMatched": true,
+      "pcMobileAllTimesAndPlatformsMatched": true
+    },
+    {
+      "id": "jr-osaka-west-2026-11-05",
+      "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2796012001?date=20261105",
+      "sha256": "703b000e15dbcb4391a3088efb00827cabeaf46f1e5727523ba59178ab7a8f43",
+      "retrievedAt": "2026-11-05T09:20:21.242Z",
+      "count": 238,
+      "displayedDateMatched": true,
+      "pcMobileAllTimesAndPlatformsMatched": true
+    },
+    {
+      "id": "jr-ibaraki-east-2026-11-05",
+      "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2791011001?date=20261105",
+      "sha256": "d7cb4f579d5ff751091d24d6150c2d18a9a1f22b4b0519d5cd8b18b975fd4112",
+      "retrievedAt": "2026-11-05T09:20:24.031Z",
+      "count": 219,
+      "displayedDateMatched": true,
+      "pcMobileAllTimesAndPlatformsMatched": true
+    },
+    {
+      "id": "jr-ibaraki-west-2026-11-05",
+      "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2791011002?date=20261105",
+      "sha256": "09e7b1e2422a98b700ae970c51539e2ea7a5b369927cb37e5ba07658194e3c4a",
+      "retrievedAt": "2026-11-05T09:20:25.501Z",
+      "count": 224,
+      "displayedDateMatched": true,
+      "pcMobileAllTimesAndPlatformsMatched": true
+    },
+    {
+      "id": "jr-minamikusatsu-west-2026-11-05",
+      "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2813013001?date=20261105",
+      "sha256": "cd79bf31179627769c7d05a0fc6be5c2336bbcb7915d35ccc156b63d9b57d7ba",
+      "retrievedAt": "2026-11-05T09:20:28.179Z",
+      "count": 144,
+      "displayedDateMatched": true,
+      "pcMobileAllTimesAndPlatformsMatched": true
+    },
+    {
+      "id": "jr-minamikusatsu-east-2026-11-05",
+      "sourceUrl": "https://timetable.jr-odekake.net/station-timetable/2813013002?date=20261105",
+      "sha256": "b203d48163b469ab8a4d142c3dd0da455cb895c77fc202448a1fb15b09e69753",
+      "retrievedAt": "2026-11-05T09:20:29.483Z",
+      "count": 149,
+      "displayedDateMatched": true,
+      "pcMobileAllTimesAndPlatformsMatched": true
+    }
+  ],
+  "published": false,
+  "reusePermission": "unresolved-existing"
+}

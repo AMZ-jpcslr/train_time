@@ -49,6 +49,18 @@ describe('JR date-specific public HTML parser', () => {
   it('does not trust a query string when the displayed date falls back to another day', () => {
     expect(() => parseJrHtml(fixture().replace('<span class="emphasis">2026年10月22日(木)</span>', '<span class="emphasis">2026年10月23日(金)</span>'), station, route, day)).toThrow(/Displayed/);
   });
+  it.each([
+    ['2026-11-05', '2026年11月05日(木)', '2026年11月5日(木)'],
+    ['2026-01-22', '2026年01月22日(木)', '2026年1月22日(木)'],
+    ['2026-01-05', '2026年01月05日(月)', '2026年1月5日(月)'],
+  ])('accepts official zero-padding differences for %s without weakening date checks', (date, selected, displayed) => {
+    const html = fixture().replaceAll('20261022', date.replaceAll('-', '')).replaceAll('2026年10月22日(木)', selected)
+      .replace(`<span class="emphasis">${selected}</span>`, `<span class="emphasis">${displayed}</span>`);
+    expect(parseJrHtml(html, station, route, date).departures).toHaveLength(3);
+    expect(() => parseJrHtml(html.replace(displayed, displayed.replace('年', '年1')), station, route, date)).toThrow(/Displayed/);
+    expect(() => parseJrHtml(html.replace(displayed, displayed.replace(/\([^)]+\)/, '(日)')), station, route, date)).toThrow(/Displayed/);
+    expect(() => parseJrHtml(html.replace(displayed, ''), station, route, date)).toThrow(/Displayed/);
+  });
   it('rejects differing desktop / mobile times, duplicate links, and unsorted rows', () => {
     expect(() => parseJrHtml(fixture().replace('<span class="minute">01</span>','<span class="minute">02</span>'), station, route, day)).toThrow(/mismatch/);
     expect(() => parseJrHtml(fixture().replaceAll('/train-timetable/1?','/train-timetable/0?'), station, route, day)).toThrow(/Duplicate/);

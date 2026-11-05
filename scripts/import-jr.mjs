@@ -29,7 +29,10 @@ export function parseJrHtml(html,station,route,day){
  const [year,month,date]=day.split('-').map(Number),expectedDate=new RegExp(`^${year}年0?${month}月0?${date}日\\([日月火水木金土祝]\\)$`);
  if(!expectedDate.test(clean(selected.text())))throw Error('Selected date label mismatch');
  const displayedDate=clean($('.select-date .emphasis').text());
- if(!expectedDate.test(displayedDate)||displayedDate!==clean(selected.text()))throw Error('Displayed operating date mismatch');
+ // The official selector zero-pads month/day while the heading omits padding.
+ // Validate both against the requested date and compare their weekday as well.
+ const dateLabel=value=>value.replace(/^(\d{4})年(\d{1,2})月(\d{1,2})日/,(_,y,m,d)=>`${y}年${Number(m)}月${Number(d)}日`);
+ if(!expectedDate.test(displayedDate)||dateLabel(displayedDate)!==dateLabel(clean(selected.text())))throw Error('Displayed operating date mismatch');
  const weekday=selected.text().match(/\(([日月火水木金土祝])\)/)?.[1];if(!weekday)throw Error('Unknown operating day class');
  const dayType=weekday==='土'?'saturday':['日','祝'].includes(weekday)?'holiday':'weekday';
  if(!$('.time-tbl-annotation').text().includes('午前4時台')||!$('.time-tbl-annotation').text().includes('午前3時台'))throw Error('Unknown service-day boundary');
