@@ -82,3 +82,20 @@ html:has(.paper-shell){background:var(--paper-bg);scroll-padding-top:190px}
 .paper-ticket.past .ticket-service>small{display:none}
 .paper-ticket.past .ticket-service>strong{font-size:15px}
 .paper-shell .paper-heading{margin-bottom:18px}
+
+/* Theme switch and common icon actions keep the same touch target on every screen. */
+.paper-shell .theme-toggle{position:relative;isolation:isolate;display:flex;align-items:center;justify-content:space-between;gap:8px;flex-shrink:0;width:96px;height:48px;padding:4px;border-radius:24px;background:var(--paper-wash);border:1px solid var(--paper-line)}
+.paper-shell .theme-toggle .button-icon{position:relative;width:38px;height:38px;padding:8px;flex-shrink:0;color:var(--paper-muted)}
+.paper-shell .theme-toggle-thumb{position:absolute;z-index:-1;left:4px;top:4px;width:38px;height:38px;border-radius:50%;background:var(--paper-ink);transition:transform .18s ease}
+.paper-shell .theme-toggle[aria-checked=true] .theme-toggle-thumb{transform:translateX(48px)}
+.paper-shell .theme-toggle[aria-checked=false] .button-icon:first-of-type,.paper-shell .theme-toggle[aria-checked=true] .button-icon:last-of-type{color:var(--paper-bg)}
+.paper-shell .icon-action{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;width:48px;height:48px;min-width:48px;min-height:48px;padding:10px}
+.paper-shell .paper-locate.icon-action{width:52px;height:52px;padding:12px}
+.paper-shell .icon-action .button-icon,.paper-shell .favorite .button-icon{width:24px;height:24px;flex-shrink:0;padding:0;background:none;border:0}
+.paper-shell .favorite{display:grid;place-items:center;min-width:44px;min-height:44px}
+.paper-shell .favorite[aria-pressed=true] .button-icon{fill:currentColor}
+.paper-shell .type-checks label{background:var(--paper-card);color:var(--paper-ink);border-color:var(--paper-line)}
+.paper-shell .type-checks label:has(input:checked){background:var(--paper-wash);color:var(--paper-ink);border-color:var(--paper-accent)}
+.paper-shell .type-checks input{accent-color:var(--paper-accent)}
+.paper-shell .type-conditions .condition-note{color:var(--paper-muted)}
+@media(prefers-reduced-motion:reduce){.paper-shell .theme-toggle-thumb{transition:none}}

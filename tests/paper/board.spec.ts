@@ -22,10 +22,10 @@ for(const mode of ['light','dark'] as const){
  const card=page.locator('.paper-ticket.comfortable').first();await card.locator('.ticket-toggle').click();await expect(card.locator('.ticket-detail')).toBeVisible();
  expect(await card.locator('.ticket-remaining').innerText()).toContain('分');
  const watches=await gpsWatchState(page),station=await page.getByRole('button',{name:'乗車駅',exact:true}).innerText();
- await page.getByRole('button',{name:'配色を切り替え'}).click();
+ await page.getByRole('switch',{name:'ダークモード'}).click();
  await expect(card.locator('.ticket-detail')).toBeVisible();expect(await gpsWatchState(page)).toEqual(watches);
  expect(await page.getByRole('button',{name:'乗車駅',exact:true}).innerText()).toBe(station);
- await page.getByRole('button',{name:'配色を切り替え'}).click();
+ await page.getByRole('switch',{name:'ダークモード'}).click();
  for(let i=0;i<7;i++)await card.locator('.ticket-toggle').click();
  await expect(page.locator('.ticket-detail')).toHaveCount(0);
  await card.locator('.ticket-toggle').focus();await page.keyboard.press('Enter');await expect(card.locator('.ticket-detail')).toBeVisible();
@@ -64,7 +64,7 @@ for(const mode of ['light','dark'] as const){
 test('small widths and text contrast in both color schemes',async({page})=>{
  await setup(page);await sample(page);
  for(const theme of ['light','dark']){
- if(await page.locator('html').getAttribute('data-theme')!==theme)await page.getByRole('button',{name:'配色を切り替え'}).click();
+ if(await page.locator('html').getAttribute('data-theme')!==theme)await page.getByRole('switch',{name:'ダークモード'}).click();
  for(const width of [320,375,768,1024,1440]){await page.setViewportSize({width,height:900});expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);}
  const failures=await page.locator('.paper-header,.paper-board').evaluateAll(roots=>{
  const rgb=(s:string)=>s.match(/[\d.]+/g)?.map(Number)??[0,0,0];
@@ -85,7 +85,7 @@ test('small widths and text contrast in both color schemes',async({page})=>{
 test('OS changes apply until user explicitly selects a theme',async({page})=>{
  await page.emulateMedia({colorScheme:'dark'});await setup(page);await expect(page.locator('html')).toHaveAttribute('data-theme','dark');
  await page.emulateMedia({colorScheme:'light'});await expect(page.locator('html')).toHaveAttribute('data-theme','light');
- await page.getByRole('button',{name:'配色を切り替え'}).click();await page.emulateMedia({colorScheme:'light'});await expect(page.locator('html')).toHaveAttribute('data-theme','dark');
+ await page.getByRole('switch',{name:'ダークモード'}).click();await page.emulateMedia({colorScheme:'light'});await expect(page.locator('html')).toHaveAttribute('data-theme','dark');
 });
 
 test('inaccurate and stale GPS stay neutral and allow retry; late callbacks cannot restore an old session',async({page})=>{
@@ -99,3 +99,43 @@ test('inaccurate and stale GPS stay neutral and allow retry; late callbacks cann
  await expect(page.locator('.paper-ticket.comfortable,.paper-ticket.tight,.paper-ticket.miss')).toHaveCount(0);
  await expect(page.getByRole('button',{name:'現在地を再取得',exact:true})).toBeEnabled();
 });
+
+
+for(const mode of ['light','dark'] as const){
+ test(mode+': icon controls and keyboard theme switch; train-type chips remain readable',async({page},info)=>{
+  await page.emulateMedia({colorScheme:mode});await setup(page);
+  const toggle=page.getByRole('switch',{name:'ダークモード'});
+  await expect(toggle).toHaveAttribute('aria-checked',String(mode==='dark'));
+  await expect(toggle.locator('svg')).toHaveCount(2);
+  await toggle.focus();await page.keyboard.press('Space');
+  await expect(toggle).toHaveAttribute('aria-checked',String(mode!=='dark'));
+  await page.keyboard.press('Enter');await expect(page.locator('html')).toHaveAttribute('data-theme',mode);
+  await expect(toggle).toHaveAttribute('title',mode==='dark'?'ライトモードに切り替え':'ダークモードに切り替え');
+  const locate=page.getByRole('button',{name:'現在地を再取得',exact:true});
+  await expect(locate).toHaveAttribute('title','現在地を再取得');await expect(locate.locator('svg')).toBeVisible();
+  const watches=await gpsWatchState(page);await locate.focus();await page.keyboard.press('Enter');
+  await expect.poll(async()=>(await gpsWatchState(page)).count).toBe(watches.count+1);
+  const favorite=page.locator('.paper-header .favorite');
+  await favorite.focus();await page.keyboard.press('Space');await expect(favorite).toHaveAttribute('aria-pressed','true');
+  await expect(favorite).toHaveAttribute('title','お気に入りから外す');
+  for(const control of [toggle,locate,favorite]){const box=await control.boundingBox();expect(box!.width).toBeGreaterThanOrEqual(44);expect(box!.height).toBeGreaterThanOrEqual(44);}
+  const trigger=page.getByRole('button',{name:'種別',exact:true});await trigger.focus();await page.keyboard.press('Enter');
+  const dialog=page.getByRole('dialog',{name:'乗りたい種別',exact:true});await expect(dialog).toBeVisible();
+  const checkbox=dialog.getByRole('checkbox').first();await expect(checkbox).toBeChecked();
+  const contrast=()=>dialog.locator('.type-checks label').evaluateAll(labels=>labels.map(label=>{
+   const style=getComputedStyle(label),rgb=(s:string)=>s.match(/[\d.]+/g)!.slice(0,3).map(Number);
+   const lum=(s:string)=>rgb(s).map(x=>{x/=255;return x<=.04045?x/12.92:((x+.055)/1.055)**2.4;}).reduce((a,b,i)=>a+b*[.2126,.7152,.0722][i],0);
+   const a=lum(style.color),b=lum(style.backgroundColor);return(Math.max(a,b)+.05)/(Math.min(a,b)+.05);
+  }));
+  for(const ratio of await contrast())expect(ratio).toBeGreaterThanOrEqual(4.5);
+  await checkbox.focus();await page.keyboard.press('Space');await expect(checkbox).not.toBeChecked();
+  for(const ratio of await contrast())expect(ratio).toBeGreaterThanOrEqual(4.5);
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+  await page.screenshot({path:out+'/'+info.project.name+'-'+mode+'-train-types.png'});
+  await page.keyboard.press('Space');await expect(checkbox).toBeChecked();
+  await page.keyboard.press('Escape');await expect(dialog).not.toBeVisible();await expect(trigger).toBeFocused();
+  await trigger.click();const close=dialog.getByRole('button',{name:'閉じる',exact:true});
+  await expect(close).toHaveAttribute('title','閉じる');await close.focus();await page.keyboard.press('Enter');await expect(dialog).not.toBeVisible();
+  await page.screenshot({path:out+'/'+info.project.name+'-'+mode+'-icons.png'});
+ });
+}
